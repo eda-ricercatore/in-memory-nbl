@@ -125,7 +125,7 @@ class rand_signal_generator:
 	def gen_rand_signal_uniform_distributn(type_of_signal=bv_signal, n=16):
 		random_signal = []
 		# Generate a random signal/"process" of n values.
-		for x in range(k):
+		for x in range(n):
 			"""
 				###	TODO
 				Check the output of psl_uniform(type_of_signal)
