@@ -130,10 +130,12 @@ from utilities.miscellaneous_tester import misc_tester
 # Modules for random number and random signal/"process" generation.
 # Module to generate pseudorandom numbers.
 from random_process_models.pseudorandom_number_generator import prng
-# Module to generate pseudorandom numbers.
+# Module to test the generation of pseudorandom numbers.
 from random_process_models.pseudorandom_number_generator_tester import prng_tester
-
-
+# Module to generate random signals/"processes".
+from random_process_models.random_process_generator import rand_signal_generator
+# Module to test the generation of random signals/"processes".
+from random_process_models.random_process_generator_tester import rand_signal_generator_tester
 
 
 
@@ -210,6 +212,7 @@ if __name__ == "__main__":
 	print("")
 	print("=	Testing the random_process_models package.")
 	prng_tester.test_prng_methods()
+	rand_signal_generator_tester.test_random_signal_generation_methods()
 	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
 	#	### TO-DO
 	#	Test expr_configuration

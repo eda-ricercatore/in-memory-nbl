@@ -83,7 +83,7 @@ from random_process_models.pseudorandom_number_generator import prng
 
 
 ###############################################################
-##	Module with methods that perform miscellaneous tasks.
+##	Module that tests methods for pseudorandom number generation.
 class prng_tester:
 	## =========================================================
 	#	Method to test the methods that uses the PRNG from Python
@@ -93,33 +93,33 @@ class prng_tester:
 	#	O(1) method.
 	@staticmethod
 	def test_psl_uniform():
-		print("	Testing the psl_uniform().")
+		print("	Testing psl_uniform().")
 		prompt = "	... Test: incorrect type of signal, 'whatever'.		{}"
 		statistical_analysis.increment_number_test_cases_used()
-		temp_ran_number = prng.psl_uniform("whatever")
-		if (1==temp_ran_number) or (0==temp_ran_number):
+		temp_rand_number = prng.psl_uniform("whatever")
+		if (1==temp_rand_number) or (0==temp_rand_number):
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
 			print(prompt .format("FAIL!!!"))
 		prompt = "	... Test: for bit vector signal, 'bv'.			{}"
 		statistical_analysis.increment_number_test_cases_used()
-		temp_ran_number = prng.psl_uniform(prng.bv_signal)
-		if (1==temp_ran_number) or (0==temp_ran_number):
+		temp_rand_number = prng.psl_uniform(prng.bv_signal)
+		if (1==temp_rand_number) or (0==temp_rand_number):
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
 			print(prompt .format("FAIL!!!"))
 		prompt = "	... Test: for RTW signal, 'rtw'.		{}"
 		statistical_analysis.increment_number_test_cases_used()
-		temp_ran_number = prng.psl_uniform(prng.rtw_signal)
-		if (1==temp_ran_number) or (-1==temp_ran_number):
+		temp_rand_number = prng.psl_uniform(prng.rtw_signal)
+		if (1==temp_rand_number) or (-1==temp_rand_number):
 			print(prompt .format("	OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
 			print(prompt .format("FAIL!!!"))
 	## =========================================================
-	#	Method to test the miscellaneous methods.
+	#	Method to test the methods regarding PRNG.
 	#	@param - Nothing
 	#	@return - Nothing.
 	#	O(1) method.
@@ -127,5 +127,5 @@ class prng_tester:
 	def test_prng_methods():
 		print("")
 		print("")
-		print("==	Testing class: misc_tester.")
+		print("==	Testing class: prng.")
 		prng_tester.test_psl_uniform()

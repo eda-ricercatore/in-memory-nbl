@@ -73,5 +73,57 @@ import random
 ###############################################################
 #	Import Custom Python Packages and Modules
 
+"""
+	Package and module to print statistics of software testing
+		results.
+"""
+from statistics.test_statistics import statistical_analysis
 # Module to generate pseudorandom numbers.
 from random_process_models.pseudorandom_number_generator import prng
+# Module to generate random signals/"processes".
+from random_process_models.random_process_generator import rand_signal_generator
+
+
+###############################################################
+##	Module that tests methods for random signal/"process" generation.
+class rand_signal_generator_tester:
+	## =========================================================
+	#	Method to test the method that generates a discrete-time
+	#		random signal/process for "n" values.
+	#	@param - Nothing
+	#	@return - Nothing.
+	#	O(1) method.
+	@staticmethod
+	def test_gen_rand_signal_uniform_distributn():
+		# Number of discrete values representing a random signal/"process".
+		k = 16
+		print("	Testing gen_rand_signal_uniform_distributn().")
+		prompt = "	... Test: wrong type of signal, signal about size.	{whatever}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn("whatever",k)
+		if (k == len(temp_rand_signal)):
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+		rand_si
+		prompt = "	... Test: type of signal = RTW.	{}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn("rtw",k)
+		if (k == len(temp_rand_signal)) and (-1 in temp_rand_signal) and 1 in temp_rand_signal:
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+		rand_signal_generator.gen_rand_signal_uniform_distributn()
+	## =========================================================
+	#	Method to test the methods regarding random signal/"process".
+	#	@param - Nothing
+	#	@return - Nothing.
+	#	O(1) method.
+	@staticmethod
+	def test_random_signal_generation_methods():
+		print("")
+		print("")
+		print("==	Testing class: rand_signal_generator.")
+		rand_signal_generator_tester.test_gen_rand_signal_uniform_distributn()

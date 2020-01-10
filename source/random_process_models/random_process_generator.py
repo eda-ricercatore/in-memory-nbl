@@ -122,7 +122,7 @@ class rand_signal_generator:
 	#	@return - Nothing.
 	#	O(1) method.
 	@staticmethod
-	def gen_rand_signal_uniform_distributn(type_of_signal=rand_signal_generator.bv_signal, n=16):
+	def gen_rand_signal_uniform_distributn(type_of_signal=bv_signal, n=16):
 		random_signal = []
 		# Generate a random signal/"process" of n values.
 		for x in range(n):
@@ -139,7 +139,8 @@ class rand_signal_generator:
 		"""
 	# ============================================================
 	##	Method to generate a discrete-time random signal/process
-	#		for "n" values.
+	#		for "n" values, using another method from the random
+	#		module of the Python Standard Library.
 	#
 	#	Use the Python Standard Library's random module to call the
 	#		random.getrandbits(k) function that is based on the
