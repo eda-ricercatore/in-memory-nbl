@@ -341,11 +341,11 @@ https://www.google.com/books/edition/Quantitative_Logic_and_Soft_Computing/S6XMP
 
 
 
-
-
-
-
-
+https://en.wikipedia.org/wiki/Stochastic_computing
+"Stochastic computing" "machine learning"
+https://baylor-ir.tdl.org/handle/2104/10618
+http://alchem.usc.edu/portal/static/download/sc_dcnn.pdf
+https://en.wikipedia.org/wiki/Cross-correlation
 
 
 
@@ -425,6 +425,103 @@ References:
 https://en.wikipedia.org/wiki/Autocovariance   
   https://en.wikipedia.org/wiki/Autocorrelation   
   https://en.wikipedia.org/wiki/Cross-correlation   
+
+
+
+
+
+
+
+
+
+
+
+
+
+   https://github.com/python/cpython/blob/b225cb770fb17596298f5a05c41a7c90c470c4f8/Lib/secrets.py#L47   
+   https://realpython.com/python-random/   
+   Jason Brownlee
+   Statistical Methods for Machine Learning
+Discover how to Transform Data into Knowledge with Python
+   https://www.taylorfrancis.com/books/9781315382159   
+   https://www.amazon.com/Million-Random-Digits-Normal-Deviates/dp/0833030477/
+
+
+
+=demonstrates the numpy pseudorandom number generator
+from numpy.random import seed
+from numpy.random import rand
+=seed the generator
+seed(7)
+print(rand(5))
+=seed the generator to get the same sequence
+print('Reseeded')
+seed(7)
+print(rand(5))
+   https://machinelearningmastery.com/introduction-to-random-number-generators-for-machine-learning/   
+   https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.random.html   
+   https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.rand.html#numpy.random.rand   
+   https://researchbank.swinburne.edu.au/file/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/   
+   https://researchbank.swinburne.edu.au/file/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/Jason%20Brownlee%20Thesis.pdf   
+   Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing Jason Brownlee   
+   Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing
+
+Jason Brownlee   
+   No eBook available
+Machine Learning Mastery
+All sellers »
+Get Textbooks on Google Play
+Rent and save from the world's largest eBookstore. Read, highlight, and take notes, across web, tablet, and phone.
+Go to Google Play Now »
+My library
+My History
+Books on Google Play
+Deep Learning for Computer Vision: Image Classification, Object Detection, and Face Recognition in Python
+Jason Brownlee
+Machine Learning Mastery, Apr 4, 2019
+   https://machinelearningmastery.com/deep-learning-for-computer-vision/   
+Deep Learning for Computer Vision: Image Classification, Object Detection, and Face Recognition in Python
+Jason Brownlee
+Machine Learning Mastery, Apr 4, 2019 - Computers - 563 pages
+   https://books.google.com/books/about/Deep_Learning_for_Computer_Vision.html?id=DOamDwAAQBAJ   
+   https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.correlate.html   
+   https://stackoverflow.com/questions/6991471/computing-cross-correlation-function   
+   http://mail.scipy.org/pipermail/scipy-user/2009-April/020570.html   
+   44
+To cross-correlate 1d arrays use numpy.correlate.
+For 2d arrays, use scipy.signal.correlate2d.
+There is also scipy.stsci.convolve.correlate2d.
+There is also matplotlib.pyplot.xcorr which is based on numpy.correlate.
+See this post on the SciPy mailing list for some links to different implementations.
+Edit: @user333700 added a link to the SciPy ticket for this issue in a comment.
+   https://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xcorr   
+   https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.xcorr.html   
+   https://pypi.org/project/pycorrelate/   
+   https://inst.eecs.berkeley.edu/~ee16a/sp15/Labs/location/ee16a_location_lab1.html   
+   http://benalexkeen.com/correlation-in-python/????   
+   https://opencv.org/   
+   https://github.com/numpy/numpy/blob/v1.17.0/numpy/core/numeric.py#L646-L712   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

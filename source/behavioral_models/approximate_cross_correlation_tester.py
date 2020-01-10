@@ -2,13 +2,12 @@
 ###!/Users/zhiyang/anaconda3/bin/python3
 
 """
-	This Python script is written by Zhiyang Ong to approximate
-		cross-correlation to enable correlation-based machine
-		learning.
+	This Python script is written by Zhiyang Ong to test the
+		approximate cross-correlation approach.
 
 
 	Synopsis:
-	Approximate cross-correlation in Python.
+	Test the approach to approximate cross-correlation in Python.
 
 
 	Revision History:
@@ -74,89 +73,24 @@ import random
 from random_process_models.pseudorandom_number_generator import prng
 # Module to generate random signals/"processes".
 from random_process_models.random_process_generator import rand_signal_generator
-
-
-
-###############################################################
-#	Import Python Packages and Modules from Python Libraries
-import numpy as np
-
+# Module to approximate cross-correlation.
+from behavioral_models.approximate_cross_correlation import approx_cross_correlation
 
 
 ###############################################################
 """
-	Module with demonstrates how cross-correlation can be
-		approximated, and implemented with in-memory computing.
+	Module to test approach to approximate cross-correlation.
 """
-class approx_cross_correlation:
-	# Modes for the NumPy correlate function
-	numpy_correlate_mode_valid = "valid"	# Default option
-	numpy_correlate_mode_same = "same"
-	numpy_correlate_mode_full = "full"
-	# List of modes for the NumPy correlate function
-	numpy_correlate_modes = [numpy_correlate_mode_valid,numpy_correlate_mode_same,numpy_correlate_mode_full]
+class approx_cross_correlation_tester:
 	# ============================================================
-	##	Method to calculate the cross-correlation of two random
-	#		signals, signal_x and signal_y.
-	#
-	#	@param signal_x - A random signal.
-	#	@param signal_y - Another random signal.
-	#	@return - The cross-correlation between signal_x and signal_y.
-	#	O(1) method.
-	@staticmethod
-	def cross_correlation_using_numpy(signal_x=[],signal_y=[],mode=numpy_correlate_mode_same):
-		return np.correlate(signal_x,signal_y,mode)
-	# ============================================================
-	##	Method to calculate the cross-correlation of two random
-	#		signals, signal_x and signal_y, using all approaches
-	#		that I learned.
-	#
-	#	The definitions for calculating cross-correlation for
-	#		periodic/deterministic signals, stochastic/random
-	#		and random processes can be found in the following
-	#		publications:
-	#		+ \cite{Chen2007c}
-	#		+ \cite{Downey2015}
-	#		+ \cite{Downey2011}
-	#		+ \cite{Montgomery2014}
-	#		+ \cite{Bertsekas2008}
-	#		+ \cite{Grimmett2001}
-	#		+ \cite{Ross2004}???
-	#
-	#	There exists different implementations, among Python
-	#		libraries, of functions to compute cross-correlation,
-	#		and some implementations have different "modes";
-	#		hence, there exists different definitions for
-	#			calculating cross-correlation. 
-	#
-	#	There exists different implementations, among Python
-	#		libraries, of functions to compute cross-correlation,
-	#		and some implementations have different "modes";
-	#		hence, there exists different definitions for
-	#			calculating cross-correlation. 
-	#
-	#	@param signal_x - A random signal.
-	#	@param signal_y - Another random signal.
-	#	@return - The cross-correlation between signal_x and signal_y.
-	#	O(1) method.
-	#
-	#	References:
-	#		#### TO BE FIXED:
-	#		CITE THIS!!!
-	#			https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
-	@staticmethod
-	def cross_correlation_using_all_approaches(signal_x=[],signal_y=[]):
-		cross_correlation_from_numpy_correlate = cross_correlation_using_numpy(signal_x,signal_y,numpy_correlate_mode_valid,numpy_correlate_mode_same,numpy_correlate_mode_full)
-		print("Cross-correlation using",,"mode is:",cross_correlation_from_numpy_correlate),
-	# ============================================================
-	##	Method to demonstrate the generation and calculation of
-	#		the cross-correlation of RTW signals.
+	##	Method to test the calculation of the cross correlation
+	#		of RTW signals.
 	#
 	#	@param - None.
 	#	@return - Nothing.
 	#	O(1) method.
 	@staticmethod
-	def rtw_signal_generation_and_cross_correlation():
+	def test_rtw_signal_generation_and_cross_correlation():
 		# Number of discrete values for random signals/"processes".
 		k=16
 		# Generate a random signal of the type random telegraph wave (RTW).
@@ -165,21 +99,18 @@ class approx_cross_correlation:
 		# Generate another RTW.
 		x_rtw_2 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
 		# Find the cross-correlation between these two RTWs.
-		#
+	## =========================================================
+	#	Method to test the methods regarding approximating
+	#		cross-correlation.
+	#	@param - Nothing
+	#	@return - Nothing.
+	#	O(1) method.
+	@staticmethod
+	def test_random_signal_generation_methods():
+		print("")
+		print("")
+		print("==	Testing class: approx_cross_correlation.")
+		approx_cross_correlation_tester.test_rtw_signal_generation_and_cross_correlation()
 
 
 
-###############################################################
-# Main method for the program.
-
-
-"""
-	If executed from the "source" directory, it cannot locate the
-		custom Python modules that are imported at the top of
-		this Python script/program. 
-"""
-#	If this is executed as a Python script,
-"""
-if __name__ == "__main__":
-	approximate_cross_correlation.rtw_signal_generation_and_cross_correlation()
-"""
