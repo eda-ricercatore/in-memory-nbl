@@ -22,6 +22,7 @@ In-memory computing with noise-based logic
 			configuration file for *Doxygen* to be overwritten.
 		* Use the *Make* target "doxygen" to automatically generate
 			documentation for the project (i.e., source code or code base).
+			+ That is, try: make doxygen
 	- makefile
 		* for build automation
 + notes
