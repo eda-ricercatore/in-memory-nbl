@@ -97,7 +97,8 @@ from time import monotonic_ns as pm_monotonic_ns
 """
 	Module to calculate the factorial of a number.
 """
-from get_factorial import calculate_factorial
+#from get_factorial import calculate_factorial
+from utilities.timing_measurements.get_factorial import calculate_factorial
 
 ###############################################################
 """
@@ -132,7 +133,8 @@ class execution_time_measurement:
 	#				* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
 	#				* process_time, process_time(): pt_timestamp()
 	#				* process_time_ns, process_time_ns(): pt_timestamp_ns()
-	#				* time, time.time_ns(): time_ns()
+	#				* time, time.time(): time()
+	#				* time_ns, time.time_ns(): time_ns()
 	#				* monotonic, monotonic(): pm_monotonic()
 	#				* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
 	#	@return - Nothing.
@@ -146,7 +148,8 @@ class execution_time_measurement:
 				* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
 				* process_time, process_time(): pt_timestamp()
 				* process_time_ns, process_time_ns(): pt_timestamp_ns()
-				* time, time.time_ns(): time.time_ns()
+				* time, time.time(): time.time()
+				* time_ns, time.time_ns(): time.time_ns()
 				* monotonic, monotonic(): pm_monotonic()
 				* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
 		"""
@@ -190,7 +193,8 @@ class execution_time_measurement:
 	#				* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
 	#				* process_time, process_time(): pt_timestamp()
 	#				* process_time_ns, process_time_ns(): pt_timestamp_ns()
-	#				* time, time.time_ns(): time_ns()
+	#				* time, time.time(): time()
+	#				* time_ns, time.time_ns(): time_ns()
 	#				* monotonic, monotonic(): pm_monotonic()
 	#				* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
 	#	@return the elapsed time from the initial timestamp.
@@ -204,7 +208,8 @@ class execution_time_measurement:
 				* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
 				* process_time, process_time(): pt_timestamp()
 				* process_time_ns, process_time_ns(): pt_timestamp_ns()
-				* time, time.time_ns(): time_ns()
+				* time, time.time(): time()
+				* time_ns, time.time_ns(): time_ns()
 				* monotonic, monotonic(): pm_monotonic()
 				* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
 		"""
@@ -245,7 +250,8 @@ class execution_time_measurement:
 	#		* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
 	#		* process_time, process_time(): pt_timestamp()
 	#		* process_time_ns, process_time_ns(): pt_timestamp_ns()
-	#		* time, time.time_ns(): time_ns()
+	#		* time, time.time(): time()
+	#		* time_ns, time.time_ns(): time_ns()
 	#		* monotonic, monotonic(): pm_monotonic()
 	#		* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
 	#	@return - Nothing.
