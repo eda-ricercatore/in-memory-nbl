@@ -87,6 +87,11 @@ import random
 		number generator from the Python Standard Library.
 """
 class prng:
+	# (Static) variables.
+	# Type of signal: bit-vector, BV.
+	bv_signal = "bv"
+	# Type of signal: random telegraph wave, RTW.
+	rtw_signal = "rtw"
 	"""
 		Default number for arbitrating a given pseudorandom number
 			into a high value (i.e., "1") or a low value (i.e., "-1")
@@ -115,8 +120,8 @@ class prng:
 	##	Method to generate a value for a random signal/process.
 	#
 	#	Use the Python Standard Library's random module to call the
-	#		uniform function that is a PRNG that is based on a
-	#		uniform distribution.
+	#		uniform function that is a PRNG based on a uniform
+	#		distribution.
 	#
 	#	@param type_of_signal - Indicates if either of the following
 	#				random signals (or random "processes") are used.
@@ -131,7 +136,7 @@ class prng:
 	@staticmethod
 	def psl_uniform(type_of_signal="bv"):
 		# Is the selected random signal/process a RTW?
-		if type_of_signal == rtw_arbitration_value:
+		if type_of_signal == rtw_signal:
 			"""
 				Yes.
 				Shall the generated pseudorandom number arbitrated

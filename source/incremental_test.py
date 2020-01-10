@@ -98,11 +98,26 @@ from statistics.test_data_analysis_tool import data_analysis_tester
 
 
 # Utilities package.
+# Package and module to perform file I/O (input/output) operations.
+from utilities.file_io import file_io_operations
+# Package and module to test file I/O (input/output) operations.
+from utilities.file_io_tester import file_io_operations_tester
 # Package and module to process input arguments to the script/program.
 # Package and module to perform date and time operations.
 from utilities.date_time_processing import date_time_operations
 # Package and module to test date and time operations.
 from utilities.date_time_processing_tester import date_time_operations_tester
+"""
+	Module to generate the filename for storing the experimental
+		results and simulation output.
+"""
+from utilities.generate_results_filename import generate_filename
+"""
+	Module to test if the generated filename (based on the
+		then-current time stamp) conforms to the specified
+		format.
+"""
+from utilities.generate_results_filename_tester import generate_filename_tester
 # Module to test miscellaneous methods.
 from utilities.miscellaneous import misc
 from utilities.miscellaneous_tester import misc_tester
@@ -129,63 +144,10 @@ from utilities.miscellaneous_tester import misc_tester
 		- ???
 """
 class incremental_test_automation:
+	# (Static) variables.
 	#	Location to store simulation and/or experimental results.
 	result_repository = "~/Documents/ricerca/risultati_sperimentali/std-cell-library-characterization"
 	# ============================================================
-	#	Other methods.
-	# ============================================================
-	##	Method to add BibTeX keys into a list, "set_of_BibTeX_keys".
-	#	@return ???
-	#	O(n) method, where n is the number of BibTeX keys.
-	@staticmethod
-	def add_BibTeX_key(found_BibTeX_key):
-		if (found_BibTeX_key in incremental_test_automation.set_of_BibTeX_keys):
-			temp_str = "Duplicate BibTeX key:"+found_BibTeX_key
-			warnings.warn(temp_str)
-			raise Exception("Multiple instances of a BibTeX key")
-		incremental_test_automation.set_of_BibTeX_keys.append(found_BibTeX_key)
-	# ============================================================
-	##	Method to sort BibTeX keys into a list, "set_of_BibTeX_keys".
-	#	O(n*log(n)) method, where n is the number of BibTeX keys.
-	@staticmethod
-	def sort_BibTeX_keys():
-		incremental_test_automation.set_of_BibTeX_keys = sorted(incremental_test_automation.set_of_BibTeX_keys)
-	# ============================================================
-	##	Method to read each line of the input BibTeX file.
-	#	O(n) method, where n is the number of lines of the BibTeX file.
-	@staticmethod
-	def read_input_BibTeX_file(ip_file_object,input_BibTeX_file):
-		#print "--------------------------------------------------------"
-		println = "=	Reading input BibTeX file: "
-		println += input_BibTeX_file
-		print(println)
-		# Read each available line in the input BibTeX file.
-		for line in ip_file_object:
-			# Is this line the 1st line of a BibTeX entry?
-			if "@" == line[0]:
-				# Yes.
-#				print "...	First line of a BibTeX entry."
-				# Increment number of BibTeX entries.
-				incremental_test_automation.num_of_bibtex_entries = incremental_test_automation.num_of_bibtex_entries + 1
-				tokenized_BibTeX_entry = re.split('@|{|,',line)
-#				for i in tokenized_BibTeX_entry:
-#					print i
-				# Is the type of the BibTeX entry valid?
-				if (tokenized_BibTeX_entry[1] in queue_ip_args.BibTeX_entry_types):
-					# Yes. Try adding the BibTeX entry to "set_of_BibTeX_keys".
-					incremental_test_automation.add_BibTeX_key(tokenized_BibTeX_entry[2].lower())
-				else:
-					# No. Warn user that the type of BibTeX entry is invalid!
-					temp_str = "Invalid type of BibTeX entry:"
-					temp_str += tokenized_BibTeX_entry[1]
-					print(temp_str)
-					#warnings.warn("Invalid type of BibTeX entry")
-					raise Exception("BibTeX entry has an invalid type!")
-		if (incremental_test_automation.num_of_bibtex_entries != len(incremental_test_automation.set_of_BibTeX_keys)):
-			raise Exception("Mismatch in number of BibTeX entries processed.")
-		else:
-			print("=	Number of BibTeX entries processed: {}" .format(str(incremental_test_automation.num_of_bibtex_entries)))
-
 
 
 
@@ -211,17 +173,6 @@ if __name__ == "__main__":
 	print("Automating incremental regression testing of my software")
 	print("	solution for genetic technology mapping.")
 	print("")
-	# Assign input arguments to "queue_ip_args" for processing.
-	#queue_ip_args.set_input_arguments(sys.argv,queue_ip_args.INCREMENTAL_TEST)
-	queue_ip_args.set_input_arguments(sys.argv)
-	# Check if user wants to read the brief user manual.
-	queue_ip_args.check_if_help_wanted()
-	# Process the first input argument.
-	print("=	Process the first input argument.")
-	ip_filename = queue_ip_args.process_1st_ip_arg()
-	print("=	Create a file object for reading.")
-	# Create a file object for input BibTeX file, in reading mode.
-	ip_file_obj = file_io_operations.open_file_object_read(ip_filename)
 	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	# The real stuff begins here...
 	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
@@ -235,40 +186,11 @@ if __name__ == "__main__":
 	# Insert test cases for testing the utilities package.
 	print("")
 	print("=	Testing the utilities package.")
-	file_io_operations_tester.test_file_io_operations()
-	queue_ip_args_tester.test_queue_ip_args()
-	config_manager_tester.test_configure_sw_application_parameters()
+	#	The original file I/O module has been rigorously tested.
+	#file_io_operations_tester.test_file_io_operations()
 	date_time_operations_tester.test_date_time_operations()
 	generate_filename_tester.test_filename_generation_methods()
 	misc_tester.test_miscellaneous_methods()
-	# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	print("")
-	print("=	Testing user-defined errors.")
-	print("")
-	graph_error_tester.test_raising_graph_error()
-	#utilities.custom_exceptions.graph_error_tester.test_raising_graph_error()
-	#utilities.custom_exceptions.graph_error_tester.helloworld()
-	#utilities.custom_exceptions.graph_error_tester.graph_error_tester.helloworld()
-	#utilities.custom_exceptions.graph_error_tester.graph_error_tester.test_raising_graph_error()
-	#graph_err_t.test_raising_graph_error()
-#	check_bibtex_key_tester.test_check_bibtex_key()
-	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
-	# Insert test cases for testing the parsers package.
-	print("")
-	print("=	Testing the parsers package.")
-	print("")
-	json_obj_tester.test_json_object_accessibility()
-	config_parser_tester.test_json_config_file_parser()
-	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
-	# Insert test cases for testing the data_structures package.
-	print("")
-	print("=	Testing the data_structures package.")
-	print("")
-	vertex_tester.test_generic_vertex()
-	graph_tester.test_graph()
-	vertex_dg_tester.test_vertex_dg()
-	vertex_ug_tester.test_vertex_ug()
-#	edge_ug_tester.test_edge_ug()
 	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
 	#	### TO-DO
 	#	Test expr_configuration
@@ -277,8 +199,8 @@ if __name__ == "__main__":
 	print(">>	Get statistics of the software testing process.")
 	statistical_analysis.print_statistics_of_software_testing()
 	# Close the file object for reading.
-	print("=	Close the file objects for reading (and writing).")
-	file_io_operations.close_file_object(ip_file_obj)
+	#print("=	Close the file objects for reading (and writing).")
+	#file_io_operations.close_file_object(ip_file_obj)
 	"""
 	file_io_operations.close_file_object(results_file_object)
 	# Stop redirecting standard output and standard to an output file.
