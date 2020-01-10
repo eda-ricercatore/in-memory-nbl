@@ -131,7 +131,7 @@ class rand_signal_generator:
 				Check the output of psl_uniform(type_of_signal)
 					complies with specifications, as an assertion.
 			"""
-			random_signal.append(psl_uniform(type_of_signal))
+			random_signal.append(prng.psl_uniform(type_of_signal))
 		"""
 			###	TODO
 			Check the random signal/"process" complies with

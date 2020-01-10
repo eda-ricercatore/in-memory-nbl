@@ -114,7 +114,7 @@ class prng_tester:
 		statistical_analysis.increment_number_test_cases_used()
 		temp_ran_number = prng.psl_uniform(prng.rtw_signal)
 		if (1==temp_ran_number) or (-1==temp_ran_number):
-			print(prompt .format("OK"))
+			print(prompt .format("	OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
 			print(prompt .format("FAIL!!!"))
