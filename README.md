@@ -19,7 +19,7 @@ In-memory computing with noise-based logic
 		* configuration file *Doxygen* to automatically produce/synthesize/generate
 			documentation for the *Python*-based simulator. 
 	- makefile
-		* for build automationd
+		* for build automation
 + notes
 	- guidelines
 		* guidelines for collaboration
