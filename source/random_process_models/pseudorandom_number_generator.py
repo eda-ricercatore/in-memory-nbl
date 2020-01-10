@@ -11,8 +11,6 @@
 	Synopsis:
 	Generate pseudorandom numbers in Python.
 
-	This script can be executed as follows:
-	./pseudorandom_number_generator.py
 
 
 
@@ -134,18 +132,19 @@ class prng:
 	#	@return - Nothing.
 	#	O(1) method.
 	@staticmethod
-	def psl_uniform(type_of_signal="bv"):
+	def psl_uniform(type_of_signal=bv_signal):
+	#def psl_uniform(type_of_signal=prng.bv_signal):
 		# Is the selected random signal/process a RTW?
-		if type_of_signal == rtw_signal:
+		if type_of_signal == prng.rtw_signal:
 			"""
 				Yes.
 				Shall the generated pseudorandom number arbitrated
 					to a high or low value?
 			"""
-			if random.uniform(low_value_rtw,high_value_rtw) >= rtw_arbitration_value:
-				return high_value_rtw
+			if random.uniform(prng.low_value_rtw,prng.high_value_rtw) >= prng.rtw_arbitration_value:
+				return prng.high_value_rtw
 			else:
-				return low_value_rtw
+				return prng.low_value_rtw
 		else:
 			"""
 				No. The random signal/process is treated as
@@ -153,9 +152,9 @@ class prng:
 				Shall the generated pseudorandom number arbitrated
 					to a high or low value?
 			"""
-			if random.uniform(low_value_bit_vector,high_value_bit_vector) >= bit_vector_arbitration_value:
-				return high_value_bit_vector
+			if random.uniform(prng.low_value_bit_vector,prng.high_value_bit_vector) >= prng.bit_vector_arbitration_value:
+				return prng.high_value_bit_vector
 			else:
-				return low_value_bit_vector
+				return prng.low_value_bit_vector
 
 

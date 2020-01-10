@@ -122,7 +122,21 @@ from utilities.generate_results_filename_tester import generate_filename_tester
 from utilities.miscellaneous import misc
 from utilities.miscellaneous_tester import misc_tester
 
-# Module for user-defined error/exception.
+# Modules for user-defined error/exception.
+
+
+
+
+# Modules for random number and random signal/"process" generation.
+# Module to generate pseudorandom numbers.
+from random_process_models.pseudorandom_number_generator import prng
+# Module to generate pseudorandom numbers.
+from random_process_models.pseudorandom_number_generator_tester import prng_tester
+
+
+
+
+
 
 ###############################################################
 
@@ -191,6 +205,11 @@ if __name__ == "__main__":
 	date_time_operations_tester.test_date_time_operations()
 	generate_filename_tester.test_filename_generation_methods()
 	misc_tester.test_miscellaneous_methods()
+	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
+	# Insert test cases for testing the random_process_models package.
+	print("")
+	print("=	Testing the random_process_models package.")
+	prng_tester.test_prng_methods()
 	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
 	#	### TO-DO
 	#	Test expr_configuration

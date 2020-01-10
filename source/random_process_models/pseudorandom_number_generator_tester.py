@@ -2,18 +2,13 @@
 ###!/Users/zhiyang/anaconda3/bin/python3
 
 """
-	This Python script is written by Zhiyang Ong to generate
-		random signals/"processes" by calling pseudorandom number
-		generators iteratively, using pseudorandom number
-		generators (PRNG) from the Python Standard Library and
-		other Python libraries.
+	This Python script is written by Zhiyang Ong to test my
+		custom Python module that generates pseudorandom numbers.
 
 
 	Synopsis:
-	Generate random signals/"processes" in Python.
+	Test pseudorandom number generator (PRNG).
 
-	This script can be executed as follows:
-	./random_process_generator.py
 
 
 
@@ -76,89 +71,61 @@ import random
 ###############################################################
 #	Import Custom Python Packages and Modules
 
+"""
+	Package and module to print statistics of software testing
+		results.
+"""
+from statistics.test_statistics import statistical_analysis
+
+
 # Module to generate pseudorandom numbers.
 from random_process_models.pseudorandom_number_generator import prng
 
 
-
 ###############################################################
-"""
-	Module with methods that generate a digital random process,
-		which consists of only "high" and/or "low" values, using
-		the pseudorandom number generator from the Python
-		Standard Library or other Python libraries.
-"""
-class rand_signal_generator:
-	# (Static) variables.
-	# Type of signal: bit-vector, BV.
-	bv_signal = "bv"
-	# Type of signal: random telegraph wave, RTW.
-	rtw_signal = "rtw"
-	# High and low values for a random telegraph wave, RTW.
-	low_value_rtw = -1
-	high_value_rtw = 1
-	# High and low values for a bit vector (BV).
-	low_value_bit_vector = 0
-	high_value_bit_vector = 1
-	# ============================================================
-	##	Method to generate a discrete-time random signal/process
-	#		for "n" values.
-	#
-	#	Use the Python Standard Library's random module to call the
-	#		uniform function that is a PRNG based on a uniform
-	#		distribution.
-	#
-	#	@param type_of_signal - Indicates if either of the following
-	#				random signals (or random "processes") are used.
-	#				* rtw, for a random telegraph wave
-	#					- high value: "1"
-	#					- low value: "-1"
-	#				* bv, for a bit-vector
-	#					- high value: "1"
-	#					- low value: "0"
-	#	@param n - number of discrete values used to represent the
-	#				random signal/"process".
-	#				Its default value is: 16.
+##	Module with methods that perform miscellaneous tasks.
+class prng_tester:
+	## =========================================================
+	#	Method to test the methods that uses the PRNG from Python
+	#		Standard Library to produce random numbers.
+	#	@param - Nothing
 	#	@return - Nothing.
 	#	O(1) method.
 	@staticmethod
-	def gen_rand_signal_uniform_distributn(type_of_signal=rand_signal_generator.bv_signal, n=16):
-		random_signal = []
-		# Generate a random signal/"process" of n values.
-		for x in range(n):
-			"""
-				###	TODO
-				Check the output of psl_uniform(type_of_signal)
-					complies with specifications, as an assertion.
-			"""
-			random_signal.append(psl_uniform(type_of_signal))
-		"""
-			###	TODO
-			Check the random signal/"process" complies with
-				specifications, as a postcondition.
-		"""
-	# ============================================================
-	##	Method to generate a discrete-time random signal/process
-	#		for "n" values.
-	#
-	#	Use the Python Standard Library's random module to call the
-	#		random.getrandbits(k) function that is based on the
-	#		MersenneTwister generator (or some other generators).
-	#
-	#	For the generated bit-vector (bv), it has a:
-	#	- high value: "1"
-	#	- low value: "0"
-	#
-	#	@param n - number of discrete values used to represent the
-	#				random signal/"process".
-	#				Its default value is: 16.
+	def test_psl_uniform():
+		print("	Testing the psl_uniform().")
+		prompt = "	... Test: incorrect type of signal, 'whatever'.		{}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_ran_number = prng.psl_uniform("whatever")
+		if (1==temp_ran_number) or (0==temp_ran_number):
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+		prompt = "	... Test: for bit vector signal, 'bv'.			{}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_ran_number = prng.psl_uniform(prng.bv_signal)
+		if (1==temp_ran_number) or (0==temp_ran_number):
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+		prompt = "	... Test: for RTW signal, 'rtw'.		{}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_ran_number = prng.psl_uniform(prng.rtw_signal)
+		if (1==temp_ran_number) or (-1==temp_ran_number):
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+	## =========================================================
+	#	Method to test the miscellaneous methods.
+	#	@param - Nothing
 	#	@return - Nothing.
 	#	O(1) method.
 	@staticmethod
-	def gen_bit_vector_getrandbits(n=16):
-		return random.getrandbits(n)
-
-
-
-
-
+	def test_prng_methods():
+		print("")
+		print("")
+		print("==	Testing class: misc_tester.")
+		prng_tester.test_psl_uniform()
