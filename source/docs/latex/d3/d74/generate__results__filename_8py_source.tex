@@ -1,0 +1,215 @@
+\hypertarget{generate__results__filename_8py_source}{}\section{generate\+\_\+results\+\_\+filename.\+py}
+\label{generate__results__filename_8py_source}\index{utilities/generate\+\_\+results\+\_\+filename.\+py@{utilities/generate\+\_\+results\+\_\+filename.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{generate__results__filename_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1generate__results__filename}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This is written by Zhiyang Ong to generate a filename to store}
+00006 \textcolor{stringliteral}{        experimental data/results from running experiments, and/or}
+00007 \textcolor{stringliteral}{        automated software regression testing and hardware regression}
+00008 \textcolor{stringliteral}{        verification.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    Synopsis: command name and [argument(s)]}
+00013 \textcolor{stringliteral}{    ./generate\_results\_filename.py [-h]}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{    Parameters:}
+00016 \textcolor{stringliteral}{    [input BibTeX file]:    A BibTeX database.}
+00017 \textcolor{stringliteral}{}
+00018 \textcolor{stringliteral}{    [-h]                :   If an optional "-h" flag is used as an}
+00019 \textcolor{stringliteral}{                            input argument, show the brief user manual}
+00020 \textcolor{stringliteral}{                            and exit (terminate the program).}
+00021 \textcolor{stringliteral}{}
+00022 \textcolor{stringliteral}{}
+00023 \textcolor{stringliteral}{    Its procedure is described as follows:}
+00024 \textcolor{stringliteral}{    If the optional "-h" flag is specified,}
+00025 \textcolor{stringliteral}{        display the brief user manual.}
+00026 \textcolor{stringliteral}{    Get the current date and time in the DD-MM-YY-HH-MM-SS-uS format,}
+00027 \textcolor{stringliteral}{        and create an empty file named after the current date and time.}
+00028 \textcolor{stringliteral}{}
+00029 \textcolor{stringliteral}{}
+00030 \textcolor{stringliteral}{    Notes/Assumptions:}
+00031 \textcolor{stringliteral}{    Since I would be categorizing and storing the experimental results}
+00032 \textcolor{stringliteral}{        based on the year and month, the filename containg experimental}
+00033 \textcolor{stringliteral}{        results would be named in the DD-MM-YY-HH-MM-SS-uS format so that}
+00034 \textcolor{stringliteral}{        I can quickly find the file of a given build (or experimental}
+00035 \textcolor{stringliteral}{        run) as I read the filename from left to right.}
+00036 \textcolor{stringliteral}{}
+00037 \textcolor{stringliteral}{}
+00038 \textcolor{stringliteral}{}
+00039 \textcolor{stringliteral}{    References:}
+00040 \textcolor{stringliteral}{    \(\backslash\)cite\{SaltyCrane2014\}}
+00041 \textcolor{stringliteral}{        Eliot "Salty Crane", "How to get the current date and time in Python," from Salty Crane Blog, June
+       26, 2008. Available online from Salty Crane Blog at:
+       https://www.saltycrane.com/blog/2008/06/how-to-get-current-date-and-time-in/; modified on October 22, 2014; self-published; August 31, 2018 was the last accessed
+       date}
+00042 \textcolor{stringliteral}{}
+00043 \textcolor{stringliteral}{    \(\backslash\)cite[datetime module, \(\backslash\)S8.1.4 datetime Objects, now() function]\{DrakeJr2016b\}}
+00044 \textcolor{stringliteral}{}
+00045 \textcolor{stringliteral}{}
+00046 \textcolor{stringliteral}{}
+00047 \textcolor{stringliteral}{    Revision History:}
+00048 \textcolor{stringliteral}{    April 17, 2017          Version 0.1, initial build.}
+00049 \textcolor{stringliteral}{"""}
+00050 
+00051 
+00052 \textcolor{comment}{#   The MIT License (MIT)}
+00053 
+00054 \textcolor{comment}{#   Copyright (c) <2014-2017> <Zhiyang Ong>}
+00055 
+00056 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00057 
+00058 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00059 
+00060 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00061 
+00062 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00063 
+00064 \textcolor{comment}{#   ==========================================================}
+00065 
+\hypertarget{generate__results__filename_8py_source_l00066}{}\hyperlink{namespaceutilities_1_1generate__results__filename_ad6ef48cbe2a62d40da9c310ff84c9389}{00066} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{generate__results__filename_8py_source_l00067}{}\hyperlink{namespaceutilities_1_1generate__results__filename_a278d4471bcb9b4e800f698ee4492eac3}{00067} \_\_version\_\_ = \textcolor{stringliteral}{'0.2'}
+\hypertarget{generate__results__filename_8py_source_l00068}{}\hyperlink{namespaceutilities_1_1generate__results__filename_a26c03761d2937c6b0a2688c27fedd481}{00068} \_\_date\_\_ = \textcolor{stringliteral}{'Apr 17, 2017'}
+00069 
+00070 \textcolor{comment}{###############################################################}
+00071 
+00072 \textcolor{stringliteral}{"""}
+00073 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00074 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00075 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00076 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00077 \textcolor{stringliteral}{}
+00078 \textcolor{stringliteral}{    subprocess -> call}
+00079 \textcolor{stringliteral}{                To make system calls.}
+00080 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00081 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00082 \textcolor{stringliteral}{    re          Use regular expressions.}
+00083 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00084 \textcolor{stringliteral}{"""}
+00085 
+00086 \textcolor{keyword}{import} sys
+00087 \textcolor{keyword}{import} os
+00088 \textcolor{keyword}{import} os.path
+00089 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00090 \textcolor{keyword}{import} time
+00091 \textcolor{keyword}{import} warnings
+00092 \textcolor{keyword}{import} re
+00093 \textcolor{keyword}{import} filecmp
+00094 \textcolor{keyword}{from} datetime \textcolor{keyword}{import} date
+00095 \textcolor{keyword}{import} datetime
+00096 
+00097 \textcolor{comment}{###############################################################}
+00098 
+00099 \textcolor{comment}{#   Import Custom Python Modules}
+00100 
+00101 \textcolor{comment}{# Module to process input arguments to the script/program.}
+00102 \textcolor{comment}{#from utilities.queue\_ip\_arguments import queue\_ip\_args}
+00103 
+00104 
+00105 \textcolor{comment}{###############################################################}
+\hypertarget{generate__results__filename_8py_source_l00106}{}\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename}{00106} \textcolor{keyword}{class }\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename}{generate\_filename}:
+00107     \textcolor{comment}{##  Method to generate a filename for the results of the}
+00108     \textcolor{comment}{#       experimental/simulation run, or execution of the}
+00109     \textcolor{comment}{#       automated regression testing (for software) or}
+00110     \textcolor{comment}{#       automated regression verification.}
+00111     \textcolor{comment}{#   @return - List of input arguments to the program.}
+00112     \textcolor{comment}{#   O(1) method.}
+00113     @staticmethod
+\hypertarget{generate__results__filename_8py_source_l00114}{}\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}{00114}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}{create\_filename}():
+00115         \textcolor{stringliteral}{"""}
+00116 \textcolor{stringliteral}{            Generate filename to store experimental/simulation}
+00117 \textcolor{stringliteral}{                results, from characterizing the standard cell}
+00118 \textcolor{stringliteral}{                library that uses noise-based logic}
+00119 \textcolor{stringliteral}{                \(\backslash\)cite\{SaltyCrane2014\}}
+00120 \textcolor{stringliteral}{                \(\backslash\)cite[datetime module, \(\backslash\)S8.1.4 datetime Objects, now() function]\{DrakeJr2016b\}.}
+00121 \textcolor{stringliteral}{        """}
+00122         now = datetime.datetime.now()
+00123         \textcolor{stringliteral}{"""}
+00124 \textcolor{stringliteral}{        print("Current date and time using instance attributes:")}
+00125 \textcolor{stringliteral}{        print("Current year: %d" % now.year)}
+00126 \textcolor{stringliteral}{        print("Current month: %d" % now.month)}
+00127 \textcolor{stringliteral}{        print("Current day: %d" % now.day)}
+00128 \textcolor{stringliteral}{        print("Current hour: %d" % now.hour)}
+00129 \textcolor{stringliteral}{        print("Current minute: %d" % now.minute)}
+00130 \textcolor{stringliteral}{        print("Current second: %d" % now.second)}
+00131 \textcolor{stringliteral}{        print("Current microsecond: %d" % now.microsecond)}
+00132 \textcolor{stringliteral}{        print("")}
+00133 \textcolor{stringliteral}{        print("Current date and time using strftime:")}
+00134 \textcolor{stringliteral}{        print(now.strftime("%Y-%m-%d %H:%M"))}
+00135 \textcolor{stringliteral}{        print("")}
+00136 \textcolor{stringliteral}{        print("Current date and time using isoformat:")}
+00137 \textcolor{stringliteral}{        print(now.isoformat())}
+00138 \textcolor{stringliteral}{        print("")}
+00139 \textcolor{stringliteral}{        """}
+00140         current\_time = str(now.day) + \textcolor{stringliteral}{"-"} + str(now.month) + \textcolor{stringliteral}{"-"} + str(now.year) + \textcolor{stringliteral}{"-"} + str(now.hour) + \textcolor{stringliteral}{"-
+      "}  + str(now.minute) + \textcolor{stringliteral}{"-"}  + str(now.second) + \textcolor{stringliteral}{"-"}  + str(now.microsecond) + \textcolor{stringliteral}{".txt"}
+00141         \textcolor{comment}{#print(current\_time)}
+00142         \textcolor{keywordflow}{return} current\_time
+00143     \textcolor{comment}{# ============================================================}
+00144     \textcolor{comment}{##  Method to determine if the user wants help, and conequently}
+00145     \textcolor{comment}{#       display the user manual.}
+00146     \textcolor{comment}{#   O(n) method, with respect to the number of input arguments.}
+00147     @staticmethod
+\hypertarget{generate__results__filename_8py_source_l00148}{}\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}{00148}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}{check\_if\_help\_wanted}():
+00149         \textcolor{comment}{# If user wants to read the brief user manual,}
+00150         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"-h"} \textcolor{keywordflow}{in} sys.argv:
+00151             \textcolor{comment}{# Display the user manual and exit.}
+00152             print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00153             print(\textcolor{stringliteral}{"==>  This script generates a filename based on."})
+00154             print(\textcolor{stringliteral}{" the date and time."})
+00155             print(\textcolor{stringliteral}{""})
+00156             print(\textcolor{stringliteral}{"This script can be executed as follows:"})
+00157             print(\textcolor{stringliteral}{"./generate\_results\_filename.py [-h]"})
+00158             print(\textcolor{stringliteral}{""})
+00159             print(\textcolor{stringliteral}{"An optional '-h' flag can be used as any input argument"})
+00160             print(\textcolor{stringliteral}{" to show the brief user manual and exit."})
+00161             print(\textcolor{stringliteral}{""})
+00162             print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00163 
+00164 
+00165 
+00166 
+00167 
+00168 
+00169 
+00170 
+00171 
+00172 
+00173 
+00174 
+00175 
+00176 \textcolor{comment}{###############################################################}
+00177 \textcolor{comment}{# Main method for the program.}
+00178 
+00179 \textcolor{comment}{#   If this is executed as a Python script,}
+00180 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"\_\_main\_\_"}:
+00181     generate\_filename.check\_if\_help\_wanted()
+00182     print(\textcolor{stringliteral}{"==================================================="})
+00183     print(\textcolor{stringliteral}{"Generate filename to store experimental/simulation results."})
+00184     print(\textcolor{stringliteral}{""})
+\hypertarget{generate__results__filename_8py_source_l00185}{}\hyperlink{namespaceutilities_1_1generate__results__filename_a4ef8cf545152b32ed95983cba284b478}{00185}     filename = generate\_filename.create\_filename()
+00186     print(\textcolor{stringliteral}{""})
+00187     print(\textcolor{stringliteral}{" = end ="})
+00188 
+00189 
+00190 \textcolor{comment}{#   Python database management}
+00191 \textcolor{comment}{#   Python: date, time, now, string}
+00192 \textcolor{comment}{#   Add references.}
+00193 \textcolor{comment}{#   \(\backslash\)cite\{Hetland2005,Lutz2010,Lutz2011,Sileika2010,Younker2008\}.}
+00194 \textcolor{comment}{#   \(\backslash\)cite[Chp. 17,25]\{Beazley2009\}}
+\end{DoxyCode}

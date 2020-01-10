@@ -1,0 +1,127 @@
+\hypertarget{test__statistics__tester_8py_source}{}\section{test\+\_\+statistics\+\_\+tester.\+py}
+\label{test__statistics__tester_8py_source}\index{statistics/test\+\_\+statistics\+\_\+tester.\+py@{statistics/test\+\_\+statistics\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{test__statistics__tester_8py_source_l00001}{}\hyperlink{namespacestatistics_1_1test__statistics__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 
+00005 \textcolor{stringliteral}{"""}
+00006 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test support}
+00007 \textcolor{stringliteral}{        functions for basic statistical analysis during software}
+00008 \textcolor{stringliteral}{        test automation.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{}
+00011 \textcolor{stringliteral}{    Synopsis:}
+00012 \textcolor{stringliteral}{    Test the support software for statistical analysis during}
+00013 \textcolor{stringliteral}{        software test automation.}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{    Revision History:}
+00017 \textcolor{stringliteral}{    December 15, 2017           Version 0.1, initial build.}
+00018 \textcolor{stringliteral}{"""}
+00019 
+\hypertarget{test__statistics__tester_8py_source_l00020}{}\hyperlink{namespacestatistics_1_1test__statistics__tester_ab9ecb1d5ecfb751c8b2a27ac138a0eed}{00020} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{test__statistics__tester_8py_source_l00021}{}\hyperlink{namespacestatistics_1_1test__statistics__tester_a29677162e8392e196da563156d924f5d}{00021} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{test__statistics__tester_8py_source_l00022}{}\hyperlink{namespacestatistics_1_1test__statistics__tester_a0d2103581aebe4f7dfb05775432fa386}{00022} \_\_date\_\_ = \textcolor{stringliteral}{'December 15, 2017'}
+00023 
+00024 \textcolor{comment}{#   The MIT License (MIT)}
+00025 
+00026 \textcolor{comment}{#   Copyright (c) <2014-2018> <Zhiyang Ong>}
+00027 
+00028 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00029 
+00030 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00031 
+00032 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00033 
+00034 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00035 
+00036 \textcolor{comment}{###############################################################}
+00037 \textcolor{stringliteral}{"""}
+00038 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00039 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00040 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00041 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00042 \textcolor{stringliteral}{}
+00043 \textcolor{stringliteral}{    subprocess -> call}
+00044 \textcolor{stringliteral}{                To make system calls.}
+00045 \textcolor{stringliteral}{}
+00046 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00047 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00048 \textcolor{stringliteral}{    re          Use regular expressions.}
+00049 \textcolor{stringliteral}{}
+00050 \textcolor{stringliteral}{    collections -> namedtuple}
+00051 \textcolor{stringliteral}{                To use named tuples.}
+00052 \textcolor{stringliteral}{    operator -> attrgetter}
+00053 \textcolor{stringliteral}{                To manipulate attributes of a named tuple as callable}
+00054 \textcolor{stringliteral}{                    objects.}
+00055 \textcolor{stringliteral}{"""}
+00056 
+00057 \textcolor{comment}{#import sys}
+00058 \textcolor{comment}{#import os}
+00059 \textcolor{comment}{#import os.path}
+00060 \textcolor{comment}{#from subprocess import call}
+00061 \textcolor{comment}{#import time}
+00062 \textcolor{keyword}{import} warnings
+00063 \textcolor{comment}{#import re}
+00064 \textcolor{comment}{#from collections import namedtuple}
+00065 \textcolor{comment}{#from operator import attrgetter}
+00066 
+00067 \textcolor{comment}{###############################################################}
+00068 \textcolor{comment}{#   Import Custom Python Modules}
+00069 
+00070 \textcolor{stringliteral}{"""}
+00071 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00072 \textcolor{stringliteral}{        results.}
+00073 \textcolor{stringliteral}{"""}
+00074 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00075 
+00076 \textcolor{comment}{###############################################################}
+00077 \textcolor{stringliteral}{"""}
+00078 \textcolor{stringliteral}{    Module that tests the methods for statistically analyzing}
+00079 \textcolor{stringliteral}{        test results of software test automation.}
+00080 \textcolor{stringliteral}{}
+00081 \textcolor{stringliteral}{    Support for class instantiation is not provided, to avoid}
+00082 \textcolor{stringliteral}{        acquiring a collection of useless "statistical\_analysis"}
+00083 \textcolor{stringliteral}{        objects.}
+00084 \textcolor{stringliteral}{}
+00085 \textcolor{stringliteral}{    Test each static method of the "statistical\_analysis" class.}
+00086 \textcolor{stringliteral}{"""}
+\hypertarget{test__statistics__tester_8py_source_l00087}{}\hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester}{00087} \textcolor{keyword}{class }\hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester}{statistical\_analysis\_tester}:
+00088     \textcolor{comment}{# =========================================================}
+00089     \textcolor{comment}{##  Method to test the methods that support software test}
+00090     \textcolor{comment}{#       automation.}
+00091     \textcolor{comment}{#   @return - Nothing.}
+00092     \textcolor{comment}{#   O(1) method.}
+00093     @staticmethod
+\hypertarget{test__statistics__tester_8py_source_l00094}{}\hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}{00094}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}{test\_statistical\_analysis}():
+00095         print(\textcolor{stringliteral}{""})
+00096         print(\textcolor{stringliteral}{"==   Testing class: data\_analysis"})
+00097         print(\textcolor{stringliteral}{"1) Number of test cases passed:      \{\}"} .format(
+      statistical\_analysis.number\_test\_cases\_passed))
+00098         print(\textcolor{stringliteral}{"2) Number of test cases used:        \{\}"} .format(statistical\_analysis.number\_test\_cases\_used
+      ))
+00099         print(\textcolor{stringliteral}{"Proportion of test cases passed: \{\}"} .format(
+      statistical\_analysis.get\_test\_cases\_passed\_average()))
+00100         \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(1,7):
+00101             statistical\_analysis.increment\_number\_test\_cases\_used()
+00102             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00103             print(\textcolor{stringliteral}{"Value of x is: \{\}."} .format(x))
+00104             print(\textcolor{stringliteral}{"Number of test cases passed: \{\}"} .format(statistical\_analysis.number\_test\_cases\_passed))
+00105             print(\textcolor{stringliteral}{"Number of test cases used:   \{\}"} .format(statistical\_analysis.number\_test\_cases\_used))
+00106             print(\textcolor{stringliteral}{"Proportion of test cases passed: \{\}"} .format(
+      statistical\_analysis.get\_test\_cases\_passed\_average()))
+\end{DoxyCode}

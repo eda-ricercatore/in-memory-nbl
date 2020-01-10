@@ -1,0 +1,363 @@
+\hypertarget{data__analysis__tool_8py_source}{}\section{data\+\_\+analysis\+\_\+tool.\+py}
+\label{data__analysis__tool_8py_source}\index{statistics/data\+\_\+analysis\+\_\+tool.\+py@{statistics/data\+\_\+analysis\+\_\+tool.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{data__analysis__tool_8py_source_l00001}{}\hyperlink{namespacestatistics_1_1data__analysis__tool}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to perform}
+00006 \textcolor{stringliteral}{        miscellaneous tasks in analyzing data.}
+00007 \textcolor{stringliteral}{}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Perform miscellaneous tasks in data analysis.}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    To-Do List:}
+00013 \textcolor{stringliteral}{    + Add information for statistics regarding:}
+00014 \textcolor{stringliteral}{        - accuracy}
+00015 \textcolor{stringliteral}{        - precision}
+00016 \textcolor{stringliteral}{}
+00017 \textcolor{stringliteral}{}
+00018 \textcolor{stringliteral}{}
+00019 \textcolor{stringliteral}{    Revision History:}
+00020 \textcolor{stringliteral}{    December 15, 2017           Version 0.1, initial build.}
+00021 \textcolor{stringliteral}{}
+00022 \textcolor{stringliteral}{}
+00023 \textcolor{stringliteral}{}
+00024 \textcolor{stringliteral}{}
+00025 \textcolor{stringliteral}{    Additional resources:}
+00026 \textcolor{stringliteral}{    + https://stackoverflow.com/questions/9039961/finding-the-average-of-a-list}
+00027 \textcolor{stringliteral}{        - use of functional programming features to calculate the}
+00028 \textcolor{stringliteral}{            average of a list/array/container/series of numbers.}
+00029 \textcolor{stringliteral}{            * reduce(lambda x, y: x + y, l) / len(l)}
+00030 \textcolor{stringliteral}{    + import itertools,operator}
+00031 \textcolor{stringliteral}{        list(itertools.accumulate(l,operator.add)).pop(-1) / len(l)}
+00032 \textcolor{stringliteral}{        https://stackoverflow.com/questions/9039961/finding-the-average-of-a-list}
+00033 \textcolor{stringliteral}{        https://docs.python.org/3/library/itertools.html}
+00034 \textcolor{stringliteral}{        https://docs.python.org/3/library/functional.html}
+00035 \textcolor{stringliteral}{    + https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html}
+00036 \textcolor{stringliteral}{    + https://acadgild.com/blog/python-mean-median-mode}
+00037 \textcolor{stringliteral}{    +
+       https://learnandlearn.com/python-programming/python-reference/find-calculate-arithmetic-mean-python-using-mean-function}
+00038 \textcolor{stringliteral}{    + https://www.quora.com/How-do-I-get-the-average-value-in-Python-of-a-list-containing-NAN-value}
+00039 \textcolor{stringliteral}{        - Processing NANs in the data sets }
+00040 \textcolor{stringliteral}{    +
+       https://docs.opencv.org/2.4/modules/core/doc/operations\_on\_arrays.html#Scalar%20mean(InputArray%20src,%20InputArray%20mask)}
+00041 \textcolor{stringliteral}{    + https://rails.devcamp.com/38/274/get-average-list-python}
+00042 \textcolor{stringliteral}{    + from numpy}
+00043 \textcolor{stringliteral}{        - https://pythontic.com/numpy/ndarray/mean\_std\_var}
+00044 \textcolor{stringliteral}{    + https://pytorch.org/docs/stable/torch.html#torch.mean}
+00045 \textcolor{stringliteral}{    }
+00046 \textcolor{stringliteral}{}
+00047 \textcolor{stringliteral}{    Reference:}
+00048 \textcolor{stringliteral}{    [WikipediaContributors2019g]}
+00049 \textcolor{stringliteral}{        Address = San Francisco, CA}
+00050 \textcolor{stringliteral}{        Author = Wikipedia contributors}
+00051 \textcolor{stringliteral}{        Howpublished = Available online from Wikipedia, The Free Encyclopedia: Measurement at:
+       https://en.wikipedia.org/wiki/Relative\_change\_and\_difference; October 1, 2019 was the last accessed date}
+00052 \textcolor{stringliteral}{        Month = September 25}
+00053 \textcolor{stringliteral}{        Publisher = Wikimedia Foundation}
+00054 \textcolor{stringliteral}{        Title = Relative change and difference}
+00055 \textcolor{stringliteral}{        Url = https://en.wikipedia.org/wiki/Relative\_change\_and\_difference}
+00056 \textcolor{stringliteral}{        Year = 2019}
+00057 \textcolor{stringliteral}{    [DrakeJr2016b]}
+00058 \textcolor{stringliteral}{        statistics package from Python Standard Library for Python 3.7.5rc1}
+00059 \textcolor{stringliteral}{        https://docs.python.org/3/library/statistics.html}
+00060 \textcolor{stringliteral}{"""}
+00061 
+\hypertarget{data__analysis__tool_8py_source_l00062}{}\hyperlink{namespacestatistics_1_1data__analysis__tool_a0d015dff70798eb64719348296063f84}{00062} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{data__analysis__tool_8py_source_l00063}{}\hyperlink{namespacestatistics_1_1data__analysis__tool_ada80d84be4de19ef8e1df3bf71640e46}{00063} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{data__analysis__tool_8py_source_l00064}{}\hyperlink{namespacestatistics_1_1data__analysis__tool_a59cd367b85d035e0be0b931b6c346ec8}{00064} \_\_date\_\_ = \textcolor{stringliteral}{'August 1, 2018'}
+00065 
+00066 \textcolor{comment}{#   The MIT License (MIT)}
+00067 
+00068 \textcolor{comment}{#   Copyright (c) <2018> <Zhiyang Ong>}
+00069 
+00070 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00071 
+00072 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00073 
+00074 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00075 
+00076 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00077 
+00078 \textcolor{comment}{###############################################################}
+00079 \textcolor{stringliteral}{"""}
+00080 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00081 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00082 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00083 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00084 \textcolor{stringliteral}{}
+00085 \textcolor{stringliteral}{    subprocess -> call}
+00086 \textcolor{stringliteral}{                To make system calls.}
+00087 \textcolor{stringliteral}{}
+00088 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00089 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00090 \textcolor{stringliteral}{    re          Use regular expressions.}
+00091 \textcolor{stringliteral}{}
+00092 \textcolor{stringliteral}{    collections -> namedtuple}
+00093 \textcolor{stringliteral}{                To use named tuples.}
+00094 \textcolor{stringliteral}{    operator    attrgetter}
+00095 \textcolor{stringliteral}{                To manipulate attributes of a named tuple as callable}
+00096 \textcolor{stringliteral}{                    objects.}
+00097 \textcolor{stringliteral}{    statistics  Module with functions for mathematical statistics}
+00098 \textcolor{stringliteral}{                    functions.}
+00099 \textcolor{stringliteral}{                    + reduce(lambda aggr, elem: (aggr[0] + elem, aggr[1]+1), l, (0.0,0))}
+00100 \textcolor{stringliteral}{                    + print reduce(lambda x, y: x + y, l) / len(l)}
+00101 \textcolor{stringliteral}{    pandas      Machine learning library}
+00102 \textcolor{stringliteral}{                    https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.mean.html}
+00103 \textcolor{stringliteral}{                    For the whole documentation:}
+00104 \textcolor{stringliteral}{                    https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.mean.html}
+00105 \textcolor{stringliteral}{}
+00106 \textcolor{stringliteral}{                    And the whole documentation:}
+00107 \textcolor{stringliteral}{                        https://pandas.pydata.org/pandas-docs/stable/10min.html}
+00108 \textcolor{stringliteral}{                        https://pandas.pydata.org/pandas-docs/stable/10min.html}
+00109 \textcolor{stringliteral}{    NumPy       Numerical computing and machine learning library}
+00110 \textcolor{stringliteral}{"""}
+00111 
+00112 \textcolor{comment}{#import sys}
+00113 \textcolor{comment}{#import os}
+00114 \textcolor{comment}{#import os.path}
+00115 \textcolor{comment}{#from subprocess import call}
+00116 \textcolor{comment}{#import time}
+00117 \textcolor{keyword}{import} warnings
+00118 \textcolor{comment}{#import re}
+00119 \textcolor{comment}{#from collections import namedtuple}
+00120 \textcolor{comment}{#from operator import attrgetter}
+00121 \textcolor{keyword}{import} statistics \textcolor{keyword}{as} s
+00122 \textcolor{comment}{#import pandas as pd}
+00123 
+00124 \textcolor{comment}{###############################################################}
+00125 \textcolor{comment}{#   Import Custom Python Modules}
+00126 
+00127 
+00128 
+00129 
+00130 
+00131 
+00132 \textcolor{comment}{###############################################################}
+00133 \textcolor{stringliteral}{"""}
+00134 \textcolor{stringliteral}{    Module with methods that perform miscellaneous tasks in}
+00135 \textcolor{stringliteral}{        data analysis.}
+00136 \textcolor{stringliteral}{"""}
+\hypertarget{data__analysis__tool_8py_source_l00137}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis}{00137} \textcolor{keyword}{class }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis}{data\_analysis}:
+00138     \textcolor{comment}{#   Static variable declaration.}
+00139     \textcolor{comment}{#}
+00140     \textcolor{stringliteral}{"""}
+00141 \textcolor{stringliteral}{        Dictionary of reference values.}
+00142 \textcolor{stringliteral}{        }
+00143 \textcolor{stringliteral}{        Note that "standard atmosphere" refers to standard}
+00144 \textcolor{stringliteral}{            atmospheric pressure.}
+00145 \textcolor{stringliteral}{        }
+00146 \textcolor{stringliteral}{        References:}
+00147 \textcolor{stringliteral}{            https://en.wikipedia.org/wiki/List\_of\_physical\_constants}
+00148 \textcolor{stringliteral}{            https://en.wikipedia.org/wiki/Physical\_constant}
+00149 \textcolor{stringliteral}{            https://en.wikipedia.org/wiki/List\_of\_common\_physics\_notations}
+00150 \textcolor{stringliteral}{    """}
+\hypertarget{data__analysis__tool_8py_source_l00151}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a946ccd65157a8c3b3b9be607fcaed9f6}{00151}     dict\_of\_reference\_values = \{\textcolor{stringliteral}{"c"}:299792458, \textcolor{stringliteral}{"standard acceleration due to gravity"}:9.80665, \textcolor{stringliteral}{"standard
+       atmosphere"}:101325\}
+00152     \textcolor{comment}{# =========================================================}
+00153     \textcolor{comment}{#   Method to access the reference value for a particular}
+00154     \textcolor{comment}{#       attribute/property.}
+00155     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00156     \textcolor{comment}{#   @return - The reference value for a particular attribute/property.}
+00157     \textcolor{comment}{#   O(1) method.}
+00158     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00159}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}{00159}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}{get\_reference\_value}(property="c"):
+00160         \textcolor{keywordflow}{return} data\_analysis.dict\_of\_reference\_values[property]
+00161     \textcolor{comment}{# =========================================================}
+00162     \textcolor{comment}{#   Method to determine the actual change between quantity1 and}
+00163     \textcolor{comment}{#       quantity2.}
+00164     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00165     \textcolor{comment}{#   @param quantity1 - A quantity that I want to find the actual}
+00166     \textcolor{comment}{#       change of.}
+00167     \textcolor{comment}{#   @param quantity2 - Another quantity that I want to find the}
+00168     \textcolor{comment}{#       actual change of.}
+00169     \textcolor{comment}{#   @return - The actual change.}
+00170     \textcolor{comment}{#   Note that the actual change can be negative.}
+00171     \textcolor{comment}{#   O(1) method.}
+00172     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00173}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}{00173}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}{get\_actual\_change}(quantity1=0,quantity2=0):
+00174         \textcolor{keywordflow}{return} (quantity1 - quantity2)
+00175     \textcolor{comment}{# =========================================================}
+00176     \textcolor{comment}{#   Method to determine the absolute difference between quantity1}
+00177     \textcolor{comment}{#       and quantity2.}
+00178     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00179     \textcolor{comment}{#   @param quantity1 - A quantity that I want to find the}
+00180     \textcolor{comment}{#       absolute difference of.}
+00181     \textcolor{comment}{#   @param quantity2 - Another quantity that I want to find the}
+00182     \textcolor{comment}{#       absolute difference of.}
+00183     \textcolor{comment}{#   @return - The absolute difference.}
+00184     \textcolor{comment}{#   @postcondition - absolute difference, |quantity1 - quantity2| >= 0.}
+00185     \textcolor{comment}{#   O(1) method.}
+00186     \textcolor{comment}{#   Reference:}
+00187     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Absolute\_difference}
+00188     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00189}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}{00189}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}{get\_absolute\_difference}(quantity1=0,quantity2=0):
+00190         \textcolor{stringliteral}{"""}
+00191 \textcolor{stringliteral}{            Check postcondition:}
+00192 \textcolor{stringliteral}{                absolute difference, |quantity1 - quantity2| >= 0.}
+00193 \textcolor{stringliteral}{        """}
+00194         absolute\_difference = abs(quantity1 - quantity2)
+00195         \textcolor{keywordflow}{if} (0 > absolute\_difference):
+00196             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   get\_absolute\_difference(): Absolute difference must be non-negative."})
+00197         \textcolor{keywordflow}{return} absolute\_difference
+00198     \textcolor{comment}{# =========================================================}
+00199     \textcolor{comment}{#   Method to determine the relative change between quantity}
+00200     \textcolor{comment}{#       quantity1 and ref\_qty (the reference quantity).}
+00201     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00202     \textcolor{comment}{#   @param quantity1 - A quantity that I want to find the}
+00203     \textcolor{comment}{#       relative change of.}
+00204     \textcolor{comment}{#   @param ref\_qty - A reference quantity that I want to find}
+00205     \textcolor{comment}{#       the relative change of.}
+00206     \textcolor{comment}{#   @return - The relative change.}
+00207     \textcolor{comment}{#   Note that the relative change can be negative.}
+00208     \textcolor{comment}{#   @precondition - ref\_qty != 0.}
+00209     \textcolor{comment}{#   O(1) method.}
+00210     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00211}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}{00211}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}{get\_relative\_change}(quantity1=1,ref\_qty=1):
+00212         \textcolor{comment}{# Check precondition: ref\_qty != 0.}
+00213         \textcolor{keywordflow}{if} 0 == ref\_qty:
+00214             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   ref\_qty cannot be zero."})
+00215         \textcolor{keywordflow}{return} (data\_analysis.get\_actual\_change(quantity1,ref\_qty)/ref\_qty)
+00216     \textcolor{comment}{# =========================================================}
+00217     \textcolor{comment}{#   Method to determine the percentage change between quantity}
+00218     \textcolor{comment}{#       quantity1 and ref\_qty (the reference quantity).}
+00219     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00220     \textcolor{comment}{#   @param quantity1 - A quantity that I want to find the}
+00221     \textcolor{comment}{#       percentage change of.}
+00222     \textcolor{comment}{#   @param ref\_qty - A reference quantity that I want to find}
+00223     \textcolor{comment}{#       the percentage change of.}
+00224     \textcolor{comment}{#   @return - The percentage change.}
+00225     \textcolor{comment}{#   @precondition - ref\_qty != 0.}
+00226     \textcolor{comment}{#   @postcondition - 0 <= percentage change <= 1.}
+00227     \textcolor{comment}{#   O(1) method.}
+00228     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00229}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}{00229}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}{get\_percentage\_change}(quantity1=1,ref\_qty=1):
+00230         \textcolor{comment}{# Check precondition: ref\_qty != 0.}
+00231         \textcolor{keywordflow}{if} 0 == ref\_qty:
+00232             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   ref\_qty cannot be zero."})
+00233         relative\_change = data\_analysis.get\_relative\_change(quantity1,ref\_qty)
+00234         \textcolor{keywordflow}{return} (relative\_change*100)
+00235     \textcolor{comment}{# =========================================================}
+00236     \textcolor{comment}{#   Method to determine the relative error between experimental}
+00237     \textcolor{comment}{#       (measured) and theoretical (accepted) values:}
+00238     \textcolor{comment}{#       experimental\_value and theoretical\_value.}
+00239     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00240     \textcolor{comment}{#   @param experimental\_value - The experimental (measured) value.}
+00241     \textcolor{comment}{#   @param theoretical\_value - The theoretical (accepted) value.}
+00242     \textcolor{comment}{#   @return - The relative error.}
+00243     \textcolor{comment}{#   O(1) method.}
+00244     \textcolor{comment}{#   Reference:}
+00245     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Relative\_change\_and\_difference}
+00246     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00247}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}{00247}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}{get\_relative\_error}(experimental\_value=1,theoretical\_value=1):
+00248         \textcolor{keywordflow}{return} (data\_analysis.get\_absolute\_difference(experimental\_value,theoretical\_value)/abs(
+      theoretical\_value))
+00249     \textcolor{comment}{# =========================================================}
+00250     \textcolor{comment}{#   Method to determine the percent error between experimental}
+00251     \textcolor{comment}{#       (measured) and theoretical (accepted) values:}
+00252     \textcolor{comment}{#       experimental\_value and theoretical\_value.}
+00253     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g,Wenning2014a\}}
+00254     \textcolor{comment}{#   @param experimental\_value - The experimental (measured) value.}
+00255     \textcolor{comment}{#   @param theoretical\_value - The theoretical (accepted) value.}
+00256     \textcolor{comment}{#   @return - The relative change.}
+00257     \textcolor{comment}{#   O(1) method.}
+00258     \textcolor{comment}{#   Reference:}
+00259     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Relative\_change\_and\_difference}
+00260     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00261}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}{00261}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}{get\_percent\_error}(experimental\_value=1,theoretical\_value=1):
+00262         \textcolor{keywordflow}{return} (data\_analysis.get\_relative\_error(experimental\_value,theoretical\_value)*100)
+00263     \textcolor{comment}{# =========================================================}
+00264     \textcolor{comment}{#   Method to determine the arithmetic mean, or average, of}
+00265     \textcolor{comment}{#       a list of absolute values of numbers, which can be}
+00266     \textcolor{comment}{#       negative or otherwise.}
+00267     \textcolor{comment}{#   The list of numbers, which can be negative or otherwise,}
+00268     \textcolor{comment}{#       are copied into another list as their absolute values.}
+00269     \textcolor{comment}{#   This method computes the arithmetic mean for this new}
+00270     \textcolor{comment}{#       list of absolute values.}
+00271     \textcolor{comment}{#   }
+00272     \textcolor{comment}{#   @param list\_of\_numbers - A list of numbers that I want}
+00273     \textcolor{comment}{#       to find the arithmetic mean, or average, of.}
+00274     \textcolor{comment}{#   @return - The arithmetic mean, or average, of the list of}
+00275     \textcolor{comment}{#       absolute values.}
+00276     \textcolor{comment}{#   @precondition - list\_of\_numbers is not a None object.}
+00277     \textcolor{comment}{#   @postcondition - mean of absolute values of numbers >= 0.}
+00278     \textcolor{comment}{#   O(n) method, where n is the number of elements in the list.}
+00279     \textcolor{comment}{#   References:}
+00280     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Arithmetic\_mean}
+00281     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Absolute\_value}
+00282     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Average}
+00283     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00284}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{00284}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{get\_arithmetic\_average\_of\_absolute\_values}(
+      list\_of\_numbers=[]):
+00285         \textcolor{comment}{# Check precondition: list\_of\_numbers is not a None object.}
+00286         \textcolor{keywordflow}{if} list\_of\_numbers \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+00287             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   A 'None' object is passed to the
+       get\_arithmetic\_average\_of\_absolute\_values() method."})
+00288         \textcolor{comment}{# Else, is list\_of\_numbers an empty list?}
+00289         \textcolor{comment}{#elif 0 == len(list\_of\_numbers):}
+00290         \textcolor{keywordflow}{elif} \textcolor{keywordflow}{not} list\_of\_numbers:   \textcolor{comment}{# More Pythonic solution.}
+00291             \textcolor{keywordflow}{return} 0
+00292         \textcolor{keywordflow}{else}:
+00293             \textcolor{stringliteral}{"""}
+00294 \textcolor{stringliteral}{                Copy the absolute values of numbers in the list to}
+00295 \textcolor{stringliteral}{                    another list, absolute\_list\_of\_numbers.}
+00296 \textcolor{stringliteral}{            """}
+00297             absolute\_list\_of\_numbers = []
+00298             \textcolor{keywordflow}{for} elem \textcolor{keywordflow}{in} list\_of\_numbers:
+00299                 absolute\_list\_of\_numbers.append(abs(elem))
+00300             \textcolor{comment}{#print("absolute\_list\_of\_numbers:",absolute\_list\_of\_numbers,"=")}
+00301             \textcolor{comment}{# Determine the arithmetic mean of these absolute values.}
+00302             mean\_absolute\_list\_of\_numbers = s.mean(absolute\_list\_of\_numbers)
+00303             \textcolor{comment}{# Check postcondition: mean of absolute values of numbers >= 0.}
+00304             \textcolor{keywordflow}{if} 0 > mean\_absolute\_list\_of\_numbers:
+00305                 \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   mean of the list of absolute values. < 0."})
+00306             \textcolor{keywordflow}{return} mean\_absolute\_list\_of\_numbers
+00307     \textcolor{comment}{# =========================================================}
+00308     \textcolor{comment}{#   Method to determine the relative difference between}
+00309     \textcolor{comment}{#       quantity quantity1 and quantity quantity2.}
+00310     \textcolor{comment}{#   relative difference = |quantity1 - quantity2|/(0.5 * (abs(quantity1) + abs(quantity1)))}
+00311     \textcolor{comment}{#   \(\backslash\)cite\{WikipediaContributors2019g\}}
+00312     \textcolor{comment}{#   @param quantity1 - A quantity that I want to find the}
+00313     \textcolor{comment}{#       relative difference of.}
+00314     \textcolor{comment}{#   @param quantity2 - Another quantity that I want to find}
+00315     \textcolor{comment}{#       the relative difference of.}
+00316     \textcolor{comment}{#   @return - The relative difference.}
+00317     \textcolor{comment}{#   @precondition - (quantity1 != 0) or (quantity2 != 0).}
+00318     \textcolor{comment}{#   @assertion - absolute difference, |quantity1 - quantity2| >= 0.}
+00319     \textcolor{comment}{#   @postcondition - average\_of\_absolute\_values > 0.}
+00320     \textcolor{comment}{#   O(1) method.}
+00321     \textcolor{comment}{#   Reference:}
+00322     \textcolor{comment}{#       https://en.wikipedia.org/wiki/Absolute\_difference}
+00323     @staticmethod
+\hypertarget{data__analysis__tool_8py_source_l00324}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}{00324}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}{get\_relative\_difference}(quantity1=1,quantity2=1):
+00325         \textcolor{comment}{# Check for precondition: (quantity1 != 0) or (quantity2 != 0).}
+00326         \textcolor{keywordflow}{if} (0 == quantity1) \textcolor{keywordflow}{and} (0 == quantity2):
+00327             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   relative difference does not exist for quantity1 == quantity2."})
+00328         absolute\_diff = data\_analysis.get\_absolute\_difference(quantity1,quantity2)
+00329         \textcolor{comment}{# Check assertion: absolute difference, |quantity1 - quantity2| >= 0.}
+00330         \textcolor{keywordflow}{if} 0 > absolute\_diff:
+00331             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   get\_relative\_difference(): Absolute difference must be non-negative."})
+00332         list\_of\_values = [quantity1, quantity2]
+00333         average\_of\_absolute\_values = \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{get\_arithmetic\_average\_of\_absolute\_values}
+      (list\_of\_numbers)
+00334         \textcolor{comment}{# Check postcondition: average\_of\_absolute\_values > 0.}
+00335         \textcolor{keywordflow}{if} 0 >= average\_of\_absolute\_values:
+00336             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   0 >= arithmetic mean of absolute values."})
+00337         \textcolor{keywordflow}{return} (absolute\_diff/average\_of\_absolute\_values)
+00338     
+\end{DoxyCode}

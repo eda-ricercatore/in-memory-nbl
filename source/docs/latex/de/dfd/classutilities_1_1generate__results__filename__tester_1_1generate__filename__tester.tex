@@ -1,0 +1,332 @@
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester}{}\section{utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester Class Reference}
+\label{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester}\index{utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester@{utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester}}
+
+
+Collaboration diagram for utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{d6/d23/classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a2f7f8ef1861b75a2b2a0ffe583bcdc81}{is\+\_\+31\+\_\+day\+\_\+month} (mm)
+\begin{DoxyCompactList}\small\item\em Method to check if the current month has 31 days. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a7aae79997134dc7250949e725d92aedf}{is\+\_\+30\+\_\+day\+\_\+month} (mm)
+\begin{DoxyCompactList}\small\item\em Method to check if the current month has 30 days. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a4b73142b6465894e81a1393e829abee2}{check\+\_\+filename\+\_\+format} ()
+\begin{DoxyCompactList}\small\item\em Method to test method for generating a filename with the current time stamp. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_ab0d53bb62c79065e884afa6a184d690e}{test\+\_\+filename\+\_\+generation\+\_\+methods} ()
+\begin{DoxyCompactList}\small\item\em Method to test methods associated with generating filename with the current time stamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line \hyperlink{generate__results__filename__tester_8py_source_l00110}{110} of file \hyperlink{generate__results__filename__tester_8py_source}{generate\+\_\+results\+\_\+filename\+\_\+tester.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a4b73142b6465894e81a1393e829abee2}{}\index{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}!check\+\_\+filename\+\_\+format@{check\+\_\+filename\+\_\+format}}
+\index{check\+\_\+filename\+\_\+format@{check\+\_\+filename\+\_\+format}!utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}}
+\subsubsection[{check\+\_\+filename\+\_\+format()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester.\+check\+\_\+filename\+\_\+format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a4b73142b6465894e81a1393e829abee2}
+
+
+Method to test method for generating a filename with the current time stamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Nothing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{generate__results__filename__tester_8py_source_l00137}{137} of file \hyperlink{generate__results__filename__tester_8py_source}{generate\+\_\+results\+\_\+filename\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_l00137}{}\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a4b73142b6465894e81a1393e829abee2}{00137}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a4b73142b6465894e81a1393e829abee2}{check\_filename\_format}():
+00138         print(\textcolor{stringliteral}{" Generate a filename with the current time stamp."})
+00139         temp\_op\_filename = generate\_filename.create\_filename()
+00140         print(\textcolor{stringliteral}{" Testing filename:"},temp\_op\_filename,\textcolor{stringliteral}{"="})
+00141         print(\textcolor{stringliteral}{" Check against the format: DD-MM-YY-HH-MM-SS-uS.txt"})
+00142         \textcolor{comment}{#
+       https://stackoverflow.com/questions/678236/how-to-get-the-filename-without-the-extension-from-a-path-in-python}
+00143         temp\_op\_filename\_wo\_extn, file\_extn = os.path.splitext(temp\_op\_filename)
+00144         print(\textcolor{stringliteral}{" Testing if the filename has the correct file extension."})
+00145         prompt = \textcolor{stringliteral}{"  ... Test: file extension is '.txt'.         \{\}"}
+00146         statistical\_analysis.increment\_number\_test\_cases\_used()
+00147         \textcolor{keywordflow}{if} \textcolor{stringliteral}{".txt"} == file\_extn:
+00148             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00149             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00150         \textcolor{keywordflow}{else}:
+00151             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00152         print(\textcolor{stringliteral}{" Testing if filename without file extension has right format."})
+00153         \textcolor{comment}{# Tokenize the generated filename with the delimiter "-".}
+00154         tokens = temp\_op\_filename\_wo\_extn.split(\textcolor{stringliteral}{"-"})
+00155         \textcolor{stringliteral}{"""}
+00156 \textcolor{stringliteral}{            Check against the format: DD-MM-YY-HH-MM-SS-uS[.txt].}
+00157 \textcolor{stringliteral}{            tokens[0] = DD/Day}
+00158 \textcolor{stringliteral}{            tokens[1] = MM/Month}
+00159 \textcolor{stringliteral}{            tokens[2] = YY/Year}
+00160 \textcolor{stringliteral}{            tokens[3] = HH/Hour}
+00161 \textcolor{stringliteral}{            tokens[4] = MM/Minute}
+00162 \textcolor{stringliteral}{            tokens[5] = [SS/Second]}
+00163 \textcolor{stringliteral}{            tokens[6] = [uS/Microsecond]}
+00164 \textcolor{stringliteral}{        """}
+00165         prompt = \textcolor{stringliteral}{"  ... Test: filename format is DD-MM-YY-HH-MM-SS-uS.  \{\}"}
+00166         statistical\_analysis.increment\_number\_test\_cases\_used()
+00167         \textcolor{keywordflow}{if} 7 == len(tokens):
+00168             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00169             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00170         \textcolor{keywordflow}{else}:
+00171             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00172             print(tokens)
+00173         print(\textcolor{stringliteral}{" Tokenize generated filename."})
+00174         print(\textcolor{stringliteral}{" Testing if 1st token is appropriate date (DD/date value)."})
+00175         prompt = \textcolor{stringliteral}{"  ... Test: DD value is >= 0.             \{\}"}
+00176         statistical\_analysis.increment\_number\_test\_cases\_used()
+00177         \textcolor{keywordflow}{if} 1 <= int(tokens[0]):
+00178             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00179             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00180         \textcolor{keywordflow}{else}:
+00181             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00182         \textcolor{comment}{# If month is February during a leap year, DD <= 29.}
+00183         prompt = \textcolor{stringliteral}{"  ... Test: DD value is <= 29, leap year Feb.     \{\}"}
+00184         statistical\_analysis.increment\_number\_test\_cases\_used()
+00185         \textcolor{keywordflow}{if} 2 == int(tokens[1]) \textcolor{keywordflow}{and} 29 < int(tokens[0]) \textcolor{keywordflow}{and} calendar.isleap(int(tokens[2])):
+00186             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00187         \textcolor{keywordflow}{else}:
+00188             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00189             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00190         \textcolor{comment}{# If year isn't a leap year & month is February, DD <= 28.}
+00191         prompt = \textcolor{stringliteral}{"  ... Test: DD value is <= 28, non-leap year Feb.     \{\}"}
+00192         statistical\_analysis.increment\_number\_test\_cases\_used()
+00193         \textcolor{keywordflow}{if} 2 == int(tokens[1]) \textcolor{keywordflow}{and} 28 < int(tokens[0]) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} calendar.isleap(int(tokens[2])):
+00194             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00195         \textcolor{keywordflow}{else}:
+00196             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00197             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00198         prompt = \textcolor{stringliteral}{"  ... Test: DD value is <= 30, 30-day month.      \{\}"}
+00199         statistical\_analysis.increment\_number\_test\_cases\_used()
+00200         \textcolor{keywordflow}{if} generate\_filename\_tester.is\_30\_day\_month(tokens[1]) \textcolor{keywordflow}{and} 30 < int(tokens[0]):
+00201             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00202         \textcolor{keywordflow}{else}:
+00203             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00204             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00205         prompt = \textcolor{stringliteral}{"  ... Test: DD value is <= 31, 31-day month.      \{\}"}
+00206         statistical\_analysis.increment\_number\_test\_cases\_used()
+00207         \textcolor{keywordflow}{if} generate\_filename\_tester.is\_31\_day\_month(tokens[1]) \textcolor{keywordflow}{and} 31 < int(tokens[0]):
+00208             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00209         \textcolor{keywordflow}{else}:
+00210             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00211             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00212         print(\textcolor{stringliteral}{" Testing if 2nd token is appropriate date (MM/month value)."})
+00213         prompt = \textcolor{stringliteral}{"  ... Test: MM/month value is >= 1.           \{\}"}
+00214         statistical\_analysis.increment\_number\_test\_cases\_used()
+00215         \textcolor{keywordflow}{if} 1 <= int(tokens[1]):
+00216             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00217             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00218         \textcolor{keywordflow}{else}:
+00219             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00220         prompt = \textcolor{stringliteral}{"  ... Test: MM/month value is <= 12.          \{\}"}
+00221         statistical\_analysis.increment\_number\_test\_cases\_used()
+00222         \textcolor{keywordflow}{if} 12 >= int(tokens[1]):
+00223             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00224             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00225         \textcolor{keywordflow}{else}:
+00226             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00227         print(\textcolor{stringliteral}{" Testing if 3rd token is appropriate date (YY/year value)."})
+00228         prompt = \textcolor{stringliteral}{"  ... Test: YY/year value is >= 2000.         \{\}"}
+00229         statistical\_analysis.increment\_number\_test\_cases\_used()
+00230         \textcolor{keywordflow}{if} 2000 <= int(tokens[2]):
+00231             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00232             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00233         \textcolor{keywordflow}{else}:
+00234             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00235         print(\textcolor{stringliteral}{" Testing if 4th token is appropriate date (HH/hour value)."})
+00236         prompt = \textcolor{stringliteral}{"  ... Test: HH/hour value is >= 0.            \{\}"}
+00237         statistical\_analysis.increment\_number\_test\_cases\_used()
+00238         \textcolor{keywordflow}{if} 0 <= int(tokens[3]):
+00239             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00240             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00241         \textcolor{keywordflow}{else}:
+00242             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00243         prompt = \textcolor{stringliteral}{"  ... Test: HH/hour value is <= 23.           \{\}"}
+00244         statistical\_analysis.increment\_number\_test\_cases\_used()
+00245         \textcolor{keywordflow}{if} 23 >= int(tokens[3]):
+00246             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00247             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00248         \textcolor{keywordflow}{else}:
+00249             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00250         print(\textcolor{stringliteral}{" Testing if 5th token is appropriate date (MM/minute value)."})
+00251         prompt = \textcolor{stringliteral}{"  ... Test: MM/minute value is >= 0.          \{\}"}
+00252         statistical\_analysis.increment\_number\_test\_cases\_used()
+00253         \textcolor{keywordflow}{if} 0 <= int(tokens[4]):
+00254             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00255             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00256         \textcolor{keywordflow}{else}:
+00257             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00258         prompt = \textcolor{stringliteral}{"  ... Test: MM/minute value is <= 59.         \{\}"}
+00259         statistical\_analysis.increment\_number\_test\_cases\_used()
+00260         \textcolor{keywordflow}{if} 59 >= int(tokens[4]):
+00261             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00262             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00263         \textcolor{keywordflow}{else}:
+00264             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00265         print(\textcolor{stringliteral}{" Testing if 6th token is appropriate date (SS/second value)."})
+00266         prompt = \textcolor{stringliteral}{"  ... Test: SS/second value is >= 0.          \{\}"}
+00267         statistical\_analysis.increment\_number\_test\_cases\_used()
+00268         \textcolor{keywordflow}{if} 0 <= int(tokens[5]):
+00269             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00270             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00271         \textcolor{keywordflow}{else}:
+00272             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00273         prompt = \textcolor{stringliteral}{"  ... Test: SS/second is <= 59.               \{\}"}
+00274         statistical\_analysis.increment\_number\_test\_cases\_used()
+00275         \textcolor{keywordflow}{if} 59 >= int(tokens[5]):
+00276             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00277             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00278         \textcolor{keywordflow}{else}:
+00279             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00280         print(\textcolor{stringliteral}{" Testing if 7th token is appropriate date (uS/microsecond value)."})
+00281         prompt = \textcolor{stringliteral}{"  ... Test: uS/microsecond value is >= 0.         \{\}"}
+00282         statistical\_analysis.increment\_number\_test\_cases\_used()
+00283         \textcolor{keywordflow}{if} 0 <= int(tokens[6]):
+00284             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00285             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00286         \textcolor{keywordflow}{else}:
+00287             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00288         prompt = \textcolor{stringliteral}{"  ... Test: uS/microsecond value is <= 999999.        \{\}"}
+00289         statistical\_analysis.increment\_number\_test\_cases\_used()
+00290         \textcolor{keywordflow}{if} 999999 >= int(tokens[6]):
+00291             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00292             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00293         \textcolor{keywordflow}{else}:
+00294             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+\end{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a7aae79997134dc7250949e725d92aedf}{}\index{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}!is\+\_\+30\+\_\+day\+\_\+month@{is\+\_\+30\+\_\+day\+\_\+month}}
+\index{is\+\_\+30\+\_\+day\+\_\+month@{is\+\_\+30\+\_\+day\+\_\+month}!utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}}
+\subsubsection[{is\+\_\+30\+\_\+day\+\_\+month(mm)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester.\+is\+\_\+30\+\_\+day\+\_\+month (
+\begin{DoxyParamCaption}
+\item[{}]{mm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a7aae79997134dc7250949e725d92aedf}
+
+
+Method to check if the current month has 30 days. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mm} & -\/ Input month to determine if it has 30 days. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean true, if the current month has 30 days. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{generate__results__filename__tester_8py_source_l00126}{126} of file \hyperlink{generate__results__filename__tester_8py_source}{generate\+\_\+results\+\_\+filename\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_l00126}{}\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a7aae79997134dc7250949e725d92aedf}{00126}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a7aae79997134dc7250949e725d92aedf}{is\_30\_day\_month}(mm):
+00127         \textcolor{keywordflow}{if} mm \textcolor{keywordflow}{in} [4, 6, 9, 11]:
+00128             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00129         \textcolor{keywordflow}{else}:
+00130             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a2f7f8ef1861b75a2b2a0ffe583bcdc81}{}\index{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}!is\+\_\+31\+\_\+day\+\_\+month@{is\+\_\+31\+\_\+day\+\_\+month}}
+\index{is\+\_\+31\+\_\+day\+\_\+month@{is\+\_\+31\+\_\+day\+\_\+month}!utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}}
+\subsubsection[{is\+\_\+31\+\_\+day\+\_\+month(mm)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester.\+is\+\_\+31\+\_\+day\+\_\+month (
+\begin{DoxyParamCaption}
+\item[{}]{mm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a2f7f8ef1861b75a2b2a0ffe583bcdc81}
+
+
+Method to check if the current month has 31 days. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mm} & -\/ Input month to determine if it has 31 days. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean true, if the current month has 31 days. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{generate__results__filename__tester_8py_source_l00116}{116} of file \hyperlink{generate__results__filename__tester_8py_source}{generate\+\_\+results\+\_\+filename\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_l00116}{}\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a2f7f8ef1861b75a2b2a0ffe583bcdc81}{00116}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_a2f7f8ef1861b75a2b2a0ffe583bcdc81}{is\_31\_day\_month}(mm):
+00117         \textcolor{keywordflow}{if} mm \textcolor{keywordflow}{in} [1, 3, 5, 7, 8, 10, 12]:
+00118             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00119         \textcolor{keywordflow}{else}:
+00120             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_ab0d53bb62c79065e884afa6a184d690e}{}\index{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}!test\+\_\+filename\+\_\+generation\+\_\+methods@{test\+\_\+filename\+\_\+generation\+\_\+methods}}
+\index{test\+\_\+filename\+\_\+generation\+\_\+methods@{test\+\_\+filename\+\_\+generation\+\_\+methods}!utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester@{utilities\+::generate\+\_\+results\+\_\+filename\+\_\+tester\+::generate\+\_\+filename\+\_\+tester}}
+\subsubsection[{test\+\_\+filename\+\_\+generation\+\_\+methods()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+generate\+\_\+results\+\_\+filename\+\_\+tester.\+generate\+\_\+filename\+\_\+tester.\+test\+\_\+filename\+\_\+generation\+\_\+methods (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_ab0d53bb62c79065e884afa6a184d690e}
+
+
+Method to test methods associated with generating filename with the current time stamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Nothing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{generate__results__filename__tester_8py_source_l00301}{301} of file \hyperlink{generate__results__filename__tester_8py_source}{generate\+\_\+results\+\_\+filename\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_l00301}{}\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_ab0d53bb62c79065e884afa6a184d690e}{00301}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename__tester_1_1generate__filename__tester_ab0d53bb62c79065e884afa6a184d690e}{test\_filename\_generation\_methods}():
+00302         print(\textcolor{stringliteral}{""})
+00303         print(\textcolor{stringliteral}{""})
+00304         print(\textcolor{stringliteral}{"==   Testing class: generate\_filename."})
+00305         generate\_filename\_tester.check\_filename\_format()
+00306 
+00307 
+00308 
+00309 
+00310 
+00311 
+00312 
+00313 
+00314 
+00315 
+00316 
+00317 \textcolor{comment}{#   Python database management}
+00318 \textcolor{comment}{#   Python: date, time, now, string}
+00319 \textcolor{comment}{#   Add references.}
+00320 \textcolor{comment}{#   \(\backslash\)cite\{Hetland2005,Lutz2010,Lutz2011,Sileika2010,Younker2008\}.}
+00321 \textcolor{comment}{#   \(\backslash\)cite[Chp. 17,25]\{Beazley2009\}}
+00322 \end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{generate__results__filename__tester_8py}{generate\+\_\+results\+\_\+filename\+\_\+tester.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,297 @@
+\hypertarget{performance__measurement__no__ns_8py_source}{}\section{performance\+\_\+measurement\+\_\+no\+\_\+ns.\+py}
+\label{performance__measurement__no__ns_8py_source}\index{utilities/timing\+\_\+measurements/performance\+\_\+measurement\+\_\+no\+\_\+ns.\+py@{utilities/timing\+\_\+measurements/performance\+\_\+measurement\+\_\+no\+\_\+ns.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{performance__measurement__no__ns_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1performance__measurement__no__ns}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to measure the}
+00006 \textcolor{stringliteral}{        execution time of functions and programs in Python, and}
+00007 \textcolor{stringliteral}{        other processes and programs called from Python scripts}
+00008 \textcolor{stringliteral}{        or programs.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{}
+00011 \textcolor{stringliteral}{    Synopsis:}
+00012 \textcolor{stringliteral}{    Measure the execution time of functions and programs in Python.}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{    This script can be executed as follows:}
+00015 \textcolor{stringliteral}{    ./performance\_measurement.py}
+00016 \textcolor{stringliteral}{}
+00017 \textcolor{stringliteral}{}
+00018 \textcolor{stringliteral}{}
+00019 \textcolor{stringliteral}{    Revision History:}
+00020 \textcolor{stringliteral}{    September 6, 2019           Version 0.1 Script.}
+00021 \textcolor{stringliteral}{"""}
+00022 
+\hypertarget{performance__measurement__no__ns_8py_source_l00023}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1performance__measurement__no__ns_ad21212ef2a99b878f1d71f04b282ee93}{00023} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{performance__measurement__no__ns_8py_source_l00024}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1performance__measurement__no__ns_aad2678d45f225046185eb85ebe3cdc6a}{00024} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{performance__measurement__no__ns_8py_source_l00025}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1performance__measurement__no__ns_a7b90e234766add970bbe1b7f69e543b9}{00025} \_\_date\_\_ = \textcolor{stringliteral}{'September 6, 2019'}
+00026 
+00027 \textcolor{comment}{#   The MIT License (MIT)}
+00028 
+00029 \textcolor{comment}{#   Copyright (c) <2019> <Zhiyang Ong>}
+00030 
+00031 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00032 
+00033 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00034 
+00035 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00036 
+00037 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00038 
+00039 
+00040 \textcolor{comment}{###############################################################}
+00041 \textcolor{stringliteral}{"""}
+00042 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00043 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00044 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00045 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00046 \textcolor{stringliteral}{}
+00047 \textcolor{stringliteral}{    subprocess -> call}
+00048 \textcolor{stringliteral}{                To make system calls.}
+00049 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00050 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00051 \textcolor{stringliteral}{    re          Use regular expressions.}
+00052 \textcolor{stringliteral}{}
+00053 \textcolor{stringliteral}{    pathlib->Path}
+00054 \textcolor{stringliteral}{                For mapping a string to a path.}
+00055 \textcolor{stringliteral}{    datetime    To obtain information about the current date and time.}
+00056 \textcolor{stringliteral}{    time        To obtain information about the current time.}
+00057 \textcolor{stringliteral}{                time\_ns version provides information about the}
+00058 \textcolor{stringliteral}{                    current time with nanosecond accuracy.}
+00059 \textcolor{stringliteral}{    warnings    Provide warnings to users without terminating the}
+00060 \textcolor{stringliteral}{                    program abruptly.}
+00061 \textcolor{stringliteral}{    process\_time (& process\_time\_ns)}
+00062 \textcolor{stringliteral}{                To determine the time stamp using the process}
+00063 \textcolor{stringliteral}{                    time method, which is platform independent in}
+00064 \textcolor{stringliteral}{                    Python 3.x, and its alternative providing}
+00065 \textcolor{stringliteral}{                    nanosecond accuracy.}
+00066 \textcolor{stringliteral}{    perf\_counter (& perf\_counter\_ns)}
+00067 \textcolor{stringliteral}{                To determine the time stamp using the process}
+00068 \textcolor{stringliteral}{                    time method, which is platform independent in}
+00069 \textcolor{stringliteral}{                    Python 3.x, and its alternative providing}
+00070 \textcolor{stringliteral}{                    nanosecond accuracy.}
+00071 \textcolor{stringliteral}{    monotonic (& pm\_monotonic\_ns)}
+00072 \textcolor{stringliteral}{                To monotonically obtain time stamps, for performance}
+00073 \textcolor{stringliteral}{                    measurement, and its alternative providing}
+00074 \textcolor{stringliteral}{                    nanosecond accuracy.}
+00075 \textcolor{stringliteral}{"""}
+00076 
+00077 \textcolor{keyword}{import} sys
+00078 \textcolor{keyword}{import} os
+00079 \textcolor{keyword}{import} os.path
+00080 \textcolor{comment}{#from pathlib import Path}
+00081 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00082 \textcolor{keyword}{import} time
+00083 \textcolor{keyword}{import} warnings
+00084 \textcolor{keyword}{import} re
+00085 \textcolor{keyword}{import} datetime
+00086 \textcolor{comment}{# ImportError: cannot import name 'perf\_counter\_ns'}
+00087 \textcolor{keyword}{from} time \textcolor{keyword}{import} perf\_counter \textcolor{keyword}{as} pc\_timestamp
+00088 \textcolor{comment}{#from time import perf\_counter\_ns as pc\_timestamp\_ns}
+00089 \textcolor{keyword}{from} time \textcolor{keyword}{import} process\_time \textcolor{keyword}{as} pt\_timestamp
+00090 \textcolor{comment}{#from time import process\_time\_ns as pt\_timestamp\_ns}
+00091 \textcolor{comment}{#from time import time\_ns as t\_ns}
+00092 \textcolor{keyword}{from} time \textcolor{keyword}{import} monotonic \textcolor{keyword}{as} pm\_monotonic
+00093 \textcolor{comment}{#from time import monotonic\_ns as pm\_monotonic\_ns}
+00094 
+00095 \textcolor{comment}{###############################################################}
+00096 \textcolor{comment}{#   Import Custom Python Packages and Modules}
+00097 \textcolor{stringliteral}{"""}
+00098 \textcolor{stringliteral}{    Module to calculate the factorial of a number.}
+00099 \textcolor{stringliteral}{"""}
+00100 \textcolor{comment}{#from get\_factorial import calculate\_factorial}
+00101 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1timing__measurements_1_1get__factorial}{utilities.timing\_measurements.get\_factorial} \textcolor{keyword}{import} 
+      calculate\_factorial
+00102 
+00103 \textcolor{comment}{###############################################################}
+00104 \textcolor{stringliteral}{"""}
+00105 \textcolor{stringliteral}{    Module with methods that measure the execution time of functions}
+00106 \textcolor{stringliteral}{        and programs in Python.}
+00107 \textcolor{stringliteral}{}
+00108 \textcolor{stringliteral}{    Support is not provided for storing multiple initial timestamps,}
+00109 \textcolor{stringliteral}{        so that we can measure elapsed times from different initial}
+00110 \textcolor{stringliteral}{        timestamps.}
+00111 \textcolor{stringliteral}{        User have to call the functions (such as monotonic\_ns())}
+00112 \textcolor{stringliteral}{            specifically, so that this Python module can be kept}
+00113 \textcolor{stringliteral}{            simple and short.}
+00114 \textcolor{stringliteral}{"""}
+\hypertarget{performance__measurement__no__ns_8py_source_l00115}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement}{00115} \textcolor{keyword}{class }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement}{execution\_time\_measurement}:
+00116     \textcolor{comment}{# Invalid timestamp.}
+\hypertarget{performance__measurement__no__ns_8py_source_l00117}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_ac0b6b9477824b6d0b0e1348864d55566}{00117}     invalid\_timestamp = -123456789012345678901234567890
+00118     \textcolor{comment}{# Initial timestamp.}
+\hypertarget{performance__measurement__no__ns_8py_source_l00119}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_a75ac358ee6e04eba517fd6dd429c99a1}{00119}     initial\_timestamp = invalid\_timestamp
+00120     \textcolor{comment}{# Types of performance measurement technique available.}
+00121     \textcolor{comment}{#types\_of\_performance\_measurement\_technique =
+       ("perf\_counter","perf\_counter\_ns","process\_time","process\_time\_ns","time","time\_ns","monotonic","monotonic\_ns")}
+\hypertarget{performance__measurement__no__ns_8py_source_l00122}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_aa73046ac445a5731739e52ae5034c4a1}{00122}     types\_of\_performance\_measurement\_technique = (\textcolor{stringliteral}{"perf\_counter"},\textcolor{stringliteral}{"process\_time"},\textcolor{stringliteral}{"time"},\textcolor{stringliteral}{"monotonic"})
+00123     \textcolor{comment}{# ============================================================}
+00124     \textcolor{comment}{##  Method to set the initial timestamp.}
+00125     \textcolor{comment}{#}
+00126     \textcolor{comment}{#   Use techniques for measuring performance (i.e., user}
+00127     \textcolor{comment}{#       execution time) and timestamps.}
+00128     \textcolor{comment}{#}
+00129     \textcolor{comment}{#}
+00130     \textcolor{comment}{#}
+00131     \textcolor{comment}{#   @param type\_timestamp - Indicates if either of the following}
+00132     \textcolor{comment}{#               methods of performance measurement is preferred.}
+00133     \textcolor{comment}{#               * perf\_counter, perf\_counter(): pc\_timestamp()}
+00134     \textcolor{comment}{#               * process\_time, process\_time(): pt\_timestamp()}
+00135     \textcolor{comment}{#               * time, time.time(): time()}
+00136     \textcolor{comment}{#               * monotonic, monotonic(): pm\_monotonic()}
+00137     \textcolor{comment}{#   @return - Nothing.}
+00138     \textcolor{comment}{#   O(1) method.}
+00139     @staticmethod
+\hypertarget{performance__measurement__no__ns_8py_source_l00140}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_ac1a396608592993d871613a73d20b088}{00140}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_ac1a396608592993d871613a73d20b088}{set\_initial\_timestamp}(type\_timestamp="monotonic"):
+00141         \textcolor{stringliteral}{"""}
+00142 \textcolor{stringliteral}{            Is the option for one of the following methods to measure}
+00143 \textcolor{stringliteral}{                time?}
+00144 \textcolor{stringliteral}{                * perf\_counter, perf\_counter(): pc\_timestamp()}
+00145 \textcolor{stringliteral}{                * process\_time, process\_time(): pt\_timestamp()}
+00146 \textcolor{stringliteral}{                * time, time.time(): time.time()}
+00147 \textcolor{stringliteral}{                * monotonic, monotonic(): pm\_monotonic()}
+00148 \textcolor{stringliteral}{        """}
+00149         \textcolor{keywordflow}{if} (\textcolor{stringliteral}{"perf\_counter"} == type\_timestamp):
+00150             \textcolor{comment}{# Yes. Use perf\_counter() to measure performance/time.}
+00151             execution\_time\_measurement.initial\_timestamp = pc\_timestamp()
+00152         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"process\_time"} == type\_timestamp):
+00153             \textcolor{comment}{# Yes. Use process\_time() to measure performance/time.}
+00154             execution\_time\_measurement.initial\_timestamp = pt\_timestamp()
+00155         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"time"} == type\_timestamp):
+00156             \textcolor{comment}{# Yes. Use time() to measure performance/time.}
+00157             execution\_time\_measurement.initial\_timestamp = time.time()
+00158         \textcolor{keywordflow}{else}:
+00159             \textcolor{comment}{# The default option is: "monotonic()"}
+00160             execution\_time\_measurement.initial\_timestamp = pm\_monotonic()
+00161     \textcolor{comment}{# ============================================================}
+00162     \textcolor{comment}{##  Method to get the initial timestamp.}
+00163     \textcolor{comment}{#   @return the initial timestamp.}
+00164     \textcolor{comment}{#   O(1) method.}
+00165     @staticmethod
+\hypertarget{performance__measurement__no__ns_8py_source_l00166}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_af12752f53bfd297b66b504170b9e3655}{00166}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_af12752f53bfd297b66b504170b9e3655}{get\_initial\_timestamp}():
+00167         \textcolor{keywordflow}{return} execution\_time\_measurement.initial\_timestamp
+00168     \textcolor{comment}{# ============================================================}
+00169     \textcolor{comment}{##  Method to determine the elapsed time from the initial}
+00170     \textcolor{comment}{#       timestamp.}
+00171     \textcolor{comment}{#   @param type\_timestamp - Indicates if either of the following}
+00172     \textcolor{comment}{#               methods of performance measurement is preferred.}
+00173     \textcolor{comment}{#               * perf\_counter, perf\_counter(): pc\_timestamp()}
+00174     \textcolor{comment}{#               * process\_time, process\_time(): pt\_timestamp()}
+00175     \textcolor{comment}{#               * time, time.time\_ns(): time\_ns()}
+00176     \textcolor{comment}{#               * monotonic, monotonic(): pm\_monotonic()}
+00177     \textcolor{comment}{#   @return the elapsed time from the initial timestamp.}
+00178     \textcolor{comment}{#   O(1) method.}
+00179     @staticmethod
+\hypertarget{performance__measurement__no__ns_8py_source_l00180}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_a465918aa8dcf663887149cbf9a7306b9}{00180}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_a465918aa8dcf663887149cbf9a7306b9}{get\_elapsed\_time}(type\_timestamp="monotonic"):
+00181         \textcolor{stringliteral}{"""}
+00182 \textcolor{stringliteral}{            Is the option for one of the following methods to measure}
+00183 \textcolor{stringliteral}{                time?}
+00184 \textcolor{stringliteral}{                * perf\_counter, perf\_counter(): pc\_timestamp()}
+00185 \textcolor{stringliteral}{                * process\_time, process\_time(): pt\_timestamp()}
+00186 \textcolor{stringliteral}{                * time, time.time\_ns(): time\_ns()}
+00187 \textcolor{stringliteral}{                * monotonic, monotonic(): pm\_monotonic()}
+00188 \textcolor{stringliteral}{        """}
+00189         \textcolor{keywordflow}{if} (\textcolor{stringliteral}{"perf\_counter"} == type\_timestamp):
+00190             \textcolor{comment}{# Yes. Use perf\_counter() to measure performance/time.}
+00191             current\_timestamp = pc\_timestamp()
+00192         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"process\_time"} == type\_timestamp):
+00193             \textcolor{comment}{# Yes. Use process\_time() to measure performance/time.}
+00194             current\_timestamp = pt\_timestamp()
+00195         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"time"} == type\_timestamp):
+00196             \textcolor{comment}{# Yes. Use time.time() to measure performance/time.}
+00197             current\_timestamp = time.time()
+00198         \textcolor{keywordflow}{else}:
+00199             \textcolor{stringliteral}{"""}
+00200 \textcolor{stringliteral}{                The default option is: "monotonic".}
+00201 \textcolor{stringliteral}{                Use monotonic() to measure performance/time.}
+00202 \textcolor{stringliteral}{            """}
+00203             current\_timestamp = pm\_monotonic()
+00204         \textcolor{keywordflow}{return} (current\_timestamp - execution\_time\_measurement.get\_initial\_timestamp())
+00205     \textcolor{comment}{# ============================================================}
+00206     \textcolor{comment}{##  Method to compare techniques for measuring elapsed periods.}
+00207     \textcolor{comment}{#   It calculates the factorial of each number in a list, and}
+00208     \textcolor{comment}{#       uses each of the following methods of performance}
+00209     \textcolor{comment}{#       measurement to measure the elapsed periods.}
+00210     \textcolor{comment}{#       * perf\_counter, perf\_counter(): pc\_timestamp()}
+00211     \textcolor{comment}{#       * process\_time, process\_time(): pt\_timestamp()}
+00212     \textcolor{comment}{#       * time, time.time(): time()}
+00213     \textcolor{comment}{#       * monotonic, monotonic(): pm\_monotonic()}
+00214     \textcolor{comment}{#   @return - Nothing.}
+00215     \textcolor{comment}{#   O(n!) method, where n is the largest number in the}
+00216     \textcolor{comment}{#       aforementioned list, since we are measuring the}
+00217     \textcolor{comment}{#       performance of calculating factorials.}
+00218     @staticmethod
+\hypertarget{performance__measurement__no__ns_8py_source_l00219}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_a75eea39203f4d9b779977f9203f6d745}{00219}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement__no__ns_1_1execution__time__measurement_a75eea39203f4d9b779977f9203f6d745}{compare\_different\_methods\_to\_measure\_elapsed\_periods}
+      ():
+00220         \textcolor{stringliteral}{"""}
+00221 \textcolor{stringliteral}{            Create a file to store experimental data of measuring}
+00222 \textcolor{stringliteral}{                the performance of recursive and iterative methods.}
+00223 \textcolor{stringliteral}{        """}
+00224         with open(\textcolor{stringliteral}{"compare\_different\_methods\_to\_measure\_elapsed\_periods.csv"},\textcolor{stringliteral}{"a+"}) \textcolor{keyword}{as} op\_f\_obj:
+00225             \textcolor{keywordflow}{for} perf\_measurement\_technique \textcolor{keywordflow}{in} 
+      execution\_time\_measurement.types\_of\_performance\_measurement\_technique:
+00226                 print(\textcolor{stringliteral}{"The technique used is:"},perf\_measurement\_technique,\textcolor{stringliteral}{"="})
+00227                 \textcolor{stringliteral}{"""}
+00228 \textcolor{stringliteral}{                    Set the initial timestamp for calculating the}
+00229 \textcolor{stringliteral}{                        factorial of numbers via recursion.}
+00230 \textcolor{stringliteral}{                """}
+00231                 execution\_time\_measurement.set\_initial\_timestamp(perf\_measurement\_technique)
+00232                 print(\textcolor{stringliteral}{" Calculate the factorial using recursion."})
+00233                 print(\textcolor{stringliteral}{" = current timestamp:"},execution\_time\_measurement.get\_initial\_timestamp(),\textcolor{stringliteral}{"="})
+00234                 \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(0,20+1):
+00235                     print(\textcolor{stringliteral}{"     factorial of"},x,\textcolor{stringliteral}{" is:"},calculate\_factorial.get\_factorial\_recursion(x),\textcolor{stringliteral}{"="})
+00236                 \textcolor{stringliteral}{"""}
+00237 \textcolor{stringliteral}{                    Get the elapsed time for calculating the factorial of}
+00238 \textcolor{stringliteral}{                        numbers via recursion.}
+00239 \textcolor{stringliteral}{                """}
+00240                 elapsed\_time\_recursion = execution\_time\_measurement.get\_elapsed\_time(
+      perf\_measurement\_technique)
+00241                 print(\textcolor{stringliteral}{" = elapsed\_time\_recursion:"},elapsed\_time\_recursion,\textcolor{stringliteral}{"="})
+00242                 \textcolor{stringliteral}{"""}
+00243 \textcolor{stringliteral}{                    Set the initial timestamp for calculating the}
+00244 \textcolor{stringliteral}{                        factorial of numbers via iteration.}
+00245 \textcolor{stringliteral}{                """}
+00246                 execution\_time\_measurement.set\_initial\_timestamp(perf\_measurement\_technique)
+00247                 print(\textcolor{stringliteral}{" Calculate the factorial using iteration."})
+00248                 print(\textcolor{stringliteral}{" = current timestamp:"},execution\_time\_measurement.get\_initial\_timestamp(),\textcolor{stringliteral}{"="})
+00249                 \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(0,20+1):
+00250                     print(\textcolor{stringliteral}{"     factorial of"},x,\textcolor{stringliteral}{" is:"},calculate\_factorial.get\_factorial\_iteration(x),\textcolor{stringliteral}{"="})
+00251                 \textcolor{stringliteral}{"""}
+00252 \textcolor{stringliteral}{                    Get the elapsed time for calculating the factorial of}
+00253 \textcolor{stringliteral}{                        numbers via iteration.}
+00254 \textcolor{stringliteral}{                """}
+00255                 elapsed\_time\_iteration = execution\_time\_measurement.get\_elapsed\_time(
+      perf\_measurement\_technique)
+00256                 print(\textcolor{stringliteral}{" = elapsed\_time\_iteration:"},elapsed\_time\_iteration,\textcolor{stringliteral}{"="})
+00257                 \textcolor{stringliteral}{"""}
+00258 \textcolor{stringliteral}{                    The timeit.timeit() method can result in negative elapsed time.}
+00259 \textcolor{stringliteral}{                """}
+00260                 text = perf\_measurement\_technique + \textcolor{stringliteral}{","} + str(elapsed\_time\_recursion) + \textcolor{stringliteral}{","} + str(
+      elapsed\_time\_iteration) + \textcolor{stringliteral}{"\(\backslash\)n"}
+00261                 op\_f\_obj.write(text)
+00262                 \textcolor{comment}{#op\_f\_obj.write("\(\backslash\)n")}
+00263 
+00264 
+00265 \textcolor{comment}{###############################################################}
+00266 \textcolor{comment}{# Main method for the program.}
+00267 
+00268 \textcolor{comment}{#   If this is executed as a Python script,}
+00269 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"\_\_main\_\_"}:
+00270     print(\textcolor{stringliteral}{"=================================================="})
+00271     print(\textcolor{stringliteral}{"Compare techniques for measuring elapsed periods."})
+00272     print(\textcolor{stringliteral}{""})
+00273     execution\_time\_measurement.compare\_different\_methods\_to\_measure\_elapsed\_periods()
+\end{DoxyCode}

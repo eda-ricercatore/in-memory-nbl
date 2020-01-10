@@ -1,0 +1,189 @@
+\hypertarget{configuration__manager__tester_8py_source}{}\section{configuration\+\_\+manager\+\_\+tester.\+py}
+\label{configuration__manager__tester_8py_source}\index{utilities/configuration\+\_\+manager\+\_\+tester.\+py@{utilities/configuration\+\_\+manager\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{configuration__manager__tester_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1configuration__manager__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test the}
+00006 \textcolor{stringliteral}{        configuration of the software application's parameters,}
+00007 \textcolor{stringliteral}{        via a JSON-based "parameters.config" (or "configuration.json")}
+00008 \textcolor{stringliteral}{        file.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{    Synopsis:}
+00011 \textcolor{stringliteral}{    Test the configuration of the software application's parameters.}
+00012 \textcolor{stringliteral}{}
+00013 \textcolor{stringliteral}{    Notes/Assumptions:}
+00014 \textcolor{stringliteral}{    None at the moment.}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{}
+00017 \textcolor{stringliteral}{    References:}
+00018 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00019 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00020 \textcolor{stringliteral}{}
+00021 \textcolor{stringliteral}{    Revision History:}
+00022 \textcolor{stringliteral}{    August 1, 2018          Version 0.1, initial build.}
+00023 \textcolor{stringliteral}{"""}
+00024 
+\hypertarget{configuration__manager__tester_8py_source_l00025}{}\hyperlink{namespaceutilities_1_1configuration__manager__tester_aa6fa7c3492580a61698b531deb1df918}{00025} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{configuration__manager__tester_8py_source_l00026}{}\hyperlink{namespaceutilities_1_1configuration__manager__tester_a5106d1471e1cb4d2b0f14486768f1096}{00026} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{configuration__manager__tester_8py_source_l00027}{}\hyperlink{namespaceutilities_1_1configuration__manager__tester_ac13eba5bd97c2c6945d9195a63f2ee1b}{00027} \_\_date\_\_ = \textcolor{stringliteral}{'August 1, 2018'}
+00028 
+00029 \textcolor{comment}{#   The MIT License (MIT)}
+00030 
+00031 \textcolor{comment}{#   Copyright (c) <2018> <Zhiyang Ong>}
+00032 
+00033 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00034 
+00035 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00036 
+00037 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00038 
+00039 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00040 
+00041 
+00042 
+00043 \textcolor{comment}{###############################################################}
+00044 \textcolor{stringliteral}{"""}
+00045 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00046 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00047 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00048 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00049 \textcolor{stringliteral}{}
+00050 \textcolor{stringliteral}{    subprocess -> call}
+00051 \textcolor{stringliteral}{                To make system calls.}
+00052 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00053 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00054 \textcolor{stringliteral}{    re          Use regular expressions.}
+00055 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00056 \textcolor{stringliteral}{"""}
+00057 
+00058 \textcolor{keyword}{import} sys
+00059 \textcolor{keyword}{import} os
+00060 \textcolor{keyword}{import} os.path
+00061 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00062 \textcolor{keyword}{import} time
+00063 \textcolor{keyword}{import} warnings
+00064 \textcolor{keyword}{import} re
+00065 \textcolor{keyword}{import} filecmp
+00066 \textcolor{comment}{# Copy a file from [source] to [destination]}
+00067 \textcolor{keyword}{from} shutil \textcolor{keyword}{import} copyfile
+00068 
+00069 \textcolor{comment}{###############################################################}
+00070 \textcolor{comment}{#   Import Custom Python Modules}
+00071 
+00072 \textcolor{stringliteral}{"""}
+00073 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00074 \textcolor{stringliteral}{        results.}
+00075 \textcolor{stringliteral}{"""}
+00076 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00077 \textcolor{stringliteral}{"""}
+00078 \textcolor{stringliteral}{    Package and module to configure the software application's}
+00079 \textcolor{stringliteral}{        parameters.}
+00080 \textcolor{stringliteral}{"""}
+00081 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1configuration__manager}{utilities.configuration\_manager} \textcolor{keyword}{import} config\_manager
+00082 
+00083 \textcolor{comment}{###############################################################}
+00084 \textcolor{stringliteral}{"""}
+00085 \textcolor{stringliteral}{    Module with methods that configure the software application's}
+00086 \textcolor{stringliteral}{        parameters.}
+00087 \textcolor{stringliteral}{    Support for class instantiation is not provided, to avoid}
+00088 \textcolor{stringliteral}{        acquiring a collection of useless "config\_manager"}
+00089 \textcolor{stringliteral}{        objects.}
+00090 \textcolor{stringliteral}{    Test each static method of the "config\_manager" class.}
+00091 \textcolor{stringliteral}{"""}
+\hypertarget{configuration__manager__tester_8py_source_l00092}{}\hyperlink{classutilities_1_1configuration__manager__tester_1_1config__manager__tester}{00092} \textcolor{keyword}{class }\hyperlink{classutilities_1_1configuration__manager__tester_1_1config__manager__tester}{config\_manager\_tester}:
+00093     \textcolor{comment}{## =========================================================}
+00094     \textcolor{comment}{#   Method to test the methods that configure the software}
+00095     \textcolor{comment}{#       application's parameters.}
+00096     \textcolor{comment}{#   @param - Nothing}
+00097     \textcolor{comment}{#   @return - Nothing.}
+00098     \textcolor{comment}{#   O(1) method.}
+00099     @staticmethod
+\hypertarget{configuration__manager__tester_8py_source_l00100}{}\hyperlink{classutilities_1_1configuration__manager__tester_1_1config__manager__tester_a1f30cbc427332b33d4e4a8e32ae3b980}{00100}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager__tester_1_1config__manager__tester_a1f30cbc427332b33d4e4a8e32ae3b980}{test\_configure\_sw\_application\_parameters}():
+00101     \textcolor{comment}{#def test\_configure\_sw\_application\_parameter\_result\_repository():}
+00102         print(\textcolor{stringliteral}{""})
+00103         print(\textcolor{stringliteral}{""})
+00104         print(\textcolor{stringliteral}{"==   Testing the config\_manager class/module."})
+\hypertarget{configuration__manager__tester_8py_source_l00105}{}\hyperlink{classutilities_1_1configuration__manager__tester_1_1config__manager__tester_aa2904b10cd29c4fe16374fa249686be2}{00105}         prompt = \textcolor{stringliteral}{"  ... Test: check default result\_repository       \{\}"}
+00106         statistical\_analysis.increment\_number\_test\_cases\_used()
+00107         \textcolor{keywordflow}{if} (config\_manager.get\_result\_repository() == \textcolor{stringliteral}{"Unknown location."}):
+00108             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00109             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00110         \textcolor{keywordflow}{else}:
+00111             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00112             \textcolor{comment}{#print("location=",config\_manager.get\_result\_repository(),"=")}
+\hypertarget{configuration__manager__tester_8py_source_l00113}{}\hyperlink{classutilities_1_1configuration__manager__tester_1_1config__manager__tester_aa23d0c5b64043e706aa32519034a37e8}{00113}         absolute\_path = \textcolor{stringliteral}{"
+      /Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}
+00114         prompt = \textcolor{stringliteral}{"  ... Test: result\_repository, check change to abs. path. \{\}"}
+00115         statistical\_analysis.increment\_number\_test\_cases\_used()
+00116         \textcolor{keywordflow}{if} config\_manager.set\_result\_repository(absolute\_path):
+00117             print(\textcolor{stringliteral}{" result\_repository is changed to an absolute path."})
+00118         \textcolor{keywordflow}{else}:
+00119             print(\textcolor{stringliteral}{" result\_repository is NOT changed to an absolute path."})
+00120         \textcolor{keywordflow}{if} (config\_manager.get\_result\_repository() == absolute\_path):
+00121             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00122             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00123         \textcolor{keywordflow}{else}:
+00124             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00125             print(\textcolor{stringliteral}{"Actual location="},config\_manager.get\_result\_repository(),\textcolor{stringliteral}{"="})
+00126         \textcolor{comment}{# ------------------------------------------------------------}
+00127         prompt = \textcolor{stringliteral}{"  ... Test: result\_repository, check change to rel. path. \{\}"}
+00128         statistical\_analysis.increment\_number\_test\_cases\_used()
+00129         \textcolor{stringliteral}{"""}
+00130 \textcolor{stringliteral}{            Set "result\_repository" to a relative path that is equivalent}
+00131 \textcolor{stringliteral}{                absolute path, "absolute\_path".}
+00132 \textcolor{stringliteral}{        """}
+00133         \textcolor{keywordflow}{if} config\_manager.set\_result\_repository(\textcolor{stringliteral}{"
+      ~/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}):
+00134             print(\textcolor{stringliteral}{" result\_repository is changed to an relative path."})
+00135         \textcolor{keywordflow}{else}:
+00136             print(\textcolor{stringliteral}{" result\_repository is NOT changed to an relative path."})
+00137         \textcolor{stringliteral}{"""}
+00138 \textcolor{stringliteral}{            "result\_repository" is changed to an relative path.}
+00139 \textcolor{stringliteral}{            However, compare "result\_repository" to the equivalent}
+00140 \textcolor{stringliteral}{                absolute path.}
+00141 \textcolor{stringliteral}{            This is because if a relative path is detected, it will be}
+00142 \textcolor{stringliteral}{                transform/changed to an absolute path, before being}
+00143 \textcolor{stringliteral}{                assigned to "result\_repository".}
+00144 \textcolor{stringliteral}{        """}
+00145         \textcolor{keywordflow}{if} (config\_manager.get\_result\_repository() == absolute\_path):
+00146             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00147             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00148         \textcolor{keywordflow}{else}:
+00149             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00150             print(\textcolor{stringliteral}{"Actual location="},config\_manager.get\_result\_repository(),\textcolor{stringliteral}{"="})
+00151         \textcolor{comment}{# ------------------------------------------------------------}
+00152         prompt = \textcolor{stringliteral}{"  ... Test: result\_repository, changing to invalid path.  \{\}"}
+00153         statistical\_analysis.increment\_number\_test\_cases\_used()
+00154         \textcolor{stringliteral}{"""}
+00155 \textcolor{stringliteral}{            Set "result\_repository" to an invalid path.}
+00156 \textcolor{stringliteral}{        """}
+00157         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} config\_manager.set\_result\_repository(\textcolor{stringliteral}{"~/This/is/an/invalid/path"}):
+00158             print(\textcolor{stringliteral}{" result\_repository is not changed to an invalid path."})
+00159         \textcolor{keywordflow}{else}:
+00160             print(\textcolor{stringliteral}{" result\_repository is CHANGED to an INVALID path."})
+00161         \textcolor{stringliteral}{"""}
+00162 \textcolor{stringliteral}{            "result\_repository" should not be changed to an invalid path.}
+00163 \textcolor{stringliteral}{            Hence, it shall still refer to "absolute\_path".}
+00164 \textcolor{stringliteral}{        """}
+00165         \textcolor{keywordflow}{if} (config\_manager.get\_result\_repository() == absolute\_path):
+00166             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00167             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00168         \textcolor{keywordflow}{else}:
+00169             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00170             print(\textcolor{stringliteral}{"Actual location="},config\_manager.get\_result\_repository(),\textcolor{stringliteral}{"="})
+\end{DoxyCode}

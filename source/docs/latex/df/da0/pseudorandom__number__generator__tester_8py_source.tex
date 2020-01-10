@@ -1,0 +1,149 @@
+\hypertarget{pseudorandom__number__generator__tester_8py_source}{}\section{pseudorandom\+\_\+number\+\_\+generator\+\_\+tester.\+py}
+\label{pseudorandom__number__generator__tester_8py_source}\index{random\+\_\+process\+\_\+models/pseudorandom\+\_\+number\+\_\+generator\+\_\+tester.\+py@{random\+\_\+process\+\_\+models/pseudorandom\+\_\+number\+\_\+generator\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00001}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test my}
+00006 \textcolor{stringliteral}{        custom Python module that generates pseudorandom numbers.}
+00007 \textcolor{stringliteral}{}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Test pseudorandom number generator (PRNG).}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{    Revision History:}
+00016 \textcolor{stringliteral}{    September 6, 2019           Version 0.1 Script.}
+00017 \textcolor{stringliteral}{"""}
+00018 
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00019}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator__tester_a67279ea57e007a95e27af9f25cf84db6}{00019} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00020}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator__tester_abdadf15e475ca77a4ef2bebd886b8dcc}{00020} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00021}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator__tester_a8dbe9b20b965a3a680bcad127e27c55e}{00021} \_\_date\_\_ = \textcolor{stringliteral}{'September 6, 2019'}
+00022 
+00023 \textcolor{comment}{#   The MIT License (MIT)}
+00024 
+00025 \textcolor{comment}{#   Copyright (c) <2019> <Zhiyang Ong>}
+00026 
+00027 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00028 
+00029 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00030 
+00031 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00032 
+00033 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00034 
+00035 
+00036 \textcolor{comment}{###############################################################}
+00037 \textcolor{stringliteral}{"""}
+00038 \textcolor{stringliteral}{    Import modules from the Python Standard Library.}
+00039 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00040 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00041 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00042 \textcolor{stringliteral}{}
+00043 \textcolor{stringliteral}{    subprocess -> call}
+00044 \textcolor{stringliteral}{                To make system calls.}
+00045 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00046 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00047 \textcolor{stringliteral}{    re          Use regular expressions.}
+00048 \textcolor{stringliteral}{}
+00049 \textcolor{stringliteral}{    pathlib->Path}
+00050 \textcolor{stringliteral}{                For mapping a string to a path.}
+00051 \textcolor{stringliteral}{    datetime    To obtain information about the current date and time.}
+00052 \textcolor{stringliteral}{    time        To obtain information about the current time.}
+00053 \textcolor{stringliteral}{                time\_ns version provides information about the}
+00054 \textcolor{stringliteral}{                    current time with nanosecond accuracy.}
+00055 \textcolor{stringliteral}{    warnings    Provide warnings to users without terminating the}
+00056 \textcolor{stringliteral}{                    program abruptly.}
+00057 \textcolor{stringliteral}{    random      For pseudorandom number generation.}
+00058 \textcolor{stringliteral}{"""}
+00059 
+00060 \textcolor{keyword}{import} sys
+00061 \textcolor{keyword}{import} os
+00062 \textcolor{keyword}{import} os.path
+00063 \textcolor{comment}{#from pathlib import Path}
+00064 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00065 \textcolor{keyword}{import} time
+00066 \textcolor{keyword}{import} warnings
+00067 \textcolor{keyword}{import} re
+00068 \textcolor{keyword}{import} datetime
+00069 \textcolor{keyword}{import} random
+00070 
+00071 \textcolor{comment}{###############################################################}
+00072 \textcolor{comment}{#   Import Custom Python Packages and Modules}
+00073 
+00074 \textcolor{stringliteral}{"""}
+00075 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00076 \textcolor{stringliteral}{        results.}
+00077 \textcolor{stringliteral}{"""}
+00078 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00079 
+00080 
+00081 \textcolor{comment}{# Module to generate pseudorandom numbers.}
+00082 \textcolor{keyword}{from} \hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator}{random\_process\_models.pseudorandom\_number\_generator}
+       \textcolor{keyword}{import} prng
+00083 
+00084 
+00085 \textcolor{comment}{###############################################################}
+00086 \textcolor{comment}{##  Module with methods that perform miscellaneous tasks.}
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00087}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator__tester_1_1prng__tester}{00087} \textcolor{keyword}{class }\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator__tester_1_1prng__tester}{prng\_tester}:
+00088     \textcolor{comment}{## =========================================================}
+00089     \textcolor{comment}{#   Method to test the methods that uses the PRNG from Python}
+00090     \textcolor{comment}{#       Standard Library to produce random numbers.}
+00091     \textcolor{comment}{#   @param - Nothing}
+00092     \textcolor{comment}{#   @return - Nothing.}
+00093     \textcolor{comment}{#   O(1) method.}
+00094     @staticmethod
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00095}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator__tester_1_1prng__tester_a5597ea984257dcd64376064fda82385d}{00095}     \textcolor{keyword}{def }\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator__tester_1_1prng__tester_a5597ea984257dcd64376064fda82385d}{test\_psl\_uniform}():
+00096         print(\textcolor{stringliteral}{" Testing the psl\_uniform()."})
+00097         prompt = \textcolor{stringliteral}{"  ... Test: incorrect type of signal, 'whatever'.     \{\}"}
+00098         statistical\_analysis.increment\_number\_test\_cases\_used()
+00099         temp\_ran\_number = prng.psl\_uniform(\textcolor{stringliteral}{"whatever"})
+00100         \textcolor{keywordflow}{if} (1==temp\_ran\_number) \textcolor{keywordflow}{or} (0==temp\_ran\_number):
+00101             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00102             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00103         \textcolor{keywordflow}{else}:
+00104             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00105         prompt = \textcolor{stringliteral}{"  ... Test: for bit vector signal, 'bv'.          \{\}"}
+00106         statistical\_analysis.increment\_number\_test\_cases\_used()
+00107         temp\_ran\_number = prng.psl\_uniform(prng.bv\_signal)
+00108         \textcolor{keywordflow}{if} (1==temp\_ran\_number) \textcolor{keywordflow}{or} (0==temp\_ran\_number):
+00109             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00110             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00111         \textcolor{keywordflow}{else}:
+00112             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00113         prompt = \textcolor{stringliteral}{"  ... Test: for RTW signal, 'rtw'.        \{\}"}
+00114         statistical\_analysis.increment\_number\_test\_cases\_used()
+00115         temp\_ran\_number = prng.psl\_uniform(prng.rtw\_signal)
+00116         \textcolor{keywordflow}{if} (1==temp\_ran\_number) \textcolor{keywordflow}{or} (-1==temp\_ran\_number):
+00117             print(prompt .format(\textcolor{stringliteral}{"  OK"}))
+00118             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00119         \textcolor{keywordflow}{else}:
+00120             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00121     \textcolor{comment}{## =========================================================}
+00122     \textcolor{comment}{#   Method to test the miscellaneous methods.}
+00123     \textcolor{comment}{#   @param - Nothing}
+00124     \textcolor{comment}{#   @return - Nothing.}
+00125     \textcolor{comment}{#   O(1) method.}
+00126     @staticmethod
+\hypertarget{pseudorandom__number__generator__tester_8py_source_l00127}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator__tester_1_1prng__tester_aff9e5a07e94168e1eabd25b7f3a4eb32}{00127}     \textcolor{keyword}{def }\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator__tester_1_1prng__tester_aff9e5a07e94168e1eabd25b7f3a4eb32}{test\_prng\_methods}():
+00128         print(\textcolor{stringliteral}{""})
+00129         print(\textcolor{stringliteral}{""})
+00130         print(\textcolor{stringliteral}{"==   Testing class: misc\_tester."})
+00131         prng\_tester.test\_psl\_uniform()
+\end{DoxyCode}

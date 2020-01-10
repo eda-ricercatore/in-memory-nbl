@@ -1,0 +1,223 @@
+\hypertarget{get__factorial_8py_source}{}\section{get\+\_\+factorial.\+py}
+\label{get__factorial_8py_source}\index{utilities/timing\+\_\+measurements/get\+\_\+factorial.\+py@{utilities/timing\+\_\+measurements/get\+\_\+factorial.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{get__factorial_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1get__factorial}{00001} \textcolor{comment}{#!/Users/zhiyang/anaconda3/bin/python3}
+00002 
+00003 \textcolor{stringliteral}{"""}
+00004 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to calculate}
+00005 \textcolor{stringliteral}{        the factorial of a number.}
+00006 \textcolor{stringliteral}{}
+00007 \textcolor{stringliteral}{    The results for this script are compared to the table of}
+00008 \textcolor{stringliteral}{        factorials in \(\backslash\)cite\{Pierce2019\}, and validated/verified}
+00009 \textcolor{stringliteral}{        for factorials from 0.}
+00010 \textcolor{stringliteral}{    This script }
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    Synopsis:}
+00013 \textcolor{stringliteral}{    Calculate the factorial of a number.}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{    This script can be executed as follows:}
+00016 \textcolor{stringliteral}{    ./get\_factorial.py [a number]}
+00017 \textcolor{stringliteral}{}
+00018 \textcolor{stringliteral}{    Parameters:}
+00019 \textcolor{stringliteral}{    [a number]:     A number that the user wants to determine the}
+00020 \textcolor{stringliteral}{                        factorial of.}
+00021 \textcolor{stringliteral}{}
+00022 \textcolor{stringliteral}{}
+00023 \textcolor{stringliteral}{    Revision History:}
+00024 \textcolor{stringliteral}{    September 6, 2019           Version 0.1 Script.}
+00025 \textcolor{stringliteral}{}
+00026 \textcolor{stringliteral}{    References:}
+00027 \textcolor{stringliteral}{        [Pierce2019]}
+00028 \textcolor{stringliteral}{            Rod Pierce, "Factorial Function," from Maths Is Fun, 2019. Available online from "Maths Is Fun:
+       Numbers" at: https://www.mathsisfun.com/numbers/factorial.html; September 19, 2019 is the last access date.}
+00029 \textcolor{stringliteral}{                [No address]}
+00030 \textcolor{stringliteral}{                https://www.mathsisfun.com/citation.php}
+00031 \textcolor{stringliteral}{"""}
+00032 
+\hypertarget{get__factorial_8py_source_l00033}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1get__factorial_a043c91cb8f16c3570870212cabbde3c1}{00033} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{get__factorial_8py_source_l00034}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1get__factorial_af4911964913b4a07e464413868da36f7}{00034} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{get__factorial_8py_source_l00035}{}\hyperlink{namespaceutilities_1_1timing__measurements_1_1get__factorial_a8b8b3f7bee60cdc7d63a3f6357047a30}{00035} \_\_date\_\_ = \textcolor{stringliteral}{'September 6, 2019'}
+00036 
+00037 \textcolor{comment}{#   The MIT License (MIT)}
+00038 
+00039 \textcolor{comment}{#   Copyright (c) <2019> <Zhiyang Ong>}
+00040 
+00041 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00042 
+00043 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00044 
+00045 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00046 
+00047 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00048 
+00049 
+00050 \textcolor{comment}{###############################################################}
+00051 \textcolor{stringliteral}{"""}
+00052 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00053 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00054 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00055 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00056 \textcolor{stringliteral}{}
+00057 \textcolor{stringliteral}{    subprocess -> call}
+00058 \textcolor{stringliteral}{                To make system calls.}
+00059 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00060 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00061 \textcolor{stringliteral}{    re          Use regular expressions.}
+00062 \textcolor{stringliteral}{}
+00063 \textcolor{stringliteral}{    pathlib->Path}
+00064 \textcolor{stringliteral}{                For mapping a string to a path.}
+00065 \textcolor{stringliteral}{    datetime    To obtain information about the current date and time.}
+00066 \textcolor{stringliteral}{    time    To obtain information about the current time.}
+00067 \textcolor{stringliteral}{    warnings    Provide warnings to users without terminating the}
+00068 \textcolor{stringliteral}{                    program abruptly.}
+00069 \textcolor{stringliteral}{"""}
+00070 
+00071 \textcolor{keyword}{import} sys
+00072 \textcolor{keyword}{import} os
+00073 \textcolor{keyword}{import} os.path
+00074 \textcolor{comment}{#from pathlib import Path}
+00075 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00076 \textcolor{keyword}{import} time
+00077 \textcolor{keyword}{import} warnings
+00078 \textcolor{keyword}{import} re
+00079 \textcolor{keyword}{import} datetime
+00080 \textcolor{keyword}{import} time
+00081 \textcolor{keyword}{import} warnings
+00082 
+00083 \textcolor{comment}{###############################################################}
+00084 \textcolor{stringliteral}{"""}
+00085 \textcolor{stringliteral}{    Module with methods that determine the factorial of a number.}
+00086 \textcolor{stringliteral}{"""}
+\hypertarget{get__factorial_8py_source_l00087}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial}{00087} \textcolor{keyword}{class }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial}{calculate\_factorial}:
+00088     \textcolor{comment}{# Number to determine the factorial of.}
+\hypertarget{get__factorial_8py_source_l00089}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a52e3407bbd93719d9c77e49706a47362}{00089}     default\_number = 10
+00090     \textcolor{comment}{# Number to compute the factorial of.}
+\hypertarget{get__factorial_8py_source_l00091}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a04cd527a2af28e713e8665e2d40b1fae}{00091}     number\_to\_compute = 10
+00092     \textcolor{stringliteral}{"""}
+00093 \textcolor{stringliteral}{        Number to indicate that the factorial for the given input}
+00094 \textcolor{stringliteral}{            does not exist.}
+00095 \textcolor{stringliteral}{    """}
+\hypertarget{get__factorial_8py_source_l00096}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a16363bc4d672d6352ce3618abeb8e74f}{00096}     does\_not\_exist = -1234567890
+00097     \textcolor{comment}{# ============================================================}
+00098     \textcolor{comment}{##  Method to process the optional input argument.}
+00099     \textcolor{comment}{#   If the number is not provided, use the value of "default\_number".}
+00100     \textcolor{comment}{#   @return - Nothing.}
+00101     \textcolor{comment}{#   O(1) method.}
+00102     @staticmethod
+\hypertarget{get__factorial_8py_source_l00103}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}{00103}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}{process\_optional\_input\_argument}():
+00104         \textcolor{comment}{# If the path to the README file is not specified}
+00105         \textcolor{keywordflow}{if} (2 > len(sys.argv)):
+00106             \textcolor{stringliteral}{"""}
+00107 \textcolor{stringliteral}{                The optional input argument is not provided by the}
+00108 \textcolor{stringliteral}{                    user.}
+00109 \textcolor{stringliteral}{                We assume that the default number to determine the}
+00110 \textcolor{stringliteral}{                    factorial of is indicated by the value of}
+00111 \textcolor{stringliteral}{                    "default\_number".}
+00112 \textcolor{stringliteral}{            """}
+00113             calculate\_factorial.number\_to\_compute = calculate\_factorial.default\_number
+00114         \textcolor{keywordflow}{else}:
+00115             calculate\_factorial.number\_to\_compute = sys.argv[1]
+00116     \textcolor{comment}{# ============================================================}
+00117     \textcolor{comment}{##  Method to determine the factorial of "number\_to\_compute"}
+00118     \textcolor{comment}{#       by recursion.}
+00119     \textcolor{comment}{#   @param given\_number - Number to determine the factorial of.}
+00120     \textcolor{comment}{#   @return the factorial of given\_number (if it is a non-negative}
+00121     \textcolor{comment}{#       integer);}
+00122     \textcolor{comment}{#       else, return 'None'.}
+00123     \textcolor{comment}{#   O(n) method, where n is the number of test cases used.}
+00124     @staticmethod
+\hypertarget{get__factorial_8py_source_l00125}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}{00125}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}{get\_factorial\_recursion}(given\_number):
+00126         \textcolor{keywordflow}{if} isinstance(given\_number, int):
+00127             \textcolor{keywordflow}{if} (0 == (given\_number) \textcolor{keywordflow}{or} (1 == given\_number)):
+00128                 \textcolor{keywordflow}{return} 1
+00129             \textcolor{keywordflow}{elif} (0 > given\_number):
+00130                 warnings.warn(\textcolor{stringliteral}{"The factorial of a negative number cannot be determined."})
+00131                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00132             \textcolor{keywordflow}{else}:
+00133                 \textcolor{keywordflow}{return} given\_number * calculate\_factorial.get\_factorial\_recursion(given\_number - 1)
+00134         \textcolor{keywordflow}{elif} isinstance(given\_number, float):
+00135             warnings.warn(\textcolor{stringliteral}{"The factorial of a floating-point number cannot be determined."})
+00136             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00137         \textcolor{keywordflow}{else}:
+00138             warnings.warn(\textcolor{stringliteral}{"The factorial of a non-integer cannot be determined."})
+00139             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00140     \textcolor{comment}{# ============================================================}
+00141     \textcolor{comment}{##  Method to determine the factorial of "number\_to\_compute"}
+00142     \textcolor{comment}{#       by iteration.}
+00143     \textcolor{comment}{#   @param given\_number - Number to determine the factorial of.}
+00144     \textcolor{comment}{#   @return the factorial of given\_number (if it is a non-negative}
+00145     \textcolor{comment}{#       integer);}
+00146     \textcolor{comment}{#       else, return 'None'.}
+00147     \textcolor{comment}{#   O(n) method, where n is the number of test cases used.}
+00148     @staticmethod
+\hypertarget{get__factorial_8py_source_l00149}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}{00149}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}{get\_factorial\_iteration}(given\_number):
+00150         \textcolor{keywordflow}{if} isinstance(given\_number, int):
+00151             \textcolor{keywordflow}{if} (0 == (given\_number) \textcolor{keywordflow}{or} (1 == given\_number)):
+00152                 \textcolor{keywordflow}{return} 1
+00153             \textcolor{keywordflow}{elif} (0 > given\_number):
+00154                 warnings.warn(\textcolor{stringliteral}{"The factorial of a negative number cannot be determined."})
+00155                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00156             \textcolor{keywordflow}{else}:
+00157                 result = 1
+00158                 \textcolor{keywordflow}{while} (1 < given\_number):
+00159                     result = result * given\_number
+00160                     given\_number = given\_number - 1
+00161                 \textcolor{keywordflow}{return} result
+00162         \textcolor{keywordflow}{elif} isinstance(given\_number, float):
+00163             warnings.warn(\textcolor{stringliteral}{"The factorial of a floating-point number cannot be determined."})
+00164             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00165         \textcolor{keywordflow}{else}:
+00166             warnings.warn(\textcolor{stringliteral}{"The factorial of a non-integer cannot be determined."})
+00167             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00168 
+00169 \textcolor{comment}{###############################################################}
+00170 \textcolor{comment}{# Main method for the program.}
+00171 
+00172 \textcolor{comment}{#   If this is executed as a Python script,}
+00173 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"\_\_main\_\_"}:
+00174     print(\textcolor{stringliteral}{"=================================================="})
+00175     print(\textcolor{stringliteral}{"Calculate the factorial of a given number."})
+00176     \textcolor{comment}{# get\_factorial\_iteration() requires and only accepts 1 input value.}
+00177     \textcolor{comment}{#calculate\_factorial.process\_optional\_input\_argument()}
+00178     \textcolor{comment}{#calculate\_factorial.process\_optional\_input\_argument(324324 23r23 4e5678 56789)}
+00179     \textcolor{comment}{# Change process\_optional\_input\_argument() to accept no input.}
+00180     calculate\_factorial.process\_optional\_input\_argument()
+00181     \textcolor{comment}{#print("get\_factorial\_iteration() for default value of
+       10:",calculate\_factorial.get\_factorial\_iteration(4),"=")}
+00182     print(\textcolor{stringliteral}{"=    Test the factorial computation method using iteration."})
+00183     print(\textcolor{stringliteral}{"get\_factorial\_iteration(4):"},calculate\_factorial.get\_factorial\_iteration(4),\textcolor{stringliteral}{"="})
+00184     \textcolor{comment}{# ValueError: invalid literal for int() with base 10: 'my string'}
+00185     print(\textcolor{stringliteral}{"get\_factorial\_iteration('my string'):"},calculate\_factorial.get\_factorial\_iteration(\textcolor{stringliteral}{"my string"}),\textcolor{stringliteral}{
+      "="})
+00186     print(\textcolor{stringliteral}{"get\_factorial\_iteration(125.23429):"},calculate\_factorial.get\_factorial\_iteration(125.23429),\textcolor{stringliteral}{"="})
+00187     print(\textcolor{stringliteral}{"get\_factorial\_iteration(None):"},calculate\_factorial.get\_factorial\_iteration(\textcolor{keywordtype}{None}),\textcolor{stringliteral}{"="})
+00188     print(\textcolor{stringliteral}{"get\_factorial\_iteration(-345):"},calculate\_factorial.get\_factorial\_iteration(-345),\textcolor{stringliteral}{"="})
+00189     \textcolor{stringliteral}{"""}
+00190 \textcolor{stringliteral}{        Add whitespace before testing the factorial computation}
+00191 \textcolor{stringliteral}{            method using recursion.}
+00192 \textcolor{stringliteral}{    """}
+00193     print(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"})
+00194     \textcolor{comment}{#print("")}
+00195     print(\textcolor{stringliteral}{"=    Test the factorial computation method using recursion."})
+00196     print(\textcolor{stringliteral}{"get\_factorial\_recursion(4):"},calculate\_factorial.get\_factorial\_recursion(4),\textcolor{stringliteral}{"="})
+00197     \textcolor{comment}{# ValueError: invalid literal for int() with base 10: 'my string'}
+00198     print(\textcolor{stringliteral}{"get\_factorial\_recursion('my string'):"},calculate\_factorial.get\_factorial\_recursion(\textcolor{stringliteral}{"my string"}),\textcolor{stringliteral}{
+      "="})
+00199     print(\textcolor{stringliteral}{"get\_factorial\_recursion(125.23429):"},calculate\_factorial.get\_factorial\_recursion(125.23429),\textcolor{stringliteral}{"="})
+00200     print(\textcolor{stringliteral}{"get\_factorial\_recursion(None):"},calculate\_factorial.get\_factorial\_recursion(\textcolor{keywordtype}{None}),\textcolor{stringliteral}{"="})
+00201     print(\textcolor{stringliteral}{"get\_factorial\_recursion(-345):"},calculate\_factorial.get\_factorial\_recursion(-345),\textcolor{stringliteral}{"="})
+00202     
+\end{DoxyCode}

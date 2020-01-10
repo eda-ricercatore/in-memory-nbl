@@ -1,0 +1,194 @@
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator}{}\section{random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator Class Reference}
+\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator}\index{random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator}}
+
+
+Collaboration diagram for random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{d8/df9/classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a0120f8a5803679907bca0d8267e30781}{gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn}
+\begin{DoxyCompactList}\small\item\em Method to generate a discrete-\/time random signal/process for \char`\"{}n\char`\"{} values. \end{DoxyCompactList}\item 
+def \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a281d575afed0d10531c7cfaf17df2f5a}{gen\+\_\+bit\+\_\+vector\+\_\+getrandbits}
+\begin{DoxyCompactList}\small\item\em Method to generate a discrete-\/time random signal/process for \char`\"{}n\char`\"{} values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_ab5e9d283e3d5d2a2c6ba58897d208547}{bv\+\_\+signal} = \char`\"{}bv\char`\"{}
+\item 
+string \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a6628ea9c95a141778e1bb0e8ba8d0845}{rtw\+\_\+signal} = \char`\"{}rtw\char`\"{}
+\item 
+int \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a5c3b5601f4bbf03559fb7607929f7f7f}{low\+\_\+value\+\_\+rtw} = -\/1
+\item 
+int \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a71277d93f7a9f93faa86fb40e04e1f19}{high\+\_\+value\+\_\+rtw} = 1
+\item 
+int \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a68859568af63a4990b97fcfc4a604884}{low\+\_\+value\+\_\+bit\+\_\+vector} = 0
+\item 
+int \hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_ada393b856bd4abbd328d3c87fb13e120}{high\+\_\+value\+\_\+bit\+\_\+vector} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00091}{91} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a281d575afed0d10531c7cfaf17df2f5a}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!gen\+\_\+bit\+\_\+vector\+\_\+getrandbits@{gen\+\_\+bit\+\_\+vector\+\_\+getrandbits}}
+\index{gen\+\_\+bit\+\_\+vector\+\_\+getrandbits@{gen\+\_\+bit\+\_\+vector\+\_\+getrandbits}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{gen\+\_\+bit\+\_\+vector\+\_\+getrandbits}]{\setlength{\rightskip}{0pt plus 5cm}def random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+gen\+\_\+bit\+\_\+vector\+\_\+getrandbits (
+\begin{DoxyParamCaption}
+\item[{}]{n = {\ttfamily 16}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a281d575afed0d10531c7cfaf17df2f5a}
+
+
+Method to generate a discrete-\/time random signal/process for \char`\"{}n\char`\"{} values. 
+
+Use the Python Standard Library\textquotesingle{}s random module to call the random.\+getrandbits(k) function that is based on the Mersenne\+Twister generator (or some other generators).
+
+For the generated bit-\/vector (bv), it has a\+:
+\begin{DoxyItemize}
+\item high value\+: \char`\"{}1\char`\"{}
+\item low value\+: \char`\"{}0\char`\"{}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ number of discrete values used to represent the random signal/\char`\"{}process\char`\"{}. Its default value is\+: 16. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00158}{158} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_l00158}{}\hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a281d575afed0d10531c7cfaf17df2f5a}{00158}     \textcolor{keyword}{def }\hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a281d575afed0d10531c7cfaf17df2f5a}{gen\_bit\_vector\_getrandbits}(n=16):
+00159         \textcolor{keywordflow}{return} random.getrandbits(n)
+00160 
+00161 
+00162 
+00163 
+00164 
+00165 \end{DoxyCode}
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a0120f8a5803679907bca0d8267e30781}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn@{gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn}}
+\index{gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn@{gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn}]{\setlength{\rightskip}{0pt plus 5cm}def random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+gen\+\_\+rand\+\_\+signal\+\_\+uniform\+\_\+distributn (
+\begin{DoxyParamCaption}
+\item[{}]{type\+\_\+of\+\_\+signal = {\ttfamily {\bf rand\+\_\+signal\+\_\+generator.\+bv\+\_\+signal}}, }
+\item[{}]{n = {\ttfamily 16}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a0120f8a5803679907bca0d8267e30781}
+
+
+Method to generate a discrete-\/time random signal/process for \char`\"{}n\char`\"{} values. 
+
+Use the Python Standard Library\textquotesingle{}s random module to call the uniform function that is a P\+R\+N\+G based on a uniform distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+of\+\_\+signal} & -\/ Indicates if either of the following random signals (or random \char`\"{}processes\char`\"{}) are used.
+\begin{DoxyItemize}
+\item rtw, for a random telegraph wave
+\begin{DoxyItemize}
+\item high value\+: \char`\"{}1\char`\"{}
+\item low value\+: \char`\"{}-\/1\char`\"{}
+\end{DoxyItemize}
+\item bv, for a bit-\/vector
+\begin{DoxyItemize}
+\item high value\+: \char`\"{}1\char`\"{}
+\item low value\+: \char`\"{}0\char`\"{} 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+{\em n} & -\/ number of discrete values used to represent the random signal/\char`\"{}process\char`\"{}. Its default value is\+: 16. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00125}{125} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_l00125}{}\hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a0120f8a5803679907bca0d8267e30781}{00125}     \textcolor{keyword}{def }\hyperlink{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a0120f8a5803679907bca0d8267e30781}{gen\_rand\_signal\_uniform\_distributn}(
+      type\_of\_signal=rand\_signal\_generator.bv\_signal, n=16):
+00126         random\_signal = []
+00127         \textcolor{comment}{# Generate a random signal/"process" of n values.}
+00128         \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(n):
+00129             \textcolor{stringliteral}{"""}
+00130 \textcolor{stringliteral}{                ### TODO}
+00131 \textcolor{stringliteral}{                Check the output of psl\_uniform(type\_of\_signal)}
+00132 \textcolor{stringliteral}{                    complies with specifications, as an assertion.}
+00133 \textcolor{stringliteral}{            """}
+00134             random\_signal.append(prng.psl\_uniform(type\_of\_signal))
+00135         \textcolor{stringliteral}{"""}
+00136 \textcolor{stringliteral}{            ### TODO}
+00137 \textcolor{stringliteral}{            Check the random signal/"process" complies with}
+00138 \textcolor{stringliteral}{                specifications, as a postcondition.}
+00139 \textcolor{stringliteral}{        """}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_ab5e9d283e3d5d2a2c6ba58897d208547}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!bv\+\_\+signal@{bv\+\_\+signal}}
+\index{bv\+\_\+signal@{bv\+\_\+signal}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{bv\+\_\+signal}]{\setlength{\rightskip}{0pt plus 5cm}string random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+bv\+\_\+signal = \char`\"{}bv\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_ab5e9d283e3d5d2a2c6ba58897d208547}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00094}{94} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_ada393b856bd4abbd328d3c87fb13e120}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!high\+\_\+value\+\_\+bit\+\_\+vector@{high\+\_\+value\+\_\+bit\+\_\+vector}}
+\index{high\+\_\+value\+\_\+bit\+\_\+vector@{high\+\_\+value\+\_\+bit\+\_\+vector}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{high\+\_\+value\+\_\+bit\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+high\+\_\+value\+\_\+bit\+\_\+vector = 1\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_ada393b856bd4abbd328d3c87fb13e120}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00102}{102} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a71277d93f7a9f93faa86fb40e04e1f19}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!high\+\_\+value\+\_\+rtw@{high\+\_\+value\+\_\+rtw}}
+\index{high\+\_\+value\+\_\+rtw@{high\+\_\+value\+\_\+rtw}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{high\+\_\+value\+\_\+rtw}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+high\+\_\+value\+\_\+rtw = 1\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a71277d93f7a9f93faa86fb40e04e1f19}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00099}{99} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a68859568af63a4990b97fcfc4a604884}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!low\+\_\+value\+\_\+bit\+\_\+vector@{low\+\_\+value\+\_\+bit\+\_\+vector}}
+\index{low\+\_\+value\+\_\+bit\+\_\+vector@{low\+\_\+value\+\_\+bit\+\_\+vector}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{low\+\_\+value\+\_\+bit\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+low\+\_\+value\+\_\+bit\+\_\+vector = 0\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a68859568af63a4990b97fcfc4a604884}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00101}{101} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a5c3b5601f4bbf03559fb7607929f7f7f}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!low\+\_\+value\+\_\+rtw@{low\+\_\+value\+\_\+rtw}}
+\index{low\+\_\+value\+\_\+rtw@{low\+\_\+value\+\_\+rtw}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{low\+\_\+value\+\_\+rtw}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+low\+\_\+value\+\_\+rtw = -\/1\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a5c3b5601f4bbf03559fb7607929f7f7f}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00098}{98} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a6628ea9c95a141778e1bb0e8ba8d0845}{}\index{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}!rtw\+\_\+signal@{rtw\+\_\+signal}}
+\index{rtw\+\_\+signal@{rtw\+\_\+signal}!random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator@{random\+\_\+process\+\_\+models\+::random\+\_\+process\+\_\+generator\+::rand\+\_\+signal\+\_\+generator}}
+\subsubsection[{rtw\+\_\+signal}]{\setlength{\rightskip}{0pt plus 5cm}string random\+\_\+process\+\_\+models.\+random\+\_\+process\+\_\+generator.\+rand\+\_\+signal\+\_\+generator.\+rtw\+\_\+signal = \char`\"{}rtw\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1random__process__generator_1_1rand__signal__generator_a6628ea9c95a141778e1bb0e8ba8d0845}
+
+
+Definition at line \hyperlink{random__process__generator_8py_source_l00096}{96} of file \hyperlink{random__process__generator_8py_source}{random\+\_\+process\+\_\+generator.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+random\+\_\+process\+\_\+models/\hyperlink{random__process__generator_8py}{random\+\_\+process\+\_\+generator.\+py}\end{DoxyCompactItemize}

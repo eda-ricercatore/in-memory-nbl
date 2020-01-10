@@ -1,0 +1,186 @@
+\hypertarget{configuration__manager_8py_source}{}\section{configuration\+\_\+manager.\+py}
+\label{configuration__manager_8py_source}\index{utilities/configuration\+\_\+manager.\+py@{utilities/configuration\+\_\+manager.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{configuration__manager_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1configuration__manager}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to configure the}
+00006 \textcolor{stringliteral}{        software application's parameters, via a JSON-based}
+00007 \textcolor{stringliteral}{        "parameters.config" (or "configuration.json") file.}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Manage the configuration of the software application's parameters.}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    Notes/Assumptions:}
+00013 \textcolor{stringliteral}{    The "configuration.json" is parsed by the "config\_file\_parser.py",}
+00014 \textcolor{stringliteral}{        and its fields are mapped from a JSON object into a Python object}
+00015 \textcolor{stringliteral}{        represented by "json\_object.py".}
+00016 \textcolor{stringliteral}{    In this parsing process, it sets the field(s) in this Python module/class.}
+00017 \textcolor{stringliteral}{}
+00018 \textcolor{stringliteral}{        JSON (JavaScript Object Notation) is a subset of YAML}
+00019 \textcolor{stringliteral}{            (YAML Ain't Markup Language) \(\backslash\)cite\{WikipediaContributors2018o\}.}
+00020 \textcolor{stringliteral}{        Hence, JSON is simpler to parse than YAML.}
+00021 \textcolor{stringliteral}{        Also, since XML (Extensible Markup Language)}
+00022 \textcolor{stringliteral}{            \(\backslash\)cite\{WikipediaContributors2018n\} is more complex}
+00023 \textcolor{stringliteral}{            to parse than JSON \(\backslash\)cite\{Desai2015\}, I am going to}
+00024 \textcolor{stringliteral}{            use the JSON format to represent data that is used}
+00025 \textcolor{stringliteral}{            to configure the parameters of the software application.}
+00026 \textcolor{stringliteral}{}
+00027 \textcolor{stringliteral}{    Assume that relative paths refer to paths that begin from the}
+00028 \textcolor{stringliteral}{        user's home directory ("~/").}
+00029 \textcolor{stringliteral}{    Regarding Python's "os.path" module, paths that begin with}
+00030 \textcolor{stringliteral}{        "../" or "statistics"}
+00031 \textcolor{stringliteral}{}
+00032 \textcolor{stringliteral}{    References:}
+00033 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00034 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00035 \textcolor{stringliteral}{}
+00036 \textcolor{stringliteral}{    [DrakeJr2016b]}
+00037 \textcolor{stringliteral}{        Section 11 File and Directory Access, Subsection 11.2 os.path - Common pathname manipulations}
+00038 \textcolor{stringliteral}{}
+00039 \textcolor{stringliteral}{}
+00040 \textcolor{stringliteral}{"""}
+00041 
+00042 \textcolor{comment}{#   The MIT License (MIT)}
+00043 
+00044 \textcolor{comment}{#   Copyright (c) <2014> <Zhiyang Ong>}
+00045 
+00046 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00047 
+00048 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00049 
+00050 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00051 
+00052 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00053 
+00054 
+00055 
+00056 \textcolor{comment}{###############################################################}
+00057 \textcolor{stringliteral}{"""}
+00058 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00059 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00060 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00061 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00062 \textcolor{stringliteral}{}
+00063 \textcolor{stringliteral}{    subprocess -> call}
+00064 \textcolor{stringliteral}{                To make system calls.}
+00065 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00066 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00067 \textcolor{stringliteral}{    re          Use regular expressions.}
+00068 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00069 \textcolor{stringliteral}{"""}
+00070 
+00071 \textcolor{keyword}{import} sys
+00072 \textcolor{keyword}{import} os
+00073 \textcolor{keyword}{import} os.path
+00074 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00075 \textcolor{keyword}{import} time
+00076 \textcolor{keyword}{import} warnings
+00077 \textcolor{keyword}{import} re
+00078 \textcolor{keyword}{import} filecmp
+00079 \textcolor{keyword}{import} calendar
+00080 
+00081 
+00082 \textcolor{comment}{###############################################################}
+00083 \textcolor{comment}{#   Import Custom Python Modules}
+00084 
+00085 
+00086 \textcolor{comment}{###############################################################}
+00087 \textcolor{comment}{#   Module with methods that perform file I/O operations.}
+\hypertarget{configuration__manager_8py_source_l00088}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager}{00088} \textcolor{keyword}{class }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager}{config\_manager}:
+00089     \textcolor{comment}{#   Base location to store simulation and/or experimental results.}
+00090     \textcolor{comment}{#result\_repository =
+       "/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}
+\hypertarget{configuration__manager_8py_source_l00091}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a19ed9ae453acea0ed85f704f18ee4b30}{00091}     result\_repository = \textcolor{stringliteral}{"Unknown location."}
+\hypertarget{configuration__manager_8py_source_l00092}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a884c4ec67676c35cc6fd674c208abfe2}{00092}     home\_directory\_of\_zhiyang\_ong = \textcolor{stringliteral}{"/Users/zhiyang"}
+00093     \textcolor{comment}{#}
+00094     \textcolor{comment}{# ============================================================}
+00095     \textcolor{comment}{##  Method to set the location of simulation/experimental results.}
+00096     \textcolor{comment}{#   @param location - Location of a directory.}
+00097     \textcolor{comment}{#   @return the absolute path of location, if location is a}
+00098     \textcolor{comment}{#       relative path from the user's home directory.}
+00099     \textcolor{comment}{#       Else, return location.}
+00100     \textcolor{comment}{#   #### IMPORTANT NOTES: Method to fix bug in the method}
+00101     \textcolor{comment}{#       "os.path.expanduser", which had replaced the initial}
+00102     \textcolor{comment}{#       substring "~/" of the relative path from the user's}
+00103     \textcolor{comment}{#       home directory with "../"}
+00104     \textcolor{comment}{#       This bug is not always replicable.}
+00105     \textcolor{comment}{#       This is because os.environ['HOME'] is set to "../".}
+00106     \textcolor{comment}{#       Hence, it will replace "~/" with "../".}
+00107     \textcolor{comment}{#       Hence, I am providing/using this workaround.}
+00108     \textcolor{comment}{#   O(1) method.}
+00109     @staticmethod
+\hypertarget{configuration__manager_8py_source_l00110}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}{00110}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}{relative\_path\_from\_user\_home\_directory\_to\_absolute\_path}
+      (location):
+00111         \textcolor{comment}{#print("Where is my home?",os.environ['HOME'],"=")}
+00112         \textcolor{comment}{#home\_directory = os.path.expanduser("~")}
+00113         \textcolor{comment}{#print("?   home\_directory:::",home\_directory,"=")}
+00114         home\_directory\_of\_zhiyang\_ong = \textcolor{stringliteral}{"/Users/zhiyang/"}
+00115         \textcolor{keywordflow}{if} location.startswith(\textcolor{stringliteral}{"~/"}):
+00116             \textcolor{keywordflow}{return} location.replace(\textcolor{stringliteral}{"~/"},home\_directory\_of\_zhiyang\_ong)
+00117         \textcolor{keywordflow}{else}:
+00118             \textcolor{keywordflow}{return} location
+00119     \textcolor{comment}{# ============================================================}
+00120     \textcolor{comment}{##  Method to set the location of simulation/experimental results.}
+00121     \textcolor{comment}{#   @param location - Location of a directory.}
+00122     \textcolor{comment}{#   @return a boolean TRUE, if the location is a valid directory.}
+00123     \textcolor{comment}{#       Else, return FALSE.}
+00124     \textcolor{comment}{#   O(1) method.}
+00125     @staticmethod
+\hypertarget{configuration__manager_8py_source_l00126}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}{00126}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}{set\_result\_repository}(location):
+00127         \textcolor{stringliteral}{"""}
+00128 \textcolor{stringliteral}{            Since os.path.isdir returns false for relative paths,}
+00129 \textcolor{stringliteral}{                ensure that the directory is an absolute path}
+00130 \textcolor{stringliteral}{                    before proceeding.}
+00131 \textcolor{stringliteral}{        """}
+00132         location = config\_manager.relative\_path\_from\_user\_home\_directory\_to\_absolute\_path(location)
+00133         print(\textcolor{stringliteral}{";;;~current location:::"},location,\textcolor{stringliteral}{"="})
+00134         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isabs(location):
+00135             \textcolor{comment}{#print("    location is a relative path.")}
+00136             \textcolor{comment}{# Change the relative path to an absolute path.}
+00137             location = os.path.expanduser(location)
+00138             \textcolor{comment}{#print("    location made abs:::",location,"=")}
+00139         print(\textcolor{stringliteral}{" location should be abs:::"},location,\textcolor{stringliteral}{"="})
+00140         print(\textcolor{stringliteral}{"os.path.isdir(location)"},os.path.isdir(location),\textcolor{stringliteral}{"="})
+00141         \textcolor{keywordflow}{if} os.path.isdir(location):
+00142             config\_manager.result\_repository = location
+00143             \textcolor{comment}{#print("config\_manager.result\_repository:::",config\_manager.result\_repository,"=")}
+00144             \textcolor{comment}{#print("    config\_manager.result\_repository is set correctly.")}
+00145             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00146         \textcolor{keywordflow}{else}:
+00147             \textcolor{comment}{#print("    location is an invalid directory.")}
+00148             \textcolor{comment}{#print("&&& config\_manager.result\_repository:::",config\_manager.result\_repository,"=")}
+00149             \textcolor{comment}{#print("    'location' is a valid directory.")}
+00150             \textcolor{comment}{#print("    'location' path
+       check:::",os.path.isdir("/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"),"=")}
+00151             \textcolor{comment}{#if "/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"
+       == location.strip():}
+00152             \textcolor{keywordflow}{if} \textcolor{stringliteral}{"/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"} 
+      == location:
+00153                 print(\textcolor{stringliteral}{"location value is WRONG!!!"})
+00154             print(\textcolor{stringliteral}{" 'location':::"},location,\textcolor{stringliteral}{"="})
+00155             \textcolor{comment}{#print("    'copy\_of\_location':::",copy\_of\_location,"=")}
+00156             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00157     \textcolor{comment}{# ============================================================}
+00158     \textcolor{comment}{##  Method to get the location of simulation/experimental results.}
+00159     \textcolor{comment}{#   @param - None.}
+00160     \textcolor{comment}{#   @return the location of simulation/experimental results.}
+00161     \textcolor{comment}{#   O(1) method.}
+00162     @staticmethod
+\hypertarget{configuration__manager_8py_source_l00163}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}{00163}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}{get\_result\_repository}():
+00164         \textcolor{keywordflow}{return} config\_manager.result\_repository
+\end{DoxyCode}

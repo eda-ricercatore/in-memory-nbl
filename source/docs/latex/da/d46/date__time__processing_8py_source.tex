@@ -1,0 +1,287 @@
+\hypertarget{date__time__processing_8py_source}{}\section{date\+\_\+time\+\_\+processing.\+py}
+\label{date__time__processing_8py_source}\index{utilities/date\+\_\+time\+\_\+processing.\+py@{utilities/date\+\_\+time\+\_\+processing.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{date__time__processing_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1date__time__processing}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to perform date and time}
+00006 \textcolor{stringliteral}{        processing/operations.}
+00007 \textcolor{stringliteral}{}
+00008 \textcolor{stringliteral}{    References:}
+00009 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00010 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    Notes/Assumptions:}
+00013 \textcolor{stringliteral}{    Assume that the following functions would be used together}
+00014 \textcolor{stringliteral}{        to validate the date/day of a month (and given year):}
+00015 \textcolor{stringliteral}{        + date\_time\_operations.is\_valid\_31\_day\_month(dd,mm)}
+00016 \textcolor{stringliteral}{        + date\_time\_operations.is\_valid\_30\_day\_month(dd,mm)}
+00017 \textcolor{stringliteral}{        + date\_time\_operations.is\_valid\_date\_in\_Feb(dd,mm,yy))}
+00018 \textcolor{stringliteral}{"""}
+00019 
+00020 \textcolor{comment}{#   The MIT License (MIT)}
+00021 
+00022 \textcolor{comment}{#   Copyright (c) <2014> <Zhiyang Ong>}
+00023 
+00024 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00025 
+00026 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00027 
+00028 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00029 
+00030 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00031 
+00032 
+00033 
+00034 \textcolor{comment}{###############################################################}
+00035 \textcolor{stringliteral}{"""}
+00036 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00037 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00038 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00039 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00040 \textcolor{stringliteral}{}
+00041 \textcolor{stringliteral}{    subprocess -> call}
+00042 \textcolor{stringliteral}{                To make system calls.}
+00043 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00044 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00045 \textcolor{stringliteral}{    re          Use regular expressions.}
+00046 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00047 \textcolor{stringliteral}{"""}
+00048 
+00049 \textcolor{keyword}{import} sys
+00050 \textcolor{keyword}{import} os
+00051 \textcolor{keyword}{import} os.path
+00052 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00053 \textcolor{keyword}{import} time
+00054 \textcolor{keyword}{import} warnings
+00055 \textcolor{keyword}{import} re
+00056 \textcolor{keyword}{import} filecmp
+00057 \textcolor{keyword}{import} calendar
+00058 
+00059 
+00060 \textcolor{comment}{###############################################################}
+00061 \textcolor{comment}{#   Module with methods that perform date & time processing/operations.}
+\hypertarget{date__time__processing_8py_source_l00062}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations}{00062} \textcolor{keyword}{class }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations}{date\_time\_operations}:
+00063     \textcolor{stringliteral}{"""}
+00064 \textcolor{stringliteral}{        Create a dictionary (associative memories, or associative arrays)}
+00065 \textcolor{stringliteral}{            of (number, name) months.}
+00066 \textcolor{stringliteral}{    """}
+\hypertarget{date__time__processing_8py_source_l00067}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a640d6fe5b1045e4c92057b524264295d}{00067}     mth\_number\_name = \{\textcolor{stringliteral}{"1"}:\textcolor{stringliteral}{"january"}, \textcolor{stringliteral}{"2"}:\textcolor{stringliteral}{"february"}, \textcolor{stringliteral}{"3"}:\textcolor{stringliteral}{"march"}, \textcolor{stringliteral}{"4"}:\textcolor{stringliteral}{"april"}, \textcolor{stringliteral}{"5"}:\textcolor{stringliteral}{"may"}, \textcolor{stringliteral}{"6"}:\textcolor{stringliteral}{"june"}, \textcolor{stringliteral}{"7"}:\textcolor{stringliteral}{
+      "july"}, \textcolor{stringliteral}{"8"}:\textcolor{stringliteral}{"august"}, \textcolor{stringliteral}{"9"}:\textcolor{stringliteral}{"september"}, \textcolor{stringliteral}{"10"}:\textcolor{stringliteral}{"october"}, \textcolor{stringliteral}{"11"}:\textcolor{stringliteral}{"november"}, \textcolor{stringliteral}{"12"}:\textcolor{stringliteral}{"december"}\}
+00068     \textcolor{comment}{# ============================================================}
+00069     \textcolor{comment}{##  Method to determine if the time is valid.}
+00070     \textcolor{comment}{#   @param hh - Hour of a time in numbers.}
+00071     \textcolor{comment}{#   @param mm - Minutes of a time in numbers.}
+00072     \textcolor{comment}{#   @param ss - Seconds of a time in numbers.}
+00073     \textcolor{comment}{#   @param us - Microseconds of a time in numbers.}
+00074     \textcolor{comment}{#   @return boolean True if the date is valid;}
+00075     \textcolor{comment}{#       else, return False.}
+00076     \textcolor{comment}{#   O(1) method.}
+00077     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00078}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}{00078}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}{is\_valid\_time}(hh,mm,ss,us):
+00079         \textcolor{comment}{# Check if the hour is valid: 0 <= tokens[3] <= 23.}
+00080         \textcolor{keywordflow}{if} (0>hh) \textcolor{keywordflow}{or} (23<hh):
+00081             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00082         \textcolor{comment}{# Check if the minute is valid: 0 <= tokens[4] <= 59.}
+00083         \textcolor{keywordflow}{if} (0>mm) \textcolor{keywordflow}{or} (59<mm):
+00084             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00085         \textcolor{comment}{# Check if the second is valid: 0 <= tokens[5] <= 59.}
+00086         \textcolor{keywordflow}{if} (0>ss) \textcolor{keywordflow}{or} (59<ss):
+00087             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00088         \textcolor{comment}{# Check if the microsecond is valid: 0 <= tokens[6] <= 1000000.}
+00089         \textcolor{keywordflow}{if} (0>us) \textcolor{keywordflow}{or} (1000000<us):
+00090             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00091         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00092     \textcolor{comment}{# ============================================================}
+00093     \textcolor{comment}{##  Method to determine if the year is valid.}
+00094     \textcolor{comment}{#   Check if the year is valid: 2014 <= yy <= 2100.}
+00095     \textcolor{comment}{#   @param yy - year of a date in numbers.}
+00096     \textcolor{comment}{#   @return boolean True if the year is valid;}
+00097     \textcolor{comment}{#       else, return False.}
+00098     \textcolor{comment}{#   O(1) method.}
+00099     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00100}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}{00100}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}{is\_valid\_year}(yy):
+00101         \textcolor{keywordflow}{if} (2014 > yy) \textcolor{keywordflow}{or} (2100 < yy):
+00102             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00103         \textcolor{keywordflow}{else}:
+00104             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00105     \textcolor{comment}{# ============================================================}
+00106     \textcolor{comment}{##  Method to determine if the month is valid.}
+00107     \textcolor{comment}{#   Check if the month is valid: 1 <= mm <= 12.}
+00108     \textcolor{comment}{#   @param mm - Month of a date in numbers.}
+00109     \textcolor{comment}{#   @return boolean True if the month is valid;}
+00110     \textcolor{comment}{#       else, return False.}
+00111     \textcolor{comment}{#   O(1) method.}
+00112     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00113}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}{00113}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}{is\_valid\_month}(mm):
+00114         \textcolor{keywordflow}{if} (1 > mm) \textcolor{keywordflow}{or} (12 < mm):
+00115             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00116         \textcolor{keywordflow}{else}:
+00117             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00118     \textcolor{comment}{# ============================================================}
+00119     \textcolor{comment}{##  Method to determine if the date/day of a 31-day month is valid.}
+00120     \textcolor{comment}{#   @param dd - Date/Day of a date (specifically 31-day month)}
+00121     \textcolor{comment}{#                   in numbers.}
+00122     \textcolor{comment}{#   @param mm - 31-day month of a date in numbers.}
+00123     \textcolor{comment}{#   @return boolean True if the date/day of a 31-day month is valid;}
+00124     \textcolor{comment}{#       else, return False.}
+00125     \textcolor{comment}{#   O(1) method.}
+00126     \textcolor{comment}{#}
+00127     \textcolor{comment}{#   Assume that the functions is\_valid\_30\_day\_month(dd,mm) and}
+00128     \textcolor{comment}{#       is\_valid\_date\_in\_Feb(dd,mm,yy) will determine the}
+00129     \textcolor{comment}{#       validity of the date for not-a-31-day months.}
+00130     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00131}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}{00131}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}{is\_valid\_31\_day\_month}(dd,mm):
+00132         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(mm):
+00133             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00134         \textcolor{comment}{# Check if month has 31 days, 1 <= dd <= 31.}
+00135         \textcolor{keywordflow}{if} ((1 == mm) \textcolor{keywordflow}{or} (3 == mm) \textcolor{keywordflow}{or} (5 == mm) \textcolor{keywordflow}{or} (7 == mm) \textcolor{keywordflow}{or} (8 == mm) \textcolor{keywordflow}{or} (10 == mm) \textcolor{keywordflow}{or} (12 == mm)):
+00136             \textcolor{keywordflow}{if} (1 > dd) \textcolor{keywordflow}{or} (31 < dd):
+00137                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00138         \textcolor{stringliteral}{"""}
+00139 \textcolor{stringliteral}{            Assume that the functions is\_valid\_30\_day\_month(dd,mm) and}
+00140 \textcolor{stringliteral}{                is\_valid\_date\_in\_Feb(dd,mm,yy) will determine the}
+00141 \textcolor{stringliteral}{                validity of the date for not-a-31-day months.}
+00142 \textcolor{stringliteral}{        """}
+00143         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00144     \textcolor{comment}{# ============================================================}
+00145     \textcolor{comment}{##  Method to determine if the date/day of a 30-day month is valid.}
+00146     \textcolor{comment}{#   @param dd - Date/Day of a date (specifically 30-day month)}
+00147     \textcolor{comment}{#                   in numbers.}
+00148     \textcolor{comment}{#   @param mm - 30-day month of a date in numbers.}
+00149     \textcolor{comment}{#   @return boolean True if the date/day of a 30-day month is valid;}
+00150     \textcolor{comment}{#       else, return False.}
+00151     \textcolor{comment}{#   O(1) method.}
+00152     \textcolor{comment}{#}
+00153     \textcolor{comment}{#   Assume that the functions is\_valid\_31\_day\_month(dd,mm) and}
+00154     \textcolor{comment}{#       is\_valid\_date\_in\_Feb(dd,mm,yy) will determine the}
+00155     \textcolor{comment}{#       validity of the date for not-a-30-day months.}
+00156     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00157}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}{00157}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}{is\_valid\_30\_day\_month}(dd,mm):
+00158         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(mm):
+00159             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00160         \textcolor{comment}{# Check if month has 30 days, 1 <= dd <= 30.}
+00161         \textcolor{keywordflow}{if} ((4 == mm) \textcolor{keywordflow}{or} (6 == mm) \textcolor{keywordflow}{or} (9 == mm) \textcolor{keywordflow}{or} (11 == mm)):
+00162             \textcolor{keywordflow}{if} (1 > dd) \textcolor{keywordflow}{or} (30 < dd):
+00163                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00164         \textcolor{stringliteral}{"""}
+00165 \textcolor{stringliteral}{            Assume that the functions is\_valid\_31\_day\_month(dd,mm) and}
+00166 \textcolor{stringliteral}{                is\_valid\_date\_in\_Feb(dd,mm,yy) will determine the}
+00167 \textcolor{stringliteral}{                validity of the date for not-a-30-day months.}
+00168 \textcolor{stringliteral}{        """}
+00169         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00170     \textcolor{comment}{# ============================================================}
+00171     \textcolor{comment}{##  Method to determine if the date in February is valid.}
+00172     \textcolor{comment}{#   @param dd - Date/Day of a date in February in numbers.}
+00173     \textcolor{comment}{#   @param mm - Month of a date (in February) in numbers.}
+00174     \textcolor{comment}{#   @param yy - Year of a date in numbers.}
+00175     \textcolor{comment}{#   @return boolean True if the date is valid;}
+00176     \textcolor{comment}{#       else, return False.}
+00177     \textcolor{comment}{#   O(1) method.}
+00178     \textcolor{comment}{#}
+00179     \textcolor{comment}{#   Assume that the functions is\_valid\_31\_day\_month(dd,mm)}
+00180     \textcolor{comment}{#       and is\_valid\_30\_day\_month(dd,mm) will determine the}
+00181     \textcolor{comment}{#       validity of the date for not-February months.}
+00182     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00183}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}{00183}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}{is\_valid\_date\_in\_Feb}(dd,mm,yy):
+00184         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_year(yy):
+00185             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00186         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(mm):
+00187             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00188         \textcolor{keywordflow}{if} (calendar.isleap(yy)) \textcolor{keywordflow}{and} (2 == mm):
+00189             \textcolor{keywordflow}{if} ((1 > dd) \textcolor{keywordflow}{or} (29 < dd)):
+00190                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00191             \textcolor{keywordflow}{else}:
+00192                 \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00193         \textcolor{keywordflow}{elif} (\textcolor{keywordflow}{not} calendar.isleap(yy)) \textcolor{keywordflow}{and} (2 == mm):
+00194             \textcolor{keywordflow}{if} ((1 > dd) \textcolor{keywordflow}{or} (28 < dd)):
+00195                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00196             \textcolor{keywordflow}{else}:
+00197                 \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00198         \textcolor{keywordflow}{else}:
+00199             \textcolor{stringliteral}{"""}
+00200 \textcolor{stringliteral}{                Assume that the functions is\_valid\_31\_day\_month(dd,mm)}
+00201 \textcolor{stringliteral}{                    and is\_valid\_30\_day\_month(dd,mm) will determine the}
+00202 \textcolor{stringliteral}{                    validity of the date for not-February months.}
+00203 \textcolor{stringliteral}{            """}
+00204             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00205     \textcolor{comment}{# ============================================================}
+00206     \textcolor{comment}{##  Method to determine if the date is valid.}
+00207     \textcolor{comment}{#   @param dd - Date/Day of a date in numbers.}
+00208     \textcolor{comment}{#   @param mm - Month of a date in numbers.}
+00209     \textcolor{comment}{#   @param yy - Year of a date in numbers.}
+00210     \textcolor{comment}{#   @return boolean True if the date is valid;}
+00211     \textcolor{comment}{#       else, return False.}
+00212     \textcolor{comment}{#   O(1) method.}
+00213     \textcolor{comment}{#}
+00214     \textcolor{comment}{#   Assume that the following functions would be used together}
+00215     \textcolor{comment}{#       to validate the date/day of a month (and given year):}
+00216     \textcolor{comment}{#       + date\_time\_operations.is\_valid\_31\_day\_month(dd,mm)}
+00217     \textcolor{comment}{#       + date\_time\_operations.is\_valid\_30\_day\_month(dd,mm)}
+00218     \textcolor{comment}{#       + date\_time\_operations.is\_valid\_date\_in\_Feb(dd,mm,yy))}
+00219     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00220}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}{00220}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}{is\_valid\_date}(dd,mm,yy):
+00221         \textcolor{keywordflow}{return} (date\_time\_operations.is\_valid\_month(mm) \textcolor{keywordflow}{and} date\_time\_operations.is\_valid\_year(yy) \textcolor{keywordflow}{and} 
+      date\_time\_operations.is\_valid\_31\_day\_month(dd,mm) \textcolor{keywordflow}{and} date\_time\_operations.is\_valid\_30\_day\_month(dd,mm) \textcolor{keywordflow}{and} 
+      date\_time\_operations.is\_valid\_date\_in\_Feb(dd,mm,yy))
+00222     \textcolor{comment}{# ============================================================}
+00223     \textcolor{comment}{##  Method to tokenize the filename containing information}
+00224     \textcolor{comment}{#       about the date and time in which the output files are}
+00225     \textcolor{comment}{#       generated.}
+00226     \textcolor{comment}{#   @param filename - Name of a file.}
+00227     \textcolor{comment}{#   @return tokens if the filename containing the date and}
+00228     \textcolor{comment}{#       time placed in the DD-MM-YY-HR-MN-SS-US format is valid;}
+00229     \textcolor{comment}{#       else, return None.}
+00230     \textcolor{comment}{#   O(n) method, with respect to the number of characters in the}
+00231     \textcolor{comment}{#       filename argument;}
+00232     \textcolor{comment}{#       traverse the string from the right end till the first}
+00233     \textcolor{comment}{#           period is found (this indicates the file extension).}
+00234     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00235}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}{00235}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}{get\_date\_time\_tokens\_of\_filename}(filename):
+00236         \textcolor{keywordflow}{if} date\_time\_operations.check\_filename\_date\_time\_format(filename):
+00237             \textcolor{comment}{# Remove the file extension from the filename.}
+00238             filename, filename\_extension = os.path.splitext(filename)
+00239             tokens = filename.split(\textcolor{stringliteral}{"-"})
+00240             \textcolor{keywordflow}{return} tokens
+00241         \textcolor{keywordflow}{else}:
+00242             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00243     \textcolor{comment}{# ============================================================}
+00244     \textcolor{comment}{##  Method to determine if the filename contains information}
+00245     \textcolor{comment}{#       about the date and time in which the output files are}
+00246     \textcolor{comment}{#       generated.}
+00247     \textcolor{comment}{#   @param filename - Name of a file.}
+00248     \textcolor{comment}{#   @return boolean True if the filename contains the date and}
+00249     \textcolor{comment}{#       time placed in the DD-MM-YY-HR-MN-SS-US format is valid;}
+00250     \textcolor{comment}{#       else, return False.}
+00251     \textcolor{comment}{#   O(n) method, with respect to the number of characters in the}
+00252     \textcolor{comment}{#       filename argument;}
+00253     \textcolor{comment}{#       traverse the string from the right end till the first}
+00254     \textcolor{comment}{#           period is found (this indicates the file extension).}
+00255     @staticmethod
+\hypertarget{date__time__processing_8py_source_l00256}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}{00256}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}{check\_filename\_date\_time\_format}(filename):
+00257         \textcolor{stringliteral}{"""}
+00258 \textcolor{stringliteral}{            Cannot use the get\_date\_time\_tokens\_of\_filename() method}
+00259 \textcolor{stringliteral}{                of this date\_time\_operations module/class, because it}
+00260 \textcolor{stringliteral}{                will result in infinite recursion.}
+00261 \textcolor{stringliteral}{            #tokens = date\_time\_operations.get\_date\_time\_tokens\_of\_filename(filename)}
+00262 \textcolor{stringliteral}{        """}
+00263         \textcolor{comment}{# Remove the file extension from the filename.}
+00264         filename, filename\_extension = os.path.splitext(filename)
+00265         tokens = filename.split(\textcolor{stringliteral}{"-"})
+00266         \textcolor{keywordflow}{return} (date\_time\_operations.is\_valid\_date(int(tokens[0]),int(tokens[1]),int(tokens[2])) \textcolor{keywordflow}{and} 
+      date\_time\_operations.is\_valid\_time(int(tokens[3]),int(tokens[4]),int(tokens[5]),int(tokens[6])))
+\end{DoxyCode}

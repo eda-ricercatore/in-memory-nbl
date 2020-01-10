@@ -1,0 +1,204 @@
+\hypertarget{test__statistics_8py_source}{}\section{test\+\_\+statistics.\+py}
+\label{test__statistics_8py_source}\index{statistics/test\+\_\+statistics.\+py@{statistics/test\+\_\+statistics.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{test__statistics_8py_source_l00001}{}\hyperlink{namespacestatistics_1_1test__statistics}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 
+00005 \textcolor{stringliteral}{"""}
+00006 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to perform}
+00007 \textcolor{stringliteral}{        operations to support basic statistical analysis}
+00008 \textcolor{stringliteral}{        during software test automation.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{}
+00011 \textcolor{stringliteral}{    Synopsis:}
+00012 \textcolor{stringliteral}{    Perform statistical analysis during software test}
+00013 \textcolor{stringliteral}{        automation.}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{    Revision History:}
+00017 \textcolor{stringliteral}{    December 15, 2017           Version 0.1, initial build.}
+00018 \textcolor{stringliteral}{"""}
+00019 
+\hypertarget{test__statistics_8py_source_l00020}{}\hyperlink{namespacestatistics_1_1test__statistics_a188ace18635f13c413bf14347b4eb7f0}{00020} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{test__statistics_8py_source_l00021}{}\hyperlink{namespacestatistics_1_1test__statistics_ad5c236202b813efcbc877e38a20d7f07}{00021} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{test__statistics_8py_source_l00022}{}\hyperlink{namespacestatistics_1_1test__statistics_a271285b175d250f7888c9b41fa124abd}{00022} \_\_date\_\_ = \textcolor{stringliteral}{'December 15, 2017'}
+00023 
+00024 \textcolor{comment}{#   The MIT License (MIT)}
+00025 
+00026 \textcolor{comment}{#   Copyright (c) <2014-2018> <Zhiyang Ong>}
+00027 
+00028 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00029 
+00030 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00031 
+00032 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00033 
+00034 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00035 
+00036 \textcolor{comment}{###############################################################}
+00037 \textcolor{stringliteral}{"""}
+00038 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00039 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00040 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00041 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00042 \textcolor{stringliteral}{}
+00043 \textcolor{stringliteral}{    subprocess -> call}
+00044 \textcolor{stringliteral}{                To make system calls.}
+00045 \textcolor{stringliteral}{}
+00046 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00047 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00048 \textcolor{stringliteral}{    re          Use regular expressions.}
+00049 \textcolor{stringliteral}{}
+00050 \textcolor{stringliteral}{    collections -> namedtuple}
+00051 \textcolor{stringliteral}{                To use named tuples.}
+00052 \textcolor{stringliteral}{    operator -> attrgetter}
+00053 \textcolor{stringliteral}{                To manipulate attributes of a named tuple as callable}
+00054 \textcolor{stringliteral}{                    objects.}
+00055 \textcolor{stringliteral}{"""}
+00056 
+00057 \textcolor{comment}{#import sys}
+00058 \textcolor{comment}{#import os}
+00059 \textcolor{comment}{#import os.path}
+00060 \textcolor{comment}{#from subprocess import call}
+00061 \textcolor{comment}{#import time}
+00062 \textcolor{keyword}{import} warnings
+00063 \textcolor{comment}{#import re}
+00064 \textcolor{comment}{#from collections import namedtuple}
+00065 \textcolor{comment}{#from operator import attrgetter}
+00066 
+00067 \textcolor{comment}{###############################################################}
+00068 \textcolor{comment}{#   Import Custom Python Modules}
+00069 
+00070 
+00071 
+00072 
+00073 
+00074 
+00075 \textcolor{comment}{###############################################################}
+00076 \textcolor{stringliteral}{"""}
+00077 \textcolor{stringliteral}{    Module with methods that perform basic statistical analysis}
+00078 \textcolor{stringliteral}{        during software test automation.}
+00079 \textcolor{stringliteral}{"""}
+\hypertarget{test__statistics_8py_source_l00080}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis}{00080} \textcolor{keyword}{class }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis}{statistical\_analysis}:
+00081     \textcolor{comment}{#   Static variable declaration.}
+00082     \textcolor{comment}{#}
+00083     \textcolor{comment}{#   Number of test cases used.}
+\hypertarget{test__statistics_8py_source_l00084}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_afed7a27a010e7377d2719b315d5d5f17}{00084}     number\_test\_cases\_used = 0
+00085     \textcolor{comment}{#   Number of test cases passed.}
+\hypertarget{test__statistics_8py_source_l00086}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_ac7555db570919cec38a8325d8427093e}{00086}     number\_test\_cases\_passed = 0
+00087     \textcolor{comment}{# =========================================================}
+00088     \textcolor{comment}{#   Accessor methods.}
+00089     \textcolor{comment}{# =========================================================}
+00090     \textcolor{comment}{#   Method to access the number of test cases used.}
+00091     \textcolor{comment}{#   @return - Nothing.}
+00092     \textcolor{comment}{#   @postcondition - number\_test\_cases\_used < number\_test\_cases\_passed.}
+00093     \textcolor{comment}{#   O(1) method.}
+00094     @staticmethod
+\hypertarget{test__statistics_8py_source_l00095}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a8bddd92400d64e68caf934defa5ededb}{00095}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a8bddd92400d64e68caf934defa5ededb}{get\_number\_test\_cases\_used}():
+00096         \textcolor{keywordflow}{return} statistical\_analysis.number\_test\_cases\_used
+00097     \textcolor{comment}{# =========================================================}
+00098     \textcolor{comment}{#   Method to access the number of test cases passed.}
+00099     \textcolor{comment}{#   @return - Nothing.}
+00100     \textcolor{comment}{#   @postcondition - number\_test\_cases\_used < number\_test\_cases\_passed.}
+00101     \textcolor{comment}{#   O(1) method.}
+00102     @staticmethod
+\hypertarget{test__statistics_8py_source_l00103}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a0461b276e37fd6c24ab919efbeb04309}{00103}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a0461b276e37fd6c24ab919efbeb04309}{get\_number\_test\_cases\_passed}():
+00104         \textcolor{keywordflow}{return} statistical\_analysis.number\_test\_cases\_passed
+00105     \textcolor{comment}{# =========================================================}
+00106     \textcolor{comment}{#   Mutator methods.}
+00107     \textcolor{comment}{# =========================================================}
+00108     \textcolor{comment}{#   Method to increment the number of test cases used.}
+00109     \textcolor{comment}{#   @return - Nothing.}
+00110     \textcolor{comment}{#   @postcondition - number\_test\_cases\_used < number\_test\_cases\_passed.}
+00111     \textcolor{comment}{#   O(1) method.}
+00112     @staticmethod
+\hypertarget{test__statistics_8py_source_l00113}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a7e88e87c8e6739dcaa37740985089f11}{00113}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a7e88e87c8e6739dcaa37740985089f11}{increment\_number\_test\_cases\_used}():
+00114         \textcolor{keywordflow}{if} 0 == statistical\_analysis.get\_number\_test\_cases\_used():
+00115             statistical\_analysis.number\_test\_cases\_used = 1
+00116         \textcolor{keywordflow}{else}:
+00117             statistical\_analysis.number\_test\_cases\_used = statistical\_analysis.number\_test\_cases\_used + 1
+00118         \textcolor{keywordflow}{if} (statistical\_analysis.get\_number\_test\_cases\_used() < 
+      statistical\_analysis.number\_test\_cases\_passed):
+00119             print(\textcolor{stringliteral}{" Problem: number\_test\_cases\_used < number\_test\_cases\_passed"})
+00120             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   Error in incrementing number\_test\_cases\_used"})
+00121     \textcolor{comment}{# =========================================================}
+00122     \textcolor{comment}{#   Method to increment the number of test cases passed.}
+00123     \textcolor{comment}{#   @return - Nothing.}
+00124     \textcolor{comment}{#   @postcondition - number\_test\_cases\_used < number\_test\_cases\_passed.}
+00125     \textcolor{comment}{#   O(1) method.}
+00126     @staticmethod
+\hypertarget{test__statistics_8py_source_l00127}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a056f55c0e7f60e29d4b37e8e74d3cd08}{00127}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a056f55c0e7f60e29d4b37e8e74d3cd08}{increment\_number\_test\_cases\_passed}():
+00128         \textcolor{keywordflow}{if} 0 == statistical\_analysis.number\_test\_cases\_passed:
+00129             statistical\_analysis.number\_test\_cases\_passed = 1
+00130         \textcolor{keywordflow}{else}:
+00131             statistical\_analysis.number\_test\_cases\_passed = statistical\_analysis.number\_test\_cases\_passed +
+       1
+00132         \textcolor{keywordflow}{if} (statistical\_analysis.get\_number\_test\_cases\_used() < 
+      statistical\_analysis.get\_number\_test\_cases\_passed()):
+00133             print(\textcolor{stringliteral}{"Number of test cases passed: \{\}"} .format(
+      statistical\_analysis.get\_number\_test\_cases\_passed()))
+00134             print(\textcolor{stringliteral}{"Number of test cases used:   \{\}"} .format(statistical\_analysis.get\_number\_test\_cases\_used
+      ()))
+00135             print(\textcolor{stringliteral}{" Problem: number\_test\_cases\_used < number\_test\_cases\_passed"})
+00136             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   Error with number\_test\_cases\_used."})
+00137     \textcolor{comment}{# =========================================================}
+00138     \textcolor{comment}{#   Other methods.}
+00139     \textcolor{comment}{# =========================================================}
+00140     \textcolor{comment}{#   Method to determine percentage of test cases passed.}
+00141     \textcolor{comment}{#   @return - percentage of test cases passed.}
+00142     \textcolor{comment}{#   @precondition - number\_test\_cases\_used < number\_test\_cases\_passed.}
+00143     \textcolor{comment}{#   O(1) method.}
+00144     @staticmethod
+\hypertarget{test__statistics_8py_source_l00145}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a1bec04d2404b2bdf277c4ba170abb4a1}{00145}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_a1bec04d2404b2bdf277c4ba170abb4a1}{get\_test\_cases\_passed\_average}():
+00146         \textcolor{keywordflow}{if} 0 == statistical\_analysis.number\_test\_cases\_used:
+00147             \textcolor{keywordflow}{return} 0
+00148         \textcolor{keywordflow}{else}:
+00149             \textcolor{keywordflow}{if} (statistical\_analysis.get\_number\_test\_cases\_used() < 
+      statistical\_analysis.get\_number\_test\_cases\_passed()):
+00150                 print(\textcolor{stringliteral}{" Problem: number\_test\_cases\_used < number\_test\_cases\_passed"})
+00151                 \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   Precondition failed (1): see number\_test\_cases\_used or
+       number\_test\_cases\_passed."})
+00152             \textcolor{keywordflow}{return} (statistical\_analysis.get\_number\_test\_cases\_passed()*100 / 
+      statistical\_analysis.get\_number\_test\_cases\_used())
+00153     \textcolor{comment}{# =========================================================}
+00154     \textcolor{comment}{#   Method to print statistics of software testing results.}
+00155     \textcolor{comment}{#   @return - Nothing}
+00156     \textcolor{comment}{#   @precondition - number\_test\_cases\_used < number\_test\_cases\_passed.}
+00157     \textcolor{comment}{#   O(1) method.}
+00158     @staticmethod
+\hypertarget{test__statistics_8py_source_l00159}{}\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_ad6bdf2cde8553974d93d5971870970d8}{00159}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics_1_1statistical__analysis_ad6bdf2cde8553974d93d5971870970d8}{print\_statistics\_of\_software\_testing}():
+00160         \textcolor{keywordflow}{if} (statistical\_analysis.get\_number\_test\_cases\_used() < 
+      statistical\_analysis.get\_number\_test\_cases\_passed()):
+00161             print(\textcolor{stringliteral}{" Problem: number\_test\_cases\_used < number\_test\_cases\_passed"})
+00162             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   Precondition failed (2): see number\_test\_cases\_used or
+       number\_test\_cases\_passed."})
+00163         print(\textcolor{stringliteral}{"*    Number of test cases passed:        \{\}"} .format(
+      statistical\_analysis.get\_number\_test\_cases\_passed()))
+00164         print(\textcolor{stringliteral}{"*    Number of test cases used:      \{\}"} .format(
+      statistical\_analysis.get\_number\_test\_cases\_used()))
+00165         print(\textcolor{stringliteral}{"*    Percentage of test cases passed:    \{\}%."} .format(
+      statistical\_analysis.get\_test\_cases\_passed\_average()))
+00166         \textcolor{comment}{#print "*   Percentage of test cases passed:    
+      ",statistical\_analysis.get\_test\_cases\_passed\_average(),"%."}
+00167         \textcolor{comment}{#   Format printing of the statistics as follows.}
+00168         \textcolor{comment}{#print "*   Percentage of test cases passed:    ",(13*100/19),"%."}
+00169         \textcolor{comment}{#   Most of the following cannot calculate the percentage properly.}
+00170         \textcolor{comment}{#print "*   Percentage of test cases passed:    ",(13/19)*100,"%."}
+00171         \textcolor{comment}{#print "*   Percentage of test cases passed:    ",(13/19)*(10000/100),"%."}
+00172         \textcolor{comment}{#print "*   Percentage of test cases passed:    ",(10000/100)*(13/19),"%."}
+00173         \textcolor{comment}{#print "*   Percentage of test cases passed:    ",(13*10000)/(19*100),"%."}
+\end{DoxyCode}

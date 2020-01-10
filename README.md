@@ -17,7 +17,11 @@ In-memory computing with noise-based logic
 			testing: ***./incremental_test.py***.
 	- doxygen.config
 		* configuration file *Doxygen* to automatically produce/synthesize/generate
-			documentation for the *Python*-based simulator. 
+			documentation for the *Python*-based simulator.
+		* Do not use the *Make* target "doxygeninit", since it causes the
+			configuration file for *Doxygen* to be overwritten.
+		* Use the *Make* target "doxygen" to automatically generate
+			documentation for the project (i.e., source code or code base).
 	- makefile
 		* for build automation
 + notes

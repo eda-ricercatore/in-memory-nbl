@@ -1,0 +1,178 @@
+\hypertarget{pseudorandom__number__generator_8py_source}{}\section{pseudorandom\+\_\+number\+\_\+generator.\+py}
+\label{pseudorandom__number__generator_8py_source}\index{random\+\_\+process\+\_\+models/pseudorandom\+\_\+number\+\_\+generator.\+py@{random\+\_\+process\+\_\+models/pseudorandom\+\_\+number\+\_\+generator.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{pseudorandom__number__generator_8py_source_l00001}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to generate}
+00006 \textcolor{stringliteral}{        pseudorandom numbers deterministically in Python, using}
+00007 \textcolor{stringliteral}{        pseudorandom number generators (PRNG) from the Python}
+00008 \textcolor{stringliteral}{        Standard Library and other Python libraries.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{}
+00011 \textcolor{stringliteral}{    Synopsis:}
+00012 \textcolor{stringliteral}{    Generate pseudorandom numbers in Python.}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{}
+00017 \textcolor{stringliteral}{    Revision History:}
+00018 \textcolor{stringliteral}{    September 6, 2019           Version 0.1 Script.}
+00019 \textcolor{stringliteral}{"""}
+00020 
+\hypertarget{pseudorandom__number__generator_8py_source_l00021}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator_a84092bcc9369063613d90d32f1b312c1}{00021} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{pseudorandom__number__generator_8py_source_l00022}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator_a86f3eea01762559cc8455c47914c636b}{00022} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{pseudorandom__number__generator_8py_source_l00023}{}\hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator_a331fc6d6b9f620aa4f2c18a74db5cb07}{00023} \_\_date\_\_ = \textcolor{stringliteral}{'September 6, 2019'}
+00024 
+00025 \textcolor{comment}{#   The MIT License (MIT)}
+00026 
+00027 \textcolor{comment}{#   Copyright (c) <2019> <Zhiyang Ong>}
+00028 
+00029 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00030 
+00031 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00032 
+00033 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00034 
+00035 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00036 
+00037 
+00038 \textcolor{comment}{###############################################################}
+00039 \textcolor{stringliteral}{"""}
+00040 \textcolor{stringliteral}{    Import modules from the Python Standard Library.}
+00041 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00042 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00043 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00044 \textcolor{stringliteral}{}
+00045 \textcolor{stringliteral}{    subprocess -> call}
+00046 \textcolor{stringliteral}{                To make system calls.}
+00047 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00048 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00049 \textcolor{stringliteral}{    re          Use regular expressions.}
+00050 \textcolor{stringliteral}{}
+00051 \textcolor{stringliteral}{    pathlib->Path}
+00052 \textcolor{stringliteral}{                For mapping a string to a path.}
+00053 \textcolor{stringliteral}{    datetime    To obtain information about the current date and time.}
+00054 \textcolor{stringliteral}{    time        To obtain information about the current time.}
+00055 \textcolor{stringliteral}{                time\_ns version provides information about the}
+00056 \textcolor{stringliteral}{                    current time with nanosecond accuracy.}
+00057 \textcolor{stringliteral}{    warnings    Provide warnings to users without terminating the}
+00058 \textcolor{stringliteral}{                    program abruptly.}
+00059 \textcolor{stringliteral}{    random      For pseudorandom number generation.}
+00060 \textcolor{stringliteral}{"""}
+00061 
+00062 \textcolor{keyword}{import} sys
+00063 \textcolor{keyword}{import} os
+00064 \textcolor{keyword}{import} os.path
+00065 \textcolor{comment}{#from pathlib import Path}
+00066 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00067 \textcolor{keyword}{import} time
+00068 \textcolor{keyword}{import} warnings
+00069 \textcolor{keyword}{import} re
+00070 \textcolor{keyword}{import} datetime
+00071 \textcolor{keyword}{import} random
+00072 
+00073 \textcolor{comment}{###############################################################}
+00074 \textcolor{comment}{#   Import Custom Python Packages and Modules}
+00075 
+00076 
+00077 
+00078 
+00079 
+00080 
+00081 \textcolor{comment}{###############################################################}
+00082 \textcolor{stringliteral}{"""}
+00083 \textcolor{stringliteral}{    Module with methods that generate a "high" or "low" value}
+00084 \textcolor{stringliteral}{        for a digital random process, using the pseudorandom}
+00085 \textcolor{stringliteral}{        number generator from the Python Standard Library.}
+00086 \textcolor{stringliteral}{"""}
+\hypertarget{pseudorandom__number__generator_8py_source_l00087}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng}{00087} \textcolor{keyword}{class }\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng}{prng}:
+00088     \textcolor{comment}{# (Static) variables.}
+00089     \textcolor{comment}{# Type of signal: bit-vector, BV.}
+\hypertarget{pseudorandom__number__generator_8py_source_l00090}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a82f57253641d85b4e2efba66fac47066}{00090}     bv\_signal = \textcolor{stringliteral}{"bv"}
+00091     \textcolor{comment}{# Type of signal: random telegraph wave, RTW.}
+\hypertarget{pseudorandom__number__generator_8py_source_l00092}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a6962172d81af8d6c172ba64e33eb0d55}{00092}     rtw\_signal = \textcolor{stringliteral}{"rtw"}
+00093     \textcolor{stringliteral}{"""}
+00094 \textcolor{stringliteral}{        Default number for arbitrating a given pseudorandom number}
+00095 \textcolor{stringliteral}{            into a high value (i.e., "1") or a low value (i.e., "-1")}
+00096 \textcolor{stringliteral}{            for a random telegraph wave (RTW).}
+00097 \textcolor{stringliteral}{        The RTW arbiter shall use this value to determine if the}
+00098 \textcolor{stringliteral}{            generated pseudorandom number implies a high or low value}
+00099 \textcolor{stringliteral}{            for a RTW.}
+00100 \textcolor{stringliteral}{    """}
+\hypertarget{pseudorandom__number__generator_8py_source_l00101}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a90c8ad6b1e19cfb7a8e9eea3f2c16728}{00101}     rtw\_arbitration\_value = 0.0
+00102     \textcolor{stringliteral}{"""}
+00103 \textcolor{stringliteral}{        Default number for arbitrating a given pseudorandom number}
+00104 \textcolor{stringliteral}{            into a high value (i.e., "1") or a low value (i.e., "0")}
+00105 \textcolor{stringliteral}{            for a bit-vector (BV, i.e., boolean array/list).}
+00106 \textcolor{stringliteral}{        The bit-vector arbiter shall use this value to determine}
+00107 \textcolor{stringliteral}{            if the generated pseudorandom number implies a high or}
+00108 \textcolor{stringliteral}{            low value for a bit-vector.}
+00109 \textcolor{stringliteral}{    """}
+\hypertarget{pseudorandom__number__generator_8py_source_l00110}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_ac3727731f4680b560c9856dce63b59b5}{00110}     bit\_vector\_arbitration\_value = 0.5
+00111     \textcolor{comment}{# High and low values for a RTW.}
+\hypertarget{pseudorandom__number__generator_8py_source_l00112}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_adf3f03d77c73d020e031922b1e8ef1b4}{00112}     low\_value\_rtw = -1
+\hypertarget{pseudorandom__number__generator_8py_source_l00113}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_af12063b0aa05ec3b1cb998eb59af1b39}{00113}     high\_value\_rtw = 1
+00114     \textcolor{comment}{# High and low values for a bit vector.}
+\hypertarget{pseudorandom__number__generator_8py_source_l00115}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a74806f6f1dfe673c2132e8c4ec4f0ac2}{00115}     low\_value\_bit\_vector = 0
+\hypertarget{pseudorandom__number__generator_8py_source_l00116}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a3ff9b0f7e6c786c43774225d9ae911ce}{00116}     high\_value\_bit\_vector = 1
+00117     \textcolor{comment}{# ============================================================}
+00118     \textcolor{comment}{##  Method to generate a value for a random signal/process.}
+00119     \textcolor{comment}{#}
+00120     \textcolor{comment}{#   Use the Python Standard Library's random module to call the}
+00121     \textcolor{comment}{#       uniform function that is a PRNG based on a uniform}
+00122     \textcolor{comment}{#       distribution.}
+00123     \textcolor{comment}{#}
+00124     \textcolor{comment}{#   @param type\_of\_signal - Indicates if either of the following}
+00125     \textcolor{comment}{#               random signals (or random "processes") are used.}
+00126     \textcolor{comment}{#               * rtw, for a random telegraph wave}
+00127     \textcolor{comment}{#                   - high value: "1"}
+00128     \textcolor{comment}{#                   - low value: "-1"}
+00129     \textcolor{comment}{#               * bv, for a bit-vector}
+00130     \textcolor{comment}{#                   - high value: "1"}
+00131     \textcolor{comment}{#                   - low value: "0"}
+00132     \textcolor{comment}{#   @return - Nothing.}
+00133     \textcolor{comment}{#   O(1) method.}
+00134     @staticmethod
+\hypertarget{pseudorandom__number__generator_8py_source_l00135}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}{00135}     \textcolor{keyword}{def }\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}{psl\_uniform}(type\_of\_signal=bv\_signal):
+00136     \textcolor{comment}{#def psl\_uniform(type\_of\_signal=prng.bv\_signal):}
+00137         \textcolor{comment}{# Is the selected random signal/process a RTW?}
+00138         \textcolor{keywordflow}{if} type\_of\_signal == prng.rtw\_signal:
+00139             \textcolor{stringliteral}{"""}
+00140 \textcolor{stringliteral}{                Yes.}
+00141 \textcolor{stringliteral}{                Shall the generated pseudorandom number arbitrated}
+00142 \textcolor{stringliteral}{                    to a high or low value?}
+00143 \textcolor{stringliteral}{            """}
+00144             \textcolor{keywordflow}{if} random.uniform(prng.low\_value\_rtw,prng.high\_value\_rtw) >= prng.rtw\_arbitration\_value:
+00145                 \textcolor{keywordflow}{return} prng.high\_value\_rtw
+00146             \textcolor{keywordflow}{else}:
+00147                 \textcolor{keywordflow}{return} prng.low\_value\_rtw
+00148         \textcolor{keywordflow}{else}:
+00149             \textcolor{stringliteral}{"""}
+00150 \textcolor{stringliteral}{                No. The random signal/process is treated as}
+00151 \textcolor{stringliteral}{                    a bit vector by default.}
+00152 \textcolor{stringliteral}{                Shall the generated pseudorandom number arbitrated}
+00153 \textcolor{stringliteral}{                    to a high or low value?}
+00154 \textcolor{stringliteral}{            """}
+00155             \textcolor{keywordflow}{if} random.uniform(prng.low\_value\_bit\_vector,prng.high\_value\_bit\_vector) >= 
+      prng.bit\_vector\_arbitration\_value:
+00156                 \textcolor{keywordflow}{return} prng.high\_value\_bit\_vector
+00157             \textcolor{keywordflow}{else}:
+00158                 \textcolor{keywordflow}{return} prng.low\_value\_bit\_vector
+00159 
+00160 
+\end{DoxyCode}

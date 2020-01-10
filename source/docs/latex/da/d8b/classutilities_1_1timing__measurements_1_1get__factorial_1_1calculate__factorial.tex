@@ -1,0 +1,190 @@
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial}{}\section{utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial Class Reference}
+\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial}\index{utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial@{utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial}}
+
+
+Collaboration diagram for utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{dd/d21/classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}{process\+\_\+optional\+\_\+input\+\_\+argument} ()
+\begin{DoxyCompactList}\small\item\em Method to process the optional input argument. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}{get\+\_\+factorial\+\_\+recursion} (given\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Method to determine the factorial of \char`\"{}number\+\_\+to\+\_\+compute\char`\"{} by recursion. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}{get\+\_\+factorial\+\_\+iteration} (given\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Method to determine the factorial of \char`\"{}number\+\_\+to\+\_\+compute\char`\"{} by iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a52e3407bbd93719d9c77e49706a47362}{default\+\_\+number} = 10
+\item 
+int \hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a04cd527a2af28e713e8665e2d40b1fae}{number\+\_\+to\+\_\+compute} = 10
+\item 
+int \hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a16363bc4d672d6352ce3618abeb8e74f}{does\+\_\+not\+\_\+exist} = -\/1234567890
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00087}{87} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}{}\index{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}!get\+\_\+factorial\+\_\+iteration@{get\+\_\+factorial\+\_\+iteration}}
+\index{get\+\_\+factorial\+\_\+iteration@{get\+\_\+factorial\+\_\+iteration}!utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}}
+\subsubsection[{get\+\_\+factorial\+\_\+iteration(given\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial.\+get\+\_\+factorial\+\_\+iteration (
+\begin{DoxyParamCaption}
+\item[{}]{given\+\_\+number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}
+
+
+Method to determine the factorial of \char`\"{}number\+\_\+to\+\_\+compute\char`\"{} by iteration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+number} & -\/ Number to determine the factorial of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the factorial of given\+\_\+number (if it is a non-\/negative integer); else, return \textquotesingle{}None\textquotesingle{}. O(n) method, where n is the number of test cases used. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00149}{149} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_l00149}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}{00149}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a4233e6dad246c88e546c31f5752a1ee1}{get\_factorial\_iteration}(given\_number):
+00150         \textcolor{keywordflow}{if} isinstance(given\_number, int):
+00151             \textcolor{keywordflow}{if} (0 == (given\_number) \textcolor{keywordflow}{or} (1 == given\_number)):
+00152                 \textcolor{keywordflow}{return} 1
+00153             \textcolor{keywordflow}{elif} (0 > given\_number):
+00154                 warnings.warn(\textcolor{stringliteral}{"The factorial of a negative number cannot be determined."})
+00155                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00156             \textcolor{keywordflow}{else}:
+00157                 result = 1
+00158                 \textcolor{keywordflow}{while} (1 < given\_number):
+00159                     result = result * given\_number
+00160                     given\_number = given\_number - 1
+00161                 \textcolor{keywordflow}{return} result
+00162         \textcolor{keywordflow}{elif} isinstance(given\_number, float):
+00163             warnings.warn(\textcolor{stringliteral}{"The factorial of a floating-point number cannot be determined."})
+00164             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00165         \textcolor{keywordflow}{else}:
+00166             warnings.warn(\textcolor{stringliteral}{"The factorial of a non-integer cannot be determined."})
+00167             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00168 
+\end{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}{}\index{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}!get\+\_\+factorial\+\_\+recursion@{get\+\_\+factorial\+\_\+recursion}}
+\index{get\+\_\+factorial\+\_\+recursion@{get\+\_\+factorial\+\_\+recursion}!utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}}
+\subsubsection[{get\+\_\+factorial\+\_\+recursion(given\+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial.\+get\+\_\+factorial\+\_\+recursion (
+\begin{DoxyParamCaption}
+\item[{}]{given\+\_\+number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}
+
+
+Method to determine the factorial of \char`\"{}number\+\_\+to\+\_\+compute\char`\"{} by recursion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+\_\+number} & -\/ Number to determine the factorial of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the factorial of given\+\_\+number (if it is a non-\/negative integer); else, return \textquotesingle{}None\textquotesingle{}. O(n) method, where n is the number of test cases used. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00125}{125} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_l00125}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}{00125}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_ad985135073d51b522bdfb4c5b5569456}{get\_factorial\_recursion}(given\_number):
+00126         \textcolor{keywordflow}{if} isinstance(given\_number, int):
+00127             \textcolor{keywordflow}{if} (0 == (given\_number) \textcolor{keywordflow}{or} (1 == given\_number)):
+00128                 \textcolor{keywordflow}{return} 1
+00129             \textcolor{keywordflow}{elif} (0 > given\_number):
+00130                 warnings.warn(\textcolor{stringliteral}{"The factorial of a negative number cannot be determined."})
+00131                 \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00132             \textcolor{keywordflow}{else}:
+00133                 \textcolor{keywordflow}{return} given\_number * calculate\_factorial.get\_factorial\_recursion(given\_number - 1)
+00134         \textcolor{keywordflow}{elif} isinstance(given\_number, float):
+00135             warnings.warn(\textcolor{stringliteral}{"The factorial of a floating-point number cannot be determined."})
+00136             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00137         \textcolor{keywordflow}{else}:
+00138             warnings.warn(\textcolor{stringliteral}{"The factorial of a non-integer cannot be determined."})
+00139             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}{}\index{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}!process\+\_\+optional\+\_\+input\+\_\+argument@{process\+\_\+optional\+\_\+input\+\_\+argument}}
+\index{process\+\_\+optional\+\_\+input\+\_\+argument@{process\+\_\+optional\+\_\+input\+\_\+argument}!utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}}
+\subsubsection[{process\+\_\+optional\+\_\+input\+\_\+argument()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial.\+process\+\_\+optional\+\_\+input\+\_\+argument (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}
+
+
+Method to process the optional input argument. 
+
+If the number is not provided, use the value of \char`\"{}default\+\_\+number\char`\"{}. \begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00103}{103} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_l00103}{}\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}{00103}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a799aaf842a0c6c98d31ee1cad8381caa}{process\_optional\_input\_argument}():
+00104         \textcolor{comment}{# If the path to the README file is not specified}
+00105         \textcolor{keywordflow}{if} (2 > len(sys.argv)):
+00106             \textcolor{stringliteral}{"""}
+00107 \textcolor{stringliteral}{                The optional input argument is not provided by the}
+00108 \textcolor{stringliteral}{                    user.}
+00109 \textcolor{stringliteral}{                We assume that the default number to determine the}
+00110 \textcolor{stringliteral}{                    factorial of is indicated by the value of}
+00111 \textcolor{stringliteral}{                    "default\_number".}
+00112 \textcolor{stringliteral}{            """}
+00113             calculate\_factorial.number\_to\_compute = calculate\_factorial.default\_number
+00114         \textcolor{keywordflow}{else}:
+00115             calculate\_factorial.number\_to\_compute = sys.argv[1]
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a52e3407bbd93719d9c77e49706a47362}{}\index{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}!default\+\_\+number@{default\+\_\+number}}
+\index{default\+\_\+number@{default\+\_\+number}!utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}}
+\subsubsection[{default\+\_\+number}]{\setlength{\rightskip}{0pt plus 5cm}int utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial.\+default\+\_\+number = 10\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a52e3407bbd93719d9c77e49706a47362}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00089}{89} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a16363bc4d672d6352ce3618abeb8e74f}{}\index{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}!does\+\_\+not\+\_\+exist@{does\+\_\+not\+\_\+exist}}
+\index{does\+\_\+not\+\_\+exist@{does\+\_\+not\+\_\+exist}!utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}}
+\subsubsection[{does\+\_\+not\+\_\+exist}]{\setlength{\rightskip}{0pt plus 5cm}int utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial.\+does\+\_\+not\+\_\+exist = -\/1234567890\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a16363bc4d672d6352ce3618abeb8e74f}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00096}{96} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+\hypertarget{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a04cd527a2af28e713e8665e2d40b1fae}{}\index{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}!number\+\_\+to\+\_\+compute@{number\+\_\+to\+\_\+compute}}
+\index{number\+\_\+to\+\_\+compute@{number\+\_\+to\+\_\+compute}!utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial@{utilities\+::timing\+\_\+measurements\+::get\+\_\+factorial\+::calculate\+\_\+factorial}}
+\subsubsection[{number\+\_\+to\+\_\+compute}]{\setlength{\rightskip}{0pt plus 5cm}int utilities.\+timing\+\_\+measurements.\+get\+\_\+factorial.\+calculate\+\_\+factorial.\+number\+\_\+to\+\_\+compute = 10\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1get__factorial_1_1calculate__factorial_a04cd527a2af28e713e8665e2d40b1fae}
+
+
+Definition at line \hyperlink{get__factorial_8py_source_l00091}{91} of file \hyperlink{get__factorial_8py_source}{get\+\_\+factorial.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/timing\+\_\+measurements/\hyperlink{get__factorial_8py}{get\+\_\+factorial.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,255 @@
+\hypertarget{incremental__test_8py_source}{}\section{incremental\+\_\+test.\+py}
+
+\begin{DoxyCode}
+\hypertarget{incremental__test_8py_source_l00001}{}\hyperlink{namespaceincremental__test}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3 }
+00003 \textcolor{comment}{###!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3}
+00004 \textcolor{comment}{### /usr/bin/python}
+00005 \textcolor{comment}{### /Library/Frameworks/Python.framework/Versions/3.6/bin/python3}
+00006 \textcolor{comment}{### #!/usr/bin/python -mtimeit}
+00007 \textcolor{comment}{#   /Library/Frameworks/Python.framework/Versions/3.6/bin/python3 ./incremental\_test.py
+       ./benchmarks/majority\_netlist.json  ./output/output-results}
+00008 \textcolor{comment}{#   /Library/Frameworks/Python.framework/Versions/3.6/bin/python3 -mtimeit ./incremental\_test.py
+       ./benchmarks/majority\_netlist.json ./output/output-results}
+00009 
+00010 \textcolor{stringliteral}{"""}
+00011 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to incrementally}
+00012 \textcolor{stringliteral}{        test features for my software designing noise-based logic}
+00013 \textcolor{stringliteral}{        circuits.}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{    Synopsis:}
+00017 \textcolor{stringliteral}{    Perform incremental software testing automatically for my}
+00018 \textcolor{stringliteral}{        research solution.}
+00019 \textcolor{stringliteral}{}
+00020 \textcolor{stringliteral}{    This script can be executed as follows:}
+00021 \textcolor{stringliteral}{    ./incremental\_test.py}
+00022 \textcolor{stringliteral}{}
+00023 \textcolor{stringliteral}{}
+00024 \textcolor{stringliteral}{}
+00025 \textcolor{stringliteral}{}
+00026 \textcolor{stringliteral}{    Revision History:}
+00027 \textcolor{stringliteral}{    July 31, 2018           Version 0.1 Script.}
+00028 \textcolor{stringliteral}{"""}
+00029 
+\hypertarget{incremental__test_8py_source_l00030}{}\hyperlink{namespaceincremental__test_a5f6427d0e520c9febabce9161afb249b}{00030} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{incremental__test_8py_source_l00031}{}\hyperlink{namespaceincremental__test_a0f94dd1f320b9558e27a5809d2041c4c}{00031} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{incremental__test_8py_source_l00032}{}\hyperlink{namespaceincremental__test_afce713750b4dd215527495dfc84d047e}{00032} \_\_date\_\_ = \textcolor{stringliteral}{'July 31, 2018'}
+00033 
+00034 \textcolor{comment}{#   The MIT License (MIT)}
+00035 
+00036 \textcolor{comment}{#   Copyright (c) <2018> <Zhiyang Ong>}
+00037 
+00038 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00039 
+00040 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00041 
+00042 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00043 
+00044 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00045 
+00046 
+00047 \textcolor{comment}{###############################################################}
+00048 \textcolor{stringliteral}{"""}
+00049 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00050 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00051 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00052 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00053 \textcolor{stringliteral}{}
+00054 \textcolor{stringliteral}{    subprocess -> call}
+00055 \textcolor{stringliteral}{                To make system calls.}
+00056 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00057 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00058 \textcolor{stringliteral}{    re          Use regular expressions.}
+00059 \textcolor{stringliteral}{}
+00060 \textcolor{stringliteral}{    pathlib->Path}
+00061 \textcolor{stringliteral}{                For mapping a string to a path.}
+00062 \textcolor{stringliteral}{"""}
+00063 
+00064 \textcolor{keyword}{import} sys
+00065 \textcolor{keyword}{import} os
+00066 \textcolor{keyword}{import} os.path
+00067 \textcolor{comment}{#from pathlib import Path}
+00068 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00069 \textcolor{keyword}{import} time
+00070 \textcolor{keyword}{import} warnings
+00071 \textcolor{keyword}{import} re
+00072 
+00073 
+00074 
+00075 \textcolor{comment}{###############################################################}
+00076 \textcolor{comment}{#   Import Custom Python Packages and Modules}
+00077 
+00078 \textcolor{comment}{# Statistics package.}
+00079 \textcolor{stringliteral}{"""}
+00080 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00081 \textcolor{stringliteral}{        results.}
+00082 \textcolor{stringliteral}{"""}
+00083 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00084 \textcolor{comment}{# Package and module to check the validation of statistical analysis.}
+00085 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics__tester}{statistics.test\_statistics\_tester} \textcolor{keyword}{import} statistical\_analysis\_tester
+00086 
+00087 \textcolor{stringliteral}{"""}
+00088 \textcolor{stringliteral}{    Package and module to perform miscellaneous tasks in data}
+00089 \textcolor{stringliteral}{        analysis.}
+00090 \textcolor{stringliteral}{"""}
+00091 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1data__analysis__tool}{statistics.data\_analysis\_tool} \textcolor{keyword}{import} data\_analysis
+00092 \textcolor{stringliteral}{"""}
+00093 \textcolor{stringliteral}{    Package and module to test the miscellaneous tasks in}
+00094 \textcolor{stringliteral}{        analyzing data. }
+00095 \textcolor{stringliteral}{"""}
+00096 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__data__analysis__tool}{statistics.test\_data\_analysis\_tool} \textcolor{keyword}{import} data\_analysis\_tester
+00097 
+00098 
+00099 
+00100 \textcolor{comment}{# Utilities package.}
+00101 \textcolor{comment}{# Package and module to perform file I/O (input/output) operations.}
+00102 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1file__io}{utilities.file\_io} \textcolor{keyword}{import} file\_io\_operations
+00103 \textcolor{comment}{# Package and module to test file I/O (input/output) operations.}
+00104 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1file__io__tester}{utilities.file\_io\_tester} \textcolor{keyword}{import} file\_io\_operations\_tester
+00105 \textcolor{comment}{# Package and module to process input arguments to the script/program.}
+00106 \textcolor{comment}{# Package and module to perform date and time operations.}
+00107 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1date__time__processing}{utilities.date\_time\_processing} \textcolor{keyword}{import} date\_time\_operations
+00108 \textcolor{comment}{# Package and module to test date and time operations.}
+00109 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1date__time__processing__tester}{utilities.date\_time\_processing\_tester} \textcolor{keyword}{import} 
+      date\_time\_operations\_tester
+00110 \textcolor{stringliteral}{"""}
+00111 \textcolor{stringliteral}{    Module to generate the filename for storing the experimental}
+00112 \textcolor{stringliteral}{        results and simulation output.}
+00113 \textcolor{stringliteral}{"""}
+00114 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1generate__results__filename}{utilities.generate\_results\_filename} \textcolor{keyword}{import} generate\_filename
+00115 \textcolor{stringliteral}{"""}
+00116 \textcolor{stringliteral}{    Module to test if the generated filename (based on the}
+00117 \textcolor{stringliteral}{        then-current time stamp) conforms to the specified}
+00118 \textcolor{stringliteral}{        format.}
+00119 \textcolor{stringliteral}{"""}
+00120 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1generate__results__filename__tester}{utilities.generate\_results\_filename\_tester} \textcolor{keyword}{import} 
+      generate\_filename\_tester
+00121 \textcolor{comment}{# Module to test miscellaneous methods.}
+00122 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1miscellaneous}{utilities.miscellaneous} \textcolor{keyword}{import} misc
+00123 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1miscellaneous__tester}{utilities.miscellaneous\_tester} \textcolor{keyword}{import} misc\_tester
+00124 
+00125 \textcolor{comment}{# Modules for user-defined error/exception.}
+00126 
+00127 
+00128 
+00129 
+00130 \textcolor{comment}{# Modules for random number and random signal/"process" generation.}
+00131 \textcolor{comment}{# Module to generate pseudorandom numbers.}
+00132 \textcolor{keyword}{from} \hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator}{random\_process\_models.pseudorandom\_number\_generator}
+       \textcolor{keyword}{import} prng
+00133 \textcolor{comment}{# Module to generate pseudorandom numbers.}
+00134 \textcolor{keyword}{from} \hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator__tester}{random\_process\_models.pseudorandom\_number\_generator\_tester}
+       \textcolor{keyword}{import} prng\_tester
+00135 
+00136 
+00137 
+00138 
+00139 
+00140 
+00141 \textcolor{comment}{###############################################################}
+00142 
+00143 \textcolor{comment}{# Global variables.}
+00144 \textcolor{comment}{#   Location to store simulation and/or experimental results.}
+00145 \textcolor{comment}{#result\_repository = "/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}
+00146 
+00147 
+00148 \textcolor{comment}{###############################################################}
+00149 \textcolor{stringliteral}{"""}
+00150 \textcolor{stringliteral}{    Module with methods that incrementally test features for my}
+00151 \textcolor{stringliteral}{        solution for designing noise-based logic circuits.}
+00152 \textcolor{stringliteral}{    It tests the following:}
+00153 \textcolor{stringliteral}{    + Test the module to analyzing results from testing my software.}
+00154 \textcolor{stringliteral}{    + Test the functions of the modules in the utilities module.}
+00155 \textcolor{stringliteral}{    + Test the functions of the modules in the random\_process\_models module.}
+00156 \textcolor{stringliteral}{    + Test the implementations for the noise-based logic circuits.}
+00157 \textcolor{stringliteral}{        - approximate circuit for calculating expectated value.}
+00158 \textcolor{stringliteral}{        - ???}
+00159 \textcolor{stringliteral}{"""}
+\hypertarget{incremental__test_8py_source_l00160}{}\hyperlink{classincremental__test_1_1incremental__test__automation}{00160} \textcolor{keyword}{class }\hyperlink{classincremental__test_1_1incremental__test__automation}{incremental\_test\_automation}:
+00161     \textcolor{comment}{# (Static) variables.}
+00162     \textcolor{comment}{#   Location to store simulation and/or experimental results.}
+\hypertarget{incremental__test_8py_source_l00163}{}\hyperlink{classincremental__test_1_1incremental__test__automation_afbbdcc0177de0d7d04bbf38ea90e9a5a}{00163}     result\_repository = \textcolor{stringliteral}{"~/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}
+00164     \textcolor{comment}{# ============================================================}
+00165 
+00166 
+00167 
+00168 
+00169 
+00170 
+00171 
+00172 
+00173 
+00174 
+00175 \textcolor{comment}{###############################################################}
+00176 \textcolor{comment}{# Main method for the program.}
+00177 
+00178 \textcolor{comment}{#   If this is executed as a Python script,}
+00179 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"\_\_main\_\_"}:
+00180     \textcolor{stringliteral}{"""}
+00181 \textcolor{stringliteral}{    # Redirect standard output and standard error to an output file.}
+00182 \textcolor{stringliteral}{    results\_file\_object = file\_io\_operations.open\_file\_object\_write\_results()}
+00183 \textcolor{stringliteral}{    file\_io\_operations.redirect\_std\_op\_to\_file\_obj(results\_file\_object)}
+00184 \textcolor{stringliteral}{    file\_io\_operations.redirect\_std\_err\_to\_file\_obj(results\_file\_object)}
+00185 \textcolor{stringliteral}{    """}
+00186     print(\textcolor{stringliteral}{"=================================================="})
+00187     print(\textcolor{stringliteral}{"Automating incremental regression testing of my software"})
+00188     print(\textcolor{stringliteral}{" solution for genetic technology mapping."})
+00189     print(\textcolor{stringliteral}{""})
+00190     \textcolor{comment}{# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -}
+00191     \textcolor{comment}{# The real stuff begins here...}
+00192     print(\textcolor{stringliteral}{"-    -   -   -   -   -   -   -   -   -   -   -   -"})
+00193     print(\textcolor{stringliteral}{"=    Testing the statistical analysis package."})
+00194     \textcolor{comment}{#   Insert test cases for statistical analysis package}
+00195     statistical\_analysis\_tester.test\_statistical\_analysis()
+00196     \textcolor{comment}{# Test the miscellaneous tasks in analyzing data.}
+00197     data\_analysis\_tester.test\_data\_analysis()
+00198     print(\textcolor{stringliteral}{""})
+00199     print(\textcolor{stringliteral}{"-    -   -   -   -   -   -   -   -   -   -   -   -"})
+00200     \textcolor{comment}{# Insert test cases for testing the utilities package.}
+00201     print(\textcolor{stringliteral}{""})
+00202     print(\textcolor{stringliteral}{"=    Testing the utilities package."})
+00203     \textcolor{comment}{#   The original file I/O module has been rigorously tested.}
+00204     \textcolor{comment}{#file\_io\_operations\_tester.test\_file\_io\_operations()}
+00205     date\_time\_operations\_tester.test\_date\_time\_operations()
+00206     generate\_filename\_tester.test\_filename\_generation\_methods()
+00207     misc\_tester.test\_miscellaneous\_methods()
+00208     print(\textcolor{stringliteral}{"-    -   -   -   -   -   -   -   -   -   -   -   -"})
+00209     \textcolor{comment}{# Insert test cases for testing the random\_process\_models package.}
+00210     print(\textcolor{stringliteral}{""})
+00211     print(\textcolor{stringliteral}{"=    Testing the random\_process\_models package."})
+00212     prng\_tester.test\_prng\_methods()
+00213     print(\textcolor{stringliteral}{"-    -   -   -   -   -   -   -   -   -   -   -   -"})
+00214     \textcolor{comment}{#   ### TO-DO}
+00215     \textcolor{comment}{#   Test expr\_configuration}
+00216 \textcolor{comment}{#   incremental\_test\_automation.read\_input\_BibTeX\_file(ip\_file\_obj,ip\_filename)}
+00217     print(\textcolor{stringliteral}{"!    !   !   !   !   !   !   !   !   !   !"})
+00218     print(\textcolor{stringliteral}{">>   Get statistics of the software testing process."})
+00219     statistical\_analysis.print\_statistics\_of\_software\_testing()
+00220     \textcolor{comment}{# Close the file object for reading.}
+00221     \textcolor{comment}{#print("=   Close the file objects for reading (and writing).")}
+00222     \textcolor{comment}{#file\_io\_operations.close\_file\_object(ip\_file\_obj)}
+00223     \textcolor{stringliteral}{"""}
+00224 \textcolor{stringliteral}{    file\_io\_operations.close\_file\_object(results\_file\_object)}
+00225 \textcolor{stringliteral}{    # Stop redirecting standard output and standard to an output file.}
+00226 \textcolor{stringliteral}{    file\_io\_operations.stop\_redirecting\_std\_op()}
+00227 \textcolor{stringliteral}{    file\_io\_operations.stop\_redirecting\_std\_err()}
+00228 \textcolor{stringliteral}{    """}
+00229 \textcolor{comment}{#   print("<<   I can see this in standard output, printed in the Terminal.")}
+00230     \textcolor{keywordflow}{if} misc.add\_commit\_push\_updates\_to\_git\_repository(\textcolor{stringliteral}{"Update build: Added access to Git repository"}):
+00231         print(\textcolor{stringliteral}{"Update repository of simulation/experimental results."})
+00232     \textcolor{keywordflow}{else}:
+00233         print(\textcolor{stringliteral}{"DID NOT update repository of simulation/experimental results."})
+\end{DoxyCode}

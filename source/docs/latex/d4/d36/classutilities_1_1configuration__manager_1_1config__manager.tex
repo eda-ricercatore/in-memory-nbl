@@ -1,0 +1,195 @@
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager}{}\section{utilities.\+configuration\+\_\+manager.\+config\+\_\+manager Class Reference}
+\label{classutilities_1_1configuration__manager_1_1config__manager}\index{utilities.\+configuration\+\_\+manager.\+config\+\_\+manager@{utilities.\+configuration\+\_\+manager.\+config\+\_\+manager}}
+
+
+Import Custom Python Modules.  
+
+
+
+
+Collaboration diagram for utilities.\+configuration\+\_\+manager.\+config\+\_\+manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{dc/d57/classutilities_1_1configuration__manager_1_1config__manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}{relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path} (location)
+\begin{DoxyCompactList}\small\item\em Method to set the location of simulation/experimental results. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}{set\+\_\+result\+\_\+repository} (location)
+\begin{DoxyCompactList}\small\item\em Method to set the location of simulation/experimental results. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}{get\+\_\+result\+\_\+repository} ()
+\begin{DoxyCompactList}\small\item\em Method to get the location of simulation/experimental results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a19ed9ae453acea0ed85f704f18ee4b30}{result\+\_\+repository} = \char`\"{}Unknown location.\char`\"{}
+\item 
+string \hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a884c4ec67676c35cc6fd674c208abfe2}{home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong} = \char`\"{}/Users/zhiyang\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Import Custom Python Modules. 
+
+Module with methods that perform file I/\+O operations. 
+
+Definition at line \hyperlink{configuration__manager_8py_source_l00088}{88} of file \hyperlink{configuration__manager_8py_source}{configuration\+\_\+manager.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}{}\index{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}!get\+\_\+result\+\_\+repository@{get\+\_\+result\+\_\+repository}}
+\index{get\+\_\+result\+\_\+repository@{get\+\_\+result\+\_\+repository}!utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}}
+\subsubsection[{get\+\_\+result\+\_\+repository()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+configuration\+\_\+manager.\+config\+\_\+manager.\+get\+\_\+result\+\_\+repository (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}
+
+
+Method to get the location of simulation/experimental results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & None. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the location of simulation/experimental results. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{configuration__manager_8py_source_l00163}{163} of file \hyperlink{configuration__manager_8py_source}{configuration\+\_\+manager.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_l00163}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}{00163}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3e06a71db0338806c87430dc45fbab66}{get\_result\_repository}():
+00164         \textcolor{keywordflow}{return} config\_manager.result\_repository
+00165 \end{DoxyCode}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}{}\index{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}!relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path@{relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path}}
+\index{relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path@{relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path}!utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}}
+\subsubsection[{relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path(location)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+configuration\+\_\+manager.\+config\+\_\+manager.\+relative\+\_\+path\+\_\+from\+\_\+user\+\_\+home\+\_\+directory\+\_\+to\+\_\+absolute\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{}]{location}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}
+
+
+Method to set the location of simulation/experimental results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & -\/ Location of a directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the absolute path of location, if location is a relative path from the user\textquotesingle{}s home directory. Else, return location. \subparagraph*{I\+M\+P\+O\+R\+T\+A\+N\+T N\+O\+T\+E\+S\+: Method to fix bug in the method}
+\end{DoxyReturn}
+\char`\"{}os.\+path.\+expanduser\char`\"{}, which had replaced the initial substring \char`\"{}$\sim$/\char`\"{} of the relative path from the user\textquotesingle{}s home directory with \char`\"{}../\char`\"{} This bug is not always replicable. This is because os.\+environ\mbox{[}\textquotesingle{}H\+O\+M\+E\textquotesingle{}\mbox{]} is set to \char`\"{}../\char`\"{}. Hence, it will replace \char`\"{}$\sim$/\char`\"{} with \char`\"{}../\char`\"{}. Hence, I am providing/using this workaround. O(1) method. 
+
+Definition at line \hyperlink{configuration__manager_8py_source_l00110}{110} of file \hyperlink{configuration__manager_8py_source}{configuration\+\_\+manager.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_l00110}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}{00110}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a15f03ca784cab4d34b95dc020f3b0c23}{relative\_path\_from\_user\_home\_directory\_to\_absolute\_path}
+      (location):
+00111         \textcolor{comment}{#print("Where is my home?",os.environ['HOME'],"=")}
+00112         \textcolor{comment}{#home\_directory = os.path.expanduser("~")}
+00113         \textcolor{comment}{#print("?   home\_directory:::",home\_directory,"=")}
+00114         home\_directory\_of\_zhiyang\_ong = \textcolor{stringliteral}{"/Users/zhiyang/"}
+00115         \textcolor{keywordflow}{if} location.startswith(\textcolor{stringliteral}{"~/"}):
+00116             \textcolor{keywordflow}{return} location.replace(\textcolor{stringliteral}{"~/"},home\_directory\_of\_zhiyang\_ong)
+00117         \textcolor{keywordflow}{else}:
+00118             \textcolor{keywordflow}{return} location
+\end{DoxyCode}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}{}\index{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}!set\+\_\+result\+\_\+repository@{set\+\_\+result\+\_\+repository}}
+\index{set\+\_\+result\+\_\+repository@{set\+\_\+result\+\_\+repository}!utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}}
+\subsubsection[{set\+\_\+result\+\_\+repository(location)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+configuration\+\_\+manager.\+config\+\_\+manager.\+set\+\_\+result\+\_\+repository (
+\begin{DoxyParamCaption}
+\item[{}]{location}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}
+
+
+Method to set the location of simulation/experimental results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & -\/ Location of a directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean T\+R\+U\+E, if the location is a valid directory. Else, return F\+A\+L\+S\+E. O(1) method. \begin{DoxyVerb}    Since os.path.isdir returns false for relative paths,
+ensure that the directory is an absolute path
+    before proceeding.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{configuration__manager_8py_source_l00126}{126} of file \hyperlink{configuration__manager_8py_source}{configuration\+\_\+manager.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_l00126}{}\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}{00126}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1configuration__manager_1_1config__manager_a3ac8c649652805fc0bddd2b6d8187329}{set\_result\_repository}(location):
+00127         \textcolor{stringliteral}{"""}
+00128 \textcolor{stringliteral}{            Since os.path.isdir returns false for relative paths,}
+00129 \textcolor{stringliteral}{                ensure that the directory is an absolute path}
+00130 \textcolor{stringliteral}{                    before proceeding.}
+00131 \textcolor{stringliteral}{        """}
+00132         location = config\_manager.relative\_path\_from\_user\_home\_directory\_to\_absolute\_path(location)
+00133         print(\textcolor{stringliteral}{";;;~current location:::"},location,\textcolor{stringliteral}{"="})
+00134         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isabs(location):
+00135             \textcolor{comment}{#print("    location is a relative path.")}
+00136             \textcolor{comment}{# Change the relative path to an absolute path.}
+00137             location = os.path.expanduser(location)
+00138             \textcolor{comment}{#print("    location made abs:::",location,"=")}
+00139         print(\textcolor{stringliteral}{" location should be abs:::"},location,\textcolor{stringliteral}{"="})
+00140         print(\textcolor{stringliteral}{"os.path.isdir(location)"},os.path.isdir(location),\textcolor{stringliteral}{"="})
+00141         \textcolor{keywordflow}{if} os.path.isdir(location):
+00142             config\_manager.result\_repository = location
+00143             \textcolor{comment}{#print("config\_manager.result\_repository:::",config\_manager.result\_repository,"=")}
+00144             \textcolor{comment}{#print("    config\_manager.result\_repository is set correctly.")}
+00145             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00146         \textcolor{keywordflow}{else}:
+00147             \textcolor{comment}{#print("    location is an invalid directory.")}
+00148             \textcolor{comment}{#print("&&& config\_manager.result\_repository:::",config\_manager.result\_repository,"=")}
+00149             \textcolor{comment}{#print("    'location' is a valid directory.")}
+00150             \textcolor{comment}{#print("    'location' path
+       check:::",os.path.isdir("/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"),"=")}
+00151             \textcolor{comment}{#if "/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"
+       == location.strip():}
+00152             \textcolor{keywordflow}{if} \textcolor{stringliteral}{"/Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"} 
+      == location:
+00153                 print(\textcolor{stringliteral}{"location value is WRONG!!!"})
+00154             print(\textcolor{stringliteral}{" 'location':::"},location,\textcolor{stringliteral}{"="})
+00155             \textcolor{comment}{#print("    'copy\_of\_location':::",copy\_of\_location,"=")}
+00156             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_a884c4ec67676c35cc6fd674c208abfe2}{}\index{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}!home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong@{home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong}}
+\index{home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong@{home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong}!utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}}
+\subsubsection[{home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong}]{\setlength{\rightskip}{0pt plus 5cm}string utilities.\+configuration\+\_\+manager.\+config\+\_\+manager.\+home\+\_\+directory\+\_\+of\+\_\+zhiyang\+\_\+ong = \char`\"{}/Users/zhiyang\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1configuration__manager_1_1config__manager_a884c4ec67676c35cc6fd674c208abfe2}
+
+
+Definition at line \hyperlink{configuration__manager_8py_source_l00092}{92} of file \hyperlink{configuration__manager_8py_source}{configuration\+\_\+manager.\+py}.
+
+\hypertarget{classutilities_1_1configuration__manager_1_1config__manager_a19ed9ae453acea0ed85f704f18ee4b30}{}\index{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}!result\+\_\+repository@{result\+\_\+repository}}
+\index{result\+\_\+repository@{result\+\_\+repository}!utilities\+::configuration\+\_\+manager\+::config\+\_\+manager@{utilities\+::configuration\+\_\+manager\+::config\+\_\+manager}}
+\subsubsection[{result\+\_\+repository}]{\setlength{\rightskip}{0pt plus 5cm}string utilities.\+configuration\+\_\+manager.\+config\+\_\+manager.\+result\+\_\+repository = \char`\"{}Unknown location.\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1configuration__manager_1_1config__manager_a19ed9ae453acea0ed85f704f18ee4b30}
+
+
+Definition at line \hyperlink{configuration__manager_8py_source_l00091}{91} of file \hyperlink{configuration__manager_8py_source}{configuration\+\_\+manager.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{configuration__manager_8py}{configuration\+\_\+manager.\+py}\end{DoxyCompactItemize}

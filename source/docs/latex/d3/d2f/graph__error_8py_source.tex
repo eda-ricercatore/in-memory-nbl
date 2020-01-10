@@ -1,0 +1,130 @@
+\hypertarget{graph__error_8py_source}{}\section{graph\+\_\+error.\+py}
+\label{graph__error_8py_source}\index{utilities/custom\+\_\+exceptions/graph\+\_\+error.\+py@{utilities/custom\+\_\+exceptions/graph\+\_\+error.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{graph__error_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1custom__exceptions_1_1graph__error}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    Check for no usage of the term "error".}
+00006 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to implement}
+00007 \textcolor{stringliteral}{        a custom graph\_exception that extends the default Python}
+00008 \textcolor{stringliteral}{        exception class.}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{    Synopsis:}
+00011 \textcolor{stringliteral}{    Raises an error when a run-time error specific to graph}
+00012 \textcolor{stringliteral}{        implementations occurs.}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{    Notes/Assumptions:}
+00015 \textcolor{stringliteral}{    Use case \(\backslash\)\(\backslash\)cite[\(\backslash\)\(\backslash\)S8.4 Raising Exceptions]\{Brandl2017a\}: raise graph\_error("Error message describing
+       the specific problem.")}
+00016 \textcolor{stringliteral}{}
+00017 \textcolor{stringliteral}{    #### TO BE COMPLETED}
+00018 \textcolor{stringliteral}{}
+00019 \textcolor{stringliteral}{    References:}
+00020 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00021 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00022 \textcolor{stringliteral}{}
+00023 \textcolor{stringliteral}{    \(\backslash\)\(\backslash\)cite[from Learn Python Programming -- The Definitive Guide: Python Custom
+       Exceptions]\{ParewaLabsStaff20XY\}}
+00024 \textcolor{stringliteral}{}
+00025 \textcolor{stringliteral}{    gahooa, Answer to ``Proper way to declare custom exceptions in modern Python?,'' Stack Exchange Inc.,
+       New York, NY, August 23, 2009. Available online from \{\(\backslash\)\(\backslash\)it Stack Exchange Inc.: Stack Overflow: Questions\}
+       at:
+       \(\backslash\)\(\backslash\)url\{https://stackoverflow.com/questions/1319615/proper-way-to-declare-custom-exceptions-in-modern-python\} and \(\backslash\)\(\backslash\)url\{https://stackoverflow.com/revisions/1319675/7\}; March 26, 2018 was the last accessed date.}
+00026 \textcolor{stringliteral}{}
+00027 \textcolor{stringliteral}{    \(\backslash\)\(\backslash\)cite[\(\backslash\)\(\backslash\)S pickle — Python object serialization]\{DrakeJr2016b\}}
+00028 \textcolor{stringliteral}{        Available online at: \(\backslash\)\(\backslash\)url\{https://docs.python.org/3/library/pickle.html\}; February 27, 2019 was
+       the last accessed date}
+00029 \textcolor{stringliteral}{}
+00030 \textcolor{stringliteral}{    kylejmcintyre, ``How to make a custom exception class with multiple init args pickleable,'' Stack
+       Exchange Inc., New York, NY, April 26, 2013. Available online from \{\(\backslash\)\(\backslash\)it Stack Exchange Inc.: Stack Overflow:
+       Questions\} at:
+       \(\backslash\)\(\backslash\)url\{https://stackoverflow.com/questions/16244923/how-to-make-a-custom-exception-class-with-multiple-init-args-pickleable\}, \(\backslash\)\(\backslash\)url\{https://stackoverflow.com/posts/36342588/revisions\}, and
+       \(\backslash\)\(\backslash\)url\{https://stackoverflow.com/posts/16245182/revisions\}; February 27, 2019 was the last accessed date.}
+00031 \textcolor{stringliteral}{}
+00032 \textcolor{stringliteral}{    \(\backslash\)\(\backslash\)cite[\(\backslash\)\(\backslash\)8.5 User-defined Exceptions]\{Brandl2017a\}}
+00033 \textcolor{stringliteral}{}
+00034 \textcolor{stringliteral}{    \(\backslash\)\(\backslash\)cite[in \(\backslash\)\(\backslash\)S Errors and Exceptions]\{Klein2018\}}
+00035 \textcolor{stringliteral}{"""}
+00036 
+00037 \textcolor{comment}{#   The MIT License (MIT)}
+00038 
+00039 \textcolor{comment}{#   Copyright (c) <2014> <Zhiyang Ong>}
+00040 
+00041 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00042 
+00043 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00044 
+00045 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00046 
+00047 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00048 
+00049 
+00050 
+00051 \textcolor{comment}{###############################################################}
+00052 \textcolor{stringliteral}{"""}
+00053 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00054 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00055 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00056 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00057 \textcolor{stringliteral}{}
+00058 \textcolor{stringliteral}{    subprocess -> call}
+00059 \textcolor{stringliteral}{                To make system calls.}
+00060 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00061 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00062 \textcolor{stringliteral}{    re          Use regular expressions.}
+00063 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00064 \textcolor{stringliteral}{"""}
+00065 
+00066 \textcolor{keyword}{import} sys
+00067 \textcolor{keyword}{import} os
+00068 \textcolor{keyword}{import} os.path
+00069 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00070 \textcolor{keyword}{import} time
+00071 \textcolor{keyword}{import} warnings
+00072 \textcolor{keyword}{import} re
+00073 \textcolor{keyword}{import} filecmp
+00074 \textcolor{keyword}{import} calendar
+00075 
+00076 
+00077 \textcolor{comment}{###############################################################}
+00078 \textcolor{comment}{#   Import Custom Python Modules}
+00079 
+00080 
+00081 \textcolor{comment}{###############################################################}
+00082 \textcolor{comment}{#   Module of a custom graph\_exception that extends the default}
+00083 \textcolor{comment}{#       Python exception class.}
+00084 \textcolor{comment}{#class my\_graph\_error(Exception):}
+\hypertarget{graph__error_8py_source_l00085}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error}{00085} \textcolor{keyword}{class }\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error}{graph\_error}(Exception):
+00086     \textcolor{comment}{##  Standard constructor for the graph\_exception class.}
+00087     \textcolor{comment}{#   @param self - This instance of the graph\_exception class.}
+00088     \textcolor{comment}{#   @param error\_message - Custom error message included when}
+00089     \textcolor{comment}{#       raising/throwing this graph\_exception class.}
+00090     \textcolor{comment}{#   @param errors - Associted errors to this instance of the}
+00091     \textcolor{comment}{#       graph\_exception.}
+\hypertarget{graph__error_8py_source_l00092}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_af1cd1f51b69ad2fc3af0521ae2922535}{00092}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_af1cd1f51b69ad2fc3af0521ae2922535}{\_\_init\_\_}(self, error\_message, errors=None):
+\hypertarget{graph__error_8py_source_l00093}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_a98eabd7ef4fec2794e8b88e3af478de6}{00093}         self.\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_a98eabd7ef4fec2794e8b88e3af478de6}{error\_message} = error\_message
+00094         \textcolor{comment}{# Custom code: Assign associated errors.}
+\hypertarget{graph__error_8py_source_l00095}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_abc34ad82ec3f8374e1ff60c5c888a3eb}{00095}         self.\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_abc34ad82ec3f8374e1ff60c5c888a3eb}{errors} = errors
+00096         \textcolor{comment}{# Call base class, Exception, constructor with required}
+00097         \textcolor{comment}{#   parameters.}
+00098         super(graph\_error, self).\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error_af1cd1f51b69ad2fc3af0521ae2922535}{\_\_init\_\_}(\textcolor{stringliteral}{'error message: \{\}, list of errors: \{\}'}.format(
+      error\_message, errors))
+00099         \textcolor{comment}{#super(graph\_error, self).\_\_init\_\_(error\_message)}
+00100         \textcolor{comment}{# Override the "\_\_reduce\_\_" method.}
+00101         \textcolor{keyword}{def }\_\_reduce\_\_(self):
+00102             \textcolor{keywordflow}{return} (graph\_error, (self.arg1, self.arg2))
+\end{DoxyCode}

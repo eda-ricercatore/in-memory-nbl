@@ -1,0 +1,330 @@
+\hypertarget{classutilities_1_1miscellaneous_1_1misc}{}\section{utilities.\+miscellaneous.\+misc Class Reference}
+\label{classutilities_1_1miscellaneous_1_1misc}\index{utilities.\+miscellaneous.\+misc@{utilities.\+miscellaneous.\+misc}}
+
+
+Module with methods that perform miscellaneous tasks.  
+
+
+
+
+Collaboration diagram for utilities.\+miscellaneous.\+misc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{d9/d28/classutilities_1_1miscellaneous_1_1misc__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1miscellaneous_1_1misc_a17714d8ce76a7c4f04256b37b9938c15}{get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results} ()
+\begin{DoxyCompactList}\small\item\em Method to get the absolute path to store results. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous_1_1misc_a9b5ff2b3036d8a1a2e3bacb1d25e2785}{check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results} (path\+\_\+to\+\_\+file, filename)
+\begin{DoxyCompactList}\small\item\em Method to validate the absolute path to store results. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous_1_1misc_a96b7b4aa054c6c8eb7571314ec8edbc7}{check\+\_\+filename\+\_\+format} (filename)
+\begin{DoxyCompactList}\small\item\em Method to determine if a filename has the D\+D-\/\+M\+M-\/\+Y\+Y-\/\+H\+H-\/\+M\+M-\/\+S\+S-\/u\+S.\+txt format. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous_1_1misc_ab675e34a1a463f5a6aac272debe372ae}{find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results} (filename)
+\begin{DoxyCompactList}\small\item\em Method to determine where to store the results of the experimental, simulation, verification, or testing runs. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous_1_1misc_ad364ae88435c58955e26fcc22b1cabb9}{store\+\_\+results} (path\+\_\+to\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Method to store the results file in the specified absolute path. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous_1_1misc_a7837597eba06ec38b69b931ec18e39eb}{add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository} (comment)
+\begin{DoxyCompactList}\small\item\em Method to add, commit, and push additions and updates to a Git repository. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classutilities_1_1miscellaneous_1_1misc_a27fd16369fd0995d7494ff4741de5b91}{absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results} = \char`\"{}/Users/zhiyang/Documents/ricerca/risultati\+\_\+sperimentali/std-\/cell-\/library-\/characterization\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module with methods that perform miscellaneous tasks. 
+
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00095}{95} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_a7837597eba06ec38b69b931ec18e39eb}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository@{add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository}}
+\index{add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository@{add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository(comment)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous.\+misc.\+add\+\_\+commit\+\_\+push\+\_\+updates\+\_\+to\+\_\+git\+\_\+repository (
+\begin{DoxyParamCaption}
+\item[{}]{comment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_a7837597eba06ec38b69b931ec18e39eb}
+
+
+Method to add, commit, and push additions and updates to a Git repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & -\/ A comment for this commit/build \mbox{[}to the repository\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if updates can be added, committed, and push additions to a Git repository; Else, return boolean False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00235}{235} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_l00235}{}\hyperlink{classutilities_1_1miscellaneous_1_1misc_a7837597eba06ec38b69b931ec18e39eb}{00235}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous_1_1misc_a7837597eba06ec38b69b931ec18e39eb}{add\_commit\_push\_updates\_to\_git\_repository}(comment):
+00236         \textcolor{keywordflow}{try}:
+00237             print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00238             cmd = [\textcolor{stringliteral}{'git'}, \textcolor{stringliteral}{'add'}, \textcolor{stringliteral}{"-A"}]
+00239             p = subprocess.Popen(cmd, cwd=config\_manager.result\_repository)
+00240             \textcolor{comment}{#p = subprocess.call(cmd, cwd=config\_manager.result\_repository)}
+00241             print(\textcolor{stringliteral}{"-    Added. Commit now."})
+00242             comment = \textcolor{stringliteral}{"Update build via Python."}
+00243             cmd = [\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"commit"}, \textcolor{stringliteral}{"-m"}, comment]
+00244             p = subprocess.Popen(cmd, cwd=config\_manager.result\_repository)
+00245             p.wait()
+00246             print(\textcolor{stringliteral}{"-    Committed. Push now."})
+00247             cmd = [\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"push"}]
+00248             p = subprocess.Popen(cmd, cwd=config\_manager.result\_repository)
+00249             p.wait()
+00250             print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00251             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00252         \textcolor{keywordflow}{except}:
+00253             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00254 \end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_a9b5ff2b3036d8a1a2e3bacb1d25e2785}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results@{check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}}
+\index{check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results@{check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results(path\+\_\+to\+\_\+file, filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous.\+misc.\+check\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results (
+\begin{DoxyParamCaption}
+\item[{}]{path\+\_\+to\+\_\+file, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_a9b5ff2b3036d8a1a2e3bacb1d25e2785}
+
+
+Method to validate the absolute path to store results. 
+
+It is an query method 
+\begin{DoxyParams}{Parameters}
+{\em path\+\_\+to\+\_\+file} & -\/ A path to store the results file. \\
+\hline
+{\em filename} & -\/ A filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True, if the path to the desired location can be contains the value in \char`\"{}misc.\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results\char`\"{} and the filename of the results file. Else, return boolean False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00117}{117} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_l00117}{}\hyperlink{classutilities_1_1miscellaneous_1_1misc_a9b5ff2b3036d8a1a2e3bacb1d25e2785}{00117}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous_1_1misc_a9b5ff2b3036d8a1a2e3bacb1d25e2785}{check\_absolute\_path\_to\_store\_results}(path\_to\_file,filename):
+00118         \textcolor{keywordflow}{if} path\_to\_file.find(filename):
+00119             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00120         \textcolor{keywordflow}{else}:
+00121             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_a96b7b4aa054c6c8eb7571314ec8edbc7}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!check\+\_\+filename\+\_\+format@{check\+\_\+filename\+\_\+format}}
+\index{check\+\_\+filename\+\_\+format@{check\+\_\+filename\+\_\+format}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{check\+\_\+filename\+\_\+format(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous.\+misc.\+check\+\_\+filename\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_a96b7b4aa054c6c8eb7571314ec8edbc7}
+
+
+Method to determine if a filename has the D\+D-\/\+M\+M-\/\+Y\+Y-\/\+H\+H-\/\+M\+M-\/\+S\+S-\/u\+S.\+txt format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ A filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the path to the desired location can be found; Else, return boolean False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00131}{131} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_l00131}{}\hyperlink{classutilities_1_1miscellaneous_1_1misc_a96b7b4aa054c6c8eb7571314ec8edbc7}{00131}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous_1_1misc_a96b7b4aa054c6c8eb7571314ec8edbc7}{check\_filename\_format}(filename):
+00132         filename\_wo\_extn, file\_extn = os.path.splitext(filename)
+00133         \textcolor{keywordflow}{if} \textcolor{stringliteral}{".txt"} != file\_extn:
+00134             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00135         tokens = filename\_wo\_extn.split(\textcolor{stringliteral}{"-"})
+00136         \textcolor{stringliteral}{"""}
+00137 \textcolor{stringliteral}{            Check against the format: DD-MM-YY-HH-MM-SS-uS[.txt].}
+00138 \textcolor{stringliteral}{            tokens[0] = DD/Day}
+00139 \textcolor{stringliteral}{            tokens[1] = MM/Month}
+00140 \textcolor{stringliteral}{            tokens[2] = YY/Year}
+00141 \textcolor{stringliteral}{            tokens[3] = HH/Hour}
+00142 \textcolor{stringliteral}{            tokens[4] = MM/Minute}
+00143 \textcolor{stringliteral}{            tokens[5] = [SS/Second]}
+00144 \textcolor{stringliteral}{            tokens[6] = [uS/Microsecond]}
+00145 \textcolor{stringliteral}{        """}
+00146         \textcolor{keywordflow}{if} 7 != len(tokens):
+00147             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00148         \textcolor{keywordflow}{if} 1 > int(tokens[0]):
+00149             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00150         \textcolor{keywordflow}{if} 2 == int(tokens[1]) \textcolor{keywordflow}{and} 29 < int(tokens[0]) \textcolor{keywordflow}{and} calendar.isleap(int(tokens[2])):
+00151             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00152         \textcolor{keywordflow}{if} 2 == int(tokens[1]) \textcolor{keywordflow}{and} 28 < int(tokens[0]) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} calendar.isleap(int(tokens[2])):
+00153             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00154         \textcolor{keywordflow}{if} generate\_filename\_tester.is\_30\_day\_month(tokens[1]) \textcolor{keywordflow}{and} 30 < int(tokens[0]):
+00155             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00156         \textcolor{keywordflow}{if} generate\_filename\_tester.is\_31\_day\_month(tokens[1]) \textcolor{keywordflow}{and} 31 < int(tokens[0]):
+00157             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00158         \textcolor{keywordflow}{if} 1 > int(tokens[1]):
+00159             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00160         \textcolor{keywordflow}{if} 12 < int(tokens[1]):
+00161             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00162         \textcolor{keywordflow}{if} 2000 > int(tokens[2]):
+00163             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00164         \textcolor{keywordflow}{if} 0 > int(tokens[3]):
+00165             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00166         \textcolor{keywordflow}{if} 23 < int(tokens[3]):
+00167             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00168         \textcolor{keywordflow}{if} 0 > int(tokens[4]):
+00169             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00170         \textcolor{keywordflow}{if} 59 < int(tokens[4]):
+00171             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00172         \textcolor{keywordflow}{if} 0 > int(tokens[5]):
+00173             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00174         \textcolor{keywordflow}{if} 59 < int(tokens[5]):
+00175             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00176         \textcolor{keywordflow}{if} 0 > int(tokens[6]):
+00177             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00178         \textcolor{keywordflow}{if} 999999 < int(tokens[6]):
+00179             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00180         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_ab675e34a1a463f5a6aac272debe372ae}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results@{find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results}}
+\index{find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results@{find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous.\+misc.\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_ab675e34a1a463f5a6aac272debe372ae}
+
+
+Method to determine where to store the results of the experimental, simulation, verification, or testing runs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ A filename that has the D\+D-\/\+M\+M-\/\+Y\+Y-\/\+H\+H-\/\+M\+M-\/\+S\+S-\/u\+S.\+txt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string representing the absolute path of the location. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00188}{188} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_l00188}{}\hyperlink{classutilities_1_1miscellaneous_1_1misc_ab675e34a1a463f5a6aac272debe372ae}{00188}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous_1_1misc_ab675e34a1a463f5a6aac272debe372ae}{find\_desired\_location\_for\_results}(filename):
+00189         \textcolor{comment}{# Does filename have the DD-MM-YY-HH-MM-SS-uS.txt format?}
+00190         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} misc.check\_filename\_format(filename):
+00191             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"'filename' needs to have the format: DD-MM-YY-HH-MM-SS-uS.txt."}
+00192         \textcolor{comment}{# Remove file extension, and tokenize the filename.}
+00193         filename\_wo\_extn, file\_extn = os.path.splitext(filename)
+00194         tokens = filename\_wo\_extn.split(\textcolor{stringliteral}{"-"})
+00195         \textcolor{stringliteral}{"""}
+00196 \textcolor{stringliteral}{            In the repository to store results from experiments,}
+00197 \textcolor{stringliteral}{                simulations, and verification runs, and testing runs,}
+00198 \textcolor{stringliteral}{                classify the files by subdirectories according to year}
+00199 \textcolor{stringliteral}{                first before the month.}
+00200 \textcolor{stringliteral}{        """}
+00201         \textcolor{comment}{# Does a directory for the specified year exists?}
+00202         path\_to\_results\_file = misc.get\_absolute\_path\_to\_store\_results() +  \textcolor{stringliteral}{"/"} + tokens[2]
+00203         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isdir(path\_to\_results\_file):
+00204             \textcolor{comment}{# Creat the directory for the specified year.}
+00205             os.mkdir(path\_to\_results\_file)
+00206         \textcolor{comment}{# Does a directory for the specified month exists?}
+00207         path\_to\_results\_file = path\_to\_results\_file + \textcolor{stringliteral}{"/"} + month\_name[int(tokens[1])].lower()
+00208         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isdir(path\_to\_results\_file):
+00209             \textcolor{comment}{# Creat the directory for the specified month.}
+00210             os.mkdir(path\_to\_results\_file)
+00211         path\_to\_results\_file = path\_to\_results\_file + \textcolor{stringliteral}{"/"} + filename
+00212         \textcolor{comment}{#print("path\_to\_results\_file:",path\_to\_results\_file,"=")}
+00213         \textcolor{keywordflow}{return} path\_to\_results\_file
+\end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_a17714d8ce76a7c4f04256b37b9938c15}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results@{get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}}
+\index{get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results@{get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous.\+misc.\+get\+\_\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_a17714d8ce76a7c4f04256b37b9938c15}
+
+
+Method to get the absolute path to store results. 
+
+It is an accessor method. 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Nothing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the absolute path to store results. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00104}{104} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_l00104}{}\hyperlink{classutilities_1_1miscellaneous_1_1misc_a17714d8ce76a7c4f04256b37b9938c15}{00104}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous_1_1misc_a17714d8ce76a7c4f04256b37b9938c15}{get\_absolute\_path\_to\_store\_results}():
+00105         \textcolor{keywordflow}{return} misc.absolute\_path\_to\_store\_results
+\end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_ad364ae88435c58955e26fcc22b1cabb9}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!store\+\_\+results@{store\+\_\+results}}
+\index{store\+\_\+results@{store\+\_\+results}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{store\+\_\+results(path\+\_\+to\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous.\+misc.\+store\+\_\+results (
+\begin{DoxyParamCaption}
+\item[{}]{path\+\_\+to\+\_\+file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_ad364ae88435c58955e26fcc22b1cabb9}
+
+
+Method to store the results file in the specified absolute path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+\_\+to\+\_\+file} & -\/ A path to store the results file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a file object for the results file. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00220}{220} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_l00220}{}\hyperlink{classutilities_1_1miscellaneous_1_1misc_ad364ae88435c58955e26fcc22b1cabb9}{00220}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous_1_1misc_ad364ae88435c58955e26fcc22b1cabb9}{store\_results}(path\_to\_file):
+00221         \textcolor{keywordflow}{if} path\_to\_file \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+00222             \textcolor{keywordflow}{return} open(path\_to\_file, \textcolor{stringliteral}{'w+'})
+00223         \textcolor{keywordflow}{else}:
+00224             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classutilities_1_1miscellaneous_1_1misc_a27fd16369fd0995d7494ff4741de5b91}{}\index{utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}!absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results@{absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}}
+\index{absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results@{absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}!utilities\+::miscellaneous\+::misc@{utilities\+::miscellaneous\+::misc}}
+\subsubsection[{absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results}]{\setlength{\rightskip}{0pt plus 5cm}string utilities.\+miscellaneous.\+misc.\+absolute\+\_\+path\+\_\+to\+\_\+store\+\_\+results = \char`\"{}/Users/zhiyang/Documents/ricerca/risultati\+\_\+sperimentali/std-\/cell-\/library-\/characterization\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous_1_1misc_a27fd16369fd0995d7494ff4741de5b91}
+
+
+Definition at line \hyperlink{miscellaneous_8py_source_l00096}{96} of file \hyperlink{miscellaneous_8py_source}{miscellaneous.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{miscellaneous_8py}{miscellaneous.\+py}\end{DoxyCompactItemize}

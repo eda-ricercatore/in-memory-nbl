@@ -1,0 +1,472 @@
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester}{}\section{utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester Class Reference}
+\label{classutilities_1_1miscellaneous__tester_1_1misc__tester}\index{utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester@{utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester}}
+
+
+Module with methods that perform miscellaneous tasks.  
+
+
+
+
+Collaboration diagram for utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{dc/de9/classutilities_1_1miscellaneous__tester_1_1misc__tester__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_a885a28d6852ecd76a814e6338ddfa0b3}{test\+\_\+check\+\_\+filename\+\_\+format} ()
+\begin{DoxyCompactList}\small\item\em ========================================================= Method to test the methods that perform file I/\+O operations with an invalid file. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_afc179d9fd7be9c37989dd86340bb40f7}{test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results} ()
+\begin{DoxyCompactList}\small\item\em ========================================================= Method to test the miscellaneous method that determines where to store the results of experimental, simulation, verification, and testing runs. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_a8a269b66a82f93ee9683ebbf8974ba24}{test\+\_\+miscellaneous\+\_\+methods} ()
+\begin{DoxyCompactList}\small\item\em ========================================================= Method to test the miscellaneous methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module with methods that perform miscellaneous tasks. 
+
+
+
+Definition at line \hyperlink{miscellaneous__tester_8py_source_l00095}{95} of file \hyperlink{miscellaneous__tester_8py_source}{miscellaneous\+\_\+tester.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester_a885a28d6852ecd76a814e6338ddfa0b3}{}\index{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester@{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester}!test\+\_\+check\+\_\+filename\+\_\+format@{test\+\_\+check\+\_\+filename\+\_\+format}}
+\index{test\+\_\+check\+\_\+filename\+\_\+format@{test\+\_\+check\+\_\+filename\+\_\+format}!utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester@{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester}}
+\subsubsection[{test\+\_\+check\+\_\+filename\+\_\+format()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester.\+test\+\_\+check\+\_\+filename\+\_\+format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous__tester_1_1misc__tester_a885a28d6852ecd76a814e6338ddfa0b3}
+
+
+========================================================= Method to test the methods that perform file I/\+O operations with an invalid file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Nothing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous__tester_8py_source_l00103}{103} of file \hyperlink{miscellaneous__tester_8py_source}{miscellaneous\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester_l00103}{}\hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_a885a28d6852ecd76a814e6338ddfa0b3}{00103}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_a885a28d6852ecd76a814e6338ddfa0b3}{test\_check\_filename\_format}():
+00104         print(\textcolor{stringliteral}{" Testing the filename format checker."})
+00105         prompt = \textcolor{stringliteral}{"  ... Test: incorrect file extension is '.txt'.       \{\}"}
+00106         statistical\_analysis.increment\_number\_test\_cases\_used()
+00107         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"tyuw.iew"}):
+00108             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00109         \textcolor{keywordflow}{else}:
+00110             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00111             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00112         prompt = \textcolor{stringliteral}{"  ... Test: filename no file extension has 6 tokens.  \{\}"}
+00113         statistical\_analysis.increment\_number\_test\_cases\_used()
+00114         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"HH-MM-SS-uS.txt"}):
+00115             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00116         \textcolor{keywordflow}{else}:
+00117             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00118             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00119         prompt = \textcolor{stringliteral}{"  ... Test: filename with -ve DD/day.         \{\}"}
+00120         statistical\_analysis.increment\_number\_test\_cases\_used()
+00121         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"-5-MM-YY-HH-MM-SS-uS.txt"}):
+00122             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00123         \textcolor{keywordflow}{else}:
+00124             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00125             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00126         prompt = \textcolor{stringliteral}{"  ... Test: filename with DD/day >29, Feb.        \{\}"}
+00127         statistical\_analysis.increment\_number\_test\_cases\_used()
+00128         \textcolor{stringliteral}{"""}
+00129 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00130 \textcolor{stringliteral}{                would be thrown.}
+00131 \textcolor{stringliteral}{        """}
+00132         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"35-2-2016-00-00-00-00.txt"}):
+00133             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00134         \textcolor{keywordflow}{else}:
+00135             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00136             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00137         prompt = \textcolor{stringliteral}{"  ... Test: filename with DD/day=29, Feb, leap year.  \{\}"}
+00138         statistical\_analysis.increment\_number\_test\_cases\_used()
+00139         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"29-2-2016-00-00-00-00.txt"}):
+00140             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00141             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00142         \textcolor{keywordflow}{else}:
+00143             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00144         prompt = \textcolor{stringliteral}{"  ... Test: filename with DD/day=28, Feb, not leap year.  \{\}"}
+00145         statistical\_analysis.increment\_number\_test\_cases\_used()
+00146         \textcolor{stringliteral}{"""}
+00147 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00148 \textcolor{stringliteral}{                would be thrown.}
+00149 \textcolor{stringliteral}{        """}
+00150         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"28-2-2017-00-00-00-00.txt"}):
+00151             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00152             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00153         \textcolor{keywordflow}{else}:
+00154             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00155         prompt = \textcolor{stringliteral}{"  ... Test: filename with DD/day = 34.            \{\}"}
+00156         statistical\_analysis.increment\_number\_test\_cases\_used()
+00157         \textcolor{stringliteral}{"""}
+00158 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00159 \textcolor{stringliteral}{                would be thrown.}
+00160 \textcolor{stringliteral}{        """}
+00161         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"34-6-2017-00-00-00-00.txt"}):
+00162             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00163             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00164         \textcolor{keywordflow}{else}:
+00165             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00166         prompt = \textcolor{stringliteral}{"  ... Test: filename with DD/day=31, 31 day mth.      \{\}"}
+00167         statistical\_analysis.increment\_number\_test\_cases\_used()
+00168         \textcolor{stringliteral}{"""}
+00169 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00170 \textcolor{stringliteral}{                would be thrown.}
+00171 \textcolor{stringliteral}{        """}
+00172         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"31-7-2017-00-00-00-00.txt"}):
+00173             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00174             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00175         \textcolor{keywordflow}{else}:
+00176             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00177         prompt = \textcolor{stringliteral}{"  ... Test: filename with DD/day=30, 30 day mth.      \{\}"}
+00178         statistical\_analysis.increment\_number\_test\_cases\_used()
+00179         \textcolor{stringliteral}{"""}
+00180 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00181 \textcolor{stringliteral}{                would be thrown.}
+00182 \textcolor{stringliteral}{        """}
+00183         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30-9-2017-00-00-00-00.txt"}):
+00184             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00185             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00186         \textcolor{keywordflow}{else}:
+00187             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00188         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/month = 0.           \{\}"}
+00189         statistical\_analysis.increment\_number\_test\_cases\_used()
+00190         \textcolor{stringliteral}{"""}
+00191 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00192 \textcolor{stringliteral}{                would be thrown.}
+00193 \textcolor{stringliteral}{        """}
+00194         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30-0-2017-00-00-00-00.txt"}):
+00195             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00196         \textcolor{keywordflow}{else}:
+00197             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00198             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00199         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/month = -4.          \{\}"}
+00200         statistical\_analysis.increment\_number\_test\_cases\_used()
+00201         \textcolor{stringliteral}{"""}
+00202 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00203 \textcolor{stringliteral}{                would be thrown.}
+00204 \textcolor{stringliteral}{        """}
+00205         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30--4-2017-00-00-00-00.txt"}):
+00206             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00207         \textcolor{keywordflow}{else}:
+00208             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00209             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00210         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/month = 15.          \{\}"}
+00211         statistical\_analysis.increment\_number\_test\_cases\_used()
+00212         \textcolor{stringliteral}{"""}
+00213 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00214 \textcolor{stringliteral}{                would be thrown.}
+00215 \textcolor{stringliteral}{        """}
+00216         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30-15-2017-00-00-00-00.txt"}):
+00217             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00218         \textcolor{keywordflow}{else}:
+00219             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00220             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00221         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/month = 9.           \{\}"}
+00222         statistical\_analysis.increment\_number\_test\_cases\_used()
+00223         \textcolor{stringliteral}{"""}
+00224 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00225 \textcolor{stringliteral}{                would be thrown.}
+00226 \textcolor{stringliteral}{        """}
+00227         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30-9-2017-00-00-00-00.txt"}):
+00228             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00229             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00230         \textcolor{keywordflow}{else}:
+00231             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00232         prompt = \textcolor{stringliteral}{"  ... Test: filename with YY/year = 1582.         \{\}"}
+00233         statistical\_analysis.increment\_number\_test\_cases\_used()
+00234         \textcolor{stringliteral}{"""}
+00235 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00236 \textcolor{stringliteral}{                would be thrown.}
+00237 \textcolor{stringliteral}{        """}
+00238         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30-11-1582-00-00-00-00.txt"}):
+00239             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00240         \textcolor{keywordflow}{else}:
+00241             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00242             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00243         prompt = \textcolor{stringliteral}{"  ... Test: filename with YY/year = 2083.         \{\}"}
+00244         statistical\_analysis.increment\_number\_test\_cases\_used()
+00245         \textcolor{stringliteral}{"""}
+00246 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00247 \textcolor{stringliteral}{                would be thrown.}
+00248 \textcolor{stringliteral}{        """}
+00249         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"2-2-2083-00-00-00-00.txt"}):
+00250             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00251             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00252         \textcolor{keywordflow}{else}:
+00253             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00254         prompt = \textcolor{stringliteral}{"  ... Test: filename with HH/hour = -3.           \{\}"}
+00255         statistical\_analysis.increment\_number\_test\_cases\_used()
+00256         \textcolor{stringliteral}{"""}
+00257 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00258 \textcolor{stringliteral}{                would be thrown.}
+00259 \textcolor{stringliteral}{        """}
+00260         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"30-5-2015--3-00-00-00.txt"}):
+00261             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00262         \textcolor{keywordflow}{else}:
+00263             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00264             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00265         prompt = \textcolor{stringliteral}{"  ... Test: filename with HH/hour = 25.           \{\}"}
+00266         statistical\_analysis.increment\_number\_test\_cases\_used()
+00267         \textcolor{stringliteral}{"""}
+00268 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00269 \textcolor{stringliteral}{                would be thrown.}
+00270 \textcolor{stringliteral}{        """}
+00271         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"3-5-2017-25-00-00-00.txt"}):
+00272             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00273         \textcolor{keywordflow}{else}:
+00274             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00275             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00276         prompt = \textcolor{stringliteral}{"  ... Test: filename with HH/hour = 17.           \{\}"}
+00277         statistical\_analysis.increment\_number\_test\_cases\_used()
+00278         \textcolor{stringliteral}{"""}
+00279 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00280 \textcolor{stringliteral}{                would be thrown.}
+00281 \textcolor{stringliteral}{        """}
+00282         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"12-1-2013-17-00-00-00.txt"}):
+00283             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00284             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00285         \textcolor{keywordflow}{else}:
+00286             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00287         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/minute = -8.         \{\}"}
+00288         statistical\_analysis.increment\_number\_test\_cases\_used()
+00289         \textcolor{stringliteral}{"""}
+00290 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00291 \textcolor{stringliteral}{                would be thrown.}
+00292 \textcolor{stringliteral}{        """}
+00293         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"7-4-2012-2--8-00-00.txt"}):
+00294             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00295         \textcolor{keywordflow}{else}:
+00296             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00297             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00298         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/minute = 73.         \{\}"}
+00299         statistical\_analysis.increment\_number\_test\_cases\_used()
+00300         \textcolor{stringliteral}{"""}
+00301 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00302 \textcolor{stringliteral}{                would be thrown.}
+00303 \textcolor{stringliteral}{        """}
+00304         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-73-00-00.txt"}):
+00305             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00306         \textcolor{keywordflow}{else}:
+00307             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00308             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00309         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/minute = 59.         \{\}"}
+00310         statistical\_analysis.increment\_number\_test\_cases\_used()
+00311         \textcolor{stringliteral}{"""}
+00312 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00313 \textcolor{stringliteral}{                would be thrown.}
+00314 \textcolor{stringliteral}{        """}
+00315         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-59-00-00.txt"}):
+00316             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00317             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00318         \textcolor{keywordflow}{else}:
+00319             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00320         prompt = \textcolor{stringliteral}{"  ... Test: filename with MM/minute = 0.          \{\}"}
+00321         statistical\_analysis.increment\_number\_test\_cases\_used()
+00322         \textcolor{stringliteral}{"""}
+00323 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00324 \textcolor{stringliteral}{                would be thrown.}
+00325 \textcolor{stringliteral}{        """}
+00326         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-0-00-00.txt"}):
+00327             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00328             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00329         \textcolor{keywordflow}{else}:
+00330             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00331         prompt = \textcolor{stringliteral}{"  ... Test: filename with SS/second = -4.         \{\}"}
+00332         statistical\_analysis.increment\_number\_test\_cases\_used()
+00333         \textcolor{stringliteral}{"""}
+00334 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00335 \textcolor{stringliteral}{                would be thrown.}
+00336 \textcolor{stringliteral}{        """}
+00337         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8--4-00.txt"}):
+00338             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00339         \textcolor{keywordflow}{else}:
+00340             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00341             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00342         prompt = \textcolor{stringliteral}{"  ... Test: filename with SS/second = 81.         \{\}"}
+00343         statistical\_analysis.increment\_number\_test\_cases\_used()
+00344         \textcolor{stringliteral}{"""}
+00345 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00346 \textcolor{stringliteral}{                would be thrown.}
+00347 \textcolor{stringliteral}{        """}
+00348         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8-81-00.txt"}):
+00349             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00350         \textcolor{keywordflow}{else}:
+00351             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00352             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00353         prompt = \textcolor{stringliteral}{"  ... Test: filename with SS/second = 36.         \{\}"}
+00354         statistical\_analysis.increment\_number\_test\_cases\_used()
+00355         \textcolor{stringliteral}{"""}
+00356 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00357 \textcolor{stringliteral}{                would be thrown.}
+00358 \textcolor{stringliteral}{        """}
+00359         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8-36-00.txt"}):
+00360             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00361             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00362         \textcolor{keywordflow}{else}:
+00363             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00364         prompt = \textcolor{stringliteral}{"  ... Test: filename with uS/microsecond = -129.      \{\}"}
+00365         statistical\_analysis.increment\_number\_test\_cases\_used()
+00366         \textcolor{stringliteral}{"""}
+00367 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00368 \textcolor{stringliteral}{                would be thrown.}
+00369 \textcolor{stringliteral}{        """}
+00370         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8-4--129.txt"}):
+00371             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00372         \textcolor{keywordflow}{else}:
+00373             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00374             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00375         prompt = \textcolor{stringliteral}{"  ... Test: filename with uS/microsecond = 16534785929.   \{\}"}
+00376         statistical\_analysis.increment\_number\_test\_cases\_used()
+00377         \textcolor{stringliteral}{"""}
+00378 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00379 \textcolor{stringliteral}{                would be thrown.}
+00380 \textcolor{stringliteral}{        """}
+00381         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8-32-16534785929.txt"}):
+00382             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00383         \textcolor{keywordflow}{else}:
+00384             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00385             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00386         prompt = \textcolor{stringliteral}{"  ... Test: filename with uS/microsecond = 0.     \{\}"}
+00387         statistical\_analysis.increment\_number\_test\_cases\_used()
+00388         \textcolor{stringliteral}{"""}
+00389 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00390 \textcolor{stringliteral}{                would be thrown.}
+00391 \textcolor{stringliteral}{        """}
+00392         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8-32-0.txt"}):
+00393             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00394             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00395         \textcolor{keywordflow}{else}:
+00396             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00397         prompt = \textcolor{stringliteral}{"  ... Test: filename with uS/microsecond = 999999.    \{\}"}
+00398         statistical\_analysis.increment\_number\_test\_cases\_used()
+00399         \textcolor{stringliteral}{"""}
+00400 \textcolor{stringliteral}{            All fields/tokens need to be numbers, else an exception}
+00401 \textcolor{stringliteral}{                would be thrown.}
+00402 \textcolor{stringliteral}{        """}
+00403         \textcolor{keywordflow}{if} misc.check\_filename\_format(\textcolor{stringliteral}{"25-1-2020-5-8-51-999999.txt"}):
+00404             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00405             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00406         \textcolor{keywordflow}{else}:
+00407             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+\end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester_afc179d9fd7be9c37989dd86340bb40f7}{}\index{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester@{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester}!test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results@{test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results}}
+\index{test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results@{test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results}!utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester@{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester}}
+\subsubsection[{test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester.\+test\+\_\+find\+\_\+desired\+\_\+location\+\_\+for\+\_\+results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous__tester_1_1misc__tester_afc179d9fd7be9c37989dd86340bb40f7}
+
+
+========================================================= Method to test the miscellaneous method that determines where to store the results of experimental, simulation, verification, and testing runs. 
+
+This does not correct check if the results file is placed in the correct subdirectory of the results repository. \subparagraph*{T\+O B\+E C\+O\+M\+P\+L\+E\+T\+E\+D}
+
+Test if the subdirectory is correct. This is busywork. 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Nothing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string representing the location to store the aforementioned results. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous__tester_8py_source_l00421}{421} of file \hyperlink{miscellaneous__tester_8py_source}{miscellaneous\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester_l00421}{}\hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_afc179d9fd7be9c37989dd86340bb40f7}{00421}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_afc179d9fd7be9c37989dd86340bb40f7}{test\_find\_desired\_location\_for\_results}():
+00422         incorrect\_format\_result = \textcolor{stringliteral}{"'filename' needs to have the format: DD-MM-YY-HH-MM-SS-uS.txt."}
+00423         print(\textcolor{stringliteral}{"==   Test: test\_find\_desired\_location\_for\_results()."})
+00424         test\_filename = \textcolor{stringliteral}{"25-3-2010-5-8-51-9994073289.dwq"}
+00425         results\_location = misc.find\_desired\_location\_for\_results(test\_filename)
+00426         prompt = \textcolor{stringliteral}{"  ... Test: filename is 25-3-2010-5-8-51-9994073289.dwq.  \{\}"}
+00427         statistical\_analysis.increment\_number\_test\_cases\_used()
+00428         \textcolor{keywordflow}{if} misc.find\_desired\_location\_for\_results(test\_filename) == incorrect\_format\_result:
+00429             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00430             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00431         \textcolor{keywordflow}{else}:
+00432             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00433         print(\textcolor{stringliteral}{"==   Test: test\_find\_desired\_location\_for\_results()."})
+00434         test\_filename = \textcolor{stringliteral}{"25-3-2010-5-8-51-9407.txt"}
+00435         results\_location = misc.find\_desired\_location\_for\_results(test\_filename)
+00436         prompt = \textcolor{stringliteral}{"  ... Test: filename 25-3-2010-5-8-51-9407.txt included.  \{\}"}
+00437         statistical\_analysis.increment\_number\_test\_cases\_used()
+00438         \textcolor{keywordflow}{if} misc.check\_absolute\_path\_to\_store\_results(results\_location,test\_filename):
+00439             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00440             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00441         \textcolor{keywordflow}{else}:
+00442             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00443         prompt = \textcolor{stringliteral}{"  ... Test: 25-3-2010-5-8-51-9407.txt, correct path.  \{\}"}
+00444         statistical\_analysis.increment\_number\_test\_cases\_used()
+00445         \textcolor{keywordflow}{if} misc.get\_absolute\_path\_to\_store\_results() \textcolor{keywordflow}{in} results\_location:
+00446             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00447             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00448         \textcolor{keywordflow}{else}:
+00449             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00450             \textcolor{stringliteral}{"""}
+00451 \textcolor{stringliteral}{            print("results\_location:",results\_location,"=")}
+00452 \textcolor{stringliteral}{            print("misc.get\_absolute\_path\_to\_store\_results():",misc.get\_absolute\_path\_to\_store\_results(),"=
+      ")}
+00453 \textcolor{stringliteral}{            print(results\_location.find(misc.get\_absolute\_path\_to\_store\_results()))}
+00454 \textcolor{stringliteral}{            """}
+00455         f\_obj = misc.store\_results(results\_location)
+00456         f\_obj.write(\textcolor{stringliteral}{"Storage of experimental, simulation, verification, and testing results work."})
+00457         file\_io\_operations.close\_file\_object(f\_obj)
+\end{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester_a8a269b66a82f93ee9683ebbf8974ba24}{}\index{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester@{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester}!test\+\_\+miscellaneous\+\_\+methods@{test\+\_\+miscellaneous\+\_\+methods}}
+\index{test\+\_\+miscellaneous\+\_\+methods@{test\+\_\+miscellaneous\+\_\+methods}!utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester@{utilities\+::miscellaneous\+\_\+tester\+::misc\+\_\+tester}}
+\subsubsection[{test\+\_\+miscellaneous\+\_\+methods()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+miscellaneous\+\_\+tester.\+misc\+\_\+tester.\+test\+\_\+miscellaneous\+\_\+methods (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1miscellaneous__tester_1_1misc__tester_a8a269b66a82f93ee9683ebbf8974ba24}
+
+
+========================================================= Method to test the miscellaneous methods. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & Nothing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{miscellaneous__tester_8py_source_l00464}{464} of file \hyperlink{miscellaneous__tester_8py_source}{miscellaneous\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1miscellaneous__tester_1_1misc__tester_l00464}{}\hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_a8a269b66a82f93ee9683ebbf8974ba24}{00464}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1miscellaneous__tester_1_1misc__tester_a8a269b66a82f93ee9683ebbf8974ba24}{test\_miscellaneous\_methods}():
+00465         print(\textcolor{stringliteral}{""})
+00466         print(\textcolor{stringliteral}{""})
+00467         print(\textcolor{stringliteral}{"==   Testing class: misc\_tester."})
+00468         misc\_tester.test\_check\_filename\_format()
+00469         misc\_tester.test\_find\_desired\_location\_for\_results()
+00470 \end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{miscellaneous__tester_8py}{miscellaneous\+\_\+tester.\+py}\end{DoxyCompactItemize}

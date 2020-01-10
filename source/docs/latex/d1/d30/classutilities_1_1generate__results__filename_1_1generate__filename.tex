@@ -1,0 +1,137 @@
+\hypertarget{classutilities_1_1generate__results__filename_1_1generate__filename}{}\section{utilities.\+generate\+\_\+results\+\_\+filename.\+generate\+\_\+filename Class Reference}
+\label{classutilities_1_1generate__results__filename_1_1generate__filename}\index{utilities.\+generate\+\_\+results\+\_\+filename.\+generate\+\_\+filename@{utilities.\+generate\+\_\+results\+\_\+filename.\+generate\+\_\+filename}}
+
+
+Collaboration diagram for utilities.\+generate\+\_\+results\+\_\+filename.\+generate\+\_\+filename\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{de/d27/classutilities_1_1generate__results__filename_1_1generate__filename__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}{create\+\_\+filename} ()
+\begin{DoxyCompactList}\small\item\em Method to generate a filename for the results of the experimental/simulation run, or execution of the automated regression testing (for software) or automated regression verification. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}{check\+\_\+if\+\_\+help\+\_\+wanted} ()
+\begin{DoxyCompactList}\small\item\em Method to determine if the user wants help, and conequently display the user manual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line \hyperlink{generate__results__filename_8py_source_l00106}{106} of file \hyperlink{generate__results__filename_8py_source}{generate\+\_\+results\+\_\+filename.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}{}\index{utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename@{utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename}!check\+\_\+if\+\_\+help\+\_\+wanted@{check\+\_\+if\+\_\+help\+\_\+wanted}}
+\index{check\+\_\+if\+\_\+help\+\_\+wanted@{check\+\_\+if\+\_\+help\+\_\+wanted}!utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename@{utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename}}
+\subsubsection[{check\+\_\+if\+\_\+help\+\_\+wanted()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+generate\+\_\+results\+\_\+filename.\+generate\+\_\+filename.\+check\+\_\+if\+\_\+help\+\_\+wanted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}
+
+
+Method to determine if the user wants help, and conequently display the user manual. 
+
+O(n) method, with respect to the number of input arguments. 
+
+Definition at line \hyperlink{generate__results__filename_8py_source_l00148}{148} of file \hyperlink{generate__results__filename_8py_source}{generate\+\_\+results\+\_\+filename.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename_1_1generate__filename_l00148}{}\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}{00148}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9ea9390694e2e9707784bd8f7e8b2373}{check\_if\_help\_wanted}():
+00149         \textcolor{comment}{# If user wants to read the brief user manual,}
+00150         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"-h"} \textcolor{keywordflow}{in} sys.argv:
+00151             \textcolor{comment}{# Display the user manual and exit.}
+00152             print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00153             print(\textcolor{stringliteral}{"==>  This script generates a filename based on."})
+00154             print(\textcolor{stringliteral}{" the date and time."})
+00155             print(\textcolor{stringliteral}{""})
+00156             print(\textcolor{stringliteral}{"This script can be executed as follows:"})
+00157             print(\textcolor{stringliteral}{"./generate\_results\_filename.py [-h]"})
+00158             print(\textcolor{stringliteral}{""})
+00159             print(\textcolor{stringliteral}{"An optional '-h' flag can be used as any input argument"})
+00160             print(\textcolor{stringliteral}{" to show the brief user manual and exit."})
+00161             print(\textcolor{stringliteral}{""})
+00162             print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00163 
+00164 
+00165 
+00166 
+00167 
+00168 
+00169 
+00170 
+00171 
+00172 
+00173 
+00174 
+00175 
+\end{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}{}\index{utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename@{utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename}!create\+\_\+filename@{create\+\_\+filename}}
+\index{create\+\_\+filename@{create\+\_\+filename}!utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename@{utilities\+::generate\+\_\+results\+\_\+filename\+::generate\+\_\+filename}}
+\subsubsection[{create\+\_\+filename()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+generate\+\_\+results\+\_\+filename.\+generate\+\_\+filename.\+create\+\_\+filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}
+
+
+Method to generate a filename for the results of the experimental/simulation run, or execution of the automated regression testing (for software) or automated regression verification. 
+
+\begin{DoxyReturn}{Returns}
+-\/ List of input arguments to the program. O(1) method. \begin{DoxyVerb}    Generate filename to store experimental/simulation
+results, from characterizing the standard cell
+library that uses noise-based logic
+\cite{SaltyCrane2014}
+\cite[datetime module, \S8.1.4 datetime Objects, now() function]{DrakeJr2016b}.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{generate__results__filename_8py_source_l00114}{114} of file \hyperlink{generate__results__filename_8py_source}{generate\+\_\+results\+\_\+filename.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1generate__results__filename_1_1generate__filename_l00114}{}\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}{00114}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1generate__results__filename_1_1generate__filename_a9856498ab965f56a941ff46415b48906}{create\_filename}():
+00115         \textcolor{stringliteral}{"""}
+00116 \textcolor{stringliteral}{            Generate filename to store experimental/simulation}
+00117 \textcolor{stringliteral}{                results, from characterizing the standard cell}
+00118 \textcolor{stringliteral}{                library that uses noise-based logic}
+00119 \textcolor{stringliteral}{                \(\backslash\)cite\{SaltyCrane2014\}}
+00120 \textcolor{stringliteral}{                \(\backslash\)cite[datetime module, \(\backslash\)S8.1.4 datetime Objects, now() function]\{DrakeJr2016b\}.}
+00121 \textcolor{stringliteral}{        """}
+00122         now = datetime.datetime.now()
+00123         \textcolor{stringliteral}{"""}
+00124 \textcolor{stringliteral}{        print("Current date and time using instance attributes:")}
+00125 \textcolor{stringliteral}{        print("Current year: %d" % now.year)}
+00126 \textcolor{stringliteral}{        print("Current month: %d" % now.month)}
+00127 \textcolor{stringliteral}{        print("Current day: %d" % now.day)}
+00128 \textcolor{stringliteral}{        print("Current hour: %d" % now.hour)}
+00129 \textcolor{stringliteral}{        print("Current minute: %d" % now.minute)}
+00130 \textcolor{stringliteral}{        print("Current second: %d" % now.second)}
+00131 \textcolor{stringliteral}{        print("Current microsecond: %d" % now.microsecond)}
+00132 \textcolor{stringliteral}{        print("")}
+00133 \textcolor{stringliteral}{        print("Current date and time using strftime:")}
+00134 \textcolor{stringliteral}{        print(now.strftime("%Y-%m-%d %H:%M"))}
+00135 \textcolor{stringliteral}{        print("")}
+00136 \textcolor{stringliteral}{        print("Current date and time using isoformat:")}
+00137 \textcolor{stringliteral}{        print(now.isoformat())}
+00138 \textcolor{stringliteral}{        print("")}
+00139 \textcolor{stringliteral}{        """}
+00140         current\_time = str(now.day) + \textcolor{stringliteral}{"-"} + str(now.month) + \textcolor{stringliteral}{"-"} + str(now.year) + \textcolor{stringliteral}{"-"} + str(now.hour) + \textcolor{stringliteral}{"-
+      "}  + str(now.minute) + \textcolor{stringliteral}{"-"}  + str(now.second) + \textcolor{stringliteral}{"-"}  + str(now.microsecond) + \textcolor{stringliteral}{".txt"}
+00141         \textcolor{comment}{#print(current\_time)}
+00142         \textcolor{keywordflow}{return} current\_time
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{generate__results__filename_8py}{generate\+\_\+results\+\_\+filename.\+py}\end{DoxyCompactItemize}

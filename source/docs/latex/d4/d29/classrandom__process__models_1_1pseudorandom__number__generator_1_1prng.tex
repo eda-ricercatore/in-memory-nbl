@@ -1,0 +1,156 @@
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng}{}\section{random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng Class Reference}
+\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng}\index{random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng@{random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng}}
+
+
+Import Custom Python Packages and Modules.  
+
+
+
+
+Collaboration diagram for random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{d0/d0d/classrandom__process__models_1_1pseudorandom__number__generator_1_1prng__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}{psl\+\_\+uniform}
+\begin{DoxyCompactList}\small\item\em Method to generate a value for a random signal/process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a82f57253641d85b4e2efba66fac47066}{bv\+\_\+signal} = \char`\"{}bv\char`\"{}
+\item 
+string \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a6962172d81af8d6c172ba64e33eb0d55}{rtw\+\_\+signal} = \char`\"{}rtw\char`\"{}
+\item 
+float \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a90c8ad6b1e19cfb7a8e9eea3f2c16728}{rtw\+\_\+arbitration\+\_\+value} = 0.\+0
+\item 
+float \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_ac3727731f4680b560c9856dce63b59b5}{bit\+\_\+vector\+\_\+arbitration\+\_\+value} = 0.\+5
+\item 
+int \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_adf3f03d77c73d020e031922b1e8ef1b4}{low\+\_\+value\+\_\+rtw} = -\/1
+\item 
+int \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_af12063b0aa05ec3b1cb998eb59af1b39}{high\+\_\+value\+\_\+rtw} = 1
+\item 
+int \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a74806f6f1dfe673c2132e8c4ec4f0ac2}{low\+\_\+value\+\_\+bit\+\_\+vector} = 0
+\item 
+int \hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a3ff9b0f7e6c786c43774225d9ae911ce}{high\+\_\+value\+\_\+bit\+\_\+vector} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Import Custom Python Packages and Modules. 
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00087}{87} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!psl\+\_\+uniform@{psl\+\_\+uniform}}
+\index{psl\+\_\+uniform@{psl\+\_\+uniform}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{psl\+\_\+uniform}]{\setlength{\rightskip}{0pt plus 5cm}def random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+psl\+\_\+uniform (
+\begin{DoxyParamCaption}
+\item[{}]{type\+\_\+of\+\_\+signal = {\ttfamily {\bf bv\+\_\+signal}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}
+
+
+Method to generate a value for a random signal/process. 
+
+Use the Python Standard Library\textquotesingle{}s random module to call the uniform function that is a P\+R\+N\+G based on a uniform distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+of\+\_\+signal} & -\/ Indicates if either of the following random signals (or random \char`\"{}processes\char`\"{}) are used.
+\begin{DoxyItemize}
+\item rtw, for a random telegraph wave
+\begin{DoxyItemize}
+\item high value\+: \char`\"{}1\char`\"{}
+\item low value\+: \char`\"{}-\/1\char`\"{}
+\end{DoxyItemize}
+\item bv, for a bit-\/vector
+\begin{DoxyItemize}
+\item high value\+: \char`\"{}1\char`\"{}
+\item low value\+: \char`\"{}0\char`\"{} 
+\end{DoxyItemize}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00135}{135} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_l00135}{}\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}{00135}     \textcolor{keyword}{def }\hyperlink{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a1dcc8cc1bddef1852a007afc2f115f5e}{psl\_uniform}(type\_of\_signal=bv\_signal):
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_ac3727731f4680b560c9856dce63b59b5}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!bit\+\_\+vector\+\_\+arbitration\+\_\+value@{bit\+\_\+vector\+\_\+arbitration\+\_\+value}}
+\index{bit\+\_\+vector\+\_\+arbitration\+\_\+value@{bit\+\_\+vector\+\_\+arbitration\+\_\+value}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{bit\+\_\+vector\+\_\+arbitration\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}float random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+bit\+\_\+vector\+\_\+arbitration\+\_\+value = 0.\+5\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_ac3727731f4680b560c9856dce63b59b5}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00110}{110} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a82f57253641d85b4e2efba66fac47066}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!bv\+\_\+signal@{bv\+\_\+signal}}
+\index{bv\+\_\+signal@{bv\+\_\+signal}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{bv\+\_\+signal}]{\setlength{\rightskip}{0pt plus 5cm}string random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+bv\+\_\+signal = \char`\"{}bv\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a82f57253641d85b4e2efba66fac47066}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00090}{90} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a3ff9b0f7e6c786c43774225d9ae911ce}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!high\+\_\+value\+\_\+bit\+\_\+vector@{high\+\_\+value\+\_\+bit\+\_\+vector}}
+\index{high\+\_\+value\+\_\+bit\+\_\+vector@{high\+\_\+value\+\_\+bit\+\_\+vector}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{high\+\_\+value\+\_\+bit\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+high\+\_\+value\+\_\+bit\+\_\+vector = 1\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a3ff9b0f7e6c786c43774225d9ae911ce}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00116}{116} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_af12063b0aa05ec3b1cb998eb59af1b39}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!high\+\_\+value\+\_\+rtw@{high\+\_\+value\+\_\+rtw}}
+\index{high\+\_\+value\+\_\+rtw@{high\+\_\+value\+\_\+rtw}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{high\+\_\+value\+\_\+rtw}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+high\+\_\+value\+\_\+rtw = 1\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_af12063b0aa05ec3b1cb998eb59af1b39}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00113}{113} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a74806f6f1dfe673c2132e8c4ec4f0ac2}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!low\+\_\+value\+\_\+bit\+\_\+vector@{low\+\_\+value\+\_\+bit\+\_\+vector}}
+\index{low\+\_\+value\+\_\+bit\+\_\+vector@{low\+\_\+value\+\_\+bit\+\_\+vector}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{low\+\_\+value\+\_\+bit\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+low\+\_\+value\+\_\+bit\+\_\+vector = 0\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a74806f6f1dfe673c2132e8c4ec4f0ac2}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00115}{115} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_adf3f03d77c73d020e031922b1e8ef1b4}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!low\+\_\+value\+\_\+rtw@{low\+\_\+value\+\_\+rtw}}
+\index{low\+\_\+value\+\_\+rtw@{low\+\_\+value\+\_\+rtw}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{low\+\_\+value\+\_\+rtw}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+low\+\_\+value\+\_\+rtw = -\/1\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_adf3f03d77c73d020e031922b1e8ef1b4}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00112}{112} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a90c8ad6b1e19cfb7a8e9eea3f2c16728}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!rtw\+\_\+arbitration\+\_\+value@{rtw\+\_\+arbitration\+\_\+value}}
+\index{rtw\+\_\+arbitration\+\_\+value@{rtw\+\_\+arbitration\+\_\+value}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{rtw\+\_\+arbitration\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}float random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+rtw\+\_\+arbitration\+\_\+value = 0.\+0\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a90c8ad6b1e19cfb7a8e9eea3f2c16728}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00101}{101} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+\hypertarget{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a6962172d81af8d6c172ba64e33eb0d55}{}\index{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}!rtw\+\_\+signal@{rtw\+\_\+signal}}
+\index{rtw\+\_\+signal@{rtw\+\_\+signal}!random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng@{random\+\_\+process\+\_\+models\+::pseudorandom\+\_\+number\+\_\+generator\+::prng}}
+\subsubsection[{rtw\+\_\+signal}]{\setlength{\rightskip}{0pt plus 5cm}string random\+\_\+process\+\_\+models.\+pseudorandom\+\_\+number\+\_\+generator.\+prng.\+rtw\+\_\+signal = \char`\"{}rtw\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classrandom__process__models_1_1pseudorandom__number__generator_1_1prng_a6962172d81af8d6c172ba64e33eb0d55}
+
+
+Definition at line \hyperlink{pseudorandom__number__generator_8py_source_l00092}{92} of file \hyperlink{pseudorandom__number__generator_8py_source}{pseudorandom\+\_\+number\+\_\+generator.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+random\+\_\+process\+\_\+models/\hyperlink{pseudorandom__number__generator_8py}{pseudorandom\+\_\+number\+\_\+generator.\+py}\end{DoxyCompactItemize}

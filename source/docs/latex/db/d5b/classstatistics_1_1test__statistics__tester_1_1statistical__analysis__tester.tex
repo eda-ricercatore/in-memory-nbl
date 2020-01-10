@@ -1,0 +1,70 @@
+\hypertarget{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester}{}\section{statistics.\+test\+\_\+statistics\+\_\+tester.\+statistical\+\_\+analysis\+\_\+tester Class Reference}
+\label{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester}\index{statistics.\+test\+\_\+statistics\+\_\+tester.\+statistical\+\_\+analysis\+\_\+tester@{statistics.\+test\+\_\+statistics\+\_\+tester.\+statistical\+\_\+analysis\+\_\+tester}}
+
+
+Collaboration diagram for statistics.\+test\+\_\+statistics\+\_\+tester.\+statistical\+\_\+analysis\+\_\+tester\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{d2/d41/classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}{test\+\_\+statistical\+\_\+analysis} ()
+\begin{DoxyCompactList}\small\item\em Method to test the methods that support software test automation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line \hyperlink{test__statistics__tester_8py_source_l00087}{87} of file \hyperlink{test__statistics__tester_8py_source}{test\+\_\+statistics\+\_\+tester.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}{}\index{statistics\+::test\+\_\+statistics\+\_\+tester\+::statistical\+\_\+analysis\+\_\+tester@{statistics\+::test\+\_\+statistics\+\_\+tester\+::statistical\+\_\+analysis\+\_\+tester}!test\+\_\+statistical\+\_\+analysis@{test\+\_\+statistical\+\_\+analysis}}
+\index{test\+\_\+statistical\+\_\+analysis@{test\+\_\+statistical\+\_\+analysis}!statistics\+::test\+\_\+statistics\+\_\+tester\+::statistical\+\_\+analysis\+\_\+tester@{statistics\+::test\+\_\+statistics\+\_\+tester\+::statistical\+\_\+analysis\+\_\+tester}}
+\subsubsection[{test\+\_\+statistical\+\_\+analysis()}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+test\+\_\+statistics\+\_\+tester.\+statistical\+\_\+analysis\+\_\+tester.\+test\+\_\+statistical\+\_\+analysis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}
+
+
+Method to test the methods that support software test automation. 
+
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{test__statistics__tester_8py_source_l00094}{94} of file \hyperlink{test__statistics__tester_8py_source}{test\+\_\+statistics\+\_\+tester.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_l00094}{}\hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}{00094}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__statistics__tester_1_1statistical__analysis__tester_ad05a0d6e83aaba083bfba6212ec0b971}{test\_statistical\_analysis}():
+00095         print(\textcolor{stringliteral}{""})
+00096         print(\textcolor{stringliteral}{"==   Testing class: data\_analysis"})
+00097         print(\textcolor{stringliteral}{"1) Number of test cases passed:      \{\}"} .format(
+      statistical\_analysis.number\_test\_cases\_passed))
+00098         print(\textcolor{stringliteral}{"2) Number of test cases used:        \{\}"} .format(statistical\_analysis.number\_test\_cases\_used
+      ))
+00099         print(\textcolor{stringliteral}{"Proportion of test cases passed: \{\}"} .format(
+      statistical\_analysis.get\_test\_cases\_passed\_average()))
+00100         \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(1,7):
+00101             statistical\_analysis.increment\_number\_test\_cases\_used()
+00102             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00103             print(\textcolor{stringliteral}{"Value of x is: \{\}."} .format(x))
+00104             print(\textcolor{stringliteral}{"Number of test cases passed: \{\}"} .format(statistical\_analysis.number\_test\_cases\_passed))
+00105             print(\textcolor{stringliteral}{"Number of test cases used:   \{\}"} .format(statistical\_analysis.number\_test\_cases\_used))
+00106             print(\textcolor{stringliteral}{"Proportion of test cases passed: \{\}"} .format(
+      statistical\_analysis.get\_test\_cases\_passed\_average()))
+00107 \end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+statistics/\hyperlink{test__statistics__tester_8py}{test\+\_\+statistics\+\_\+tester.\+py}\end{DoxyCompactItemize}

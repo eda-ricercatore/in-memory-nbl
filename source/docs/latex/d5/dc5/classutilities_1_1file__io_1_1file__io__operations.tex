@@ -1,0 +1,550 @@
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations}{}\section{utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations Class Reference}
+\label{classutilities_1_1file__io_1_1file__io__operations}\index{utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations@{utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations}}
+
+
+Module with methods that perform file I/\+O operations.  
+
+
+
+
+Collaboration diagram for utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{db/d83/classutilities_1_1file__io_1_1file__io__operations__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}{is\+\_\+path\+\_\+valid} (filename)
+\begin{DoxyCompactList}\small\item\em Method to check if a path to file is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}{open\+\_\+file\+\_\+object\+\_\+read} (filename)
+\begin{DoxyCompactList}\small\item\em Method to open a file object for read/input operations. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}{open\+\_\+file\+\_\+object\+\_\+write} (filename)
+\begin{DoxyCompactList}\small\item\em Method to open a file object for write/output operations. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}{open\+\_\+file\+\_\+object\+\_\+write\+\_\+new} (filename)
+\begin{DoxyCompactList}\small\item\em Method to open a new file object for write/output operations. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}{open\+\_\+file\+\_\+object\+\_\+write\+\_\+results} ()
+\begin{DoxyCompactList}\small\item\em Method to open a new file object for write/output operations to store simulation and/or experimental results. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}{close\+\_\+file\+\_\+object} (file\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Method to close a file object. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}{file\+\_\+comparison} (file1, file2)
+\begin{DoxyCompactList}\small\item\em Method to determine if two files are equivalent. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}{get\+\_\+file\+\_\+extension} (filename)
+\begin{DoxyCompactList}\small\item\em Method to determine the file extension of a file. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}{check\+\_\+file\+\_\+extension} (filename, file\+\_\+extension)
+\begin{DoxyCompactList}\small\item\em Method to determine if the file extension of a file matches with a given file extension. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}{stop\+\_\+redirecting\+\_\+std\+\_\+op} ()
+\begin{DoxyCompactList}\small\item\em Method to end redirection of standard output. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}{redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj} (file\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Method to redirect standard output to a file object with write access. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}{stop\+\_\+redirecting\+\_\+std\+\_\+err} ()
+\begin{DoxyCompactList}\small\item\em Method to end redirection of standard error. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}{redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj} (file\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Method to redirect standard error to a file object with write access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7d92fe3b9053aa784ce73062bed07bd5}{result\+\_\+repository} = \char`\"{}/Users/zhiyang/Documents/ricerca/risultati\+\_\+sperimentali/std-\/cell-\/library-\/characterization\char`\"{}
+\item 
+\hyperlink{classutilities_1_1file__io_1_1file__io__operations_ae84964a620a018ec377b7e53f241dbf7}{std\+\_\+op\+\_\+backup} = None
+\item 
+\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a979e9173080e7b88f0c296409a26ac01}{std\+\_\+err\+\_\+backup} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module with methods that perform file I/\+O operations. 
+
+\begin{DoxyVerb}    Location to store simulation and/or experimental results.
+    Requires an absolute path, since no processing will be done
+        to check if this is an absolute path or relative path.
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{file__io_8py_source_l00097}{97} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!check\+\_\+file\+\_\+extension@{check\+\_\+file\+\_\+extension}}
+\index{check\+\_\+file\+\_\+extension@{check\+\_\+file\+\_\+extension}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{check\+\_\+file\+\_\+extension(filename, file\+\_\+extension)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+check\+\_\+file\+\_\+extension (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{file\+\_\+extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}
+
+
+Method to determine if the file extension of a file matches with a given file extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Name of a file. \\
+\hline
+{\em file\+\_\+extension} & -\/ Extension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the file extension of the given filename matches file\+\_\+extension; else, return False. O(n) method, with respect to the number of characters in the path\+\_\+to\+\_\+file argument; traverse the string from the right end till the first period is found (this indicates the file extension). 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00267}{267} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00267}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}{00267}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}{check\_file\_extension}(filename, file\_extension):
+00268         \textcolor{keywordflow}{if} file\_extension == file\_io\_operations.get\_file\_extension(filename):
+00269             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00270         \textcolor{keywordflow}{else}:
+00271             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!close\+\_\+file\+\_\+object@{close\+\_\+file\+\_\+object}}
+\index{close\+\_\+file\+\_\+object@{close\+\_\+file\+\_\+object}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{close\+\_\+file\+\_\+object(file\+\_\+obj)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+close\+\_\+file\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{}]{file\+\_\+obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}
+
+
+Method to close a file object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+obj} & -\/ A file object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00219}{219} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00219}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}{00219}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}{close\_file\_object}(file\_obj):
+00220         file\_obj.close()
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!file\+\_\+comparison@{file\+\_\+comparison}}
+\index{file\+\_\+comparison@{file\+\_\+comparison}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{file\+\_\+comparison(file1, file2)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+file\+\_\+comparison (
+\begin{DoxyParamCaption}
+\item[{}]{file1, }
+\item[{}]{file2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}
+
+
+Method to determine if two files are equivalent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file1} & -\/ Path to a file. \\
+\hline
+{\em file2} & -\/ Path to another file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean T\+R\+U\+E, if the files are equivalent. Else, return F\+A\+L\+S\+E. O(n) method, with respect to the number of lines in the larger (if the files are different), or either, of the files. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00231}{231} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00231}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}{00231}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}{file\_comparison}(file1, file2):
+00232         \textcolor{keywordflow}{return} filecmp.cmp(file1,file2,shallow=\textcolor{keyword}{False})
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!get\+\_\+file\+\_\+extension@{get\+\_\+file\+\_\+extension}}
+\index{get\+\_\+file\+\_\+extension@{get\+\_\+file\+\_\+extension}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{get\+\_\+file\+\_\+extension(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+get\+\_\+file\+\_\+extension (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}
+
+
+Method to determine the file extension of a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Name of a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the file extension of a file. O(n) method, with respect to the number of characters in the path\+\_\+to\+\_\+file argument; traverse the string from the right end till the first period is found (this indicates the file extension). References\+: 1) {\bfseries [Dharmkar2017]}\}{\bfseries [nosklo2017]}\} 2) 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00245}{245} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00245}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}{00245}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}{get\_file\_extension}(filename):
+00246         temp\_filename\_extension = \textcolor{stringliteral}{""}
+00247         \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+00248             filename\_prefix, filename\_extension = os.path.splitext(filename)
+00249             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} filename\_extension:
+00250                 \textcolor{keywordflow}{break}
+00251             \textcolor{keywordflow}{else}:
+00252                 filename  = filename\_prefix
+00253                 temp\_filename\_extension = filename\_extension + temp\_filename\_extension
+00254         \textcolor{keywordflow}{return} temp\_filename\_extension
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!is\+\_\+path\+\_\+valid@{is\+\_\+path\+\_\+valid}}
+\index{is\+\_\+path\+\_\+valid@{is\+\_\+path\+\_\+valid}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{is\+\_\+path\+\_\+valid(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+is\+\_\+path\+\_\+valid (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}
+
+
+Method to check if a path to file is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Path to a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean T\+R\+U\+E, if the path to the file is valid. Else, return F\+A\+L\+S\+E. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00117}{117} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00117}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}{00117}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}{is\_path\_valid}(filename):
+00118         \textcolor{keywordflow}{if} (os.path.exists(filename) \textcolor{keywordflow}{and} os.path.isfile(filename)):
+00119             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00120         \textcolor{keywordflow}{else}:
+00121             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!open\+\_\+file\+\_\+object\+\_\+read@{open\+\_\+file\+\_\+object\+\_\+read}}
+\index{open\+\_\+file\+\_\+object\+\_\+read@{open\+\_\+file\+\_\+object\+\_\+read}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{open\+\_\+file\+\_\+object\+\_\+read(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+open\+\_\+file\+\_\+object\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}
+
+
+Method to open a file object for read/input operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Path to a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file object ip\+\_\+file\+\_\+obj 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & for invalid path to the file. O(1) method. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00129}{129} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00129}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}{00129}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}{open\_file\_object\_read}(filename):
+00130         \textcolor{keywordflow}{if} file\_io\_operations.is\_path\_valid(filename):
+00131             ip\_file\_obj = open(filename, \textcolor{stringliteral}{'}\textcolor{stringliteral}{r')}
+00132 \textcolor{stringliteral}{            }\textcolor{keywordflow}{return} ip\_file\_obj
+00133         \textcolor{keywordflow}{else}:
+00134             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"File Read Operation: Path to file is invalid."})
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!open\+\_\+file\+\_\+object\+\_\+write@{open\+\_\+file\+\_\+object\+\_\+write}}
+\index{open\+\_\+file\+\_\+object\+\_\+write@{open\+\_\+file\+\_\+object\+\_\+write}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{open\+\_\+file\+\_\+object\+\_\+write(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+open\+\_\+file\+\_\+object\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}
+
+
+Method to open a file object for write/output operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Path to a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file object op\+\_\+file\+\_\+obj that enables writing to the file named \char`\"{}filename\char`\"{}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & for invalid path to the file. O(1) method. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00143}{143} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00143}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}{00143}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}{open\_file\_object\_write}(filename):
+00144         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} file\_io\_operations.is\_path\_valid(filename):
+00145             op\_file\_obj = open(filename, \textcolor{stringliteral}{'w'})
+00146             \textcolor{keywordflow}{return} op\_file\_obj
+00147         \textcolor{keywordflow}{else}:
+00148             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"File Write Operation: Path to file is valid."})
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!open\+\_\+file\+\_\+object\+\_\+write\+\_\+new@{open\+\_\+file\+\_\+object\+\_\+write\+\_\+new}}
+\index{open\+\_\+file\+\_\+object\+\_\+write\+\_\+new@{open\+\_\+file\+\_\+object\+\_\+write\+\_\+new}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{open\+\_\+file\+\_\+object\+\_\+write\+\_\+new(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+open\+\_\+file\+\_\+object\+\_\+write\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}
+
+
+Method to open a new file object for write/output operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Path to a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file object op\+\_\+file\+\_\+obj that enables writing to the file named \char`\"{}filename\char`\"{}. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00156}{156} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00156}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}{00156}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}{open\_file\_object\_write\_new}(filename):
+00157         \textcolor{keywordflow}{if} file\_io\_operations.is\_path\_valid(filename):
+00158             os.remove(filename)
+00159         op\_file\_obj = open(filename, \textcolor{stringliteral}{'w'})
+00160         \textcolor{keywordflow}{return} op\_file\_obj
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!open\+\_\+file\+\_\+object\+\_\+write\+\_\+results@{open\+\_\+file\+\_\+object\+\_\+write\+\_\+results}}
+\index{open\+\_\+file\+\_\+object\+\_\+write\+\_\+results@{open\+\_\+file\+\_\+object\+\_\+write\+\_\+results}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{open\+\_\+file\+\_\+object\+\_\+write\+\_\+results()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+open\+\_\+file\+\_\+object\+\_\+write\+\_\+results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}
+
+
+Method to open a new file object for write/output operations to store simulation and/or experimental results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & None. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file object \char`\"{}results\+\_\+file\+\_\+obj\char`\"{} that writes data containing simulation and/or experimental results. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00169}{169} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00169}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}{00169}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}{open\_file\_object\_write\_results}():
+00170         \textcolor{comment}{# Determine path to store simulation/experimental results.}
+00171         results\_filename = generate\_filename.create\_filename()
+00172         \textcolor{comment}{# Tokenize this filename (DD-MM-YY-HR-MN-SS-US format).}
+00173         tokens = date\_time\_operations.get\_date\_time\_tokens\_of\_filename(results\_filename)
+00174         \textcolor{comment}{# Determine which year should the results file be placed in.}
+00175         current\_path = os.path.join(file\_io\_operations.result\_repository,tokens[2])
+00176         \textcolor{comment}{#if (os.path.exists(current\_path) and os.path.isdir(current\_path)):}
+00177         \textcolor{keywordflow}{if} os.path.isdir(current\_path):
+00178             \textcolor{comment}{# Determine which month should the results file be placed in.}
+00179             \textcolor{comment}{#print("tokens[1]=",tokens[1],"=")}
+00180             \textcolor{comment}{
+      #print("date\_time\_operations.mth\_number\_name[tokens[1]]=",date\_time\_operations.mth\_number\_name[tokens[1]],"=")}
+00181             current\_path = os.path.join(current\_path,date\_time\_operations.mth\_number\_name[tokens[1]])
+00182             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isdir(current\_path):
+00183                 print(\textcolor{stringliteral}{" ... Creating directory for month at:"},current\_path)
+00184                 \textcolor{keywordflow}{try}:
+00185                     \textcolor{comment}{#os.mkdirs(current\_path, exist\_ok = True)}
+00186                     os.makedirs(current\_path, exist\_ok = \textcolor{keyword}{True})
+00187                 \textcolor{keywordflow}{except} OSError:
+00188                     print(\textcolor{stringliteral}{"Encountered error in making directory."}, file=sys.stderr)
+00189                     logging.error(\textcolor{stringliteral}{"Determine why directory for month cannot be created."})
+00190             \textcolor{keywordflow}{else}:
+00191                 print(current\_path,\textcolor{stringliteral}{"=works= ... From: file\_io.py, line 146."})
+00192         \textcolor{keywordflow}{else}:
+00193             print(\textcolor{stringliteral}{" ... Creating directory for year at:"},current\_path)
+00194             \textcolor{keywordflow}{try}:
+00195                 \textcolor{comment}{#os.mkdirs(current\_path, exist\_ok = True)}
+00196                 os.makedirs(current\_path, exist\_ok = \textcolor{keyword}{True})
+00197             \textcolor{keywordflow}{except} OSError:
+00198                 print(\textcolor{stringliteral}{"Encountered error in making directory."}, file=sys.stderr)
+00199                 logging.error(\textcolor{stringliteral}{"Determine why directory for year cannot be created."})
+00200             \textcolor{comment}{# Determine which month should the results file be placed in.}
+00201             current\_path = os.path.join(current\_path, date\_time\_operations.mth\_number\_name[tokens[1]])
+00202             print(\textcolor{stringliteral}{" ...os.path.exists(current\_path:"},os.path.exists(current\_path))
+00203             print(\textcolor{stringliteral}{" ...os.path.isdir(current\_path):"},os.path.isdir(current\_path))
+00204             print(\textcolor{stringliteral}{" ... Creating directory for month at:"},current\_path)
+00205             \textcolor{keywordflow}{try}:
+00206                 \textcolor{comment}{#os.mkdirs(current\_path, exist\_ok = True)}
+00207                 os.makedirs(current\_path, exist\_ok = \textcolor{keyword}{True})
+00208             \textcolor{keywordflow}{except} OSError:
+00209                 print(\textcolor{stringliteral}{"Encountered error in making directory."}, file=sys.stderr)
+00210                 logging.error(\textcolor{stringliteral}{"Determine why directory for month cannot be created."})
+00211         results\_filename = os.path.join(current\_path, results\_filename)
+00212         \textcolor{keywordflow}{return} file\_io\_operations.open\_file\_object\_write(results\_filename)
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj@{redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj}}
+\index{redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj@{redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj(file\+\_\+obj)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+redirect\+\_\+std\+\_\+err\+\_\+to\+\_\+file\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{}]{file\+\_\+obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}
+
+
+Method to redirect standard error to a file object with write access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+obj} & -\/ File object with write access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if standard error is redirected to a file object with write access; else, return False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00307}{307} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00307}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}{00307}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}{redirect\_std\_err\_to\_file\_obj}(file\_obj):
+00308         file\_io\_operations.std\_err\_backup = sys.stderr
+00309         sys.stderr = file\_obj
+00310 \end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj@{redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj}}
+\index{redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj@{redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj(file\+\_\+obj)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+redirect\+\_\+std\+\_\+op\+\_\+to\+\_\+file\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{}]{file\+\_\+obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}
+
+
+Method to redirect standard output to a file object with write access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+obj} & -\/ File object with write access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if standard output is redirected to a file object with write access; else, return False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00288}{288} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00288}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}{00288}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}{redirect\_std\_op\_to\_file\_obj}(file\_obj):
+00289         file\_io\_operations.std\_op\_backup = sys.stdout
+00290         sys.stdout = file\_obj
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!stop\+\_\+redirecting\+\_\+std\+\_\+err@{stop\+\_\+redirecting\+\_\+std\+\_\+err}}
+\index{stop\+\_\+redirecting\+\_\+std\+\_\+err@{stop\+\_\+redirecting\+\_\+std\+\_\+err}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{stop\+\_\+redirecting\+\_\+std\+\_\+err()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+stop\+\_\+redirecting\+\_\+std\+\_\+err (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}
+
+
+Method to end redirection of standard error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & None. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00297}{297} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00297}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}{00297}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}{stop\_redirecting\_std\_err}():
+00298         sys.stderr = file\_io\_operations.std\_err\_backup
+\end{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!stop\+\_\+redirecting\+\_\+std\+\_\+op@{stop\+\_\+redirecting\+\_\+std\+\_\+op}}
+\index{stop\+\_\+redirecting\+\_\+std\+\_\+op@{stop\+\_\+redirecting\+\_\+std\+\_\+op}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{stop\+\_\+redirecting\+\_\+std\+\_\+op()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+stop\+\_\+redirecting\+\_\+std\+\_\+op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}
+
+
+Method to end redirection of standard output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & None. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nothing. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00278}{278} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_l00278}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}{00278}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}{stop\_redirecting\_std\_op}():
+00279         sys.stdout = file\_io\_operations.std\_op\_backup
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a7d92fe3b9053aa784ce73062bed07bd5}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!result\+\_\+repository@{result\+\_\+repository}}
+\index{result\+\_\+repository@{result\+\_\+repository}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{result\+\_\+repository}]{\setlength{\rightskip}{0pt plus 5cm}string utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+result\+\_\+repository = \char`\"{}/Users/zhiyang/Documents/ricerca/risultati\+\_\+sperimentali/std-\/cell-\/library-\/characterization\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a7d92fe3b9053aa784ce73062bed07bd5}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00104}{104} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_a979e9173080e7b88f0c296409a26ac01}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!std\+\_\+err\+\_\+backup@{std\+\_\+err\+\_\+backup}}
+\index{std\+\_\+err\+\_\+backup@{std\+\_\+err\+\_\+backup}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{std\+\_\+err\+\_\+backup}]{\setlength{\rightskip}{0pt plus 5cm}utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+std\+\_\+err\+\_\+backup = None\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_a979e9173080e7b88f0c296409a26ac01}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00108}{108} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+\hypertarget{classutilities_1_1file__io_1_1file__io__operations_ae84964a620a018ec377b7e53f241dbf7}{}\index{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}!std\+\_\+op\+\_\+backup@{std\+\_\+op\+\_\+backup}}
+\index{std\+\_\+op\+\_\+backup@{std\+\_\+op\+\_\+backup}!utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations@{utilities\+::file\+\_\+io\+::file\+\_\+io\+\_\+operations}}
+\subsubsection[{std\+\_\+op\+\_\+backup}]{\setlength{\rightskip}{0pt plus 5cm}utilities.\+file\+\_\+io.\+file\+\_\+io\+\_\+operations.\+std\+\_\+op\+\_\+backup = None\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1file__io_1_1file__io__operations_ae84964a620a018ec377b7e53f241dbf7}
+
+
+Definition at line \hyperlink{file__io_8py_source_l00106}{106} of file \hyperlink{file__io_8py_source}{file\+\_\+io.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{file__io_8py}{file\+\_\+io.\+py}\end{DoxyCompactItemize}

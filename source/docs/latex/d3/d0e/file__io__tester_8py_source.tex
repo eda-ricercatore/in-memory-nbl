@@ -1,0 +1,311 @@
+\hypertarget{file__io__tester_8py_source}{}\section{file\+\_\+io\+\_\+tester.\+py}
+\label{file__io__tester_8py_source}\index{utilities/file\+\_\+io\+\_\+tester.\+py@{utilities/file\+\_\+io\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{file__io__tester_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1file__io__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test}
+00006 \textcolor{stringliteral}{        input/output (I/O) operations on files, such as BibTeX}
+00007 \textcolor{stringliteral}{        databases/files, LaTeX documents, and JSON files.}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Test input/output (I/O) operations on files.}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    Notes/Assumptions:}
+00013 \textcolor{stringliteral}{    Assume that the user/developer would protect the code base}
+00014 \textcolor{stringliteral}{        with try-except blocks to handle file I/O errors.}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{    References:}
+00017 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00018 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00019 \textcolor{stringliteral}{}
+00020 \textcolor{stringliteral}{    Revision History:}
+00021 \textcolor{stringliteral}{    August 1, 2018          Version 0.1, initial build.}
+00022 \textcolor{stringliteral}{"""}
+00023 
+\hypertarget{file__io__tester_8py_source_l00024}{}\hyperlink{namespaceutilities_1_1file__io__tester_a1e98e62ebd56ece4ec2a1b305f33aa72}{00024} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{file__io__tester_8py_source_l00025}{}\hyperlink{namespaceutilities_1_1file__io__tester_a18133e21b0a493dfcb0dcd31bd81a40e}{00025} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{file__io__tester_8py_source_l00026}{}\hyperlink{namespaceutilities_1_1file__io__tester_aff68b27f06e5ed552222d5e8ef71af1b}{00026} \_\_date\_\_ = \textcolor{stringliteral}{'August 1, 2018'}
+00027 
+00028 \textcolor{comment}{#   The MIT License (MIT)}
+00029 
+00030 \textcolor{comment}{#   Copyright (c) <2018> <Zhiyang Ong>}
+00031 
+00032 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00033 
+00034 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00035 
+00036 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00037 
+00038 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00039 
+00040 
+00041 
+00042 \textcolor{comment}{###############################################################}
+00043 \textcolor{stringliteral}{"""}
+00044 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00045 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00046 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00047 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00048 \textcolor{stringliteral}{}
+00049 \textcolor{stringliteral}{    subprocess -> call}
+00050 \textcolor{stringliteral}{                To make system calls.}
+00051 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00052 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00053 \textcolor{stringliteral}{    re          Use regular expressions.}
+00054 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00055 \textcolor{stringliteral}{"""}
+00056 
+00057 \textcolor{keyword}{import} sys
+00058 \textcolor{keyword}{import} os
+00059 \textcolor{keyword}{import} os.path
+00060 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00061 \textcolor{keyword}{import} time
+00062 \textcolor{keyword}{import} warnings
+00063 \textcolor{keyword}{import} re
+00064 \textcolor{keyword}{import} filecmp
+00065 \textcolor{comment}{# Copy a file from [source] to [destination]}
+00066 \textcolor{keyword}{from} shutil \textcolor{keyword}{import} copyfile
+00067 
+00068 \textcolor{comment}{###############################################################}
+00069 \textcolor{comment}{#   Import Custom Python Modules}
+00070 
+00071 \textcolor{stringliteral}{"""}
+00072 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00073 \textcolor{stringliteral}{        results.}
+00074 \textcolor{stringliteral}{"""}
+00075 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00076 \textcolor{comment}{# Package and module to process input arguments to the script/program.}
+00077 \textcolor{comment}{#from utilities.queue\_ip\_arguments import queue\_ip\_args}
+00078 \textcolor{comment}{# Package and module to perform file I/O operations.}
+00079 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1file__io}{utilities.file\_io} \textcolor{keyword}{import} file\_io\_operations
+00080 
+00081 \textcolor{comment}{###############################################################}
+00082 \textcolor{stringliteral}{"""}
+00083 \textcolor{stringliteral}{    Module with methods that perform file I/O operations.}
+00084 \textcolor{stringliteral}{    Support for class instantiation is not provided, to avoid}
+00085 \textcolor{stringliteral}{        acquiring a collection of useless "file\_io\_operations"}
+00086 \textcolor{stringliteral}{        objects.}
+00087 \textcolor{stringliteral}{    Test each static method of the "file\_io\_operations" class.}
+00088 \textcolor{stringliteral}{"""}
+\hypertarget{file__io__tester_8py_source_l00089}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester}{00089} \textcolor{keyword}{class }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester}{file\_io\_operations\_tester}:
+00090     \textcolor{comment}{## =========================================================}
+00091     \textcolor{comment}{#   Method to test the methods that perform file I/O operations}
+00092     \textcolor{comment}{#       with an invalid file.}
+00093     \textcolor{comment}{#   @param - Nothing}
+00094     \textcolor{comment}{#   @return - Nothing.}
+00095     \textcolor{comment}{#   O(1) method.}
+00096     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00097}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a847cc701af96fbf9558cdae859f379d6}{00097}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a847cc701af96fbf9558cdae859f379d6}{test\_file\_io\_operations\_with\_invalid\_file}():
+00098         print(\textcolor{stringliteral}{" ... Testing file operations with invalid file."})
+00099         filename = \textcolor{stringliteral}{"nonsense"}
+00100         prompt = \textcolor{stringliteral}{"  Test: file\_io\_operations.is\_path\_valid(...) \{\}"}
+00101         statistical\_analysis.increment\_number\_test\_cases\_used()
+00102         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} file\_io\_operations.is\_path\_valid(filename):
+00103             print(prompt .format(\textcolor{stringliteral}{"  OK"}))
+00104             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00105         \textcolor{keywordflow}{else}:
+00106             print(prompt .format(\textcolor{stringliteral}{"  FAIL!!!"}))
+00107         prompt = \textcolor{stringliteral}{"  Test: file\_io\_operations.open\_file\_object\_read(...) \{\}"}
+00108         statistical\_analysis.increment\_number\_test\_cases\_used()
+00109         \textcolor{keywordflow}{try}:
+00110             f\_obj = file\_io\_operations.open\_file\_object\_read(filename)
+00111             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00112         \textcolor{keywordflow}{except}:
+00113             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00114             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00115         prompt = \textcolor{stringliteral}{"  Test: file\_io\_operations.open\_file\_object\_write(...)    \{\}"}
+00116         statistical\_analysis.increment\_number\_test\_cases\_used()
+00117         \textcolor{keywordflow}{try}:
+00118             f\_obj = file\_io\_operations.open\_file\_object\_write(filename)
+00119             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00120             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00121         \textcolor{keywordflow}{except}:
+00122             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00123         prompt = \textcolor{stringliteral}{"  Test: file\_io\_ops[BLAH].open\_file\_object\_write\_new(...) \{\}"}
+00124         statistical\_analysis.increment\_number\_test\_cases\_used()
+00125         \textcolor{keywordflow}{try}:
+00126             f\_obj = file\_io\_operations.open\_file\_object\_write\_new(filename)
+00127             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00128             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00129         \textcolor{keywordflow}{except}:
+00130             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00131         \textcolor{keywordflow}{try}:
+00132             \textcolor{comment}{#   Close the file object, and delete the file.}
+00133             statistical\_analysis.increment\_number\_test\_cases\_used()
+00134             file\_io\_operations.close\_file\_object(f\_obj)
+00135             os.remove(filename)
+00136             print(\textcolor{stringliteral}{" Test: file\_io\_operations.close\_file\_object(...)     OK"})
+00137             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00138         \textcolor{keywordflow}{except}:
+00139             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00140     \textcolor{comment}{## =========================================================}
+00141     \textcolor{comment}{#   Method to test the methods that perform file I/O operations}
+00142     \textcolor{comment}{#       with a valid file.}
+00143     \textcolor{comment}{#   @param - Nothing}
+00144     \textcolor{comment}{#   @return - Nothing.}
+00145     \textcolor{comment}{#   O(1) method.}
+00146     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00147}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a9683b5a406697686900d28455bd3d5c3}{00147}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a9683b5a406697686900d28455bd3d5c3}{test\_file\_io\_operations\_with\_valid\_file}():
+00148         print(\textcolor{stringliteral}{" ... Testing file operations with valid file."})
+00149         filename = \textcolor{stringliteral}{"notes/mit-license-original-copy.text"}
+00150         prompt = \textcolor{stringliteral}{"  Test: file\_io\_operations.is\_path\_valid(...) \{\}"}
+00151         statistical\_analysis.increment\_number\_test\_cases\_used()
+00152         \textcolor{keywordflow}{if} file\_io\_operations.is\_path\_valid(filename):
+00153             print(prompt .format(\textcolor{stringliteral}{"  OK"}))
+00154             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00155         \textcolor{keywordflow}{else}:
+00156             print(prompt .format(\textcolor{stringliteral}{"  FAIL!!!"}))
+00157         prompt = \textcolor{stringliteral}{"  Test: file\_io\_operations.open\_file\_object\_read(...) \{\}"}
+00158         statistical\_analysis.increment\_number\_test\_cases\_used()
+00159         \textcolor{keywordflow}{try}:
+00160             f\_obj = file\_io\_operations.open\_file\_object\_read(filename)
+00161             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00162             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00163         \textcolor{keywordflow}{except}:
+00164             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00165         prompt = \textcolor{stringliteral}{"  Test: file\_io\_operations.open\_file\_object\_write(...)    \{\}"}
+00166         statistical\_analysis.increment\_number\_test\_cases\_used()
+00167         \textcolor{keywordflow}{try}:
+00168             f\_obj = file\_io\_operations.open\_file\_object\_write(filename)
+00169             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00170         \textcolor{keywordflow}{except}:
+00171             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00172             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00173         prompt = \textcolor{stringliteral}{"  Test: file\_io\_ops[BLAH].open\_file\_object\_write\_new(...) \{\}"}
+00174         statistical\_analysis.increment\_number\_test\_cases\_used()
+00175         \textcolor{keywordflow}{try}:
+00176             f\_obj = file\_io\_operations.open\_file\_object\_write\_new(\textcolor{stringliteral}{"mit-license-write-new-copy.text"})
+00177             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00178             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00179         \textcolor{keywordflow}{except}:
+00180             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00181         \textcolor{stringliteral}{"""}
+00182 \textcolor{stringliteral}{            Close the file object to preserve data in the test data file.}
+00183 \textcolor{stringliteral}{            filename = "notes/mit-license.text"}
+00184 \textcolor{stringliteral}{        """}
+00185         file\_io\_operations.close\_file\_object(f\_obj)
+00186         \textcolor{comment}{# Copy a file from [source] to [destination]}
+00187         \textcolor{comment}{#copyfile("notes/trash/mit-license-spare-copy.text","notes/mit-license.text")}
+00188     \textcolor{comment}{## =========================================================}
+00189     \textcolor{comment}{#   Method to test file operations on files with the same content.}
+00190     \textcolor{comment}{#   @param - Nothing}
+00191     \textcolor{comment}{#   @return - Nothing.}
+00192     \textcolor{comment}{#   O(1) method.}
+00193     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00194}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a5efc5f988841df586d1db5619d5fe49e}{00194}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a5efc5f988841df586d1db5619d5fe49e}{test\_file\_io\_operations\_on\_files\_with\_same\_content}
+      ():
+00195         print(\textcolor{stringliteral}{" Testing file operations on files with the same content."})
+00196         prompt = \textcolor{stringliteral}{"  ... Test: file\_io\_operations.file\_comparison(...)   \{\}"}
+00197         statistical\_analysis.increment\_number\_test\_cases\_used()
+00198         \textcolor{keywordflow}{if} file\_io\_operations.file\_comparison(\textcolor{stringliteral}{"notes/mit-license-exact-copy.text"},\textcolor{stringliteral}{"
+      notes/mit-license-same-copy.text"}):
+00199             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00200             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00201         \textcolor{keywordflow}{else}:
+00202             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00203         print(\textcolor{stringliteral}{" Testing file operations on files with the different content."})
+00204         prompt = \textcolor{stringliteral}{"  ... Test: file\_io\_operations.file\_comparison(...)   \{\}"}
+00205         statistical\_analysis.increment\_number\_test\_cases\_used()
+00206         \textcolor{keywordflow}{if} file\_io\_operations.file\_comparison(\textcolor{stringliteral}{"notes/mit-license-exact-copy.text"},\textcolor{stringliteral}{"
+      notes/mit-license-different-copy.text"}):
+00207             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00208         \textcolor{keywordflow}{else}:
+00209             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00210             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00211     \textcolor{comment}{## =========================================================}
+00212     \textcolor{comment}{#   Method to test file\_io\_operations.get\_file\_extension() method.}
+00213     \textcolor{comment}{#   @return - Nothing.}
+00214     \textcolor{comment}{#   O(1) method.}
+00215     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00216}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a264a387fe5693619617b8b10be1354af}{00216}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a264a387fe5693619617b8b10be1354af}{test\_file\_io\_operations\_get\_file\_extension}():
+00217         print(\textcolor{stringliteral}{" Testing file\_io\_operations.get\_file\_extension() method."})
+00218         prompt = \textcolor{stringliteral}{"  ... Test: one file extension                \{\}"}
+00219         statistical\_analysis.increment\_number\_test\_cases\_used()
+00220         \textcolor{keywordflow}{if} file\_io\_operations.get\_file\_extension(\textcolor{stringliteral}{"something.text"}) == \textcolor{stringliteral}{".text"}:
+00221             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00222             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00223         \textcolor{keywordflow}{else}:
+00224             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00225         prompt = \textcolor{stringliteral}{"  ... Test: double/dual file extensions           \{\}"}
+00226         statistical\_analysis.increment\_number\_test\_cases\_used()
+00227         \textcolor{keywordflow}{if} file\_io\_operations.get\_file\_extension(\textcolor{stringliteral}{"something.tar.gz"}) == \textcolor{stringliteral}{".tar.gz"}:
+00228             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00229             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00230         \textcolor{keywordflow}{else}:
+00231             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00232             \textcolor{comment}{#print(file\_io\_operations.get\_file\_extension("something.tar.gz"))}
+00233         prompt = \textcolor{stringliteral}{"  ... Test: multiple file extensions          \{\}"}
+00234         statistical\_analysis.increment\_number\_test\_cases\_used()
+00235         \textcolor{keywordflow}{if} file\_io\_operations.get\_file\_extension(\textcolor{stringliteral}{"something.pdf.tar.gz"}) == \textcolor{stringliteral}{".pdf.tar.gz"}:
+00236             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00237             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00238         \textcolor{keywordflow}{else}:
+00239             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00240     \textcolor{comment}{## =========================================================}
+00241     \textcolor{comment}{#   Method to test file\_io\_operations.check\_file\_extension() method.}
+00242     \textcolor{comment}{#   @return - Nothing.}
+00243     \textcolor{comment}{#   O(1) method.}
+00244     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00245}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_aeacc9602a024e8f2b6701b9305ffc930}{00245}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_aeacc9602a024e8f2b6701b9305ffc930}{test\_file\_io\_operations\_check\_file\_extension}():
+00246         print(\textcolor{stringliteral}{" Testing file\_io\_operations.check\_file\_extension() method."})
+00247         prompt = \textcolor{stringliteral}{"  ... Test: same file extension               \{\}"}
+00248         statistical\_analysis.increment\_number\_test\_cases\_used()
+00249         \textcolor{keywordflow}{if} file\_io\_operations.check\_file\_extension(\textcolor{stringliteral}{"something.text"},\textcolor{stringliteral}{".text"}):
+00250             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00251             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00252         \textcolor{keywordflow}{else}:
+00253             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00254         prompt = \textcolor{stringliteral}{"  ... Test: different file extensions         \{\}"}
+00255         statistical\_analysis.increment\_number\_test\_cases\_used()
+00256         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} file\_io\_operations.check\_file\_extension(\textcolor{stringliteral}{"something.tar.gz"},\textcolor{stringliteral}{".rtsdtfyg"}):
+00257             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00258             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00259         \textcolor{keywordflow}{else}:
+00260             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00261     \textcolor{comment}{## =========================================================}
+00262     \textcolor{comment}{#   Method to test file\_io\_operations.open\_file\_object\_write\_results()}
+00263     \textcolor{comment}{#       method.}
+00264     \textcolor{comment}{#   @param - Nothing}
+00265     \textcolor{comment}{#   @return - Nothing.}
+00266     \textcolor{comment}{#   O(1) method.}
+00267     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00268}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a7fa460b989d5a77396a182df39255eba}{00268}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a7fa460b989d5a77396a182df39255eba}{test\_file\_io\_operations\_open\_file\_object\_write\_results}
+      ():
+00269         prompt = \textcolor{stringliteral}{"  Test: file\_io\_BLAH.open\_file\_object\_write\_results() \{\}"}
+00270         statistical\_analysis.increment\_number\_test\_cases\_used()
+00271         results\_f\_obj = file\_io\_operations.open\_file\_object\_write\_results()
+00272         \textcolor{keywordflow}{if} results\_f\_obj:
+00273             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00274             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00275         \textcolor{keywordflow}{else}:
+00276             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00277         file\_io\_operations.close\_file\_object(results\_f\_obj)
+00278     \textcolor{comment}{## =========================================================}
+00279     \textcolor{comment}{#   Method to test the methods that perform file I/O operations.}
+00280     \textcolor{comment}{#   @return - Nothing.}
+00281     \textcolor{comment}{#   O(1) method.}
+00282     @staticmethod
+\hypertarget{file__io__tester_8py_source_l00283}{}\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a874961b1543ff59a1b1ea4b40abca8d2}{00283}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io__tester_1_1file__io__operations__tester_a874961b1543ff59a1b1ea4b40abca8d2}{test\_file\_io\_operations}():
+00284         print(\textcolor{stringliteral}{"==   Testing class: file\_io\_operations."})
+00285         file\_io\_operations\_tester.test\_file\_io\_operations\_with\_invalid\_file()
+00286         file\_io\_operations\_tester.test\_file\_io\_operations\_with\_valid\_file()
+00287         file\_io\_operations\_tester.test\_file\_io\_operations\_on\_files\_with\_same\_content()
+00288         file\_io\_operations\_tester.test\_file\_io\_operations\_get\_file\_extension()
+00289         file\_io\_operations\_tester.test\_file\_io\_operations\_check\_file\_extension()
+00290         file\_io\_operations\_tester.test\_file\_io\_operations\_open\_file\_object\_write\_results()
+\end{DoxyCode}

@@ -1,0 +1,95 @@
+\hypertarget{random__process__generator__tester_8py_source}{}\section{random\+\_\+process\+\_\+generator\+\_\+tester.\+py}
+\label{random__process__generator__tester_8py_source}\index{random\+\_\+process\+\_\+models/random\+\_\+process\+\_\+generator\+\_\+tester.\+py@{random\+\_\+process\+\_\+models/random\+\_\+process\+\_\+generator\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{random__process__generator__tester_8py_source_l00001}{}\hyperlink{namespacerandom__process__models_1_1random__process__generator__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test the}
+00006 \textcolor{stringliteral}{        generator for random signals/"processes".}
+00007 \textcolor{stringliteral}{}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Test the generator for random signals/"processes".}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    This script can be executed as follows:}
+00013 \textcolor{stringliteral}{    ./random\_process\_generator.py}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{}
+00017 \textcolor{stringliteral}{    Revision History:}
+00018 \textcolor{stringliteral}{    September 6, 2019           Version 0.1 Script.}
+00019 \textcolor{stringliteral}{"""}
+00020 
+\hypertarget{random__process__generator__tester_8py_source_l00021}{}\hyperlink{namespacerandom__process__models_1_1random__process__generator__tester_a533d9611b280d2c9d3154e7ddea602f0}{00021} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{random__process__generator__tester_8py_source_l00022}{}\hyperlink{namespacerandom__process__models_1_1random__process__generator__tester_a6d64c35578abb54108b6261a9a668bbe}{00022} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{random__process__generator__tester_8py_source_l00023}{}\hyperlink{namespacerandom__process__models_1_1random__process__generator__tester_a0535cc1b4a76908d454a4480982fd703}{00023} \_\_date\_\_ = \textcolor{stringliteral}{'September 6, 2019'}
+00024 
+00025 \textcolor{comment}{#   The MIT License (MIT)}
+00026 
+00027 \textcolor{comment}{#   Copyright (c) <2019> <Zhiyang Ong>}
+00028 
+00029 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00030 
+00031 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00032 
+00033 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00034 
+00035 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00036 
+00037 
+00038 \textcolor{comment}{###############################################################}
+00039 \textcolor{stringliteral}{"""}
+00040 \textcolor{stringliteral}{    Import modules from the Python Standard Library.}
+00041 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00042 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00043 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00044 \textcolor{stringliteral}{}
+00045 \textcolor{stringliteral}{    subprocess -> call}
+00046 \textcolor{stringliteral}{                To make system calls.}
+00047 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00048 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00049 \textcolor{stringliteral}{    re          Use regular expressions.}
+00050 \textcolor{stringliteral}{}
+00051 \textcolor{stringliteral}{    pathlib->Path}
+00052 \textcolor{stringliteral}{                For mapping a string to a path.}
+00053 \textcolor{stringliteral}{    datetime    To obtain information about the current date and time.}
+00054 \textcolor{stringliteral}{    time        To obtain information about the current time.}
+00055 \textcolor{stringliteral}{                time\_ns version provides information about the}
+00056 \textcolor{stringliteral}{                    current time with nanosecond accuracy.}
+00057 \textcolor{stringliteral}{    warnings    Provide warnings to users without terminating the}
+00058 \textcolor{stringliteral}{                    program abruptly.}
+00059 \textcolor{stringliteral}{    random      For pseudorandom number generation.}
+00060 \textcolor{stringliteral}{"""}
+00061 
+00062 \textcolor{keyword}{import} sys
+00063 \textcolor{keyword}{import} os
+00064 \textcolor{keyword}{import} os.path
+00065 \textcolor{comment}{#from pathlib import Path}
+00066 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00067 \textcolor{keyword}{import} time
+00068 \textcolor{keyword}{import} warnings
+00069 \textcolor{keyword}{import} re
+00070 \textcolor{keyword}{import} datetime
+00071 \textcolor{keyword}{import} random
+00072 
+00073 \textcolor{comment}{###############################################################}
+00074 \textcolor{comment}{#   Import Custom Python Packages and Modules}
+00075 
+00076 \textcolor{comment}{# Module to generate pseudorandom numbers.}
+00077 \textcolor{keyword}{from} \hyperlink{namespacerandom__process__models_1_1pseudorandom__number__generator}{random\_process\_models.pseudorandom\_number\_generator}
+       \textcolor{keyword}{import} prng
+\end{DoxyCode}

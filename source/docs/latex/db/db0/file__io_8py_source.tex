@@ -1,0 +1,329 @@
+\hypertarget{file__io_8py_source}{}\section{file\+\_\+io.\+py}
+\label{file__io_8py_source}\index{utilities/file\+\_\+io.\+py@{utilities/file\+\_\+io.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{file__io_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1file__io}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to perform}
+00006 \textcolor{stringliteral}{        input/output (I/O) operations on files, such as BibTeX}
+00007 \textcolor{stringliteral}{        databases/files, LaTeX documents, and JSON files.}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Perform input/output (I/O) operations on files.}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{    #### IMPORTANT NOTES:}
+00015 \textcolor{stringliteral}{    In lieu of using the specified file input/output (I/O) methods}
+00016 \textcolor{stringliteral}{        to perform file input operations, use the "with" statement}
+00017 \textcolor{stringliteral}{        for file I/O operations because it has a predefined clean-up}
+00018 \textcolor{stringliteral}{        action, such as the following.}
+00019 \textcolor{stringliteral}{}
+00020 \textcolor{stringliteral}{    with open("myfile.txt") as f:}
+00021 \textcolor{stringliteral}{        for line in f:}
+00022 \textcolor{stringliteral}{            print(line, end="")}
+00023 \textcolor{stringliteral}{}
+00024 \textcolor{stringliteral}{}
+00025 \textcolor{stringliteral}{}
+00026 \textcolor{stringliteral}{}
+00027 \textcolor{stringliteral}{    References:}
+00028 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00029 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00030 \textcolor{stringliteral}{}
+00031 \textcolor{stringliteral}{    [DrakeJr2016b]}
+00032 \textcolor{stringliteral}{        Section 11 File and Directory Access, Subsection 11.2 os.path - Common pathname manipulations}
+00033 \textcolor{stringliteral}{}
+00034 \textcolor{stringliteral}{}
+00035 \textcolor{stringliteral}{"""}
+00036 
+00037 \textcolor{comment}{#   The MIT License (MIT)}
+00038 
+00039 \textcolor{comment}{#   Copyright (c) <2014> <Zhiyang Ong>}
+00040 
+00041 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00042 
+00043 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00044 
+00045 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00046 
+00047 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00048 
+00049 
+00050 
+00051 \textcolor{comment}{###############################################################}
+00052 \textcolor{stringliteral}{"""}
+00053 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00054 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00055 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00056 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00057 \textcolor{stringliteral}{}
+00058 \textcolor{stringliteral}{    subprocess -> call}
+00059 \textcolor{stringliteral}{                To make system calls.}
+00060 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00061 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00062 \textcolor{stringliteral}{    re          Use regular expressions.}
+00063 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00064 \textcolor{stringliteral}{    calendar    For performing operations on dates.}
+00065 \textcolor{stringliteral}{    logging     For debug, info, warning, error, and critical messages.}
+00066 \textcolor{stringliteral}{                + logging.debug("")}
+00067 \textcolor{stringliteral}{                + logging.info("")}
+00068 \textcolor{stringliteral}{                + logging.warning("")}
+00069 \textcolor{stringliteral}{                + logging.error("")}
+00070 \textcolor{stringliteral}{                + logging.critical("")}
+00071 \textcolor{stringliteral}{"""}
+00072 
+00073 \textcolor{keyword}{import} sys
+00074 \textcolor{keyword}{import} os
+00075 \textcolor{keyword}{import} os.path
+00076 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00077 \textcolor{keyword}{import} time
+00078 \textcolor{keyword}{import} warnings
+00079 \textcolor{keyword}{import} re
+00080 \textcolor{keyword}{import} filecmp
+00081 \textcolor{keyword}{import} calendar
+00082 \textcolor{keyword}{import} logging
+00083 
+00084 \textcolor{comment}{###############################################################}
+00085 \textcolor{comment}{#   Import Custom Python Modules}
+00086 
+00087 \textcolor{comment}{# Package and module to perform date and time operations.}
+00088 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1date__time__processing}{utilities.date\_time\_processing} \textcolor{keyword}{import} date\_time\_operations
+00089 \textcolor{stringliteral}{"""}
+00090 \textcolor{stringliteral}{    Module to generate the filename for storing the experimental}
+00091 \textcolor{stringliteral}{        results and simulation output.}
+00092 \textcolor{stringliteral}{"""}
+00093 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1generate__results__filename}{utilities.generate\_results\_filename} \textcolor{keyword}{import} generate\_filename
+00094 
+00095 \textcolor{comment}{###############################################################}
+00096 \textcolor{comment}{#   Module with methods that perform file I/O operations.}
+\hypertarget{file__io_8py_source_l00097}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations}{00097} \textcolor{keyword}{class }\hyperlink{classutilities_1_1file__io_1_1file__io__operations}{file\_io\_operations}:
+00098     \textcolor{stringliteral}{"""}
+00099 \textcolor{stringliteral}{        Location to store simulation and/or experimental results.}
+00100 \textcolor{stringliteral}{        Requires an absolute path, since no processing will be done}
+00101 \textcolor{stringliteral}{            to check if this is an absolute path or relative path.}
+00102 \textcolor{stringliteral}{    """}
+00103     \textcolor{comment}{#result\_repository = "~/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}
+\hypertarget{file__io_8py_source_l00104}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7d92fe3b9053aa784ce73062bed07bd5}{00104}     result\_repository = \textcolor{stringliteral}{"
+      /Users/zhiyang/Documents/ricerca/risultati\_sperimentali/std-cell-library-characterization"}
+00105     \textcolor{comment}{# Backup of the standard output.}
+\hypertarget{file__io_8py_source_l00106}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_ae84964a620a018ec377b7e53f241dbf7}{00106}     std\_op\_backup = \textcolor{keywordtype}{None}
+00107     \textcolor{comment}{# Backup of the standard error.}
+\hypertarget{file__io_8py_source_l00108}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a979e9173080e7b88f0c296409a26ac01}{00108}     std\_err\_backup = \textcolor{keywordtype}{None}
+00109     \textcolor{comment}{#}
+00110     \textcolor{comment}{# ============================================================}
+00111     \textcolor{comment}{##  Method to check if a path to file is valid.}
+00112     \textcolor{comment}{#   @param filename - Path to a file.}
+00113     \textcolor{comment}{#   @return a boolean TRUE, if the path to the file is valid.}
+00114     \textcolor{comment}{#       Else, return FALSE.}
+00115     \textcolor{comment}{#   O(1) method.}
+00116     @staticmethod
+\hypertarget{file__io_8py_source_l00117}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}{00117}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a5c4be751037b1ba20bb57884b93e7445}{is\_path\_valid}(filename):
+00118         \textcolor{keywordflow}{if} (os.path.exists(filename) \textcolor{keywordflow}{and} os.path.isfile(filename)):
+00119             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00120         \textcolor{keywordflow}{else}:
+00121             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00122     \textcolor{comment}{# ============================================================}
+00123     \textcolor{comment}{##  Method to open a file object for read/input operations.}
+00124     \textcolor{comment}{#   @param filename - Path to a file.}
+00125     \textcolor{comment}{#   @return file object ip\_file\_obj}
+00126     \textcolor{comment}{#   @throws Exception for invalid path to the file.}
+00127     \textcolor{comment}{#   O(1) method.}
+00128     @staticmethod
+\hypertarget{file__io_8py_source_l00129}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}{00129}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a1a7ef324955033ad370338fe37e68194}{open\_file\_object\_read}(filename):
+00130         \textcolor{keywordflow}{if} file\_io\_operations.is\_path\_valid(filename):
+00131             ip\_file\_obj = open(filename, \textcolor{stringliteral}{'}\textcolor{stringliteral}{r')}
+00132 \textcolor{stringliteral}{            }\textcolor{keywordflow}{return} ip\_file\_obj
+00133         \textcolor{keywordflow}{else}:
+00134             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"File Read Operation: Path to file is invalid."})
+00135     \textcolor{comment}{# ============================================================}
+00136     \textcolor{comment}{##  Method to open a file object for write/output operations.}
+00137     \textcolor{comment}{#   @param filename - Path to a file.}
+00138     \textcolor{comment}{#   @return file object op\_file\_obj that enables writing to the}
+00139     \textcolor{comment}{#       file named "filename".}
+00140     \textcolor{comment}{#   @throws Exception for invalid path to the file.}
+00141     \textcolor{comment}{#   O(1) method.}
+00142     @staticmethod
+\hypertarget{file__io_8py_source_l00143}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}{00143}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aaf94e26da1d988ece479d1600ad1de4a}{open\_file\_object\_write}(filename):
+00144         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} file\_io\_operations.is\_path\_valid(filename):
+00145             op\_file\_obj = open(filename, \textcolor{stringliteral}{'w'})
+00146             \textcolor{keywordflow}{return} op\_file\_obj
+00147         \textcolor{keywordflow}{else}:
+00148             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"File Write Operation: Path to file is valid."})
+00149     \textcolor{comment}{# ============================================================}
+00150     \textcolor{comment}{##  Method to open a new file object for write/output operations.}
+00151     \textcolor{comment}{#   @param filename - Path to a file.}
+00152     \textcolor{comment}{#   @return file object op\_file\_obj that enables writing to the}
+00153     \textcolor{comment}{#       file named "filename".}
+00154     \textcolor{comment}{#   O(1) method.}
+00155     @staticmethod
+\hypertarget{file__io_8py_source_l00156}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}{00156}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_aefa9041777265e5066f9f5a48fb5a21e}{open\_file\_object\_write\_new}(filename):
+00157         \textcolor{keywordflow}{if} file\_io\_operations.is\_path\_valid(filename):
+00158             os.remove(filename)
+00159         op\_file\_obj = open(filename, \textcolor{stringliteral}{'w'})
+00160         \textcolor{keywordflow}{return} op\_file\_obj
+00161     \textcolor{comment}{# ============================================================}
+00162     \textcolor{comment}{##  Method to open a new file object for write/output operations}
+00163     \textcolor{comment}{#       to store simulation and/or experimental results.}
+00164     \textcolor{comment}{#   @param - None.}
+00165     \textcolor{comment}{#   @return file object "results\_file\_obj" that writes data}
+00166     \textcolor{comment}{#       containing simulation and/or experimental results.}
+00167     \textcolor{comment}{#   O(1) method.}
+00168     @staticmethod
+\hypertarget{file__io_8py_source_l00169}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}{00169}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_ad091638ea961413dba6775d065c0d589}{open\_file\_object\_write\_results}():
+00170         \textcolor{comment}{# Determine path to store simulation/experimental results.}
+00171         results\_filename = generate\_filename.create\_filename()
+00172         \textcolor{comment}{# Tokenize this filename (DD-MM-YY-HR-MN-SS-US format).}
+00173         tokens = date\_time\_operations.get\_date\_time\_tokens\_of\_filename(results\_filename)
+00174         \textcolor{comment}{# Determine which year should the results file be placed in.}
+00175         current\_path = os.path.join(file\_io\_operations.result\_repository,tokens[2])
+00176         \textcolor{comment}{#if (os.path.exists(current\_path) and os.path.isdir(current\_path)):}
+00177         \textcolor{keywordflow}{if} os.path.isdir(current\_path):
+00178             \textcolor{comment}{# Determine which month should the results file be placed in.}
+00179             \textcolor{comment}{#print("tokens[1]=",tokens[1],"=")}
+00180             \textcolor{comment}{
+      #print("date\_time\_operations.mth\_number\_name[tokens[1]]=",date\_time\_operations.mth\_number\_name[tokens[1]],"=")}
+00181             current\_path = os.path.join(current\_path,date\_time\_operations.mth\_number\_name[tokens[1]])
+00182             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.isdir(current\_path):
+00183                 print(\textcolor{stringliteral}{" ... Creating directory for month at:"},current\_path)
+00184                 \textcolor{keywordflow}{try}:
+00185                     \textcolor{comment}{#os.mkdirs(current\_path, exist\_ok = True)}
+00186                     os.makedirs(current\_path, exist\_ok = \textcolor{keyword}{True})
+00187                 \textcolor{keywordflow}{except} OSError:
+00188                     print(\textcolor{stringliteral}{"Encountered error in making directory."}, file=sys.stderr)
+00189                     logging.error(\textcolor{stringliteral}{"Determine why directory for month cannot be created."})
+00190             \textcolor{keywordflow}{else}:
+00191                 print(current\_path,\textcolor{stringliteral}{"=works= ... From: file\_io.py, line 146."})
+00192         \textcolor{keywordflow}{else}:
+00193             print(\textcolor{stringliteral}{" ... Creating directory for year at:"},current\_path)
+00194             \textcolor{keywordflow}{try}:
+00195                 \textcolor{comment}{#os.mkdirs(current\_path, exist\_ok = True)}
+00196                 os.makedirs(current\_path, exist\_ok = \textcolor{keyword}{True})
+00197             \textcolor{keywordflow}{except} OSError:
+00198                 print(\textcolor{stringliteral}{"Encountered error in making directory."}, file=sys.stderr)
+00199                 logging.error(\textcolor{stringliteral}{"Determine why directory for year cannot be created."})
+00200             \textcolor{comment}{# Determine which month should the results file be placed in.}
+00201             current\_path = os.path.join(current\_path, date\_time\_operations.mth\_number\_name[tokens[1]])
+00202             print(\textcolor{stringliteral}{" ...os.path.exists(current\_path:"},os.path.exists(current\_path))
+00203             print(\textcolor{stringliteral}{" ...os.path.isdir(current\_path):"},os.path.isdir(current\_path))
+00204             print(\textcolor{stringliteral}{" ... Creating directory for month at:"},current\_path)
+00205             \textcolor{keywordflow}{try}:
+00206                 \textcolor{comment}{#os.mkdirs(current\_path, exist\_ok = True)}
+00207                 os.makedirs(current\_path, exist\_ok = \textcolor{keyword}{True})
+00208             \textcolor{keywordflow}{except} OSError:
+00209                 print(\textcolor{stringliteral}{"Encountered error in making directory."}, file=sys.stderr)
+00210                 logging.error(\textcolor{stringliteral}{"Determine why directory for month cannot be created."})
+00211         results\_filename = os.path.join(current\_path, results\_filename)
+00212         \textcolor{keywordflow}{return} file\_io\_operations.open\_file\_object\_write(results\_filename)
+00213     \textcolor{comment}{# ============================================================}
+00214     \textcolor{comment}{##  Method to close a file object.}
+00215     \textcolor{comment}{#   @param file\_obj - A file object.}
+00216     \textcolor{comment}{#   @return - Nothing.}
+00217     \textcolor{comment}{#   O(1) method.}
+00218     @staticmethod
+\hypertarget{file__io_8py_source_l00219}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}{00219}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a15cce5bd7767b057cdc569f393c24866}{close\_file\_object}(file\_obj):
+00220         file\_obj.close()
+00221     \textcolor{comment}{# ============================================================}
+00222     \textcolor{comment}{##  Method to determine if two files are equivalent.}
+00223     \textcolor{comment}{#   @param file1 - Path to a file.}
+00224     \textcolor{comment}{#   @param file2 - Path to another file.}
+00225     \textcolor{comment}{#   @return a boolean TRUE, if the files are equivalent. Else,}
+00226     \textcolor{comment}{#       return FALSE.}
+00227     \textcolor{comment}{#   O(n) method, with respect to the number of lines in the}
+00228     \textcolor{comment}{#       larger (if the files are different), or either, of the}
+00229     \textcolor{comment}{#       files.}
+00230     @staticmethod
+\hypertarget{file__io_8py_source_l00231}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}{00231}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9b3808ff6b165f5e73b780036f73a917}{file\_comparison}(file1, file2):
+00232         \textcolor{keywordflow}{return} filecmp.cmp(file1,file2,shallow=\textcolor{keyword}{False})
+00233     \textcolor{comment}{# ============================================================}
+00234     \textcolor{comment}{##  Method to determine the file extension of a file.}
+00235     \textcolor{comment}{#   @param filename - Name of a file.}
+00236     \textcolor{comment}{#   @return the file extension of a file.}
+00237     \textcolor{comment}{#   O(n) method, with respect to the number of characters in the}
+00238     \textcolor{comment}{#       path\_to\_file argument;}
+00239     \textcolor{comment}{#       traverse the string from the right end till the first}
+00240     \textcolor{comment}{#           period is found (this indicates the file extension).}
+00241     \textcolor{comment}{#   References:}
+00242     \textcolor{comment}{#   1) \(\backslash\)cite\{Dharmkar2017\}\(\backslash\)cite\{nosklo2017\}}
+00243     \textcolor{comment}{#   2) \(\backslash\)cite[\(\backslash\)S11 File and Directory Access, \(\backslash\)S11.2 os.path - Common pathname
+       manipulations]\{DrakeJr2016b\}}
+00244     @staticmethod
+\hypertarget{file__io_8py_source_l00245}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}{00245}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a7e3cbb46884ca64a14cd367b1e625082}{get\_file\_extension}(filename):
+00246         temp\_filename\_extension = \textcolor{stringliteral}{""}
+00247         \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+00248             filename\_prefix, filename\_extension = os.path.splitext(filename)
+00249             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} filename\_extension:
+00250                 \textcolor{keywordflow}{break}
+00251             \textcolor{keywordflow}{else}:
+00252                 filename  = filename\_prefix
+00253                 temp\_filename\_extension = filename\_extension + temp\_filename\_extension
+00254         \textcolor{keywordflow}{return} temp\_filename\_extension
+00255     \textcolor{comment}{# ============================================================}
+00256     \textcolor{comment}{##  Method to determine if the file extension of a file matches with}
+00257     \textcolor{comment}{#       a given file extension.}
+00258     \textcolor{comment}{#   @param filename - Name of a file.}
+00259     \textcolor{comment}{#   @param file\_extension - Extension}
+00260     \textcolor{comment}{#   @return boolean True if the file extension of the given filename}
+00261     \textcolor{comment}{#       matches file\_extension; else, return False.}
+00262     \textcolor{comment}{#   O(n) method, with respect to the number of characters in the}
+00263     \textcolor{comment}{#       path\_to\_file argument;}
+00264     \textcolor{comment}{#       traverse the string from the right end till the first}
+00265     \textcolor{comment}{#           period is found (this indicates the file extension).}
+00266     @staticmethod
+\hypertarget{file__io_8py_source_l00267}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}{00267}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a902e9fd0dc0da35e3b374deae44051c6}{check\_file\_extension}(filename, file\_extension):
+00268         \textcolor{keywordflow}{if} file\_extension == file\_io\_operations.get\_file\_extension(filename):
+00269             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00270         \textcolor{keywordflow}{else}:
+00271             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00272     \textcolor{comment}{# ============================================================}
+00273     \textcolor{comment}{##  Method to end redirection of standard output.}
+00274     \textcolor{comment}{#   @param - None.}
+00275     \textcolor{comment}{#   @return - Nothing.}
+00276     \textcolor{comment}{#   O(1) method.}
+00277     @staticmethod
+\hypertarget{file__io_8py_source_l00278}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}{00278}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_afc81e06fe5b168f0ca2baf3f3cf5f449}{stop\_redirecting\_std\_op}():
+00279         sys.stdout = file\_io\_operations.std\_op\_backup
+00280     \textcolor{comment}{# ============================================================}
+00281     \textcolor{comment}{##  Method to redirect standard output to a file object with}
+00282     \textcolor{comment}{#       write access.}
+00283     \textcolor{comment}{#   @param file\_obj - File object with write access.}
+00284     \textcolor{comment}{#   @return boolean True if standard output is redirected to}
+00285     \textcolor{comment}{#       a file object with write access; else, return False.}
+00286     \textcolor{comment}{#   O(1) method.}
+00287     @staticmethod
+\hypertarget{file__io_8py_source_l00288}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}{00288}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a9ebd9b8cca3921274c4777ec7073c23f}{redirect\_std\_op\_to\_file\_obj}(file\_obj):
+00289         file\_io\_operations.std\_op\_backup = sys.stdout
+00290         sys.stdout = file\_obj
+00291     \textcolor{comment}{# ============================================================}
+00292     \textcolor{comment}{##  Method to end redirection of standard error.}
+00293     \textcolor{comment}{#   @param - None.}
+00294     \textcolor{comment}{#   @return - Nothing.}
+00295     \textcolor{comment}{#   O(1) method.}
+00296     @staticmethod
+\hypertarget{file__io_8py_source_l00297}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}{00297}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_abc05dc3f53dc62bfe62aa316219b9807}{stop\_redirecting\_std\_err}():
+00298         sys.stderr = file\_io\_operations.std\_err\_backup
+00299     \textcolor{comment}{# ============================================================}
+00300     \textcolor{comment}{##  Method to redirect standard error to a file object with}
+00301     \textcolor{comment}{#       write access.}
+00302     \textcolor{comment}{#   @param file\_obj - File object with write access.}
+00303     \textcolor{comment}{#   @return boolean True if standard error is redirected to}
+00304     \textcolor{comment}{#       a file object with write access; else, return False.}
+00305     \textcolor{comment}{#   O(1) method.}
+00306     @staticmethod
+\hypertarget{file__io_8py_source_l00307}{}\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}{00307}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1file__io_1_1file__io__operations_a992b70cc7eeaafbe03fe5deb6a9f95d5}{redirect\_std\_err\_to\_file\_obj}(file\_obj):
+00308         file\_io\_operations.std\_err\_backup = sys.stderr
+00309         sys.stderr = file\_obj
+\end{DoxyCode}

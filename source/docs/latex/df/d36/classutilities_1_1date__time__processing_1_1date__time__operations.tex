@@ -1,0 +1,440 @@
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations}{}\section{utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations Class Reference}
+\label{classutilities_1_1date__time__processing_1_1date__time__operations}\index{utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations@{utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations}}
+
+
+Module with methods that perform date \& time processing/operations.  
+
+
+
+
+Collaboration diagram for utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{d9/d70/classutilities_1_1date__time__processing_1_1date__time__operations__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}{is\+\_\+valid\+\_\+time} (hh, mm, ss, us)
+\begin{DoxyCompactList}\small\item\em Method to determine if the time is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}{is\+\_\+valid\+\_\+year} (yy)
+\begin{DoxyCompactList}\small\item\em Method to determine if the year is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}{is\+\_\+valid\+\_\+month} (mm)
+\begin{DoxyCompactList}\small\item\em Method to determine if the month is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}{is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month} (dd, mm)
+\begin{DoxyCompactList}\small\item\em Method to determine if the date/day of a 31-\/day month is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}{is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month} (dd, mm)
+\begin{DoxyCompactList}\small\item\em Method to determine if the date/day of a 30-\/day month is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}{is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb} (dd, mm, yy)
+\begin{DoxyCompactList}\small\item\em Method to determine if the date in February is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}{is\+\_\+valid\+\_\+date} (dd, mm, yy)
+\begin{DoxyCompactList}\small\item\em Method to determine if the date is valid. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}{get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename} (filename)
+\begin{DoxyCompactList}\small\item\em Method to tokenize the filename containing information about the date and time in which the output files are generated. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}{check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format} (filename)
+\begin{DoxyCompactList}\small\item\em Method to determine if the filename contains information about the date and time in which the output files are generated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a640d6fe5b1045e4c92057b524264295d}{mth\+\_\+number\+\_\+name} = \{\char`\"{}1\char`\"{}\+:\char`\"{}january\char`\"{}, \char`\"{}2\char`\"{}\+:\char`\"{}february\char`\"{}, \char`\"{}3\char`\"{}\+:\char`\"{}march\char`\"{}, \char`\"{}4\char`\"{}\+:\char`\"{}april\char`\"{}, \char`\"{}5\char`\"{}\+:\char`\"{}may\char`\"{}, \char`\"{}6\char`\"{}\+:\char`\"{}june\char`\"{}, \char`\"{}7\char`\"{}\+:\char`\"{}july\char`\"{}, \char`\"{}8\char`\"{}\+:\char`\"{}august\char`\"{}, \char`\"{}9\char`\"{}\+:\char`\"{}september\char`\"{}, \char`\"{}10\char`\"{}\+:\char`\"{}october\char`\"{}, \char`\"{}11\char`\"{}\+:\char`\"{}november\char`\"{}, \char`\"{}12\char`\"{}\+:\char`\"{}december\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module with methods that perform date \& time processing/operations. 
+
+\begin{DoxyVerb}    Create a dictionary (associative memories, or associative arrays)
+        of (number, name) months.
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00062}{62} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format@{check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format}}
+\index{check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format@{check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+check\+\_\+filename\+\_\+date\+\_\+time\+\_\+format (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}
+
+
+Method to determine if the filename contains information about the date and time in which the output files are generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Name of a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the filename contains the date and time placed in the D\+D-\/\+M\+M-\/\+Y\+Y-\/\+H\+R-\/\+M\+N-\/\+S\+S-\/\+U\+S format is valid; else, return False. O(n) method, with respect to the number of characters in the filename argument; traverse the string from the right end till the first period is found (this indicates the file extension). \begin{DoxyVerb}    Cannot use the get_date_time_tokens_of_filename() method
+of this date_time_operations module/class, because it
+will result in infinite recursion.
+    #tokens = date_time_operations.get_date_time_tokens_of_filename(filename)
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00256}{256} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00256}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}{00256}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a3176a51995ec999ab7be5cd627019f1c}{check\_filename\_date\_time\_format}(filename):
+00257         \textcolor{stringliteral}{"""}
+00258 \textcolor{stringliteral}{            Cannot use the get\_date\_time\_tokens\_of\_filename() method}
+00259 \textcolor{stringliteral}{                of this date\_time\_operations module/class, because it}
+00260 \textcolor{stringliteral}{                will result in infinite recursion.}
+00261 \textcolor{stringliteral}{            #tokens = date\_time\_operations.get\_date\_time\_tokens\_of\_filename(filename)}
+00262 \textcolor{stringliteral}{        """}
+00263         \textcolor{comment}{# Remove the file extension from the filename.}
+00264         filename, filename\_extension = os.path.splitext(filename)
+00265         tokens = filename.split(\textcolor{stringliteral}{"-"})
+00266         \textcolor{keywordflow}{return} (date\_time\_operations.is\_valid\_date(int(tokens[0]),int(tokens[1]),int(tokens[2])) \textcolor{keywordflow}{and} 
+      date\_time\_operations.is\_valid\_time(int(tokens[3]),int(tokens[4]),int(tokens[5]),int(tokens[6])))
+00267 \end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename@{get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename}}
+\index{get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename@{get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename(filename)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+get\+\_\+date\+\_\+time\+\_\+tokens\+\_\+of\+\_\+filename (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}
+
+
+Method to tokenize the filename containing information about the date and time in which the output files are generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Name of a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tokens if the filename containing the date and time placed in the D\+D-\/\+M\+M-\/\+Y\+Y-\/\+H\+R-\/\+M\+N-\/\+S\+S-\/\+U\+S format is valid; else, return None. O(n) method, with respect to the number of characters in the filename argument; traverse the string from the right end till the first period is found (this indicates the file extension). 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00235}{235} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00235}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}{00235}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_ad6047ac1098493c3511ec209f52250c0}{get\_date\_time\_tokens\_of\_filename}(filename):
+00236         \textcolor{keywordflow}{if} date\_time\_operations.check\_filename\_date\_time\_format(filename):
+00237             \textcolor{comment}{# Remove the file extension from the filename.}
+00238             filename, filename\_extension = os.path.splitext(filename)
+00239             tokens = filename.split(\textcolor{stringliteral}{"-"})
+00240             \textcolor{keywordflow}{return} tokens
+00241         \textcolor{keywordflow}{else}:
+00242             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month@{is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month}}
+\index{is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month@{is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month(dd, mm)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month (
+\begin{DoxyParamCaption}
+\item[{}]{dd, }
+\item[{}]{mm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}
+
+
+Method to determine if the date/day of a 30-\/day month is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dd} & -\/ Date/\+Day of a date (specifically 30-\/day month) in numbers. \\
+\hline
+{\em mm} & -\/ 30-\/day month of a date in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the date/day of a 30-\/day month is valid; else, return False. O(1) method.
+\end{DoxyReturn}
+Assume that the functions is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month(dd,mm) and is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb(dd,mm,yy) will determine the validity of the date for not-\/a-\/30-\/day months. 
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00157}{157} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00157}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}{00157}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a15c6ea3d519b1665781fd9dcddec04a6}{is\_valid\_30\_day\_month}(dd,mm):
+00158         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(mm):
+00159             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00160         \textcolor{comment}{# Check if month has 30 days, 1 <= dd <= 30.}
+00161         \textcolor{keywordflow}{if} ((4 == mm) \textcolor{keywordflow}{or} (6 == mm) \textcolor{keywordflow}{or} (9 == mm) \textcolor{keywordflow}{or} (11 == mm)):
+00162             \textcolor{keywordflow}{if} (1 > dd) \textcolor{keywordflow}{or} (30 < dd):
+00163                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00164         \textcolor{stringliteral}{"""}
+00165 \textcolor{stringliteral}{            Assume that the functions is\_valid\_31\_day\_month(dd,mm) and}
+00166 \textcolor{stringliteral}{                is\_valid\_date\_in\_Feb(dd,mm,yy) will determine the}
+00167 \textcolor{stringliteral}{                validity of the date for not-a-30-day months.}
+00168 \textcolor{stringliteral}{        """}
+00169         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month@{is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month}}
+\index{is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month@{is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month(dd, mm)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month (
+\begin{DoxyParamCaption}
+\item[{}]{dd, }
+\item[{}]{mm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}
+
+
+Method to determine if the date/day of a 31-\/day month is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dd} & -\/ Date/\+Day of a date (specifically 31-\/day month) in numbers. \\
+\hline
+{\em mm} & -\/ 31-\/day month of a date in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the date/day of a 31-\/day month is valid; else, return False. O(1) method.
+\end{DoxyReturn}
+Assume that the functions is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month(dd,mm) and is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb(dd,mm,yy) will determine the validity of the date for not-\/a-\/31-\/day months. 
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00131}{131} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00131}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}{00131}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a4cef78f32520246407763e39a5b090ab}{is\_valid\_31\_day\_month}(dd,mm):
+00132         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(mm):
+00133             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00134         \textcolor{comment}{# Check if month has 31 days, 1 <= dd <= 31.}
+00135         \textcolor{keywordflow}{if} ((1 == mm) \textcolor{keywordflow}{or} (3 == mm) \textcolor{keywordflow}{or} (5 == mm) \textcolor{keywordflow}{or} (7 == mm) \textcolor{keywordflow}{or} (8 == mm) \textcolor{keywordflow}{or} (10 == mm) \textcolor{keywordflow}{or} (12 == mm)):
+00136             \textcolor{keywordflow}{if} (1 > dd) \textcolor{keywordflow}{or} (31 < dd):
+00137                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00138         \textcolor{stringliteral}{"""}
+00139 \textcolor{stringliteral}{            Assume that the functions is\_valid\_30\_day\_month(dd,mm) and}
+00140 \textcolor{stringliteral}{                is\_valid\_date\_in\_Feb(dd,mm,yy) will determine the}
+00141 \textcolor{stringliteral}{                validity of the date for not-a-31-day months.}
+00142 \textcolor{stringliteral}{        """}
+00143         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+date@{is\+\_\+valid\+\_\+date}}
+\index{is\+\_\+valid\+\_\+date@{is\+\_\+valid\+\_\+date}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+date(dd, mm, yy)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+date (
+\begin{DoxyParamCaption}
+\item[{}]{dd, }
+\item[{}]{mm, }
+\item[{}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}
+
+
+Method to determine if the date is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dd} & -\/ Date/\+Day of a date in numbers. \\
+\hline
+{\em mm} & -\/ Month of a date in numbers. \\
+\hline
+{\em yy} & -\/ Year of a date in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the date is valid; else, return False. O(1) method.
+\end{DoxyReturn}
+Assume that the following functions would be used together to validate the date/day of a month (and given year)\+:
+\begin{DoxyItemize}
+\item date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month(dd,mm)
+\item date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month(dd,mm)
+\item date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb(dd,mm,yy)) 
+\end{DoxyItemize}
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00220}{220} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00220}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}{00220}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_acfa0ace983c6e5e715ee0fdb1a9a590b}{is\_valid\_date}(dd,mm,yy):
+00221         \textcolor{keywordflow}{return} (date\_time\_operations.is\_valid\_month(mm) \textcolor{keywordflow}{and} date\_time\_operations.is\_valid\_year(yy) \textcolor{keywordflow}{and} 
+      date\_time\_operations.is\_valid\_31\_day\_month(dd,mm) \textcolor{keywordflow}{and} date\_time\_operations.is\_valid\_30\_day\_month(dd,mm) \textcolor{keywordflow}{and} 
+      date\_time\_operations.is\_valid\_date\_in\_Feb(dd,mm,yy))
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb@{is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb}}
+\index{is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb@{is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb(dd, mm, yy)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+date\+\_\+in\+\_\+\+Feb (
+\begin{DoxyParamCaption}
+\item[{}]{dd, }
+\item[{}]{mm, }
+\item[{}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}
+
+
+Method to determine if the date in February is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dd} & -\/ Date/\+Day of a date in February in numbers. \\
+\hline
+{\em mm} & -\/ Month of a date (in February) in numbers. \\
+\hline
+{\em yy} & -\/ Year of a date in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the date is valid; else, return False. O(1) method.
+\end{DoxyReturn}
+Assume that the functions is\+\_\+valid\+\_\+31\+\_\+day\+\_\+month(dd,mm) and is\+\_\+valid\+\_\+30\+\_\+day\+\_\+month(dd,mm) will determine the validity of the date for not-\/\+February months. 
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00183}{183} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00183}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}{00183}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a659b5810ce55e7bbb18820664ef97d83}{is\_valid\_date\_in\_Feb}(dd,mm,yy):
+00184         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_year(yy):
+00185             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00186         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(mm):
+00187             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00188         \textcolor{keywordflow}{if} (calendar.isleap(yy)) \textcolor{keywordflow}{and} (2 == mm):
+00189             \textcolor{keywordflow}{if} ((1 > dd) \textcolor{keywordflow}{or} (29 < dd)):
+00190                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00191             \textcolor{keywordflow}{else}:
+00192                 \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00193         \textcolor{keywordflow}{elif} (\textcolor{keywordflow}{not} calendar.isleap(yy)) \textcolor{keywordflow}{and} (2 == mm):
+00194             \textcolor{keywordflow}{if} ((1 > dd) \textcolor{keywordflow}{or} (28 < dd)):
+00195                 \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00196             \textcolor{keywordflow}{else}:
+00197                 \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00198         \textcolor{keywordflow}{else}:
+00199             \textcolor{stringliteral}{"""}
+00200 \textcolor{stringliteral}{                Assume that the functions is\_valid\_31\_day\_month(dd,mm)}
+00201 \textcolor{stringliteral}{                    and is\_valid\_30\_day\_month(dd,mm) will determine the}
+00202 \textcolor{stringliteral}{                    validity of the date for not-February months.}
+00203 \textcolor{stringliteral}{            """}
+00204             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+month@{is\+\_\+valid\+\_\+month}}
+\index{is\+\_\+valid\+\_\+month@{is\+\_\+valid\+\_\+month}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+month(mm)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+month (
+\begin{DoxyParamCaption}
+\item[{}]{mm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}
+
+
+Method to determine if the month is valid. 
+
+Check if the month is valid\+: 1 $<$= mm $<$= 12. 
+\begin{DoxyParams}{Parameters}
+{\em mm} & -\/ Month of a date in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the month is valid; else, return False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00113}{113} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00113}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}{00113}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a7ca9f5b1f8592678a4485eb1b9618917}{is\_valid\_month}(mm):
+00114         \textcolor{keywordflow}{if} (1 > mm) \textcolor{keywordflow}{or} (12 < mm):
+00115             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00116         \textcolor{keywordflow}{else}:
+00117             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+time@{is\+\_\+valid\+\_\+time}}
+\index{is\+\_\+valid\+\_\+time@{is\+\_\+valid\+\_\+time}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+time(hh, mm, ss, us)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{}]{hh, }
+\item[{}]{mm, }
+\item[{}]{ss, }
+\item[{}]{us}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}
+
+
+Method to determine if the time is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hh} & -\/ Hour of a time in numbers. \\
+\hline
+{\em mm} & -\/ Minutes of a time in numbers. \\
+\hline
+{\em ss} & -\/ Seconds of a time in numbers. \\
+\hline
+{\em us} & -\/ Microseconds of a time in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the date is valid; else, return False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00078}{78} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00078}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}{00078}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_aaa8f94503a00886b6ca54e79c5ac2e84}{is\_valid\_time}(hh,mm,ss,us):
+00079         \textcolor{comment}{# Check if the hour is valid: 0 <= tokens[3] <= 23.}
+00080         \textcolor{keywordflow}{if} (0>hh) \textcolor{keywordflow}{or} (23<hh):
+00081             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00082         \textcolor{comment}{# Check if the minute is valid: 0 <= tokens[4] <= 59.}
+00083         \textcolor{keywordflow}{if} (0>mm) \textcolor{keywordflow}{or} (59<mm):
+00084             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00085         \textcolor{comment}{# Check if the second is valid: 0 <= tokens[5] <= 59.}
+00086         \textcolor{keywordflow}{if} (0>ss) \textcolor{keywordflow}{or} (59<ss):
+00087             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00088         \textcolor{comment}{# Check if the microsecond is valid: 0 <= tokens[6] <= 1000000.}
+00089         \textcolor{keywordflow}{if} (0>us) \textcolor{keywordflow}{or} (1000000<us):
+00090             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00091         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!is\+\_\+valid\+\_\+year@{is\+\_\+valid\+\_\+year}}
+\index{is\+\_\+valid\+\_\+year@{is\+\_\+valid\+\_\+year}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{is\+\_\+valid\+\_\+year(yy)}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+is\+\_\+valid\+\_\+year (
+\begin{DoxyParamCaption}
+\item[{}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}
+
+
+Method to determine if the year is valid. 
+
+Check if the year is valid\+: 2014 $<$= yy $<$= 2100. 
+\begin{DoxyParams}{Parameters}
+{\em yy} & -\/ year of a date in numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the year is valid; else, return False. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00100}{100} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_l00100}{}\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}{00100}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing_1_1date__time__operations_a621d736cda0d00786c1e8803cf7fc768}{is\_valid\_year}(yy):
+00101         \textcolor{keywordflow}{if} (2014 > yy) \textcolor{keywordflow}{or} (2100 < yy):
+00102             \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+00103         \textcolor{keywordflow}{else}:
+00104             \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classutilities_1_1date__time__processing_1_1date__time__operations_a640d6fe5b1045e4c92057b524264295d}{}\index{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}!mth\+\_\+number\+\_\+name@{mth\+\_\+number\+\_\+name}}
+\index{mth\+\_\+number\+\_\+name@{mth\+\_\+number\+\_\+name}!utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations@{utilities\+::date\+\_\+time\+\_\+processing\+::date\+\_\+time\+\_\+operations}}
+\subsubsection[{mth\+\_\+number\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}dictionary utilities.\+date\+\_\+time\+\_\+processing.\+date\+\_\+time\+\_\+operations.\+mth\+\_\+number\+\_\+name = \{\char`\"{}1\char`\"{}\+:\char`\"{}january\char`\"{}, \char`\"{}2\char`\"{}\+:\char`\"{}february\char`\"{}, \char`\"{}3\char`\"{}\+:\char`\"{}march\char`\"{}, \char`\"{}4\char`\"{}\+:\char`\"{}april\char`\"{}, \char`\"{}5\char`\"{}\+:\char`\"{}may\char`\"{}, \char`\"{}6\char`\"{}\+:\char`\"{}june\char`\"{}, \char`\"{}7\char`\"{}\+:\char`\"{}july\char`\"{}, \char`\"{}8\char`\"{}\+:\char`\"{}august\char`\"{}, \char`\"{}9\char`\"{}\+:\char`\"{}september\char`\"{}, \char`\"{}10\char`\"{}\+:\char`\"{}october\char`\"{}, \char`\"{}11\char`\"{}\+:\char`\"{}november\char`\"{}, \char`\"{}12\char`\"{}\+:\char`\"{}december\char`\"{}\}\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1date__time__processing_1_1date__time__operations_a640d6fe5b1045e4c92057b524264295d}
+
+
+Definition at line \hyperlink{date__time__processing_8py_source_l00067}{67} of file \hyperlink{date__time__processing_8py_source}{date\+\_\+time\+\_\+processing.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/\hyperlink{date__time__processing_8py}{date\+\_\+time\+\_\+processing.\+py}\end{DoxyCompactItemize}

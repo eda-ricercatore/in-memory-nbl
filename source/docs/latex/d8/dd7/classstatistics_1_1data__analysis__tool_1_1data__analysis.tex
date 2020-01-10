@@ -1,0 +1,306 @@
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis}{}\section{statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis Class Reference}
+\label{classstatistics_1_1data__analysis__tool_1_1data__analysis}\index{statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis@{statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis}}
+
+
+Import Custom Python Modules.  
+
+
+
+
+Collaboration diagram for statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{db/da4/classstatistics_1_1data__analysis__tool_1_1data__analysis__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}{get\+\_\+reference\+\_\+value}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}{get\+\_\+actual\+\_\+change}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}{get\+\_\+absolute\+\_\+difference}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}{get\+\_\+relative\+\_\+change}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}{get\+\_\+percentage\+\_\+change}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}{get\+\_\+relative\+\_\+error}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}{get\+\_\+percent\+\_\+error}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values}
+\item 
+def \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}{get\+\_\+relative\+\_\+difference}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a946ccd65157a8c3b3b9be607fcaed9f6}{dict\+\_\+of\+\_\+reference\+\_\+values} = \{\char`\"{}c\char`\"{}\+:299792458, \char`\"{}standard acceleration due to gravity\char`\"{}\+:9.\+80665, \char`\"{}standard atmosphere\char`\"{}\+:101325\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Import Custom Python Modules. 
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00137}{137} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+absolute\+\_\+difference@{get\+\_\+absolute\+\_\+difference}}
+\index{get\+\_\+absolute\+\_\+difference@{get\+\_\+absolute\+\_\+difference}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+absolute\+\_\+difference}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+absolute\+\_\+difference (
+\begin{DoxyParamCaption}
+\item[{}]{quantity1 = {\ttfamily 0}, }
+\item[{}]{quantity2 = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}
+\begin{DoxyVerb}    Check postcondition:
+absolute difference, |quantity1 - quantity2| >= 0.
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00189}{189} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00189}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}{00189}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a4443b2fd70b1f2632cc3e003915af2f3}{get\_absolute\_difference}(quantity1=0,quantity2=0):
+00190         \textcolor{stringliteral}{"""}
+00191 \textcolor{stringliteral}{            Check postcondition:}
+00192 \textcolor{stringliteral}{                absolute difference, |quantity1 - quantity2| >= 0.}
+00193 \textcolor{stringliteral}{        """}
+00194         absolute\_difference = abs(quantity1 - quantity2)
+00195         \textcolor{keywordflow}{if} (0 > absolute\_difference):
+00196             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   get\_absolute\_difference(): Absolute difference must be non-negative."})
+00197         \textcolor{keywordflow}{return} absolute\_difference
+\end{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+actual\+\_\+change@{get\+\_\+actual\+\_\+change}}
+\index{get\+\_\+actual\+\_\+change@{get\+\_\+actual\+\_\+change}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+actual\+\_\+change}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+actual\+\_\+change (
+\begin{DoxyParamCaption}
+\item[{}]{quantity1 = {\ttfamily 0}, }
+\item[{}]{quantity2 = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00173}{173} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00173}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}{00173}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2559796fe2b8c7a1619e741345ff2f8d}{get\_actual\_change}(quantity1=0,quantity2=0):
+00174         \textcolor{keywordflow}{return} (quantity1 - quantity2)
+\end{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values@{get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values}}
+\index{get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values@{get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values (
+\begin{DoxyParamCaption}
+\item[{}]{list\+\_\+of\+\_\+numbers = {\ttfamily \mbox{[}\mbox{]}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00284}{284} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+
+Referenced by \hyperlink{data__analysis__tool_8py_source_l00324}{statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+relative\+\_\+difference()}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00284}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{00284}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{get\_arithmetic\_average\_of\_absolute\_values}(
+      list\_of\_numbers=[]):
+00285         \textcolor{comment}{# Check precondition: list\_of\_numbers is not a None object.}
+00286         \textcolor{keywordflow}{if} list\_of\_numbers \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+00287             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   A 'None' object is passed to the
+       get\_arithmetic\_average\_of\_absolute\_values() method."})
+00288         \textcolor{comment}{# Else, is list\_of\_numbers an empty list?}
+00289         \textcolor{comment}{#elif 0 == len(list\_of\_numbers):}
+00290         \textcolor{keywordflow}{elif} \textcolor{keywordflow}{not} list\_of\_numbers:   \textcolor{comment}{# More Pythonic solution.}
+00291             \textcolor{keywordflow}{return} 0
+00292         \textcolor{keywordflow}{else}:
+00293             \textcolor{stringliteral}{"""}
+00294 \textcolor{stringliteral}{                Copy the absolute values of numbers in the list to}
+00295 \textcolor{stringliteral}{                    another list, absolute\_list\_of\_numbers.}
+00296 \textcolor{stringliteral}{            """}
+00297             absolute\_list\_of\_numbers = []
+00298             \textcolor{keywordflow}{for} elem \textcolor{keywordflow}{in} list\_of\_numbers:
+00299                 absolute\_list\_of\_numbers.append(abs(elem))
+00300             \textcolor{comment}{#print("absolute\_list\_of\_numbers:",absolute\_list\_of\_numbers,"=")}
+00301             \textcolor{comment}{# Determine the arithmetic mean of these absolute values.}
+00302             mean\_absolute\_list\_of\_numbers = s.mean(absolute\_list\_of\_numbers)
+00303             \textcolor{comment}{# Check postcondition: mean of absolute values of numbers >= 0.}
+00304             \textcolor{keywordflow}{if} 0 > mean\_absolute\_list\_of\_numbers:
+00305                 \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   mean of the list of absolute values. < 0."})
+00306             \textcolor{keywordflow}{return} mean\_absolute\_list\_of\_numbers
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dd7/classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+percent\+\_\+error@{get\+\_\+percent\+\_\+error}}
+\index{get\+\_\+percent\+\_\+error@{get\+\_\+percent\+\_\+error}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+percent\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+percent\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{}]{experimental\+\_\+value = {\ttfamily 1}, }
+\item[{}]{theoretical\+\_\+value = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00261}{261} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00261}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}{00261}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a2c0e62016c7d45cc39b71372ccb6d028}{get\_percent\_error}(experimental\_value=1,theoretical\_value=1):
+00262         \textcolor{keywordflow}{return} (data\_analysis.get\_relative\_error(experimental\_value,theoretical\_value)*100)
+\end{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+percentage\+\_\+change@{get\+\_\+percentage\+\_\+change}}
+\index{get\+\_\+percentage\+\_\+change@{get\+\_\+percentage\+\_\+change}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+percentage\+\_\+change}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+percentage\+\_\+change (
+\begin{DoxyParamCaption}
+\item[{}]{quantity1 = {\ttfamily 1}, }
+\item[{}]{ref\+\_\+qty = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00229}{229} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00229}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}{00229}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_ae013c86ec44948a2b9ac2798bd4a9cb2}{get\_percentage\_change}(quantity1=1,ref\_qty=1):
+00230         \textcolor{comment}{# Check precondition: ref\_qty != 0.}
+00231         \textcolor{keywordflow}{if} 0 == ref\_qty:
+00232             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   ref\_qty cannot be zero."})
+00233         relative\_change = data\_analysis.get\_relative\_change(quantity1,ref\_qty)
+00234         \textcolor{keywordflow}{return} (relative\_change*100)
+\end{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+reference\+\_\+value@{get\+\_\+reference\+\_\+value}}
+\index{get\+\_\+reference\+\_\+value@{get\+\_\+reference\+\_\+value}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+reference\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+reference\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{}]{property = {\ttfamily \char`\"{}c\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00159}{159} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00159}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}{00159}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a890a06cfd5f3dbb95a7d5e41ec89b8e9}{get\_reference\_value}(property="c"):
+00160         \textcolor{keywordflow}{return} data\_analysis.dict\_of\_reference\_values[property]
+\end{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+relative\+\_\+change@{get\+\_\+relative\+\_\+change}}
+\index{get\+\_\+relative\+\_\+change@{get\+\_\+relative\+\_\+change}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+relative\+\_\+change}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+relative\+\_\+change (
+\begin{DoxyParamCaption}
+\item[{}]{quantity1 = {\ttfamily 1}, }
+\item[{}]{ref\+\_\+qty = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00211}{211} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00211}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}{00211}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a9a050987fc4c731a48d99a8db1e28c8c}{get\_relative\_change}(quantity1=1,ref\_qty=1):
+00212         \textcolor{comment}{# Check precondition: ref\_qty != 0.}
+00213         \textcolor{keywordflow}{if} 0 == ref\_qty:
+00214             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   ref\_qty cannot be zero."})
+00215         \textcolor{keywordflow}{return} (data\_analysis.get\_actual\_change(quantity1,ref\_qty)/ref\_qty)
+\end{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+relative\+\_\+difference@{get\+\_\+relative\+\_\+difference}}
+\index{get\+\_\+relative\+\_\+difference@{get\+\_\+relative\+\_\+difference}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+relative\+\_\+difference}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+relative\+\_\+difference (
+\begin{DoxyParamCaption}
+\item[{}]{quantity1 = {\ttfamily 1}, }
+\item[{}]{quantity2 = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00324}{324} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+
+References \hyperlink{data__analysis__tool_8py_source_l00284}{statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+arithmetic\+\_\+average\+\_\+of\+\_\+absolute\+\_\+values()}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00324}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}{00324}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8}{get\_relative\_difference}(quantity1=1,quantity2=1):
+00325         \textcolor{comment}{# Check for precondition: (quantity1 != 0) or (quantity2 != 0).}
+00326         \textcolor{keywordflow}{if} (0 == quantity1) \textcolor{keywordflow}{and} (0 == quantity2):
+00327             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   relative difference does not exist for quantity1 == quantity2."})
+00328         absolute\_diff = data\_analysis.get\_absolute\_difference(quantity1,quantity2)
+00329         \textcolor{comment}{# Check assertion: absolute difference, |quantity1 - quantity2| >= 0.}
+00330         \textcolor{keywordflow}{if} 0 > absolute\_diff:
+00331             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   get\_relative\_difference(): Absolute difference must be non-negative."})
+00332         list\_of\_values = [quantity1, quantity2]
+00333         average\_of\_absolute\_values = \hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_a3eb98f0cd57564ad42dd8b2cef5feab5}{get\_arithmetic\_average\_of\_absolute\_values}
+      (list\_of\_numbers)
+00334         \textcolor{comment}{# Check postcondition: average\_of\_absolute\_values > 0.}
+00335         \textcolor{keywordflow}{if} 0 >= average\_of\_absolute\_values:
+00336             \textcolor{keywordflow}{raise} Exception(\textcolor{stringliteral}{"   0 >= arithmetic mean of absolute values."})
+00337         \textcolor{keywordflow}{return} (absolute\_diff/average\_of\_absolute\_values)
+00338     
+00339 \end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dd7/classstatistics_1_1data__analysis__tool_1_1data__analysis_a04973a814dd603d6603da8c4d21ea1d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!get\+\_\+relative\+\_\+error@{get\+\_\+relative\+\_\+error}}
+\index{get\+\_\+relative\+\_\+error@{get\+\_\+relative\+\_\+error}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{get\+\_\+relative\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}def statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+get\+\_\+relative\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{}]{experimental\+\_\+value = {\ttfamily 1}, }
+\item[{}]{theoretical\+\_\+value = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00247}{247} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_l00247}{}\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}{00247}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1data__analysis__tool_1_1data__analysis_aac1f458b15db107e27de367591361884}{get\_relative\_error}(experimental\_value=1,theoretical\_value=1):
+00248         \textcolor{keywordflow}{return} (data\_analysis.get\_absolute\_difference(experimental\_value,theoretical\_value)/abs(
+      theoretical\_value))
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classstatistics_1_1data__analysis__tool_1_1data__analysis_a946ccd65157a8c3b3b9be607fcaed9f6}{}\index{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}!dict\+\_\+of\+\_\+reference\+\_\+values@{dict\+\_\+of\+\_\+reference\+\_\+values}}
+\index{dict\+\_\+of\+\_\+reference\+\_\+values@{dict\+\_\+of\+\_\+reference\+\_\+values}!statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis@{statistics\+::data\+\_\+analysis\+\_\+tool\+::data\+\_\+analysis}}
+\subsubsection[{dict\+\_\+of\+\_\+reference\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}dictionary statistics.\+data\+\_\+analysis\+\_\+tool.\+data\+\_\+analysis.\+dict\+\_\+of\+\_\+reference\+\_\+values = \{\char`\"{}c\char`\"{}\+:299792458, \char`\"{}standard acceleration due to gravity\char`\"{}\+:9.\+80665, \char`\"{}standard atmosphere\char`\"{}\+:101325\}\hspace{0.3cm}{\ttfamily [static]}}\label{classstatistics_1_1data__analysis__tool_1_1data__analysis_a946ccd65157a8c3b3b9be607fcaed9f6}
+
+
+Definition at line \hyperlink{data__analysis__tool_8py_source_l00151}{151} of file \hyperlink{data__analysis__tool_8py_source}{data\+\_\+analysis\+\_\+tool.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+statistics/\hyperlink{data__analysis__tool_8py}{data\+\_\+analysis\+\_\+tool.\+py}\end{DoxyCompactItemize}

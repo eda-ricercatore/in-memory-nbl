@@ -1,0 +1,568 @@
+\hypertarget{date__time__processing__tester_8py_source}{}\section{date\+\_\+time\+\_\+processing\+\_\+tester.\+py}
+\label{date__time__processing__tester_8py_source}\index{utilities/date\+\_\+time\+\_\+processing\+\_\+tester.\+py@{utilities/date\+\_\+time\+\_\+processing\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{date__time__processing__tester_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1date__time__processing__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test}
+00006 \textcolor{stringliteral}{        date and time operations.}
+00007 \textcolor{stringliteral}{}
+00008 \textcolor{stringliteral}{    Synopsis:}
+00009 \textcolor{stringliteral}{    Test different/all date and time operations.}
+00010 \textcolor{stringliteral}{}
+00011 \textcolor{stringliteral}{    Notes/Assumptions:}
+00012 \textcolor{stringliteral}{}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{    Revision History:}
+00017 \textcolor{stringliteral}{    August 1, 2018          Version 0.1, initial build.}
+00018 \textcolor{stringliteral}{"""}
+00019 
+\hypertarget{date__time__processing__tester_8py_source_l00020}{}\hyperlink{namespaceutilities_1_1date__time__processing__tester_ae1106460c338050149a3f7aa6690002a}{00020} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{date__time__processing__tester_8py_source_l00021}{}\hyperlink{namespaceutilities_1_1date__time__processing__tester_a98cf80a86a0ee83e7b23e071b489b6b8}{00021} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{date__time__processing__tester_8py_source_l00022}{}\hyperlink{namespaceutilities_1_1date__time__processing__tester_a3cf1bc57db206c3849901a593e205b09}{00022} \_\_date\_\_ = \textcolor{stringliteral}{'August 1, 2018'}
+00023 
+00024 \textcolor{comment}{#   The MIT License (MIT)}
+00025 
+00026 \textcolor{comment}{#   Copyright (c) <2018> <Zhiyang Ong>}
+00027 
+00028 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00029 
+00030 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00031 
+00032 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00033 
+00034 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00035 
+00036 
+00037 
+00038 \textcolor{comment}{###############################################################}
+00039 \textcolor{stringliteral}{"""}
+00040 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00041 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00042 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00043 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00044 \textcolor{stringliteral}{}
+00045 \textcolor{stringliteral}{    subprocess -> call}
+00046 \textcolor{stringliteral}{                To make system calls.}
+00047 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00048 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00049 \textcolor{stringliteral}{    re          Use regular expressions.}
+00050 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00051 \textcolor{stringliteral}{"""}
+00052 
+00053 \textcolor{keyword}{import} sys
+00054 \textcolor{keyword}{import} os
+00055 \textcolor{keyword}{import} os.path
+00056 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00057 \textcolor{keyword}{import} time
+00058 \textcolor{keyword}{import} warnings
+00059 \textcolor{keyword}{import} re
+00060 \textcolor{keyword}{import} filecmp
+00061 
+00062 \textcolor{comment}{###############################################################}
+00063 \textcolor{comment}{#   Import Custom Python Modules}
+00064 
+00065 \textcolor{stringliteral}{"""}
+00066 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00067 \textcolor{stringliteral}{        results.}
+00068 \textcolor{stringliteral}{"""}
+00069 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00070 \textcolor{comment}{# Package and module to process input arguments to the script/program.}
+00071 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1queue__ip__arguments}{utilities.queue\_ip\_arguments} \textcolor{keyword}{import} queue\_ip\_args
+00072 \textcolor{comment}{# Package and module to perform date and time operations.}
+00073 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1date__time__processing}{utilities.date\_time\_processing} \textcolor{keyword}{import} date\_time\_operations
+00074 \textcolor{stringliteral}{"""}
+00075 \textcolor{stringliteral}{    Module to generate the filename for storing the experimental}
+00076 \textcolor{stringliteral}{        results and simulation output.}
+00077 \textcolor{stringliteral}{"""}
+00078 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1generate__results__filename}{utilities.generate\_results\_filename} \textcolor{keyword}{import} generate\_filename
+00079 
+00080 \textcolor{comment}{###############################################################}
+00081 \textcolor{stringliteral}{"""}
+00082 \textcolor{stringliteral}{    Module with methods that perform date and time operations.}
+00083 \textcolor{stringliteral}{    Support for class instantiation is not provided, to avoid}
+00084 \textcolor{stringliteral}{        acquiring a collection of useless "date\_time\_operations"}
+00085 \textcolor{stringliteral}{        objects.}
+00086 \textcolor{stringliteral}{    Test each static method of the "date\_time\_operations" class.}
+00087 \textcolor{stringliteral}{"""}
+\hypertarget{date__time__processing__tester_8py_source_l00088}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester}{00088} \textcolor{keyword}{class }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester}{date\_time\_operations\_tester}:
+00089     \textcolor{comment}{## =========================================================}
+00090     \textcolor{comment}{#   Method to test the methods that perform time operations.}
+00091     \textcolor{comment}{#   @return - Nothing.}
+00092     \textcolor{comment}{#   O(1) method.}
+00093     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00094}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a024182086c48b718cc794b100501eb79}{00094}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a024182086c48b718cc794b100501eb79}{test\_time\_operations}():
+00095         print(\textcolor{stringliteral}{""})
+00096         print(\textcolor{stringliteral}{""})
+00097         print(\textcolor{stringliteral}{"==   Testing class: date\_time\_operations."})
+00098         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_time() method."})
+00099         prompt = \textcolor{stringliteral}{"  ... Test: single error, hh              \{\}"}
+00100         statistical\_analysis.increment\_number\_test\_cases\_used()
+00101         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_time(34,5,3,124395):
+00102             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00103             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00104         \textcolor{keywordflow}{else}:
+00105             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00106         prompt = \textcolor{stringliteral}{"  ... Test: single error, mm              \{\}"}
+00107         statistical\_analysis.increment\_number\_test\_cases\_used()
+00108         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_time(4,-8215,3,124395):
+00109             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00110             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00111         \textcolor{keywordflow}{else}:
+00112             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00113         prompt = \textcolor{stringliteral}{"  ... Test: single error, ss              \{\}"}
+00114         statistical\_analysis.increment\_number\_test\_cases\_used()
+00115         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_time(4,15,586,124395):
+00116             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00117             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00118         \textcolor{keywordflow}{else}:
+00119             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00120         prompt = \textcolor{stringliteral}{"  ... Test: single error, us              \{\}"}
+00121         statistical\_analysis.increment\_number\_test\_cases\_used()
+00122         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_time(4,15,56,123435435434395):
+00123             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00124             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00125         \textcolor{keywordflow}{else}:
+00126             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00127         prompt = \textcolor{stringliteral}{"  ... Test: double errors, ss and us          \{\}"}
+00128         statistical\_analysis.increment\_number\_test\_cases\_used()
+00129         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_time(4,15,956,123435435434395):
+00130             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00131             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00132         \textcolor{keywordflow}{else}:
+00133             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00134         prompt = \textcolor{stringliteral}{"  ... Test: multiple errors, hh, ss, and us       \{\}"}
+00135         statistical\_analysis.increment\_number\_test\_cases\_used()
+00136         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_time(42390534,15,956,123435435434395):
+00137             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00138             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00139         \textcolor{keywordflow}{else}:
+00140             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00141         prompt = \textcolor{stringliteral}{"  ... Test: no error                  \{\}"}
+00142         statistical\_analysis.increment\_number\_test\_cases\_used()
+00143         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_time(23,59,59,124395):
+00144             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00145             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00146         \textcolor{keywordflow}{else}:
+00147             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00148         prompt = \textcolor{stringliteral}{"  ... Test: no error                  \{\}"}
+00149         statistical\_analysis.increment\_number\_test\_cases\_used()
+00150         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_time(0,0,0,000000):
+00151             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00152             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00153         \textcolor{keywordflow}{else}:
+00154             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00155         prompt = \textcolor{stringliteral}{"  ... Test: no error                  \{\}"}
+00156         statistical\_analysis.increment\_number\_test\_cases\_used()
+00157         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_time(1,1,1,1):
+00158             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00159             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00160         \textcolor{keywordflow}{else}:
+00161             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00162     \textcolor{comment}{## =========================================================}
+00163     \textcolor{comment}{#   Method to test method that determines if year is valid.}
+00164     \textcolor{comment}{#   @return - Nothing.}
+00165     \textcolor{comment}{#   O(1) method.}
+00166     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00167}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_ae745c61827bc1d30d5c964b4d9586343}{00167}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_ae745c61827bc1d30d5c964b4d9586343}{test\_is\_valid\_year}():
+00168         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_year() method."})
+00169         prompt = \textcolor{stringliteral}{"  ... Test: year < 2014                   \{\}"}
+00170         statistical\_analysis.increment\_number\_test\_cases\_used()
+00171         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_year(2010):
+00172             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00173             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00174         \textcolor{keywordflow}{else}:
+00175             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00176         prompt = \textcolor{stringliteral}{"  ... Test: year = -467                   \{\}"}
+00177         statistical\_analysis.increment\_number\_test\_cases\_used()
+00178         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_year(-467):
+00179             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00180             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00181         \textcolor{keywordflow}{else}:
+00182             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00183         prompt = \textcolor{stringliteral}{"  ... Test: year > 3645                   \{\}"}
+00184         statistical\_analysis.increment\_number\_test\_cases\_used()
+00185         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_year(3645):
+00186             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00187             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00188         \textcolor{keywordflow}{else}:
+00189             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00190         prompt = \textcolor{stringliteral}{"  ... Test: year = 2019                   \{\}"}
+00191         statistical\_analysis.increment\_number\_test\_cases\_used()
+00192         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_year(2019):
+00193             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00194             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00195         \textcolor{keywordflow}{else}:
+00196             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00197     \textcolor{comment}{## =========================================================}
+00198     \textcolor{comment}{#   Method to test method that determines if month is valid.}
+00199     \textcolor{comment}{#   @return - Nothing.}
+00200     \textcolor{comment}{#   O(1) method.}
+00201     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00202}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_ae3d0fc5e01b44ebe36ef28464f1f755a}{00202}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_ae3d0fc5e01b44ebe36ef28464f1f755a}{test\_is\_valid\_month}():
+00203         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_month() method."})
+00204         prompt = \textcolor{stringliteral}{"  ... Test: month = 0                 \{\}"}
+00205         statistical\_analysis.increment\_number\_test\_cases\_used()
+00206         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(0):
+00207             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00208             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00209         \textcolor{keywordflow}{else}:
+00210             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00211         prompt = \textcolor{stringliteral}{"  ... Test: month = -7                    \{\}"}
+00212         statistical\_analysis.increment\_number\_test\_cases\_used()
+00213         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(-7):
+00214             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00215             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00216         \textcolor{keywordflow}{else}:
+00217             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00218         prompt = \textcolor{stringliteral}{"  ... Test: month > 12                    \{\}"}
+00219         statistical\_analysis.increment\_number\_test\_cases\_used()
+00220         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_month(15):
+00221             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00222             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00223         \textcolor{keywordflow}{else}:
+00224             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00225         prompt = \textcolor{stringliteral}{"  ... Test: month = 10                    \{\}"}
+00226         statistical\_analysis.increment\_number\_test\_cases\_used()
+00227         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_month(10):
+00228             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00229             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00230         \textcolor{keywordflow}{else}:
+00231             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00232     \textcolor{comment}{## =========================================================}
+00233     \textcolor{comment}{#   Method to test method that determines if the date/day of}
+00234     \textcolor{comment}{#       a 31-day month is valid.}
+00235     \textcolor{comment}{#   @return - Nothing.}
+00236     \textcolor{comment}{#   O(1) method.}
+00237     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00238}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a6ee9fbb6e07f1ca66334315e61876d8e}{00238}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a6ee9fbb6e07f1ca66334315e61876d8e}{test\_is\_valid\_31\_day\_month}():
+00239         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_31\_day\_month() method."})
+00240         prompt = \textcolor{stringliteral}{"  ... Test: not 31-day month, mm = 4          \{\}"}
+00241         statistical\_analysis.increment\_number\_test\_cases\_used()
+00242         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_31\_day\_month(17,4):
+00243             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00244             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00245         \textcolor{keywordflow}{else}:
+00246             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00247         prompt = \textcolor{stringliteral}{"  ... Test: not 31-day month, mm = 2          \{\}"}
+00248         statistical\_analysis.increment\_number\_test\_cases\_used()
+00249         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_31\_day\_month(17,4):
+00250             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00251             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00252         \textcolor{keywordflow}{else}:
+00253             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00254         prompt = \textcolor{stringliteral}{"  ... Test: 31-day month, dd < 0              \{\}"}
+00255         statistical\_analysis.increment\_number\_test\_cases\_used()
+00256         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_31\_day\_month(-8,7):
+00257             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00258             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00259         \textcolor{keywordflow}{else}:
+00260             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00261         prompt = \textcolor{stringliteral}{"  ... Test: 31-day month, dd = 0              \{\}"}
+00262         statistical\_analysis.increment\_number\_test\_cases\_used()
+00263         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_31\_day\_month(0,7):
+00264             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00265             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00266         \textcolor{keywordflow}{else}:
+00267             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00268         prompt = \textcolor{stringliteral}{"  ... Test: 31-day month, dd = 27             \{\}"}
+00269         statistical\_analysis.increment\_number\_test\_cases\_used()
+00270         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_31\_day\_month(27,10):
+00271             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00272             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00273         \textcolor{keywordflow}{else}:
+00274             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00275     \textcolor{comment}{## =========================================================}
+00276     \textcolor{comment}{#   Method to test method that determines if the date/day of}
+00277     \textcolor{comment}{#       a 30-day month is valid.}
+00278     \textcolor{comment}{#   @return - Nothing.}
+00279     \textcolor{comment}{#   O(1) method.}
+00280     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00281}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a1ffc03785cad6313ef55b291e1cbb3d9}{00281}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a1ffc03785cad6313ef55b291e1cbb3d9}{test\_is\_valid\_30\_day\_month}():
+00282         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_30\_day\_month() method."})
+00283         prompt = \textcolor{stringliteral}{"  ... Test: not 30-day month, mm = 2          \{\}"}
+00284         statistical\_analysis.increment\_number\_test\_cases\_used()
+00285         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_30\_day\_month(17,2):
+00286             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00287             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00288         \textcolor{keywordflow}{else}:
+00289             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00290         prompt = \textcolor{stringliteral}{"  ... Test: not 30-day month, mm = 12         \{\}"}
+00291         statistical\_analysis.increment\_number\_test\_cases\_used()
+00292         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_30\_day\_month(17,12):
+00293             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00294             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00295         \textcolor{keywordflow}{else}:
+00296             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00297         prompt = \textcolor{stringliteral}{"  ... Test: 30-day month, dd < 0              \{\}"}
+00298         statistical\_analysis.increment\_number\_test\_cases\_used()
+00299         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_30\_day\_month(-8,6):
+00300             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00301             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00302         \textcolor{keywordflow}{else}:
+00303             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00304         prompt = \textcolor{stringliteral}{"  ... Test: 30-day month, dd = 0              \{\}"}
+00305         statistical\_analysis.increment\_number\_test\_cases\_used()
+00306         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_30\_day\_month(0,4):
+00307             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00308             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00309         \textcolor{keywordflow}{else}:
+00310             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00311         prompt = \textcolor{stringliteral}{"  ... Test: 30-day month, dd = 27             \{\}"}
+00312         statistical\_analysis.increment\_number\_test\_cases\_used()
+00313         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_30\_day\_month(27,11):
+00314             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00315             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00316         \textcolor{keywordflow}{else}:
+00317             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00318     \textcolor{comment}{## =========================================================}
+00319     \textcolor{comment}{#   Method to test method that determines if the date/day of}
+00320     \textcolor{comment}{#       February is valid.}
+00321     \textcolor{comment}{#   @return - Nothing.}
+00322     \textcolor{comment}{#   O(1) method.}
+00323     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00324}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a69aaf4f9d5369d9730be1c41980f6708}{00324}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a69aaf4f9d5369d9730be1c41980f6708}{test\_is\_valid\_date\_in\_Feb}():
+00325         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_date\_in\_Feb() method."})
+00326         prompt = \textcolor{stringliteral}{"  ... Test: not February, mm = 12             \{\}"}
+00327         statistical\_analysis.increment\_number\_test\_cases\_used()
+00328         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_date\_in\_Feb(17,12,2016):
+00329             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00330             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00331         \textcolor{keywordflow}{else}:
+00332             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00333         prompt = \textcolor{stringliteral}{"  ... Test: not February, mm = -2             \{\}"}
+00334         statistical\_analysis.increment\_number\_test\_cases\_used()
+00335         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date\_in\_Feb(17,-2,2016):
+00336             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00337             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00338         \textcolor{keywordflow}{else}:
+00339             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00340         prompt = \textcolor{stringliteral}{"  ... Test: not February, mm = 14             \{\}"}
+00341         statistical\_analysis.increment\_number\_test\_cases\_used()
+00342         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date\_in\_Feb(17,14,2016):
+00343             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00344             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00345         \textcolor{keywordflow}{else}:
+00346             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00347     \textcolor{comment}{## =========================================================}
+00348     \textcolor{comment}{#   Method to test the methods that perform date operations.}
+00349     \textcolor{comment}{#   @return - Nothing.}
+00350     \textcolor{comment}{#   O(1) method.}
+00351     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00352}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a02e06fd6efcdf83ecedfe2b06eb6c965}{00352}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a02e06fd6efcdf83ecedfe2b06eb6c965}{test\_date\_operations}():
+00353         print(\textcolor{stringliteral}{" Testing date\_time\_operations.is\_valid\_date() method."})
+00354         prompt = \textcolor{stringliteral}{"  ... Test: single error, dd              \{\}"}
+00355         statistical\_analysis.increment\_number\_test\_cases\_used()
+00356         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(34,5,2017):
+00357             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00358             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00359         \textcolor{keywordflow}{else}:
+00360             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00361         prompt = \textcolor{stringliteral}{"  ... Test: single error, -dd             \{\}"}
+00362         statistical\_analysis.increment\_number\_test\_cases\_used()
+00363         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(-6701,5,2017):
+00364             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00365             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00366         \textcolor{keywordflow}{else}:
+00367             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00368         prompt = \textcolor{stringliteral}{"  ... Test: single error, mm              \{\}"}
+00369         statistical\_analysis.increment\_number\_test\_cases\_used()
+00370         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(24,15,2017):
+00371             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00372             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00373         \textcolor{keywordflow}{else}:
+00374             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00375         prompt = \textcolor{stringliteral}{"  ... Test: single error, mm              \{\}"}
+00376         statistical\_analysis.increment\_number\_test\_cases\_used()
+00377         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(6,0,2017):
+00378             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00379             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00380         \textcolor{keywordflow}{else}:
+00381             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00382         prompt = \textcolor{stringliteral}{"  ... Test: single error, -mm             \{\}"}
+00383         statistical\_analysis.increment\_number\_test\_cases\_used()
+00384         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(6,-20,2017):
+00385             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00386             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00387         \textcolor{keywordflow}{else}:
+00388             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00389         prompt = \textcolor{stringliteral}{"  ... Test: single error, yy              \{\}"}
+00390         statistical\_analysis.increment\_number\_test\_cases\_used()
+00391         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(6,2,6017):
+00392             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00393             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00394         \textcolor{keywordflow}{else}:
+00395             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00396         prompt = \textcolor{stringliteral}{"  ... Test: single error, yy              \{\}"}
+00397         statistical\_analysis.increment\_number\_test\_cases\_used()
+00398         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(6,2,1017):
+00399             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00400             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00401         \textcolor{keywordflow}{else}:
+00402             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00403         prompt = \textcolor{stringliteral}{"  ... Test: double errors, dd and yy          \{\}"}
+00404         statistical\_analysis.increment\_number\_test\_cases\_used()
+00405         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(29,2,2018):
+00406             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00407             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00408         \textcolor{keywordflow}{else}:
+00409             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00410         prompt = \textcolor{stringliteral}{"  ... Test: double errors, dd and yy          \{\}"}
+00411         statistical\_analysis.increment\_number\_test\_cases\_used()
+00412         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(30,2,1980):
+00413             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00414             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00415         \textcolor{keywordflow}{else}:
+00416             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00417         prompt = \textcolor{stringliteral}{"  ... Test: double errors, dd and mm          \{\}"}
+00418         statistical\_analysis.increment\_number\_test\_cases\_used()
+00419         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(31,4,2018):
+00420             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00421             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00422         \textcolor{keywordflow}{else}:
+00423             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00424         prompt = \textcolor{stringliteral}{"  ... Test: multiple errors, dd, mm, and yy       \{\}"}
+00425         statistical\_analysis.increment\_number\_test\_cases\_used()
+00426         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.is\_valid\_date(32,-4,1988):
+00427             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00428             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00429         \textcolor{keywordflow}{else}:
+00430             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00431         prompt = \textcolor{stringliteral}{"  ... Test: no error                  \{\}"}
+00432         statistical\_analysis.increment\_number\_test\_cases\_used()
+00433         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_date(31,7,2015):
+00434             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00435             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00436         \textcolor{keywordflow}{else}:
+00437             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00438         prompt = \textcolor{stringliteral}{"  ... Test: no error                  \{\}"}
+00439         statistical\_analysis.increment\_number\_test\_cases\_used()
+00440         \textcolor{keywordflow}{if} date\_time\_operations.is\_valid\_date(30,6,2017):
+00441             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00442             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00443         \textcolor{keywordflow}{else}:
+00444             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00445         \textcolor{comment}{# -----------------------------------------------------------------}
+00446         print(\textcolor{stringliteral}{" Testing date\_time\_operations.check\_filename\_date\_time\_format() method."})
+00447         prompt = \textcolor{stringliteral}{"  ... Test: single error, dd              \{\}"}
+00448         statistical\_analysis.increment\_number\_test\_cases\_used()
+00449         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"54-9-2018-13-58-59-734507.txt"}):
+00450             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00451             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00452         \textcolor{keywordflow}{else}:
+00453             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00454         prompt = \textcolor{stringliteral}{"  ... Test: single error, yy              \{\}"}
+00455         statistical\_analysis.increment\_number\_test\_cases\_used()
+00456         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"54-9-3018-13-58-59-734507.txt"}):
+00457             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00458             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00459         \textcolor{keywordflow}{else}:
+00460             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00461         prompt = \textcolor{stringliteral}{"  ... Test: single error, mm              \{\}"}
+00462         statistical\_analysis.increment\_number\_test\_cases\_used()
+00463         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"29-82-2018-13-58-59-734507.txt"}):
+00464             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00465             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00466         \textcolor{keywordflow}{else}:
+00467             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00468         prompt = \textcolor{stringliteral}{"  ... Test: multiple errors, dd, mm, yy           \{\}"}
+00469         statistical\_analysis.increment\_number\_test\_cases\_used()
+00470         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"29-2-2018-13-58-59-734507.txt"}):
+00471             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00472             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00473         \textcolor{keywordflow}{else}:
+00474             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00475         prompt = \textcolor{stringliteral}{"  ... Test: multiple errors, dd, mm, yy           \{\}"}
+00476         statistical\_analysis.increment\_number\_test\_cases\_used()
+00477         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"30-2-2016-13-58-59-734507.txt"}):
+00478             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00479             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00480         \textcolor{keywordflow}{else}:
+00481             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00482         prompt = \textcolor{stringliteral}{"  ... Test: valid date & time - leap year         \{\}"}
+00483         statistical\_analysis.increment\_number\_test\_cases\_used()
+00484         \textcolor{keywordflow}{if} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"29-2-2016-21-58-59-734507.txt"}):
+00485             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00486             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00487         \textcolor{keywordflow}{else}:
+00488             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00489         prompt = \textcolor{stringliteral}{"  ... Test: valid date & time             \{\}"}
+00490         statistical\_analysis.increment\_number\_test\_cases\_used()
+00491         \textcolor{keywordflow}{if} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"28-2-2018-13-58-59-734507.txt"}):
+00492             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00493             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00494         \textcolor{keywordflow}{else}:
+00495             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00496         prompt = \textcolor{stringliteral}{"  ... Test: valid date & time             \{\}"}
+00497         statistical\_analysis.increment\_number\_test\_cases\_used()
+00498         \textcolor{keywordflow}{if} date\_time\_operations.check\_filename\_date\_time\_format(\textcolor{stringliteral}{"31-5-2018-13-58-59-734507.txt"}):
+00499             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00500             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00501         \textcolor{keywordflow}{else}:
+00502             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00503     \textcolor{comment}{## =========================================================}
+00504     \textcolor{comment}{#   Method to test the method that tokenizes a filename in}
+00505     \textcolor{comment}{#       the DD-MM-YY-HR-MN-SS-US format.}
+00506     \textcolor{comment}{#   @return - Nothing.}
+00507     \textcolor{comment}{#   O(1) method.}
+00508     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00509}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_ad2310ba49049da0632ac87e93dbecd4f}{00509}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_ad2310ba49049da0632ac87e93dbecd4f}{test\_date\_time\_tokenization}():
+00510         print(\textcolor{stringliteral}{" Testing date & time tokenization method."})
+00511         \textcolor{comment}{# Number of tokens in the DD-MM-YY-HR-MN-SS-US format.}
+00512         number\_of\_tokens = 7
+00513         prompt = \textcolor{stringliteral}{"  ... Test: invalid DD-MM-YY-HR-MN-SS-US format       \{\}"}
+00514         statistical\_analysis.increment\_number\_test\_cases\_used()
+00515         tokens = date\_time\_operations.get\_date\_time\_tokens\_of\_filename(\textcolor{stringliteral}{"12-2018-14-11-50-912982.invalid"})
+00516         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{None} != tokens) \textcolor{keywordflow}{and} (number\_of\_tokens == len(tokens)):
+00517             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00518         \textcolor{keywordflow}{else}:
+00519             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00520             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00521         prompt = \textcolor{stringliteral}{"  ... Test: with None object              \{\}"}
+00522         statistical\_analysis.increment\_number\_test\_cases\_used()
+00523         tokens = \textcolor{keywordtype}{None}
+00524         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{None} != tokens) \textcolor{keywordflow}{and} (number\_of\_tokens == len(tokens)):
+00525             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00526         \textcolor{keywordflow}{else}:
+00527             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00528             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00529         prompt = \textcolor{stringliteral}{"  ... Test: valid DD-MM-YY-HR-MN-SS-US format     \{\}"}
+00530         statistical\_analysis.increment\_number\_test\_cases\_used()
+00531         tokens = date\_time\_operations.get\_date\_time\_tokens\_of\_filename(generate\_filename.create\_filename())
+00532         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{None} != tokens) \textcolor{keywordflow}{and} (number\_of\_tokens == len(tokens)):
+00533             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00534             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00535         \textcolor{keywordflow}{else}:
+00536             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00537     \textcolor{comment}{## =========================================================}
+00538     \textcolor{comment}{#   Method to test the methods that perform date and time}
+00539     \textcolor{comment}{#       operations.}
+00540     \textcolor{comment}{#   @return - Nothing.}
+00541     \textcolor{comment}{#   O(1) method.}
+00542     @staticmethod
+\hypertarget{date__time__processing__tester_8py_source_l00543}{}\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a6582bc9ede3803192a54abe03c7c0f7e}{00543}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1date__time__processing__tester_1_1date__time__operations__tester_a6582bc9ede3803192a54abe03c7c0f7e}{test\_date\_time\_operations}():
+00544         date\_time\_operations\_tester.test\_time\_operations()
+00545         date\_time\_operations\_tester.test\_is\_valid\_year()
+00546         date\_time\_operations\_tester.test\_is\_valid\_month()
+00547         date\_time\_operations\_tester.test\_is\_valid\_31\_day\_month()
+00548         date\_time\_operations\_tester.test\_is\_valid\_30\_day\_month()
+00549         date\_time\_operations\_tester.test\_is\_valid\_date\_in\_Feb()
+00550         date\_time\_operations\_tester.test\_date\_operations()
+00551         date\_time\_operations\_tester.test\_date\_time\_tokenization()
+\end{DoxyCode}

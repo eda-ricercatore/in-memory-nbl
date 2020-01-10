@@ -1,0 +1,347 @@
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement}{}\section{utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement Class Reference}
+\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement}\index{utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement@{utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement}}
+
+
+Collaboration diagram for utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{db/db8/classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_aa82fdf41b58ed820066c6f74450a2e66}{set\+\_\+initial\+\_\+timestamp}
+\begin{DoxyCompactList}\small\item\em Method to set the initial timestamp. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a8737db6c2fdb833d0d30d80c70ffebb0}{get\+\_\+initial\+\_\+timestamp} ()
+\begin{DoxyCompactList}\small\item\em Method to get the initial timestamp. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a02b1d7ffce2b4c702a82a03803322e65}{get\+\_\+elapsed\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Method to determine the elapsed time from the initial timestamp. \end{DoxyCompactList}\item 
+def \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a9b05f1fd5acd56880daa42266dbf8284}{compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods} ()
+\begin{DoxyCompactList}\small\item\em Method to compare techniques for measuring elapsed periods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a3d083e8440c081f0a39ecea850d3cb67}{invalid\+\_\+timestamp} = -\/123456789012345678901234567890
+\item 
+\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_ac60d39fb6affbaa3d6eb2792c41ee7ff}{initial\+\_\+timestamp} = \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a3d083e8440c081f0a39ecea850d3cb67}{invalid\+\_\+timestamp}
+\item 
+tuple \hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a80ff3ce9b405f5d8c2e63294348ca6dc}{types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique} = (\char`\"{}perf\+\_\+counter\char`\"{},\char`\"{}perf\+\_\+counter\+\_\+ns\char`\"{},\char`\"{}process\+\_\+time\char`\"{},\char`\"{}process\+\_\+time\+\_\+ns\char`\"{},\char`\"{}time\char`\"{},\char`\"{}time\+\_\+ns\char`\"{},\char`\"{}monotonic\char`\"{},\char`\"{}monotonic\+\_\+ns\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00115}{115} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a9b05f1fd5acd56880daa42266dbf8284}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods@{compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods}}
+\index{compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods@{compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+compare\+\_\+different\+\_\+methods\+\_\+to\+\_\+measure\+\_\+elapsed\+\_\+periods (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a9b05f1fd5acd56880daa42266dbf8284}
+
+
+Method to compare techniques for measuring elapsed periods. 
+
+It calculates the factorial of each number in a list, and uses each of the following methods of performance measurement to measure the elapsed periods.
+\begin{DoxyItemize}
+\item perf\+\_\+counter, perf\+\_\+counter()\+: pc\+\_\+timestamp()
+\item perf\+\_\+counter\+\_\+ns, perf\+\_\+counter\+\_\+ns()\+: pc\+\_\+timestamp\+\_\+ns()
+\item process\+\_\+time, process\+\_\+time()\+: pt\+\_\+timestamp()
+\item process\+\_\+time\+\_\+ns, process\+\_\+time\+\_\+ns()\+: pt\+\_\+timestamp\+\_\+ns()
+\item time, time.\+time()\+: time()
+\item time\+\_\+ns, time.\+time\+\_\+ns()\+: time\+\_\+ns()
+\item monotonic, monotonic()\+: pm\+\_\+monotonic()
+\item monotonic\+\_\+ns, monotonic\+\_\+ns()\+: pm\+\_\+monotonic\+\_\+ns() \begin{DoxyReturn}{Returns}
+-\/ Nothing. O(n!) method, where n is the largest number in the aforementioned list, since we are measuring the performance of calculating factorials. \begin{DoxyVerb}    Create a file to store experimental data of measuring
+the performance of recursive and iterative methods.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00262}{262} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_l00262}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a9b05f1fd5acd56880daa42266dbf8284}{00262}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a9b05f1fd5acd56880daa42266dbf8284}{compare\_different\_methods\_to\_measure\_elapsed\_periods}
+      ():
+00263         \textcolor{stringliteral}{"""}
+00264 \textcolor{stringliteral}{            Create a file to store experimental data of measuring}
+00265 \textcolor{stringliteral}{                the performance of recursive and iterative methods.}
+00266 \textcolor{stringliteral}{        """}
+00267         with open(\textcolor{stringliteral}{"compare\_different\_methods\_to\_measure\_elapsed\_periods.csv"},\textcolor{stringliteral}{"a+"}) \textcolor{keyword}{as} op\_f\_obj:
+00268             \textcolor{keywordflow}{for} perf\_measurement\_technique \textcolor{keywordflow}{in} 
+      execution\_time\_measurement.types\_of\_performance\_measurement\_technique:
+00269                 print(\textcolor{stringliteral}{"The technique used is:"},perf\_measurement\_technique,\textcolor{stringliteral}{"="})
+00270                 \textcolor{stringliteral}{"""}
+00271 \textcolor{stringliteral}{                    Set the initial timestamp for calculating the}
+00272 \textcolor{stringliteral}{                        factorial of numbers via recursion.}
+00273 \textcolor{stringliteral}{                """}
+00274                 execution\_time\_measurement.set\_initial\_timestamp(perf\_measurement\_technique)
+00275                 print(\textcolor{stringliteral}{" Calculate the factorial using recursion."})
+00276                 print(\textcolor{stringliteral}{" = current timestamp:"},execution\_time\_measurement.get\_initial\_timestamp(),\textcolor{stringliteral}{"="})
+00277                 \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(0,20+1):
+00278                     print(\textcolor{stringliteral}{"     factorial of"},x,\textcolor{stringliteral}{" is:"},calculate\_factorial.get\_factorial\_recursion(x),\textcolor{stringliteral}{"="})
+00279                 \textcolor{stringliteral}{"""}
+00280 \textcolor{stringliteral}{                    Get the elapsed time for calculating the factorial of}
+00281 \textcolor{stringliteral}{                        numbers via recursion.}
+00282 \textcolor{stringliteral}{                """}
+00283                 elapsed\_time\_recursion = execution\_time\_measurement.get\_elapsed\_time(
+      perf\_measurement\_technique)
+00284                 print(\textcolor{stringliteral}{" = elapsed\_time\_recursion:"},elapsed\_time\_recursion,\textcolor{stringliteral}{"="})
+00285                 \textcolor{stringliteral}{"""}
+00286 \textcolor{stringliteral}{                    Set the initial timestamp for calculating the}
+00287 \textcolor{stringliteral}{                        factorial of numbers via iteration.}
+00288 \textcolor{stringliteral}{                """}
+00289                 execution\_time\_measurement.set\_initial\_timestamp(perf\_measurement\_technique)
+00290                 print(\textcolor{stringliteral}{" Calculate the factorial using iteration."})
+00291                 print(\textcolor{stringliteral}{" = current timestamp:"},execution\_time\_measurement.get\_initial\_timestamp(),\textcolor{stringliteral}{"="})
+00292                 \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(0,20+1):
+00293                     print(\textcolor{stringliteral}{"     factorial of"},x,\textcolor{stringliteral}{" is:"},calculate\_factorial.get\_factorial\_iteration(x),\textcolor{stringliteral}{"="})
+00294                 \textcolor{stringliteral}{"""}
+00295 \textcolor{stringliteral}{                    Get the elapsed time for calculating the factorial of}
+00296 \textcolor{stringliteral}{                        numbers via iteration.}
+00297 \textcolor{stringliteral}{                """}
+00298                 elapsed\_time\_iteration = execution\_time\_measurement.get\_elapsed\_time(
+      perf\_measurement\_technique)
+00299                 print(\textcolor{stringliteral}{" = elapsed\_time\_iteration:"},elapsed\_time\_iteration,\textcolor{stringliteral}{"="})
+00300                 \textcolor{stringliteral}{"""}
+00301 \textcolor{stringliteral}{                    The timeit.timeit() method can result in negative elapsed time.}
+00302 \textcolor{stringliteral}{                """}
+00303                 text = perf\_measurement\_technique + \textcolor{stringliteral}{","} + str(elapsed\_time\_recursion) + \textcolor{stringliteral}{","} + str(
+      elapsed\_time\_iteration) + \textcolor{stringliteral}{"\(\backslash\)n"}
+00304                 op\_f\_obj.write(text)
+00305                 \textcolor{comment}{#op\_f\_obj.write("\(\backslash\)n")}
+00306 
+00307 
+\end{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a02b1d7ffce2b4c702a82a03803322e65}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!get\+\_\+elapsed\+\_\+time@{get\+\_\+elapsed\+\_\+time}}
+\index{get\+\_\+elapsed\+\_\+time@{get\+\_\+elapsed\+\_\+time}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{get\+\_\+elapsed\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+get\+\_\+elapsed\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{}]{type\+\_\+timestamp = {\ttfamily \char`\"{}monotonic\+\_\+ns\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a02b1d7ffce2b4c702a82a03803322e65}
+
+
+Method to determine the elapsed time from the initial timestamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+timestamp} & -\/ Indicates if either of the following methods of performance measurement is preferred.
+\begin{DoxyItemize}
+\item perf\+\_\+counter, perf\+\_\+counter()\+: pc\+\_\+timestamp()
+\item perf\+\_\+counter\+\_\+ns, perf\+\_\+counter\+\_\+ns()\+: pc\+\_\+timestamp\+\_\+ns()
+\item process\+\_\+time, process\+\_\+time()\+: pt\+\_\+timestamp()
+\item process\+\_\+time\+\_\+ns, process\+\_\+time\+\_\+ns()\+: pt\+\_\+timestamp\+\_\+ns()
+\item time, time.\+time()\+: time()
+\item time\+\_\+ns, time.\+time\+\_\+ns()\+: time\+\_\+ns()
+\item monotonic, monotonic()\+: pm\+\_\+monotonic()
+\item monotonic\+\_\+ns, monotonic\+\_\+ns()\+: pm\+\_\+monotonic\+\_\+ns() 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the elapsed time from the initial timestamp. O(1) method. \begin{DoxyVerb}    Is the option for one of the following methods to measure
+time?
+* perf_counter, perf_counter(): pc_timestamp()
+* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
+* process_time, process_time(): pt_timestamp()
+* process_time_ns, process_time_ns(): pt_timestamp_ns()
+* time, time.time(): time()
+* time_ns, time.time_ns(): time_ns()
+* monotonic, monotonic(): pm_monotonic()
+* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00203}{203} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_l00203}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a02b1d7ffce2b4c702a82a03803322e65}{00203}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a02b1d7ffce2b4c702a82a03803322e65}{get\_elapsed\_time}(type\_timestamp="monotonic\_ns"):
+00204         \textcolor{stringliteral}{"""}
+00205 \textcolor{stringliteral}{            Is the option for one of the following methods to measure}
+00206 \textcolor{stringliteral}{                time?}
+00207 \textcolor{stringliteral}{                * perf\_counter, perf\_counter(): pc\_timestamp()}
+00208 \textcolor{stringliteral}{                * perf\_counter\_ns, perf\_counter\_ns(): pc\_timestamp\_ns()}
+00209 \textcolor{stringliteral}{                * process\_time, process\_time(): pt\_timestamp()}
+00210 \textcolor{stringliteral}{                * process\_time\_ns, process\_time\_ns(): pt\_timestamp\_ns()}
+00211 \textcolor{stringliteral}{                * time, time.time(): time()}
+00212 \textcolor{stringliteral}{                * time\_ns, time.time\_ns(): time\_ns()}
+00213 \textcolor{stringliteral}{                * monotonic, monotonic(): pm\_monotonic()}
+00214 \textcolor{stringliteral}{                * monotonic\_ns, monotonic\_ns(): pm\_monotonic\_ns()}
+00215 \textcolor{stringliteral}{        """}
+00216         \textcolor{keywordflow}{if} (\textcolor{stringliteral}{"perf\_counter"} == type\_timestamp):
+00217             \textcolor{comment}{# Yes. Use perf\_counter() to measure performance/time.}
+00218             current\_timestamp = pc\_timestamp()
+00219         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"perf\_counter\_ns"} == type\_timestamp):
+00220             \textcolor{comment}{# Yes. Use perf\_counter\_ns() to measure performance/time.}
+00221             current\_timestamp = pc\_timestamp\_ns()
+00222         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"process\_time"} == type\_timestamp):
+00223             \textcolor{comment}{# Yes. Use process\_time() to measure performance/time.}
+00224             current\_timestamp = pt\_timestamp()
+00225         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"process\_time\_ns"} == type\_timestamp):
+00226             \textcolor{comment}{# Yes. Use process\_time\_ns() to measure performance/time.}
+00227             current\_timestamp = pt\_timestamp\_ns()
+00228         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"time"} == type\_timestamp):
+00229             \textcolor{comment}{# Yes. Use time.time() to measure performance/time.}
+00230             current\_timestamp = time.time()
+00231         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"time\_ns"} == type\_timestamp):
+00232             \textcolor{comment}{# Yes. Use time.time\_ns() to measure performance/time.}
+00233             current\_timestamp = t\_ns()
+00234         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"monotonic"} == type\_timestamp):
+00235             \textcolor{comment}{# Yes. Use monotonic() to measure performance/time.}
+00236             current\_timestamp = pm\_monotonic()
+00237         \textcolor{keywordflow}{else}:
+00238             \textcolor{stringliteral}{"""}
+00239 \textcolor{stringliteral}{                The default option is: "monotonic\_ns".}
+00240 \textcolor{stringliteral}{                Use monotonic\_ns() to measure performance/time.}
+00241 \textcolor{stringliteral}{            """}
+00242             current\_timestamp = pm\_monotonic\_ns()
+00243         \textcolor{keywordflow}{return} (current\_timestamp - execution\_time\_measurement.get\_initial\_timestamp())
+\end{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a8737db6c2fdb833d0d30d80c70ffebb0}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!get\+\_\+initial\+\_\+timestamp@{get\+\_\+initial\+\_\+timestamp}}
+\index{get\+\_\+initial\+\_\+timestamp@{get\+\_\+initial\+\_\+timestamp}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{get\+\_\+initial\+\_\+timestamp()}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+get\+\_\+initial\+\_\+timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a8737db6c2fdb833d0d30d80c70ffebb0}
+
+
+Method to get the initial timestamp. 
+
+\begin{DoxyReturn}{Returns}
+the initial timestamp. O(1) method. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00185}{185} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_l00185}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a8737db6c2fdb833d0d30d80c70ffebb0}{00185}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a8737db6c2fdb833d0d30d80c70ffebb0}{get\_initial\_timestamp}():
+00186         \textcolor{keywordflow}{return} execution\_time\_measurement.initial\_timestamp
+\end{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_aa82fdf41b58ed820066c6f74450a2e66}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!set\+\_\+initial\+\_\+timestamp@{set\+\_\+initial\+\_\+timestamp}}
+\index{set\+\_\+initial\+\_\+timestamp@{set\+\_\+initial\+\_\+timestamp}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{set\+\_\+initial\+\_\+timestamp}]{\setlength{\rightskip}{0pt plus 5cm}def utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+set\+\_\+initial\+\_\+timestamp (
+\begin{DoxyParamCaption}
+\item[{}]{type\+\_\+timestamp = {\ttfamily \char`\"{}monotonic\+\_\+ns\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_aa82fdf41b58ed820066c6f74450a2e66}
+
+
+Method to set the initial timestamp. 
+
+Use techniques for measuring performance (i.\+e., user execution time) and timestamps.
+
+\begin{DoxyVerb}@param type_timestamp - Indicates if either of the following
+            methods of performance measurement is preferred.
+            * perf_counter, perf_counter(): pc_timestamp()
+            * perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
+            * process_time, process_time(): pt_timestamp()
+            * process_time_ns, process_time_ns(): pt_timestamp_ns()
+            * time, time.time(): time()
+            * time_ns, time.time_ns(): time_ns()
+            * monotonic, monotonic(): pm_monotonic()
+            * monotonic_ns, monotonic_ns(): pm_monotonic_ns()
+@return - Nothing.
+O(1) method. \end{DoxyVerb}
+ \begin{DoxyVerb}    Is the option for one of the following methods to measure
+time?
+* perf_counter, perf_counter(): pc_timestamp()
+* perf_counter_ns, perf_counter_ns(): pc_timestamp_ns()
+* process_time, process_time(): pt_timestamp()
+* process_time_ns, process_time_ns(): pt_timestamp_ns()
+* time, time.time(): time.time()
+* time_ns, time.time_ns(): time.time_ns()
+* monotonic, monotonic(): pm_monotonic()
+* monotonic_ns, monotonic_ns(): pm_monotonic_ns()
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00143}{143} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+
+\begin{DoxyCode}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_l00143}{}\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_aa82fdf41b58ed820066c6f74450a2e66}{00143}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_aa82fdf41b58ed820066c6f74450a2e66}{set\_initial\_timestamp}(type\_timestamp="monotonic\_ns"):
+00144         \textcolor{stringliteral}{"""}
+00145 \textcolor{stringliteral}{            Is the option for one of the following methods to measure}
+00146 \textcolor{stringliteral}{                time?}
+00147 \textcolor{stringliteral}{                * perf\_counter, perf\_counter(): pc\_timestamp()}
+00148 \textcolor{stringliteral}{                * perf\_counter\_ns, perf\_counter\_ns(): pc\_timestamp\_ns()}
+00149 \textcolor{stringliteral}{                * process\_time, process\_time(): pt\_timestamp()}
+00150 \textcolor{stringliteral}{                * process\_time\_ns, process\_time\_ns(): pt\_timestamp\_ns()}
+00151 \textcolor{stringliteral}{                * time, time.time(): time.time()}
+00152 \textcolor{stringliteral}{                * time\_ns, time.time\_ns(): time.time\_ns()}
+00153 \textcolor{stringliteral}{                * monotonic, monotonic(): pm\_monotonic()}
+00154 \textcolor{stringliteral}{                * monotonic\_ns, monotonic\_ns(): pm\_monotonic\_ns()}
+00155 \textcolor{stringliteral}{        """}
+00156         \textcolor{keywordflow}{if} (\textcolor{stringliteral}{"perf\_counter"} == type\_timestamp):
+00157             \textcolor{comment}{# Yes. Use perf\_counter() to measure performance/time.}
+00158             execution\_time\_measurement.initial\_timestamp = pc\_timestamp()
+00159         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"perf\_counter\_ns"} == type\_timestamp):
+00160             \textcolor{comment}{# Yes. Use perf\_counter\_ns() to measure performance/time.}
+00161             execution\_time\_measurement.initial\_timestamp = pc\_timestamp\_ns()
+00162         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"process\_time"} == type\_timestamp):
+00163             \textcolor{comment}{# Yes. Use process\_time() to measure performance/time.}
+00164             execution\_time\_measurement.initial\_timestamp = pt\_timestamp()
+00165         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"process\_time\_ns"} == type\_timestamp):
+00166             \textcolor{comment}{# Yes. Use process\_time\_ns() to measure performance/time.}
+00167             execution\_time\_measurement.initial\_timestamp = pt\_timestamp\_ns()
+00168         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"time"} == type\_timestamp):
+00169             \textcolor{comment}{# Yes. Use time() to measure performance/time.}
+00170             execution\_time\_measurement.initial\_timestamp = time.time()
+00171         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"time\_ns"} == type\_timestamp):
+00172             \textcolor{comment}{# Yes. Use time\_ns() to measure performance/time.}
+00173             execution\_time\_measurement.initial\_timestamp = t\_ns()
+00174         \textcolor{keywordflow}{elif} (\textcolor{stringliteral}{"monotonic"} == type\_timestamp):
+00175             \textcolor{comment}{# Yes. Use monotonic() to measure performance/time.}
+00176             execution\_time\_measurement.initial\_timestamp = pm\_monotonic()
+00177         \textcolor{keywordflow}{else}:
+00178             \textcolor{comment}{# The default option is: "monotonic\_ns()"}
+00179             execution\_time\_measurement.initial\_timestamp = pm\_monotonic\_ns()
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_ac60d39fb6affbaa3d6eb2792c41ee7ff}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!initial\+\_\+timestamp@{initial\+\_\+timestamp}}
+\index{initial\+\_\+timestamp@{initial\+\_\+timestamp}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{initial\+\_\+timestamp}]{\setlength{\rightskip}{0pt plus 5cm}utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+initial\+\_\+timestamp = {\bf invalid\+\_\+timestamp}\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_ac60d39fb6affbaa3d6eb2792c41ee7ff}
+
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00119}{119} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a3d083e8440c081f0a39ecea850d3cb67}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!invalid\+\_\+timestamp@{invalid\+\_\+timestamp}}
+\index{invalid\+\_\+timestamp@{invalid\+\_\+timestamp}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{invalid\+\_\+timestamp}]{\setlength{\rightskip}{0pt plus 5cm}int utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+invalid\+\_\+timestamp = -\/123456789012345678901234567890\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a3d083e8440c081f0a39ecea850d3cb67}
+
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00117}{117} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+\hypertarget{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a80ff3ce9b405f5d8c2e63294348ca6dc}{}\index{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}!types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique@{types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique}}
+\index{types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique@{types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique}!utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement@{utilities\+::timing\+\_\+measurements\+::performance\+\_\+measurement\+::execution\+\_\+time\+\_\+measurement}}
+\subsubsection[{types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique}]{\setlength{\rightskip}{0pt plus 5cm}tuple utilities.\+timing\+\_\+measurements.\+performance\+\_\+measurement.\+execution\+\_\+time\+\_\+measurement.\+types\+\_\+of\+\_\+performance\+\_\+measurement\+\_\+technique = (\char`\"{}perf\+\_\+counter\char`\"{},\char`\"{}perf\+\_\+counter\+\_\+ns\char`\"{},\char`\"{}process\+\_\+time\char`\"{},\char`\"{}process\+\_\+time\+\_\+ns\char`\"{},\char`\"{}time\char`\"{},\char`\"{}time\+\_\+ns\char`\"{},\char`\"{}monotonic\char`\"{},\char`\"{}monotonic\+\_\+ns\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}\label{classutilities_1_1timing__measurements_1_1performance__measurement_1_1execution__time__measurement_a80ff3ce9b405f5d8c2e63294348ca6dc}
+
+
+Definition at line \hyperlink{performance__measurement_8py_source_l00121}{121} of file \hyperlink{performance__measurement_8py_source}{performance\+\_\+measurement.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utilities/timing\+\_\+measurements/\hyperlink{performance__measurement_8py}{performance\+\_\+measurement.\+py}\end{DoxyCompactItemize}

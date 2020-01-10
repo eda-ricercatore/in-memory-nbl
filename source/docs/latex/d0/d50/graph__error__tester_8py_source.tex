@@ -1,0 +1,151 @@
+\hypertarget{graph__error__tester_8py_source}{}\section{graph\+\_\+error\+\_\+tester.\+py}
+\label{graph__error__tester_8py_source}\index{utilities/custom\+\_\+exceptions/graph\+\_\+error\+\_\+tester.\+py@{utilities/custom\+\_\+exceptions/graph\+\_\+error\+\_\+tester.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{graph__error__tester_8py_source_l00001}{}\hyperlink{namespaceutilities_1_1custom__exceptions_1_1graph__error__tester}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    Check for no usage of the term "error".}
+00006 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test the}
+00007 \textcolor{stringliteral}{        custom exception graph\_exception, from the utilities.custom\_exceptions package.}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{    Synopsis:}
+00010 \textcolor{stringliteral}{    Test the custom exception graph\_exception.}
+00011 \textcolor{stringliteral}{}
+00012 \textcolor{stringliteral}{    Notes/Assumptions:}
+00013 \textcolor{stringliteral}{    None at the moment.}
+00014 \textcolor{stringliteral}{}
+00015 \textcolor{stringliteral}{}
+00016 \textcolor{stringliteral}{    References:}
+00017 \textcolor{stringliteral}{    Citations/References that use the LaTeX/BibTeX notation are taken}
+00018 \textcolor{stringliteral}{        from my BibTeX database (set of BibTeX entries).}
+00019 \textcolor{stringliteral}{}
+00020 \textcolor{stringliteral}{    Revision History:}
+00021 \textcolor{stringliteral}{    August 1, 2018          Version 0.1, initial build.}
+00022 \textcolor{stringliteral}{"""}
+00023 
+\hypertarget{graph__error__tester_8py_source_l00024}{}\hyperlink{namespaceutilities_1_1custom__exceptions_1_1graph__error__tester_a3dfce4d30766c0501517e21f0f7d81c8}{00024} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{graph__error__tester_8py_source_l00025}{}\hyperlink{namespaceutilities_1_1custom__exceptions_1_1graph__error__tester_a0737f017d717d1aa08ae05d54ae5a491}{00025} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{graph__error__tester_8py_source_l00026}{}\hyperlink{namespaceutilities_1_1custom__exceptions_1_1graph__error__tester_aa140a2b3da93c2d18ff00df34291a231}{00026} \_\_date\_\_ = \textcolor{stringliteral}{'August 1, 2018'}
+00027 
+00028 \textcolor{comment}{#   The MIT License (MIT)}
+00029 
+00030 \textcolor{comment}{#   Copyright (c) <2018> <Zhiyang Ong>}
+00031 
+00032 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00033 
+00034 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00035 
+00036 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00037 
+00038 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00039 
+00040 
+00041 
+00042 \textcolor{comment}{###############################################################}
+00043 \textcolor{stringliteral}{"""}
+00044 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00045 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00046 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00047 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00048 \textcolor{stringliteral}{}
+00049 \textcolor{stringliteral}{    subprocess -> call}
+00050 \textcolor{stringliteral}{                To make system calls.}
+00051 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00052 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00053 \textcolor{stringliteral}{    re          Use regular expressions.}
+00054 \textcolor{stringliteral}{    filecmp     For file comparison.}
+00055 \textcolor{stringliteral}{"""}
+00056 
+00057 \textcolor{keyword}{import} sys
+00058 \textcolor{keyword}{import} os
+00059 \textcolor{keyword}{import} os.path
+00060 \textcolor{keyword}{from} subprocess \textcolor{keyword}{import} call
+00061 \textcolor{keyword}{import} time
+00062 \textcolor{keyword}{import} warnings
+00063 \textcolor{keyword}{import} re
+00064 \textcolor{keyword}{import} filecmp
+00065 \textcolor{comment}{# Copy a file from [source] to [destination]}
+00066 \textcolor{keyword}{from} shutil \textcolor{keyword}{import} copyfile
+00067 
+00068 \textcolor{comment}{###############################################################}
+00069 \textcolor{comment}{#   Import Custom Python Modules}
+00070 
+00071 \textcolor{stringliteral}{"""}
+00072 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00073 \textcolor{stringliteral}{        results.}
+00074 \textcolor{stringliteral}{"""}
+00075 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00076 \textcolor{stringliteral}{"""}
+00077 \textcolor{stringliteral}{    Package and module to throw/raise the custom exception}
+00078 \textcolor{stringliteral}{        graph\_exception.}
+00079 \textcolor{stringliteral}{"""}
+00080 \textcolor{comment}{#from utilities.custom\_exceptions.graph\_error import graph\_err}
+00081 \textcolor{comment}{#import utilities.custom\_exceptions.graph\_error}
+00082 \textcolor{keyword}{from} \hyperlink{namespaceutilities_1_1custom__exceptions_1_1graph__error}{utilities.custom\_exceptions.graph\_error} \textcolor{keyword}{import} *
+00083 
+00084 \textcolor{comment}{###############################################################}
+00085 \textcolor{stringliteral}{"""}
+00086 \textcolor{stringliteral}{    Module with method that test the custom exception graph\_exception.}
+00087 \textcolor{stringliteral}{    Support for class instantiation is not provided, to avoid}
+00088 \textcolor{stringliteral}{        acquiring a collection of useless "graph\_error"}
+00089 \textcolor{stringliteral}{        and "graph\_error\_tester" objects.}
+00090 \textcolor{stringliteral}{    Test throwing/raising the graph\_error exception.}
+00091 \textcolor{stringliteral}{"""}
+00092 \textcolor{comment}{#class my\_graph\_error\_tester:}
+\hypertarget{graph__error__tester_8py_source_l00093}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error__tester_1_1graph__error__tester}{00093} \textcolor{keyword}{class }\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error__tester_1_1graph__error__tester}{graph\_error\_tester}:
+00094     \textcolor{comment}{## =========================================================}
+00095     \textcolor{comment}{#   Method to test throwing/raising the graph\_error exception.}
+00096     \textcolor{comment}{#   @param - Nothing}
+00097     \textcolor{comment}{#   @return - Nothing.}
+00098     \textcolor{comment}{#   O(1) method.}
+00099     @staticmethod
+\hypertarget{graph__error__tester_8py_source_l00100}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error__tester_1_1graph__error__tester_a59e456a82b205066fe96b206ba70411f}{00100}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error__tester_1_1graph__error__tester_a59e456a82b205066fe96b206ba70411f}{helloworld}():
+00101         print(\textcolor{stringliteral}{":::  graph\_error accessor method works."})
+00102     \textcolor{comment}{## =========================================================}
+00103     \textcolor{comment}{#   Method to test throwing/raising the graph\_error exception.}
+00104     \textcolor{comment}{#   @param - Nothing}
+00105     \textcolor{comment}{#   @return - Nothing.}
+00106     \textcolor{comment}{#   O(1) method.}
+00107     @staticmethod
+\hypertarget{graph__error__tester_8py_source_l00108}{}\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error__tester_1_1graph__error__tester_a844b0064bc87b5d840f5cf3f54d99240}{00108}     \textcolor{keyword}{def }\hyperlink{classutilities_1_1custom__exceptions_1_1graph__error__tester_1_1graph__error__tester_a844b0064bc87b5d840f5cf3f54d99240}{test\_raising\_graph\_error}():
+00109         print(\textcolor{stringliteral}{""})
+00110         print(\textcolor{stringliteral}{"==   Testing the graph\_error class/module."})
+00111         \textcolor{keywordflow}{try}:
+00112             prompt = \textcolor{stringliteral}{"  ... Test: raise graph\_error exception, 2 arguments  \{\}"}
+00113             statistical\_analysis.increment\_number\_test\_cases\_used()
+00114             \textcolor{comment}{#raise graph\_error("Can graph\_error be caught")}
+00115             \textcolor{comment}{#raise utilities.custom\_exceptions.graph\_error("Can graph\_error be caught")}
+00116             \textcolor{keywordflow}{raise} \hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error}{graph\_error}(\textcolor{stringliteral}{"Can graph\_error be caught?"},\textcolor{stringliteral}{"gyou"})
+00117         \textcolor{comment}{#except utilities.custom\_exceptions.graph\_error:}
+00118         \textcolor{keywordflow}{except} graph\_error:
+00119             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00120             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00121         \textcolor{keywordflow}{else}:
+00122             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00123         \textcolor{keywordflow}{try}:
+00124             prompt = \textcolor{stringliteral}{"  ... Test: raise graph\_error exception, 1 argument   \{\}"}
+00125             statistical\_analysis.increment\_number\_test\_cases\_used()
+00126             \textcolor{comment}{#raise graph\_error("Can graph\_error be caught")}
+00127             \textcolor{comment}{#raise utilities.custom\_exceptions.graph\_error("Can graph\_error be caught")}
+00128             \textcolor{keywordflow}{raise} \hyperlink{classutilities_1_1custom__exceptions_1_1graph__error_1_1graph__error}{graph\_error}(\textcolor{stringliteral}{"Can graph\_error be caught?"})
+00129         \textcolor{comment}{#except utilities.custom\_exceptions.graph\_error:}
+00130         \textcolor{keywordflow}{except} graph\_error:
+00131             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00132             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00133         \textcolor{keywordflow}{else}:
+00134             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+\end{DoxyCode}

@@ -1,0 +1,321 @@
+\hypertarget{test__data__analysis__tool_8py_source}{}\section{test\+\_\+data\+\_\+analysis\+\_\+tool.\+py}
+\label{test__data__analysis__tool_8py_source}\index{statistics/test\+\_\+data\+\_\+analysis\+\_\+tool.\+py@{statistics/test\+\_\+data\+\_\+analysis\+\_\+tool.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{test__data__analysis__tool_8py_source_l00001}{}\hyperlink{namespacestatistics_1_1test__data__analysis__tool}{00001} \textcolor{comment}{#!/usr/local/bin/python3}
+00002 \textcolor{comment}{###!/Users/zhiyang/anaconda3/bin/python3}
+00003 
+00004 
+00005 \textcolor{stringliteral}{"""}
+00006 \textcolor{stringliteral}{    This Python script is written by Zhiyang Ong to test}
+00007 \textcolor{stringliteral}{        miscellaneous tasks in analyzing data.}
+00008 \textcolor{stringliteral}{}
+00009 \textcolor{stringliteral}{}
+00010 \textcolor{stringliteral}{    Synopsis:}
+00011 \textcolor{stringliteral}{    Test the miscellaneous tasks in analyzing data.}
+00012 \textcolor{stringliteral}{}
+00013 \textcolor{stringliteral}{}
+00014 \textcolor{stringliteral}{    Revision History:}
+00015 \textcolor{stringliteral}{    December 15, 2017           Version 0.1, initial build.}
+00016 \textcolor{stringliteral}{"""}
+00017 
+\hypertarget{test__data__analysis__tool_8py_source_l00018}{}\hyperlink{namespacestatistics_1_1test__data__analysis__tool_a980d8dc33d59285196b930ec7ddabdc8}{00018} \_\_author\_\_ = \textcolor{stringliteral}{'Zhiyang Ong'}
+\hypertarget{test__data__analysis__tool_8py_source_l00019}{}\hyperlink{namespacestatistics_1_1test__data__analysis__tool_a3299e44231fc0bc029f4c6d86924b125}{00019} \_\_version\_\_ = \textcolor{stringliteral}{'1.0'}
+\hypertarget{test__data__analysis__tool_8py_source_l00020}{}\hyperlink{namespacestatistics_1_1test__data__analysis__tool_a15ce2cfbc6ba4e95b94a79c18678373f}{00020} \_\_date\_\_ = \textcolor{stringliteral}{'December 15, 2017'}
+00021 
+00022 \textcolor{comment}{#   The MIT License (MIT)}
+00023 
+00024 \textcolor{comment}{#   Copyright (c) <2014-2018> <Zhiyang Ong>}
+00025 
+00026 \textcolor{comment}{#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+       associated documentation files (the "Software"), to deal in the Software without restriction, including without
+       limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+       Software, and to permit persons to whom the Software is furnished to do so, subject to the following
+       conditions:}
+00027 
+00028 \textcolor{comment}{#   The above copyright notice and this permission notice shall be included in all copies or substantial
+       portions of the Software.}
+00029 
+00030 \textcolor{comment}{#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+       LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+       EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+       ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+       OR OTHER DEALINGS IN THE SOFTWARE.}
+00031 
+00032 \textcolor{comment}{#   Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '\{
+       sub("23wU4X5M589","F.d\_c\_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\(\backslash\)b"; print $9, $7,
+       $6 \}' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\(\backslash\)n"   Che cosa
+       significa?}
+00033 
+00034 \textcolor{comment}{###############################################################}
+00035 \textcolor{stringliteral}{"""}
+00036 \textcolor{stringliteral}{    Import modules from The Python Standard Library.}
+00037 \textcolor{stringliteral}{    sys         Get access to any command-line arguments.}
+00038 \textcolor{stringliteral}{    os          Use any operating system dependent functionality.}
+00039 \textcolor{stringliteral}{    os.path     For pathname manipulations.}
+00040 \textcolor{stringliteral}{}
+00041 \textcolor{stringliteral}{    subprocess -> call}
+00042 \textcolor{stringliteral}{                To make system calls.}
+00043 \textcolor{stringliteral}{}
+00044 \textcolor{stringliteral}{    time        To measure elapsed time.}
+00045 \textcolor{stringliteral}{    warnings    Raise warnings.}
+00046 \textcolor{stringliteral}{    re          Use regular expressions.}
+00047 \textcolor{stringliteral}{}
+00048 \textcolor{stringliteral}{    collections -> namedtuple}
+00049 \textcolor{stringliteral}{                To use named tuples.}
+00050 \textcolor{stringliteral}{    operator -> attrgetter}
+00051 \textcolor{stringliteral}{                To manipulate attributes of a named tuple as callable}
+00052 \textcolor{stringliteral}{                    objects.}
+00053 \textcolor{stringliteral}{    statistics  Module with functions for mathematical statistics}
+00054 \textcolor{stringliteral}{                    functions.}
+00055 \textcolor{stringliteral}{"""}
+00056 
+00057 \textcolor{comment}{#import sys}
+00058 \textcolor{comment}{#import os}
+00059 \textcolor{comment}{#import os.path}
+00060 \textcolor{comment}{#from subprocess import call}
+00061 \textcolor{comment}{#import time}
+00062 \textcolor{keyword}{import} warnings
+00063 \textcolor{comment}{#import re}
+00064 \textcolor{comment}{#from collections import namedtuple}
+00065 \textcolor{comment}{#from operator import attrgetter}
+00066 \textcolor{keyword}{import} statistics \textcolor{keyword}{as} s
+00067 
+00068 \textcolor{comment}{###############################################################}
+00069 \textcolor{comment}{#   Import Custom Python Modules}
+00070 
+00071 \textcolor{stringliteral}{"""}
+00072 \textcolor{stringliteral}{    Package and module to print statistics of software testing}
+00073 \textcolor{stringliteral}{        results.}
+00074 \textcolor{stringliteral}{"""}
+00075 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1test__statistics}{statistics.test\_statistics} \textcolor{keyword}{import} statistical\_analysis
+00076 \textcolor{stringliteral}{"""}
+00077 \textcolor{stringliteral}{    Package and module to perform miscellaneous tasks in data}
+00078 \textcolor{stringliteral}{        analysis.}
+00079 \textcolor{stringliteral}{"""}
+00080 \textcolor{keyword}{from} \hyperlink{namespacestatistics_1_1data__analysis__tool}{statistics.data\_analysis\_tool} \textcolor{keyword}{import} data\_analysis
+00081 
+00082 
+00083 
+00084 
+00085 
+00086 \textcolor{comment}{###############################################################}
+00087 \textcolor{stringliteral}{"""}
+00088 \textcolor{stringliteral}{    Module that tests the methods for performing miscellaneous}
+00089 \textcolor{stringliteral}{        tasks in data analysis.}
+00090 \textcolor{stringliteral}{}
+00091 \textcolor{stringliteral}{    Support for class instantiation is not provided, to avoid}
+00092 \textcolor{stringliteral}{        acquiring a collection of useless "statistical\_analysis"}
+00093 \textcolor{stringliteral}{        objects.}
+00094 \textcolor{stringliteral}{}
+00095 \textcolor{stringliteral}{    Test each static method of the "data\_analysis" class.}
+00096 \textcolor{stringliteral}{"""}
+\hypertarget{test__data__analysis__tool_8py_source_l00097}{}\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester}{00097} \textcolor{keyword}{class }\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester}{data\_analysis\_tester}:
+00098     \textcolor{comment}{## =========================================================}
+00099     \textcolor{comment}{#   Method to test the method that accesses reference values}
+00100     \textcolor{comment}{#       for a corresponding particular attribute/property,}
+00101     \textcolor{comment}{#       using the Python dictionary containing pairs/2-tuples}
+00102     \textcolor{comment}{#       of attributes/properties and values.}
+00103     \textcolor{comment}{#   @return - Nothing.}
+00104     \textcolor{comment}{#   O(1) method.}
+00105     @staticmethod
+\hypertarget{test__data__analysis__tool_8py_source_l00106}{}\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_ac5dee1d2f7bb003c3b322ec9692766af}{00106}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_ac5dee1d2f7bb003c3b322ec9692766af}{test\_get\_reference\_value}():
+00107         print(\textcolor{stringliteral}{" Testing get\_reference\_value() method."})
+00108         speed\_of\_light = 299792458
+00109         \textcolor{comment}{#prompt = " ... Test: get\_reference\_value(c) == 299792458       \{\}"}
+00110         prompt = \textcolor{stringliteral}{"  ... Test: get\_reference\_value(c) == "}
+00111         prompt = prompt + str(speed\_of\_light) + \textcolor{stringliteral}{"       \{\}"}
+00112         statistical\_analysis.increment\_number\_test\_cases\_used()
+00113         \textcolor{keywordflow}{if} speed\_of\_light == data\_analysis.get\_reference\_value(\textcolor{stringliteral}{"c"}):
+00114             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00115             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00116         \textcolor{keywordflow}{else}:
+00117             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00118         prompt = \textcolor{stringliteral}{"  ... Test: method with default option == "}
+00119         prompt = prompt + str(speed\_of\_light) + \textcolor{stringliteral}{"   \{\}"}
+00120         statistical\_analysis.increment\_number\_test\_cases\_used()
+00121         \textcolor{keywordflow}{if} speed\_of\_light == data\_analysis.get\_reference\_value():
+00122             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00123             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00124         \textcolor{keywordflow}{else}:
+00125             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00126         standard\_acceleration\_due\_to\_gravity = 9.80665
+00127         prompt = \textcolor{stringliteral}{"  ... Test: get\_reference\_value(g) == "}
+00128         prompt = prompt + str(standard\_acceleration\_due\_to\_gravity) + \textcolor{stringliteral}{"     \{\}"}
+00129         statistical\_analysis.increment\_number\_test\_cases\_used()
+00130         \textcolor{keywordflow}{if} standard\_acceleration\_due\_to\_gravity == data\_analysis.get\_reference\_value(\textcolor{stringliteral}{"standard acceleration
+       due to gravity"}):
+00131             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00132             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00133         \textcolor{keywordflow}{else}:
+00134             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00135         standard\_atmosphere = 101325
+00136         prompt = \textcolor{stringliteral}{"  ... Test: get\_reference\_value(std atm) == "}
+00137         prompt = prompt + str(standard\_atmosphere) + \textcolor{stringliteral}{"  \{\}"}
+00138         statistical\_analysis.increment\_number\_test\_cases\_used()
+00139         \textcolor{keywordflow}{if} standard\_atmosphere == data\_analysis.get\_reference\_value(\textcolor{stringliteral}{"standard atmosphere"}):
+00140             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00141             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00142         \textcolor{keywordflow}{else}:
+00143             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00144     \textcolor{comment}{## =========================================================}
+00145     \textcolor{comment}{#   Method to test the method that determines the actual}
+00146     \textcolor{comment}{#       change between quantity1 and quantity2.}
+00147     \textcolor{comment}{#   @return - Nothing.}
+00148     \textcolor{comment}{#   O(1) method.}
+00149     @staticmethod
+\hypertarget{test__data__analysis__tool_8py_source_l00150}{}\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_af355b89d75dbd6f03b47a52bcfdb9025}{00150}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_af355b89d75dbd6f03b47a52bcfdb9025}{test\_get\_actual\_change}():
+00151         print(\textcolor{stringliteral}{" Testing get\_actual\_change() method."})
+00152         prompt = \textcolor{stringliteral}{"  ... Test: default option, get\_actual\_change(0,0) == 0   \{\}"}
+00153         statistical\_analysis.increment\_number\_test\_cases\_used()
+00154         \textcolor{keywordflow}{if} 0 == data\_analysis.get\_actual\_change():
+00155             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00156             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00157         \textcolor{keywordflow}{else}:
+00158             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00159         prompt = \textcolor{stringliteral}{"  ... Test: get\_actual\_change(19,13) == 6         \{\}"}
+00160         statistical\_analysis.increment\_number\_test\_cases\_used()
+00161         \textcolor{keywordflow}{if} 6 == data\_analysis.get\_actual\_change(19,13):
+00162             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00163             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00164         \textcolor{keywordflow}{else}:
+00165             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00166         prompt = \textcolor{stringliteral}{"  ... Test: get\_actual\_change(10,14) == -4        \{\}"}
+00167         statistical\_analysis.increment\_number\_test\_cases\_used()
+00168         \textcolor{keywordflow}{if} -4 == data\_analysis.get\_actual\_change(10, 14):
+00169             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00170             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00171         \textcolor{keywordflow}{else}:
+00172             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00173         prompt = \textcolor{stringliteral}{"  ... Test: get\_actual\_change(-20,27) == -47      \{\}"}
+00174         statistical\_analysis.increment\_number\_test\_cases\_used()
+00175         \textcolor{keywordflow}{if} -47 == data\_analysis.get\_actual\_change(-20,27):
+00176             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00177             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00178         \textcolor{keywordflow}{else}:
+00179             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00180         prompt = \textcolor{stringliteral}{"  ... Test: get\_actual\_change(-7,-3) == -4        \{\}"}
+00181         statistical\_analysis.increment\_number\_test\_cases\_used()
+00182         \textcolor{keywordflow}{if} -4 == data\_analysis.get\_actual\_change(-7,-3):
+00183             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00184             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00185         \textcolor{keywordflow}{else}:
+00186             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00187         prompt = \textcolor{stringliteral}{"  ... Test: get\_actual\_change(-4,-9) == 5         \{\}"}
+00188         statistical\_analysis.increment\_number\_test\_cases\_used()
+00189         \textcolor{keywordflow}{if} 5 == data\_analysis.get\_actual\_change(-4,-9):
+00190             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00191             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00192         \textcolor{keywordflow}{else}:
+00193             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00194     \textcolor{comment}{## =========================================================}
+00195     \textcolor{comment}{#   Method to test the method that determines the absolute}
+00196     \textcolor{comment}{#       difference between quantity1 and quantity2.}
+00197     \textcolor{comment}{#   @return - Nothing.}
+00198     \textcolor{comment}{#   O(1) method.}
+00199     @staticmethod
+\hypertarget{test__data__analysis__tool_8py_source_l00200}{}\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_a3b1f6f4fd16ef986ead81484c80fc164}{00200}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_a3b1f6f4fd16ef986ead81484c80fc164}{test\_get\_absolute\_difference}():
+00201         print(\textcolor{stringliteral}{" Testing get\_absolute\_difference() method."})
+00202         prompt = \textcolor{stringliteral}{"  ... Test: default, get\_absolute\_difference(0,0) == 0    \{\}"}
+00203         statistical\_analysis.increment\_number\_test\_cases\_used()
+00204         \textcolor{keywordflow}{if} 0 == data\_analysis.get\_absolute\_difference():
+00205             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00206             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00207         \textcolor{keywordflow}{else}:
+00208             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00209         prompt = \textcolor{stringliteral}{"  ... Test: get\_absolute\_difference(19,13) == 6       \{\}"}
+00210         statistical\_analysis.increment\_number\_test\_cases\_used()
+00211         \textcolor{keywordflow}{if} 6 == data\_analysis.get\_absolute\_difference(19,13):
+00212             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00213             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00214         \textcolor{keywordflow}{else}:
+00215             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00216         prompt = \textcolor{stringliteral}{"  ... Test: get\_absolute\_difference(10,14) == 4       \{\}"}
+00217         statistical\_analysis.increment\_number\_test\_cases\_used()
+00218         \textcolor{keywordflow}{if} 4 == data\_analysis.get\_absolute\_difference(10, 14):
+00219             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00220             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00221         \textcolor{keywordflow}{else}:
+00222             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00223         prompt = \textcolor{stringliteral}{"  ... Test: get\_absolute\_difference(-20,27) == 47     \{\}"}
+00224         statistical\_analysis.increment\_number\_test\_cases\_used()
+00225         \textcolor{keywordflow}{if} 47 == data\_analysis.get\_absolute\_difference(-20,27):
+00226             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00227             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00228         \textcolor{keywordflow}{else}:
+00229             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00230         prompt = \textcolor{stringliteral}{"  ... Test: get\_absolute\_difference(-7,-3) == 4       \{\}"}
+00231         statistical\_analysis.increment\_number\_test\_cases\_used()
+00232         \textcolor{keywordflow}{if} 4 == data\_analysis.get\_absolute\_difference(-7,-3):
+00233             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00234             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00235         \textcolor{keywordflow}{else}:
+00236             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00237         prompt = \textcolor{stringliteral}{"  ... Test: get\_absolute\_difference(-4,-9) == 5       \{\}"}
+00238         statistical\_analysis.increment\_number\_test\_cases\_used()
+00239         \textcolor{keywordflow}{if} 5 == data\_analysis.get\_absolute\_difference(-4,-9):
+00240             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00241             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00242         \textcolor{keywordflow}{else}:
+00243             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00244     \textcolor{comment}{## =========================================================}
+00245     \textcolor{comment}{#   Method to test the method that determines the relative change}
+00246     \textcolor{comment}{#       between quantity1 and quantity2.}
+00247     \textcolor{comment}{#   @return - Nothing.}
+00248     \textcolor{comment}{#   O(1) method.}
+00249     @staticmethod
+\hypertarget{test__data__analysis__tool_8py_source_l00250}{}\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_a8ca74240a173de29733a73137df4bd95}{00250}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_a8ca74240a173de29733a73137df4bd95}{test\_get\_relative\_change}():
+00251         print(\textcolor{stringliteral}{" Testing get\_relative\_change() method."})
+00252         prompt = \textcolor{stringliteral}{"  ... Test: default, get\_relative\_change(1,1) == 0    \{\}"}
+00253         statistical\_analysis.increment\_number\_test\_cases\_used()
+00254         \textcolor{keywordflow}{if} 0 == data\_analysis.get\_relative\_change():
+00255             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00256             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00257         \textcolor{keywordflow}{else}:
+00258             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00259         prompt = \textcolor{stringliteral}{"  ... Test: get\_relative\_change(15,12) == 0.25        \{\}"}
+00260         statistical\_analysis.increment\_number\_test\_cases\_used()
+00261         \textcolor{keywordflow}{if} 0.25 == data\_analysis.get\_relative\_change(15,12):
+00262             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00263             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00264         \textcolor{keywordflow}{else}:
+00265             print(\textcolor{stringliteral}{"data\_analysis.get\_relative\_change(15,12):"},data\_analysis.get\_relative\_change(15,12),\textcolor{stringliteral}{"="})
+00266             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00267         prompt = \textcolor{stringliteral}{"  ... Test: get\_relative\_change(18,20) == -0.10       \{\}"}
+00268         statistical\_analysis.increment\_number\_test\_cases\_used()
+00269         \textcolor{keywordflow}{if} -0.10 == data\_analysis.get\_relative\_change(18,20):
+00270             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00271             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00272         \textcolor{keywordflow}{else}:
+00273             \textcolor{comment}{
+      #print("data\_analysis.get\_relative\_change(18,20):",data\_analysis.get\_relative\_change(18,20),"=")}
+00274             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00275         prompt = \textcolor{stringliteral}{"  ... Test: get\_relative\_change(-97,-100) == -0.10        \{\}"}
+00276         statistical\_analysis.increment\_number\_test\_cases\_used()
+00277         \textcolor{keywordflow}{if} -0.10 == data\_analysis.get\_relative\_change(18,20):
+00278             print(prompt .format(\textcolor{stringliteral}{"OK"}))
+00279             statistical\_analysis.increment\_number\_test\_cases\_passed()
+00280         \textcolor{keywordflow}{else}:
+00281             \textcolor{comment}{
+      #print("data\_analysis.get\_relative\_change(18,20):",data\_analysis.get\_relative\_change(18,20),"=")}
+00282             print(prompt .format(\textcolor{stringliteral}{"FAIL!!!"}))
+00283     \textcolor{comment}{# =========================================================}
+00284     \textcolor{comment}{##  Method to test the methods that perform miscellaneous}
+00285     \textcolor{comment}{#       tasks in data analysis.}
+00286     \textcolor{comment}{#   @return - Nothing.}
+00287     \textcolor{comment}{#   O(1) method.}
+00288     @staticmethod
+\hypertarget{test__data__analysis__tool_8py_source_l00289}{}\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_a770fcf75cc2e1a9e8e840d1f3bb770af}{00289}     \textcolor{keyword}{def }\hyperlink{classstatistics_1_1test__data__analysis__tool_1_1data__analysis__tester_a770fcf75cc2e1a9e8e840d1f3bb770af}{test\_data\_analysis}():
+00290         print(\textcolor{stringliteral}{""})
+00291         print(\textcolor{stringliteral}{""})
+00292         print(\textcolor{stringliteral}{"-------------------------------------------------"})
+00293         print(\textcolor{stringliteral}{"==   Testing class: data\_analysis."})
+00294         data\_analysis\_tester.test\_get\_reference\_value()
+00295         print(\textcolor{stringliteral}{""})
+00296         data\_analysis\_tester.test\_get\_actual\_change()
+00297         print(\textcolor{stringliteral}{""})
+00298         data\_analysis\_tester.test\_get\_absolute\_difference()
+00299         print(\textcolor{stringliteral}{""})
+00300         data\_analysis\_tester.test\_get\_relative\_change()
+00301         \textcolor{comment}{# TEST ALL METHODS!!!}
+\end{DoxyCode}
