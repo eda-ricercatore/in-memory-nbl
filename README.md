@@ -13,6 +13,8 @@ In-memory computing with noise-based logic
 	- incremental_test.py
 		* Used to perform automated regression testing of Python modules
 			(for my hardware simulation, or simulation of NBL logic circuits)
+		* Call the *Python* script as follows to perform automated regression
+			testing: ***./incremental_test.py***.
 	- doxygen.config
 		* configuration file *Doxygen* to automatically produce/synthesize/generate
 			documentation for the *Python*-based simulator. 
