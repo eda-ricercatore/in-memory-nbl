@@ -137,6 +137,7 @@ class rand_signal_generator:
 			Check the random signal/"process" complies with
 				specifications, as a postcondition.
 		"""
+		return random_signal
 	# ============================================================
 	##	Method to generate a discrete-time random signal/process
 	#		for "n" values, using another method from the random

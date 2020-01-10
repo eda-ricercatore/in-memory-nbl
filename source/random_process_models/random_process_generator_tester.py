@@ -98,7 +98,7 @@ class rand_signal_generator_tester:
 		# Number of discrete values representing a random signal/"process".
 		k = 16
 		print("	Testing gen_rand_signal_uniform_distributn().")
-		prompt = "	... Test: wrong type of signal, signal about size.	{whatever}"
+		prompt = "	... Test: wrong type of signal, signal about size.	{}"
 		statistical_analysis.increment_number_test_cases_used()
 		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn("whatever",k)
 		if (k == len(temp_rand_signal)):
@@ -106,16 +106,22 @@ class rand_signal_generator_tester:
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
 			print(prompt .format("FAIL!!!"))
-		rand_si
-		prompt = "	... Test: type of signal = RTW.	{}"
+		prompt = "	... Test: type of signal = RTW.				{}"
 		statistical_analysis.increment_number_test_cases_used()
-		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn("rtw",k)
+		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
 		if (k == len(temp_rand_signal)) and (-1 in temp_rand_signal) and 1 in temp_rand_signal:
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
 			print(prompt .format("FAIL!!!"))
-		rand_signal_generator.gen_rand_signal_uniform_distributn()
+		prompt = "	... Test: type of signal = bit vector.			{}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.bv_signal,k)
+		if (k == len(temp_rand_signal)) and (0 in temp_rand_signal) and 1 in temp_rand_signal:
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
 	## =========================================================
 	#	Method to test the methods regarding random signal/"process".
 	#	@param - Nothing
