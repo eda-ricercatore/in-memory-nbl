@@ -122,6 +122,7 @@ class approx_cross_correlation:
 	#		+ \cite{Bertsekas2008}
 	#		+ \cite{Grimmett2001}
 	#		+ \cite{Ross2004}???
+	#		+ \cite{Ross2010b}
 	#
 	#	There exists different implementations, among Python
 	#		libraries, of functions to compute cross-correlation,
