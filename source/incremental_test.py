@@ -93,7 +93,7 @@ from statistics.data_analysis_tool import data_analysis
 	Package and module to test the miscellaneous tasks in
 		analyzing data. 
 """
-from statistics.test_data_analysis_tool import data_analysis_tester
+from statistics.data_analysis_tool_tester import data_analysis_tester
 
 
 
