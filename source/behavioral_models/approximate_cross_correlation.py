@@ -147,8 +147,11 @@ class approx_cross_correlation:
 	#			https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
 	@staticmethod
 	def cross_correlation_using_all_approaches(signal_x=[],signal_y=[]):
-		cross_correlation_from_numpy_correlate = cross_correlation_using_numpy(signal_x,signal_y,numpy_correlate_mode_valid,numpy_correlate_mode_same,numpy_correlate_mode_full)
-		print("Cross-correlation using",,"mode is:",cross_correlation_from_numpy_correlate),
+		# Enumerate all modes of NumPy's correlate function.
+		for current_mode in numpy_correlate_modes:
+			# Determine the cross-correlation using the current mode.
+			cross_correlation_from_numpy_correlate = cross_correlation_using_numpy(signal_x,signal_y,current_mode)
+			print("Cross-correlation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
 	# ============================================================
 	##	Method to demonstrate the generation and calculation of
 	#		the cross-correlation of RTW signals.
@@ -165,8 +168,11 @@ class approx_cross_correlation:
 		print("x_rtw_1 is:",x_rtw_1,"=")
 		# Generate another RTW.
 		x_rtw_2 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
-		# Find the cross-correlation between these two RTWs.
-		#
+		"""
+			Find the cross-correlation between these two RTWs,
+				using all approaches.
+		"""
+		approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
 
 
 
