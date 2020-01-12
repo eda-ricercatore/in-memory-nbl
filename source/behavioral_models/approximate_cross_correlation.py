@@ -7,6 +7,24 @@
 		learning.
 
 
+	The definitions for calculating cross-correlation for
+		periodic/deterministic signals, stochastic/random
+		and random processes can be found in the following
+		publications:
+		+ \cite{Chen2007c}
+		+ \cite{Downey2015}
+		+ \cite{Downey2011}
+		+ \cite{Montgomery2014}
+		+ \cite{Bertsekas2008}
+		+ \cite{Grimmett2001}
+		+ \cite{Ross2004}???
+		+ \cite{Ross2010b}
+	
+
+
+
+
+
 	Synopsis:
 	Approximate cross-correlation in Python.
 
@@ -131,19 +149,6 @@ class approx_cross_correlation:
 	#		signals, signal_x and signal_y, using all approaches
 	#		that I learned.
 	#
-	#	The definitions for calculating cross-correlation for
-	#		periodic/deterministic signals, stochastic/random
-	#		and random processes can be found in the following
-	#		publications:
-	#		+ \cite{Chen2007c}
-	#		+ \cite{Downey2015}
-	#		+ \cite{Downey2011}
-	#		+ \cite{Montgomery2014}
-	#		+ \cite{Bertsekas2008}
-	#		+ \cite{Grimmett2001}
-	#		+ \cite{Ross2004}???
-	#		+ \cite{Ross2010b}
-	#
 	#	There exists different implementations, among Python
 	#		libraries, of functions to compute cross-correlation,
 	#		and some implementations have different "modes";
@@ -200,6 +205,7 @@ class approx_cross_correlation:
 			amin_cross_correlation = np.amin(cross_correlation_from_numpy_correlate)
 			print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
 			print("")
+			return cross_correlation_from_numpy_correlate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation
 		"""
 		Matplotlib.pyplot's solution for correlation causes
 			execution error
@@ -210,7 +216,7 @@ class approx_cross_correlation:
 		print("Matplotlib.pyplot b",b,"=")
 		"""
 	# ============================================================
-	##	Method to approximaye the calculation of the cross-correlation
+	##	Method to approximate the calculation of the cross-correlation
 	#		of two random signals, signal_x and signal_y.
 	#
 	#	@param signal_x - A random signal.
@@ -219,11 +225,13 @@ class approx_cross_correlation:
 	#		and signal_y.
 	#	O(1) method.
 	#
+	#
 	#	References:
 	#		\cite{???} describes the formula for calculating the
 	#			cross-correlation function.
+	#
 	@staticmethod
-	def cross_correlation_using_numpy(signal_x=[],signal_y=[]):
+	def approximate_cross_correlation_(signal_x=[],signal_y=[]):
 		print("")
 
 

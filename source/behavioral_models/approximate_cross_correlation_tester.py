@@ -75,7 +75,8 @@ from random_process_models.pseudorandom_number_generator import prng
 from random_process_models.random_process_generator import rand_signal_generator
 # Module to approximate cross-correlation.
 from behavioral_models.approximate_cross_correlation import approx_cross_correlation
-
+# Package and module to perform date and time operations.
+from utilities.date_time_processing import date_time_operations
 
 ###############################################################
 """
@@ -83,27 +84,48 @@ from behavioral_models.approximate_cross_correlation import approx_cross_correla
 """
 class approx_cross_correlation_tester:
 	# ============================================================
-	##	Method to test the calculation of the cross correlation
+	##	Method to test the calculation of the cross-correlation
 	#		of RTW signals.
+	#
+	#	For all methods to calculate/compute the cross-correlation,
+	#		perform statistical analysis on the list of
+	#			cross-correlation values.
+	#	Write information about the following into an output file
+	#		for further analysis/review.
+	#	+ random signals (values of)
+	#	+ value(s) of cross-correlation
+	#	+ 
+	#	 
 	#
 	#	@param - None.
 	#	@return - Nothing.
 	#	O(1) method.
 	@staticmethod
 	def test_rtw_signal_generation_and_cross_correlation():
-		# Number of discrete values for random signals/"processes".
-		k=16
-		# Generate a random signal of the type random telegraph wave (RTW).
-		x_rtw_1 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
-		print("x_rtw_1 is:",x_rtw_1,"=")
-		# Generate another RTW.
-		x_rtw_2 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
-		print("x_rtw_2 is:",x_rtw_2,"=")
-		"""
-			Find the cross-correlation between these two RTWs,
-				using all approaches.
-		"""
-		approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
+		# Create a file object for writing.
+		print("=	Create a file object for writing.")
+		current_date_time = date_time_operations.get_current_date_time()
+		op_filename = "cross-correlation-results-"+currentTime+".text"
+		op_file_obj = open(op_filename, 'w')
+		# List of number of discrete values for random signals/"processes". 
+		for k in [4, 8, 16, 32, 64, 128]:
+			print("=	Testing random ", k, "-bit signals.")
+			# Generate a random signal of the type random telegraph wave (RTW).
+			x_rtw_1 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
+			print("x_rtw_1 is:",x_rtw_1,"=")
+			# Generate another RTW.
+			x_rtw_2 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
+			print("x_rtw_2 is:",x_rtw_2,"=")
+			"""
+				Find the cross-correlation between these two RTWs,
+					using all approaches.
+			"""
+			[x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr] = approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
+			actual_list = [x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr]
+			names_list = ["x_corr_list", "std_dev_x_corr", "var_x_corr", "arith_mean_x_corr", "ptp_x_corr", "amax_x_corr", "amin_x_corr"]
+			for (name,metric) in enumerate(zip((names_list,actual_list))):
+				op_file_obj.write("=	Metric name=",name,"= with value =",metric,"=")
+			print("============================================")
 	## =========================================================
 	#	Method to test the methods regarding approximating
 	#		cross-correlation.
