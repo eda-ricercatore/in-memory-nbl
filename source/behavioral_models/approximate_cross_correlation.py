@@ -188,7 +188,18 @@ class approx_cross_correlation:
 					cross-correlation values.
 			"""
 			std_dev_cross_correlation = np.std(cross_correlation_from_numpy_correlate)
-			print("NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
+			print("	NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",std_dev_cross_correlation,"=")
+			var_cross_correlation = np.var(cross_correlation_from_numpy_correlate)
+			print("	NumPy-based cross-correlation's variance using",current_mode,"mode is:",var_cross_correlation,"=")
+			arith_mean_cross_correlation = np.mean(cross_correlation_from_numpy_correlate)
+			print("	NumPy-based cross-correlation's arithmetic mean using",current_mode,"mode is:",arith_mean_cross_correlation,"=")
+			ptp_cross_correlation = np.ptp(cross_correlation_from_numpy_correlate)
+			print("	NumPy-based cross-correlation's min and max values (or peak to peak) using",current_mode,"mode is:",ptp_cross_correlation,"=")
+			amax_cross_correlation = np.amax(cross_correlation_from_numpy_correlate)
+			print("	NumPy-based cross-correlation's max value using",current_mode,"mode is:",amax_cross_correlation,"=")
+			amin_cross_correlation = np.amin(cross_correlation_from_numpy_correlate)
+			print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
+			print("")
 		"""
 		Matplotlib.pyplot's solution for correlation causes
 			execution error
@@ -198,7 +209,34 @@ class approx_cross_correlation:
 		print("Matplotlib.pyplot line",line,"=")
 		print("Matplotlib.pyplot b",b,"=")
 		"""
-		
+	# ============================================================
+	##	Method to approximaye the calculation of the cross-correlation
+	#		of two random signals, signal_x and signal_y.
+	#
+	#	@param signal_x - A random signal.
+	#	@param signal_y - Another random signal.
+	#	@return - The approximate cross-correlation between signal_x
+	#		and signal_y.
+	#	O(1) method.
+	#
+	#	References:
+	#		\cite{???} describes the formula for calculating the
+	#			cross-correlation function.
+	@staticmethod
+	def cross_correlation_using_numpy(signal_x=[],signal_y=[]):
+		print("")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ###############################################################
