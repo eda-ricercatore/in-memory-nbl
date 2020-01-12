@@ -123,11 +123,21 @@ class approx_cross_correlation_tester:
 			[x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr] = approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
 			actual_list = [x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr]
 			names_list = ["x_corr_list", "std_dev_x_corr", "var_x_corr", "arith_mean_x_corr", "ptp_x_corr", "amax_x_corr", "amin_x_corr"]
-			for (name,metric) in enumerate(zip((names_list,actual_list))):
-				#tempt_text = "=	Metric name="+name+"= with value ="+str(metric)+"="
-				tempt_text = "=	Metric name="+str(name)+"= with value ="+str(metric)+"="
-				op_file_obj.write(tempt_text)
-				op_file_obj.write("\n")
+			tempt_text = "=	x_corr_list ="+str(x_corr_list)+"="
+			op_file_obj.write(tempt_text)
+			tempt_text = "=	std_dev_x_corr ="+str(std_dev_x_corr)+"="
+			op_file_obj.write(tempt_text)
+			tempt_text = "=	var_x_corr ="+str(var_x_corr)+"="
+			op_file_obj.write(tempt_text)
+			tempt_text = "=	arith_mean_x_corr ="+str(arith_mean_x_corr)+"="
+			op_file_obj.write(tempt_text)
+			tempt_text = "=	ptp_x_corr ="+str(ptp_x_corr)+"="
+			op_file_obj.write(tempt_text)
+			tempt_text = "=	amax_x_corr ="+str(amax_x_corr)+"="
+			op_file_obj.write(tempt_text)
+			tempt_text = "=	amin_x_corr ="+str(amin_x_corr)+"="
+			op_file_obj.write(tempt_text)
+			op_file_obj.write("\n")
 			print("============================================")
 		# Close the file object for writing.
 		op_file_obj.close()
