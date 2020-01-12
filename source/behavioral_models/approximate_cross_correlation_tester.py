@@ -105,7 +105,7 @@ class approx_cross_correlation_tester:
 		# Create a file object for writing.
 		print("=	Create a file object for writing.")
 		current_date_time = date_time_operations.get_current_date_time()
-		op_filename = "cross-correlation-results-"+currentTime+".text"
+		op_filename = "cross-correlation-results-"+current_date_time+".text"
 		op_file_obj = open(op_filename, 'w')
 		# List of number of discrete values for random signals/"processes". 
 		for k in [4, 8, 16, 32, 64, 128]:
@@ -124,7 +124,9 @@ class approx_cross_correlation_tester:
 			actual_list = [x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr]
 			names_list = ["x_corr_list", "std_dev_x_corr", "var_x_corr", "arith_mean_x_corr", "ptp_x_corr", "amax_x_corr", "amin_x_corr"]
 			for (name,metric) in enumerate(zip((names_list,actual_list))):
-				op_file_obj.write("=	Metric name=",name,"= with value =",metric,"=")
+				#tempt_text = "=	Metric name="+name+"= with value ="+str(metric)+"="
+				tempt_text = "=	Metric name="+str(name)+"= with value ="+str(metric)+"="
+				op_file_obj.write(tempt_text)
 			print("============================================")
 	## =========================================================
 	#	Method to test the methods regarding approximating
