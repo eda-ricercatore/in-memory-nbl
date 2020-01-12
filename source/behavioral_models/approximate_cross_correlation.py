@@ -148,7 +148,17 @@ class approx_cross_correlation:
 	#			https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
 	@staticmethod
 	def cross_correlation_using_all_approaches(signal_x=[],signal_y=[]):
-		# Enumerate all modes of NumPy's correlate function.
+		###
+			Enumerate all modes of NumPy's correlate function.
+			
+			In the example from \cite{TheSciPyCommunity2019},
+				the cross-correlation has values greater than 1;
+				since the notes in \cite{TheSciPyCommunity2019}
+					indicate that the definition for
+					cross-correlation "is not unique," this can
+					explain why the cross-correlation for the
+					"valid" mode is >1.
+		###
 		for current_mode in approx_cross_correlation.numpy_correlate_modes:
 			# Determine the cross-correlation using the current mode.
 			cross_correlation_from_numpy_correlate = approx_cross_correlation.cross_correlation_using_numpy(signal_x,signal_y,current_mode)
@@ -157,7 +167,7 @@ class approx_cross_correlation:
 				Perform statistical analysis on the set of
 					cross-correlation values.
 			"""
-		
+		# 
 
 
 
