@@ -327,6 +327,17 @@ Adaptive and Secure Computing Systems (ASCS) Laboratory
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ##	Cite IRDS (https://irds.ieee.org/editions/2018)!!!
 
 
@@ -439,9 +450,26 @@ https://en.wikipedia.org/wiki/Autocovariance
 
 
 
-
-
-
+Anaconda
++ conda install ???
+	- scikit-learn
+	- scipy
+	- sympy
+	- numpy
+	- networkx
+	- matplotlib
+	- bokeh
+	- intel-openmp (not supported by **pip**)
+	- list
+		* scikit-learn  scipy sympy numpy networkx matplotlib bokeh
++ pip install ???
+	- scikit-learn
+	- scipy
+	- sympy
+	- numpy
+	- networkx
+	- matplotlib
+	- bokeh
 
 
 

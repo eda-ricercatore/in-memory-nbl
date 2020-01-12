@@ -1,5 +1,13 @@
-#!/usr/local/bin/python3
-###!/Users/zhiyang/anaconda3/bin/python3 
+#!/Users/zhiyang/anaconda3/bin/python3 
+
+####!/usr/local/bin/python3
+"""
+	Skip nanosecond precision in measuring the current time;
+		hence, I am not using the Python intepreter available at
+			the following path, which is based on Python 3.7.4.
+		/usr/local/bin/python3
+"""
+
 ###!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
 ###	/usr/bin/python
 ###	/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
@@ -138,6 +146,13 @@ from random_process_models.random_process_generator import rand_signal_generator
 from random_process_models.random_process_generator_tester import rand_signal_generator_tester
 
 
+"""
+	Modules for behavioral modeling of random signal/"process", and
+		statistical operations performed on them.
+"""
+from behavioral_models.approximate_cross_correlation import approx_cross_correlation
+from behavioral_models.approximate_cross_correlation_tester import approx_cross_correlation_tester
+
 
 
 ###############################################################
@@ -213,6 +228,11 @@ if __name__ == "__main__":
 	print("=	Testing the random_process_models package.")
 	prng_tester.test_prng_methods()
 	rand_signal_generator_tester.test_random_signal_generation_methods()
+	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
+	# Insert test cases for testing the behavioral_models package.
+	print("")
+	print("=	Testing the behavioral_models package.")
+	approx_cross_correlation_tester.test_random_signal_generation_methods()
 	print("-	-	-	-	-	-	-	-	-	-	-	-	-")
 	#	### TO-DO
 	#	Test expr_configuration

@@ -98,7 +98,12 @@ class approx_cross_correlation_tester:
 		print("x_rtw_1 is:",x_rtw_1,"=")
 		# Generate another RTW.
 		x_rtw_2 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
-		# Find the cross-correlation between these two RTWs.
+		print("x_rtw_2 is:",x_rtw_2,"=")
+		"""
+			Find the cross-correlation between these two RTWs,
+				using all approaches.
+		"""
+		approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
 	## =========================================================
 	#	Method to test the methods regarding approximating
 	#		cross-correlation.
