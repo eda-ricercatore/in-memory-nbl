@@ -127,6 +127,7 @@ class approx_cross_correlation_tester:
 				#tempt_text = "=	Metric name="+name+"= with value ="+str(metric)+"="
 				tempt_text = "=	Metric name="+str(name)+"= with value ="+str(metric)+"="
 				op_file_obj.write(tempt_text)
+				op_file_obj.write("")
 			print("============================================")
 		# Close the file object for writing.
 		op_file_obj.close()
