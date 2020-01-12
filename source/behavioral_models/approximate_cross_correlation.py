@@ -66,6 +66,18 @@ import warnings
 import re
 import datetime
 import random
+"""
+	Testing scipy.signal.correlate2d;
+	https://stackoverflow.com/questions/57111113/scipy-signal-correlate2d-does-not-seem-to-work-as-intended
+	This method needs 2-D arrays as input arguments.
+
+
+import scipy.signal as sig
+signal_correlate_mode = ["full", "valid", "same"]
+signal_correlate_boundary = ["fill", "wrap", "symm"]
+cross_correlation_from_signal_correlate2D = sig.correlate2d(signal_x, signal_y)
+print("SciPy-based cross-correlation using is:",cross_correlation_from_signal_correlate2D,"=")
+"""
 
 ###############################################################
 #	Import Custom Python Packages and Modules
@@ -79,7 +91,10 @@ from random_process_models.random_process_generator import rand_signal_generator
 
 ###############################################################
 #	Import Python Packages and Modules from Python Libraries
+# Import NumPy.
 import numpy as np
+# Import Matplotlib's pyplot module.
+import matplotlib.pyplot as plt
 
 
 
@@ -103,6 +118,11 @@ class approx_cross_correlation:
 	#	@param signal_y - Another random signal.
 	#	@return - The cross-correlation between signal_x and signal_y.
 	#	O(1) method.
+	#
+	#	References:
+	#		\cite{NumPyContributors2019} describes the modes for the
+	#			function.
+	#		\cite{TheSciPyCommunity2019} shows an example.
 	@staticmethod
 	def cross_correlation_using_numpy(signal_x=[],signal_y=[],mode=numpy_correlate_mode_same):
 		return np.correlate(signal_x,signal_y,mode)
@@ -148,7 +168,7 @@ class approx_cross_correlation:
 	#			https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
 	@staticmethod
 	def cross_correlation_using_all_approaches(signal_x=[],signal_y=[]):
-		###
+		"""
 			Enumerate all modes of NumPy's correlate function.
 			
 			In the example from \cite{TheSciPyCommunity2019},
@@ -158,19 +178,27 @@ class approx_cross_correlation:
 					cross-correlation "is not unique," this can
 					explain why the cross-correlation for the
 					"valid" mode is >1.
-		###
+		"""
 		for current_mode in approx_cross_correlation.numpy_correlate_modes:
 			# Determine the cross-correlation using the current mode.
 			cross_correlation_from_numpy_correlate = approx_cross_correlation.cross_correlation_using_numpy(signal_x,signal_y,current_mode)
-			print("Cross-correlation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
+			print("NumPy-based cross-correlation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
 			"""
 				Perform statistical analysis on the set of
 					cross-correlation values.
 			"""
-		# 
-
-
-
+			std_dev_cross_correlation = np.std(cross_correlation_from_numpy_correlate)
+			print("NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
+		"""
+		Matplotlib.pyplot's solution for correlation causes
+			execution error
+		(lags, c, line, b) = plt.xcorr(signal_x, signal_y,maxlags=4)
+		print("Matplotlib.pyplot lags",lags,"=")
+		print("Matplotlib.pyplot c",c,"=")
+		print("Matplotlib.pyplot line",line,"=")
+		print("Matplotlib.pyplot b",b,"=")
+		"""
+		
 
 
 ###############################################################
