@@ -105,7 +105,7 @@ class approx_cross_correlation_tester:
 		# Create a file object for writing.
 		print("=	Create a file object for writing.")
 		current_date_time = date_time_operations.get_current_date_time()
-		op_filename = "cross-correlation-results-"+current_date_time+".text"
+		op_filename = "results/cross-correlation-results-"+current_date_time+".text"
 		op_file_obj = open(op_filename, 'w')
 		# List of number of discrete values for random signals/"processes". 
 		for k in [4, 8, 16, 32, 64, 128]:
@@ -128,6 +128,8 @@ class approx_cross_correlation_tester:
 				tempt_text = "=	Metric name="+str(name)+"= with value ="+str(metric)+"="
 				op_file_obj.write(tempt_text)
 			print("============================================")
+		# Close the file object for writing.
+		op_file_obj.close()
 	## =========================================================
 	#	Method to test the methods regarding approximating
 	#		cross-correlation.
