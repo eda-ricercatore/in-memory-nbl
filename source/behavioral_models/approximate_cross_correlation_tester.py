@@ -120,25 +120,38 @@ class approx_cross_correlation_tester:
 				Find the cross-correlation between these two RTWs,
 					using all approaches.
 			"""
-			[x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr] = approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
-			actual_list = [x_corr_list, std_dev_x_corr, var_x_corr, arith_mean_x_corr, ptp_x_corr, amax_x_corr, amin_x_corr]
-			names_list = ["x_corr_list", "std_dev_x_corr", "var_x_corr", "arith_mean_x_corr", "ptp_x_corr", "amax_x_corr", "amin_x_corr"]
-			tempt_text = "=	x_corr_list ="+str(x_corr_list)+"="
-			op_file_obj.write(tempt_text)
-			tempt_text = "=	std_dev_x_corr ="+str(std_dev_x_corr)+"="
-			op_file_obj.write(tempt_text)
-			tempt_text = "=	var_x_corr ="+str(var_x_corr)+"="
-			op_file_obj.write(tempt_text)
-			tempt_text = "=	arith_mean_x_corr ="+str(arith_mean_x_corr)+"="
-			op_file_obj.write(tempt_text)
-			tempt_text = "=	ptp_x_corr ="+str(ptp_x_corr)+"="
-			op_file_obj.write(tempt_text)
-			tempt_text = "=	amax_x_corr ="+str(amax_x_corr)+"="
-			op_file_obj.write(tempt_text)
-			tempt_text = "=	amin_x_corr ="+str(amin_x_corr)+"="
-			op_file_obj.write(tempt_text)
-			op_file_obj.write("\n")
-			print("============================================")
+			results = approx_cross_correlation.cross_correlation_using_all_approaches(x_rtw_1,x_rtw_2)
+			for each_xcorr_mode in results:
+				tempt_text = "=	x_rtw_1 ="+str(x_rtw_1)+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	x_rtw_2 ="+str(x_rtw_2)+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	x_corr_list ="+str(each_xcorr_mode[0])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	std_dev_x_corr ="+str(each_xcorr_mode[1])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	var_x_corr ="+str(each_xcorr_mode[2])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	arith_mean_x_corr ="+str(each_xcorr_mode[3])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	ptp_x_corr ="+str(each_xcorr_mode[4])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	amax_x_corr ="+str(each_xcorr_mode[5])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	amin_x_corr ="+str(each_xcorr_mode[6])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				# Proceed to the next xcorr mode.
+				op_file_obj.write("\n")
+			op_file_obj.write("============================================\n")
 		# Close the file object for writing.
 		op_file_obj.close()
 	## =========================================================
