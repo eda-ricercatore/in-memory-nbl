@@ -11,15 +11,65 @@
 		periodic/deterministic signals, stochastic/random
 		and random processes can be found in the following
 		publications:
-		+ \cite{Chen2007c}
+		+ \cite[\SA.2, pp. 364]{Chen2007c}
+			- (Expectation of x and y, E[xy])/(sqrt(var(x)var(y)))
+			- From https://en.wikipedia.org/wiki/Expected_value,
+				expected value = \sum^{k}_{i=1} x_i*p_i;
+				for equiprobable outcomes x_i (p_1 = p_2 = ... = p_k),
+					which is true for x_i.
+			- How to calculate E[XY]?
+				* https://faculty.math.illinois.edu/~hildebr/408/408jointdiscrete.pdf
 		+ \cite{Downey2015}
+			- Chapter 7, 9, 12, 14
+			- Chapter 7, pp. 85: Pearson's correlation (always
+				between -1 and 1, inclusive).
 		+ \cite{Downey2011}
+			- Chapter 9, pp. 99: Pearson's correlation (always
+			between -1 and 1, inclusive).
 		+ \cite{Montgomery2014}
+			- \S5.2, pp. 174-179.
+				* pp. 176, Pearson's correlation, also defined
+					as sigma_xy/(sigma_x*sigma_y) 
+			- \S11.8, pp. 457-463.
 		+ \cite{Bertsekas2008}
+			- \S4.2, pp. 217, Pearson's correlation (not explicitly
+				stated)
 		+ \cite{Grimmett2001}
-		+ \cite{Ross2004}???
+			- \S4.2, correlation coefficient and covariance, pp. 64,
+				Pearson's correlation (not explicitly stated)
+		+ \cite{Ross2004}
+			- \S2.6, pp. 36, Pearson's correlation (not explicitly
+				stated) for a pair of data (or data pairs, or pair
+				of samples)
 		+ \cite{Ross2010b}
-	
+			- \S7.9, pp. 371.
+			- \S7.4, pp. 322, definition of covariance.
+			- \S7.4, pp. 328, definition of correlation.
+
+
+
+	Note that from https://en.wikipedia.org/wiki/Expected_value:
+	+ Section on Basic Properties:
+		- E[XY] = E[X]E[Y] if and only if (iff) X and Y are
+			independent.
+
+	From https://en.wikipedia.org/wiki/Cross-correlation,
+	+ "After calculating the cross-correlation between the two
+		signals, the maximum (or minimum if the signals are
+		negatively correlated) of the cross-correlation function
+		indicates the point in time where the signals are best
+		aligned; i.e., the time delay between the two signals is
+		determined by the argument of the maximum, or arg max of
+		the cross-correlation" 
+	+ 
+
+
+
+
+
+
+	From https://docs.python.org/3/library/statistics.html
+
 
 
 
@@ -167,10 +217,11 @@ class approx_cross_correlation:
 	#	O(1) method.
 	#
 	#	References:
-	#		\cite{Legend2011} provides some methods to compute the
-	#			cross-correlation between two random signals or
-	#			vectors.
-	#			https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
+	#	+ \cite{Legend2011} provides some methods to compute the
+	#		cross-correlation between two random signals or vectors.
+	#		https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
+	#	+ \cite{TheSciPyCommunity2019a} provides a list of statistical
+	#		functions that I used a subset of.
 	@staticmethod
 	def cross_correlation_using_all_approaches(signal_x=[],signal_y=[]):
 		# List of tuples storing results regarding cross-correlation.
