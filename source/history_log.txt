@@ -5557,4 +5557,35 @@ Relative difference for amin_cross_correlation 26  and  20 .
 *	Percentage of test cases passed:	100.0%.
 -------------------------------------------------
 DID NOT update repository of simulation/experimental results.
-[0m[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h
+[0m[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004hggit add -A[?2004l
+
+[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004hggit commit -m ""U"p"d"a"t"e" "b"u"i"l"d"."[?2004l
+[master 5eb4440] Update build.
+ Committer: Zhiyang Giovanni Ong <zhiyang@client-10-229-227-195.tamulink.tamu.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 4113 insertions(+), 4 deletions(-)
+ create mode 100644 source/results/cross-correlation-results-01-13-20-04-28-39.text
+ create mode 100644 source/results/cross-correlation-results-01-13-20-04-29-13.text
+[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004hggit push[?2004l
+Enumerating objects: 17, done.
+Counting objects:   5% (1/17)   Counting objects:  11% (2/17)   Counting objects:  17% (3/17)   Counting objects:  23% (4/17)   Counting objects:  29% (5/17)   Counting objects:  35% (6/17)   Counting objects:  41% (7/17)   Counting objects:  47% (8/17)   Counting objects:  52% (9/17)   Counting objects:  58% (10/17)   Counting objects:  64% (11/17)   Counting objects:  70% (12/17)   Counting objects:  76% (13/17)   Counting objects:  82% (14/17)   Counting objects:  88% (15/17)   Counting objects:  94% (16/17)   Counting objects: 100% (17/17)   Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 31.45 KiB | 3.49 MiB/s, done.
+Total 10 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/8)[Kremote: Resolving deltas:  25% (2/8)[Kremote: Resolving deltas:  37% (3/8)[Kremote: Resolving deltas:  50% (4/8)[Kremote: Resolving deltas:  62% (5/8)[Kremote: Resolving deltas:  75% (6/8)[Kremote: Resolving deltas:  87% (7/8)[Kremote: Resolving deltas: 100% (8/8)[Kremote: Resolving deltas: 100% (8/8), completed with 6 local objects.[K
+To github.com:eda-ricercatore/in-memory-nbl.git
+   257f874..5eb4440  master -> master
+[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h

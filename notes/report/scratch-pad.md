@@ -679,6 +679,26 @@ https://colab.research.google.com/drive/10kUcXxQZ0aBtGnxWFOlpPJYOgdjCBXVL#scroll
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##	CFP deadlines for conferences
 
 
@@ -691,3 +711,14 @@ Submission: Feb 12, 2020, anywhere on Earth
    https://crypto.iacr.org/2020/   
    https://conf.researchr.org/home/ismm-2020   
    http://www.islped.org/2020/   
+
+
+
+
+
+#	To-Do List
+
+
++ finish automated regression for the *data analysis tool*:
+	- data_analysis_tool.py
+	- data_analysis_tool_tester.py
