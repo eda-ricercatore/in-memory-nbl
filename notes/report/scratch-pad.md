@@ -328,9 +328,52 @@ Adaptive and Secure Computing Systems (ASCS) Laboratory
 
 
 
+https://dl.acm.org/doi/10.1145/3126526
+https://shen-lab.github.io/
+
+http://konect.cc/networks/ego-facebook/
+http://konect.cc/networks/
+
+https://www.youtube.com/watch?v=zUCoxhExe0o
+https://www.imcsummit.org/2019/us/sites/2019.us/files/slides/IMCSNA19_WFR_Final.pdf
+
+
+##	Hyperdimensional Computing
+
++ http://www.rctn.org/vs265/kanerva09-hyperdimensional.pdf
++ Hierarchical Hyperdimensional Computing for Energy Efficient EfficientClassificationMohsen
++ EfficientClassificationMohsen
+
+https://www.youtube.com/watch?v=zUCoxhExe0o
+
+Samira Mirbagher Ajorpaz (Primary)
+
+
+https://forms.gle/K86U8HceDjhJokyd9
+https://www.cerebras.net/ispd-2020-contest/
+dorsa-sadigh-wannabes
+mohsen-imani-wannabes
+
+
+The ACM International Symposium on Physical Design (ISPD) in collaboration with Cerebras Systems announce the 2020 ISPD contest in the area of placement for a wafer-scale deep learning accelerator. 
+For details on the contest check out www.ispd.cc and https://www.cerebras.net/ispd-2020-contest/ 
+Inquiries at: ispd2020contest@cerebras.net
+Team registration deadline: January 27, 2020
+https://docs.google.com/forms/u/2/d/e/1FAIpQLSeeuCRGLWPfySBE-IYuN6b7jxu7nGiZuYTN1cRRjazV6c6BnA/viewform?usp=form_confirm&edit2=2_ABaOnuengIuGb4mKRNhs58DMNGBHsTxf2zRWWzfuAirdeydH6RN0GtMMfyBiV1UqW1xiuQs
+
+
+https://colab.research.google.com/drive/1elGXScPW3SJmKamjvQFyUab-226woS7u?authuser=1#scrollTo=5Ev_Ofa-tssE
+My Copy of Install rohan.ipynb
+http://pendicular.net/talks/Lulea_March2011.pdf
+ circuit-level implementations
 
 
 
+
+## In-memory computing
+
++ https://safari.ethz.ch/architecture_seminar/spring2019/doku.php?id=schedule
+https://www.youtube.com/watch?v=6yITVKTDV0s
 
 
 
@@ -719,8 +762,8 @@ Submission: Feb 12, 2020, anywhere on Earth
 #	To-Do List
 
 
-- rename statistics package to something else, and do regression testing to verify that it broke nothing.
-
++ rename statistics package to something else, and do regression testing to verify that it broke nothing.
+	- statistic_pkg
 
 
 
