@@ -72,12 +72,12 @@ import statistics as s
 	Package and module to print statistics of software testing
 		results.
 """
-from statistics.test_statistics import statistical_analysis
+from statistic_pkg.test_statistics import statistical_analysis
 """
 	Package and module to perform miscellaneous tasks in data
 		analysis.
 """
-from statistics.data_analysis_tool import data_analysis
+from statistic_pkg.data_analysis_tool import data_analysis
 
 
 

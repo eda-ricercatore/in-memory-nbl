@@ -1,0 +1,117 @@
+=	x_rtw_1 =[-1, -1, 1, 1]=
+=	x_rtw_2 =[-1, 1, 1, 1]=
+=	name of method =valid=
+=	x_corr_list =[2]=
+=	std_dev_x_corr =0.0=
+=	var_x_corr =0.0=
+=	arith_mean_x_corr =2.0=
+=	ptp_x_corr =0=
+=	amax_x_corr =2=
+=	amin_x_corr =2=
+
+============================================
+
+=	x_rtw_1 =[-1, -1, 1, 1]=
+=	x_rtw_2 =[-1, 1, 1, 1]=
+=	name of method =same=
+=	x_corr_list =[-2 -1  2  3]=
+=	std_dev_x_corr =2.0615528128088303=
+=	var_x_corr =4.25=
+=	arith_mean_x_corr =0.5=
+=	ptp_x_corr =5=
+=	amax_x_corr =3=
+=	amin_x_corr =-2=
+
+============================================
+
+=	x_rtw_1 =[-1, -1, 1, 1]=
+=	x_rtw_2 =[-1, 1, 1, 1]=
+=	name of method =full=
+=	x_corr_list =[-1 -2 -1  2  3  0 -1]=
+=	std_dev_x_corr =1.6903085094570331=
+=	var_x_corr =2.857142857142857=
+=	arith_mean_x_corr =0.0=
+=	ptp_x_corr =5=
+=	amax_x_corr =3=
+=	amin_x_corr =-2=
+
+============================================
+
+=	x_rtw_1 =[-1, -1, 1, 1]=
+=	x_rtw_2 =[-1, 1, 1, 1]=
+=	name of method =pyc.ucorrelate=
+=	x_corr_list =[ 2 -1 -2 -1]=
+=	std_dev_x_corr =1.5=
+=	var_x_corr =2.25=
+=	arith_mean_x_corr =-0.5=
+=	ptp_x_corr =4=
+=	amax_x_corr =2=
+=	amin_x_corr =-2=
+
+============================================
+
+=	x_rtw_1 =[1, -1, -1, -1, 1, -1, 1, -1]=
+=	x_rtw_2 =[1, 1, 1, -1, -1, 1, 1, 1]=
+=	name of method =valid=
+=	x_corr_list =[-2]=
+=	std_dev_x_corr =0.0=
+=	var_x_corr =0.0=
+=	arith_mean_x_corr =-2.0=
+=	ptp_x_corr =0=
+=	amax_x_corr =-2=
+=	amin_x_corr =-2=
+
+============================================
+
+=	x_rtw_1 =[1, -1, -1, -1, 1, -1, 1, -1]=
+=	x_rtw_2 =[1, 1, 1, -1, -1, 1, 1, 1]=
+=	name of method =same=
+=	x_corr_list =[-4 -1  2  3 -2 -3 -2 -1]=
+=	std_dev_x_corr =2.23606797749979=
+=	var_x_corr =5.0=
+=	arith_mean_x_corr =-1.0=
+=	ptp_x_corr =7=
+=	amax_x_corr =3=
+=	amin_x_corr =-4=
+
+============================================
+
+=	x_rtw_1 =[1, -1, -1, -1, 1, -1, 1, -1]=
+=	x_rtw_2 =[1, 1, 1, -1, -1, 1, 1, 1]=
+=	name of method =full=
+=	x_corr_list =[ 1  0 -1 -4 -1  2  3 -2 -3 -2 -1  2 -1  0 -1]=
+=	std_dev_x_corr =1.8571184369578826=
+=	var_x_corr =3.448888888888889=
+=	arith_mean_x_corr =-0.5333333333333333=
+=	ptp_x_corr =7=
+=	amax_x_corr =3=
+=	amin_x_corr =-4=
+
+============================================
+
+=	x_rtw_1 =[1, -1, -1, -1, 1, -1, 1, -1]=
+=	x_rtw_2 =[1, 1, 1, -1, -1, 1, 1, 1]=
+=	name of method =pyc.ucorrelate=
+=	x_corr_list =[-2  3  2 -1 -4 -1  0  1]=
+=	std_dev_x_corr =2.1065374432940898=
+=	var_x_corr =4.4375=
+=	arith_mean_x_corr =-0.25=
+=	ptp_x_corr =7=
+=	amax_x_corr =3=
+=	amin_x_corr =-4=
+
+============================================
+
+=	x_rtw_1 =[-1, -1, -1, 1, 1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1]=
+=	x_rtw_2 =[-1, 1, -1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, 1]=
+=	name of method =valid=
+=	x_corr_list =[-2]=
+=	std_dev_x_corr =0.0=
+=	var_x_corr =0.0=
+=	arith_mean_x_corr =-2.0=
+=	ptp_x_corr =0=
+=	amax_x_corr =-2=
+=	amin_x_corr =-2=
+
+============================================
+

@@ -67,7 +67,7 @@ import calendar
 	Package and module to print statistics of software testing
 		results.
 """
-from statistics.test_statistics import statistical_analysis
+from statistic_pkg.test_statistics import statistical_analysis
 
 
 
@@ -91,7 +91,7 @@ from utilities.miscellaneous import misc
 from utilities.generate_results_filename_tester import generate_filename_tester
 
 ###############################################################
-##	Module with methods that perform miscellaneous tasks.
+##	Module that tests methods that perform miscellaneous tasks.
 class misc_tester:
 	## =========================================================
 	#	Method to test the methods that perform file I/O operations
