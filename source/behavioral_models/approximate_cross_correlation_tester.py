@@ -107,9 +107,12 @@ class approx_cross_correlation_tester:
 		current_date_time = date_time_operations.get_current_date_time()
 		op_filename = "results/cross-correlation-results-"+current_date_time+".text"
 		op_file_obj = open(op_filename, 'w')
+		# Results for all iterations.
+		results_for_all_iterations = []
 		# List of number of discrete values for random signals/"processes". 
 		for k in [4, 8, 16, 32, 64, 128]:
 			print("=	Testing random ", k, "-bit signals.")
+			#for number_of_iterations in range(10):
 			# Generate a random signal of the type random telegraph wave (RTW).
 			x_rtw_1 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
 			print("x_rtw_1 is:",x_rtw_1,"=")
@@ -154,10 +157,11 @@ class approx_cross_correlation_tester:
 				op_file_obj.write("\n")
 				# Proceed to the next xcorr mode.
 				op_file_obj.write("\n")
-			op_file_obj.write("============================================\n")
-			op_file_obj.write("\n")
-			print("============================================")
-			approx_cross_correlation.find_relative_percentage_difference(results)
+				op_file_obj.write("============================================\n")
+				op_file_obj.write("\n")
+				print("============================================")
+				approx_cross_correlation.find_relative_percentage_difference(results)
+				results_for_all_iterations.append(results)
 		# Close the file object for writing.
 		op_file_obj.close()
 	## =========================================================
