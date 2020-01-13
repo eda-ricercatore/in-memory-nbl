@@ -308,8 +308,43 @@ class approx_cross_correlation:
 	@staticmethod
 	def approximate_cross_correlation_(signal_x=[],signal_y=[]):
 		print("")
-
-
+	## =========================================================
+	#	Method to find the relative percentage difference between
+	#		the methods regarding calculating cross-correlation.
+	#	@param results - A list of list, where each list in the list
+	#				contains results for each method.
+	#	@return - A list of list, where each list is a comparison
+	#				of results between any pair of methods, and the
+	#				embedded list is a set of relative percentage
+	#				difference comparing their results.
+	#	O(1) method.
+	@staticmethod
+	def find_relative_percentage_difference(results=None):
+		if results is None:
+			return None
+		else:
+			results_size_per_dimension = len(results)
+			temp_list_per_dimension_in_matrix = [0]*results_size_per_dimension
+			matrix_tracking_comparisons = []
+			for i in range(results_size_per_dimension):
+				matrix_tracking_comparisons.append(temp_list_per_dimension_in_matrix)
+			"""
+				Use a boolean matrix to track comparisons between
+					methods.
+				
+				An 0-initialized list per row in the 2-D list of
+					lists containing results of the matrix.
+			"""
+			for list_in_results in range(results_size_per_dimension):
+				for other_list_in_results in range(list_in_results+1,results_size_per_dimension):
+					print("Comparing methods:",results[list_in_results][0]," and ",results[other_list_in_results][0],".")
+					print("Relative difference for std_dev_x_corr",results[list_in_results][2]," and ",results[other_list_in_results][2],".")
+					print("Relative difference for var_cross_correlation",results[list_in_results][3]," and ",results[other_list_in_results][3],".")
+					print("Relative difference for arith_mean_cross_correlation",results[list_in_results][4]," and ",results[other_list_in_results][4],".")
+					print("Relative difference for ptp_cross_correlation",results[list_in_results][5]," and ",results[other_list_in_results][5],".")
+					print("Relative difference for amax_cross_correlation",results[list_in_results][6]," and ",results[other_list_in_results][6],".")
+					print("Relative difference for amin_cross_correlation",results[list_in_results][6]," and ",results[other_list_in_results][6],".")
+					print("")
 
 
 

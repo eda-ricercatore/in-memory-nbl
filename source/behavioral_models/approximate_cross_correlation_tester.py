@@ -128,30 +128,36 @@ class approx_cross_correlation_tester:
 				tempt_text = "=	x_rtw_2 ="+str(x_rtw_2)+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	x_corr_list ="+str(each_xcorr_mode[0])+"="
+				tempt_text = "=	name of method ="+str(each_xcorr_mode[0])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	std_dev_x_corr ="+str(each_xcorr_mode[1])+"="
+				tempt_text = "=	x_corr_list ="+str(each_xcorr_mode[1])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	var_x_corr ="+str(each_xcorr_mode[2])+"="
+				tempt_text = "=	std_dev_x_corr ="+str(each_xcorr_mode[2])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	arith_mean_x_corr ="+str(each_xcorr_mode[3])+"="
+				tempt_text = "=	var_x_corr ="+str(each_xcorr_mode[3])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	ptp_x_corr ="+str(each_xcorr_mode[4])+"="
+				tempt_text = "=	arith_mean_x_corr ="+str(each_xcorr_mode[4])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	amax_x_corr ="+str(each_xcorr_mode[5])+"="
+				tempt_text = "=	ptp_x_corr ="+str(each_xcorr_mode[5])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
-				tempt_text = "=	amin_x_corr ="+str(each_xcorr_mode[6])+"="
+				tempt_text = "=	amax_x_corr ="+str(each_xcorr_mode[6])+"="
+				op_file_obj.write(tempt_text)
+				op_file_obj.write("\n")
+				tempt_text = "=	amin_x_corr ="+str(each_xcorr_mode[7])+"="
 				op_file_obj.write(tempt_text)
 				op_file_obj.write("\n")
 				# Proceed to the next xcorr mode.
 				op_file_obj.write("\n")
 			op_file_obj.write("============================================\n")
+			op_file_obj.write("\n")
+			print("============================================")
+			approx_cross_correlation.find_relative_percentage_difference(results)
 		# Close the file object for writing.
 		op_file_obj.close()
 	## =========================================================

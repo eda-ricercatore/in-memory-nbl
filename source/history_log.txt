@@ -1,0 +1,2172 @@
+Script started on Sun Jan 12 23:47:56 2020
+[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h../incremental_test.py[1m [0m[0m [?2004l
+==================================================
+Automating incremental regression testing of my software
+	solution for genetic technology mapping.
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+=	Testing the statistical analysis package.
+
+==	Testing class: data_analysis
+1) Number of test cases passed:		0
+2) Number of test cases used:		0
+Proportion of test cases passed:	0
+Value of x is: 1.
+Number of test cases passed:	1
+Number of test cases used:	1
+Proportion of test cases passed:	100.0
+Value of x is: 2.
+Number of test cases passed:	2
+Number of test cases used:	2
+Proportion of test cases passed:	100.0
+Value of x is: 3.
+Number of test cases passed:	3
+Number of test cases used:	3
+Proportion of test cases passed:	100.0
+Value of x is: 4.
+Number of test cases passed:	4
+Number of test cases used:	4
+Proportion of test cases passed:	100.0
+Value of x is: 5.
+Number of test cases passed:	5
+Number of test cases used:	5
+Proportion of test cases passed:	100.0
+Value of x is: 6.
+Number of test cases passed:	6
+Number of test cases used:	6
+Proportion of test cases passed:	100.0
+
+
+-------------------------------------------------
+==	Testing class: data_analysis.
+	Testing get_reference_value() method.
+	... Test: get_reference_value(c) == 299792458		OK
+	... Test: method with default option == 299792458	OK
+	... Test: get_reference_value(g) == 9.80665		OK
+	... Test: get_reference_value(std atm) == 101325	OK
+
+	Testing get_actual_change() method.
+	... Test: default option, get_actual_change(0,0) == 0	OK
+	... Test: get_actual_change(19,13) == 6			OK
+	... Test: get_actual_change(10,14) == -4		OK
+	... Test: get_actual_change(-20,27) == -47		OK
+	... Test: get_actual_change(-7,-3) == -4		OK
+	... Test: get_actual_change(-4,-9) == 5			OK
+
+	Testing get_absolute_difference() method.
+	... Test: default, get_absolute_difference(0,0) == 0	OK
+	... Test: get_absolute_difference(19,13) == 6		OK
+	... Test: get_absolute_difference(10,14) == 4		OK
+	... Test: get_absolute_difference(-20,27) == 47		OK
+	... Test: get_absolute_difference(-7,-3) == 4		OK
+	... Test: get_absolute_difference(-4,-9) == 5		OK
+
+	Testing get_relative_change() method.
+	... Test: default, get_relative_change(1,1) == 0	OK
+	... Test: get_relative_change(15,12) == 0.25		OK
+	... Test: get_relative_change(18,20) == -0.10		OK
+	... Test: get_relative_change(-97,-100) == -0.10	OK
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the utilities package.
+
+
+==	Testing class: date_time_operations.
+	Testing date_time_operations.is_valid_time() method.
+	... Test: single error, hh				OK
+	... Test: single error, mm				OK
+	... Test: single error, ss				OK
+	... Test: single error, us				OK
+	... Test: double errors, ss and us			OK
+	... Test: multiple errors, hh, ss, and us		OK
+	... Test: no error					OK
+	... Test: no error					OK
+	... Test: no error					OK
+	Testing date_time_operations.is_valid_year() method.
+	... Test: year < 2014					OK
+	... Test: year = -467					OK
+	... Test: year > 3645					OK
+	... Test: year = 2019					OK
+	Testing date_time_operations.is_valid_month() method.
+	... Test: month = 0					OK
+	... Test: month = -7					OK
+	... Test: month > 12					OK
+	... Test: month = 10					OK
+	Testing date_time_operations.is_valid_31_day_month() method.
+	... Test: not 31-day month, mm = 4			OK
+	... Test: not 31-day month, mm = 2			OK
+	... Test: 31-day month, dd < 0				OK
+	... Test: 31-day month, dd = 0				OK
+	... Test: 31-day month, dd = 27				OK
+	Testing date_time_operations.is_valid_30_day_month() method.
+	... Test: not 30-day month, mm = 2			OK
+	... Test: not 30-day month, mm = 12			OK
+	... Test: 30-day month, dd < 0				OK
+	... Test: 30-day month, dd = 0				OK
+	... Test: 30-day month, dd = 27				OK
+	Testing date_time_operations.is_valid_date_in_Feb() method.
+	... Test: not February, mm = 12				OK
+	... Test: not February, mm = -2				OK
+	... Test: not February, mm = 14				OK
+	Testing date_time_operations.is_valid_date() method.
+	... Test: single error, dd				OK
+	... Test: single error, -dd				OK
+	... Test: single error, mm				OK
+	... Test: single error, mm				OK
+	... Test: single error, -mm				OK
+	... Test: single error, yy				OK
+	... Test: single error, yy				OK
+	... Test: double errors, dd and yy			OK
+	... Test: double errors, dd and yy			OK
+	... Test: double errors, dd and mm			OK
+	... Test: multiple errors, dd, mm, and yy		OK
+	... Test: no error					OK
+	... Test: no error					OK
+	Testing date_time_operations.check_filename_date_time_format() method.
+	... Test: single error, dd				OK
+	... Test: single error, yy				OK
+	... Test: single error, mm				OK
+	... Test: multiple errors, dd, mm, yy			OK
+	... Test: multiple errors, dd, mm, yy			OK
+	... Test: valid date & time - leap year			OK
+	... Test: valid date & time				OK
+	... Test: valid date & time				OK
+	Testing date & time tokenization method.
+	... Test: invalid DD-MM-YY-HR-MN-SS-US format		OK
+	... Test: with None object				OK
+	... Test: valid DD-MM-YY-HR-MN-SS-US format		OK
+
+
+==	Testing class: generate_filename.
+	Generate a filename with the current time stamp.
+	Testing filename: 12-1-2020-23-48-59-399455.txt =
+	Check against the format: DD-MM-YY-HH-MM-SS-uS.txt
+	Testing if the filename has the correct file extension.
+	... Test: file extension is '.txt'.			OK
+	Testing if filename without file extension has right format.
+	... Test: filename format is DD-MM-YY-HH-MM-SS-uS.	OK
+	Tokenize generated filename.
+	Testing if 1st token is appropriate date (DD/date value).
+	... Test: DD value is >= 0.				OK
+	... Test: DD value is <= 29, leap year Feb.		OK
+	... Test: DD value is <= 28, non-leap year Feb.		OK
+	... Test: DD value is <= 30, 30-day month.		OK
+	... Test: DD value is <= 31, 31-day month.		OK
+	Testing if 2nd token is appropriate date (MM/month value).
+	... Test: MM/month value is >= 1.			OK
+	... Test: MM/month value is <= 12.			OK
+	Testing if 3rd token is appropriate date (YY/year value).
+	... Test: YY/year value is >= 2000.			OK
+	Testing if 4th token is appropriate date (HH/hour value).
+	... Test: HH/hour value is >= 0.			OK
+	... Test: HH/hour value is <= 23.			OK
+	Testing if 5th token is appropriate date (MM/minute value).
+	... Test: MM/minute value is >= 0.			OK
+	... Test: MM/minute value is <= 59.			OK
+	Testing if 6th token is appropriate date (SS/second value).
+	... Test: SS/second value is >= 0.			OK
+	... Test: SS/second is <= 59.				OK
+	Testing if 7th token is appropriate date (uS/microsecond value).
+	... Test: uS/microsecond value is >= 0.			OK
+	... Test: uS/microsecond value is <= 999999.		OK
+
+
+==	Testing class: misc_tester.
+	Testing the filename format checker.
+	... Test: incorrect file extension is '.txt'.		OK
+	... Test: filename no file extension has 6 tokens.	OK
+	... Test: filename with -ve DD/day.			OK
+	... Test: filename with DD/day >29, Feb.		OK
+	... Test: filename with DD/day=29, Feb, leap year.	OK
+	... Test: filename with DD/day=28, Feb, not leap year.	OK
+	... Test: filename with DD/day = 34.			OK
+	... Test: filename with DD/day=31, 31 day mth.		OK
+	... Test: filename with DD/day=30, 30 day mth.		OK
+	... Test: filename with MM/month = 0.			OK
+	... Test: filename with MM/month = -4.			OK
+	... Test: filename with MM/month = 15.			OK
+	... Test: filename with MM/month = 9.			OK
+	... Test: filename with YY/year = 1582.			OK
+	... Test: filename with YY/year = 2083.			OK
+	... Test: filename with HH/hour = -3.			OK
+	... Test: filename with HH/hour = 25.			OK
+	... Test: filename with HH/hour = 17.			OK
+	... Test: filename with MM/minute = -8.			OK
+	... Test: filename with MM/minute = 73.			OK
+	... Test: filename with MM/minute = 59.			OK
+	... Test: filename with MM/minute = 0.			OK
+	... Test: filename with SS/second = -4.			OK
+	... Test: filename with SS/second = 81.			OK
+	... Test: filename with SS/second = 36.			OK
+	... Test: filename with uS/microsecond = -129.		OK
+	... Test: filename with uS/microsecond = 16534785929.	OK
+	... Test: filename with uS/microsecond = 0.		OK
+	... Test: filename with uS/microsecond = 999999.	OK
+==	Test: test_find_desired_location_for_results().
+	... Test: filename is 25-3-2010-5-8-51-9994073289.dwq.	OK
+==	Test: test_find_desired_location_for_results().
+	... Test: filename 25-3-2010-5-8-51-9407.txt included.	OK
+	... Test: 25-3-2010-5-8-51-9407.txt, correct path.	OK
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the random_process_models package.
+
+
+==	Testing class: prng.
+	Testing psl_uniform().
+	... Test: incorrect type of signal, 'whatever'.		OK
+	... Test: for bit vector signal, 'bv'.			OK
+	... Test: for RTW signal, 'rtw'.			OK
+
+
+==	Testing class: rand_signal_generator.
+	Testing gen_rand_signal_uniform_distributn().
+	... Test: wrong type of signal, signal about size.	OK
+	... Test: type of signal = RTW.				OK
+	... Test: type of signal = bit vector.			OK
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the behavioral_models package.
+
+
+==	Testing class: approx_cross_correlation.
+=	Create a file object for writing.
+=	Testing random  4 -bit signals.
+x_rtw_1 is: [1, -1, -1, 1] =
+x_rtw_2 is: [1, -1, 1, -1] =
+NumPy-based cross-correlation using valid mode is: [0] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 0 =
+	NumPy-based cross-correlation's min value using valid mode is: 0 =
+
+NumPy-based cross-correlation using same mode is: [ 2 -1  0  1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 1.118033988749895 =
+	NumPy-based cross-correlation's variance using same mode is: 1.25 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 0.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 3 =
+	NumPy-based cross-correlation's max value using same mode is: 2 =
+	NumPy-based cross-correlation's min value using same mode is: -1 =
+
+NumPy-based cross-correlation using full mode is: [-1  2 -1  0  1 -2  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.3093073414159542 =
+	NumPy-based cross-correlation's variance using full mode is: 1.7142857142857142 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 4 =
+	NumPy-based cross-correlation's max value using full mode is: 2 =
+	NumPy-based cross-correlation's min value using full mode is: -2 =
+
+Pycorrelate-based cross-correlation is: [ 0 -1  2 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.224744871391589 =
+	NumPy-based cross-correlation's variance using full mode is: 1.5 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 3 =
+	NumPy-based cross-correlation's max value using full mode is: 2 =
+	NumPy-based cross-correlation's min value using full mode is: -1 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr valid  and  [0] .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr valid  and  [0] .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr valid  and  [0] .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr same  and  [ 2 -1  0  1] .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr same  and  [ 2 -1  0  1] .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr full  and  [-1  2 -1  0  1 -2  1] .
+=	Testing random  8 -bit signals.
+x_rtw_1 is: [-1, -1, 1, 1, -1, -1, 1, 1] =
+x_rtw_2 is: [-1, -1, 1, -1, 1, 1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [-2] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -2.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -2 =
+	NumPy-based cross-correlation's min value using valid mode is: -2 =
+
+NumPy-based cross-correlation using same mode is: [-4  1  4 -1 -2  1  0 -1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 2.222048604328897 =
+	NumPy-based cross-correlation's variance using same mode is: 4.9375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.25 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 8 =
+	NumPy-based cross-correlation's max value using same mode is: 4 =
+	NumPy-based cross-correlation's min value using same mode is: -4 =
+
+NumPy-based cross-correlation using full mode is: [ 1  2 -1 -4  1  4 -1 -2  1  0 -1  2  1 -2 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.9321835661585918 =
+	NumPy-based cross-correlation's variance using full mode is: 3.7333333333333334 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 8 =
+	NumPy-based cross-correlation's max value using full mode is: 4 =
+	NumPy-based cross-correlation's min value using full mode is: -4 =
+
+Pycorrelate-based cross-correlation is: [-2 -1  4  1 -4 -1  2  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 2.345207879911715 =
+	NumPy-based cross-correlation's variance using full mode is: 5.5 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 8 =
+	NumPy-based cross-correlation's max value using full mode is: 4 =
+	NumPy-based cross-correlation's min value using full mode is: -4 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr valid  and  [-2] .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr valid  and  [-2] .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr valid  and  [-2] .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr same  and  [-4  1  4 -1 -2  1  0 -1] .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr same  and  [-4  1  4 -1 -2  1  0 -1] .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr full  and  [ 1  2 -1 -4  1  4 -1 -2  1  0 -1  2  1 -2 -1] .
+=	Testing random  16 -bit signals.
+x_rtw_1 is: [-1, 1, 1, 1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1] =
+x_rtw_2 is: [1, 1, -1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [0] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 0 =
+	NumPy-based cross-correlation's min value using valid mode is: 0 =
+
+NumPy-based cross-correlation using same mode is: [ 0  5  0 -3  4  3  2  5  0 -1  4  1 -2 -3 -2  1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 2.6427968139832467 =
+	NumPy-based cross-correlation's variance using same mode is: 6.984375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 0.875 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 8 =
+	NumPy-based cross-correlation's max value using same mode is: 5 =
+	NumPy-based cross-correlation's min value using same mode is: -3 =
+
+NumPy-based cross-correlation using full mode is: [ 1  0 -1 -2 -5 -2  3  0  5  0 -3  4  3  2  5  0 -1  4  1 -2 -3 -2  1 -4
+ -1  0 -5  0  1 -2 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 2.6364924828003287 =
+	NumPy-based cross-correlation's variance using full mode is: 6.9510926118626415 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.12903225806451613 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 10 =
+	NumPy-based cross-correlation's max value using full mode is: 5 =
+	NumPy-based cross-correlation's min value using full mode is: -5 =
+
+Pycorrelate-based cross-correlation is: [ 0  5  2  3  4 -3  0  5  0  3 -2 -5 -2 -1  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 2.8034576865007255 =
+	NumPy-based cross-correlation's variance using full mode is: 7.859375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.625 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 10 =
+	NumPy-based cross-correlation's max value using full mode is: 5 =
+	NumPy-based cross-correlation's min value using full mode is: -5 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr valid  and  [0] .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr valid  and  [0] .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr valid  and  [0] .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr same  and  [ 0  5  0 -3  4  3  2  5  0 -1  4  1 -2 -3 -2  1] .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr same  and  [ 0  5  0 -3  4  3  2  5  0 -1  4  1 -2 -3 -2  1] .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr full  and  [ 1  0 -1 -2 -5 -2  3  0  5  0 -3  4  3  2  5  0 -1  4  1 -2 -3 -2  1 -4
+ -1  0 -5  0  1 -2 -1] .
+=	Testing random  32 -bit signals.
+x_rtw_1 is: [-1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1] =
+x_rtw_2 is: [1, 1, 1, 1, 1, 1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, 1, -1, -1, -1, 1, -1, 1, 1, 1, 1, -1] =
+NumPy-based cross-correlation using valid mode is: [-4] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -4.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -4 =
+	NumPy-based cross-correlation's min value using valid mode is: -4 =
+
+NumPy-based cross-correlation using same mode is: [  2   1   2   3  -6  -3   0   5  -6   9 -10  -1   2  -9   2  -1  -4  -1
+   0   1   0  -3  -6  -3  -4  -9   2  -1  -4  -1  -6   1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 4.153311931459037 =
+	NumPy-based cross-correlation's variance using same mode is: 17.25 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -1.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 19 =
+	NumPy-based cross-correlation's max value using same mode is: 9 =
+	NumPy-based cross-correlation's min value using same mode is: -10 =
+
+NumPy-based cross-correlation using full mode is: [  1   0  -1  -4  -1  -2  -1   4   1   6  -3  -4  -7  -2  -1   2   1   2
+   3  -6  -3   0   5  -6   9 -10  -1   2  -9   2  -1  -4  -1   0   1   0
+  -3  -6  -3  -4  -9   2  -1  -4  -1  -6   1   2  -9   6  -3  -2  -1  -4
+   3  -2  -1   2   1   2   1   2   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 3.7690976710237023 =
+	NumPy-based cross-correlation's variance using full mode is: 14.206097253716298 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -1.0158730158730158 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 19 =
+	NumPy-based cross-correlation's max value using full mode is: 9 =
+	NumPy-based cross-correlation's min value using full mode is: -10 =
+
+Pycorrelate-based cross-correlation is: [ -4  -1   2  -9   2  -1 -10   9  -6   5   0  -3  -6   3   2   1   2  -1
+  -2  -7  -4  -3   6   1   4  -1  -2  -1  -4  -1   0   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 4.121210380458634 =
+	NumPy-based cross-correlation's variance using full mode is: 16.984375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.875 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 19 =
+	NumPy-based cross-correlation's max value using full mode is: 9 =
+	NumPy-based cross-correlation's min value using full mode is: -10 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr valid  and  [-4] .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr valid  and  [-4] .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr valid  and  [-4] .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr same  and  [  2   1   2   3  -6  -3   0   5  -6   9 -10  -1   2  -9   2  -1  -4  -1
+   0   1   0  -3  -6  -3  -4  -9   2  -1  -4  -1  -6   1] .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr same  and  [  2   1   2   3  -6  -3   0   5  -6   9 -10  -1   2  -9   2  -1  -4  -1
+   0   1   0  -3  -6  -3  -4  -9   2  -1  -4  -1  -6   1] .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr full  and  [  1   0  -1  -4  -1  -2  -1   4   1   6  -3  -4  -7  -2  -1   2   1   2
+   3  -6  -3   0   5  -6   9 -10  -1   2  -9   2  -1  -4  -1   0   1   0
+  -3  -6  -3  -4  -9   2  -1  -4  -1  -6   1   2  -9   6  -3  -2  -1  -4
+   3  -2  -1   2   1   2   1   2   1] .
+=	Testing random  64 -bit signals.
+x_rtw_1 is: [1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, 1, 1, -1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1] =
+x_rtw_2 is: [-1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1] =
+NumPy-based cross-correlation using valid mode is: [2] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 2.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 2 =
+	NumPy-based cross-correlation's min value using valid mode is: 2 =
+
+NumPy-based cross-correlation using same mode is: [ -4   3   8   7  -2  -1  -4   9  -6  -9 -12   7  -4   9  -8  -5   0   1
+   6   5  -6   3  -6   5  -2   5  14  -5   6 -11  -8   7   2  -3  -4  -5
+  16 -17  -2  11   8   5   2  -9   0   1   4  -5  -6  -7   4  -1  10  -5
+  -2  -1   6   7  -6  -3   4  -5  -4  -1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 6.595156840439809 =
+	NumPy-based cross-correlation's variance using same mode is: 43.49609375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.0625 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 33 =
+	NumPy-based cross-correlation's max value using same mode is: 16 =
+	NumPy-based cross-correlation's min value using same mode is: -17 =
+
+NumPy-based cross-correlation using full mode is: [  1   2   3   2  -1  -4  -5  -2   1   0  -1   2  -3  -2  -1  -4  -3  10
+  11   8  -1  -4  -5  -4  -1  -8  -3   2   7  -2   3  -4   3   8   7  -2
+  -1  -4   9  -6  -9 -12   7  -4   9  -8  -5   0   1   6   5  -6   3  -6
+   5  -2   5  14  -5   6 -11  -8   7   2  -3  -4  -5  16 -17  -2  11   8
+   5   2  -9   0   1   4  -5  -6  -7   4  -1  10  -5  -2  -1   6   7  -6
+  -3   4  -5  -4  -1   6   7   6  -5  -4   3  -2   5   0  -1   2  -9  -2
+  -3   6   3  -2   1   0   1   4   3  -4   1  -4   1   0  -1   4  -3   2
+  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 5.481174699510332 =
+	NumPy-based cross-correlation's variance using full mode is: 30.04327608655218 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.06299212598425197 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 33 =
+	NumPy-based cross-correlation's max value using full mode is: 16 =
+	NumPy-based cross-correlation's min value using full mode is: -17 =
+
+Pycorrelate-based cross-correlation is: [  2   7  -8 -11   6  -5  14   5  -2   5  -6   3  -6   5   6   1   0  -5
+  -8   9  -4   7 -12  -9  -6   9  -4  -1  -2   7   8   3  -4   3  -2   7
+   2  -3  -8  -1  -4  -5  -4  -1   8  11  10  -3  -4  -1  -2  -3   2  -1
+   0   1  -2  -5  -4  -1   2   3   2   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 5.617964349966988 =
+	NumPy-based cross-correlation's variance using full mode is: 31.5615234375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.03125 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 26 =
+	NumPy-based cross-correlation's max value using full mode is: 14 =
+	NumPy-based cross-correlation's min value using full mode is: -12 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr valid  and  [2] .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr valid  and  [2] .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr valid  and  [2] .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr same  and  [ -4   3   8   7  -2  -1  -4   9  -6  -9 -12   7  -4   9  -8  -5   0   1
+   6   5  -6   3  -6   5  -2   5  14  -5   6 -11  -8   7   2  -3  -4  -5
+  16 -17  -2  11   8   5   2  -9   0   1   4  -5  -6  -7   4  -1  10  -5
+  -2  -1   6   7  -6  -3   4  -5  -4  -1] .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr same  and  [ -4   3   8   7  -2  -1  -4   9  -6  -9 -12   7  -4   9  -8  -5   0   1
+   6   5  -6   3  -6   5  -2   5  14  -5   6 -11  -8   7   2  -3  -4  -5
+  16 -17  -2  11   8   5   2  -9   0   1   4  -5  -6  -7   4  -1  10  -5
+  -2  -1   6   7  -6  -3   4  -5  -4  -1] .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr full  and  [  1   2   3   2  -1  -4  -5  -2   1   0  -1   2  -3  -2  -1  -4  -3  10
+  11   8  -1  -4  -5  -4  -1  -8  -3   2   7  -2   3  -4   3   8   7  -2
+  -1  -4   9  -6  -9 -12   7  -4   9  -8  -5   0   1   6   5  -6   3  -6
+   5  -2   5  14  -5   6 -11  -8   7   2  -3  -4  -5  16 -17  -2  11   8
+   5   2  -9   0   1   4  -5  -6  -7   4  -1  10  -5  -2  -1   6   7  -6
+  -3   4  -5  -4  -1   6   7   6  -5  -4   3  -2   5   0  -1   2  -9  -2
+  -3   6   3  -2   1   0   1   4   3  -4   1  -4   1   0  -1   4  -3   2
+  -1] .
+=	Testing random  128 -bit signals.
+x_rtw_1 is: [1, 1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, 1, 1, -1] =
+x_rtw_2 is: [1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [4] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 4.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 4 =
+	NumPy-based cross-correlation's min value using valid mode is: 4 =
+
+NumPy-based cross-correlation using same mode is: [  4   1  16   9  -4   1  10   5  -2   1   8   3   6  -1  -4   9   6  -3
+   8   3  -4   5   0  -5  18   7 -14  -7  14   3   4   1  -6   7   4   9
+   0  19   4   5  12  17  -6   5  -8  19   4  13  -2   9  -2   9  14  -1
+ -12  15 -26   1  10   3  -6  -3  -2   1   4  13  10   5   0   7  -2   1
+   4   1  18   3  14  17 -24  21  -6  -5  20  -3  -4  -5 -16  -1   2   1
+ -12  11   2  -1   6   5  -8 -21  22  -3  -8   3   0   9   2   9  14  -9
+  -8   7  -4  13  -4  -9   0  -5   8  -7  10 -11  -2  -5  -6 -11   8   1
+  -4   9] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 8.977184622697697 =
+	NumPy-based cross-correlation's variance using same mode is: 80.58984375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 2.1875 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 48 =
+	NumPy-based cross-correlation's max value using same mode is: 22 =
+	NumPy-based cross-correlation's min value using same mode is: -26 =
+
+NumPy-based cross-correlation using full mode is: [ -1  -2  -1   0   1  -2  -1   0   3   2  -3  -6  -1   4  -5  -6  -3   4
+  -5  -4  -3   4  -3  -2  -5   8  -3   2 -11  -2  -1   0  -7 -10   3   4
+   1  -4  -5   2   7  -6   1   0   5 -12  -1   4  -3  -4   1  12  -1   2
+   7  -6  -7  10  -1   0 -17   8 -13   4   1  16   9  -4   1  10   5  -2
+   1   8   3   6  -1  -4   9   6  -3   8   3  -4   5   0  -5  18   7 -14
+  -7  14   3   4   1  -6   7   4   9   0  19   4   5  12  17  -6   5  -8
+  19   4  13  -2   9  -2   9  14  -1 -12  15 -26   1  10   3  -6  -3  -2
+   1   4  13  10   5   0   7  -2   1   4   1  18   3  14  17 -24  21  -6
+  -5  20  -3  -4  -5 -16  -1   2   1 -12  11   2  -1   6   5  -8 -21  22
+  -3  -8   3   0   9   2   9  14  -9  -8   7  -4  13  -4  -9   0  -5   8
+  -7  10 -11  -2  -5  -6 -11   8   1  -4   9   0  -9   0  -9   4   7  -6
+  -1  14  -5   0  -7  14   1   0  -5 -14   3   4  -7  -4   3  -4   1   2
+   1 -10  -1   6  -3   4   3   2   1   4  -5  -8   5  -4  -1   4   7   2
+  -5  -4  -7  -8   3   2   3   2   3   2  -3   0   1  -6  -1   2   1  -2
+  -1   2  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 7.521196498594682 =
+	NumPy-based cross-correlation's variance using full mode is: 56.568396770472894 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.7058823529411765 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 48 =
+	NumPy-based cross-correlation's max value using full mode is: 22 =
+	NumPy-based cross-correlation's min value using full mode is: -26 =
+
+Pycorrelate-based cross-correlation is: [  4   1  -2  -3  -6   3  10   1 -26  15 -12  -1  14   9  -2   9  -2  13
+   4  19  -8   5  -6  17  12   5   4  19   0   9   4   7  -6   1   4   3
+  14  -7 -14   7  18  -5   0   5  -4   3   8  -3   6   9  -4  -1   6   3
+   8   1  -2   5  10   1  -4   9  16   1   4 -13   8 -17   0  -1  10  -7
+  -6   7   2  -1  12   1  -4  -3   4  -1 -12   5   0   1  -6   7   2  -5
+  -4   1   4   3 -10  -7   0  -1  -2 -11   2  -3   8  -5  -2  -3   4  -3
+  -4  -5   4  -3  -6  -5   4  -1  -6  -3   2   3   0  -1  -2   1   0  -1
+  -2  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 7.271251181880598 =
+	NumPy-based cross-correlation's variance using full mode is: 52.87109375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 1.0625 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 45 =
+	NumPy-based cross-correlation's max value using full mode is: 19 =
+	NumPy-based cross-correlation's min value using full mode is: -26 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr valid  and  [4] .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr valid  and  [4] .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr valid  and  [4] .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr same  and  [  4   1  16   9  -4   1  10   5  -2   1   8   3   6  -1  -4   9   6  -3
+   8   3  -4   5   0  -5  18   7 -14  -7  14   3   4   1  -6   7   4   9
+   0  19   4   5  12  17  -6   5  -8  19   4  13  -2   9  -2   9  14  -1
+ -12  15 -26   1  10   3  -6  -3  -2   1   4  13  10   5   0   7  -2   1
+   4   1  18   3  14  17 -24  21  -6  -5  20  -3  -4  -5 -16  -1   2   1
+ -12  11   2  -1   6   5  -8 -21  22  -3  -8   3   0   9   2   9  14  -9
+  -8   7  -4  13  -4  -9   0  -5   8  -7  10 -11  -2  -5  -6 -11   8   1
+  -4   9] .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr same  and  [  4   1  16   9  -4   1  10   5  -2   1   8   3   6  -1  -4   9   6  -3
+   8   3  -4   5   0  -5  18   7 -14  -7  14   3   4   1  -6   7   4   9
+   0  19   4   5  12  17  -6   5  -8  19   4  13  -2   9  -2   9  14  -1
+ -12  15 -26   1  10   3  -6  -3  -2   1   4  13  10   5   0   7  -2   1
+   4   1  18   3  14  17 -24  21  -6  -5  20  -3  -4  -5 -16  -1   2   1
+ -12  11   2  -1   6   5  -8 -21  22  -3  -8   3   0   9   2   9  14  -9
+  -8   7  -4  13  -4  -9   0  -5   8  -7  10 -11  -2  -5  -6 -11   8   1
+  -4   9] .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr full  and  [ -1  -2  -1   0   1  -2  -1   0   3   2  -3  -6  -1   4  -5  -6  -3   4
+  -5  -4  -3   4  -3  -2  -5   8  -3   2 -11  -2  -1   0  -7 -10   3   4
+   1  -4  -5   2   7  -6   1   0   5 -12  -1   4  -3  -4   1  12  -1   2
+   7  -6  -7  10  -1   0 -17   8 -13   4   1  16   9  -4   1  10   5  -2
+   1   8   3   6  -1  -4   9   6  -3   8   3  -4   5   0  -5  18   7 -14
+  -7  14   3   4   1  -6   7   4   9   0  19   4   5  12  17  -6   5  -8
+  19   4  13  -2   9  -2   9  14  -1 -12  15 -26   1  10   3  -6  -3  -2
+   1   4  13  10   5   0   7  -2   1   4   1  18   3  14  17 -24  21  -6
+  -5  20  -3  -4  -5 -16  -1   2   1 -12  11   2  -1   6   5  -8 -21  22
+  -3  -8   3   0   9   2   9  14  -9  -8   7  -4  13  -4  -9   0  -5   8
+  -7  10 -11  -2  -5  -6 -11   8   1  -4   9   0  -9   0  -9   4   7  -6
+  -1  14  -5   0  -7  14   1   0  -5 -14   3   4  -7  -4   3  -4   1   2
+   1 -10  -1   6  -3   4   3   2   1   4  -5  -8   5  -4  -1   4   7   2
+  -5  -4  -7  -8   3   2   3   2   3   2  -3   0   1  -6  -1   2   1  -2
+  -1   2  -1] .
+-	-	-	-	-	-	-	-	-	-	-	-	-
+!	!	!	!	!	!	!	!	!	!	!
+>>	Get statistics of the software testing process.
+*	Number of test cases passed:		136
+*	Number of test cases used:		136
+*	Percentage of test cases passed:	100.0%.
+-------------------------------------------------
+DID NOT update repository of simulation/experimental results.
+[0m[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h./incremental_test.py[?2004l
+==================================================
+Automating incremental regression testing of my software
+	solution for genetic technology mapping.
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+=	Testing the statistical analysis package.
+
+==	Testing class: data_analysis
+1) Number of test cases passed:		0
+2) Number of test cases used:		0
+Proportion of test cases passed:	0
+Value of x is: 1.
+Number of test cases passed:	1
+Number of test cases used:	1
+Proportion of test cases passed:	100.0
+Value of x is: 2.
+Number of test cases passed:	2
+Number of test cases used:	2
+Proportion of test cases passed:	100.0
+Value of x is: 3.
+Number of test cases passed:	3
+Number of test cases used:	3
+Proportion of test cases passed:	100.0
+Value of x is: 4.
+Number of test cases passed:	4
+Number of test cases used:	4
+Proportion of test cases passed:	100.0
+Value of x is: 5.
+Number of test cases passed:	5
+Number of test cases used:	5
+Proportion of test cases passed:	100.0
+Value of x is: 6.
+Number of test cases passed:	6
+Number of test cases used:	6
+Proportion of test cases passed:	100.0
+
+
+-------------------------------------------------
+==	Testing class: data_analysis.
+	Testing get_reference_value() method.
+	... Test: get_reference_value(c) == 299792458		OK
+	... Test: method with default option == 299792458	OK
+	... Test: get_reference_value(g) == 9.80665		OK
+	... Test: get_reference_value(std atm) == 101325	OK
+
+	Testing get_actual_change() method.
+	... Test: default option, get_actual_change(0,0) == 0	OK
+	... Test: get_actual_change(19,13) == 6			OK
+	... Test: get_actual_change(10,14) == -4		OK
+	... Test: get_actual_change(-20,27) == -47		OK
+	... Test: get_actual_change(-7,-3) == -4		OK
+	... Test: get_actual_change(-4,-9) == 5			OK
+
+	Testing get_absolute_difference() method.
+	... Test: default, get_absolute_difference(0,0) == 0	OK
+	... Test: get_absolute_difference(19,13) == 6		OK
+	... Test: get_absolute_difference(10,14) == 4		OK
+	... Test: get_absolute_difference(-20,27) == 47		OK
+	... Test: get_absolute_difference(-7,-3) == 4		OK
+	... Test: get_absolute_difference(-4,-9) == 5		OK
+
+	Testing get_relative_change() method.
+	... Test: default, get_relative_change(1,1) == 0	OK
+	... Test: get_relative_change(15,12) == 0.25		OK
+	... Test: get_relative_change(18,20) == -0.10		OK
+	... Test: get_relative_change(-97,-100) == -0.10	OK
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the utilities package.
+
+
+==	Testing class: date_time_operations.
+	Testing date_time_operations.is_valid_time() method.
+	... Test: single error, hh				OK
+	... Test: single error, mm				OK
+	... Test: single error, ss				OK
+	... Test: single error, us				OK
+	... Test: double errors, ss and us			OK
+	... Test: multiple errors, hh, ss, and us		OK
+	... Test: no error					OK
+	... Test: no error					OK
+	... Test: no error					OK
+	Testing date_time_operations.is_valid_year() method.
+	... Test: year < 2014					OK
+	... Test: year = -467					OK
+	... Test: year > 3645					OK
+	... Test: year = 2019					OK
+	Testing date_time_operations.is_valid_month() method.
+	... Test: month = 0					OK
+	... Test: month = -7					OK
+	... Test: month > 12					OK
+	... Test: month = 10					OK
+	Testing date_time_operations.is_valid_31_day_month() method.
+	... Test: not 31-day month, mm = 4			OK
+	... Test: not 31-day month, mm = 2			OK
+	... Test: 31-day month, dd < 0				OK
+	... Test: 31-day month, dd = 0				OK
+	... Test: 31-day month, dd = 27				OK
+	Testing date_time_operations.is_valid_30_day_month() method.
+	... Test: not 30-day month, mm = 2			OK
+	... Test: not 30-day month, mm = 12			OK
+	... Test: 30-day month, dd < 0				OK
+	... Test: 30-day month, dd = 0				OK
+	... Test: 30-day month, dd = 27				OK
+	Testing date_time_operations.is_valid_date_in_Feb() method.
+	... Test: not February, mm = 12				OK
+	... Test: not February, mm = -2				OK
+	... Test: not February, mm = 14				OK
+	Testing date_time_operations.is_valid_date() method.
+	... Test: single error, dd				OK
+	... Test: single error, -dd				OK
+	... Test: single error, mm				OK
+	... Test: single error, mm				OK
+	... Test: single error, -mm				OK
+	... Test: single error, yy				OK
+	... Test: single error, yy				OK
+	... Test: double errors, dd and yy			OK
+	... Test: double errors, dd and yy			OK
+	... Test: double errors, dd and mm			OK
+	... Test: multiple errors, dd, mm, and yy		OK
+	... Test: no error					OK
+	... Test: no error					OK
+	Testing date_time_operations.check_filename_date_time_format() method.
+	... Test: single error, dd				OK
+	... Test: single error, yy				OK
+	... Test: single error, mm				OK
+	... Test: multiple errors, dd, mm, yy			OK
+	... Test: multiple errors, dd, mm, yy			OK
+	... Test: valid date & time - leap year			OK
+	... Test: valid date & time				OK
+	... Test: valid date & time				OK
+	Testing date & time tokenization method.
+	... Test: invalid DD-MM-YY-HR-MN-SS-US format		OK
+	... Test: with None object				OK
+	... Test: valid DD-MM-YY-HR-MN-SS-US format		OK
+
+
+==	Testing class: generate_filename.
+	Generate a filename with the current time stamp.
+	Testing filename: 12-1-2020-23-55-13-252959.txt =
+	Check against the format: DD-MM-YY-HH-MM-SS-uS.txt
+	Testing if the filename has the correct file extension.
+	... Test: file extension is '.txt'.			OK
+	Testing if filename without file extension has right format.
+	... Test: filename format is DD-MM-YY-HH-MM-SS-uS.	OK
+	Tokenize generated filename.
+	Testing if 1st token is appropriate date (DD/date value).
+	... Test: DD value is >= 0.				OK
+	... Test: DD value is <= 29, leap year Feb.		OK
+	... Test: DD value is <= 28, non-leap year Feb.		OK
+	... Test: DD value is <= 30, 30-day month.		OK
+	... Test: DD value is <= 31, 31-day month.		OK
+	Testing if 2nd token is appropriate date (MM/month value).
+	... Test: MM/month value is >= 1.			OK
+	... Test: MM/month value is <= 12.			OK
+	Testing if 3rd token is appropriate date (YY/year value).
+	... Test: YY/year value is >= 2000.			OK
+	Testing if 4th token is appropriate date (HH/hour value).
+	... Test: HH/hour value is >= 0.			OK
+	... Test: HH/hour value is <= 23.			OK
+	Testing if 5th token is appropriate date (MM/minute value).
+	... Test: MM/minute value is >= 0.			OK
+	... Test: MM/minute value is <= 59.			OK
+	Testing if 6th token is appropriate date (SS/second value).
+	... Test: SS/second value is >= 0.			OK
+	... Test: SS/second is <= 59.				OK
+	Testing if 7th token is appropriate date (uS/microsecond value).
+	... Test: uS/microsecond value is >= 0.			OK
+	... Test: uS/microsecond value is <= 999999.		OK
+
+
+==	Testing class: misc_tester.
+	Testing the filename format checker.
+	... Test: incorrect file extension is '.txt'.		OK
+	... Test: filename no file extension has 6 tokens.	OK
+	... Test: filename with -ve DD/day.			OK
+	... Test: filename with DD/day >29, Feb.		OK
+	... Test: filename with DD/day=29, Feb, leap year.	OK
+	... Test: filename with DD/day=28, Feb, not leap year.	OK
+	... Test: filename with DD/day = 34.			OK
+	... Test: filename with DD/day=31, 31 day mth.		OK
+	... Test: filename with DD/day=30, 30 day mth.		OK
+	... Test: filename with MM/month = 0.			OK
+	... Test: filename with MM/month = -4.			OK
+	... Test: filename with MM/month = 15.			OK
+	... Test: filename with MM/month = 9.			OK
+	... Test: filename with YY/year = 1582.			OK
+	... Test: filename with YY/year = 2083.			OK
+	... Test: filename with HH/hour = -3.			OK
+	... Test: filename with HH/hour = 25.			OK
+	... Test: filename with HH/hour = 17.			OK
+	... Test: filename with MM/minute = -8.			OK
+	... Test: filename with MM/minute = 73.			OK
+	... Test: filename with MM/minute = 59.			OK
+	... Test: filename with MM/minute = 0.			OK
+	... Test: filename with SS/second = -4.			OK
+	... Test: filename with SS/second = 81.			OK
+	... Test: filename with SS/second = 36.			OK
+	... Test: filename with uS/microsecond = -129.		OK
+	... Test: filename with uS/microsecond = 16534785929.	OK
+	... Test: filename with uS/microsecond = 0.		OK
+	... Test: filename with uS/microsecond = 999999.	OK
+==	Test: test_find_desired_location_for_results().
+	... Test: filename is 25-3-2010-5-8-51-9994073289.dwq.	OK
+==	Test: test_find_desired_location_for_results().
+	... Test: filename 25-3-2010-5-8-51-9407.txt included.	OK
+	... Test: 25-3-2010-5-8-51-9407.txt, correct path.	OK
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the random_process_models package.
+
+
+==	Testing class: prng.
+	Testing psl_uniform().
+	... Test: incorrect type of signal, 'whatever'.		OK
+	... Test: for bit vector signal, 'bv'.			OK
+	... Test: for RTW signal, 'rtw'.			OK
+
+
+==	Testing class: rand_signal_generator.
+	Testing gen_rand_signal_uniform_distributn().
+	... Test: wrong type of signal, signal about size.	OK
+	... Test: type of signal = RTW.				OK
+	... Test: type of signal = bit vector.			OK
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the behavioral_models package.
+
+
+==	Testing class: approx_cross_correlation.
+=	Create a file object for writing.
+=	Testing random  4 -bit signals.
+x_rtw_1 is: [-1, 1, -1, -1] =
+x_rtw_2 is: [-1, 1, 1, 1] =
+NumPy-based cross-correlation using valid mode is: [0] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 0 =
+	NumPy-based cross-correlation's min value using valid mode is: 0 =
+
+NumPy-based cross-correlation using same mode is: [ 0 -1  0 -3] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 1.224744871391589 =
+	NumPy-based cross-correlation's variance using same mode is: 1.5 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -1.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 3 =
+	NumPy-based cross-correlation's max value using same mode is: 0 =
+	NumPy-based cross-correlation's min value using same mode is: -3 =
+
+NumPy-based cross-correlation using full mode is: [-1  0 -1  0 -3  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.178030178747903 =
+	NumPy-based cross-correlation's variance using full mode is: 1.3877551020408165 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.5714285714285714 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 4 =
+	NumPy-based cross-correlation's max value using full mode is: 1 =
+	NumPy-based cross-correlation's min value using full mode is: -3 =
+
+Pycorrelate-based cross-correlation is: [ 0 -1  0 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 0.5 =
+	NumPy-based cross-correlation's variance using full mode is: 0.25 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 1 =
+	NumPy-based cross-correlation's max value using full mode is: 0 =
+	NumPy-based cross-correlation's min value using full mode is: -1 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  1.224744871391589 .
+Relative difference for var_cross_correlation 0.0  and  1.5 .
+Relative difference for arith_mean_cross_correlation 0.0  and  -1.0 .
+Relative difference for ptp_cross_correlation 0  and  3 .
+Relative difference for amax_cross_correlation 0  and  0 .
+Relative difference for amin_cross_correlation 0  and  0 .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  1.178030178747903 .
+Relative difference for var_cross_correlation 0.0  and  1.3877551020408165 .
+Relative difference for arith_mean_cross_correlation 0.0  and  -0.5714285714285714 .
+Relative difference for ptp_cross_correlation 0  and  4 .
+Relative difference for amax_cross_correlation 0  and  1 .
+Relative difference for amin_cross_correlation 0  and  1 .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  0.5 .
+Relative difference for var_cross_correlation 0.0  and  0.25 .
+Relative difference for arith_mean_cross_correlation 0.0  and  -0.5 .
+Relative difference for ptp_cross_correlation 0  and  1 .
+Relative difference for amax_cross_correlation 0  and  0 .
+Relative difference for amin_cross_correlation 0  and  0 .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 1.224744871391589  and  1.178030178747903 .
+Relative difference for var_cross_correlation 1.5  and  1.3877551020408165 .
+Relative difference for arith_mean_cross_correlation -1.0  and  -0.5714285714285714 .
+Relative difference for ptp_cross_correlation 3  and  4 .
+Relative difference for amax_cross_correlation 0  and  1 .
+Relative difference for amin_cross_correlation 0  and  1 .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 1.224744871391589  and  0.5 .
+Relative difference for var_cross_correlation 1.5  and  0.25 .
+Relative difference for arith_mean_cross_correlation -1.0  and  -0.5 .
+Relative difference for ptp_cross_correlation 3  and  1 .
+Relative difference for amax_cross_correlation 0  and  0 .
+Relative difference for amin_cross_correlation 0  and  0 .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 1.178030178747903  and  0.5 .
+Relative difference for var_cross_correlation 1.3877551020408165  and  0.25 .
+Relative difference for arith_mean_cross_correlation -0.5714285714285714  and  -0.5 .
+Relative difference for ptp_cross_correlation 4  and  1 .
+Relative difference for amax_cross_correlation 1  and  0 .
+Relative difference for amin_cross_correlation 1  and  0 .
+=	Testing random  8 -bit signals.
+x_rtw_1 is: [-1, -1, -1, 1, 1, 1, 1, 1] =
+x_rtw_2 is: [-1, 1, -1, -1, -1, -1, 1, -1] =
+NumPy-based cross-correlation using valid mode is: [-2] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -2.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -2 =
+	NumPy-based cross-correlation's min value using valid mode is: -2 =
+
+NumPy-based cross-correlation using same mode is: [ 0  3  2 -1 -2 -3 -2 -3] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 2.1065374432940898 =
+	NumPy-based cross-correlation's variance using same mode is: 4.4375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.75 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 6 =
+	NumPy-based cross-correlation's max value using same mode is: 3 =
+	NumPy-based cross-correlation's min value using same mode is: -3 =
+
+NumPy-based cross-correlation using full mode is: [ 1  0  1  0  3  2 -1 -2 -3 -2 -3 -2 -1  0 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.7074997966487597 =
+	NumPy-based cross-correlation's variance using full mode is: 2.9155555555555557 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.5333333333333333 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 6 =
+	NumPy-based cross-correlation's max value using full mode is: 3 =
+	NumPy-based cross-correlation's min value using full mode is: -3 =
+
+Pycorrelate-based cross-correlation is: [-2 -1  2  3  0  1  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.5 =
+	NumPy-based cross-correlation's variance using full mode is: 2.25 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 5 =
+	NumPy-based cross-correlation's max value using full mode is: 3 =
+	NumPy-based cross-correlation's min value using full mode is: -2 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  2.1065374432940898 .
+Relative difference for var_cross_correlation 0.0  and  4.4375 .
+Relative difference for arith_mean_cross_correlation -2.0  and  -0.75 .
+Relative difference for ptp_cross_correlation 0  and  6 .
+Relative difference for amax_cross_correlation -2  and  3 .
+Relative difference for amin_cross_correlation -2  and  3 .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  1.7074997966487597 .
+Relative difference for var_cross_correlation 0.0  and  2.9155555555555557 .
+Relative difference for arith_mean_cross_correlation -2.0  and  -0.5333333333333333 .
+Relative difference for ptp_cross_correlation 0  and  6 .
+Relative difference for amax_cross_correlation -2  and  3 .
+Relative difference for amin_cross_correlation -2  and  3 .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  1.5 .
+Relative difference for var_cross_correlation 0.0  and  2.25 .
+Relative difference for arith_mean_cross_correlation -2.0  and  0.5 .
+Relative difference for ptp_cross_correlation 0  and  5 .
+Relative difference for amax_cross_correlation -2  and  3 .
+Relative difference for amin_cross_correlation -2  and  3 .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 2.1065374432940898  and  1.7074997966487597 .
+Relative difference for var_cross_correlation 4.4375  and  2.9155555555555557 .
+Relative difference for arith_mean_cross_correlation -0.75  and  -0.5333333333333333 .
+Relative difference for ptp_cross_correlation 6  and  6 .
+Relative difference for amax_cross_correlation 3  and  3 .
+Relative difference for amin_cross_correlation 3  and  3 .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 2.1065374432940898  and  1.5 .
+Relative difference for var_cross_correlation 4.4375  and  2.25 .
+Relative difference for arith_mean_cross_correlation -0.75  and  0.5 .
+Relative difference for ptp_cross_correlation 6  and  5 .
+Relative difference for amax_cross_correlation 3  and  3 .
+Relative difference for amin_cross_correlation 3  and  3 .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 1.7074997966487597  and  1.5 .
+Relative difference for var_cross_correlation 2.9155555555555557  and  2.25 .
+Relative difference for arith_mean_cross_correlation -0.5333333333333333  and  0.5 .
+Relative difference for ptp_cross_correlation 6  and  5 .
+Relative difference for amax_cross_correlation 3  and  3 .
+Relative difference for amin_cross_correlation 3  and  3 .
+=	Testing random  16 -bit signals.
+x_rtw_1 is: [-1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1] =
+x_rtw_2 is: [-1, -1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1] =
+NumPy-based cross-correlation using valid mode is: [-10] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -10.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -10 =
+	NumPy-based cross-correlation's min value using valid mode is: -10 =
+
+NumPy-based cross-correlation using same mode is: [  2   5   0  -1   0   3  -2   5 -10  -1   4  -1   0  -1   4   1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 3.5355339059327378 =
+	NumPy-based cross-correlation's variance using same mode is: 12.5 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 0.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 15 =
+	NumPy-based cross-correlation's max value using same mode is: 5 =
+	NumPy-based cross-correlation's min value using same mode is: -10 =
+
+NumPy-based cross-correlation using full mode is: [ -1   2  -1   2  -1  -2   1   2   5   0  -1   0   3  -2   5 -10  -1   4
+  -1   0  -1   4   1   0   1   2  -5   2  -1   0   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 2.862073937137914 =
+	NumPy-based cross-correlation's variance using full mode is: 8.191467221644121 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.25806451612903225 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 15 =
+	NumPy-based cross-correlation's max value using full mode is: 5 =
+	NumPy-based cross-correlation's min value using full mode is: -10 =
+
+Pycorrelate-based cross-correlation is: [-10   5  -2   3   0  -1   0   5   2   1  -2  -1   2  -1   2  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 3.3888604279314896 =
+	NumPy-based cross-correlation's variance using full mode is: 11.484375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.125 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 15 =
+	NumPy-based cross-correlation's max value using full mode is: 5 =
+	NumPy-based cross-correlation's min value using full mode is: -10 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  3.5355339059327378 .
+Relative difference for var_cross_correlation 0.0  and  12.5 .
+Relative difference for arith_mean_cross_correlation -10.0  and  0.5 .
+Relative difference for ptp_cross_correlation 0  and  15 .
+Relative difference for amax_cross_correlation -10  and  5 .
+Relative difference for amin_cross_correlation -10  and  5 .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  2.862073937137914 .
+Relative difference for var_cross_correlation 0.0  and  8.191467221644121 .
+Relative difference for arith_mean_cross_correlation -10.0  and  0.25806451612903225 .
+Relative difference for ptp_cross_correlation 0  and  15 .
+Relative difference for amax_cross_correlation -10  and  5 .
+Relative difference for amin_cross_correlation -10  and  5 .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  3.3888604279314896 .
+Relative difference for var_cross_correlation 0.0  and  11.484375 .
+Relative difference for arith_mean_cross_correlation -10.0  and  0.125 .
+Relative difference for ptp_cross_correlation 0  and  15 .
+Relative difference for amax_cross_correlation -10  and  5 .
+Relative difference for amin_cross_correlation -10  and  5 .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 3.5355339059327378  and  2.862073937137914 .
+Relative difference for var_cross_correlation 12.5  and  8.191467221644121 .
+Relative difference for arith_mean_cross_correlation 0.5  and  0.25806451612903225 .
+Relative difference for ptp_cross_correlation 15  and  15 .
+Relative difference for amax_cross_correlation 5  and  5 .
+Relative difference for amin_cross_correlation 5  and  5 .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 3.5355339059327378  and  3.3888604279314896 .
+Relative difference for var_cross_correlation 12.5  and  11.484375 .
+Relative difference for arith_mean_cross_correlation 0.5  and  0.125 .
+Relative difference for ptp_cross_correlation 15  and  15 .
+Relative difference for amax_cross_correlation 5  and  5 .
+Relative difference for amin_cross_correlation 5  and  5 .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 2.862073937137914  and  3.3888604279314896 .
+Relative difference for var_cross_correlation 8.191467221644121  and  11.484375 .
+Relative difference for arith_mean_cross_correlation 0.25806451612903225  and  0.125 .
+Relative difference for ptp_cross_correlation 15  and  15 .
+Relative difference for amax_cross_correlation 5  and  5 .
+Relative difference for amin_cross_correlation 5  and  5 .
+=	Testing random  32 -bit signals.
+x_rtw_1 is: [1, 1, -1, -1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1] =
+x_rtw_2 is: [1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1] =
+NumPy-based cross-correlation using valid mode is: [-2] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -2.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -2 =
+	NumPy-based cross-correlation's min value using valid mode is: -2 =
+
+NumPy-based cross-correlation using same mode is: [-4  1  4 -3  6  5  4  1 -2 -5 -4 -3  0 -1 -6 -1 -2 -7  2 -3 -8  1 -2 -3
+ -2  3  8 -1  2 -1  0 -3] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 3.665719574653795 =
+	NumPy-based cross-correlation's variance using same mode is: 13.4375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.75 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 16 =
+	NumPy-based cross-correlation's max value using same mode is: 8 =
+	NumPy-based cross-correlation's min value using same mode is: -8 =
+
+NumPy-based cross-correlation using full mode is: [ 1  0 -3 -2  1  4  1  0 -1  2 -1  0 -1 -2 -7 -4  1  4 -3  6  5  4  1 -2
+ -5 -4 -3  0 -1 -6 -1 -2 -7  2 -3 -8  1 -2 -3 -2  3  8 -1  2 -1  0 -3 -2
+  5  2  5  4  1 -2 -3  0 -5  2  1 -2  3  0 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 3.2436926411288383 =
+	NumPy-based cross-correlation's variance using full mode is: 10.52154195011338 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.38095238095238093 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 16 =
+	NumPy-based cross-correlation's max value using full mode is: 8 =
+	NumPy-based cross-correlation's min value using full mode is: -8 =
+
+Pycorrelate-based cross-correlation is: [-2 -1 -6 -1  0 -3 -4 -5 -2  1  4  5  6 -3  4  1 -4 -7 -2 -1  0 -1  2 -1
+  0  1  4  1 -2 -3  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 3.050998811864731 =
+	NumPy-based cross-correlation's variance using full mode is: 9.30859375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.5625 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 13 =
+	NumPy-based cross-correlation's max value using full mode is: 6 =
+	NumPy-based cross-correlation's min value using full mode is: -7 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  3.665719574653795 .
+Relative difference for var_cross_correlation 0.0  and  13.4375 .
+Relative difference for arith_mean_cross_correlation -2.0  and  -0.75 .
+Relative difference for ptp_cross_correlation 0  and  16 .
+Relative difference for amax_cross_correlation -2  and  8 .
+Relative difference for amin_cross_correlation -2  and  8 .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  3.2436926411288383 .
+Relative difference for var_cross_correlation 0.0  and  10.52154195011338 .
+Relative difference for arith_mean_cross_correlation -2.0  and  -0.38095238095238093 .
+Relative difference for ptp_cross_correlation 0  and  16 .
+Relative difference for amax_cross_correlation -2  and  8 .
+Relative difference for amin_cross_correlation -2  and  8 .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  3.050998811864731 .
+Relative difference for var_cross_correlation 0.0  and  9.30859375 .
+Relative difference for arith_mean_cross_correlation -2.0  and  -0.5625 .
+Relative difference for ptp_cross_correlation 0  and  13 .
+Relative difference for amax_cross_correlation -2  and  6 .
+Relative difference for amin_cross_correlation -2  and  6 .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 3.665719574653795  and  3.2436926411288383 .
+Relative difference for var_cross_correlation 13.4375  and  10.52154195011338 .
+Relative difference for arith_mean_cross_correlation -0.75  and  -0.38095238095238093 .
+Relative difference for ptp_cross_correlation 16  and  16 .
+Relative difference for amax_cross_correlation 8  and  8 .
+Relative difference for amin_cross_correlation 8  and  8 .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 3.665719574653795  and  3.050998811864731 .
+Relative difference for var_cross_correlation 13.4375  and  9.30859375 .
+Relative difference for arith_mean_cross_correlation -0.75  and  -0.5625 .
+Relative difference for ptp_cross_correlation 16  and  13 .
+Relative difference for amax_cross_correlation 8  and  6 .
+Relative difference for amin_cross_correlation 8  and  6 .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 3.2436926411288383  and  3.050998811864731 .
+Relative difference for var_cross_correlation 10.52154195011338  and  9.30859375 .
+Relative difference for arith_mean_cross_correlation -0.38095238095238093  and  -0.5625 .
+Relative difference for ptp_cross_correlation 16  and  13 .
+Relative difference for amax_cross_correlation 8  and  6 .
+Relative difference for amin_cross_correlation 8  and  6 .
+=	Testing random  64 -bit signals.
+x_rtw_1 is: [-1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1] =
+x_rtw_2 is: [1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [-6] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -6.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -6 =
+	NumPy-based cross-correlation's min value using valid mode is: -6 =
+
+NumPy-based cross-correlation using same mode is: [  6  -3  14  -5   4  -1   0  -1  -2   3 -12   7  -8  -3   4  -5   8  -3
+  12   1  -8  11 -10  11   8   5  -4   7 -12   5 -12   1  -6  -7   8  -7
+   2   5  -8  11   0   1   6  -7   4   3  -2  13  -4  -7   2  -7 -12  -3
+  -6  -5   2   1   8  -5  10   7  -2   9] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 6.897052699341944 =
+	NumPy-based cross-correlation's variance using same mode is: 47.5693359375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 0.34375 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 26 =
+	NumPy-based cross-correlation's max value using same mode is: 14 =
+	NumPy-based cross-correlation's min value using same mode is: -12 =
+
+NumPy-based cross-correlation using full mode is: [  1   2   1   0  -3  -2  -5  -2   1   4   1   6  -1   0  -3   2  -7   4
+  -3  -2   5   0   3   0   5 -10   7  -8  -5   4  -3   6  -3  14  -5   4
+  -1   0  -1  -2   3 -12   7  -8  -3   4  -5   8  -3  12   1  -8  11 -10
+  11   8   5  -4   7 -12   5 -12   1  -6  -7   8  -7   2   5  -8  11   0
+   1   6  -7   4   3  -2  13  -4  -7   2  -7 -12  -3  -6  -5   2   1   8
+  -5  10   7  -2   9  -8  -3   0  -5   2 -13   2  -1   0   7  -6  -9   6
+  -3   2   7  -2  -3   6   1   2  -1   0  -1  -2   1   2  -5   2   1  -2
+   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 5.7558570395537565 =
+	NumPy-based cross-correlation's variance using full mode is: 33.12989025978054 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.06299212598425197 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 27 =
+	NumPy-based cross-correlation's max value using full mode is: 14 =
+	NumPy-based cross-correlation's min value using full mode is: -13 =
+
+Pycorrelate-based cross-correlation is: [ -6   1 -12   5 -12   7  -4   5   8  11 -10  11  -8   1  12  -3   8  -5
+   4  -3  -8   7 -12   3  -2  -1   0  -1   4  -5  14  -3   6  -3   4  -5
+  -8   7 -10   5   0   3   0   5  -2  -3   4  -7   2  -3   0  -1   6   1
+   4   1  -2  -5  -2  -3   0   1   2   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 5.926305235979665 =
+	NumPy-based cross-correlation's variance using full mode is: 35.12109375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.0625 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 26 =
+	NumPy-based cross-correlation's max value using full mode is: 14 =
+	NumPy-based cross-correlation's min value using full mode is: -12 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  6.897052699341944 .
+Relative difference for var_cross_correlation 0.0  and  47.5693359375 .
+Relative difference for arith_mean_cross_correlation -6.0  and  0.34375 .
+Relative difference for ptp_cross_correlation 0  and  26 .
+Relative difference for amax_cross_correlation -6  and  14 .
+Relative difference for amin_cross_correlation -6  and  14 .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  5.7558570395537565 .
+Relative difference for var_cross_correlation 0.0  and  33.12989025978054 .
+Relative difference for arith_mean_cross_correlation -6.0  and  -0.06299212598425197 .
+Relative difference for ptp_cross_correlation 0  and  27 .
+Relative difference for amax_cross_correlation -6  and  14 .
+Relative difference for amin_cross_correlation -6  and  14 .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  5.926305235979665 .
+Relative difference for var_cross_correlation 0.0  and  35.12109375 .
+Relative difference for arith_mean_cross_correlation -6.0  and  0.0625 .
+Relative difference for ptp_cross_correlation 0  and  26 .
+Relative difference for amax_cross_correlation -6  and  14 .
+Relative difference for amin_cross_correlation -6  and  14 .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 6.897052699341944  and  5.7558570395537565 .
+Relative difference for var_cross_correlation 47.5693359375  and  33.12989025978054 .
+Relative difference for arith_mean_cross_correlation 0.34375  and  -0.06299212598425197 .
+Relative difference for ptp_cross_correlation 26  and  27 .
+Relative difference for amax_cross_correlation 14  and  14 .
+Relative difference for amin_cross_correlation 14  and  14 .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 6.897052699341944  and  5.926305235979665 .
+Relative difference for var_cross_correlation 47.5693359375  and  35.12109375 .
+Relative difference for arith_mean_cross_correlation 0.34375  and  0.0625 .
+Relative difference for ptp_cross_correlation 26  and  26 .
+Relative difference for amax_cross_correlation 14  and  14 .
+Relative difference for amin_cross_correlation 14  and  14 .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 5.7558570395537565  and  5.926305235979665 .
+Relative difference for var_cross_correlation 33.12989025978054  and  35.12109375 .
+Relative difference for arith_mean_cross_correlation -0.06299212598425197  and  0.0625 .
+Relative difference for ptp_cross_correlation 27  and  26 .
+Relative difference for amax_cross_correlation 14  and  14 .
+Relative difference for amin_cross_correlation 14  and  14 .
+=	Testing random  128 -bit signals.
+x_rtw_1 is: [-1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, -1, 1, 1, 1, 1, -1, 1, -1, 1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, 1, 1] =
+x_rtw_2 is: [-1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [-34] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -34.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -34 =
+	NumPy-based cross-correlation's min value using valid mode is: -34 =
+
+NumPy-based cross-correlation using same mode is: [ 10  -9   6  -1   6  -9  -6  -5 -12  -7 -20  -3  10  -5  -6   5  -2  -5
+  -6   5 -12  -9   6   7 -12 -15   4   5   2  -1  12  11  14   1   4   9
+  -2 -13  -4  -1   0   3  -2   9   0   5  -2  -7   8  -5  24 -17 -14   7
+ -10  -7 -16  11   0  21  -6   5   8  -1 -34   5   2  -7 -18   5  -2   7
+   2   5   4 -11   4  15   6   1  12 -11  -2   3  -4  13   2  -9   0  35
+  12  -3 -20  15   2  -3  -6 -13  12 -13 -10 -21  -4  -1 -14  -7   0   9
+   6  -3   4  -7   6  -9  -2   7  12  11  -4   3   4   5   6   1  -6  11
+   6   3] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 9.724413040609443 =
+	NumPy-based cross-correlation's variance using same mode is: 94.564208984375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.171875 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 69 =
+	NumPy-based cross-correlation's max value using same mode is: 35 =
+	NumPy-based cross-correlation's min value using same mode is: -34 =
+
+NumPy-based cross-correlation using full mode is: [  1   0  -3   0  -3   0  -1  -4   1   2  -3  -6  -1  -4  -3   2  -3   4
+   3  -2   1   4  -5  -2   7   2  -7   6  -1   0   5  -4   3  -2 -13   4
+   3 -14  -5  12 -11 -10  -7  -8  -7   6   1  12  15   4   3   6  -1  -2
+   3   6   9  -4  13   8  -1 -12   7  10  -9   6  -1   6  -9  -6  -5 -12
+  -7 -20  -3  10  -5  -6   5  -2  -5  -6   5 -12  -9   6   7 -12 -15   4
+   5   2  -1  12  11  14   1   4   9  -2 -13  -4  -1   0   3  -2   9   0
+   5  -2  -7   8  -5  24 -17 -14   7 -10  -7 -16  11   0  21  -6   5   8
+  -1 -34   5   2  -7 -18   5  -2   7   2   5   4 -11   4  15   6   1  12
+ -11  -2   3  -4  13   2  -9   0  35  12  -3 -20  15   2  -3  -6 -13  12
+ -13 -10 -21  -4  -1 -14  -7   0   9   6  -3   4  -7   6  -9  -2   7  12
+  11  -4   3   4   5   6   1  -6  11   6   3  -8  -1   4   7  -4  -1  12
+   7  -2  -3 -10   5  -8 -17 -12  -3  12 -13  -4  -3   6  -5  -4  -9   2
+   1  -6   1   0  -1  -2  -9  12   1   2   9  -4  -1  10  -1   6  -9   4
+   1   2   1  -4   1   6  -5   2  -1   8   3   0   5   2  -1   2  -3   0
+   1  -2  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 8.111411832864706 =
+	NumPy-based cross-correlation's variance using full mode is: 65.79500192233756 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.1568627450980392 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 69 =
+	NumPy-based cross-correlation's max value using full mode is: 35 =
+	NumPy-based cross-correlation's min value using full mode is: -34 =
+
+Pycorrelate-based cross-correlation is: [-34  -1   8   5  -6  21   0  11 -16  -7 -10   7 -14 -17  24  -5   8  -7
+  -2   5   0   9  -2   3   0  -1  -4 -13  -2   9   4   1  14  11  12  -1
+   2   5   4 -15 -12   7   6  -9 -12   5  -6  -5  -2   5  -6  -5  10  -3
+ -20  -7 -12  -5  -6  -9   6  -1   6  -9  10   7 -12  -1   8  13  -4   9
+   6   3  -2  -1   6   3   4  15  12   1   6  -7  -8  -7 -10 -11  12  -5
+ -14   3   4 -13  -2   3  -4   5   0  -1   6  -7   2   7  -2  -5   4   1
+  -2   3   4  -3   2  -3  -4  -1  -6  -3   2   1  -4  -1   0  -3   0  -3
+   0   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 8.25 =
+	NumPy-based cross-correlation's variance using full mode is: 68.0625 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 58 =
+	NumPy-based cross-correlation's max value using full mode is: 24 =
+	NumPy-based cross-correlation's min value using full mode is: -34 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  9.724413040609443 .
+Relative difference for var_cross_correlation 0.0  and  94.564208984375 .
+Relative difference for arith_mean_cross_correlation -34.0  and  -0.171875 .
+Relative difference for ptp_cross_correlation 0  and  69 .
+Relative difference for amax_cross_correlation -34  and  35 .
+Relative difference for amin_cross_correlation -34  and  35 .
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  8.111411832864706 .
+Relative difference for var_cross_correlation 0.0  and  65.79500192233756 .
+Relative difference for arith_mean_cross_correlation -34.0  and  -0.1568627450980392 .
+Relative difference for ptp_cross_correlation 0  and  69 .
+Relative difference for amax_cross_correlation -34  and  35 .
+Relative difference for amin_cross_correlation -34  and  35 .
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  8.25 .
+Relative difference for var_cross_correlation 0.0  and  68.0625 .
+Relative difference for arith_mean_cross_correlation -34.0  and  -0.5 .
+Relative difference for ptp_cross_correlation 0  and  58 .
+Relative difference for amax_cross_correlation -34  and  24 .
+Relative difference for amin_cross_correlation -34  and  24 .
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 9.724413040609443  and  8.111411832864706 .
+Relative difference for var_cross_correlation 94.564208984375  and  65.79500192233756 .
+Relative difference for arith_mean_cross_correlation -0.171875  and  -0.1568627450980392 .
+Relative difference for ptp_cross_correlation 69  and  69 .
+Relative difference for amax_cross_correlation 35  and  35 .
+Relative difference for amin_cross_correlation 35  and  35 .
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 9.724413040609443  and  8.25 .
+Relative difference for var_cross_correlation 94.564208984375  and  68.0625 .
+Relative difference for arith_mean_cross_correlation -0.171875  and  -0.5 .
+Relative difference for ptp_cross_correlation 69  and  58 .
+Relative difference for amax_cross_correlation 35  and  24 .
+Relative difference for amin_cross_correlation 35  and  24 .
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 8.111411832864706  and  8.25 .
+Relative difference for var_cross_correlation 65.79500192233756  and  68.0625 .
+Relative difference for arith_mean_cross_correlation -0.1568627450980392  and  -0.5 .
+Relative difference for ptp_cross_correlation 69  and  58 .
+Relative difference for amax_cross_correlation 35  and  24 .
+Relative difference for amin_cross_correlation 35  and  24 .
+-	-	-	-	-	-	-	-	-	-	-	-	-
+!	!	!	!	!	!	!	!	!	!	!
+>>	Get statistics of the software testing process.
+*	Number of test cases passed:		136
+*	Number of test cases used:		136
+*	Percentage of test cases passed:	100.0%.
+-------------------------------------------------
+DID NOT update repository of simulation/experimental results.
+[0m[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h./incremental_test.py[?2004l
+==================================================
+Automating incremental regression testing of my software
+	solution for genetic technology mapping.
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+=	Testing the statistical analysis package.
+
+==	Testing class: data_analysis
+1) Number of test cases passed:		0
+2) Number of test cases used:		0
+Proportion of test cases passed:	0
+Value of x is: 1.
+Number of test cases passed:	1
+Number of test cases used:	1
+Proportion of test cases passed:	100.0
+Value of x is: 2.
+Number of test cases passed:	2
+Number of test cases used:	2
+Proportion of test cases passed:	100.0
+Value of x is: 3.
+Number of test cases passed:	3
+Number of test cases used:	3
+Proportion of test cases passed:	100.0
+Value of x is: 4.
+Number of test cases passed:	4
+Number of test cases used:	4
+Proportion of test cases passed:	100.0
+Value of x is: 5.
+Number of test cases passed:	5
+Number of test cases used:	5
+Proportion of test cases passed:	100.0
+Value of x is: 6.
+Number of test cases passed:	6
+Number of test cases used:	6
+Proportion of test cases passed:	100.0
+
+
+-------------------------------------------------
+==	Testing class: data_analysis.
+	Testing get_reference_value() method.
+	... Test: get_reference_value(c) == 299792458		OK
+	... Test: method with default option == 299792458	OK
+	... Test: get_reference_value(g) == 9.80665		OK
+	... Test: get_reference_value(std atm) == 101325	OK
+
+	Testing get_actual_change() method.
+	... Test: default option, get_actual_change(0,0) == 0	OK
+	... Test: get_actual_change(19,13) == 6			OK
+	... Test: get_actual_change(10,14) == -4		OK
+	... Test: get_actual_change(-20,27) == -47		OK
+	... Test: get_actual_change(-7,-3) == -4		OK
+	... Test: get_actual_change(-4,-9) == 5			OK
+
+	Testing get_absolute_difference() method.
+	... Test: default, get_absolute_difference(0,0) == 0	OK
+	... Test: get_absolute_difference(19,13) == 6		OK
+	... Test: get_absolute_difference(10,14) == 4		OK
+	... Test: get_absolute_difference(-20,27) == 47		OK
+	... Test: get_absolute_difference(-7,-3) == 4		OK
+	... Test: get_absolute_difference(-4,-9) == 5		OK
+
+	Testing get_relative_change() method.
+	... Test: default, get_relative_change(1,1) == 0	OK
+	... Test: get_relative_change(15,12) == 0.25		OK
+	... Test: get_relative_change(18,20) == -0.10		OK
+	... Test: get_relative_change(-97,-100) == -0.10	OK
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the utilities package.
+
+
+==	Testing class: date_time_operations.
+	Testing date_time_operations.is_valid_time() method.
+	... Test: single error, hh				OK
+	... Test: single error, mm				OK
+	... Test: single error, ss				OK
+	... Test: single error, us				OK
+	... Test: double errors, ss and us			OK
+	... Test: multiple errors, hh, ss, and us		OK
+	... Test: no error					OK
+	... Test: no error					OK
+	... Test: no error					OK
+	Testing date_time_operations.is_valid_year() method.
+	... Test: year < 2014					OK
+	... Test: year = -467					OK
+	... Test: year > 3645					OK
+	... Test: year = 2019					OK
+	Testing date_time_operations.is_valid_month() method.
+	... Test: month = 0					OK
+	... Test: month = -7					OK
+	... Test: month > 12					OK
+	... Test: month = 10					OK
+	Testing date_time_operations.is_valid_31_day_month() method.
+	... Test: not 31-day month, mm = 4			OK
+	... Test: not 31-day month, mm = 2			OK
+	... Test: 31-day month, dd < 0				OK
+	... Test: 31-day month, dd = 0				OK
+	... Test: 31-day month, dd = 27				OK
+	Testing date_time_operations.is_valid_30_day_month() method.
+	... Test: not 30-day month, mm = 2			OK
+	... Test: not 30-day month, mm = 12			OK
+	... Test: 30-day month, dd < 0				OK
+	... Test: 30-day month, dd = 0				OK
+	... Test: 30-day month, dd = 27				OK
+	Testing date_time_operations.is_valid_date_in_Feb() method.
+	... Test: not February, mm = 12				OK
+	... Test: not February, mm = -2				OK
+	... Test: not February, mm = 14				OK
+	Testing date_time_operations.is_valid_date() method.
+	... Test: single error, dd				OK
+	... Test: single error, -dd				OK
+	... Test: single error, mm				OK
+	... Test: single error, mm				OK
+	... Test: single error, -mm				OK
+	... Test: single error, yy				OK
+	... Test: single error, yy				OK
+	... Test: double errors, dd and yy			OK
+	... Test: double errors, dd and yy			OK
+	... Test: double errors, dd and mm			OK
+	... Test: multiple errors, dd, mm, and yy		OK
+	... Test: no error					OK
+	... Test: no error					OK
+	Testing date_time_operations.check_filename_date_time_format() method.
+	... Test: single error, dd				OK
+	... Test: single error, yy				OK
+	... Test: single error, mm				OK
+	... Test: multiple errors, dd, mm, yy			OK
+	... Test: multiple errors, dd, mm, yy			OK
+	... Test: valid date & time - leap year			OK
+	... Test: valid date & time				OK
+	... Test: valid date & time				OK
+	Testing date & time tokenization method.
+	... Test: invalid DD-MM-YY-HR-MN-SS-US format		OK
+	... Test: with None object				OK
+	... Test: valid DD-MM-YY-HR-MN-SS-US format		OK
+
+
+==	Testing class: generate_filename.
+	Generate a filename with the current time stamp.
+	Testing filename: 12-1-2020-23-55-59-415725.txt =
+	Check against the format: DD-MM-YY-HH-MM-SS-uS.txt
+	Testing if the filename has the correct file extension.
+	... Test: file extension is '.txt'.			OK
+	Testing if filename without file extension has right format.
+	... Test: filename format is DD-MM-YY-HH-MM-SS-uS.	OK
+	Tokenize generated filename.
+	Testing if 1st token is appropriate date (DD/date value).
+	... Test: DD value is >= 0.				OK
+	... Test: DD value is <= 29, leap year Feb.		OK
+	... Test: DD value is <= 28, non-leap year Feb.		OK
+	... Test: DD value is <= 30, 30-day month.		OK
+	... Test: DD value is <= 31, 31-day month.		OK
+	Testing if 2nd token is appropriate date (MM/month value).
+	... Test: MM/month value is >= 1.			OK
+	... Test: MM/month value is <= 12.			OK
+	Testing if 3rd token is appropriate date (YY/year value).
+	... Test: YY/year value is >= 2000.			OK
+	Testing if 4th token is appropriate date (HH/hour value).
+	... Test: HH/hour value is >= 0.			OK
+	... Test: HH/hour value is <= 23.			OK
+	Testing if 5th token is appropriate date (MM/minute value).
+	... Test: MM/minute value is >= 0.			OK
+	... Test: MM/minute value is <= 59.			OK
+	Testing if 6th token is appropriate date (SS/second value).
+	... Test: SS/second value is >= 0.			OK
+	... Test: SS/second is <= 59.				OK
+	Testing if 7th token is appropriate date (uS/microsecond value).
+	... Test: uS/microsecond value is >= 0.			OK
+	... Test: uS/microsecond value is <= 999999.		OK
+
+
+==	Testing class: misc_tester.
+	Testing the filename format checker.
+	... Test: incorrect file extension is '.txt'.		OK
+	... Test: filename no file extension has 6 tokens.	OK
+	... Test: filename with -ve DD/day.			OK
+	... Test: filename with DD/day >29, Feb.		OK
+	... Test: filename with DD/day=29, Feb, leap year.	OK
+	... Test: filename with DD/day=28, Feb, not leap year.	OK
+	... Test: filename with DD/day = 34.			OK
+	... Test: filename with DD/day=31, 31 day mth.		OK
+	... Test: filename with DD/day=30, 30 day mth.		OK
+	... Test: filename with MM/month = 0.			OK
+	... Test: filename with MM/month = -4.			OK
+	... Test: filename with MM/month = 15.			OK
+	... Test: filename with MM/month = 9.			OK
+	... Test: filename with YY/year = 1582.			OK
+	... Test: filename with YY/year = 2083.			OK
+	... Test: filename with HH/hour = -3.			OK
+	... Test: filename with HH/hour = 25.			OK
+	... Test: filename with HH/hour = 17.			OK
+	... Test: filename with MM/minute = -8.			OK
+	... Test: filename with MM/minute = 73.			OK
+	... Test: filename with MM/minute = 59.			OK
+	... Test: filename with MM/minute = 0.			OK
+	... Test: filename with SS/second = -4.			OK
+	... Test: filename with SS/second = 81.			OK
+	... Test: filename with SS/second = 36.			OK
+	... Test: filename with uS/microsecond = -129.		OK
+	... Test: filename with uS/microsecond = 16534785929.	OK
+	... Test: filename with uS/microsecond = 0.		OK
+	... Test: filename with uS/microsecond = 999999.	OK
+==	Test: test_find_desired_location_for_results().
+	... Test: filename is 25-3-2010-5-8-51-9994073289.dwq.	OK
+==	Test: test_find_desired_location_for_results().
+	... Test: filename 25-3-2010-5-8-51-9407.txt included.	OK
+	... Test: 25-3-2010-5-8-51-9407.txt, correct path.	OK
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the random_process_models package.
+
+
+==	Testing class: prng.
+	Testing psl_uniform().
+	... Test: incorrect type of signal, 'whatever'.		OK
+	... Test: for bit vector signal, 'bv'.			OK
+	... Test: for RTW signal, 'rtw'.			OK
+
+
+==	Testing class: rand_signal_generator.
+	Testing gen_rand_signal_uniform_distributn().
+	... Test: wrong type of signal, signal about size.	OK
+	... Test: type of signal = RTW.				OK
+	... Test: type of signal = bit vector.			OK
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+=	Testing the behavioral_models package.
+
+
+==	Testing class: approx_cross_correlation.
+=	Create a file object for writing.
+=	Testing random  4 -bit signals.
+x_rtw_1 is: [-1, 1, 1, 1] =
+x_rtw_2 is: [1, 1, 1, 1] =
+NumPy-based cross-correlation using valid mode is: [2] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 2.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 2 =
+	NumPy-based cross-correlation's min value using valid mode is: 2 =
+
+NumPy-based cross-correlation using same mode is: [0 1 2 3] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 1.118033988749895 =
+	NumPy-based cross-correlation's variance using same mode is: 1.25 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 1.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 3 =
+	NumPy-based cross-correlation's max value using same mode is: 3 =
+	NumPy-based cross-correlation's min value using same mode is: 0 =
+
+NumPy-based cross-correlation using full mode is: [-1  0  1  2  3  2  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.2453996981544782 =
+	NumPy-based cross-correlation's variance using full mode is: 1.551020408163265 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 1.1428571428571428 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 4 =
+	NumPy-based cross-correlation's max value using full mode is: 3 =
+	NumPy-based cross-correlation's min value using full mode is: -1 =
+
+Pycorrelate-based cross-correlation is: [ 2  1  0 -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.118033988749895 =
+	NumPy-based cross-correlation's variance using full mode is: 1.25 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.5 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 3 =
+	NumPy-based cross-correlation's max value using full mode is: 2 =
+	NumPy-based cross-correlation's min value using full mode is: -1 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  1.118033988749895 .
+Relative difference for var_cross_correlation 0.0  and  1.25 .
+Relative difference for arith_mean_cross_correlation 2.0  and  1.5 .
+Relative difference for ptp_cross_correlation 0  and  3 .
+Relative difference for amax_cross_correlation 2  and  3 .
+Relative difference for amin_cross_correlation 2  and  3 .
+
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  1.2453996981544782 .
+Relative difference for var_cross_correlation 0.0  and  1.551020408163265 .
+Relative difference for arith_mean_cross_correlation 2.0  and  1.1428571428571428 .
+Relative difference for ptp_cross_correlation 0  and  4 .
+Relative difference for amax_cross_correlation 2  and  3 .
+Relative difference for amin_cross_correlation 2  and  3 .
+
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  1.118033988749895 .
+Relative difference for var_cross_correlation 0.0  and  1.25 .
+Relative difference for arith_mean_cross_correlation 2.0  and  0.5 .
+Relative difference for ptp_cross_correlation 0  and  3 .
+Relative difference for amax_cross_correlation 2  and  2 .
+Relative difference for amin_cross_correlation 2  and  2 .
+
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 1.118033988749895  and  1.2453996981544782 .
+Relative difference for var_cross_correlation 1.25  and  1.551020408163265 .
+Relative difference for arith_mean_cross_correlation 1.5  and  1.1428571428571428 .
+Relative difference for ptp_cross_correlation 3  and  4 .
+Relative difference for amax_cross_correlation 3  and  3 .
+Relative difference for amin_cross_correlation 3  and  3 .
+
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 1.118033988749895  and  1.118033988749895 .
+Relative difference for var_cross_correlation 1.25  and  1.25 .
+Relative difference for arith_mean_cross_correlation 1.5  and  0.5 .
+Relative difference for ptp_cross_correlation 3  and  3 .
+Relative difference for amax_cross_correlation 3  and  2 .
+Relative difference for amin_cross_correlation 3  and  2 .
+
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 1.2453996981544782  and  1.118033988749895 .
+Relative difference for var_cross_correlation 1.551020408163265  and  1.25 .
+Relative difference for arith_mean_cross_correlation 1.1428571428571428  and  0.5 .
+Relative difference for ptp_cross_correlation 4  and  3 .
+Relative difference for amax_cross_correlation 3  and  2 .
+Relative difference for amin_cross_correlation 3  and  2 .
+
+=	Testing random  8 -bit signals.
+x_rtw_1 is: [-1, 1, -1, 1, 1, 1, -1, 1] =
+x_rtw_2 is: [1, -1, 1, 1, -1, -1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [-4] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -4.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -4 =
+	NumPy-based cross-correlation's min value using valid mode is: -4 =
+
+NumPy-based cross-correlation using same mode is: [ 0 -3 -2 -1 -4  3  0 -1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 2.0 =
+	NumPy-based cross-correlation's variance using same mode is: 4.0 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -1.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 7 =
+	NumPy-based cross-correlation's max value using same mode is: 3 =
+	NumPy-based cross-correlation's min value using same mode is: -4 =
+
+NumPy-based cross-correlation using full mode is: [ 1  0  1  0 -3 -2 -1 -4  3  0 -1  0  3 -2  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.9136933459209762 =
+	NumPy-based cross-correlation's variance using full mode is: 3.6622222222222214 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.26666666666666666 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 7 =
+	NumPy-based cross-correlation's max value using full mode is: 3 =
+	NumPy-based cross-correlation's min value using full mode is: -4 =
+
+Pycorrelate-based cross-correlation is: [-4 -1 -2 -3  0  1  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 1.7320508075688772 =
+	NumPy-based cross-correlation's variance using full mode is: 3.0 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -1.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 5 =
+	NumPy-based cross-correlation's max value using full mode is: 1 =
+	NumPy-based cross-correlation's min value using full mode is: -4 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  2.0 .
+Relative difference for var_cross_correlation 0.0  and  4.0 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -1.0 .
+Relative difference for ptp_cross_correlation 0  and  7 .
+Relative difference for amax_cross_correlation -4  and  3 .
+Relative difference for amin_cross_correlation -4  and  3 .
+
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  1.9136933459209762 .
+Relative difference for var_cross_correlation 0.0  and  3.6622222222222214 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -0.26666666666666666 .
+Relative difference for ptp_cross_correlation 0  and  7 .
+Relative difference for amax_cross_correlation -4  and  3 .
+Relative difference for amin_cross_correlation -4  and  3 .
+
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  1.7320508075688772 .
+Relative difference for var_cross_correlation 0.0  and  3.0 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -1.0 .
+Relative difference for ptp_cross_correlation 0  and  5 .
+Relative difference for amax_cross_correlation -4  and  1 .
+Relative difference for amin_cross_correlation -4  and  1 .
+
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 2.0  and  1.9136933459209762 .
+Relative difference for var_cross_correlation 4.0  and  3.6622222222222214 .
+Relative difference for arith_mean_cross_correlation -1.0  and  -0.26666666666666666 .
+Relative difference for ptp_cross_correlation 7  and  7 .
+Relative difference for amax_cross_correlation 3  and  3 .
+Relative difference for amin_cross_correlation 3  and  3 .
+
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 2.0  and  1.7320508075688772 .
+Relative difference for var_cross_correlation 4.0  and  3.0 .
+Relative difference for arith_mean_cross_correlation -1.0  and  -1.0 .
+Relative difference for ptp_cross_correlation 7  and  5 .
+Relative difference for amax_cross_correlation 3  and  1 .
+Relative difference for amin_cross_correlation 3  and  1 .
+
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 1.9136933459209762  and  1.7320508075688772 .
+Relative difference for var_cross_correlation 3.6622222222222214  and  3.0 .
+Relative difference for arith_mean_cross_correlation -0.26666666666666666  and  -1.0 .
+Relative difference for ptp_cross_correlation 7  and  5 .
+Relative difference for amax_cross_correlation 3  and  1 .
+Relative difference for amin_cross_correlation 3  and  1 .
+
+=	Testing random  16 -bit signals.
+x_rtw_1 is: [1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, 1, -1] =
+x_rtw_2 is: [-1, -1, -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1] =
+NumPy-based cross-correlation using valid mode is: [-4] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -4.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -4 =
+	NumPy-based cross-correlation's min value using valid mode is: -4 =
+
+NumPy-based cross-correlation using same mode is: [ 2 -1  4 -1 -6  1  0 -5 -4  3  4  9  4  1  6  1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 3.8709656418005056 =
+	NumPy-based cross-correlation's variance using same mode is: 14.984375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 1.125 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 15 =
+	NumPy-based cross-correlation's max value using same mode is: 9 =
+	NumPy-based cross-correlation's min value using same mode is: -6 =
+
+NumPy-based cross-correlation using full mode is: [ 1  0 -1  0 -1 -2 -1  2 -1  4 -1 -6  1  0 -5 -4  3  4  9  4  1  6  1 -2
+ -3 -4 -3 -2 -1  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 3.1724621556501282 =
+	NumPy-based cross-correlation's variance using full mode is: 10.064516129032258 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 15 =
+	NumPy-based cross-correlation's max value using full mode is: 9 =
+	NumPy-based cross-correlation's min value using full mode is: -6 =
+
+Pycorrelate-based cross-correlation is: [-4 -5  0  1 -6 -1  4 -1  2 -1 -2 -1  0 -1  0  1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 2.4462982238476156 =
+	NumPy-based cross-correlation's variance using full mode is: 5.984375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.875 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 10 =
+	NumPy-based cross-correlation's max value using full mode is: 4 =
+	NumPy-based cross-correlation's min value using full mode is: -6 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  3.8709656418005056 .
+Relative difference for var_cross_correlation 0.0  and  14.984375 .
+Relative difference for arith_mean_cross_correlation -4.0  and  1.125 .
+Relative difference for ptp_cross_correlation 0  and  15 .
+Relative difference for amax_cross_correlation -4  and  9 .
+Relative difference for amin_cross_correlation -4  and  9 .
+
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  3.1724621556501282 .
+Relative difference for var_cross_correlation 0.0  and  10.064516129032258 .
+Relative difference for arith_mean_cross_correlation -4.0  and  0.0 .
+Relative difference for ptp_cross_correlation 0  and  15 .
+Relative difference for amax_cross_correlation -4  and  9 .
+Relative difference for amin_cross_correlation -4  and  9 .
+
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  2.4462982238476156 .
+Relative difference for var_cross_correlation 0.0  and  5.984375 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -0.875 .
+Relative difference for ptp_cross_correlation 0  and  10 .
+Relative difference for amax_cross_correlation -4  and  4 .
+Relative difference for amin_cross_correlation -4  and  4 .
+
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 3.8709656418005056  and  3.1724621556501282 .
+Relative difference for var_cross_correlation 14.984375  and  10.064516129032258 .
+Relative difference for arith_mean_cross_correlation 1.125  and  0.0 .
+Relative difference for ptp_cross_correlation 15  and  15 .
+Relative difference for amax_cross_correlation 9  and  9 .
+Relative difference for amin_cross_correlation 9  and  9 .
+
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 3.8709656418005056  and  2.4462982238476156 .
+Relative difference for var_cross_correlation 14.984375  and  5.984375 .
+Relative difference for arith_mean_cross_correlation 1.125  and  -0.875 .
+Relative difference for ptp_cross_correlation 15  and  10 .
+Relative difference for amax_cross_correlation 9  and  4 .
+Relative difference for amin_cross_correlation 9  and  4 .
+
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 3.1724621556501282  and  2.4462982238476156 .
+Relative difference for var_cross_correlation 10.064516129032258  and  5.984375 .
+Relative difference for arith_mean_cross_correlation 0.0  and  -0.875 .
+Relative difference for ptp_cross_correlation 15  and  10 .
+Relative difference for amax_cross_correlation 9  and  4 .
+Relative difference for amin_cross_correlation 9  and  4 .
+
+=	Testing random  32 -bit signals.
+x_rtw_1 is: [-1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1] =
+x_rtw_2 is: [1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, 1, 1, -1, 1, -1] =
+NumPy-based cross-correlation using valid mode is: [-4] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -4.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -4 =
+	NumPy-based cross-correlation's min value using valid mode is: -4 =
+
+NumPy-based cross-correlation using same mode is: [  2  -1   2   3  -6  -5   8  -7 -10   9   0  -7   6  -7   2  -1  -4  -1
+   2   1  -6   1   0  -3  -6   5  -4  -1   6   1  -6   1] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 4.713262537775718 =
+	NumPy-based cross-correlation's variance using same mode is: 22.21484375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.8125 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 19 =
+	NumPy-based cross-correlation's max value using same mode is: 9 =
+	NumPy-based cross-correlation's min value using same mode is: -10 =
+
+NumPy-based cross-correlation using full mode is: [  1  -2   3  -2  -1   4  -5   2   3   0   1   2  -1  -6   3   2  -1   2
+   3  -6  -5   8  -7 -10   9   0  -7   6  -7   2  -1  -4  -1   2   1  -6
+   1   0  -3  -6   5  -4  -1   6   1  -6   1  -2   1  10  -3  -2  -3   0
+   3   2  -1   0  -1   2   3   2   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 4.011321845457655 =
+	NumPy-based cross-correlation's variance using full mode is: 16.090702947845806 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.19047619047619047 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 20 =
+	NumPy-based cross-correlation's max value using full mode is: 10 =
+	NumPy-based cross-correlation's min value using full mode is: -10 =
+
+Pycorrelate-based cross-correlation is: [ -4  -1   2  -7   6  -7   0   9 -10  -7   8  -5  -6   3   2  -1   2   3
+  -6  -1   2   1   0   3   2  -5   4  -1  -2   3  -2   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 4.492615468744237 =
+	NumPy-based cross-correlation's variance using full mode is: 20.18359375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.4375 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 19 =
+	NumPy-based cross-correlation's max value using full mode is: 9 =
+	NumPy-based cross-correlation's min value using full mode is: -10 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  4.713262537775718 .
+Relative difference for var_cross_correlation 0.0  and  22.21484375 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -0.8125 .
+Relative difference for ptp_cross_correlation 0  and  19 .
+Relative difference for amax_cross_correlation -4  and  9 .
+Relative difference for amin_cross_correlation -4  and  9 .
+
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  4.011321845457655 .
+Relative difference for var_cross_correlation 0.0  and  16.090702947845806 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -0.19047619047619047 .
+Relative difference for ptp_cross_correlation 0  and  20 .
+Relative difference for amax_cross_correlation -4  and  10 .
+Relative difference for amin_cross_correlation -4  and  10 .
+
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  4.492615468744237 .
+Relative difference for var_cross_correlation 0.0  and  20.18359375 .
+Relative difference for arith_mean_cross_correlation -4.0  and  -0.4375 .
+Relative difference for ptp_cross_correlation 0  and  19 .
+Relative difference for amax_cross_correlation -4  and  9 .
+Relative difference for amin_cross_correlation -4  and  9 .
+
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 4.713262537775718  and  4.011321845457655 .
+Relative difference for var_cross_correlation 22.21484375  and  16.090702947845806 .
+Relative difference for arith_mean_cross_correlation -0.8125  and  -0.19047619047619047 .
+Relative difference for ptp_cross_correlation 19  and  20 .
+Relative difference for amax_cross_correlation 9  and  10 .
+Relative difference for amin_cross_correlation 9  and  10 .
+
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 4.713262537775718  and  4.492615468744237 .
+Relative difference for var_cross_correlation 22.21484375  and  20.18359375 .
+Relative difference for arith_mean_cross_correlation -0.8125  and  -0.4375 .
+Relative difference for ptp_cross_correlation 19  and  19 .
+Relative difference for amax_cross_correlation 9  and  9 .
+Relative difference for amin_cross_correlation 9  and  9 .
+
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 4.011321845457655  and  4.492615468744237 .
+Relative difference for var_cross_correlation 16.090702947845806  and  20.18359375 .
+Relative difference for arith_mean_cross_correlation -0.19047619047619047  and  -0.4375 .
+Relative difference for ptp_cross_correlation 20  and  19 .
+Relative difference for amax_cross_correlation 10  and  9 .
+Relative difference for amin_cross_correlation 10  and  9 .
+
+=	Testing random  64 -bit signals.
+x_rtw_1 is: [-1, 1, 1, -1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, -1, -1, 1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1] =
+x_rtw_2 is: [1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, 1, 1, -1, 1, 1, -1, 1, 1, -1, 1, 1] =
+NumPy-based cross-correlation using valid mode is: [2] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: 2.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: 2 =
+	NumPy-based cross-correlation's min value using valid mode is: 2 =
+
+NumPy-based cross-correlation using same mode is: [  2   3  -2  -1  10   1   2  -3   4   1  -8   3   8  -5   0   1   2  -3
+   4  -1   2   1  -4   5  -2  -1  20  -9   2  -3 -12   7   2  -1   2   3
+  -4  -5   6  -3   2 -13   6  -1  -8   7   2  -5  -6   3   0   9 -14  -7
+  18   3   4   1  -2   5  -4  -1  -2   7] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 6.051536478449089 =
+	NumPy-based cross-correlation's variance using same mode is: 36.62109375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: 0.4375 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 34 =
+	NumPy-based cross-correlation's max value using same mode is: 20 =
+	NumPy-based cross-correlation's min value using same mode is: -14 =
+
+NumPy-based cross-correlation using full mode is: [ -1   0   3  -2  -1   4  -3   0   3   0  -1  -2   3   0  -1   4  -1   2
+  -7  12  -3  -4   3   2   1   4   5  -2  -5   4  -1   2   3  -2  -1  10
+   1   2  -3   4   1  -8   3   8  -5   0   1   2  -3   4  -1   2   1  -4
+   5  -2  -1  20  -9   2  -3 -12   7   2  -1   2   3  -4  -5   6  -3   2
+ -13   6  -1  -8   7   2  -5  -6   3   0   9 -14  -7  18   3   4   1  -2
+   5  -4  -1  -2   7  -4  -9   4  -5   8  -7  -4   1  -2  -3  -2   3  -2
+   7  -6   5   4  -3   2   3   4   1   2  -3   0  -1  -2  -1  -4  -3  -2
+  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 5.072284244414434 =
+	NumPy-based cross-correlation's variance using full mode is: 25.72806745613491 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.1889763779527559 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 34 =
+	NumPy-based cross-correlation's max value using full mode is: 20 =
+	NumPy-based cross-correlation's min value using full mode is: -14 =
+
+Pycorrelate-based cross-correlation is: [  2   7 -12  -3   2  -9  20  -1  -2   5  -4   1   2  -1   4  -3   2   1
+   0  -5   8   3  -8   1   4  -3   2   1  10  -1  -2   3   2  -1   4  -5
+  -2   5   4   1   2   3  -4  -3  12  -7   2  -1   4  -1   0   3  -2  -1
+   0   3   0  -3   4  -1  -2   3   0  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 4.776958858677768 =
+	NumPy-based cross-correlation's variance using full mode is: 22.8193359375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.65625 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 32 =
+	NumPy-based cross-correlation's max value using full mode is: 20 =
+	NumPy-based cross-correlation's min value using full mode is: -12 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  6.051536478449089 .
+Relative difference for var_cross_correlation 0.0  and  36.62109375 .
+Relative difference for arith_mean_cross_correlation 2.0  and  0.4375 .
+Relative difference for ptp_cross_correlation 0  and  34 .
+Relative difference for amax_cross_correlation 2  and  20 .
+Relative difference for amin_cross_correlation 2  and  20 .
+
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  5.072284244414434 .
+Relative difference for var_cross_correlation 0.0  and  25.72806745613491 .
+Relative difference for arith_mean_cross_correlation 2.0  and  0.1889763779527559 .
+Relative difference for ptp_cross_correlation 0  and  34 .
+Relative difference for amax_cross_correlation 2  and  20 .
+Relative difference for amin_cross_correlation 2  and  20 .
+
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  4.776958858677768 .
+Relative difference for var_cross_correlation 0.0  and  22.8193359375 .
+Relative difference for arith_mean_cross_correlation 2.0  and  0.65625 .
+Relative difference for ptp_cross_correlation 0  and  32 .
+Relative difference for amax_cross_correlation 2  and  20 .
+Relative difference for amin_cross_correlation 2  and  20 .
+
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 6.051536478449089  and  5.072284244414434 .
+Relative difference for var_cross_correlation 36.62109375  and  25.72806745613491 .
+Relative difference for arith_mean_cross_correlation 0.4375  and  0.1889763779527559 .
+Relative difference for ptp_cross_correlation 34  and  34 .
+Relative difference for amax_cross_correlation 20  and  20 .
+Relative difference for amin_cross_correlation 20  and  20 .
+
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 6.051536478449089  and  4.776958858677768 .
+Relative difference for var_cross_correlation 36.62109375  and  22.8193359375 .
+Relative difference for arith_mean_cross_correlation 0.4375  and  0.65625 .
+Relative difference for ptp_cross_correlation 34  and  32 .
+Relative difference for amax_cross_correlation 20  and  20 .
+Relative difference for amin_cross_correlation 20  and  20 .
+
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 5.072284244414434  and  4.776958858677768 .
+Relative difference for var_cross_correlation 25.72806745613491  and  22.8193359375 .
+Relative difference for arith_mean_cross_correlation 0.1889763779527559  and  0.65625 .
+Relative difference for ptp_cross_correlation 34  and  32 .
+Relative difference for amax_cross_correlation 20  and  20 .
+Relative difference for amin_cross_correlation 20  and  20 .
+
+=	Testing random  128 -bit signals.
+x_rtw_1 is: [1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, -1, 1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, 1, -1, -1, -1, -1, 1, 1] =
+x_rtw_2 is: [1, 1, 1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, -1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1] =
+NumPy-based cross-correlation using valid mode is: [-20] =
+	NumPy-based cross-correlation's standard deviation using valid mode is: 0.0 =
+	NumPy-based cross-correlation's variance using valid mode is: 0.0 =
+	NumPy-based cross-correlation's arithmetic mean using valid mode is: -20.0 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using valid mode is: 0 =
+	NumPy-based cross-correlation's max value using valid mode is: -20 =
+	NumPy-based cross-correlation's min value using valid mode is: -20 =
+
+NumPy-based cross-correlation using same mode is: [ -8  15  12  -1  -2  -1  -6 -19   0   3  -4  -5  -8  -1  -8   3   8   7
+ -18 -15  -6  -1   4  11  -2   9   0   1   8  -1   0 -11 -10  15 -10  11
+  -8   3   2  23  -2   3  -2  13  -2  17  18   5   0 -21   0  -5   0  11
+ -20   9   0  -5   4   7   4   7   2  -5 -20 -19  -8  -5  14   1   0   1
+   6   1   2  -3  -4   9   6   1 -12  -1 -14   5   4  -3 -20 -25 -18 -11
+  16  -1  20   9   0 -11  -2   1 -10   5   4  -9  -8  -9 -12  -1  -4  17
+  -2   9 -12  13   6   5   4   7  -2   5   0  -7   2  -5   2   1  -6  29
+ -10  11] =
+	NumPy-based cross-correlation's standard deviation using same mode is: 9.627827811057642 =
+	NumPy-based cross-correlation's variance using same mode is: 92.695068359375 =
+	NumPy-based cross-correlation's arithmetic mean using same mode is: -0.234375 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using same mode is: 54 =
+	NumPy-based cross-correlation's max value using same mode is: 29 =
+	NumPy-based cross-correlation's min value using same mode is: -25 =
+
+NumPy-based cross-correlation using full mode is: [ -1   0   1  -2   3  -4  -1  -2  -1  -2   3   0  -1  -2  -1  -8  -3   2
+  -5   0  -1   0  -3  -2   3 -12   1   8   7  -4   3  -6  -1   6  11   4
+   1  -4  -7  12   5  12  11   2 -13   0   3  -2   7  12   1  -2   3   4
+   3  -6   1  14  -1  -6  -1   2  -7  -8  15  12  -1  -2  -1  -6 -19   0
+   3  -4  -5  -8  -1  -8   3   8   7 -18 -15  -6  -1   4  11  -2   9   0
+   1   8  -1   0 -11 -10  15 -10  11  -8   3   2  23  -2   3  -2  13  -2
+  17  18   5   0 -21   0  -5   0  11 -20   9   0  -5   4   7   4   7   2
+  -5 -20 -19  -8  -5  14   1   0   1   6   1   2  -3  -4   9   6   1 -12
+  -1 -14   5   4  -3 -20 -25 -18 -11  16  -1  20   9   0 -11  -2   1 -10
+   5   4  -9  -8  -9 -12  -1  -4  17  -2   9 -12  13   6   5   4   7  -2
+   5   0  -7   2  -5   2   1  -6  29 -10  11  -4   5 -12  -7 -14  -3  -6
+   3   0  -7   4   1 -12   9   4  -3   4  -3   2   7  -6   5   4   1  -2
+  -9 -12   3 -12   9   0   7   6  -3  -6  -3  -4   5   2   1   2  -7  -6
+  -5  -6   3   2   3   4  -7  -8   1   0   1   4  -1   0   1  -4  -3   0
+   1   2   1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 7.853546034330035 =
+	NumPy-based cross-correlation's variance using full mode is: 61.67818531334103 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: -0.25098039215686274 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 54 =
+	NumPy-based cross-correlation's max value using full mode is: 29 =
+	NumPy-based cross-correlation's min value using full mode is: -25 =
+
+Pycorrelate-based cross-correlation is: [-20  -5   2   7   4   7   4  -5   0   9 -20  11   0  -5   0 -21   0   5
+  18  17  -2  13  -2   3  -2  23   2   3  -8  11 -10  15 -10 -11   0  -1
+   8   1   0   9  -2  11   4  -1  -6 -15 -18   7   8   3  -8  -1  -8  -5
+  -4   3   0 -19  -6  -1  -2  -1  12  15  -8  -7   2  -1  -6  -1  14   1
+  -6   3   4   3  -2   1  12   7  -2   3   0 -13   2  11  12   5  12  -7
+  -4   1   4  11   6  -1  -6   3  -4   7   8   1 -12   3  -2  -3   0  -1
+   0  -5   2  -3  -8  -1  -2  -1   0   3  -2  -1  -2  -1  -4   3  -2   1
+   0  -1] =
+	NumPy-based cross-correlation's standard deviation using full mode is: 7.739013760446159 =
+	NumPy-based cross-correlation's variance using full mode is: 59.892333984375 =
+	NumPy-based cross-correlation's arithmetic mean using full mode is: 0.328125 =
+	NumPy-based cross-correlation's min and max values (or peak to peak) using full mode is: 44 =
+	NumPy-based cross-correlation's max value using full mode is: 23 =
+	NumPy-based cross-correlation's min value using full mode is: -21 =
+
+============================================
+Comparing methods: valid  and  same .
+Relative difference for std_dev_x_corr 0.0  and  9.627827811057642 .
+Relative difference for var_cross_correlation 0.0  and  92.695068359375 .
+Relative difference for arith_mean_cross_correlation -20.0  and  -0.234375 .
+Relative difference for ptp_cross_correlation 0  and  54 .
+Relative difference for amax_cross_correlation -20  and  29 .
+Relative difference for amin_cross_correlation -20  and  29 .
+
+Comparing methods: valid  and  full .
+Relative difference for std_dev_x_corr 0.0  and  7.853546034330035 .
+Relative difference for var_cross_correlation 0.0  and  61.67818531334103 .
+Relative difference for arith_mean_cross_correlation -20.0  and  -0.25098039215686274 .
+Relative difference for ptp_cross_correlation 0  and  54 .
+Relative difference for amax_cross_correlation -20  and  29 .
+Relative difference for amin_cross_correlation -20  and  29 .
+
+Comparing methods: valid  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 0.0  and  7.739013760446159 .
+Relative difference for var_cross_correlation 0.0  and  59.892333984375 .
+Relative difference for arith_mean_cross_correlation -20.0  and  0.328125 .
+Relative difference for ptp_cross_correlation 0  and  44 .
+Relative difference for amax_cross_correlation -20  and  23 .
+Relative difference for amin_cross_correlation -20  and  23 .
+
+Comparing methods: same  and  full .
+Relative difference for std_dev_x_corr 9.627827811057642  and  7.853546034330035 .
+Relative difference for var_cross_correlation 92.695068359375  and  61.67818531334103 .
+Relative difference for arith_mean_cross_correlation -0.234375  and  -0.25098039215686274 .
+Relative difference for ptp_cross_correlation 54  and  54 .
+Relative difference for amax_cross_correlation 29  and  29 .
+Relative difference for amin_cross_correlation 29  and  29 .
+
+Comparing methods: same  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 9.627827811057642  and  7.739013760446159 .
+Relative difference for var_cross_correlation 92.695068359375  and  59.892333984375 .
+Relative difference for arith_mean_cross_correlation -0.234375  and  0.328125 .
+Relative difference for ptp_cross_correlation 54  and  44 .
+Relative difference for amax_cross_correlation 29  and  23 .
+Relative difference for amin_cross_correlation 29  and  23 .
+
+Comparing methods: full  and  pyc.ucorrelate .
+Relative difference for std_dev_x_corr 7.853546034330035  and  7.739013760446159 .
+Relative difference for var_cross_correlation 61.67818531334103  and  59.892333984375 .
+Relative difference for arith_mean_cross_correlation -0.25098039215686274  and  0.328125 .
+Relative difference for ptp_cross_correlation 54  and  44 .
+Relative difference for amax_cross_correlation 29  and  23 .
+Relative difference for amin_cross_correlation 29  and  23 .
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+!	!	!	!	!	!	!	!	!	!	!
+>>	Get statistics of the software testing process.
+*	Number of test cases passed:		136
+*	Number of test cases used:		136
+*	Percentage of test cases passed:	100.0%.
+-------------------------------------------------
+DID NOT update repository of simulation/experimental results.
+[0m[1m[7m%[27m[1m[0m                                                                        ]7;file://client-10-229-227-195.tamulink.tamu.edu/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/source[0m[27m[24m[Jzhiyang@client-10-229-227-195 source % [K[?2004h

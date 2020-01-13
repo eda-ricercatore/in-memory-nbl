@@ -274,11 +274,53 @@ test_deprecated:
 
 
 
+
+
 ########################################################################
 # TEST THE SOFTWARE: UNIT, MODULE, INTEGRATION, AND REGRESSION TESTING
 ########################################################################
 # Build and test the latest software build.
 test:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	script history_log.txt
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	exit
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
+	@echo
+	#more $(NORMALTXT)
+	#more $(ERRORTXT)
+
+
+
+
+
+
+
+
+
+
+
+########################################################################
+# TEST THE SOFTWARE: UNIT, MODULE, INTEGRATION, AND REGRESSION TESTING
+########################################################################
+# Build and test the latest software build.
+test1:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
