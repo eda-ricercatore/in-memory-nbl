@@ -258,7 +258,7 @@ class approx_cross_correlation:
 			amin_cross_correlation = np.amin(cross_correlation_from_numpy_correlate)
 			print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
 			print("")
-			results.append((cross_correlation_from_numpy_correlate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
+			results.append((current_mode, cross_correlation_from_numpy_correlate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
 		"""
 		Matplotlib.pyplot's solution for correlation causes
 			execution error
@@ -288,7 +288,7 @@ class approx_cross_correlation:
 		amin_cross_correlation = np.amin(cross_correlation_from_pycorrelate)
 		print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
 		print("")
-		results.append((cross_correlation_from_pycorrelate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
+		results.append(("pyc.ucorrelate", cross_correlation_from_pycorrelate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
 		return results
 	# ============================================================
 	##	Method to approximate the calculation of the cross-correlation
