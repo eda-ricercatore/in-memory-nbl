@@ -259,7 +259,7 @@ class data_analysis:
 	#		https://en.wikipedia.org/wiki/Relative_change_and_difference
 	@staticmethod
 	def get_percent_error(experimental_value=1,theoretical_value=1):
-		return (data_analysis.get_relative_error(experimental_value,theoretical_value)*100)
+		return (100*data_analysis.get_relative_error(experimental_value,theoretical_value))
 	# =========================================================
 	#	Method to determine the arithmetic mean, or average, of
 	#		a list of absolute values of numbers, which can be
@@ -330,7 +330,7 @@ class data_analysis:
 		if 0 > absolute_diff:
 			raise Exception("	get_relative_difference(): Absolute difference must be non-negative.")
 		list_of_values = [quantity1, quantity2]
-		average_of_absolute_values = get_arithmetic_average_of_absolute_values(list_of_numbers)
+		average_of_absolute_values = data_analysis.get_arithmetic_average_of_absolute_values(list_of_values)
 		# Check postcondition: average_of_absolute_values > 0.
 		if 0 >= average_of_absolute_values:
 			raise Exception("	0 >= arithmetic mean of absolute values.")
@@ -353,4 +353,4 @@ class data_analysis:
 	#		https://en.wikipedia.org/wiki/Absolute_difference
 	@staticmethod
 	def get_relative_percentage_difference(quantity1=1,quantity2=1):
-		return get_relative_difference(quantity1,quantity2)
+		return (100*data_analysis.get_relative_difference(quantity1,quantity2))

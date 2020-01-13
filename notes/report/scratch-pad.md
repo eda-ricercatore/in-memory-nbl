@@ -719,6 +719,32 @@ Submission: Feb 12, 2020, anywhere on Earth
 #	To-Do List
 
 
+- rename statistics package to something else, and do regression testing to verify that it broke nothing.
+
+
+
+
 + finish automated regression for the *data analysis tool*:
 	- data_analysis_tool.py
 	- data_analysis_tool_tester.py
+
+
+
+Need 27 classroom hours; I have 15 + 4 + 9 = 28 hours.
++ ECEN courses, need > 18 hours; I have 15
+	- ECEN 751
+	- ECEN 649
+	- ECEN 676
+	- ECEN 689
+	- ECEN 694
++ science courses, 4 hours
+	- BIO 689
++ engineering courses, 9 hours
+	- MEEN 653
+	- CSCE 614
+	- ISEN 631
+	
+
+
+https://ogsdpss.tamu.edu/
+
