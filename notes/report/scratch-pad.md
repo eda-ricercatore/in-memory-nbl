@@ -367,8 +367,10 @@ My Copy of Install rohan.ipynb
 http://pendicular.net/talks/Lulea_March2011.pdf
  circuit-level implementations
 
+port install gcc9 libgcc9
+port install openmpi openmpi-gcc9 
 
-
+https://xyce.sandia.gov/downloads/Binaries.html
 
 ## In-memory computing
 
