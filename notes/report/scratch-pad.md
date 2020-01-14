@@ -390,6 +390,30 @@ https://www.youtube.com/watch?v=6yITVKTDV0s
 
 
 
+## In-memory graph computing
+
+
++ G22 MAX-CUT benchmark problem
++ We didn’t cover fast max-flow algorithms–Refer to the Stanford Team notebook for efficient flowalgorithmsMin-cost Max-flow Algorithm26
++ https://web.stanford.edu/class/cs97si/08-network-flow-problems.pdf
++ https://web.stanford.edu/class/cs97si/
++ https://jaehyunp.github.io/profile/
++ https://purl.stanford.edu/ms669ky3373
++ https://web.stanford.edu/class/cs97si/assn8.html
++ http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/NetFlow/max-flow-min-cut.html
++ https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
++ http://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-146.html
++ https://github.com/jaijeet/jaijeet.github.io
++ http://people.eecs.berkeley.edu/~tianshi/research.html
+
+
+
+
+
+
+
+
+
 
 
 
@@ -405,6 +429,18 @@ port install openmpi openmpi-gcc9
 
 https://wiki.helsinki.fi/display/HUGG/GNU+compiler+install+on+Mac+OS+X
 https://wiki.helsinki.fi/display/HUGG/Open+MPI+install+on+Mac+OS+X
+
+https://nanohub.org/resources/20605/watch?resid=20606
+
+https://ultimateelectronicsbook.com/
+
+
+
+Jaijeet Roychowdhury
++ https://pdfs.semanticscholar.org/99f3/e1ceae1f3df746c2e9e9c1699bb85a44cf22.pdf
+	- has inverter example
+	- jaijeet-roychowdhury
+	- http://www.mos-ak.org/berkeley_2016/publications/T03_Wang_MOS-AK_Berkeley_2016.pdf
 
 
 

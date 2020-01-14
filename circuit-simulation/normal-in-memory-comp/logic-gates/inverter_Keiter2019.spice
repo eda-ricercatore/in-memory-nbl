@@ -6,13 +6,7 @@
 *		+ This specific netlist is from + \cite[\S8.6, pp. 115]{Keiter2019}.
 
 
-* Perform transient analysis.
-.TRAN 20ns 30us 0 5ns
-.PRINT tran v(vout) v(vin) v(1)
-.options timeint reltol=5e-3 abstol=1e-3
 
-* Continuation Options
-.options nonlin continuation=mos
 VDDdev VDD 0 5V
 RIN IN 1 1K
 VIN1 1 0 5V PULSE (5V 0V 1.5us 5ns 5ns 1.5us 3us)
@@ -22,4 +16,15 @@ MN1 VOUT IN 0 0 CD4012_NMOS L=5u W=175u
 MP1 VOUT IN VDD VDD CD4012_PMOS L=5u W=270u
 .MODEL cd4012_pmos PMOS
 .MODEL cd4012_nmos NMOS
+
+
+* Continuation Options
+.options nonlin continuation=mos
+
+* Perform transient analysis circuit simulation step.
+.tran 20ns 30us 0 5ns
+.print tran v(vout) v(vin1) v(1)
+.options timeint reltol=5e-3 abstol=1e-3
+
+
 .END
