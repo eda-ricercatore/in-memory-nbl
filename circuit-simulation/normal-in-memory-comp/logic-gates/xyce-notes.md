@@ -7,7 +7,8 @@
 ##	Default/Built-in Importing Technology Library
 
 
-
+List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2016/165198.pdf
++ Chapter/Section 2 has information about BSIM3, BSIM4, and BSIM6 device models, as well as memristor TEAM device models, and BSIM-CMG FinFETs (Table 2.88 and 2.89)
 
 
 

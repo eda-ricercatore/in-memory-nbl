@@ -367,15 +367,79 @@ My Copy of Install rohan.ipynb
 http://pendicular.net/talks/Lulea_March2011.pdf
  circuit-level implementations
 
-port install gcc9 libgcc9
-port install openmpi openmpi-gcc9 
 
-https://xyce.sandia.gov/downloads/Binaries.html
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## In-memory computing
 
 + https://safari.ethz.ch/architecture_seminar/spring2019/doku.php?id=schedule
 https://www.youtube.com/watch?v=6yITVKTDV0s
+
+
+
+
+
+
+
+
+
+
+##	Circuit Simulation
+
+### Xyce
+
+port install gcc9 libgcc9
+port install openmpi openmpi-gcc9 
+
+
+https://wiki.helsinki.fi/display/HUGG/GNU+compiler+install+on+Mac+OS+X
+https://wiki.helsinki.fi/display/HUGG/Open+MPI+install+on+Mac+OS+X
+
+
+
+https://xyce.sandia.gov/downloads/Binaries.html
+
+Silicon Integration Initiative, Inc.
++ Projects.Si2.org
+	- Compact Model Coalition, CMC,
+		* Public Models Releases
+			+ CMC Standard Device Models
+				- http://www.bdmc.berkeley.edu/
+					* http://www.bdmc.berkeley.edu/model-download/bsim-bulkbdmc106-2-0-bdmc1/
+		* CMC Open Standards/CMC Developers and Models: CMC Public Distributions: 
+			+ https://projects.si2.org/cgi-bin/openeda.si2.org/download?group_id=87&file_id=2354&filename=CMC_StandardModelFileFormat_v0_0_0.pdf
+	- Other Projects
+		* Open Modeling Publications
+			+ Statistical Methods For Semiconductor Chip Design V1.0:
+	- LEF/DEF Downloads have been moved to www.si2.org/OpenAccess
+		* Reference: https://projects.si2.org/other_projects_index.php
++ https://jpduarte.github.io/
+	- My main interest is a fusion of the device, circuit, and system co-design areas. This integrated area has gained a major role in the current development of new hardware in machine learning applications. I received my B.Sc. and M.Sc. degrees from KAIST, South Korea. There, I had the pleasure to work with Professor Yang-Kyu Choi. While in Korea, I focused my education and research in semiconductor devices. Currently, I'm at my last semester under advisement of Professor Chenming Hu and also a member of the Professor Sayeef Salahuddin's group. 
++ NXP
+	- SiMKit library
+		* https://www.nxp.com/design/software/models/simkit/source-code-library:SOURCE-CODE-LIBRARY
+		* https://www.nxp.com/design/software/models/simkit:SIMKIT
+		* https://www.nxp.com/design/software/models/simkit/compact-models:COMPACT-MODELS
++ Mextram: http://mextram.ewi.tudelft.nl/page_Implementation.php
++ https://en.wikipedia.org/wiki/Transistor_model
+
+
+
+
+
+
+
 
 
 
