@@ -42,13 +42,53 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 		* /Applications/apps/eda/technology_lib/pdk/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/CDL/xAct3D_extracted/Extracted_netlists
 	- \cite[\S5.3.2., pp. 46-47, "Model Library Configuration using .INCLUDE" section]{Keiter2019a}
 		* ".include \[name of model library\]"
+		* "Xyce uses model libraries by inserting an .INCLUDE statement into a netlist. Once a file is included, its contents become available to the netlist just as if the entire contents had been inserted directly into the netlist."
+	- \cite[\S5.3.3., pp. 47, "Model Library Configuration using .LIB" section]{Keiter2019a}
+		* "With .LIB, a library file can contain multiple versions of a model and specific versions may be selected at the top level using a keyword on the .LIB line."
+			+ "There are two different uses for the .LIB command. In the main netlist, .LIB functions in a similar manner to .INCLUDE: it reads in a file. Inside that file, .LIB and .ENDL are used to specify blocks of model code that may be included independently of other parts of the same file."
+				- I do not understand this statement.
+	- \cite[\S2.1.14, pp. 39]{Keiter2019a}
+		* .inc \[name of model library, or path to model library\]
+		* .include \[name of model library, or path to model library\]
+		* .inc '\[name of model library, or path to model library\]'
+		* .include '\[name of model library, or path to model library\]'
+		* .inc "\[name of model library, or path to model library\]"
+		* .include "\[name of model library, or path to model library\]"
 + import
-	- *Xyce* commands do not correspond to the term, "import".
+	- Note: *Xyce* commands ***do not correspond to the term, "import".***
++ .save statements
+	- \cite[\12.5, pp. 160]{Keiter2019a}
+		* consists/comprised of:
+			+ .IC statements
+			+ .nodeset statements
+		* If user-specified output filename is not provided, *Xyce* uses the following
+			filename: netlist.cir.ic.
+		* Examples:
+			+ .save type=ic 
+		
+	
 
 
 
 
 
+
+
+
+
+
+
+
+##	Output Files
+
++ \cite[\S7.4.6., pp. 73, "Output files" section]{Keiter2019a}
+	- "The output data, as specified by a .PRINT line, however, goes to a single (*.prn) file. For convenience, Xyce also creates a second auxilliary file with the *.res suffix."
+	- "Figure 7-3 shows an example file named clip.cir, which when run will produce files clip.cir.res and clip.cir.prn. The file clip.cir.res contains one line for each step, showing what parameter value was used on that step. clip.cir.prn is the familiar output format, but the INDEX field recycles to zero each time a new step begins."
+	- "As the default behavior distinguishes each step’s output only by recycling the INDEX field to zero, it can be beneficial to add the sweep parameters to the .PRINT line. For the default file format (format=std), Xyce will not automatically include these sweep parameters, so for plotting it is usually best to specify them by hand."
+	- "If using the default .prn file format (format=std), the resulting .STEP simulation output file will be a simple concatenation of each step’s underlying analysis output. If using format=probe, the data for each execution of the circuit will be in distinct sections of the file, and it should be easy to plot the results using PROBE."
++ \cite[\S7.5.8., pp. 79-80, "Output files" section]{Keiter2019a}
+	- pp. 79, "Figure 7-5 shows an example file named clip.cir, which when run will produce files clip.cir.res and clip.cir.prn. The file clip.cir.res contains one line for each step, showing what parameter value was used on that step. clip.cir.prn is the familiar output format, but the INDEX field recycles to zero each time a new step begins. As the default behavior distinguishes each step’s output only by recycling the INDEX field to zero, it can be beneficial to add the sampling parameters to the .PRINT line. For the default file format (format=std), Xyce will not automatically include these sampling parameters, so for plotting it is usually best to specify them by hand."
+	- pp. 80, "Note that for sampling calculations involving a really large number of sample points, the single output file can become prohibitively large. Be careful when using .PRINT if the number of samples is large. If the number is really large (thousands) consider excluding any .PRINT output statements and just rely on statistical outputs, described next in section 7.5.9. Similarly, the generation of the measure output can be suppressedwith.OPTIONS MEASURE MEASPRINT."
 
 
 
