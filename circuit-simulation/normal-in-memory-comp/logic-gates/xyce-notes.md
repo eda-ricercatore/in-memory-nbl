@@ -40,8 +40,14 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 		* /Applications/apps/eda/technology_lib/pdk/ASAP7_PDKandLIB_v1p6/asap7PDK_r1p6/models/hspice
 	- Location of extracted SPICE netlists of logic cells/gates:
 		* /Applications/apps/eda/technology_lib/pdk/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/CDL/xAct3D_extracted/Extracted_netlists
+	- \cite[\S5.3.2., pp. 46-47, "Model Library Configuration using .INCLUDE" section]{Keiter2019a}
+		* ".include \[name of model library\]"
 + import
 	- *Xyce* commands do not correspond to the term, "import".
+
+
+
+
 
 
 
