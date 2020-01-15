@@ -7,8 +7,8 @@
 .options device temp=25 
 .options output initial_interval=1e-8
 
-.include "modelcard.nmos_xyce"
-.include "modelcard.pmos_xyce"
+.include "finfet_models/modelcard.nmos_xyce"
+.include "finfet_models/modelcard.pmos_xyce"
 
 * --- Voltage Sources ---
 vdd   supply  0 dc 1.0
