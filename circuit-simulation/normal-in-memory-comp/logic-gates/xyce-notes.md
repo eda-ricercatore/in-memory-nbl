@@ -32,11 +32,16 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
-##	Importing Technology Libraries 
+##	Importing Technology Libraries and Subcircuits
 
 
-
-
++ include
+	- Location of process models for FinFET devices:
+		* /Applications/apps/eda/technology_lib/pdk/ASAP7_PDKandLIB_v1p6/asap7PDK_r1p6/models/hspice
+	- Location of extracted SPICE netlists of logic cells/gates:
+		* /Applications/apps/eda/technology_lib/pdk/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/CDL/xAct3D_extracted/Extracted_netlists
++ import
+	- *Xyce* commands do not correspond to the term, "import".
 
 
 
@@ -80,6 +85,141 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
+
+
+##	Model Binning
+
+
+From https://edadocs.software.keysight.com/pages/viewpage.action?pageId=5683982#
++ "BinModel allows you to sweep a parameter (usually a geometry, such as gate length), then enable the simulator to automatically select between different model cards. If a circuit contains nonlinear devices for circuit simulation, each device should be associated with one device model through schematic or netlist editing. However, modern processes require multiple models for different device sizes to improve simulation accuracy."
+	- "Bin Model (Bin Model for Automatic Model Selection)"
+		* From {\it Knowledge Center: ADS Support Home: ADS Documentation (all releases): Documentation: ADS 2008 Update 1: Introduction to Circuit Components: Circuit Components}.
+		* From {\it Keysight Technologies: Technical Support Contact Center and Knowledge Base: Keysight EEsof EDA Knowledge Center: Advanced Design System Support Home: Advanced Design System Product Documentation: EEsof Advanced Design System 2008 Update 1 Documentation: Introduction to Circuit Components: Circuit Components}.
+		* Keysight Technologies: Santa Rosa, CA.
+		* 2019.
++ Automated Model Binning
+	- "Automated Model Binning" article"
+		* Simulation Standard, Volume 8, Number 1, January 1997
+			+ Journal title: Simulation Standard.
+		* https://www.silvaco.com/tech_lib_TCAD/simulationstandard/1997/jan/a3/a3.html
+		* Silvaco, Inc.: Santa Clara, {CA}
+		* 2020
+		* "An automated SPICE model binning feature has been implemented in UTMOST III. Binning is used when the user decides to generate a separate model for each device and then combine them into groups by introducing L, W and P (WxL) parameters in a final combined model."
+		* "The binning method is widely used for empirical models. Even though BSIM3v3 is a physical model, it also supports binning. It is possible to generate a single BSIM3v3 model which can be used for all geometries. The overall error of a single model may not be as low as binned models. However the single model is compact, easy to maintain and more physical than binned models. Both methods have advantages and disadvantages and users can choose between these two methods."
+		* "Technical Library, Publications": https://www.silvaco.com/tech_lib/index.html
+			+ Simulation Standard - 1997: https://www.silvaco.com/tech_lib_TCAD/simulationstandard/1997/index.html
+			+ Simulation Standard - 2019: https://www.silvaco.com/tech_lib_TCAD/simulationstandard/2019/index.html
+			+ Analog & Mixed Signal Recommended Textbooks: https://www.silvaco.com/tech_lib_EDA/kbase/AMS/recommendedTextbooks.html
+			+ TCAD Recommended Textbooks: https://www.silvaco.com/tech_lib_TCAD/whitePapers/recommendedTextbooks.html
+			+ Books Written Referencing Silvaco Software: https://www.silvaco.com/tech_lib_TCAD/books.html
+			+ Digital CAD Recommended Textbooks: https://www.silvaco.com/tech_lib_EDA/kbase/logicVerification/recommendedTextbooks.html
+			+ Silvaco Support
+		* Silvaco: Silvaco Support: Technical Library, Publications
+	- "Automated Model Binning" with Xyce
+		* "Model binning is supported for MOSFET models. For model binning, the netlist contains a set of similar .MODEL cards which correspond to different sizing information (length and width). They are similar in that they are for the same model (and same LEVEL number), and have the same prefix. They are different in that they have different lmin,lmax,wmin,wmax parameters, and the name suffix will be the bin number. For a MOSFET device instance, Xyce will automatically select the appropriate binned model, based on the L and W parameters of that instance. It will only seach the models with matching name prefixes, and can only work if all the binned models have specified all the lmin,lmax,wmin,wmax parameters."
+			+ \cite[\S2.1.18.2, pp. 65, subsubsubsection on, "Model Binning"]{Keiter2019a}
+				- "Model binning is not enabled by default. To enable it, it is necessary to specify '.options parser model_binning=true.'"
+				- Sample code for model card and simulating it.
+			+ ".model" command for inductor, pp. 155.
+		* \cite[\S6.1.6.2., "Model Parameter Sweeps", pp. 579]{Keiter2019a}
+		* \cite[\S6.1.10, "Model Statements", pp. 580]{Keiter2019a}
+	- \cite[\S5.4, "Model Interpolation", pp. 48-49]{Keiter2019}
++ Binning
+	- Auto Model Selection: https://www.ee.columbia.edu/~harish/uploads/2/6/9/2/26925901/spectre_reference.pdf
+		* "Spectre Circuit Simulator User Guide", Product Version 5.0, January 2004
+		* Chapter 5, "Parameter Specification and Modeling Features"
+		* "Binning is the process of partitioning a device with different sizes into different models. BeforeBSIM 3v3, it was very difficult to fit all the devices with a singlemodel statement over verywide ranges of device sizes. To improve fitting accuracy, you might characterize devices intoseveral models with each model valid only for a limited range of device sizes.", pp. 107, Chapter 5, Section on Binning, and Subsection on "Auto Model Selection". 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+##	Circuit Simulation
+
+### Xyce
+
+port install gcc9 libgcc9
+port install openmpi openmpi-gcc9 
+
+
+https://wiki.helsinki.fi/display/HUGG/GNU+compiler+install+on+Mac+OS+X
+https://wiki.helsinki.fi/display/HUGG/Open+MPI+install+on+Mac+OS+X
+
+https://nanohub.org/resources/20605/watch?resid=20606
+
+https://ultimateelectronicsbook.com/
+
+
+
+Jaijeet Roychowdhury
++ https://pdfs.semanticscholar.org/99f3/e1ceae1f3df746c2e9e9c1699bb85a44cf22.pdf
+	- has inverter example
+	- jaijeet-roychowdhury
+	- http://www.mos-ak.org/berkeley_2016/publications/T03_Wang_MOS-AK_Berkeley_2016.pdf
+
+https://www.fabrice-salvaire.fr/en/about/
+
+http://www-ise1.ist.osaka-u.ac.jp/~j-chen/
++ http://www-ise1.ist.osaka-u.ac.jp/~j-chen/EDA_Tool_Cookbook.pdf 
+
+
+
+
+
+
+
+
+
+
+
+
+https://xyce.sandia.gov/downloads/Binaries.html
+
+Silicon Integration Initiative, Inc.
++ Projects.Si2.org
+	- Compact Model Coalition, CMC,
+		* Public Models Releases
+			+ CMC Standard Device Models
+				- http://www.bdmc.berkeley.edu/
+					* http://www.bdmc.berkeley.edu/model-download/bsim-bulkbdmc106-2-0-bdmc1/
+		* CMC Open Standards/CMC Developers and Models: CMC Public Distributions: 
+			+ https://projects.si2.org/cgi-bin/openeda.si2.org/download?group_id=87&file_id=2354&filename=CMC_StandardModelFileFormat_v0_0_0.pdf
+	- Other Projects
+		* Open Modeling Publications
+			+ Statistical Methods For Semiconductor Chip Design V1.0:
+	- LEF/DEF Downloads have been moved to www.si2.org/OpenAccess
+		* Reference: https://projects.si2.org/other_projects_index.php
++ https://jpduarte.github.io/
+	- My main interest is a fusion of the device, circuit, and system co-design areas. This integrated area has gained a major role in the current development of new hardware in machine learning applications. I received my B.Sc. and M.Sc. degrees from KAIST, South Korea. There, I had the pleasure to work with Professor Yang-Kyu Choi. While in Korea, I focused my education and research in semiconductor devices. Currently, I'm at my last semester under advisement of Professor Chenming Hu and also a member of the Professor Sayeef Salahuddin's group. 
++ NXP
+	- SiMKit library
+		* https://www.nxp.com/design/software/models/simkit/source-code-library:SOURCE-CODE-LIBRARY
+		* https://www.nxp.com/design/software/models/simkit:SIMKIT
+		* https://www.nxp.com/design/software/models/simkit/compact-models:COMPACT-MODELS
++ Mextram: http://mextram.ewi.tudelft.nl/page_Implementation.php
++ https://en.wikipedia.org/wiki/Transistor_model
+
+
+
+Compact models:
++ https://www.taylorfrancis.com/books/9781315215181
+
+
+
+
+
+
+
+
+
 #	Resources
 
 
@@ -89,6 +229,12 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
+
+Not-so-good references:
++ http://www.unm.edu/~pzarkesh/ECE523/tspice.pdf
++ Ngsice: http://ftp.icm.edu.pl/packages/linux-gentoo/distfiles/ngspice-27-manual.pdf
+	- "Ngspice Users ManualVersion 27(Describes ngspice-27 release version)Holger Vogt, Marcel Hendrix, Paolo Nenziš, September 10, 2017.
+		* "Holger Vogt and Marcel Hendrix and Paolo Nenzi", September 10, 2017
 
 
 
