@@ -442,6 +442,20 @@ Jaijeet Roychowdhury
 	- jaijeet-roychowdhury
 	- http://www.mos-ak.org/berkeley_2016/publications/T03_Wang_MOS-AK_Berkeley_2016.pdf
 
+https://www.fabrice-salvaire.fr/en/about/
+
+http://www-ise1.ist.osaka-u.ac.jp/~j-chen/
++ http://www-ise1.ist.osaka-u.ac.jp/~j-chen/EDA_Tool_Cookbook.pdf 
+
+
+
+
+
+
+
+
+
+
 
 
 https://xyce.sandia.gov/downloads/Binaries.html

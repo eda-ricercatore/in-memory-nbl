@@ -22,7 +22,7 @@ R1 VOUT 0 10K
 C2 VOUT 0 0.1p
 .MODEL cd4012_pmos PMOS
 .MODEL cd4012_nmos NMOS
-inv in vout vdd 0 inverter
+inv in vout Vvdd 0 inverter
 
 
 * Continuation Options

@@ -12,9 +12,81 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
+##	Instantiating Components
+
+
++ \cite[\S2.3, pp. 140-141, Table 2-30]{Keiter2019a}
+	- Provides Information about how to instantiate components in Xyce's
+		device/technology library.
++ \cite[\S4.2, pp. 35-37, Table 4-2]{Keiter2019}
+	- Also, provides Information about how to instantiate components in Xyce's
+	device/technology library.
++ Using FinFETs
+	- \cite[\S2.3.20.12, pp. 431-432, Table 2-102]{Keiter2019a} describes the
+		device instance parameters of the BSIM-CMG FinFETs.
+		* The default feature size of the FinFET is 30 nm (3e-08 m).
+		* \cite[\S2.3.20.12, pp. 431-432, Table 2-102]{Keiter2019a}
+
+
+
+
 
 
 ##	Importing Technology Libraries 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##	Power Analysis
+
++ \cite[\S6.1.8, pp. 579]{Keiter2019a} describes how to measure power dissipation
+	in a circuit/device.
++ https://www.researchgate.net/post/Is_it_possible_to_calculate_the_static_dynamic_power_dissipation_using_the_data_exported_from_SPICE_Deck
+ + \cite[\S2.3, pp. 142-145, Table 2-31]{Keiter2019a}
+	- Indicates whether each component in the Xyce device library supports
+		power analysis. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+##	Netlists
+
++ https://github.com/Xyce
++ https://github.com/Xyce/Xyce_Regression/tree/master/Netlists
++ https://github.com/Xyce/Xyce/releases
+
+
+
+
+
+#	Resources
+
+
++ https://xyce.sandia.gov/documentation/index.html
++ https://digitalops.sandia.gov/Mediasite/Play/24aace4429fc450fb5b38cdbf424a66e1d
++ https://digitalops.sandia.gov/Mediasite/Play/c4d3f65bbef74067bebb4c36788dc2931d
+
 
 
 
