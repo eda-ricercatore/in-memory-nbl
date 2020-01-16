@@ -1,7 +1,40 @@
+#!/Users/zhiyang/anaconda3/bin/python3
+
+"""
+	This Python script is written by Zhiyang Ong to process and
+		plot Xyce circuit simulation results.
+
+
+	@modified by Zhiyang Ong, January 15, 2020.
+	+ Modify code to process Xyce circuit simulation results,
+		for a circuit with one input parameter.
+
+
+	References:
+	+ \cite[From Lines, bars and markers: EventCollection Demo]{MatplotlibDevelopmentTeam2020a}
+		- https://matplotlib.org/gallery/lines_bars_and_markers/eventcollection_demo.html;
+			Last accessed on January 16, 2020.
+"""
+
+
+
 import matplotlib.pyplot as plt
 from matplotlib.collections import EventCollection
 import numpy as np
 
+
+# Path to Xyce circuit
+filename = "inverter_transient.spice.prn"
+with open(filename, "r") as f_obj:
+	simulation_results = f_obj.readlines()
+	for current_line in simulation_results:
+		if "Index       TIME" in current_line:
+			print("The first line of the Xyce circuit simulation results output file is found.")
+		elif "End of Xyce(TM) Simulation" in current_line:
+			print("Finish processing Xyce circuit simulation results output file.")
+
+
+"""
 # Fixing random state for reproducibility
 np.random.seed(19680801)
 
@@ -50,3 +83,4 @@ ax.set_title('line plot with data points')
 
 # display the plot
 plt.show()
+"""
