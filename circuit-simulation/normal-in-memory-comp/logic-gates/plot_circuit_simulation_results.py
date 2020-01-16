@@ -32,11 +32,32 @@ with open(filename, "r") as f_obj:
 	for current_line in simulation_results:
 		if "Index       TIME" in current_line:
 			print("Found first line of the Xyce circuit simulation results.")
-			simulation_results_database.split()
+			temp_list_column_headers = current_line.split()
+			"""
+				Enumerate the list of important columns.
+				Ignore the "Index"/first column, and create a
+					dictionary list for each column.
+				That is, each column would be associated with a
+					list ("value") by its column header ("key").
+			"""
+			for current_column_header in temp_list_column_headers[1:]:
+				print("	Current column header is:",current_column_header,".")
+				"""
+					Create a dictionary to store the data associated
+						with this column.
+					The key is the column header.
+					The value is an intialized empty list that will
+						store the data from that column in the
+						output file for Xyce circuit simulation
+						results.
+				"""
+				temp_column = {current_column_header: []}
+				simulation_results_database.append(temp_column)
 		elif "End of Xyce(TM) Simulation" in current_line:
 			print("Finish processing Xyce circuit simulation results.")
 		#else:
-			
+	print("=	Circuit simulation results:")
+	print(simulation_results_database)
 
 
 """
