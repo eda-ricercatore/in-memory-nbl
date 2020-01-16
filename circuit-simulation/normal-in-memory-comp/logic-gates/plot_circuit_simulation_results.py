@@ -23,6 +23,8 @@ from matplotlib.collections import EventCollection
 import numpy as np
 
 
+
+simulation_results_database = []
 # Path to Xyce circuit
 filename = "inverter_transient.spice.prn"
 with open(filename, "r") as f_obj:
@@ -30,6 +32,7 @@ with open(filename, "r") as f_obj:
 	for current_line in simulation_results:
 		if "Index       TIME" in current_line:
 			print("Found first line of the Xyce circuit simulation results.")
+			simulation_results_database.split()
 		elif "End of Xyce(TM) Simulation" in current_line:
 			print("Finish processing Xyce circuit simulation results.")
 		#else:
