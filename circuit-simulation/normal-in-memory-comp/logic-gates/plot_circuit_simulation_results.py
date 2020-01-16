@@ -29,9 +29,11 @@ with open(filename, "r") as f_obj:
 	simulation_results = f_obj.readlines()
 	for current_line in simulation_results:
 		if "Index       TIME" in current_line:
-			print("The first line of the Xyce circuit simulation results output file is found.")
+			print("Found first line of the Xyce circuit simulation results.")
 		elif "End of Xyce(TM) Simulation" in current_line:
-			print("Finish processing Xyce circuit simulation results output file.")
+			print("Finish processing Xyce circuit simulation results.")
+		#else:
+			
 
 
 """
