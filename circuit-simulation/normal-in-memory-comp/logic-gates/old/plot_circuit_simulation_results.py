@@ -30,9 +30,7 @@ import numpy as np
 		with that column in the output file of Xyce circuit
 		simulation results. 
 """
-#simulation_results_database = []
-simulation_results_database = {}
-temp_list_column_headers = []
+simulation_results_database = []
 # Path to Xyce circuit
 filename = "inverter_transient.spice.prn"
 with open(filename, "r") as f_obj:
@@ -61,9 +59,7 @@ with open(filename, "r") as f_obj:
 						results.
 				"""
 				temp_column = {current_column_header: []}
-				#simulation_results_database.append(temp_column)
-				#simulation_results_database.update({temp_column:[]})
-				simulation_results_database.setdefault(temp_column, [])
+				simulation_results_database.append(temp_column)
 		elif "End of Xyce(TM) Simulation" in current_line:
 			print("Finish processing Xyce circuit simulation results.")
 		else:
@@ -71,14 +67,9 @@ with open(filename, "r") as f_obj:
 			temp_row_of_cir_sim_res = current_line.split()
 			"""
 				Store the data for each column in this row into
-					the appropriate dictionary in the database list
-					of circuit simulation results.
+					the appropriate dictionary in the 
 			"""
-			for index, (current_field_of_current_row,current_data_point_of_current_field,current_name_of_field) in enumerate(zip(temp_row_of_cir_sim_res[1:],simulation_results_database,temp_list_column_headers[1:])):
-				# Demonstrate successful enumeration of columns/fields.
-				print("	index=",index,"= associated value=",current_field_of_current_row,"=")
-				print("	index=",index,"= current key-value pair=",current_data_point_of_current_field,"=")
-				print("	index=",index,"= temp_list_column_headers[current_name_of_field]=",temp_list_column_headers[current_name_of_field],"=")
+			for current_column_header in temp_list_column_headers[1:]:
 	print("=	Circuit simulation results:")
 	print(simulation_results_database)
 
