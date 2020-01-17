@@ -30,7 +30,7 @@
 	+ https://matplotlib.org/3.1.0/gallery/color/named_colors.html
 	+ https://matplotlib.org/3.1.1/tutorials/colors/colors.html
 	+ https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
-	+ 
+
 
 
 
@@ -218,9 +218,9 @@ else:
 				on the y-axis against time column/field on the x-axis.
 		"""
 		ax.plot(simulation_results_database[temp_list_column_headers[1]], simulation_results_database[current_field_name], color=enumerated_color)
-		xevents1 = EventCollection(simulation_results_database[temp_list_column_headers[1]], color=enumerated_color, linelength=0.05)
+		#xevents1 = EventCollection(simulation_results_database[temp_list_column_headers[1]], color=enumerated_color, linelength=0.05)
 		yevents1 = EventCollection(simulation_results_database[current_field_name], color=enumerated_color, linelength=0.05, orientation='vertical')
-		ax.add_collection(xevents1)
+		#ax.add_collection(xevents1)
 		ax.add_collection(yevents1)
 		"""
 		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
