@@ -166,6 +166,8 @@ else:
 			index of the Xyce circuit simulation results.
 		The 2nd column of temp_list_column_headers is always the time
 		stamp of the circuit simulation.
+		Hence, enumerate the fields/columns of the Xyce circuit
+			simulation results from column 3. 
 	"""
 	ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
 	ax.plot(xdata2, ydata2, color='tab:orange')
