@@ -241,6 +241,12 @@ else:
 	#ax.set_ylim([0, 1])
 	# See https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html
 	plt.legend(tuple(plots), ('V_in(V)', 'Vout(V)'))
+	"""
+		See https://matplotlib.org/api/axes_api.html#autoscaling-and-margins
+		and https://matplotlib.org/api/pyplot_api.html
+	"""
+	plt.set_xticks(major_ticks)
+	plt.set_yticks(major_ticks)
 	plt.xlabel('time (s)')
 	plt.ylabel('V_in(V), Vout(V)')
 	plt.title('Plot of Xyce circuit simulation results of V_in(V) and Vout(V) over time (s)')
