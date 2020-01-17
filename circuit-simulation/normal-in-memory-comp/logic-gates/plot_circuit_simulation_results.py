@@ -112,8 +112,8 @@ with open(filename, "r") as f_obj:
 				print("	index=",index,"= associated value=",current_field_of_current_row,"=")
 				print("	index=",index,"= current key-value pair=",current_data_point_of_current_field,"=")
 				print("	index=",index,"= simulation_results_database[current_name_of_field]=",simulation_results_database[current_name_of_field],"=")
-				simulation_results_database[current_name_of_field].append(current_field_of_current_row)
 				"""
+				simulation_results_database[current_name_of_field].append(current_field_of_current_row)
 
 
 """
@@ -168,7 +168,10 @@ else:
 		The 2nd column of temp_list_column_headers is always the time
 		stamp of the circuit simulation.
 		Hence, enumerate the fields/columns of the Xyce circuit
-			simulation results from column 3. 
+			simulation results from column 2.
+		Column 2 forms the data set for the x-axis, and the other
+			columns are plotted in the x-y plane for the corresponding
+			value of x (i.e., value of time instance).
 		
 		Create the events marking the x data points.
 		Create the events marking the y data points.
@@ -185,14 +188,16 @@ else:
 		ax.add_collection(xevents2)
 		ax.add_collection(yevents2)
 	"""
+	"""
 	print("	temp_list_column_headers[1]:",temp_list_column_headers[1],".")
 	print("	simulation_results_database[temp_list_column_headers[1]]:",simulation_results_database[temp_list_column_headers[1]],".")
-	print("	temp_row_of_cir_sim_res[2:]:",temp_row_of_cir_sim_res[2:],".")
+	print("	temp_list_column_headers[2:]:",temp_list_column_headers[2:],".")
+	"""
 	for index, (current_field_name,current_field_data) in enumerate(zip(temp_list_column_headers[1:],simulation_results_database)):
 		print(":	current_field_name:",current_field_name,".")
 		#print(":	temp_list_column_headers[current_field_name]:",temp_list_column_headers[current_field_name],".")
 		print(":	temp_list_column_headers[index]:",temp_list_column_headers[index],".")
-		#print(":	simulation_results_database:",simulation_results_database,".")
+		print(":	simulation_results_database[current_field_name]:",simulation_results_database[current_field_name],".")
 		"""
 		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
 		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
