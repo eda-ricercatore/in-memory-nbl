@@ -108,11 +108,12 @@ with open(filename, "r") as f_obj:
 			"""
 			for index, (current_field_of_current_row,current_data_point_of_current_field,current_name_of_field) in enumerate(zip(temp_row_of_cir_sim_res[1:],simulation_results_database,temp_list_column_headers[1:])):
 				# Demonstrate successful enumeration of columns/fields.
+				"""
 				print("	index=",index,"= associated value=",current_field_of_current_row,"=")
 				print("	index=",index,"= current key-value pair=",current_data_point_of_current_field,"=")
 				print("	index=",index,"= simulation_results_database[current_name_of_field]=",simulation_results_database[current_name_of_field],"=")
 				simulation_results_database[current_name_of_field].append(current_field_of_current_row)
-
+				"""
 
 
 """
@@ -184,10 +185,12 @@ else:
 		ax.add_collection(xevents2)
 		ax.add_collection(yevents2)
 	"""
+	print("	temp_row_of_cir_sim_res[1]:",temp_row_of_cir_sim_res[1],".")
+	print("	temp_row_of_cir_sim_res[1:]:",temp_row_of_cir_sim_res[1:],".")
 	for index, (current_field_name,current_field_data) in enumerate(zip(temp_list_column_headers[1:],simulation_results_database)):
 		print(":	current_field_name:",current_field_name,".")
 		print(":	temp_list_column_headers[current_field_name]:",temp_list_column_headers[current_field_name],".")
-		print(":	simulation_results_database:",simulation_results_database,".")
+		#print(":	simulation_results_database:",simulation_results_database,".")
 		"""
 		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
 		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
