@@ -168,20 +168,38 @@ else:
 		stamp of the circuit simulation.
 		Hence, enumerate the fields/columns of the Xyce circuit
 			simulation results from column 3. 
+		
+		Create the events marking the x data points.
+		Create the events marking the y data points.
+		Add the events to the axis.
+
+		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
+		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
+		yevents1 = EventCollection(ydata1, color='tab:blue', linelength=0.05, orientation='vertical')
+		ax.add_collection(xevents1)
+		ax.add_collection(yevents1)
+		ax.plot(xdata2, ydata2, color='tab:orange')
+		xevents2 = EventCollection(xdata2, color='tab:orange', linelength=0.05)
+		yevents2 = EventCollection(ydata2, color='tab:orange', linelength=0.05, orientation='vertical')
+		ax.add_collection(xevents2)
+		ax.add_collection(yevents2)
 	"""
-	ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
-	ax.plot(xdata2, ydata2, color='tab:orange')
-	# create the events marking the x data points
-	xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
-	xevents2 = EventCollection(xdata2, color='tab:orange', linelength=0.05)
-	# create the events marking the y data points
-	yevents1 = EventCollection(ydata1, color='tab:blue', linelength=0.05, orientation='vertical')
-	yevents2 = EventCollection(ydata2, color='tab:orange', linelength=0.05, orientation='vertical')
-	# add the events to the axis
-	ax.add_collection(xevents1)
-	ax.add_collection(xevents2)
-	ax.add_collection(yevents1)
-	ax.add_collection(yevents2)
+	for index, (current_field_name,current_field_data) in enumerate(zip(temp_list_column_headers[1:],simulation_results_database)):
+		print(":	current_field_name:",current_field_name,".")
+		print(":	temp_list_column_headers[current_field_name]:",temp_list_column_headers[current_field_name],".")
+		print(":	simulation_results_database:",simulation_results_database,".")
+		"""
+		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
+		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
+		yevents1 = EventCollection(ydata1, color='tab:blue', linelength=0.05, orientation='vertical')
+		ax.add_collection(xevents1)
+		ax.add_collection(yevents1)
+		ax.plot(xdata2, ydata2, color='tab:orange')
+		xevents2 = EventCollection(xdata2, color='tab:orange', linelength=0.05)
+		yevents2 = EventCollection(ydata2, color='tab:orange', linelength=0.05, orientation='vertical')
+		ax.add_collection(xevents2)
+		ax.add_collection(yevents2)
+		"""
 	# set the limits
 	ax.set_xlim([0, 1])
 	ax.set_ylim([0, 1])
