@@ -162,8 +162,10 @@ else:
 	fig = plt.figure()
 	ax = fig.add_subplot(1, 1, 1)
 	"""
+		The 1st column of temp_list_column_headers is always the row
+			index of the Xyce circuit simulation results.
 		The 2nd column of temp_list_column_headers is always the time
-			stamp of the circuit simulation.
+		stamp of the circuit simulation.
 	"""
 	ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
 	ax.plot(xdata2, ydata2, color='tab:orange')
