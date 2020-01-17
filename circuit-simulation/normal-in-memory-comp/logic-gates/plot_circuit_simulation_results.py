@@ -25,6 +25,15 @@
 
 
 
+	Resources about colors for Matplotlib.pyplot:
+	+ https://matplotlib.org/3.1.1/gallery/color/colormap_reference.html
+	+ https://matplotlib.org/3.1.0/gallery/color/named_colors.html
+	+ https://matplotlib.org/3.1.1/tutorials/colors/colors.html
+	+ https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
+	+ 
+
+
+
 	References:
 	+ \cite[From Lines, bars and markers: EventCollection Demo]{MatplotlibDevelopmentTeam2020a}
 		- https://matplotlib.org/gallery/lines_bars_and_markers/eventcollection_demo.html;
@@ -195,19 +204,22 @@ else:
 	"""
 	print(":	temp_list_column_headers[1]:",temp_list_column_headers[1],".")
 	print("	len(simulation_results_database[temp_list_column_headers[1]]):",len(simulation_results_database[temp_list_column_headers[1]]),".")
-	print("	simulation_results_database[temp_list_column_headers[1]]:",simulation_results_database[temp_list_column_headers[1]],".")
+	#print("	simulation_results_database[temp_list_column_headers[1]]:",simulation_results_database[temp_list_column_headers[1]],".")
 	for index, (current_field_name,current_field_data,enumerated_color) in enumerate(zip(temp_list_column_headers[2:],simulation_results_database,mcolors.TABLEAU_COLORS)):
 		print(":	current_field_name:",current_field_name,".")
 		# Name of the field/column.
-		print(":	temp_list_column_headers[index]:",temp_list_column_headers[index+1],".")
+		print(":	temp_list_column_headers[index]:",temp_list_column_headers[index+2],".")
 		# Data set for the field/column.
-		print("	len(temp_list_column_headers[1]):",len(temp_list_column_headers[1]),".")
 		print("	len(simulation_results_database[current_field_name]):",len(simulation_results_database[current_field_name]),".")
-		print(":	simulation_results_database[current_field_name]:",simulation_results_database[current_field_name],".")
+		#print(":	simulation_results_database[current_field_name]:",simulation_results_database[current_field_name],".")
 		print("	current color:",enumerated_color,".")
-		ax.plot(temp_list_column_headers[1], simulation_results_database[current_field_name], color=enumerated_color)
-		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
-		yevents1 = EventCollection(ydata1, color='tab:blue', linelength=0.05, orientation='vertical')
+		"""
+			Plot currently enumerated field (i.e., V_in or V_out)
+				on the y-axis against time column/field on the x-axis.
+		"""
+		ax.plot(simulation_results_database[temp_list_column_headers[1]], simulation_results_database[current_field_name], color=enumerated_color)
+		xevents1 = EventCollection(simulation_results_database[temp_list_column_headers[1]], color=enumerated_color, linelength=0.05)
+		yevents1 = EventCollection(simulation_results_database[current_field_name], color=enumerated_color, linelength=0.05, orientation='vertical')
 		ax.add_collection(xevents1)
 		ax.add_collection(yevents1)
 		"""
@@ -226,6 +238,23 @@ else:
 	ax.set_xlim([0, 1])
 	ax.set_ylim([0, 1])
 	ax.set_title('line plot with data points')
+	"""
+		@modified by Zhiyang Ong, January 15, 2020.
+		Save plot in PDF format.
+		This save to PDF command has to appear before the .show()
+			command;
+			else, the PDF fuile would be empty.
+		https://github.com/futurestudio/matplotlib-tutorials/tree/master/export_samples
+		
+		Reference:
+			Norman Peitek, "Matplotlib — Save Plots as File", from
+				{\it Future Studio: Future Studio Tutorials},
+				{Fellner, P{\"{o}}hls, Peitek GbR}, Magdeburg,
+				Saxony-Anhalt, Germany, August 5, 2019.
+				Available at: https://futurestud.io/tutorials/matplotlib-save-plots-as-file;
+					last accessed on January 15, 2019.
+	"""
+	plt.savefig(__file__+".pdf")
 	# display the plot
 	plt.show()
 
