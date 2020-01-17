@@ -185,11 +185,13 @@ else:
 		ax.add_collection(xevents2)
 		ax.add_collection(yevents2)
 	"""
-	print("	temp_row_of_cir_sim_res[1]:",temp_row_of_cir_sim_res[1],".")
-	print("	temp_row_of_cir_sim_res[1:]:",temp_row_of_cir_sim_res[1:],".")
+	print("	temp_list_column_headers[1]:",temp_list_column_headers[1],".")
+	print("	simulation_results_database[temp_list_column_headers[1]]:",simulation_results_database[temp_list_column_headers[1]],".")
+	print("	temp_row_of_cir_sim_res[2:]:",temp_row_of_cir_sim_res[2:],".")
 	for index, (current_field_name,current_field_data) in enumerate(zip(temp_list_column_headers[1:],simulation_results_database)):
 		print(":	current_field_name:",current_field_name,".")
-		print(":	temp_list_column_headers[current_field_name]:",temp_list_column_headers[current_field_name],".")
+		#print(":	temp_list_column_headers[current_field_name]:",temp_list_column_headers[current_field_name],".")
+		print(":	temp_list_column_headers[index]:",temp_list_column_headers[index],".")
 		#print(":	simulation_results_database:",simulation_results_database,".")
 		"""
 		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
