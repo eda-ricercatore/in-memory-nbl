@@ -193,11 +193,18 @@ else:
 	print("	simulation_results_database[temp_list_column_headers[1]]:",simulation_results_database[temp_list_column_headers[1]],".")
 	print("	temp_list_column_headers[2:]:",temp_list_column_headers[2:],".")
 	"""
-	for index, (current_field_name,current_field_data) in enumerate(zip(temp_list_column_headers[1:],simulation_results_database)):
+	for index, (current_field_name,current_field_data,enumerated_color) in enumerate(zip(temp_list_column_headers[2:],simulation_results_database,mcolors.TABLEAU_COLORS)):
 		print(":	current_field_name:",current_field_name,".")
-		#print(":	temp_list_column_headers[current_field_name]:",temp_list_column_headers[current_field_name],".")
-		print(":	temp_list_column_headers[index]:",temp_list_column_headers[index],".")
+		# Name of the field/column.
+		print(":	temp_list_column_headers[index]:",temp_list_column_headers[index+1],".")
+		# Data set for the field/column.
 		print(":	simulation_results_database[current_field_name]:",simulation_results_database[current_field_name],".")
+		print("	current color:",enumerated_color,".")
+		ax.plot(temp_list_column_headers[1], simulation_results_database[current_field_name], enumerated_color)
+		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
+		yevents1 = EventCollection(ydata1, color='tab:blue', linelength=0.05, orientation='vertical')
+		ax.add_collection(xevents1)
+		ax.add_collection(yevents1)
 		"""
 		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
 		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
