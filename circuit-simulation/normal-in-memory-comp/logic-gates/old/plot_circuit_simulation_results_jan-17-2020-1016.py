@@ -205,7 +205,6 @@ else:
 	print(":	temp_list_column_headers[1]:",temp_list_column_headers[1],".")
 	print("	len(simulation_results_database[temp_list_column_headers[1]]):",len(simulation_results_database[temp_list_column_headers[1]]),".")
 	#print("	simulation_results_database[temp_list_column_headers[1]]:",simulation_results_database[temp_list_column_headers[1]],".")
-	plots = []
 	for index, (current_field_name,current_field_data,enumerated_color) in enumerate(zip(temp_list_column_headers[2:],simulation_results_database,mcolors.TABLEAU_COLORS)):
 		print(":	current_field_name:",current_field_name,".")
 		# Name of the field/column.
@@ -218,12 +217,11 @@ else:
 			Plot currently enumerated field (i.e., V_in or V_out)
 				on the y-axis against time column/field on the x-axis.
 		"""
-		plots.append(plt.plot(simulation_results_database[temp_list_column_headers[1]],simulation_results_database[current_field_name], color=enumerated_color))
-		#ax.plot(simulation_results_database[temp_list_column_headers[1]], simulation_results_database[current_field_name], color=enumerated_color)
+		ax.plot(simulation_results_database[temp_list_column_headers[1]], simulation_results_database[current_field_name], color=enumerated_color)
 		#xevents1 = EventCollection(simulation_results_database[temp_list_column_headers[1]], color=enumerated_color, linelength=0.05)
-		#yevents1 = EventCollection(simulation_results_database[current_field_name], color=enumerated_color, linelength=0.05, orientation='vertical')
+		yevents1 = EventCollection(simulation_results_database[current_field_name], color=enumerated_color, linelength=0.05, orientation='vertical')
 		#ax.add_collection(xevents1)
-		#ax.add_collection(yevents1)
+		ax.add_collection(yevents1)
 		"""
 		ax.plot(temp_list_column_headers[1], ydata1, color='tab:blue')
 		xevents1 = EventCollection(xdata1, color='tab:blue', linelength=0.05)
@@ -237,13 +235,9 @@ else:
 		ax.add_collection(yevents2)
 		"""
 	# set the limits
-	#ax.set_xlim([0, 1])
-	#ax.set_ylim([0, 1])
-	# See https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html
-	plt.legend(tuple(plots), ('V_in(V)', 'Vout(V)'))
-	plt.xlabel('time (s)')
-	plt.ylabel('V_in(V), Vout(V)')
-	plt.title('Plot of Xyce circuit simulation results of V_in(V) and Vout(V) over time (s)')
+	ax.set_xlim([0, 1])
+	ax.set_ylim([0, 1])
+	ax.set_title('line plot with data points')
 	"""
 		@modified by Zhiyang Ong, January 15, 2020.
 		Save plot in PDF format.
