@@ -88,7 +88,22 @@ import numpy as np
 
 
 
+nanosecond_threshold = 0.000000001
+microsecond_threshold = 0.000001
+millisecond_threshold = 0.001
 
+
+# ============================================================
+##	Method to scale for nanoseconds, microseconds, and milliseconds.
+#
+#	@param minimum_time_interval - Time interval/increment
+#				indicating how much we should scale the time
+#				field/column by.
+#	@return the scaling factor (or scale factor) for the time
+#				field/column.
+#	O(1) method.
+def scaling_factor_for_time_column(minimum_time_interval):
+	if ( < minimum_time_interval)
 
 
 # ============================================================
@@ -99,11 +114,26 @@ import numpy as np
 #				intervals/increments between major ticks need to
 #				be found for the y-axes.
 #				This is used for multiple fields of data, such that
-#					two scales need to be used to plot the data.
+#					two scales may need to be used to plot the data.
+#				If there exists more than two scales for the y-axis,
+#					such requirement cannot be met.
 #	@return - .
 #	O(1) method.
-@staticmethod
-def psl_uniform(type_of_signal=bv_signal):
+def determine_interval_between_major_ticks_xy_axes(research_results_database,list_column_headers):
+	x_minimum = min(research_results_database[list_column_headers[1]])
+	x_maximum = max(research_results_database[list_column_headers[1]])
+	x_major_increment = math.ceil((x_maximum - x_minimum)/10)
+	print("x_major_increment is:",x_major_increment,".")
+	x_range = range(x_minimum, x_maximum, x_major_increment)
+	for current_column_header in list_column_headers[2:]:
+		y_minimum = min(research_results_database[list_column_headers[current_column_header]])
+		y_maximum = max(research_results_database[list_column_headers[current_column_header]])
+		y_major_increment = math.ceil((x_maximum - x_minimum)/10)
+		y_range = range(x_minimum, x_maximum, x_major_increment)
+		y_ranges.append(y_range)
+	return x_range, y_ranges
+
+
 
 
 
@@ -317,6 +347,7 @@ else:
 		See https://matplotlib.org/gallery/subplots_axes_and_figures/fahrenheit_celsius_scales.html
 			\cite[From Subplots, axes and figures: Different scales on the same axes]{MatplotlibDevelopmentTeam2020a}
 	"""
+	"""
 	number_of_rows = len(simulation_results_database[temp_list_column_headers[1]])
 	index_of_last_row = number_of_rows - 1
 	x_major_increment = math.ceil(index_of_last_row/10)
@@ -328,6 +359,8 @@ else:
 	print("	simulation_results_database[temp_list_column_headers[1]]",simulation_results_database[temp_list_column_headers[1]],".")
 	x_major_ticks = range(0, number_of_rows,x_major_increment)
 	y_major_ticks = range(y_min, y_max,y_major_increment)
+	"""
+	x_major_ticks, y_major_ticks = determine_interval_between_major_ticks_xy_axes(simulation_results_database,temp_list_column_headers)
 	ax.set_xticks(x_major_ticks)
 	ax.set_yticks(y_major_ticks)
 	plt.xlabel('time (s)')
