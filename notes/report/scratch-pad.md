@@ -820,6 +820,13 @@ Submission: Feb 12, 2020, anywhere on Earth
 
 + finish automated regression for the *data analysis tool*:
 	- data_analysis_tool.py
+		* get_relative_error(experimental_value=1,theoretical_value=1).
+		* get_percent_error(experimental_value=1,theoretical_value=1).
+		* get_arithmetic_average_of_absolute_values(list_of_numbers=[]).
+		* get_relative_difference(quantity1=1,quantity2=1).
+		* get_relative_difference_friendly_version(quantity1=1,quantity2=1).
+		* get_relative_percentage_difference_friendly_version(quantity1=1,quantity2=1).
+		* get_relative_percentage_difference(quantity1=1,quantity2=1).
 	- data_analysis_tool_tester.py
 
 
