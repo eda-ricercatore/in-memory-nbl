@@ -155,12 +155,15 @@ class data_analysis:
 	#	\cite{WikipediaContributors2019g}
 	#	@return - The reference value for a particular attribute/property.
 	#	O(1) method.
+	#	Tested.
 	@staticmethod
 	def get_reference_value(property="c"):
 		return data_analysis.dict_of_reference_values[property]
 	# =========================================================
 	#	Method to determine the actual change between quantity1 and
 	#		quantity2.
+	#	Actual change = x - x_reference,
+	#				or = final - initial 
 	#	\cite{WikipediaContributors2019g}
 	#	@param quantity1 - A quantity that I want to find the actual
 	#		change of.
@@ -169,9 +172,10 @@ class data_analysis:
 	#	@return - The actual change.
 	#	Note that the actual change can be negative.
 	#	O(1) method.
+	#	Tested.
 	@staticmethod
-	def get_actual_change(quantity1=0,quantity2=0):
-		return (quantity1 - quantity2)
+	def get_actual_change(quantity_x=0,quantity_reference=0):
+		return (quantity_x - quantity_reference)
 	# =========================================================
 	#	Method to determine the absolute difference between quantity1
 	#		and quantity2.
@@ -185,6 +189,7 @@ class data_analysis:
 	#	O(1) method.
 	#	Reference:
 	#		https://en.wikipedia.org/wiki/Absolute_difference
+	#	Tested.
 	@staticmethod
 	def get_absolute_difference(quantity1=0,quantity2=0):
 		"""
@@ -207,6 +212,7 @@ class data_analysis:
 	#	Note that the relative change can be negative.
 	#	@precondition - ref_qty != 0.
 	#	O(1) method.
+	#	Tested.
 	@staticmethod
 	def get_relative_change(quantity1=1,ref_qty=1):
 		# Check precondition: ref_qty != 0.
@@ -240,11 +246,15 @@ class data_analysis:
 	#	@param experimental_value - The experimental (measured) value.
 	#	@param theoretical_value - The theoretical (accepted) value.
 	#	@return - The relative error.
+	#	@precondition - theoretical_value != 0.
 	#	O(1) method.
 	#	Reference:
 	#		https://en.wikipedia.org/wiki/Relative_change_and_difference
 	@staticmethod
 	def get_relative_error(experimental_value=1,theoretical_value=1):
+		# Check precondition: theoretical_value != 0.
+		if 0 == theoretical_value:
+			raise Exception("	theoretical_value cannot be zero.")
 		return (data_analysis.get_absolute_difference(experimental_value,theoretical_value)/abs(theoretical_value))
 	# =========================================================
 	#	Method to determine the percent error between experimental
@@ -254,11 +264,15 @@ class data_analysis:
 	#	@param experimental_value - The experimental (measured) value.
 	#	@param theoretical_value - The theoretical (accepted) value.
 	#	@return - The relative change.
+	#	@precondition - theoretical_value != 0.
 	#	O(1) method.
 	#	Reference:
 	#		https://en.wikipedia.org/wiki/Relative_change_and_difference
 	@staticmethod
 	def get_percent_error(experimental_value=1,theoretical_value=1):
+		# Check precondition: theoretical_value != 0.
+		if 0 == theoretical_value:
+			raise Exception("	theoretical_value cannot be zero.")
 		return (100*data_analysis.get_relative_error(experimental_value,theoretical_value))
 	# =========================================================
 	#	Method to determine the arithmetic mean, or average, of
@@ -314,7 +328,7 @@ class data_analysis:
 	#	@param quantity2 - Another quantity that I want to find
 	#		the relative difference of.
 	#	@return - The relative difference.
-	#	@precondition - (quantity1 != 0) or (quantity2 != 0).
+	#	@precondition - (quantity1 != 0) and (quantity2 != 0).
 	#	@assertion - absolute difference, |quantity1 - quantity2| >= 0.
 	#	@postcondition - average_of_absolute_values > 0.
 	#	O(1) method.
