@@ -686,38 +686,25 @@ https://nanoscalereslett.springeropen.com/track/pdf/10.1186/s11671-017-2419-8
 #	Noise-based Logic
 
 Squeezed and non-squeezed instantaneous NBL
++ \cite{Kish2010} requires a linear amplifier to implement the NOT/inverter operation for a non-squeezed INBL
 
 
-  https://www.worldscientific.com/doi/10.1142/S0219477510000253   
-Requires a linear amplifier to implement the NOT/inverter operation for a non-squeezed INBL
-
-
-
+\cite{Kish2009} - defines NBL
 
 
 
-
-cite this
-Noise-based logic: Binary, multi-valued, or fuzzy, with optional superposition of logic states
-Author links open overlay panelLaszlo B.Kish1
-Show more
-https://doi.org/10.1016/j.physleta.2008.12.068
 SAT solving NBL paper
  https://dl.acm.org/doi/10.1145/2228360.2228593   
-cite this
-INBL, instantaneous NBL
-   https://www.worldscientific.com/doi/abs/10.1142/S0219477510000253   
 
 
 
- https://www.tandfonline.com/doi/full/10.1080/17445760.2016.1140168   
-cite this - hat drawing paper
+\cite{Zhang2017a} - hat drawing paper
+
 database search paper
-   https://arxiv.org/abs/1905.03162   
-   https://www.worldscientific.com/doi/abs/10.1142/S0219477518500335   
-operations on the reference system
-No circuits
-   https://www.worldscientific.com/doi/abs/10.1142/S0219477518500335   
++ https://arxiv.org/abs/1905.03162   
++ https://www.worldscientific.com/doi/abs/10.1142/S0219477518500335   
+	- operations on the reference system
+	- No circuits
 
 
 
