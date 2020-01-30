@@ -693,16 +693,16 @@ Squeezed and non-squeezed instantaneous NBL
 
 
 
-SAT solving NBL paper
- https://dl.acm.org/doi/10.1145/2228360.2228593   
+SAT solving NBL paper \cite{Lin2012b}
+
 
 
 
 \cite{Zhang2017a} - hat drawing paper
 
 database search paper
-+ https://arxiv.org/abs/1905.03162   
-+ https://www.worldscientific.com/doi/abs/10.1142/S0219477518500335   
++ \cite{Kish2018}
++ \cite{Kish2018a}   
 	- operations on the reference system
 	- No circuits
 
