@@ -825,8 +825,8 @@ Submission: Feb 12, 2020, anywhere on Earth
 	- Use the round() function instead.
 + [x] rename statistics package to something else, and do regression testing to verify that it broke nothing.
 	- statistic_pkg
-+ [ ] modify current time measurement to store the method for measurement, so
-	that method caller does not need to specify the method in the method call 
++ [x] modify current time measurement to store the method for measurement, so
+	that method caller does not need to specify the method in the method call for elapsed time 
 + [ ] finish testing methods for measuring current time
 + [ ] finish testing functions to check relative difference, and related relative
 	comparisons and absolute comparison.
