@@ -465,6 +465,12 @@ https://en.wikipedia.org/wiki/Cross-correlation
 
 
 
+##	Coherent hardware accelerators
+
+
+coherent hardware accelerators:
++ What are coherent hardware accelerators?
+
 
 
 
@@ -723,12 +729,14 @@ No circuits
 
 
 
+#	Heterogeneous Computing
 
 
-
-
-
-
++ https://queue.acm.org/detail.cfm?id=3038873
++ https://en.wikipedia.org/wiki/Heterogeneous_computing
++ https://en.wikipedia.org/wiki/ARM_big.LITTLE
++ https://www.youtube.com/watch?v=Ak_TQiZWLhA
++ https://www.forbes.com/sites/patrickmoorhead/2013/11/18/qualcomm-dont-confuse-heterogeneous-computing-hc-with-heterogeneous-multiprocessing-hmp/#1d659c4c47a5
 
 
 ##	Logic Regression
@@ -813,8 +821,16 @@ Submission: Feb 12, 2020, anywhere on Earth
 #	To-Do List
 
 
-+ rename statistics package to something else, and do regression testing to verify that it broke nothing.
++ [x] function to round off numbers to their nearest number, using math.ceil() and math.floor().
+	- Use the round() function instead.
++ [x] rename statistics package to something else, and do regression testing to verify that it broke nothing.
 	- statistic_pkg
++ [ ] finish testing functions to check relative difference, and related relative
+	comparisons and absolute comparison.
++ [ ] hat-drawing experiment with RTW-based NBL
++ [ ] hat-drawing experiment with RTW-based INBL
+
+
 
 
 
@@ -828,6 +844,10 @@ Submission: Feb 12, 2020, anywhere on Earth
 		* get_relative_percentage_difference(quantity1=1,quantity2=1).
 	- data_analysis_tool_tester.py
 	- 
+
+
+
++ perform ***performance sensitivity analysis and the optimization***
 
 
 Need 27 classroom hours; I have 15 + 4 + 9 = 28 hours.
@@ -847,4 +867,29 @@ Need 27 classroom hours; I have 15 + 4 + 9 = 28 hours.
 
 
 https://ogsdpss.tamu.edu/
+
+
+
+
+
+
+
+
+
+
+#	Machine Learning
+
+##	Neural Networks
+
+###	Deep Learning
+
+
+
+linear neural networks and nonlinear neural networks
++ http://neuralnetworksanddeeplearning.com/chap4.html
++ https://stackoverflow.com/questions/41244421/linear-vs-nonlinear-neural-network/41245540#41245540
+
+
+
+
 

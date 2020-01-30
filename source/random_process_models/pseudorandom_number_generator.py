@@ -13,6 +13,15 @@
 
 
 
+	References:
+	+ \cite[From SciPy: Numpy and Scipy Documentation: NumPy v1.17 Manual: NumPy Reference: Routines: Random sampling (numpy.random)]{TheSciPyCommunity2019c}
+		- https://docs.scipy.org/doc/numpy/reference/random/index.html#module-numpy.random
+		- last accessed on January 24, 2020.
+
+
+
+
+
 
 	Revision History:
 	September 6, 2019			Version 0.1	Script.
@@ -69,6 +78,14 @@ import warnings
 import re
 import datetime
 import random
+"""
+	Note that users can use numpy.random.uniform() too.
+	
+	References:
+	+ https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.random.uniform.html
+"""
+
+
 
 ###############################################################
 #	Import Custom Python Packages and Modules
