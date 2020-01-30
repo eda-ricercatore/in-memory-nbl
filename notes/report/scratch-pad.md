@@ -827,9 +827,10 @@ Submission: Feb 12, 2020, anywhere on Earth
 	- statistic_pkg
 + [x] modify current time measurement to store the method for measurement, so
 	that method caller does not need to specify the method in the method call for elapsed time 
-+ [ ] finish testing methods for measuring current time
++ [x] finish testing methods for measuring current time
 + [ ] finish testing functions to check relative difference, and related relative
 	comparisons and absolute comparison.
+	- ***Postpone till meeting is over.***
 + [ ] hat-drawing experiment with RTW-based NBL
 + [ ] hat-drawing experiment with RTW-based INBL
 
