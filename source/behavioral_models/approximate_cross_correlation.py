@@ -342,12 +342,12 @@ class approx_cross_correlation:
 			for list_in_results in range(results_size_per_dimension):
 				for other_list_in_results in range(list_in_results+1,results_size_per_dimension):
 					print("Comparing methods:",results[list_in_results][0]," and ",results[other_list_in_results][0],".")
-					print("Relative difference for std_dev_x_corr",results[list_in_results][2]," and ",results[other_list_in_results][2],"is",data_analysis.get_relative_percentage_difference_friendly_version(results[list_in_results][2],results[other_list_in_results][2]),".")
-					print("Relative difference for var_cross_correlation",results[list_in_results][3]," and ",results[other_list_in_results][3],"is",data_analysis.get_relative_percentage_difference_friendly_version(results[list_in_results][3],results[other_list_in_results][3]),".")
-					print("Relative difference for arith_mean_cross_correlation",results[list_in_results][4]," and ",results[other_list_in_results][4],"is",data_analysis.get_relative_percentage_difference_friendly_version(results[list_in_results][4],results[other_list_in_results][4]),".")
-					print("Relative difference for ptp_cross_correlationget_relative_difference_friendly_version",results[list_in_results][5]," and ",results[other_list_in_results][5],"is",data_analysis.get_relative_percentage_difference_friendly_version(results[list_in_results][5],results[other_list_in_results][5]),".")
-					print("Relative difference for amax_cross_correlation",results[list_in_results][6]," and ",results[other_list_in_results][6],"is",data_analysis.get_relative_percentage_difference_friendly_version(results[list_in_results][6],results[other_list_in_results][6]),".")
-					print("Relative difference for amin_cross_correlation",results[list_in_results][7]," and ",results[other_list_in_results][7],"is",data_analysis.get_relative_percentage_difference_friendly_version(results[list_in_results][7],results[other_list_in_results][7]),".")
+					print("Relative difference for std_dev_x_corr",results[list_in_results][2]," and ",results[other_list_in_results][2],"is",data_analysis.get_relative_percentage_difference(results[list_in_results][2],results[other_list_in_results][2]),".")
+					print("Relative difference for var_cross_correlation",results[list_in_results][3]," and ",results[other_list_in_results][3],"is",data_analysis.get_relative_percentage_difference(results[list_in_results][3],results[other_list_in_results][3]),".")
+					print("Relative difference for arith_mean_cross_correlation",results[list_in_results][4]," and ",results[other_list_in_results][4],"is",data_analysis.get_relative_percentage_difference(results[list_in_results][4],results[other_list_in_results][4]),".")
+					print("Relative difference for ptp_cross_correlationget_relative_difference_friendly_version",results[list_in_results][5]," and ",results[other_list_in_results][5],"is",data_analysis.get_relative_percentage_difference(results[list_in_results][5],results[other_list_in_results][5]),".")
+					print("Relative difference for amax_cross_correlation",results[list_in_results][6]," and ",results[other_list_in_results][6],"is",data_analysis.get_relative_percentage_difference(results[list_in_results][6],results[other_list_in_results][6]),".")
+					print("Relative difference for amin_cross_correlation",results[list_in_results][7]," and ",results[other_list_in_results][7],"is",data_analysis.get_relative_percentage_difference(results[list_in_results][7],results[other_list_in_results][7]),".")
 					print("")
 
 
