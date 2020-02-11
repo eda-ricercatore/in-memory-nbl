@@ -203,7 +203,7 @@ class approx_cross_correlation:
 	#			function.
 	#		\cite{TheSciPyCommunity2019} shows an example.
 	@staticmethod
-	def cross_correlation_using_numpy(signal_x=[],signal_y=[],mode=numpy_correlate_mode_same):
+	def cross_correlation_using_numpy(signal_x=[],signal_y=[],mode=numpy_correlate_mode_valid):
 		return np.correlate(signal_x,signal_y,mode)
 	# ============================================================
 	##	Method to calculate the cross-correlation of two random

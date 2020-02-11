@@ -97,6 +97,13 @@ class prng_tester:
 		prompt = "	... Test: incorrect type of signal, 'whatever'.		{}"
 		statistical_analysis.increment_number_test_cases_used()
 		temp_rand_number = prng.psl_uniform("whatever")
+		"""
+			Currently supported pseudorandom number generation
+				are for binary numbers or values of RTW signals.
+			Since unsupported pseudorandom number generation
+				defaults to the mode for binary numbers, I would
+				compare the generated number to 0 and 1.
+		"""
 		if (1==temp_rand_number) or (0==temp_rand_number):
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()

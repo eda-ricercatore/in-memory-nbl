@@ -147,6 +147,13 @@ class prng:
 	#					- high value: "1"
 	#					- low value: "0"
 	#	@return - Nothing.
+	#
+	#	IMPORTANT NOTES:
+	#	+ Since only two types of signals are supported, and
+	#		they are both covered, there is no need to check
+	#		for preconditions (any type that is not RTW is
+	#		considered boolean, or bit vector).
+	#
 	#	O(1) method.
 	@staticmethod
 	def psl_uniform(type_of_signal=bv_signal):
