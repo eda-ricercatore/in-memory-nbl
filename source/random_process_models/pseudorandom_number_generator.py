@@ -168,7 +168,9 @@ class prng:
 	#				Hailperin1999,Meyer1997a}. 
 	#		- Added postconditions to make this extendable
 	#			for more signal types, or types of random
-	#			processes.
+	#			processes, February 11, 2020, 23:25 p.m.,
+	#			CET – Central European Time / European
+	#			Central Time (Standard Time).
 	#
 	#	O(1) method.
 	@staticmethod
