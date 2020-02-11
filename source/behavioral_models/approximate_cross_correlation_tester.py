@@ -78,6 +78,12 @@ from behavioral_models.approximate_cross_correlation import approx_cross_correla
 # Package and module to perform date and time operations.
 from utilities.date_time_processing import date_time_operations
 
+"""
+	Package and module to print statistics of software testing
+		results.
+"""
+from statistics_pkg.test_statistics import statistical_analysis
+
 ###############################################################
 """
 	Module to test approach to approximate cross-correlation.
@@ -103,22 +109,24 @@ class approx_cross_correlation_tester:
 	@staticmethod
 	def test_rtw_signal_generation_and_cross_correlation():
 		# Create a file object for writing.
-		print("=	Create a file object for writing.")
 		current_date_time = date_time_operations.get_current_date_time()
 		op_filename = "results/cross-correlation-results-"+current_date_time+".text"
 		op_file_obj = open(op_filename, 'w')
 		# Results for all iterations.
 		results_for_all_iterations = []
+		print("	Testing RTW signal generation and cross-correlation analysis.")
 		# List of number of discrete values for random signals/"processes". 
 		for k in [4, 8, 16, 32, 64, 128]:
-			print("=	Testing random ", k, "-bit signals.")
+			#print("	Testing", k, "-bit RTW signals.")
+			prompt = "	... Test " + str(k) + "-bit RTW signals.		{}"
+			statistical_analysis.increment_number_test_cases_used()
 			#for number_of_iterations in range(10):
 			# Generate a random signal of the type random telegraph wave (RTW).
 			x_rtw_1 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
-			print("x_rtw_1 is:",x_rtw_1,"=")
+			#print("x_rtw_1 is:",x_rtw_1,"=")
 			# Generate another RTW.
 			x_rtw_2 = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.rtw_signal,k)
-			print("x_rtw_2 is:",x_rtw_2,"=")
+			#print("x_rtw_2 is:",x_rtw_2,"=")
 			"""
 				Find the cross-correlation between these two RTWs,
 					using all approaches.
@@ -162,6 +170,8 @@ class approx_cross_correlation_tester:
 				print("============================================")
 				approx_cross_correlation.find_relative_percentage_difference(results)
 				results_for_all_iterations.append(results)
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
 		# Close the file object for writing.
 		op_file_obj.close()
 	## =========================================================

@@ -159,7 +159,11 @@ from random_process_models.random_process_generator import rand_signal_generator
 		analysis.
 """
 from statistics_pkg.data_analysis_tool import data_analysis
-
+"""
+	Package and module to print statistics of software testing
+		results.
+"""
+from statistics_pkg.test_statistics import statistical_analysis
 
 ###############################################################
 #	Import Python Packages and Modules from Python Libraries
@@ -190,6 +194,9 @@ class approx_cross_correlation:
 	#	@param signal_y - Another random signal.
 	#	@return - The cross-correlation between signal_x and signal_y.
 	#	O(1) method.
+	#
+	#	@tested with the following method:
+	#		+ cross_correlation_using_all_approaches_with_instrumentation()
 	#
 	#	References:
 	#		\cite{NumPyContributors2019} describes the modes for the
@@ -244,24 +251,24 @@ class approx_cross_correlation:
 		for current_mode in approx_cross_correlation.numpy_correlate_modes:
 			# Determine the cross-correlation using the current mode.
 			cross_correlation_from_numpy_correlate = approx_cross_correlation.cross_correlation_using_numpy(signal_x,signal_y,current_mode)
-			print("NumPy-based cross-correlation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
+			#print("NumPy-based cross-correlation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
 			"""
 				Perform statistical analysis on the set of
 					cross-correlation values.
 			"""
 			std_dev_cross_correlation = np.std(cross_correlation_from_numpy_correlate)
-			print("	NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",std_dev_cross_correlation,"=")
+			#print("	NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",std_dev_cross_correlation,"=")
 			var_cross_correlation = np.var(cross_correlation_from_numpy_correlate)
-			print("	NumPy-based cross-correlation's variance using",current_mode,"mode is:",var_cross_correlation,"=")
+			#print("	NumPy-based cross-correlation's variance using",current_mode,"mode is:",var_cross_correlation,"=")
 			arith_mean_cross_correlation = np.mean(cross_correlation_from_numpy_correlate)
-			print("	NumPy-based cross-correlation's arithmetic mean using",current_mode,"mode is:",arith_mean_cross_correlation,"=")
+			#print("	NumPy-based cross-correlation's arithmetic mean using",current_mode,"mode is:",arith_mean_cross_correlation,"=")
 			ptp_cross_correlation = np.ptp(cross_correlation_from_numpy_correlate)
-			print("	NumPy-based cross-correlation's min and max values (or peak to peak) using",current_mode,"mode is:",ptp_cross_correlation,"=")
+			#print("	NumPy-based cross-correlation's min and max values (or peak to peak) using",current_mode,"mode is:",ptp_cross_correlation,"=")
 			amax_cross_correlation = np.amax(cross_correlation_from_numpy_correlate)
-			print("	NumPy-based cross-correlation's max value using",current_mode,"mode is:",amax_cross_correlation,"=")
+			#print("	NumPy-based cross-correlation's max value using",current_mode,"mode is:",amax_cross_correlation,"=")
 			amin_cross_correlation = np.amin(cross_correlation_from_numpy_correlate)
-			print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
-			print("")
+			#print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
+			#print("")
 			results.append((current_mode, cross_correlation_from_numpy_correlate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
 		"""
 		Matplotlib.pyplot's solution for correlation causes
@@ -274,7 +281,122 @@ class approx_cross_correlation:
 		print("Matplotlib.pyplot b",b,"=")
 		"""
 		cross_correlation_from_pycorrelate = pyc.ucorrelate(np.array(signal_x),np.array(signal_y))
-		print("Pycorrelate-based cross-correlation is:",cross_correlation_from_pycorrelate,"=")
+		#print("Pycorrelate-based cross-correlation is:",cross_correlation_from_pycorrelate,"=")
+		"""
+			Perform statistical analysis on the set of
+				cross-correlation values.
+		"""
+		std_dev_cross_correlation = np.std(cross_correlation_from_pycorrelate)
+		print("	NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",std_dev_cross_correlation,"=")
+		var_cross_correlation = np.var(cross_correlation_from_pycorrelate)
+		print("	NumPy-based cross-correlation's variance using",current_mode,"mode is:",var_cross_correlation,"=")
+		arith_mean_cross_correlation = np.mean(cross_correlation_from_pycorrelate)
+		print("	NumPy-based cross-correlation's arithmetic mean using",current_mode,"mode is:",arith_mean_cross_correlation,"=")
+		ptp_cross_correlation = np.ptp(cross_correlation_from_pycorrelate)
+		print("	NumPy-based cross-correlation's min and max values (or peak to peak) using",current_mode,"mode is:",ptp_cross_correlation,"=")
+		amax_cross_correlation = np.amax(cross_correlation_from_pycorrelate)
+		print("	NumPy-based cross-correlation's max value using",current_mode,"mode is:",amax_cross_correlation,"=")
+		amin_cross_correlation = np.amin(cross_correlation_from_pycorrelate)
+		print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
+		print("")
+		results.append(("pyc.ucorrelate", cross_correlation_from_pycorrelate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
+		return results
+	# ============================================================
+	##	Method to calculate the cross-correlation of two random
+	#		signals, signal_x and signal_y, using all approaches
+	#		that I learned.
+	#
+	#	There exists different implementations, among Python
+	#		libraries, of functions to compute cross-correlation,
+	#		and some implementations have different "modes";
+	#		hence, there exists different definitions for
+	#			calculating cross-correlation. 
+	#
+	#	There exists different implementations, among Python
+	#		libraries, of functions to compute cross-correlation,
+	#		and some implementations have different "modes";
+	#		hence, there exists different definitions for
+	#			calculating cross-correlation. 
+	#
+	#	@param signal_x - A random signal.
+	#	@param signal_y - Another random signal.
+	#	@return - The cross-correlation between signal_x and signal_y.
+	#	O(1) method.
+	#
+	#	IMPORTANT NOTES:
+	#	This alternate method has instrumentation added to the
+	#		method "cross_correlation_using_all_approaches()".
+	#	Since the aforementioned method is so complicated, and
+	#		the method cannot be encapsulated by a deterministic
+	#		input/output behavior, instrumentation is added to
+	#		indicate "test" outcomes (successful execution of
+	#		the code).
+	#	Correctness of the methods called from different
+	#		*Python* libraries are not checked, since we assume
+	#		that they have been thoroughly tested.
+	#	However, the results from different method calls (using
+	#		methods from different Python libraries) would be
+	#		compared in the automated 
+	#
+	#	References:
+	#	+ \cite{Legend2011} provides some methods to compute the
+	#		cross-correlation between two random signals or vectors.
+	#		https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
+	#	+ \cite{TheSciPyCommunity2019a} provides a list of statistical
+	#		functions that I used a subset of.
+	@staticmethod
+	def cross_correlation_using_all_approaches_with_instrumentation(signal_x=[],signal_y=[]):
+		# List of tuples storing results regarding cross-correlation.
+		results = []
+		"""
+			Enumerate all modes of NumPy's correlate function.
+			
+			In the example from \cite{TheSciPyCommunity2019},
+				the cross-correlation has values greater than 1;
+				since the notes in \cite{TheSciPyCommunity2019}
+					indicate that the definition for
+					cross-correlation "is not unique," this can
+					explain why the cross-correlation for the
+					"valid" mode is >1.
+		"""
+		for current_mode in approx_cross_correlation.numpy_correlate_modes:
+			prompt = "	... Testing NumPy-based cross-correlation's " + current_mode + " mode.		{}"
+			statistical_analysis.increment_number_test_cases_used()
+			# Determine the cross-correlation using the current mode.
+			cross_correlation_from_numpy_correlate = approx_cross_correlation.cross_correlation_using_numpy(signal_x,signal_y,current_mode)
+			#print("NumPy-based cross-correlation using",current_mode,"mode is:",cross_correlation_from_numpy_correlate,"=")
+			"""
+				Perform statistical analysis on the set of
+					cross-correlation values.
+			"""
+			std_dev_cross_correlation = np.std(cross_correlation_from_numpy_correlate)
+			#print("	NumPy-based cross-correlation's standard deviation using",current_mode,"mode is:",std_dev_cross_correlation,"=")
+			var_cross_correlation = np.var(cross_correlation_from_numpy_correlate)
+			#print("	NumPy-based cross-correlation's variance using",current_mode,"mode is:",var_cross_correlation,"=")
+			arith_mean_cross_correlation = np.mean(cross_correlation_from_numpy_correlate)
+			#print("	NumPy-based cross-correlation's arithmetic mean using",current_mode,"mode is:",arith_mean_cross_correlation,"=")
+			ptp_cross_correlation = np.ptp(cross_correlation_from_numpy_correlate)
+			#print("	NumPy-based cross-correlation's min and max values (or peak to peak) using",current_mode,"mode is:",ptp_cross_correlation,"=")
+			amax_cross_correlation = np.amax(cross_correlation_from_numpy_correlate)
+			#print("	NumPy-based cross-correlation's max value using",current_mode,"mode is:",amax_cross_correlation,"=")
+			amin_cross_correlation = np.amin(cross_correlation_from_numpy_correlate)
+			#print("	NumPy-based cross-correlation's min value using",current_mode,"mode is:",amin_cross_correlation,"=")
+			#print("")
+			results.append((current_mode, cross_correlation_from_numpy_correlate, std_dev_cross_correlation, var_cross_correlation, arith_mean_cross_correlation, ptp_cross_correlation, amax_cross_correlation, amin_cross_correlation))
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		"""
+		Matplotlib.pyplot's solution for correlation causes
+			execution error
+		
+		(lags, c, line, b) = plt.xcorr(signal_x, signal_y,maxlags=4)
+		print("Matplotlib.pyplot lags",lags,"=")
+		print("Matplotlib.pyplot c",c,"=")
+		print("Matplotlib.pyplot line",line,"=")
+		print("Matplotlib.pyplot b",b,"=")
+		"""
+		cross_correlation_from_pycorrelate = pyc.ucorrelate(np.array(signal_x),np.array(signal_y))
+		#print("Pycorrelate-based cross-correlation is:",cross_correlation_from_pycorrelate,"=")
 		"""
 			Perform statistical analysis on the set of
 				cross-correlation values.
