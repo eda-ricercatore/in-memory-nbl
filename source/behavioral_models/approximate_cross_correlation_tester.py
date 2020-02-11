@@ -110,7 +110,7 @@ class approx_cross_correlation_tester:
 	def test_rtw_signal_generation_and_cross_correlation():
 		# Create a file object for writing.
 		current_date_time = date_time_operations.get_current_date_time()
-		op_filename = "results/cross-correlation-results-"+current_date_time+".text"
+		op_filename = "results/cross-correlation-results/cross-correlation-results-"+current_date_time+".text"
 		op_file_obj = open(op_filename, 'w')
 		# Results for all iterations.
 		results_for_all_iterations = []
