@@ -103,9 +103,9 @@ from utilities.timing_measurements.get_factorial import calculate_factorial
 	Package and module to print statistics of software testing
 		results.
 """
-from statistic_pkg.test_statistics import statistical_analysis
+from statistics_pkg.test_statistics import statistical_analysis
 # Package and module to check the validation of statistical analysis.
-from statistic_pkg.test_statistics_tester import statistical_analysis_tester
+from statistics_pkg.test_statistics_tester import statistical_analysis_tester
 
 
 ###############################################################

@@ -67,7 +67,7 @@ import calendar
 	Package and module to print statistics of software testing
 		results.
 """
-from statistic_pkg.test_statistics import statistical_analysis
+from statistics_pkg.test_statistics import statistical_analysis
 
 
 
@@ -464,6 +464,6 @@ class misc_tester:
 	def test_miscellaneous_methods():
 		print("")
 		print("")
-		print("==	Testing class: misc_tester.")
+		print("==	Testing class: misc.")
 		misc_tester.test_check_filename_format()
 		misc_tester.test_find_desired_location_for_results()

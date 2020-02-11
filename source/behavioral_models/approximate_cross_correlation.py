@@ -158,7 +158,7 @@ from random_process_models.random_process_generator import rand_signal_generator
 	Package and module to perform miscellaneous tasks in data
 		analysis.
 """
-from statistic_pkg.data_analysis_tool import data_analysis
+from statistics_pkg.data_analysis_tool import data_analysis
 
 
 ###############################################################

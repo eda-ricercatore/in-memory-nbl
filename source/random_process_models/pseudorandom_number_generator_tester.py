@@ -75,7 +75,7 @@ import random
 	Package and module to print statistics of software testing
 		results.
 """
-from statistic_pkg.test_statistics import statistical_analysis
+from statistics_pkg.test_statistics import statistical_analysis
 
 
 # Module to generate pseudorandom numbers.

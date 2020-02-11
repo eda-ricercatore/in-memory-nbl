@@ -88,20 +88,20 @@ import re
 	Package and module to print statistics of software testing
 		results.
 """
-from statistic_pkg.test_statistics import statistical_analysis
+from statistics_pkg.test_statistics import statistical_analysis
 # Package and module to check the validation of statistical analysis.
-from statistic_pkg.test_statistics_tester import statistical_analysis_tester
+from statistics_pkg.test_statistics_tester import statistical_analysis_tester
 
 """
 	Package and module to perform miscellaneous tasks in data
 		analysis.
 """
-from statistic_pkg.data_analysis_tool import data_analysis
+from statistics_pkg.data_analysis_tool import data_analysis
 """
 	Package and module to test the miscellaneous tasks in
 		analyzing data. 
 """
-from statistic_pkg.data_analysis_tool_tester import data_analysis_tester
+from statistics_pkg.data_analysis_tool_tester import data_analysis_tester
 
 
 
