@@ -206,10 +206,14 @@ class prng:
 		if (prng.rtw_signal == type_of_signal) and (return_value is not None) and ((-1 == return_value) or (1 == return_value)):
 			# Yes, its value must either be '-1' or '1' exclusively.
 			return return_value
-		# Is the random number generated for a bit vector?
-		elif (prng.bv_signal == type_of_signal) and (return_value is not None) and ((0 == return_value) or (1 == return_value)):
+		#	No, the random number is generated for a bit vector,
+		#		which is the default signal type.
+		#	Triple "double quotes" (""") to demark block comments
+		#		cause run-time interpretation problem.
+		#	Hence, use single-line comments instead.
+		elif (return_value is not None) and ((0 == return_value) or (1 == return_value)):
 			# Yes, its value must either be '0' or '1' exclusively.
 			return return_value
-		#else:
-		#	raise AssertionError("Unsupported signal type specification is not handled properly.")
+		else:
+			raise AssertionError("Random number not generated properly for bit vectors.")
 
