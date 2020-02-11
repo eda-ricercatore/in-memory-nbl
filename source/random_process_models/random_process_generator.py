@@ -133,25 +133,49 @@ class rand_signal_generator:
 		# Generate a random signal/"process" of n values.
 		for x in range(n):
 			"""
-				###	TODO
-				Check the output of psl_uniform(type_of_signal)
-					complies with specifications, as an assertion.
 				Checking for assertions.
 				For specified type of random signal, is the
 					generated pseudo-random number valid?
 			"""
 			random_value = prng.psl_uniform(type_of_signal)
+			"""
+				Is the random signal/process type a RTW signal
+					with incorrect values?
+			"""
 			if (type_of_signal == rand_signal_generator.rtw_signal) and (not((-1 == random_value) or (1 == random_value))):
-			random_signal.append()
+				# Yes. This value is not '-1' nor '1'.
+				print("!!!	random_value is:",random_value,".")
+				raise AssertionError("Values for RTW signals should only be '-1' or '1'.")
+			#	Else, by default, treat it as a bit vector.
+			#	Are its values are not '0' nor '1'?
+			#	Triple "double quotes" (""") to demark block comments
+			#		cause run-time interpretation problem.
+			#	Hence, use single-line comments instead.
+			elif (not((0 == random_value) or (1 == random_value))):
+				# Yes, the value is not '0' nor '1'.
+				print("!!!	random_value is:",random_value,".")
+				print("!!!	type_of_signal is:",type_of_signal,".")
+				raise AssertionError("Values for bit vectors should only be '0' or '1'.")
+			#	Else, its values are correct for the specified
+			#		type of random signal/process.
+			#	Triple "double quotes" (""") to demark block comments
+			#		cause run-time interpretation problem.
+			#	Hence, use single-line comments instead.
+			else:
+				random_signal.append(random_value)
 		"""
 			###	TODO
 			Check the random signal/"process" complies with
 				specifications, as a postcondition.
 			Checking for postconditions.
-			
+
+			Does the length of the random signal match the number
+				of specified values in the random signal?
 		"""
-		if k != len(random_signal):
+		if n != len(random_signal):
+			# No.
 			raise AssertionError("Incorrect number of values generated to represent k-bit random signal.")
+		#
 		return random_signal
 	# ============================================================
 	##	Method to generate a discrete-time random signal/process
