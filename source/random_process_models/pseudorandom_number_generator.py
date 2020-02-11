@@ -147,28 +147,41 @@ class prng:
 	#					- high value: "1"
 	#					- low value: "0"
 	#	@return - Nothing.
+	#	@postcondition
 	#
 	#	IMPORTANT NOTES:
 	#	+ Since only two types of signals are supported, and
 	#		they are both covered, there is no need to check
 	#		for preconditions (any type that is not RTW is
-	#		considered boolean, or bit vector).
+	#		considered boolean, or bit vector, by default).
+	#		- Likewise for postconditions. 
+	#		- If more types of signals are supported, check
+	#			for preconditions and postconditions to
+	#			ensure that exhaustive coverage of all types
+	#			is provided via contract programming
+	#			\cite{Tarlinder2017,BrooksJr2010,Samek2009,
+	#				Zeller2009,Huth2004,Stevens2000,
+	#				Hailperin1999,Meyer1997a}. 
+	#		- Added postconditions to make this extendable
+	#			for more signal types, or types of random
+	#			processes.
 	#
 	#	O(1) method.
 	@staticmethod
 	def psl_uniform(type_of_signal=bv_signal):
 	#def psl_uniform(type_of_signal=prng.bv_signal):
+		return_value = None
 		# Is the selected random signal/process a RTW?
-		if type_of_signal == prng.rtw_signal:
+		if prng.rtw_signal == type_of_signal:
 			"""
 				Yes.
 				Shall the generated pseudorandom number arbitrated
 					to a high or low value?
 			"""
 			if random.uniform(prng.low_value_rtw,prng.high_value_rtw) >= prng.rtw_arbitration_value:
-				return prng.high_value_rtw
+				return_value = prng.high_value_rtw
 			else:
-				return prng.low_value_rtw
+				return_value = prng.low_value_rtw
 		else:
 			"""
 				No. The random signal/process is treated as
@@ -177,8 +190,26 @@ class prng:
 					to a high or low value?
 			"""
 			if random.uniform(prng.low_value_bit_vector,prng.high_value_bit_vector) >= prng.bit_vector_arbitration_value:
-				return prng.high_value_bit_vector
+				return_value = prng.high_value_bit_vector
 			else:
-				return prng.low_value_bit_vector
-
+				return_value = prng.low_value_bit_vector
+		"""
+			Check for postconditions.
+			Return value cannot be a "None" object.
+			It has to be a number, specifically an integer or
+				floating-point number.
+		"""
+		if None == return_value:
+			# Return value is the forbidden "None" object.
+			raise AssertionError("Cannot randomly generate a 'None' object.")
+		# Is the random number generated for a RTW signal?
+		if (prng.rtw_signal == type_of_signal) and (return_value is not None) and ((-1 == return_value) or (1 == return_value)):
+			# Yes, its value must either be '-1' or '1' exclusively.
+			return return_value
+		# Is the random number generated for a bit vector?
+		elif (prng.bv_signal == type_of_signal) and (return_value is not None) and ((0 == return_value) or (1 == return_value)):
+			# Yes, its value must either be '0' or '1' exclusively.
+			return return_value
+		#else:
+		#	raise AssertionError("Unsupported signal type specification is not handled properly.")
 
