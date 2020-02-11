@@ -147,7 +147,11 @@ class prng:
 	#					- high value: "1"
 	#					- low value: "0"
 	#	@return - Nothing.
-	#	@postcondition
+	#	@postcondition - Return value for:
+	#		+ specified RTW signals, is either '-1' or '1'.
+	#		+ specified bit vectors, and unsupported random
+	#			signals, is either '0' or '1'.
+	#		+ cannot be the default "None" object.
 	#
 	#	IMPORTANT NOTES:
 	#	+ Since only two types of signals are supported, and
