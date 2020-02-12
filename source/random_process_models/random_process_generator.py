@@ -129,6 +129,27 @@ class rand_signal_generator:
 	#	O(1) method.
 	@staticmethod
 	def gen_rand_signal_uniform_distributn(type_of_signal=bv_signal, n=16):
+		"""
+			Check if the type of the signal is supported.
+			Is the type of the signal not a RTW signal?
+		"""
+		if type_of_signal != rand_signal_generator.rtw_signal:
+			"""
+				No. Make it a bit vector.
+				Since the only types of supported signals are
+					RTW signals and bit vectors, if a signal
+					is not a RTW signal, it should be a bit
+					vector.
+				Treat all unsupported signals as a bit vector,
+					which is the default signal type.
+			"""
+			print("!!!	Initial type_of_signal is:",type_of_signal,".")
+			type_of_signal = rand_signal_generator.bv_signal
+			print("!!!	Modified type_of_signal is:",type_of_signal,".")
+		"""
+			Initialize a 0-bit random signal that would be
+				appended with randomly generated values/digits.
+		"""
 		random_signal = []
 		# Generate a random signal/"process" of n values.
 		for x in range(n):
@@ -151,7 +172,7 @@ class rand_signal_generator:
 			#	Triple "double quotes" (""") to demark block comments
 			#		cause run-time interpretation problem.
 			#	Hence, use single-line comments instead.
-			elif (not((0 == random_value) or (1 == random_value))):
+			elif (type_of_signal == rand_signal_generator.bv_signal) and (not((0 == random_value) or (1 == random_value))):
 				# Yes, the value is not '0' nor '1'.
 				print("!!!	random_value is:",random_value,".")
 				print("!!!	type_of_signal is:",type_of_signal,".")
