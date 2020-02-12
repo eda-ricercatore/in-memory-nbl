@@ -160,12 +160,14 @@ class rand_signal_generator:
 		# Generate a random signal/"process" of n values.
 		for x in range(n):
 			"""
-				Checking for assertions.
-				For specified type of random signal, is the
-					generated pseudo-random number valid?
+				Generate a pseudo-random number for a
+					specified type of random signal.
 			"""
 			random_value = prng.psl_uniform(type_of_signal)
 			"""
+				Checking for assertions.
+				For specified type of random signal, is the
+					generated pseudo-random number valid?
 				Is the random signal/process type a RTW signal
 					with incorrect values?
 			"""
