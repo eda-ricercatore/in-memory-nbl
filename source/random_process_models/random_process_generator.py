@@ -143,9 +143,7 @@ class rand_signal_generator:
 				Treat all unsupported signals as a bit vector,
 					which is the default signal type.
 			"""
-			print("!!!	Initial type_of_signal is:",type_of_signal,".")
 			type_of_signal = rand_signal_generator.bv_signal
-			print("!!!	Modified type_of_signal is:",type_of_signal,".")
 		"""
 			Initialize a 0-bit random signal that would be
 				appended with randomly generated values/digits.
