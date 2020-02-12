@@ -120,10 +120,18 @@ class rand_signal_generator:
 	#				random signal/"process".
 	#				Its default value is: 16.
 	#	@return - Nothing.
-	#	@precondition - None.
+	#	@precondition - type_of_signal must belong to a supported
+	#		type of signal.
 	#		Default random process/signal type is: bit vector.
-	#		Unsupported random process/signal types are processed
-	#			as bit vectors.
+	#		Process unsupported random process/signal types as
+	#			bit vectors.
+	#	@assertion - Randomly generated values/digits to form
+	#		the random process/signal must be a valid value for
+	#		that random process/signal.
+	#		E.g., each value/digital for a RTW signal is either
+	#			a '-1' or a '1'.
+	#		E.g., each value/digital for a bit vector is either
+	#			a '0' or a '1'.
 	#	@postcondition - Number of values/digits in the random
 	#		process/signal is: "k".
 	#	O(1) method.
@@ -163,7 +171,6 @@ class rand_signal_generator:
 			"""
 			if (type_of_signal == rand_signal_generator.rtw_signal) and (not((-1 == random_value) or (1 == random_value))):
 				# Yes. This value is not '-1' nor '1'.
-				print("!!!	random_value is:",random_value,".")
 				raise AssertionError("Values for RTW signals should only be '-1' or '1'.")
 			#	Else, by default, treat it as a bit vector.
 			#	Are its values are not '0' nor '1'?
@@ -172,8 +179,6 @@ class rand_signal_generator:
 			#	Hence, use single-line comments instead.
 			elif (type_of_signal == rand_signal_generator.bv_signal) and (not((0 == random_value) or (1 == random_value))):
 				# Yes, the value is not '0' nor '1'.
-				print("!!!	random_value is:",random_value,".")
-				print("!!!	type_of_signal is:",type_of_signal,".")
 				raise AssertionError("Values for bit vectors should only be '0' or '1'.")
 			#	Else, its values are correct for the specified
 			#		type of random signal/process.
@@ -183,9 +188,6 @@ class rand_signal_generator:
 			else:
 				random_signal.append(random_value)
 		"""
-			###	TODO
-			Check the random signal/"process" complies with
-				specifications, as a postcondition.
 			Checking for postconditions.
 
 			Does the length of the random signal match the number
@@ -194,7 +196,26 @@ class rand_signal_generator:
 		if n != len(random_signal):
 			# No.
 			raise AssertionError("Incorrect number of values generated to represent k-bit random signal.")
-		#
+		"""
+			Enumerate each value/digit in the random process/signal
+				to determine if it is valid.
+		"""
+		for value_of_digit in random_signal:
+			# Are the values/digits of a RTW signal '-1' or '1'?
+			if (type_of_signal == rand_signal_generator.rtw_signal) and (not((-1 == value_of_digit) or (1 == value_of_digit))):
+				# Yes. This value is not '-1' nor '1'.
+				raise AssertionError("Values for RTW signals must be '-1' or '1'.")
+			# Are the values/digits of a bit vector '0' or '1'?
+			elif (type_of_signal == rand_signal_generator.bv_signal) and (not((0 == value_of_digit) or (1 == value_of_digit))):
+				# Yes. This value is not '0' nor '1'.
+				raise AssertionError("Values for bit vectors must be '0' or '1'.")
+			elif (not (type_of_signal == rand_signal_generator.rtw_signal)) and (not (type_of_signal == rand_signal_generator.bv_signal)):
+				print("!!!	type_of_signal is:",type_of_signal,".")
+				raise AssertionError("Signal type is not supported.")
+			"""
+				Else, the currently enumerated value/digit of the
+					signal is valid.
+			"""
 		return random_signal
 	# ============================================================
 	##	Method to generate a discrete-time random signal/process
