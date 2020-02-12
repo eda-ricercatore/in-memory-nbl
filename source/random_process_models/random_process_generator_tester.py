@@ -116,7 +116,7 @@ class rand_signal_generator_tester:
 				either -1 or 1 exclusively, and not any other
 				value (e.g., 0, 1234, or 3.14).
 		"""
-		if (k == len(temp_rand_signal)) and (-1 in temp_rand_signal) and (1 in temp_rand_signal) and (not (0 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
+		if (k == len(temp_rand_signal)) and ((-1 in temp_rand_signal) or (1 in temp_rand_signal)) and (not (0 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
@@ -125,13 +125,33 @@ class rand_signal_generator_tester:
 			Generated bit vector signal of length k must have k
 				values/digits.
 			Each value/digit in the bit vector should also be
-				either -1 or 1 exclusively, and not any other
+				either 0 or 1 exclusively, and not any other
 				value (e.g., 0, 1234, or 3.14).
 		"""
 		prompt = "	... Test: type of signal = bit vector.			{}"
 		statistical_analysis.increment_number_test_cases_used()
 		temp_rand_signal = rand_signal_generator.gen_rand_signal_uniform_distributn(rand_signal_generator.bv_signal,k)
-		if (k == len(temp_rand_signal)) and (0 in temp_rand_signal) and (1 in temp_rand_signal) and (not (-1 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
+		if (k == len(temp_rand_signal)) and ((0 in temp_rand_signal) or (1 in temp_rand_signal)) and (not (-1 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+	## =========================================================
+	#	Method to test the method that generates a bit-vector
+	#		-based discrete-time random signal/process for "n"
+	#		values.
+	#	@param - Nothing
+	#	@return - Nothing.
+	#	O(1) method.
+	@staticmethod
+	def test_gen_bit_vector_getrandbits():
+		# Number of discrete values representing a random signal/"process".
+		k = 8
+		print("	Testing gen_rand_signal_uniform_distributn().")
+		prompt = "	... Test: type of signal = bit vector.			{}"
+		statistical_analysis.increment_number_test_cases_used()
+		temp_rand_signal = rand_signal_generator.gen_bit_vector_getrandbits(k)
+		if (k == len(temp_rand_signal)) and ((0 in temp_rand_signal) or (1 in temp_rand_signal)) and (not (-1 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()
 		else:
@@ -147,3 +167,4 @@ class rand_signal_generator_tester:
 		print("")
 		print("==	Testing class: rand_signal_generator.")
 		rand_signal_generator_tester.test_gen_rand_signal_uniform_distributn()
+		rand_signal_generator_tester.test_gen_bit_vector_getrandbits()
