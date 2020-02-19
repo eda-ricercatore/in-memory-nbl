@@ -826,6 +826,7 @@ Submission: Feb 12, 2020, anywhere on Earth
 
 
 
+
 + finish automated regression for the *data analysis tool*:
 	- data_analysis_tool.py
 		* get_percent_error(experimental_value=1,theoretical_value=1).
@@ -840,6 +841,9 @@ Submission: Feb 12, 2020, anywhere on Earth
 
 
 + perform ***performance sensitivity analysis and the optimization***
++ [ ] memory profiling of *Python* programs
+  - https://code.tutsplus.com/tutorials/understand-how-much-memory-your-python-objects-use--cms-25609
+
 
 
 Need 27 classroom hours; I have 15 + 4 + 9 = 28 hours.

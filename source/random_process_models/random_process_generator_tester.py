@@ -145,12 +145,23 @@ class rand_signal_generator_tester:
 	#	O(1) method.
 	@staticmethod
 	def test_gen_bit_vector_getrandbits():
+		print("	Testing gen_bit_vector_getrandbits().")
+		prompt = "	... Test random bit vector generation: default 16 bits.	{}"
 		# Number of discrete values representing a random signal/"process".
+		k = 16
+		statistical_analysis.increment_number_test_cases_used()
+		temp_rand_signal = rand_signal_generator.gen_bit_vector_getrandbits()
+		#print("!!!	temp_rand_signal is:",temp_rand_signal,".")
+		if (k == len(temp_rand_signal)) and ((0 in temp_rand_signal) or (1 in temp_rand_signal)) and (not (-1 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
+			print(prompt .format("OK"))
+			statistical_analysis.increment_number_test_cases_passed()
+		else:
+			print(prompt .format("FAIL!!!"))
+		prompt = "	... Test random bit vector generation: 8 bits.		{}"
 		k = 8
-		print("	Testing gen_rand_signal_uniform_distributn().")
-		prompt = "	... Test: type of signal = bit vector.			{}"
 		statistical_analysis.increment_number_test_cases_used()
 		temp_rand_signal = rand_signal_generator.gen_bit_vector_getrandbits(k)
+		#print("!!!	temp_rand_signal is:",temp_rand_signal,".")
 		if (k == len(temp_rand_signal)) and ((0 in temp_rand_signal) or (1 in temp_rand_signal)) and (not (-1 in temp_rand_signal)) and (not (3.14 in temp_rand_signal)):
 			print(prompt .format("OK"))
 			statistical_analysis.increment_number_test_cases_passed()

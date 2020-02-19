@@ -19,6 +19,14 @@
 
 	Revision History:
 	September 6, 2019			Version 0.1	Script.
+	
+	References:
+	+ \cite[From section 'Built-in Functions']{DrakeJr2016b}.
+		- Available online from Python: Python 3.8.2rc1
+			documentation: The Python Standard Library:
+			 Built-in Functions at: https://docs.python.org/3/library/functions.html#bin;
+			 February 12, 2020 was the last accessed date.
+	+ \cite{KiteStaff2020}
 """
 
 __author__ = 'Zhiyang Ong'
@@ -220,9 +228,10 @@ class rand_signal_generator:
 			"""
 		return random_signal
 	# ============================================================
-	##	Method to generate a discrete-time random signal/process
-	#		for "n" values, using another method from the random
-	#		module of the Python Standard Library.
+	##	Method to generate a bit vector -based discrete-time
+	#		random signal/process for "n" values, using another
+	#		method from the random module of the Python Standard
+	#		Library.
 	#
 	#	Use the Python Standard Library's random module to call the
 	#		random.getrandbits(k) function that is based on the
@@ -233,13 +242,69 @@ class rand_signal_generator:
 	#	- low value: "0"
 	#
 	#	@param n - number of discrete values used to represent the
-	#				random signal/"process".
-	#				Its default value is: 16.
+	#		random bit vector signal/"process".
+	#		Its default value is: 16.
 	#	@return - Nothing.
 	#	O(1) method.
+	#
+	#	Reference:
+	#	+ [KiteStaff2020]
+	#		- Kite staff, "getrandbits", from Kite: The Python Language:
+	#		Kite Docs: random, Kite, San Francisco, CA, no date.
+	#		Available online from Kite: The Python Language:
+	#			Kite Docs: random at: https://kite.com/python/docs/random.getrandbits;
+	#			February 12, 2020 was the last accessed date.
+	#
+	#	Additional resources:
+	#	+ https://pythonhosted.org/bitstring/bitarray.html
+	#	+ https://wiki.python.org/moin/BitArrays
+	
 	@staticmethod
 	def gen_bit_vector_getrandbits(n=16):
-		return random.getrandbits(n)
+		# Empty list representation of a random bit vector/signal.
+		list_of_int_representation_of_bv = []
+		"""
+			Since the method call random.getrandbits(n) generates
+				an integer representation of a bit-vector, the
+				bin() method is needed to map/transform the
+				integer-representation of a bit-vector into a
+				binary string representation.
+
+			Add one to the input argument of random.getrandbits(),
+				since it would only generate (n-1) values/digits
+				otherwise.
+
+			References for using bin() to convert integers
+				into a binary string.
+			+ \cite[From section 'Built-in Functions']{DrakeJr2016b}.
+				- Available online from Python: Python 3.8.2rc1
+					documentation: The Python Standard Library:
+					 Built-in Functions at: https://docs.python.org/3/library/functions.html#bin;
+					 February 12, 2020 was the last accessed date.
+			+ \cite{KiteStaff2020}
+		"""
+		#bin_representation_of_bv = bin(random.getrandbits(n+1))
+		bin_representation_of_bv = bin(random.getrandbits(n))
+		print("!!!	bin_representation_of_bv is:",bin_representation_of_bv,".")
+		print("!!!	bin_representation_of_bv[2:] is:",bin_representation_of_bv[2:],".")
+		"""
+			Map/transform the integer-representation of a
+				bit-vector into a binary string representation.
+		"""
+		list_representation_of_bv = list(bin_representation_of_bv[2:])
+		"""
+			For each value/digit/bit in the random bit vector
+				signal/"process",
+		"""
+		#for value_in_bv in list_representation_of_bv:
+		for index_in_bv in range(len(list_representation_of_bv)):
+			"""
+				Cast it into an integer and add it to the
+					list representation of the random integer
+					bits.
+			"""
+			list_of_int_representation_of_bv.append(int(list_representation_of_bv[index_in_bv]))
+		return list_of_int_representation_of_bv
 
 
 
