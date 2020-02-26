@@ -836,9 +836,13 @@ http://www.islped.org/2020/
 	- [x] is_binary_string()
 	- [x] convert_binary_string_to_list_of_0_1_integers()
 	- [ ] is_list_of_low_high_values()
+		* Let this class only deal with bit vectors, as binary strings and/or lists of 0s and 1s.
 		* For the 'data_type_and_number_operations' module, operate on
 			bit vectors as binary strings, list of 0s and 1s, and
 			binary representation of integers.
+		* For the package 'random_process_models', create a 'rtw_signal'
+			class to represent RTW signals (or RTW random processes)
+			as strings, integers, and list of low and high values.
 + [ ] Finish testing the Python class/module for miscellaneous operations.
 + [ ] hat-drawing experiment with RTW-based NBL
 	- NBL.
