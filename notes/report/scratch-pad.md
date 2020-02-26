@@ -1,19 +1,19 @@
 #	Computer Architecture
 
 
-https://stacks.stanford.edu/file/druid:pw135js0060/final-thesis-augmented.pdf   
-  https://scholar.google.com/citations?user=MpfGUWwAAAAJ&hl=en&oi=sra   
+https://stacks.stanford.edu/file/druid:pw135js0060/final-thesis-augmented.pdf
+https://scholar.google.com/citations?user=MpfGUWwAAAAJ&hl=en&oi=sra
 
 
 dark silicon + utilization wall
-   https://scholar.google.com/scholar?cluster=2861943063030358904&hl=en&as_sdt=0,44   
+	https://scholar.google.com/scholar?cluster=2861943063030358904&hl=en&as_sdt=0,44
 utilization wall
 
-https://scholar.google.com/scholar?cluster=7119746398608295606&hl=en&as_sdt=0,44   
- https://scholar.google.com/scholar?cluster=5114586599587295309&hl=en&as_sdt=0,44   
- https://scholar.google.com/scholar?cluster=11619331431836860483&hl=en&as_sdt=0,44   
- https://scholar.google.com/scholar?cluster=10839267836774935720&hl=en&as_sdt=0,44   
- https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-09766-4_499  
+https://scholar.google.com/scholar?cluster=7119746398608295606&hl=en&as_sdt=0,44
+https://scholar.google.com/scholar?cluster=5114586599587295309&hl=en&as_sdt=0,44
+https://scholar.google.com/scholar?cluster=11619331431836860483&hl=en&as_sdt=0,44
+https://scholar.google.com/scholar?cluster=10839267836774935720&hl=en&as_sdt=0,44
+https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-09766-4_499
 
 
 Moore's law
@@ -31,7 +31,7 @@ https://en.wikipedia.org/wiki/Von_Neumann_architecture
 
 
 
-   Volume 530 Issue 7589, 11 February 2016
+	Volume 530 Issue 7589, 11 February 2016
 https://doi.org/10.1038/530144a
 	***https://research.google/pubs/pub48035/***
 	***MLIR Primer: A Compiler Infrastructure for the End of Moore’s Law***
@@ -39,10 +39,10 @@ https://doi.org/10.1109/ISLPED.2017.8009149
 The future of the silicon-based economy will not be as pessimistic as some commentators have argued, given their predictions of the end of Moore's Law Economy (ME) by the early 2020s. On the contrary, a Virtual Moore's Law Economy (VME) will develop and thrive, advancing innovation by a new Silicon Way of producing various application-driven Heterogeneous Integrated (HI) Nano-systems by optimization of physics, materials, devices, circuits/chips, software and systems to enable exciting applications for business growth. The semiconductor industry will enjoy sufficient financial returns from new application and system-product sales, even considering more expensive silicon investment. Such a technological approach based on a (Function × Value)-Scaling Down-Plus-Up Methodology, in addition to Linear-Scaling, Area-Scaling and Volumetric-Scaling Methodologies, can fundamentally change the way of thinking and execution toward optimizing coherently both technology definition and final system design with an holistic HIDAS (HI Design/Architecture/System) method. This will drive IC scaling to an effective 1-Nanometer Realm, stimulating a thriving silicon industry which can have at least 30 more years of growth toward a 1 trillion-dollar size.
 Sketchy paper about Moore's law
 https://doi.org/10.1109/MCSE.2017.32
-   The chips are down for Moore’s law
+	The chips are down for Moore’s law
 M. Mitchell Waldrop 
 Nature volume 530, pages144–147(2016)
-   Waldrop, M. The chips are down for Moore’s law. Nature 530, 144–147 (2016) doi:10.1038/530144a
+	Waldrop, M. The chips are down for Moore’s law. Nature 530, 144–147 (2016) doi:10.1038/530144a
 Download citation
 Published
 09 February 2016
@@ -50,7 +50,7 @@ Issue Date
 11 February 2016
 DOI
 https://doi.org/10.1038/530144a
-   Volume 530 Issue 7589, 11 February 2016
+	Volume 530 Issue 7589, 11 February 2016
 https://www.nature.com/articles/530148a
 News Feature | 10 February 2016
 Does it take too long to publish research?
@@ -59,7 +59,7 @@ Kendall Powell
 
 
 
- https://ieeexplore.ieee.org/abstract/document/7878940   
+ https://ieeexplore.ieee.org/abstract/document/7878940
 R. Stanley Williams
 Published in: Computing in Science & Engineering ( Volume: 19 , Issue: 2 , Mar.-Apr. 2017 )
 Page(s): 7 - 13
@@ -78,9 +78,9 @@ Date of Publication: 15 March 2017
 INSPEC Accession Number: 16759904
 DOI: 10.1109/MCSE.2017.29
 Publisher: IEEE
-   https://ieeexplore.ieee.org/abstract/document/7878935/authors#authors   
-   
- https://www.nature.com/articles/530144a#article-info
+	https://ieeexplore.ieee.org/abstract/document/7878935/authors#authors
+ 
+https://www.nature.com/articles/530144a#article-info
 
 
 
@@ -90,33 +90,33 @@ Authors:
 Wm. A. Wulf
 Sally A. McKee
 Authors Info & Affiliations
-   ACM SIGARCH Computer Architecture NewsVol. 23, No. 1Hitting the memory wall: implications of the obvious
-   Hitting the memory wall: implications of the obvious
-   The Future of Microprocessors
+	ACM SIGARCH Computer Architecture NewsVol. 23, No. 1Hitting the memory wall: implications of the obvious
+	Hitting the memory wall: implications of the obvious
+	The Future of Microprocessors
 By Shekhar Borkar, Andrew A. Chien
 Communications of the ACM, May 2011, Vol. 54 No. 5, Pages 67-77
 10.1145/1941487.1941507
-   https://cacm.acm.org/magazines/2011/5/107702-the-future-of-microprocessors/fulltext   
+https://cacm.acm.org/magazines/2011/5/107702-the-future-of-microprocessors/fulltext
 
 
 
 
 
 
- https://scholar.google.com/citations?user=LnB5_AcAAAAJ&hl=en&oi=sra   
+ https://scholar.google.com/citations?user=LnB5_AcAAAAJ&hl=en&oi=sra
 Hadi Esmaeilzadeh
  Dennard, Robert H.; Gaensslen, Fritz; Yu, Hwa-Nien; Rideout, Leo; Bassous, Ernest; LeBlanc, Andre (October 1974). "Design of ion-implanted MOSFET's with very small physical dimensions" (PDF). IEEE Journal of Solid-State Circuits. SC-9 (5).
 
 
 Design of ion-implanted MOSFET's with very small physical dimensions
-   IEEE Journal of Solid-State Circuits
+	IEEE Journal of Solid-State Circuits
 Volume 9 Issue 5 • Oct.-1974
 R.H. Dennard
 F.H. Gaensslen
 V.L. Rideout
 E. Bassous
 A.R. LeBlanc
-   https://ieeexplore.ieee.org/abstract/document/1050511/references#references   
+	https://ieeexplore.ieee.org/abstract/document/1050511/references#references
 Published in: IEEE Journal of Solid-State Circuits ( Volume: 9 , Issue: 5 , Oct 1974 )
 Page(s): 256 - 268
 Date of Publication: Oct 1974 
@@ -160,25 +160,25 @@ The power wall; the trend of consuming exponentially increasing power (and thus 
 	***From Wikipedia***
 
 
-   http://mcsoc-forum.org/   
+http://mcsoc-forum.org/
 IEEE International Symposium on Embedded Multicore/Manycore SoCs
-   https://stacks.stanford.edu/file/druid:pw135js0060/final-thesis-augmented.pdf   
-   https://scholar.google.com/citations?user=MpfGUWwAAAAJ&hl=en&oi=sra   
+https://stacks.stanford.edu/file/druid:pw135js0060/final-thesis-augmented.pdf
+https://scholar.google.com/citations?user=MpfGUWwAAAAJ&hl=en&oi=sra
  
 
 
-  https://scholar.google.com/scholar?as_ylo=2016&q=noise-based+logic&hl=en&as_sdt=0,44   
-  https://scholar.google.com/citations?hl=en&user=fVJ8twEAAAAJ&view_op=list_works&sortby=pubdate   
+  https://scholar.google.com/scholar?as_ylo=2016&q=noise-based+logic&hl=en&as_sdt=0,44
+  https://scholar.google.com/citations?hl=en&user=fVJ8twEAAAAJ&view_op=list_works&sortby=pubdate
 
-https://scholar.google.com/scholar?cluster=5114586599587295309&hl=en&as_sdt=0,44   
-  https://scholar.google.com/scholar?cluster=11619331431836860483&hl=en&as_sdt=0,44   
-  https://scholar.google.com/scholar?cluster=10839267836774935720&hl=en&as_sdt=0,44   
-  https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-09766-4_499   
-	 http://jbox.gmu.edu/handle/1920/11607   
+https://scholar.google.com/scholar?cluster=5114586599587295309&hl=en&as_sdt=0,44
+  https://scholar.google.com/scholar?cluster=11619331431836860483&hl=en&as_sdt=0,44
+  https://scholar.google.com/scholar?cluster=10839267836774935720&hl=en&as_sdt=0,44
+  https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-09766-4_499
+	 http://jbox.gmu.edu/handle/1920/11607
   dark silicon + utilization wall
-	 https://scholar.google.com/scholar?cluster=2861943063030358904&hl=en&as_sdt=0,44   
+	 https://scholar.google.com/scholar?cluster=2861943063030358904&hl=en&as_sdt=0,44
   utilization wall
-	 https://scholar.google.com/scholar?cluster=7119746398608295606&hl=en&as_sdt=0,44   
+	 https://scholar.google.com/scholar?cluster=7119746398608295606&hl=en&as_sdt=0,44
 
 
 
@@ -198,13 +198,13 @@ https://scholar.google.com/scholar?cluster=5114586599587295309&hl=en&as_sdt=0,44
 
 ##	Approximate Computing
 
-https://link.springer.com/book/10.1007%2F978-3-319-53768-9   
-  https://link.springer.com/book/10.1007%2F978-3-319-99322-5   
-  https://link.springer.com/book/10.1007%2F978-3-319-98965-5   
-  https://link.springer.com/book/10.1007%2F978-3-319-98965-5   
-  https://www.google.com/books/edition/Many_Core_Computing/cEo-vgEACAAJ?hl=en   
+https://link.springer.com/book/10.1007%2F978-3-319-53768-9
+  https://link.springer.com/book/10.1007%2F978-3-319-99322-5
+  https://link.springer.com/book/10.1007%2F978-3-319-98965-5
+  https://link.springer.com/book/10.1007%2F978-3-319-98965-5
+  https://www.google.com/books/edition/Many_Core_Computing/cEo-vgEACAAJ?hl=en
   
-   Many-Core Computing
+Many-Core Computing
 Hardware and Software
 ISBN:9781785615825, 1785615823
 Page count:600
@@ -213,17 +213,17 @@ Format:Hardcover
 Publisher:Institution of Engineering & Technology
 Editors:Geoff V. Merrett, Bashir M. Al-Hashimi
 Create Citation
-   https://digital-library.theiet.org/content/books/pc/pbpc022e   
+https://digital-library.theiet.org/content/books/pc/pbpc022e
 
 
 
 
 
 
-https://www.cs.utexas.edu/~bornholt/papers/approxtaxonomy-esl17.pdf   
-https://ieeexplore.ieee.org/abstract/document/8054698   
-http://moimani.weebly.com/   
-https://en.wikipedia.org/wiki/Approximate_computing   
+https://www.cs.utexas.edu/~bornholt/papers/approxtaxonomy-esl17.pdf
+https://ieeexplore.ieee.org/abstract/document/8054698
+http://moimani.weebly.com/
+https://en.wikipedia.org/wiki/Approximate_computing
 
 
 
@@ -241,9 +241,9 @@ Piotr Antonik
 
 
 
-   https://en.wikipedia.org/wiki/Approximate_computing   
-   https://dl.acm.org/doi/10.1145/2893356   
-   A Survey of Techniques for Approximate Computing
+https://en.wikipedia.org/wiki/Approximate_computing
+https://dl.acm.org/doi/10.1145/2893356
+A Survey of Techniques for Approximate Computing
 
 Author:
 Sparsh Mittal
@@ -251,7 +251,7 @@ ACM Computing Surveys (CSUR)March 2016 Article No.: 62 https://doi.org/10.1145/2
 Approximate computing: Challenges and opportunities
 Publisher: IEEE
 https://doi.org/10.1109/ICRC.2016.7738674
-   https://www.cs.cornell.edu/~asampson/blog/closedproblems.html   
+https://www.cs.cornell.edu/~asampson/blog/closedproblems.html
 Awesome article or blog post about closed approximate computing problems
 
 
@@ -291,13 +291,13 @@ Publisher: IEEE
 Conference Location: San Francisco, CA, USA
 
 
-   http://genesis2.stanford.edu/ 
- https://github.com/StanfordVLSI/Genesis2/wiki   
+http://genesis2.stanford.edu/ 
+	https://github.com/StanfordVLSI/Genesis2/wiki
 HW Interconnect Library::: https://github.com/steveri/canal
 SPIRAL comprises an interdisciplinary team of researchers in the areas of signal processing, algorithms, scientific computing, compilers, computer architecture, and mathematics.
-   http://www.spiral.net/   
- https://users.ece.cmu.edu/~franzf/short_cv.htm   
-   https://users.ece.cmu.edu/~franzf/short_cv_files/Franchetti-2019Dec12.pdf   
+http://www.spiral.net/
+ https://users.ece.cmu.edu/~franzf/short_cv.htm
+https://users.ece.cmu.edu/~franzf/short_cv_files/Franchetti-2019Dec12.pdf
 A de facto standard threshold of 10% error has emerged, which is both a triumph in consistency and a tragedy in real-world relevance.
 Arbitrary thresholds and researcher-invented quality metrics are worth griping about, but most of what needs to be said about this sorry state of affairs has already been said. The system is not perfect, but PARSEC is not a perfect representation of all parallel computation workloads; Gem5 is not a perfect model of real CPUs; and geometric mean speedup is not a perfect proxy for utility. No standard evaluation strategy is without flaws. We should constantly work to develop better quality metrics and to understand thresholds that actually matter to users, but it is no longer useful to complain about the basic system of quality metrics and thresholds.
 Approximation is compulsory in AI domains like vision, natural language understanding, and speech recognition, for example, so these fields already have established methodologies for measuring accuracy. These established metrics, like word error rate for speech recognition or mean average precision for object detection, are certainly not perfect, but their flaws are intimately understood by ML and AI researchers. Real-time 3D rendering is another example: approximations abound in the effort to draw a subjectively beautiful scene at a high frame rate.
@@ -315,11 +315,11 @@ Approximation is compulsory in AI domains like vision, natural language understa
 
 
 
- https://ascslab.org/papers/approximate.pdf   
-   https://ascslab.org/   
+https://ascslab.org/papers/approximate.pdf
+https://ascslab.org/
 ASCS Laboratory © 2018, All rights reserved | Department of Electrical and Computer Engineering | Boston University
 b
-   “All parts should go together without forcing. If you can’t get them together again, there must be a reason.
+	“All parts should go together without forcing. If you can’t get them together again, there must be a reason.
 By all means, do not use a hammer.”
 IBM Manual, 1925
 Adaptive and Secure Computing Systems (ASCS) Laboratory
@@ -448,11 +448,11 @@ https://www.youtube.com/watch?v=6yITVKTDV0s
 
 ##	Stochastic computing
 
-https://link.springer.com/book/10.1007%2F978-3-030-03730-7   
-https://link.springer.com/book/10.1007%2F978-3-319-05278-6   
+https://link.springer.com/book/10.1007%2F978-3-030-03730-7
+https://link.springer.com/book/10.1007%2F978-3-319-05278-6
 https://link.springer.com/book/10.1007%2F978-3-319-05278-6 
-https://www.taylorfrancis.com/books/e/9780429152177   
-https://www.google.com/books/edition/Quantitative_Logic_and_Soft_Computing/S6XMPakonvIC?hl=en&gbpv=1&dq=approximate+computing&pg=PA253&printsec=frontcover   
+https://www.taylorfrancis.com/books/e/9780429152177
+https://www.google.com/books/edition/Quantitative_Logic_and_Soft_Computing/S6XMPakonvIC?hl=en&gbpv=1&dq=approximate+computing&pg=PA253&printsec=frontcover
 
 
 
@@ -483,7 +483,7 @@ Integrated Optical Interconnect Architectures for Embedded Systems
 Editors
 Ian O'Connor
 Gabriela Nicolescu
- https://link.springer.com/book/10.1007%2F978-1-4419-6193-8   
+ https://link.springer.com/book/10.1007%2F978-1-4419-6193-8
 optical computing, 
 
 
@@ -495,7 +495,7 @@ optical computing,
 
 ##	Photonics
 
-https://www.taylorfrancis.com/books/9781315222103   
+https://www.taylorfrancis.com/books/9781315222103
 
 
 
@@ -531,21 +531,21 @@ covariance
 
 
 References:
-+  https://www.google.com/books/edition/Statistics_Hacks/HOPyiNb9UqwC   
-+  https://math.stackexchange.com/questions/1339012/what-does-ensemble-average-mean   
++  https://www.google.com/books/edition/Statistics_Hacks/HOPyiNb9UqwC
++  https://math.stackexchange.com/questions/1339012/what-does-ensemble-average-mean
 + https://en.wiktionary.org/wiki/time_average
 + https://astronomy.swin.edu.au/cosmos/T/Time+Average
 + time average
-+ https://en.wikipedia.org/wiki/Expected_value   
++ https://en.wikipedia.org/wiki/Expected_value
 
 
 
 
 
 
-https://en.wikipedia.org/wiki/Autocovariance   
-  https://en.wikipedia.org/wiki/Autocorrelation   
-  https://en.wikipedia.org/wiki/Cross-correlation   
+https://en.wikipedia.org/wiki/Autocovariance
+  https://en.wikipedia.org/wiki/Autocorrelation
+  https://en.wikipedia.org/wiki/Cross-correlation
 
 
 
@@ -576,13 +576,13 @@ Anaconda
 
 
 
-   https://github.com/python/cpython/blob/b225cb770fb17596298f5a05c41a7c90c470c4f8/Lib/secrets.py#L47   
-   https://realpython.com/python-random/   
-   Jason Brownlee
-   Statistical Methods for Machine Learning
+https://github.com/python/cpython/blob/b225cb770fb17596298f5a05c41a7c90c470c4f8/Lib/secrets.py#L47
+https://realpython.com/python-random/
+	Jason Brownlee
+	Statistical Methods for Machine Learning
 Discover how to Transform Data into Knowledge with Python
-   https://www.taylorfrancis.com/books/9781315382159   
-   https://www.amazon.com/Million-Random-Digits-Normal-Deviates/dp/0833030477/
+https://www.taylorfrancis.com/books/9781315382159
+https://www.amazon.com/Million-Random-Digits-Normal-Deviates/dp/0833030477/
 
 
 
@@ -596,16 +596,16 @@ print(rand(5))
 print('Reseeded')
 seed(7)
 print(rand(5))
-   https://machinelearningmastery.com/introduction-to-random-number-generators-for-machine-learning/   
-   https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.random.html   
-   https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.rand.html#numpy.random.rand   
-   https://researchbank.swinburne.edu.au/file/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/   
-   https://researchbank.swinburne.edu.au/file/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/Jason%20Brownlee%20Thesis.pdf   
-   Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing Jason Brownlee   
-   Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing
+https://machinelearningmastery.com/introduction-to-random-number-generators-for-machine-learning/
+https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.random.html
+https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.rand.html#numpy.random.rand
+https://researchbank.swinburne.edu.au/file/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/
+https://researchbank.swinburne.edu.au/file/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/Jason%20Brownlee%20Thesis.pdf
+Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing Jason Brownlee
+Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing
 
-Jason Brownlee   
-   No eBook available
+Jason Brownlee
+No eBook available
 Machine Learning Mastery
 All sellers »
 Get Textbooks on Google Play
@@ -617,28 +617,28 @@ Books on Google Play
 Deep Learning for Computer Vision: Image Classification, Object Detection, and Face Recognition in Python
 Jason Brownlee
 Machine Learning Mastery, Apr 4, 2019
-   https://machinelearningmastery.com/deep-learning-for-computer-vision/   
+https://machinelearningmastery.com/deep-learning-for-computer-vision/
 Deep Learning for Computer Vision: Image Classification, Object Detection, and Face Recognition in Python
 Jason Brownlee
 Machine Learning Mastery, Apr 4, 2019 - Computers - 563 pages
-   https://books.google.com/books/about/Deep_Learning_for_Computer_Vision.html?id=DOamDwAAQBAJ   
-   https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.correlate.html   
-   https://stackoverflow.com/questions/6991471/computing-cross-correlation-function   
-   http://mail.scipy.org/pipermail/scipy-user/2009-April/020570.html   
-   44
+https://books.google.com/books/about/Deep_Learning_for_Computer_Vision.html?id=DOamDwAAQBAJ
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.correlate.html
+https://stackoverflow.com/questions/6991471/computing-cross-correlation-function
+http://mail.scipy.org/pipermail/scipy-user/2009-April/020570.html
+44
 To cross-correlate 1d arrays use numpy.correlate.
 For 2d arrays, use scipy.signal.correlate2d.
 There is also scipy.stsci.convolve.correlate2d.
 There is also matplotlib.pyplot.xcorr which is based on numpy.correlate.
 See this post on the SciPy mailing list for some links to different implementations.
 Edit: @user333700 added a link to the SciPy ticket for this issue in a comment.
-   https://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xcorr   
-   https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.xcorr.html   
-   https://pypi.org/project/pycorrelate/   
-   https://inst.eecs.berkeley.edu/~ee16a/sp15/Labs/location/ee16a_location_lab1.html   
-   http://benalexkeen.com/correlation-in-python/????   
-   https://opencv.org/   
-   https://github.com/numpy/numpy/blob/v1.17.0/numpy/core/numeric.py#L646-L712   
+https://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xcorr
+https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.xcorr.html
+https://pypi.org/project/pycorrelate/
+https://inst.eecs.berkeley.edu/~ee16a/sp15/Labs/location/ee16a_location_lab1.html
+http://benalexkeen.com/correlation-in-python/????
+https://opencv.org/
+https://github.com/numpy/numpy/blob/v1.17.0/numpy/core/numeric.py#L646-L712
 
 
 
@@ -667,9 +667,9 @@ Edit: @user333700 added a link to the SciPy ticket for this issue in a comment.
 
 #	Resistive Random Access Memory (RRAM)
 
-https://nanoscalereslett.springeropen.com/track/pdf/10.1186/s11671-017-2419-8   
-  A Collective Study on Modeling and Simulation of Resistive Random Access Memory Debashis Panda1* , Paritosh Piyush Sahu1,2 and Tseung Yuen Tseng3   
-  https://www.morganclaypool.com/doi/abs/10.2200/S00681ED1V01Y201510EET006   
+https://nanoscalereslett.springeropen.com/track/pdf/10.1186/s11671-017-2419-8
+  A Collective Study on Modeling and Simulation of Resistive Random Access Memory Debashis Panda1* , Paritosh Piyush Sahu1,2 and Tseung Yuen Tseng3
+  https://www.morganclaypool.com/doi/abs/10.2200/S00681ED1V01Y201510EET006
 
 
 
@@ -702,7 +702,7 @@ SAT solving NBL paper \cite{Lin2012b}
 
 database search paper
 + \cite{Kish2018}
-+ \cite{Kish2018a}   
++ \cite{Kish2018a}
 	- operations on the reference system
 	- No circuits
 
@@ -729,15 +729,15 @@ database search paper
 ##	Logic Regression
 
 
- https://en.wikipedia.org/wiki/Logistic_regression   
+ https://en.wikipedia.org/wiki/Logistic_regression
 logistic regression
-   http://kooperberg.fhcrc.org/logic/documents/logic-regression.pdf   
+http://kooperberg.fhcrc.org/logic/documents/logic-regression.pdf
 logic regression for logic synthesis
 "logic regression"
-   http://iccad-contest.org/2019/Problem_A/2019ICCAD_ProblemA_V9_total.pdf   
-   http://www.iwls.org/iwls2019/   
-   http://www.iwls.org/iwls2019/   
-   https://scholar.google.com/citations?user=ZD6J9JIAAAAJ&hl=en&oi=sra   
+http://iccad-contest.org/2019/Problem_A/2019ICCAD_ProblemA_V9_total.pdf
+http://www.iwls.org/iwls2019/
+http://www.iwls.org/iwls2019/
+https://scholar.google.com/citations?user=ZD6J9JIAAAAJ&hl=en&oi=sra
 
 
 
@@ -791,15 +791,15 @@ https://colab.research.google.com/drive/10kUcXxQZ0aBtGnxWFOlpPJYOgdjCBXVL#scroll
 ##	CFP deadlines for conferences
 
 
-  https://econcs.pku.edu.cn/icalp2020/   
+  https://econcs.pku.edu.cn/icalp2020/
 Submission: Feb 12, 2020, anywhere on Earth
-   http://www.bigdatacongress.org/2020/cfp.html.   
-   http://spaa.acm.org/ (CFP deadline extension)   
-   https://ics2020.bsc.es/   
-   https://raw.necst.it/   
-   https://crypto.iacr.org/2020/   
-   https://conf.researchr.org/home/ismm-2020   
-   http://www.islped.org/2020/   
+http://www.bigdatacongress.org/2020/cfp.html.
+http://spaa.acm.org/ (CFP deadline extension)
+https://ics2020.bsc.es/
+https://raw.necst.it/
+https://crypto.iacr.org/2020/
+https://conf.researchr.org/home/ismm-2020
+http://www.islped.org/2020/
 
 
 
@@ -817,6 +817,17 @@ Submission: Feb 12, 2020, anywhere on Earth
 + [x] finish testing methods for measuring current time
 + [x] finish testing functions to check relative difference, and
   related relative comparisons and absolute comparison.
++ [x] finish automated regression for the *data analysis tool*:
+	- data_analysis_tool.py
+		* get_percent_error(experimental_value=1,theoretical_value=1).
+		* get_arithmetic_average_of_absolute_values(list_of_numbers=[]).
+		* get_relative_difference(quantity1=1,quantity2=1).
+		* get_relative_difference_friendly_version(quantity1=1,quantity2=1).
+		* get_relative_percentage_difference_friendly_version(quantity1=1,quantity2=1).
+		* get_relative_percentage_difference(quantity1=1,quantity2=1).
+	- data_analysis_tool_tester.py
+	- 
+
 + [ ] Finish testing the Python class/module for operations on basic
 	data types and operations.
 	- [x] is_list_of_numbers()
@@ -838,6 +849,8 @@ cross-correlation-results
 Notes:
 + ***Use the "find.rb" Ruby script to search for a search key for a given set of file types (including the period for the file extension).***
 	- E.g., use `find.rb ./ .py cross-correlation-results`.
+	- Need to update build to skip *Git* respository backups, hidden
+		files, and hidden subdirectories as well as *Doxygen* files.
 + The method to test for the cross-correlation of randomly generated
 	RTW signals stores its software test results (from automated
 	regression testing) in the subdirectory:
@@ -846,16 +859,6 @@ Notes:
 
 
 
-+ finish automated regression for the *data analysis tool*:
-	- data_analysis_tool.py
-		* get_percent_error(experimental_value=1,theoretical_value=1).
-		* get_arithmetic_average_of_absolute_values(list_of_numbers=[]).
-		* get_relative_difference(quantity1=1,quantity2=1).
-		* get_relative_difference_friendly_version(quantity1=1,quantity2=1).
-		* get_relative_percentage_difference_friendly_version(quantity1=1,quantity2=1).
-		* get_relative_percentage_difference(quantity1=1,quantity2=1).
-	- data_analysis_tool_tester.py
-	- 
 
 
 
