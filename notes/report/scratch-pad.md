@@ -815,14 +815,33 @@ Submission: Feb 12, 2020, anywhere on Earth
 + [x] modify current time measurement to store the method for measurement, so
 	that method caller does not need to specify the method in the method call for elapsed time 
 + [x] finish testing methods for measuring current time
-+ [ ] finish testing functions to check relative difference, and related relative
-	comparisons and absolute comparison.
-	- ***Postpone till meeting is over.***
++ [x] finish testing functions to check relative difference, and
+  related relative comparisons and absolute comparison.
++ [ ] Finish testing the Python class/module for operations on basic
+	data types and operations.
+	- [x] is_list_of_numbers()
+	- [x] is_tuple_of_tuples()
+	- [x] is_elem_in_tuple_of_tuples()
+	- [x] is_binary_string()
+	- [x] convert_binary_string_to_list_of_0_1_integers()
+	- [ ] is_list_of_low_high_values()
+		* For the 'data_type_and_number_operations' module, operate on
+			bit vectors as binary strings, list of 0s and 1s, and
+			binary representation of integers.
++ [ ] Finish testing the Python class/module for miscellaneous operations.
 + [ ] hat-drawing experiment with RTW-based NBL
 	- NBL.
 + [ ] hat-drawing experiment with RTW-based INBL
+cross-correlation-results
 
 
+Notes:
++ ***Use the "find.rb" Ruby script to search for a search key for a given set of file types (including the period for the file extension).***
+	- E.g., use `find.rb ./ .py cross-correlation-results`.
++ The method to test for the cross-correlation of randomly generated
+	RTW signals stores its software test results (from automated
+	regression testing) in the subdirectory:
+	`results/cross-correlation-results`.
 
 
 
