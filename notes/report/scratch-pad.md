@@ -843,6 +843,14 @@ http://www.islped.org/2020/
 		* For the package 'random_process_models', create a 'rtw_signal'
 			class to represent RTW signals (or RTW random processes)
 			as strings, integers, and list of low and high values.
+			+ For the package 'random_process_models', create a 'random_process' class/module
+				- 'get_length()' method
+				- 'get_sampled_data()' method
+				- 'set_sampled_data()' method
+					* assign a list of values to the list of sampled data.
+				- 'create_sampled_data()' method
+					* generate a list of pseudo-random values and assign it to the list of sampled data
+			+ the 'rtw_signal' class/module extends/inherits from the 'random_process' class/module
 + [ ] Finish testing the Python class/module for miscellaneous operations.
 + [ ] hat-drawing experiment with RTW-based NBL
 	- NBL.
