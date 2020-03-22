@@ -102,6 +102,12 @@ class rand_signal_generator:
 	bv_signal = "bv"
 	# Type of signal: random telegraph wave, RTW.
 	rtw_signal = "rtw"
+	"""
+		Type of signal: generic random processes, with "sampled
+			data values" in the range between:
+			(-1*sys.float_info.max) and sys.float_info.max.
+	"""
+	generic_signal = "generic_sig"
 	# High and low values for a random telegraph wave, RTW.
 	low_value_rtw = -1
 	high_value_rtw = 1
@@ -258,7 +264,7 @@ class rand_signal_generator:
 	#	Additional resources:
 	#	+ https://pythonhosted.org/bitstring/bitarray.html
 	#	+ https://wiki.python.org/moin/BitArrays
-	
+	#	Tested.
 	@staticmethod
 	def gen_bit_vector_getrandbits(n=16):
 		# Empty list representation of a random bit vector/signal.
@@ -305,9 +311,3 @@ class rand_signal_generator:
 			"""
 			list_of_int_representation_of_bv.append(int(list_representation_of_bv[index_in_bv]))
 		return list_of_int_representation_of_bv
-
-
-
-
-
-

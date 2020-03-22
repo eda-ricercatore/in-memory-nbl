@@ -837,20 +837,34 @@ http://www.islped.org/2020/
 	- [x] convert_binary_string_to_list_of_0_1_integers()
 	- [ ] is_list_of_low_high_values()
 		* Let this class only deal with bit vectors, as binary strings and/or lists of 0s and 1s.
+		* [ ] Test the *is_list_of_low_high_values()* method in the
+			*data_type_n_number_ops_tester* class/module.
 		* For the 'data_type_and_number_operations' module, operate on
 			bit vectors as binary strings, list of 0s and 1s, and
 			binary representation of integers.
-		* For the package 'random_process_models', create a 'rtw_signal'
+		* [ ] For the package 'random_process_models', create a 'rtw_signal'
 			class to represent RTW signals (or RTW random processes)
 			as strings, integers, and list of low and high values.
-			+ For the package 'random_process_models', create a 'random_process' class/module
-				- 'get_length()' method
-				- 'get_sampled_data()' method
-				- 'set_sampled_data()' method
+			+ [ ] For the package 'random_process_models', create a 'random_process' class/module
+				- [ ] 'get_length()' method
+				- [ ] 'get_sampled_data()' method
+				- [ ] 'set_sampled_data()' method
 					* assign a list of values to the list of sampled data.
-				- 'create_sampled_data()' method
-					* generate a list of pseudo-random values and assign it to the list of sampled data
-			+ the 'rtw_signal' class/module extends/inherits from the 'random_process' class/module
+				- [ ] 'create_sampled_data()' method
+					* [ ] generate a list of pseudo-random values and assign it to the list of sampled data
+				- [ ] 'check_sampled_data(type="generic")' method checks if the sampled
+					data conforms to the type of random process/signal
+			+ [ ] the 'rtw_signal' class/module extends/inherits from the 'random_process' class/module
+				- [ ] Overwrite 'check_sampled_data(type="generic")' method
+					for the RTW signal.
+			+ [x] 'prng' module
+				- [x] generate sampled data for a generic pseudo-random process
+					* [x] Tested method to "generate sampled data for a generic pseudo-random process"
+			+ [ ] Modify the *Python* class/module 'rand_signal_generator'
+				so that it can generated 'sampled data' for a generic
+				random process with data values between
+				'(-1*sys.float_info.max)' and 'sys.float_info.max'.
+					- [ ] Test the added and/or modified method(s).
 + [ ] Finish testing the Python class/module for miscellaneous operations.
 + [ ] hat-drawing experiment with RTW-based NBL
 	- NBL.
