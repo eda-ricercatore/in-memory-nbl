@@ -372,6 +372,87 @@ http://pendicular.net/talks/Lulea_March2011.pdf
 
 
 
+## Benchmark with the Following Computing Paradigms
+
++ 1-1: General Purpose GPU Computing - Monday, 9/21 - 11:00AM
++ 1-2: High Performance Data Analysis - Monday, 9/21 - 12:30PM
++ Poster Session 1-P - Monday, 9/21 - 1:45PM
++ 1-3: Multicore Software Technologies - Monday, 9/21 - 2:15PM
++ 1-4: Quantum & Novel Computing - Monday, 9/21 - 3:45PM
++ 1-S1: Quantum Tutorial - Monday, 9/21 - 5:30PM
++ 1-S2: BRAIDS - Monday, 9/21 - 5:30PM
++ 2-1: Graph Analytics & Network Science 1 - Tuesday, 9/22 - 11:00AM
++ 2-2: Graph Analytics & Network Science 2 - Tuesday, 9/22 - 12:30PM
++ Poster Session 2-P - Tuesday, 9/22 - 1:45PM
++ 2-3: Graph Analytics & Network Science 3 - Tuesday, 9/22 - 2:15PM
++ 2-4: Big Data & Distributed Computing 1 - Tuesday, 9/22 - 3:45PM
++ 2-S1: GraphBLAS BoF - Tuesday, 9/22 - 5:30PM
++ 2-S2: Remote Sensing for Disaster Relief - Tuesday, 9/22 - 5:30PM
++ 3-1: Big Data & Distributed Computing 2 - Wednesday, 9/23 - 11:00AM
++ 3-2: Data Intensive Computing - Wednesday, 9/23 - 12:30PM
++ Poster Session 3-P - Wednesday, 9/23 - 1:45PM
++ 3-3: Case Studies & Benchmarking - Wednesday, 9/23 - 2:15PM
++ 3-4: Case Studies & Benchmarking - Wednesday, 9/23 - 3:45PM
++ 3-S1: Graph Challenge - Wednesday, 9/23 - 5:30PM
++ 3-S2: Scaling HPC Education - Wednesday, 9/23 - 5:30PM
++ 4-1: AI / Machine Learning 1 - Thursday, 9/24 - 11:00AM
++ 4-2: AI / Machine Learning 2 - Thursday, 9/24 - 12:30PM
++ Poster Session 4-P - Thursday, 9/24 - 1:45PM
++ 4-3: AI / Machine Learning 3 - Thursday, 9/24 - 2:15PM
++ 4-4 - Advanced Processor Architectures - Thursday, 9/24 - 3:45PM
++ 4-S1: AI Challenges - Thursday, 9/24 - 5:30PM
++ 4-S2: OpenSuperComputing BoF - Thursday, 9/24 - 5:30PM
++ 5-1: Fault-Tolerant Computing - Friday, 9/25 - 11:00AM
++ 5-2: High Performance & Secure Hardware 1 - Friday, 9/25 - 12:30PM
++ Poster Session 5-P - Thursday, 9/25 - 1:45PM
++ 5-3: High Performance & Secure Hardware 2 - Friday, 9/25 - 2:15PM
++ 5-4: High Performance & Secure Hardware 3 - Friday, 9/25 - 3:45PM
+
+
+### "Call for Papers" and Online track of Conferences
+
+
++ https://www.sigarch.org/call-contributions/hardware-and-architectural-support-for-security-and-privacy-hasp-2020/
+	- Hardware and Architectural Support for Security and Privacy (HASP) 2020
+	- ABSTRACT OR PAPER REGISTRATION DEADLINE: September 19, 2020
+	- FINAL SUBMISSION DEADLINE: September 19, 2020
++ Prof. Caroline Trippel reports from an ISCA mini-panel on security with Chris Fletcher, Frank McKeen, and Ed Suh.
++ 6th Career Workshop for Women and Minorities in Computer Architecture
+	- Submissions Due: September 6, 2020
+	- https://www.sigarch.org/call-contributions/6th-career-workshop-for-women-and-minorities-in-computer-architecture/
++ https://www.microarch.org/micro53/
+	- 53rd IEEE/ACM International Symposium on Microarchitecture (MICRO-53)
+	- 17-21 October 2020, Global Online Event
++ 2nd edition of “A Primer on Memory Consistency and Cache Coherence” now Open Access
+	- https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1503
+	- A Primer on Memory Consistency and Cache Coherence, Second Edition
+	- Vijay Nagarajan, University of Edinburgh,
+	- Daniel J. Sorin, Duke University,
+	- Mark D. Hill, University of Wisconsin, Madison
+	- David A. Wood, University of Wisconsin, Madison
+	- https://www.sigarch.org/other-announcements/2nd-edition-of-a-primer-on-memory-consistency-and-cache-coherence-now-open-access/
++ Reflections on the ISCA Mini-Panel on Security
+	- https://www.sigarch.org/other-announcements/2nd-edition-of-a-primer-on-memory-consistency-and-cache-coherence-now-open-access/
+	- https://www.sigarch.org/reflections-on-the-isca-mini-panel-on-security/
++ tinyML 2021
+	- March 22, 2021 to March 23, 2021 in California
+	- https://docs.google.com/document/d/165lfe1dmgB4SYuuE4FkWUdyVDUAzsIUledMqJfu5tms/edit
+	- tinyML Research Symposium 2021
+	- New academic & commercial research symposium as part of the 3rd annual tinyML Summit
+	- Monday, March 22, 2021
+	- https://www.sigarch.org/call-contributions/tinyml-2021/
++ https://ieee-dataport.org/data-competitions
+	- Data Competitions in IEEE DataPort
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -385,6 +466,12 @@ http://pendicular.net/talks/Lulea_March2011.pdf
 
 + https://safari.ethz.ch/architecture_seminar/spring2019/doku.php?id=schedule
 https://www.youtube.com/watch?v=6yITVKTDV0s
+
+
+
+
+
+
 
 
 
@@ -435,7 +522,7 @@ https://www.youtube.com/watch?v=6yITVKTDV0s
 ##	Cite IRDS (https://irds.ieee.org/editions/2018)!!!
 
 
-
+Cite the 2020/2019 version of IRDS!!!
 
 
 
@@ -870,6 +957,34 @@ http://www.islped.org/2020/
 	- NBL.
 + [ ] hat-drawing experiment with RTW-based INBL
 cross-correlation-results
++ [ ] Finish writing study notes on database and information systems
++ [ ] Implement connections to SQL, NoSQL, and NewSQL databases, via Python API
+	- [ ] Database and information systems, DBIS
+			* [ ] tuple of (surrogate key, database model)
+			* VLSI signal processing circuitry
++ [ ] Run experiments and store results in SQL, NoSQL, and NewSQL databases.
++ [ ] Finish cell library characterization.
++ [ ] Experiment with Bokeh and Plot.ly
+
+
++ [ ] learning-based quality metrics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Notes:
