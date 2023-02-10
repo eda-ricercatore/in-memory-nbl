@@ -2,27 +2,31 @@
 
 """
 	This Python script is written by Zhiyang Ong to process and
-		plot Xyce circuit simulation results.
+		plot Xyce circuit simulation [XyceTeam2023] results.
 
 
-	@modified by Zhiyang Ong, January 15, 2020.
-	+ Modify code to process Xyce circuit simulation results,
-		for a circuit with one input parameter.
+	The objective of this script is to plot the values on the y-axis,
+		for input or output voltage values, and the voltage value of
+		intermediate nodes.
+
+	Do not address the intervals between timestamps, and any possible
+		differences in the intervals between timestamps.
 
 
-	IMPORTANT NOTES:
-	+ Computer bugs.
-	January 16, 2020, 18:00 hrs, U.S. CST.
-	Buggy computer did not save my file even though I had saved it,
-		and the GUI of the IDE appeared to have saved it.
-	That said, I noticed the "Terminal" application indicating
-		the last modification time had not changed from 16:00 hrs
-		till about 17:40 hrs.
-	Hence, I lost an hour of work.
-	Also, I noticed that the SSH authentication in the "Terminal"
-		tab for the current working directory lapsed.
-	However, commits to my "gulyas-scripts" repository still worked.
+	Modify code to process Xyce circuit simulation results,
+		for a circuit with:
+	+ 1 input parameter
+	+ 1 output parameter
 
+
+
+	From [DrakeJr2016b, Built-in Types: Ranges], the input arguments to the
+		function range() requires integer arguments.
+		Or: https://docs.python.org/3/library/stdtypes.html
+	Since the interval between timestamps is approximately the same,
+		if not the same, we can just try to plot the graph for the
+		elapsed time during simulation.
+	
 
 
 	Resources about colors for Matplotlib.pyplot:
@@ -88,61 +92,8 @@ import numpy as np
 
 
 
-nanosecond_threshold = 0.000000001
-microsecond_threshold = 0.000001
-millisecond_threshold = 0.001
 
 
-# ============================================================
-##	Method to scale for nanoseconds, microseconds, and milliseconds.
-#
-#	@param minimum_time_interval - Time interval/increment
-#				indicating how much we should scale the time
-#				field/column by.
-#	@return the scaling factor (or scale factor) for the time
-#				field/column.
-#	O(1) method.
-def scaling_factor_for_time_column(minimum_time_interval):
-	# Is the time interval > 0.1 ms?
-	if (millisecond_threshold < minimum_time_interval):
-		# Yes. Use millisecond threshold.
-		return millisecond_threshold
-	# Else, is the time interval > 0.1 us?
-	elif (microsecond_threshold < minimum_time_interval):
-		# Yes. Use microsecond threshold.
-		return microsecond_threshold
-	else:
-		# Else, use nanosecond threshold.
-		return nanosecond_threshold
-
-
-
-# ============================================================
-##	Method to determine the interval/increment between major ticks
-#		for the x-axis and the y-axis (or y-axes).
-#
-#	@param for_y_axes - Boolean flag to indicate if two
-#				intervals/increments between major ticks need to
-#				be found for the y-axes.
-#				This is used for multiple fields of data, such that
-#					two scales may need to be used to plot the data.
-#				If there exists more than two scales for the y-axis,
-#					such requirement cannot be met.
-#	@return - .
-#	O(1) method.
-def determine_interval_between_major_ticks_xy_axes(research_results_database,list_column_headers):
-	x_minimum = min(research_results_database[list_column_headers[1]])
-	x_maximum = max(research_results_database[list_column_headers[1]])
-	x_major_increment = math.ceil((x_maximum - x_minimum)/10)
-	print("x_major_increment is:",x_major_increment,".")
-	x_range = range(x_minimum, x_maximum, x_major_increment)
-	for current_column_header in list_column_headers[2:]:
-		y_minimum = min(research_results_database[list_column_headers[current_column_header]])
-		y_maximum = max(research_results_database[list_column_headers[current_column_header]])
-		y_major_increment = math.ceil((x_maximum - x_minimum)/10)
-		y_range = range(x_minimum, x_maximum, x_major_increment)
-		y_ranges.append(y_range)
-	return x_range, y_ranges
 
 
 
@@ -150,7 +101,8 @@ def determine_interval_between_major_ticks_xy_axes(research_results_database,lis
 
 
 """
-	@modified by Zhiyang Ong, January 15, 2020.
+	Do not store the circuit simulation results as a 2-D matrix,
+		since this .
 
 	Database list of circuit simulation results.
 	Each entry in the list is a dictionary, where its key is the
