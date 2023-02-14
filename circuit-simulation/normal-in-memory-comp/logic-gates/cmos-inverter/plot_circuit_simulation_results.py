@@ -153,27 +153,6 @@ import string
 
 
 
-
-
-
-
-
-"""
-	Do not store the circuit simulation results as a 2-D matrix,
-		since the 2-D matrix class in Python is deprecated.
-
-	Database list of circuit simulation results.
-	Each entry in the list is a dictionary, where its key is the
-		column header and its value is a list of data associated
-		with that column in the output file of Xyce circuit
-		simulation results. 
-"""
-#simulation_results_database = []
-simulation_results_database = {}
-temp_list_column_headers = []
-# Path to simulation results of Xyce circuit simulation.
-#simulation_results_filename = "inverter_transient.spice.prn"
-simulation_results_filename = "invert1.cir.prn"
 # Process the output file of Xyce circuit simulation results.
 with open(simulation_results_filename, "r") as f_obj:
 	simulation_results = f_obj.readlines()
