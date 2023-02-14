@@ -216,23 +216,20 @@ axs[0].plot(df["TIME"], df["{V(IN)+1.0}"], label="inverter $V_{in}$")
 axs[1].plot(df["TIME"], df["{V(VOUT)+1.0}"], label="inverter $V_{out}$")
 
 
-# Add the title to the plot [Hunter2023].
-#axs[0].title('Plot of $V_{in}$ against time $t$')
+# Add the titles to the plots [Hunter2023].
 axs[0].set_title('Plot of $V_{in}$ (V) against time $t$ (s)')
-#axs[1].title('Plot of $V_{out}$ against time $t$')
 axs[1].set_title('Plot of $V_{out}$ (V) against time $t$ (s)')
-#fig.title('Plot of $V_{in}$ and $V_{out}$ against time $t$')
 # Add mathematical text to the plot [Hunter2023] [Hunter2023a].
 #axs[0].text(300, 0.65, r'$V_{out}$ = $\neg$ $V_{in}$')
 #axs[1].text(300, 0.65, r'$V_{out}$ = $\neg$ $V_{in}$')
 fig.text(300, 0.65, r'$V_{out}$ = $\neg$ $V_{in}$')
-# Label the y-axis.
+# Label the y-axis for both subplots.
 axs[0].set_ylabel('$V_{in}$ (V)')
 axs[1].set_ylabel('$V_{out}$ (V)')
-# Label the x-axis.
+# Label the x-axis for both subplots.
 axs[0].set_xlabel('time $t$ (s)')
 axs[1].set_xlabel('time $t$ (s)')
-# Add a legend to the plot [Hunter2023b].
+# Add a legend to both subplots [Hunter2023b].
 axs[0].legend(title='Function plotted:')
 axs[1].legend(title='Function plotted:')
 """
