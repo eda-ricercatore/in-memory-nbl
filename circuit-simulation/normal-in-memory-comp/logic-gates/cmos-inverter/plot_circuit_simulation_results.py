@@ -11,12 +11,22 @@
 
 	Do not address the intervals between timestamps, and any possible
 		differences in the intervals between timestamps.
+	This is because each set of values for Vin, Vout, and V1
+		(intermediate note) is assigned to each time instance.
+		Hence, if the differences in the intervals are not uniform,
+			it may affect the location of data points on the graphs/plots
+			on the x-axis.
+			However, it would not affect the shape of the graph/plot.
 
 
 	Modify code to process Xyce circuit simulation results,
 		for a circuit with:
 	+ 1 input parameter
 	+ 1 output parameter
+
+	To extend this for more input and output signals of logic gates
+		and circuits, and digital systems, add more plots or subplots
+		to the end of this script.
 
 
 
@@ -124,11 +134,19 @@ import math
 
 ###############################################################
 #	Import packages and modules Python libraries
+
+
+# Import NumPy [NumPyDevelopers2018] [Berg2023]
+import numpy as np
+# Import pandas [Augspurger2018]
+import pandas as pd
+# Import Matplotlib [Hunter2016a].
 import matplotlib.pyplot as plt
 from matplotlib.collections import EventCollection
 # Get the set of colors from: matplotlib.colors.TABLEAU_COLORS 
 import matplotlib.colors as mcolors
-import numpy as np
+# Import string package from the Python Standard Library.
+import string
 
 
 
@@ -142,7 +160,7 @@ import numpy as np
 
 """
 	Do not store the circuit simulation results as a 2-D matrix,
-		since this .
+		since the 2-D matrix class in Python is deprecated.
 
 	Database list of circuit simulation results.
 	Each entry in the list is a dictionary, where its key is the
