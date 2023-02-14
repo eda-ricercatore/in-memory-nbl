@@ -29,6 +29,21 @@
 		to the end of this script.
 
 
+	Use the user guide [Keiter2022, Table 7-4, pp.81, \S7.3.8] and
+		reference guide [Keiter2022a] to`generate CSV files, instead
+		of ".prn" files, which is difficult to process [Keiter2022a].
+
+	This is because the default ".prn" (print-to-file) format stores
+		data in columns that are not uniformly separated from each other.
+	E.g., for each row, the whitespace between a pair of columns is
+		different from another pair of columns.
+	Hence, printing the Xyce circuit simulation results to a format
+		with standardized separation between the columns, such as a
+		comma, tab, or fixed amount of character space (or whitespace
+		characters) makes input file processing a lot easier.
+
+
+
 
 	From [DrakeJr2016b, Built-in Types: Ranges], the input arguments to the
 		function range() requires integer arguments.
@@ -153,7 +168,13 @@ import string
 
 
 
-# Process the output file of Xyce circuit simulation results.
+"""
+	Process the input file containing Xyce circuit simulation results.
+
+	Store the results in a pandas DataFrame.
+"""
+df = pd.read_table("./input-files/invert1.cir.csv", delimiter=",")
+print(df)
 with open(simulation_results_filename, "r") as f_obj:
 	simulation_results = f_obj.readlines()
 	# For each line in the output file.
