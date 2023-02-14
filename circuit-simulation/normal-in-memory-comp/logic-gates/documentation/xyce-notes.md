@@ -77,7 +77,7 @@ To run the *Xyce* circuit simulator from the command line interface (CLI), the X
 
 To customize this, we can use the UNIX shebang (or sharp-exclamation, sha-bang, hashbang, pound-bang, hash-piling) "#!" [WikipediaContributors2017a] to run the *Xyce* circuit simulator on this netlist as if this netlist were a script.
 
-The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, Section \S3, Table 3.1].
+The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, Section \S3, Table 3.1, pp. 769 or ].
 + Avoid using the "-l" option to store the log output into a specified (text) file.
 	- It is easy for people to fail to update the path for the log file for each parameter configuration for the experiments involving *Xyce* circuit simulation.
 + When using the "-o" option, check that the path of the output path is correct.
@@ -87,10 +87,10 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, S
 
 
 Guidelines and recommendations:
-+ [Keiter2022a, Chapter 5, Subsection \S 5.1.1] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
++ [Keiter2022a, Chapter 5, Subsection \S 5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
 	- Choose the value of ***RELTOL***, so that *RELTOL = 1.0E-(m+1)* and *m* is the desired number of siginificant digits of accuracy.
 	- Set *ABSTOL* to be the smallest value for components in the integrated circuit (IC).
-	- Select ***ABSTOL*** < RELTOL***.
+	- Select ***ABSTOL < RELTOL***.
 
 
 

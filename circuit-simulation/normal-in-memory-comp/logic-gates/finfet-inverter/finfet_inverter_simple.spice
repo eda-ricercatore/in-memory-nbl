@@ -63,9 +63,16 @@
 *Sample netlist for BSIM-MG 
 *Inverter Transient
 
-* Information about the ".options" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25].
+* Information about the ".options" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25, pp. 95].
 * 
 *.option abstol=1e-6 reltol=1e-6 post ingold
+* Information about the ".options nonlin" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25: .options nonlin statement, \S 2.1.25.3, pp. 101-102] for nonlinear solver options.
+*	Regarding the "continuation" option, it specifies the homotopy/continuation
+*		algorithm for the nonlinear solver (pp. 102).
+*		Select GMIN stepping for the "continuation" option.
+*	abstol = absolute residual vector tolerance
+*	reltol = relative residual vector tolerance
+
 .options nonlin continuation=gmin
 .options timeint method=trap
 .options device temp=25 
