@@ -1,0 +1,234 @@
+Script started on Mon Feb 13 22:00:06 2023
+[1m[7m%[27m[1m[0m                                                                                 ]7;file://eecs4all-2.local/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/circuit-simulation/normal-in-memory-comp/logic-gates/cmos-inverter[0m[27m[24m[JAutoML Our Jobs % [K[?2004h../inverter-power-analy.cir[1m [0m[0m [?2004l
+
+*****
+***** Welcome to the Xyce(TM) Parallel Electronic Simulator
+*****
+***** This is version XyceNF Release 7.6
+***** Date: Mon Feb 13 22:00:13 CST 2023
+
+
+***** Executing netlist ./inverter-power-analy.cir
+
+***** Reading and parsing netlist...
+***** Setting up topology...
+
+***** Device Count Summary ...
+       C level 1 (Capacitor)                  1
+       M level 1 (MOSFET level 1)             2
+       R level 1 (Resistor)                   2
+       V level 1 (Independent Voltage Source) 2
+       ----------------------------------------
+       Total Devices                          7
+***** Setting up matrix structure...
+***** Number of Unknowns = 10
+***** Initializing...
+
+***** Beginning DC Operating Point Calculation...
+
+***** Beginning Transient Calculation...
+
+***** Percent complete: 1.875 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  1 sec.
+
+***** Percent complete: 3.875 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 6.375 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 8.875 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 11.375 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 13.875 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 16.375 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 18.875 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 21.375 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 23.875 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 25 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 26.6724 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 28.0835 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 30.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 35.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 40.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 45.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 50.0833 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 51.3448 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 52.3742 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 54.4329 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 58.5503 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 63.5503 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 68.5503 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 73.5503 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 75 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 76.6724 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 78.0835 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 80.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 85.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 90.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Percent complete: 95.9057 %
+***** Current system time: Mon Feb 13 22:00:13 2023
+***** Estimated time to completion:  0 sec.
+
+***** Problem read in and set up time: 0.00336909 seconds
+ ***** DCOP time: 0.021421 seconds.  Breakdown follows:
+	Number Successful Steps Taken:		1
+	Number Failed Steps Attempted:		0
+	Number Jacobians Evaluated:		7
+	Number Linear Solves:			7
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		9
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.0202866 seconds
+	Total Jacobian Load Time:		3.05176e-05 seconds
+	Total Linear Solution Time:		0.00018096 seconds
+
+ ***** Transient Stepping time: 0.0245659 seconds.  Breakdown follows:
+	Number Successful Steps Taken:		266
+	Number Failed Steps Attempted:		22
+	Number Jacobians Evaluated:		668
+	Number Linear Solves:			668
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		956
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.00285769 seconds
+	Total Jacobian Load Time:		0.00118876 seconds
+	Total Linear Solution Time:		0.00504494 seconds
+
+
+***** Solution Summary *****
+	Number Successful Steps Taken:		267
+	Number Failed Steps Attempted:		22
+	Number Jacobians Evaluated:		675
+	Number Linear Solves:			675
+	Number Failed Linear Solves:		0
+	Number Residual Evaluations:		965
+	Number Nonlinear Convergence Failures:	0
+	Total Residual Load Time:		0.0231442 seconds
+	Total Jacobian Load Time:		0.00121927 seconds
+	Total Linear Solution Time:		0.0052259 seconds
+
+
+***** Total Simulation Solvers Run Time: 0.046483 seconds
+***** Total Elapsed Run Time:            0.0498481 seconds
+*****
+***** End of Xyce(TM) Simulation
+*****
+
+Timing summary of 1 processor
+                 Stats                   Count       CPU Time              Wall Time
+---------------------------------------- ----- --------------------- ---------------------
+Xyce                                         1        0.039 (100.0%)        0.051 (100.0%)
+  Analysis                                   1        0.037 (92.97%)        0.046 (91.46%)
+    Transient                                1        0.037 (92.96%)        0.046 (91.45%)
+      Nonlinear Solve                      289        0.031 (79.71%)        0.037 (73.15%)
+        Residual                           965        0.021 (53.54%)        0.024 (47.12%)
+        Jacobian                           675        0.001 ( 3.57%)        0.002 ( 3.29%)
+        Linear Solve                       675        0.004 (10.64%)        0.006 (11.32%)
+      Successful DCOP Steps                  1        0.000 ( 0.40%)        0.000 ( 0.86%)
+      Successful Step                      266        0.003 ( 7.90%)        0.006 (11.76%)
+      Failed Steps                          22        0.000 ( 0.05%)        0.000 ( 0.19%)
+  Netlist Import                             1        0.001 ( 3.21%)        0.002 ( 3.26%)
+    Parse Context                            1        0.000 ( 0.70%)        0.000 ( 0.83%)
+    Distribute Devices                       1        0.000 ( 1.15%)        0.001 ( 1.00%)
+    Verify Devices                           1        0.000 ( 0.02%)        0.000 ( 0.03%)
+    Instantiate                              1        0.000 ( 0.27%)        0.000 ( 0.25%)
+  Late Initialization                        1        0.001 ( 1.66%)        0.001 ( 1.70%)
+    Global Indices                           1        0.000 ( 0.12%)        0.000 ( 0.11%)
+  Setup Matrix Structure                     1        0.000 ( 0.29%)        0.000 ( 0.32%)
+
+[1m[7m%[27m[1m[0m                                                                                 ]7;file://eecs4all-2.local/Users/zhiyang/Documents/ricerca/dottorando/in-memory-nbl/circuit-simulation/normal-in-memory-comp/logic-gates/cmos-inverter[0m[27m[24m[JAutoML Our Jobs % [K[?2004heext it[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       4 completed.
+
+Script done on Mon Feb 13 22:00:17 2023

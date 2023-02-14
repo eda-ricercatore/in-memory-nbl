@@ -1,5 +1,5 @@
 *	This is written by Zhiyang Ong to model an inverter
-*		using 7 nm FinFET devices.
+*		using 5 um MOSFET devices.
 *
 *	References:
 *		+ \cite[\S8.2, pp. 109; \S8.3.1, pp. 112; \S8.6, pp. 115; \S12.2, pp. 157]{Keiter2019}.

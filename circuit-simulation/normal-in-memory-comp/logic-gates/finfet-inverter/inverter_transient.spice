@@ -1,3 +1,10 @@
+#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce
+
+
+
+
+
+
 *Sample netlist for BSIM-MG 
 *Inverter Transient
 
@@ -30,7 +37,7 @@ Xinv5  4 vo supply 0 mg_inv
 * --- Transient Analysis ---
 .tran 10n 5u
 
-.print tran {v(vi)+1} {v(vo)+1}
+.print tran FORMAT=CSV {v(vi)+1} {v(vo)+1}
 *comp {v(vi)+1} reltol=1e-2 
 *comp {v(vo)+1} reltol=1e-2  abstol=1e-5 zerotol=1e-8
 .end
