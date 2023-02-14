@@ -81,7 +81,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, S
 + Avoid using the "-l" option to store the log output into a specified (text) file.
 	- It is easy for people to fail to update the path for the log file for each parameter configuration for the experiments involving *Xyce* circuit simulation.
 + When using the "-o" option, check that the path of the output path is correct.
-	- When doing experiments with *Xyce* circuit simulation, check that it reflects the parameter configuration.
+	- When doing experiments with *Xyce* circuit simulation, check that it (especially the filename) reflects the parameter configuration.
 
 
 
