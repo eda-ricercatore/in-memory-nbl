@@ -2,6 +2,7 @@
 
 *	#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -l logfiles-of-simulation/finfet_inverter_simple.log -o xyce-simulation-results/finfet_inverter_simple.spice.csv
 *	[Keiter2022a, Chapter 2, Section \S3, Table 3.1] specifies the command line argument "-l" for storing log files.
+*		Avoid using the "-l" option.
 *	[Keiter2022a, Chapter 2, Section \S3, Table 3.1] specifies the command line argument "-o" for storing Xyce circuit simulation results.
 
 
@@ -62,6 +63,8 @@
 *Sample netlist for BSIM-MG 
 *Inverter Transient
 
+* Information about the ".options" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25].
+* 
 *.option abstol=1e-6 reltol=1e-6 post ingold
 .options nonlin continuation=gmin
 .options timeint method=trap

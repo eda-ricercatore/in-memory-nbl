@@ -86,6 +86,18 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, S
 
 
 
+Guidelines and recommendations:
++ [Keiter2022a, Chapter 5, Subsection \S 5.1.1] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
+	- Choose the value of ***RELTOL***, so that *RELTOL = 1.0E-(m+1)* and *m* is the desired number of siginificant digits of accuracy.
+	- Set *ABSTOL* to be the smallest value for components in the integrated circuit (IC).
+	- Select ***ABSTOL*** < RELTOL***.
+
+
+
+
+
+
+
 
 
 
@@ -101,7 +113,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, S
 	- E.g., we can use the option to print the Xyce circuit simulation results in CSV format, instead of the default ".prn" (print-to-file) format.
 + \cite[\S7.4.6., pp. 73, "Output files" section]{Keiter2019a}
 	- "The output data, as specified by a .PRINT line, however, goes to a single (*.prn) file. For convenience, Xyce also creates a second auxilliary file with the *.res suffix."
-	- "Figure 7-3 shows an example file named clip.cir, which when run will produce files clip.cir.res and clip.cir.prn. The file clip.cir.res contains one line for each step, showing what parameter value was used on that step. clip.cir.prn is the familiar output format, but the INDEX field recycles to zero each time a new step begins."
+	- "Figure 7-3 shows an example file named clip.cir, which when run will produce fildes clip.cir.res and clip.cir.prn. The file clip.cir.res contains one line for each step, showing what parameter value was used on that step. clip.cir.prn is the familiar output format, but the INDEX field recycles to zero each time a new step begins."
 	- "As the default behavior distinguishes each step’s output only by recycling the INDEX field to zero, it can be beneficial to add the sweep parameters to the .PRINT line. For the default file format (format=std), Xyce will not automatically include these sweep parameters, so for plotting it is usually best to specify them by hand."
 	- "If using the default .prn file format (format=std), the resulting .STEP simulation output file will be a simple concatenation of each step’s underlying analysis output. If using format=probe, the data for each execution of the circuit will be in distinct sections of the file, and it should be easy to plot the results using PROBE."
 + \cite[\S7.5.8., pp. 79-80, "Output files" section]{Keiter2019a}
