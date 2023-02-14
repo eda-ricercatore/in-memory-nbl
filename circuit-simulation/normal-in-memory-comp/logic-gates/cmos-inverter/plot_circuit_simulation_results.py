@@ -211,7 +211,7 @@ print(df)
 		[TheMatplotlibDevelopmentTeam2023a, API Reference: matplotlib.pyplot: matplotlib.pyplot.subplots: Date tick labels].
 """
 #fig, axs = plt.subplots(2,1)
-fig, axs = plt.subplots(2,1, figsize=(10,10))
+fig, axs = plt.subplots(2,1, figsize=(10,12))
 axs[0].plot(df["TIME"], df["{V(IN)+1.0}"], label="inverter $V_{in}$")
 axs[1].plot(df["TIME"], df["{V(VOUT)+1.0}"], label="inverter $V_{out}$")
 
