@@ -173,7 +173,7 @@ import string
 
 	Store the results in a pandas DataFrame.
 """
-df = pd.read_table("./input-files/invert1.cir.csv", delimiter=",")
+df = pd.read_table("./xyce-simulation-results/invert1.cir.csv", delimiter=",")
 print(df)
 
 
@@ -237,6 +237,6 @@ axs[1].legend(title='Function plotted:')
 	This "save to PDF" command has to appear before the .show() command;
 		else, the PDF file would be empty.
 """
-plt.savefig("output-files/"+"cmos-inverter-vout-vin"+".pdf")
+plt.savefig("./simulation-plots/"+"cmos-inverter-vout-vin"+".pdf")
 # Show the plot via GUI representation and the file plot.
 plt.show()
