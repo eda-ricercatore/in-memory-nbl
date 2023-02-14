@@ -72,10 +72,16 @@ Compact models:
 ##	Running Xyce Circuit Simulator
 
 
+To run the *Xyce* circuit simulator from the command line interface (CLI), the Xyce executable would be run with the (circuit) netlist.
 
 
+To customize this, we can use the UNIX shebang (or sharp-exclamation, sha-bang, hashbang, pound-bang, hash-piling) "#!" [WikipediaContributors2017a] to run the *Xyce* circuit simulator on this netlist as if this netlist were a script.
 
-
+The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, Section \S3, Table 3.1].
++ Avoid using the "-l" option to store the log output into a specified (text) file.
+	- It is easy for people to fail to update the path for the log file for each parameter configuration for the experiments involving *Xyce* circuit simulation.
++ When using the "-o" option, check that the path of the output path is correct.
+	- When doing experiments with *Xyce* circuit simulation, check that it reflects the parameter configuration.
 
 
 
@@ -356,7 +362,7 @@ Not-so-good references:
 + [Keiter2022]
 	- Eric R. Keiter, Thomas V. Russo, Richard L. Schiek, Heidi K. Thornquist, Ting Mei, Jason C. Verley, Karthik V. Aadithya, and Joshua D. Schickling, "Xyce$^\texttrademark$ Parallel Electronic Simulator: Users' Guide, Version 7.6," number SAND2022-14885, Sandia National Laboratories, Albuquerque, NM and Livermore, CA, November, 2022. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Documentation & Tutorials at: https://xyce.sandia.gov/files/xyce/Xyce_Users_Guide_7.6.pdf; February 9, 2023 was the last accessed date.
 + [Keiter2023]
-	- Eric `Karlsefni2012' Keiter, Tom `tvrusso' Russo, peshola, Heidi `hkthorn' Thornquist, rich1149, Jason `TBird2001' Verley, Paul `kuberry' Kuberrys, Zack `zackgalbreath' Galbreath, Joseph `josephsnyder' Snyder, and David `dc-snl' Collins, Gary J. `gjtempl' Templet, and loulawrence, "The Xyce$^\texttrademark$ Parallel Electronic Simulator," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce; February 9, 2023 was the last accessed date.
+	- Eric 'Karlsefni2012' Keiter, Tom 'tvrusso' Russo, peshola, Heidi 'hkthorn' Thornquist, rich1149, Jason 'TBird2001' Verley, Paul 'kuberry' Kuberrys, Zack 'zackgalbreath' Galbreath, Joseph 'josephsnyder' Snyder, and David 'dc-snl' Collins, Gary J. 'gjtempl' Templet, and loulawrence, "The Xyce$^\texttrademark$ Parallel Electronic Simulator," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce; February 9, 2023 was the last accessed date.
 + [XyceTeam2023b]
 	- Xyce team, "Executables," Sandia National Laboratories, Albuquerque, NM, 2023. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Downloads: Executables at: https://xyce.sandia.gov/downloads/executables/; February 5, 2023 was the last accessed date.
 + [XyceTeam2023]
@@ -365,6 +371,21 @@ Not-so-good references:
 	- Xyce team, "Xyce Regression Suite," Sandia National Laboratories, Albuquerque, NM, 2022. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Downloads: Source Code at: https://xyce.sandia.gov/files/xyce/Xyce_Regression-7.6.tar.gz and https://xyce.sandia.gov/downloads/source-code/; February 9, 2023 was the last accessed date.
 + peshola2023,
 	- peshola, Eric 'Karlsefni2012' Keiter, Tom 'tvrusso' Russo, rich1149, Heidi 'hkthorn' Thornquist, Paul 'kuberry' Kuberry, and Jason 'TBird2001' Verley, "The Xyce$^\texttrademark$ Regression Test Suite," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce_Regression; February 9, 2023 was the last accessed date.
++ [WikipediaContributors2017a]
+	- Wikipedia contributors, "Shebang (Unix)," Wikimedia Foundation, San Francisco, CA, April 24, 2017. Available online from Wikipedia, The Free Encyclopedia: Unix at: https://en.wikipedia.org/wiki/Shebang_(Unix); May 1, 2017 was the last accessed date.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

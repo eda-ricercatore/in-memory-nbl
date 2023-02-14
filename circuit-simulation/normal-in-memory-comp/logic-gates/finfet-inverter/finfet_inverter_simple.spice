@@ -2,8 +2,10 @@
 
 * This Xyce script and netlist is written by Zhiyang Ong to simulate
 *	a FinFET-based inverter, instead of using bulk MOSFET transistors.
-
-
+*
+* This Xyce netlist was obtained from [XyceTeam2023, from Xyce-7.6: utils: ADMS: examples: BSIMCMG110.0.0_20160101: benchmark_test: inverter_transient.sp] [XyceTeam2023e].
+* Its path is: Xyce-7.6/utils/ADMS/examples/BSIMCMG110.0.0_20160101/benchmark_test/inverter_transient.sp
+* It can also be obtained from [Keiter2023], and its URL is: https://github.com/Xyce/Xyce/blob/master/utils/ADMS/examples/BSIMCMG110.0.0_20160101/benchmark_test/inverter_transient.sp
 
 
 
