@@ -175,7 +175,10 @@ import string
 """
 #df = pd.read_table("./xyce-simulation-results/invert1.cir.csv", delimiter=",")
 df = pd.read_table("./xyce-simulation-results/inverter_transient.spice.csv", delimiter=",")
+df = pd.read_table("./xyce-simulation-results/finfet_inverter_simple.spice.csv", delimiter=",")
 print(df)
+
+
 
 
 """
@@ -210,15 +213,13 @@ print(df)
 	Consequently, we choose to use subplots to stack the graphs/plots/functions
 		vertically, so that they would be easier to analyze/study/examine
 		[TheMatplotlibDevelopmentTeam2023a, API Reference: matplotlib.pyplot: matplotlib.pyplot.subplots: Date tick labels].
-
-	Reference for using figsize(float, float) to change the size of
-		all the subplots:
-	+ [TheMatplotlibDevelopmentTeam2023a, from API Reference: Modules: matplotlib.pyplot: matplotlib.pyplot.figure]
 """
 #fig, axs = plt.subplots(2,1)
+#fig, axs = plt.subplots(2,1, figsize=(10,12), tight_layout=False)
 fig, axs = plt.subplots(2,1, figsize=(10,10))
 # [TheMatplotlibDevelopmentTeam2023a, from API Reference: Modules: matplotlib.pyplot: matplotlib.pyplot.subplots_adjust]
 plt.subplots_adjust(hspace=0.4)
+#plt.subplots_adjust(wspace=1000.0)
 axs[0].plot(df["TIME"], df["{V(VI)+1}"], label="inverter $V_{in}$")
 axs[1].plot(df["TIME"], df["{V(VO)+1}"], label="inverter $V_{out}$")
 
@@ -239,11 +240,12 @@ axs[1].set_xlabel('time $t$ (s)')
 # Add a legend to both subplots [Hunter2023b].
 axs[0].legend(title='Function plotted:')
 axs[1].legend(title='Function plotted:')
+#fig.tight_layout()
 """
   Save plot in PDF format [Peitek2019] [Peitek2019a].
 	This "save to PDF" command has to appear before the .show() command;
 		else, the PDF file would be empty.
 """
-plt.savefig("./simulation-plots/"+"finfet-inverter-vout-vin"+".pdf")
+plt.savefig("./simulation-plots/"+"finfet-inverter-vout-vin-simple"+".pdf")
 # Show the plot via GUI representation and the file plot.
 plt.show()
