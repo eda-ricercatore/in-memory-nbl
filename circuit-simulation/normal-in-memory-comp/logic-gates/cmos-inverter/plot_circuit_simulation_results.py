@@ -203,25 +203,19 @@ print(df)
 	Plot the circuit simulation results [Hunter2016].
 
 	When we plot the input and output signals, Vin and Vout, of the
-		inverter, they will overlap and make it hard to read the
-		graphs/plots/functions separately.
+		inverter on the same set of axes, they will overlap and make
+		it hard to read the graphs/plots/functions separately.
 
 	Consequently, we choose to use subplots to stack the graphs/plots/functions
 		vertically, so that they would be easier to analyze/study/examine
 		[TheMatplotlibDevelopmentTeam2023a, API Reference: matplotlib.pyplot: matplotlib.pyplot.subplots: Date tick labels].
 """
-#plt.plot(df["\{V(IN)+1.0\}"], df["\{V(VOUT)+1.0\}"], label="sine wave")
-#plt.plot(df["{V(IN)+1.0}"], df["{V(VOUT)+1.0}"], label="inverter $V_{out}$, $V_{in}$")
-#plt.plot(df["TIME"], df["{V(IN)+1.0}"], df["TIME"], df["{V(VOUT)+1.0}"], label="inverter $V_{out}$, $V_{in}$")
 #fig, axs = plt.subplots(2,1)
 fig, axs = plt.subplots(2,1, figsize=(10,10))
 axs[0].plot(df["TIME"], df["{V(IN)+1.0}"], label="inverter $V_{in}$")
 axs[1].plot(df["TIME"], df["{V(VOUT)+1.0}"], label="inverter $V_{out}$")
-#plt.plot(df["V(IN)+1.0"], df["V(VOUT)+1.0"], label="sine wave")
-#plt.plot(df["TIME"], df["V\(IN\)+1.0"], label="sine wave")
 
 
-#plt.plot(df_to_np[:,1], df_to_np[:,2], label="sine wave")
 # Add the title to the plot [Hunter2023].
 #axs[0].title('Plot of $V_{in}$ against time $t$')
 axs[0].set_title('Plot of $V_{in}$ (V) against time $t$ (s)')
