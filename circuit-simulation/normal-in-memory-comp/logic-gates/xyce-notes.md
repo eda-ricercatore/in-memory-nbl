@@ -81,6 +81,9 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 ##	Output Files
 
+
++ The user guide [Keiter2022, Table 7-4, pp.81, \S7.3.8] provides options to print the Xyce circuit simulation results in different formats.
+	- E.g., we can use the option to print the Xyce circuit simulation results in CSV format, instead of the default ".prn" (print-to-file) format.
 + \cite[\S7.4.6., pp. 73, "Output files" section]{Keiter2019a}
 	- "The output data, as specified by a .PRINT line, however, goes to a single (*.prn) file. For convenience, Xyce also creates a second auxilliary file with the *.res suffix."
 	- "Figure 7-3 shows an example file named clip.cir, which when run will produce files clip.cir.res and clip.cir.prn. The file clip.cir.res contains one line for each step, showing what parameter value was used on that step. clip.cir.prn is the familiar output format, but the INDEX field recycles to zero each time a new step begins."
@@ -89,6 +92,20 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 + \cite[\S7.5.8., pp. 79-80, "Output files" section]{Keiter2019a}
 	- pp. 79, "Figure 7-5 shows an example file named clip.cir, which when run will produce files clip.cir.res and clip.cir.prn. The file clip.cir.res contains one line for each step, showing what parameter value was used on that step. clip.cir.prn is the familiar output format, but the INDEX field recycles to zero each time a new step begins. As the default behavior distinguishes each step’s output only by recycling the INDEX field to zero, it can be beneficial to add the sampling parameters to the .PRINT line. For the default file format (format=std), Xyce will not automatically include these sampling parameters, so for plotting it is usually best to specify them by hand."
 	- pp. 80, "Note that for sampling calculations involving a really large number of sample points, the single output file can become prohibitively large. Be careful when using .PRINT if the number of samples is large. If the number is really large (thousands) consider excluding any .PRINT output statements and just rely on statistical outputs, described next in section 7.5.9. Similarly, the generation of the measure output can be suppressedwith.OPTIONS MEASURE MEASPRINT."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

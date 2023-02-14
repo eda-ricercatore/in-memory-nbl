@@ -12,7 +12,8 @@ THIS CIRCUIT TEST A MOS LEVEL 1 MODEL CMOS INVERTER
 *.print tran vout vin v1 FORMAT=CSV
 *.print tran FORMAT=CSV vout vin v1
 * Use the user guide [Keiter2022, Table 7-4, pp.81, \S7.3.8] to print the
-*	circuit simulation results in CSV format, instead of 
+*	circuit simulation results in CSV format, instead of the default
+*	".prn" (print-to-file) format.
 .print tran FORMAT=CSV {V(vout)+1.0} {v(in)+1.0} v(1)
 VDDdev 	VDD	0	5V
 RIN	IN	1	1K
