@@ -97,6 +97,7 @@
 
 
 
+* Information about the ".global" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: ".inc" or ".include" or ".incl" (include file), \S 2.1.15, pp. 47].
 * --- Voltage Sources ---
 vdd   supply  0 dc 1.0
 vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
