@@ -81,9 +81,10 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 + Avoid using the "-l" option (pp. 765) to store the log output into a specified (text) file.
 	- It is easy for people to fail to update the path for the log file for each parameter configuration for the experiments involving *Xyce* circuit simulation.
 	- However, for large circuits or other circuit simulation setup conditions that take a long time to simulate, this option allows us to record what happened and facilitate debugging. It also enables us to avoid printing a lot of information to the Terminal that can be hard to uniquely read and process when we run too many circuit simulations in a fairly short period of time.
-	- Bottom line: When deciding whether to use this option, create a plan for updating the parameter value for this option.
+	- ***Bottom line: When deciding whether to use this option, create a plan for updating the parameter value for this option.***
 		* UNIX shebang approach: Use a script to update the UNIX shebang.
 		* Build automation approach (e.g., Makefile): Use a script or *Make*-supported "for loop"s to iterate/enumerate a list of filenames.
+	- [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command] [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection]
 + When using the "-o" option (pp. 765), check that the path of the output path is correct.
 	- When doing experiments with *Xyce* circuit simulation, check that it (especially the filename) reflects the parameter configuration.
 
