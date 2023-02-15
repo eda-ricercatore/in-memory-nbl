@@ -63,19 +63,19 @@
 *Sample netlist for BSIM-MG 
 *Inverter Transient
 
-* Information about the ".options" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25, pp. 95].
-* Information about the ".options timeint" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25: .options timeint (Time Integration Options), \S2.1.25.2, pp. 97-101].
+* Information about the ".options" statement [Keiter2022a, Chapter 2, Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement, pp. 95].
+* Information about the ".options timeint" statement [Keiter2022a, Chapter 2, Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.2 .options timeint (Time Integration Options), pp. 97-101].
 *	abstol = absolute error tolerance (pp. 98)
 *	reltol = relative error tolerance (pp. 98)
 *.option abstol=1e-6 reltol=1e-6 post ingold
-* Information about the ".options nonlin" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25: .options nonlin statement, \S 2.1.25.3, pp. 101-102] for nonlinear solver options.
+* Information about the ".options nonlin" statement [Keiter2022a, Chapter 2, Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S 2.1.25.3 .options nonlin statement, pp. 101-102] for nonlinear solver options.
 *	Regarding the "continuation" option, it specifies the homotopy/continuation
 *		algorithm for the nonlinear solver (pp. 102).
 *		Select GMIN stepping for the "continuation" option.
 *	abstol = absolute residual vector tolerance (pp. 102).
 *	reltol = relative residual vector tolerance (pp. 102).
 .options nonlin continuation=gmin
-* Information about the ".options timeint" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25: .options timeint (Time Integration Options), \S2.1.25.2, pp. 97-101].
+* Information about the ".options timeint" statement [Keiter2022a, Chapter 2, Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.2 .options timeint (Time Integration Options), pp. 97-101].
 *	Regarding the "method" option, it specifies the time integration
 *		method for transient analysis/mode (pp. 98).
 *		Select (trap or) variable order trapezoid for the "method" option (pp. 98).
