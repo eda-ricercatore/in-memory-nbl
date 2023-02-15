@@ -103,7 +103,10 @@ Guidelines and recommendations:
 		* ".model" statements for model definition.
 		* ".param" statements for parameters.
 		* ".func" statements for functions.
-
+	- Format:
+		* .subckt [name] [node]*
+		* + [params: [param_name]=[param_value]]
+		* .ends
 
 
 

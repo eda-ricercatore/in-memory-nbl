@@ -124,6 +124,10 @@ Xinv3  2 3 supply 0 mg_inv
 Xinv4  3 4 supply 0 mg_inv
 Xinv5  4 vo supply 0 mg_inv
 
+
+
+
+
 * --- Transient Analysis ---
 .tran 10n 5u
 
