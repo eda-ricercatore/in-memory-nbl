@@ -91,12 +91,13 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 
 
 Guidelines and recommendations:
++ The use of asterisk indicates multiple instances of something (e.g., a parameter or device) [Keiter2022a, from Chapter 5 Introduction: \S 1.3 Typographical conventions, Table 1-1, pp. 20]
 + [Keiter2022a, from Chapter 5, Subsection \S 5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
 	- Choose the value of ***RELTOL***, so that *RELTOL = 1.0E-(m+1)* and *m* is the desired number of siginificant digits of accuracy.
 	- Set *ABSTOL* to be the smallest value for components in the integrated circuit (IC).
 	- Select ***ABSTOL < RELTOL***.
-
-
++ [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.37 .subckt (subcircuit), pp. 157-158].
+	- ".subckt" statements begin with ".subckt" and ends with ".ends".
 
 
 
