@@ -77,7 +77,7 @@ To run the *Xyce* circuit simulator from the command line interface (CLI), the X
 
 To customize this, we can use the UNIX shebang (or sharp-exclamation, sha-bang, hashbang, pound-bang, hash-piling) "#!" [WikipediaContributors2017a] to run the *Xyce* circuit simulator on this netlist as if this netlist were a script.
 
-The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, Section \S3, Table 3.1, pp. 765-766].
+The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter 2, Section \S3, Table 3.1, pp. 765-766].
 + Avoid using the "-l" option (pp. 765) to store the log output into a specified (text) file.
 	- It is easy for people to fail to update the path for the log file for each parameter configuration for the experiments involving *Xyce* circuit simulation.
 	- However, for large circuits or other circuit simulation setup conditions that take a long time to simulate, this option allows us to record what happened and facilitate debugging. It also enables us to avoid printing a lot of information to the Terminal that can be hard to uniquely read and process when we run too many circuit simulations in a fairly short period of time.
@@ -91,7 +91,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, S
 
 
 Guidelines and recommendations:
-+ [Keiter2022a, Chapter 5, Subsection \S 5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
++ [Keiter2022a, from Chapter 5, Subsection \S 5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
 	- Choose the value of ***RELTOL***, so that *RELTOL = 1.0E-(m+1)* and *m* is the desired number of siginificant digits of accuracy.
 	- Set *ABSTOL* to be the smallest value for components in the integrated circuit (IC).
 	- Select ***ABSTOL < RELTOL***.
@@ -113,7 +113,7 @@ Guidelines and recommendations:
 ##	Output Files
 
 
-+ The user guide [Keiter2022, Table 7-4, pp.81, \S7.3.8] provides options to print the Xyce circuit simulation results in different formats.
++ The user guide [Keiter2022, from Table 7-4, pp.81, \S7.3.8] provides options to print the Xyce circuit simulation results in different formats.
 	- E.g., we can use the option to print the Xyce circuit simulation results in CSV format, instead of the default ".prn" (print-to-file) format.
 + \cite[\S7.4.6., pp. 73, "Output files" section]{Keiter2019a}
 	- "The output data, as specified by a .PRINT line, however, goes to a single (*.prn) file. For convenience, Xyce also creates a second auxilliary file with the *.res suffix."
