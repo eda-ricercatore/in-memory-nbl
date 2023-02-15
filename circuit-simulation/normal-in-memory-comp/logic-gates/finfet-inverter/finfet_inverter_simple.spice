@@ -1,4 +1,4 @@
-#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce
+#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -o xyce-simulation-results/finfet_inverter_simple.spice.csv
 
 *	#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -o xyce-simulation-results/finfet_inverter_simple.spice.csv
 
