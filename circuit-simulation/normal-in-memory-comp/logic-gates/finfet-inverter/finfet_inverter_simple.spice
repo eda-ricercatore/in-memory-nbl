@@ -127,10 +127,15 @@ Xinv5  4 vo supply 0 mg_inv
 
 
 
-
+* Information about the ".tran" statement to determine "the time-domain response of a circuit for a specified duration" [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.38 .tran (Transient Analysis), pp. 159-160].
+* Format: .tran [initial step value] [final time value] [start time value] [step ceiling value]
+* Default value of [step ceiling value] = ([final time value] - [start time value])/10
 * --- Transient Analysis ---
 .tran 10n 5u
 
+
+
+* Information about the ".print" statement to store the circuit simulation results in a specified/default output file [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 .print (Print output), pp. 126-146].
 .print tran FORMAT=CSV {v(vi)+1} {v(vo)+1}
 *comp {v(vi)+1} reltol=1e-2 
 *comp {v(vo)+1} reltol=1e-2  abstol=1e-5 zerotol=1e-8
