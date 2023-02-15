@@ -87,8 +87,8 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 + When using the "-o" option (pp. 765), check that the path of the output path is correct.
 	- When doing experiments with *Xyce* circuit simulation, check that it (especially the filename) reflects the parameter configuration.
 	- Information on using the ".print" statement [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, pp. 154-158] to specify printing circuit simulation results to the output file.
-		* Table 9-2 (page 156) indicates how to use this parameter to print/save the circuit simulation results in output file(s). It also specifies the output file format that we can save the circuit simulation results.
-		* Output file formats (specified in Table 9-2, on page 156) are [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 127-128]:
+		* Table 9-2 (page 156) indicates how to use this parameter to print/save the circuit simulation results in output file(s). It also specifies the output file format that we can save the circuit simulation results [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-2, pp. 156].
+		* Output file formats (specified in Table 9-2, on page 156) are [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 127-128] [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-3, pp. 156]:
 			+ Default file format: NOINDEX, ".prn"
 			+ CSV file format: ".csv"
 			+ RAW file format: ".raw"
@@ -99,7 +99,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 			+ The "-r" command line argument/option cannot override the Xyce netlist [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
 			+ If the ".print sens" statement, ".print homotopy" statement, and the "-o" command line argument/option will have a greater priority over the "-r" command line argument/option, and would prevent usage of the "-r" command line argument/option [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
 				- This is because the ".print sens" statement and the ".print homotopy" statement do not support raw file output in their analysis types.
-				- The set of analysis that can be done by the Xyce circuit simulator is provided in [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output), pp. 126-142].
+				- The ***set of analyses that can be done by the Xyce circuit simulator*** is provided in [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output), pp. 126-142].
 					* AC analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.1 Print AC Analysis, pp. 134-135].
 					* DC analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.2 Print DC Analysis, pp. 135].
 					* harmonic balance analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.3 Print Harmonic Balance Analysis, pp. 136-137].
@@ -109,9 +109,12 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 					* sensitivity [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.7 Print Sensitivity, pp. 139-141].
 					* embedded sampling analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.8 Print Embedded Sampling Analysis, pp. 141].
 					* Intrusive PCE analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.9 Print Intrusive PCE analysis, pp. 142].
-			[Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160]
+					* This is also summarized in Table 9-1 of [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-1, pp. 155]
+	- Additional information on the command line argument "-o" is found at: [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.2 "-o" Output, pp. 160].
+		* Xyce does not allow this command line argument to override the Xyce netlist.
 	- The command line argument "-r" saves the output file in the raw file format [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 132], and its combined usage with the "-a" option stores Xyce circuit simulation results in ASCII characters.
-		- This can be used to specify an output file for each type/mode of analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): pp. 126-127], such as AC and HB [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 128].
+		* This can be used to specify an output file for each type/mode of analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): pp. 126-127], such as AC and HB [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 128].
+			+ The AC and harmonic balance analysis types/modes can produce multiple files for each analysis type/mode [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.4 Multi-File Output for AC and HB Analysis, pp. 161].
 
 
 

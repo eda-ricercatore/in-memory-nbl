@@ -136,7 +136,9 @@ Xinv5  4 vo supply 0 mg_inv
 
 
 * Information about the ".print" statement to store the circuit simulation results in a specified/default output file [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 .print (Print output), pp. 126-146].
+* Information about the ".print tran" statement to store the circuit simulation results for transient analysis in a specified/default output file [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 .print (Print output): \S2.1.31.5, pp. 138-139].
 .print tran FORMAT=CSV {v(vi)+1} {v(vo)+1}
 *comp {v(vi)+1} reltol=1e-2 
 *comp {v(vo)+1} reltol=1e-2  abstol=1e-5 zerotol=1e-8
+* End of the Xyce netlist/deck [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.6 .end (End of Circuit), pp. 131].
 .end
