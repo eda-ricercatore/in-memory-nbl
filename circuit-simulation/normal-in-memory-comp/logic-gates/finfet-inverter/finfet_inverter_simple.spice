@@ -79,9 +79,7 @@
 *	Regarding the "method" option, it specifies the time integration
 *		method for transient analysis/mode (pp. 98).
 *		Select (trap or) variable order trapezoid for the "method" option (pp. 98).
-
-Table 7.3 , pp. 77
-[Keiter2022, Chapter 7 AnalysisTypes: \S7.3 Transient Analysis]
+* The trap integration method combines trapezoidal rule (numerical method) and the default backward Euler method/option (or implicit Euler method) [Keiter2022, from Chapter 7 Analysis Types: \S7.3 Transient Analysis: \S7.3.4 Time Integration Methods: Table 7-3, pp. 77]
 
 .options timeint method=trap
 * Information about the ".options device" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.1 .options device (Device Package Options), pp. 96-97].
