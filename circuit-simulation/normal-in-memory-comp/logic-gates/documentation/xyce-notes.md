@@ -95,7 +95,11 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 			+ TECPLOT file format: ".dat"
 			+ PROBE file format: ".csd"
 		* [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection, pp. 159-161]
-			+ When both "-o" and "-r" command line arguments/options are used, the "-r" command line argument/option would only use its value to store the Xyce circuit simulation in the raw/binary format.
+			+ When both "-o" and "-r" command line arguments/options are used, the "-r" command line argument/option would only use its value to store the Xyce circuit simulation in the raw/binary format [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
+			+ The "-r" command line argument/option cannot override the Xyce netlist [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
+			+ If the ".print sens" statement, ".print homotopy" statement, and the "-o" command line argument/option will have a greater priority over the "-r" command line argument/option, and would prevent usage of the "-r" command line argument/option [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
+				- This is because the ".print sens" statement and the ".print homotopy" statement do not support raw file output in their analysis types.
+			[Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160]
 	- The command line argument "-r" saves the output file in the raw file format [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 132], and its combined usage with the "-a" option stores Xyce circuit simulation results in ASCII characters.
 		- This can be used to specify an output file for each type/mode of analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): pp. 126-127], such as AC and HB [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 128].
 
