@@ -42,10 +42,6 @@
 
 
 
-
-
-
-
 *	The MIT License (MIT)
 
 *	Copyright (c) <2020> <Zhiyang Ong>
@@ -80,8 +76,7 @@
 *	Regarding the "method" option, it specifies the time integration
 *		method for transient analysis/mode (pp. 98).
 *		Select (trap or) variable order trapezoid for the "method" option (pp. 98).
-* The trap integration method combines trapezoidal rule (numerical method) and the default backward Euler method/option (or implicit Euler method) [Keiter2022, from Chapter 7 Analysis Types: \S7.3 Transient Analysis: \S7.3.4 Time Integration Methods: Table 7-3, pp. 77]
-
+* The trap integration method combines trapezoidal rule (numerical method) and the default backward Euler method/option (or implicit Euler method [WikipediaContributors2022e]) [Keiter2022, from Chapter 7 Analysis Types: \S7.3 Transient Analysis: \S7.3.4 Time Integration Methods: Table 7-3, pp. 77]
 .options timeint method=trap
 * Information about the ".options device" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.1 .options device (Device Package Options), pp. 96-97].
 *	Regarding the "temp" option, it specifies the temperature for transient analysis/mode (pp. 96).
@@ -102,6 +97,9 @@
 
 * Information about the ".global" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.11 ".global" (Global Node), pp. 42].
 * Specify global nodes with the ".global" statement or the prefix "$G" (pp. 42)
+* Information about voltage nodes [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices: \S 2.3.1 Voltage Nodes, pp. 180] [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices: \S 2.3.10 Independent Voltage Source, pp. 223-228].
+* Format for DC voltage sources: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value]
+* Format for AC voltage sources, with transient specification as time-varying functions: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value] [time-varying function] [time-varying function parameters]
 * --- Voltage Sources ---
 vdd   supply  0 dc 1.0
 vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
