@@ -77,10 +77,10 @@ To run the *Xyce* circuit simulator from the command line interface (CLI), the X
 
 To customize this, we can use the UNIX shebang (or sharp-exclamation, sha-bang, hashbang, pound-bang, hash-piling) "#!" [WikipediaContributors2017a] to run the *Xyce* circuit simulator on this netlist as if this netlist were a script.
 
-The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, Section \S3, Table 3.1, pp. 769 or ].
-+ Avoid using the "-l" option to store the log output into a specified (text) file.
+The command line arguments for *Xyce* are provided in [Keiter2022a, Chapter 2, Section \S3, Table 3.1, pp. 765-766].
++ Avoid using the "-l" option (pp. 765) to store the log output into a specified (text) file.
 	- It is easy for people to fail to update the path for the log file for each parameter configuration for the experiments involving *Xyce* circuit simulation.
-+ When using the "-o" option, check that the path of the output path is correct.
++ When using the "-o" option (pp. 765), check that the path of the output path is correct.
 	- When doing experiments with *Xyce* circuit simulation, check that it (especially the filename) reflects the parameter configuration.
 
 

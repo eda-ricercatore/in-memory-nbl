@@ -80,7 +80,8 @@
 *		method for transient analysis/mode (pp. 98).
 *		Select (trap or) variable order trapezoid for the "method" option (pp. 98).
 
-Table 7.3 Keiter2022, pp. 77
+Table 7.3 , pp. 77
+[Keiter2022, Chapter 7, AnalysisTypes: \S7.3 TransientAnalysis.]
 
 .options timeint method=trap
 * Information about the ".options device" statement [Keiter2022a, Chapter 2, Netlist Reference: Netlist Commands, \S 2.1: .options statement, \S 2.1.25: .options device (Device Package Options), \S2.1.25.1, pp. 96-97].
