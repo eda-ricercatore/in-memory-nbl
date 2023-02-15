@@ -98,7 +98,11 @@ Guidelines and recommendations:
 	- Select ***ABSTOL < RELTOL***.
 + [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.37 .subckt (subcircuit), pp. 157-158].
 	- ".subckt" statements begin with ".subckt" and ends with ".ends".
-
+	- ".subckt" statements can be nested/embedded within other ".subckt" statements.
+	- ".subckt" statements should only include device instantiations, and possibly the following statements (limited to use within the subcircuits).
+		* ".model" statements for model definition.
+		* ".param" statements for parameters.
+		* ".func" statements for functions.
 
 
 
