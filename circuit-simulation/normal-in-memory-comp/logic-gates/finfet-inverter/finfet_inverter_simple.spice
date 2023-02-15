@@ -1,4 +1,6 @@
-#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -o xyce-simulation-results/finfet_inverter_simple.spice.csv
+#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce
+
+*	#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -o xyce-simulation-results/finfet_inverter_simple.spice.csv
 
 *	#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -l logfiles-of-simulation/finfet_inverter_simple.log -o xyce-simulation-results/finfet_inverter_simple.spice.csv
 *	[Keiter2022a, from Chapter 2, Section \S3, Table 3.1, pp. 765] specifies the command line argument "-l" for storing log files.
@@ -65,6 +67,9 @@
 *	abstol = absolute error tolerance (pp. 98)
 *	reltol = relative error tolerance (pp. 98)
 *.option abstol=1e-6 reltol=1e-6 post ingold
+
+
+
 * Information about the ".options nonlin" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S 2.1.25.3 .options nonlin statement, pp. 101-102] for nonlinear solver options.
 *	Regarding the "continuation" option, it specifies the homotopy/continuation
 *		algorithm for the nonlinear solver (pp. 102).
@@ -72,16 +77,26 @@
 *	abstol = absolute residual vector tolerance (pp. 102).
 *	reltol = relative residual vector tolerance (pp. 102).
 .options nonlin continuation=gmin
+
+
+
+
 * Information about the ".options timeint" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.2 .options timeint (Time Integration Options), pp. 97-101].
 *	Regarding the "method" option, it specifies the time integration
 *		method for transient analysis/mode (pp. 98).
 *		Select (trap or) variable order trapezoid for the "method" option (pp. 98).
 * The trap integration method combines trapezoidal rule (numerical method) and the default backward Euler method/option (or implicit Euler method [WikipediaContributors2022e]) [Keiter2022, from Chapter 7 Analysis Types: \S7.3 Transient Analysis: \S7.3.4 Time Integration Methods: Table 7-3, pp. 77]
 .options timeint method=trap
+
+
+
 * Information about the ".options device" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.1 .options device (Device Package Options), pp. 96-97].
 *	Regarding the "temp" option, it specifies the temperature for transient analysis/mode (pp. 96).
 *		The temperature is specified in degree Celsius (pp. 96).
 .options device temp=25
+
+
+
 * Information about the ".options output" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.8 .options output (Output Options), pp. 108].
 *	Regarding the "initial_interval" option, it specifies the time/timing interval for sampling voltage values of specified notes that are recorded during transient analysis/mode (pp. 108).
 .options output initial_interval=1e-8
