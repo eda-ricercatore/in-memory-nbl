@@ -79,7 +79,7 @@
 * + C, capacitors
 * + M, MOSFET transistors/devices
 * + V, independent voltage sources
-*.preprocess removeunused R, L, C, M, V
+.preprocess removeunused R, L, C, M, V
 
 
 
@@ -128,7 +128,7 @@
 
 * Information about the ".options output" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.25 .options statement: \S2.1.25.8 .options output (Output Options), pp. 108].
 *	Regarding the "initial_interval" option, it specifies the time/timing interval for sampling voltage values of specified notes that are recorded during transient analysis/mode (pp. 108).
-.options output initial_interval=1e-8
+.options output initial_interval=1e-11
 
 
 
