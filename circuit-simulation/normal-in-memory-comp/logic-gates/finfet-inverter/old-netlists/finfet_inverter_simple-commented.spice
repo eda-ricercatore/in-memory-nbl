@@ -1,0 +1,191 @@
+#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce 
+
+*	#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -o xyce-simulation-results/finfet_inverter_simple.spice.csv
+
+*	#!/Applications/apps/eda/circuit_simulation/xyce/Xyce-Release-7.6.0-NORAD/bin/Xyce -l logfiles-of-simulation/finfet_inverter_simple.log -o xyce-simulation-results/finfet_inverter_simple.spice.csv
+*	[Keiter2022a, from Chapter 2, Section \S3, Table 3.1, pp. 765] specifies the command line argument "-l" for storing log files.
+*		Avoid using the "-l" option.
+*	[Keiter2022a, from Chapter 2, Section \S3, Table 3.1, pp. 765] specifies the command line argument "-o" for storing Xyce circuit simulation results.
+
+
+* This Xyce script and netlist is written by Zhiyang Ong to simulate
+*	a FinFET-based inverter, instead of using bulk MOSFET transistors.
+*
+* This Xyce netlist was obtained from [XyceTeam2023, from Xyce-7.6: utils: ADMS: examples: BSIMCMG110.0.0_20160101: benchmark_test: inverter_transient.sp] [XyceTeam2023e].
+* Its path is: Xyce-7.6/utils/ADMS/examples/BSIMCMG110.0.0_20160101/benchmark_test/inverter_transient.sp
+* It can also be obtained from [Keiter2023], and its URL is: https://github.com/Xyce/Xyce/blob/master/utils/ADMS/examples/BSIMCMG110.0.0_20160101/benchmark_test/inverter_transient.sp
+
+
+
+
+
+
+* References:
+* + [Keiter2022a]
+*	- Eric R. Keiter, Thomas V. Russo, Richard L. Schiek, Heidi K. Thornquist, Ting Mei, Jason C. Verley, Karthik V. Aadithya, and Joshua D. Schickling, "Xyce$^\texttrademark$ Parallel Electronic Simulator: Reference Guide, Version 7.6," number SAND2022-14886, Sandia National Laboratories, Albuquerque, NM and Livermore, CA, November, 2022. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Documentation & Tutorials at: https://xyce.sandia.gov/files/xyce/Xyce_Reference_Guide_7.6.pdf; February 9, 2023 was the last accessed date.
+* + [Keiter2022]
+*	- Eric R. Keiter, Thomas V. Russo, Richard L. Schiek, Heidi K. Thornquist, Ting Mei, Jason C. Verley, Karthik V. Aadithya, and Joshua D. Schickling, "Xyce$^\texttrademark$ Parallel Electronic Simulator: Users' Guide, Version 7.6," number SAND2022-14885, Sandia National Laboratories, Albuquerque, NM and Livermore, CA, November, 2022. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Documentation & Tutorials at: https://xyce.sandia.gov/files/xyce/Xyce_Users_Guide_7.6.pdf; February 9, 2023 was the last accessed date.
+* + [Keiter2023]
+*	- Eric `Karlsefni2012' Keiter, Tom `tvrusso' Russo, peshola, Heidi `hkthorn' Thornquist, rich1149, Jason `TBird2001' Verley, Paul `kuberry' Kuberrys, Zack `zackgalbreath' Galbreath, Joseph `josephsnyder' Snyder, and David `dc-snl' Collins, Gary J. `gjtempl' Templet, and loulawrence, "The Xyce$^\texttrademark$ Parallel Electronic Simulator," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce; February 9, 2023 was the last accessed date.
+* + [XyceTeam2023b]
+*	- Xyce team, "Executables," Sandia National Laboratories, Albuquerque, NM, 2023. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Downloads: Executables at: https://xyce.sandia.gov/downloads/executables/; February 5, 2023 was the last accessed date.
+* + [XyceTeam2023]
+*	- Xyce team, "Xyce: Parallel Electronic Simulation," Sandia National Laboratories, Albuquerque, NM, 2023. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC) at: https://xyce.sandia.gov/; February 5, 2023 was the last accessed date.
+* + [XyceTeam2023e]
+*	- Xyce team, "Xyce Regression Suite," Sandia National Laboratories, Albuquerque, NM, 2022. Available online from Sandia National Laboratories: Research: Research Foundations: Engineering Science: Advanced Simulation and Computing (ASC): Xyce: Downloads: Source Code at: https://xyce.sandia.gov/files/xyce/Xyce_Regression-7.6.tar.gz and https://xyce.sandia.gov/downloads/source-code/; February 9, 2023 was the last accessed date.
+* + [peshola2023]
+*	- peshola, Eric `Karlsefni2012' Keiter, Tom `tvrusso' Russo, rich1149, Heidi `hkthorn' Thornquist, Paul `kuberry' Kuberry, and Jason `TBird2001' Verley, "The Xyce$^\texttrademark$ Regression Test Suite," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce_Regression; February 9, 2023 was the last accessed date.
+* + [WikipediaContributors2022e]
+*	- Wikipedia contributors, "Backward Euler method," Wikimedia Foundation, San Francisco, CA, April 15, 2022. Available online from Wikipedia, The Free Encyclopedia: Numerical differential equations at: https://en.wikipedia.org/wiki/Backward_Euler_method; February 15, 2023 was the last accessed date.
+
+
+
+
+
+
+
+*	The MIT License (MIT)
+
+*	Copyright (c) <2020> <Zhiyang Ong>
+
+*	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+*	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"	Che cosa significa?
+
+
+*********************************************************************
+
+* Information to set up global parameters using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
+* Format: .GLOBAL_PARAM [name] = [value]
+* Information to set up parameters using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
+* Format: .PARAM [name] = [value]
+* The following does not work for string values. Only numerical values are allowed.
+*.PARAM tran_analy_output_filename_csv="xyce-simulation-results/finfet_inverter_simple.spice.csv"
+*.PARAM tran_analy_output_filename_csv=xyce-simulation-results/finfet_inverter_simple.spice.csv
+
+*********************************************************************
+
+
+
+*Sample netlist for BSIM-MG 
+*Inverter Transient
+
+* Information about the ".options" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement, pp. 95].
+* Information about the ".options timeint" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.2 .options timeint (Time Integration Options), pp. 97-101].
+*	abstol = absolute error tolerance (pp. 98)
+*	reltol = relative error tolerance (pp. 98)
+*.option abstol=1e-6 reltol=1e-6 post ingold
+
+
+
+* Information about the ".options nonlin" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S 2.1.25.3 .options nonlin statement, pp. 101-102] for nonlinear solver options.
+*	Regarding the "continuation" option, it specifies the homotopy/continuation
+*		algorithm for the nonlinear solver (pp. 102).
+*		Select GMIN stepping for the "continuation" option.
+*	abstol = absolute residual vector tolerance (pp. 102).
+*	reltol = relative residual vector tolerance (pp. 102).
+.options nonlin continuation=gmin
+
+
+
+
+* Information about the ".options timeint" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.2 .options timeint (Time Integration Options), pp. 97-101].
+*	Regarding the "method" option, it specifies the time integration
+*		method for transient analysis/mode (pp. 98).
+*		Select (trap or) variable order trapezoid for the "method" option (pp. 98).
+* The trap integration method combines trapezoidal rule (numerical method) and the default backward Euler method/option (or implicit Euler method [WikipediaContributors2022e]) [Keiter2022, from Chapter 7 Analysis Types: \S7.3 Transient Analysis: \S7.3.4 Time Integration Methods: Table 7-3, pp. 77]
+.options timeint method=trap
+
+
+
+* Information about the ".options device" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.1 .options device (Device Package Options), pp. 96-97].
+*	Regarding the "temp" option, it specifies the temperature for transient analysis/mode (pp. 96).
+*		The temperature is specified in degree Celsius (pp. 96).
+.options device temp=25
+
+
+
+* Information about the ".options output" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.25 .options statement: \S2.1.25.8 .options output (Output Options), pp. 108].
+*	Regarding the "initial_interval" option, it specifies the time/timing interval for sampling voltage values of specified notes that are recorded during transient analysis/mode (pp. 108).
+.options output initial_interval=1e-8
+
+
+
+* Information about the ".inc", or ".include", or ".incl" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.15 ".inc" or ".include" or ".incl" (include file), pp. 47].
+* Include the device/compact models for n-channel/nMOS and p-channel/pMOS FinFET devices.
+.include "finfet_models/modelcard.nmos_xyce"
+.include "finfet_models/modelcard.pmos_xyce"
+
+
+
+* Information about the ".global" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.11 ".global" (Global Node), pp. 42].
+* Specify global nodes with the ".global" statement or the prefix "$G" (pp. 42)
+* Information about voltage nodes [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices: \S 2.3.1 Voltage Nodes, pp. 180] [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices: \S 2.3.10 Independent Voltage Source, pp. 223-228].
+* Format for DC voltage sources: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value]
+* Format for AC voltage sources, with transient specification as time-varying functions: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value] [time-varying function] [time-varying function parameters]
+* --- Voltage Sources ---
+vdd   supply  0 dc 1.0
+vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
+
+
+* Information about the ".subckt" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.37 .subckt (subcircuit), pp. 157-158].
+* ".subckt" statements begin with ".subckt" and ends with ".ends".
+* Format:
+*	.subckt [name] [node]*
+*	+ [params: [param_name]=[param_value]]
+*	.ends
+* Information about the description of components, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices, Table 2-34, pp. 174-175].
+* --- Inverter Subcircuit ---
+.subckt inverter_cir vin vout vdd gnd
+Mpfinfet1 vout vin vdd gnd pmos1 TFIN=15n L=30n NFIN=10 ASEO=1.5e-14 ADEO=1.5e-14 NRS=1 NRD=1
+Mnfinfet1 vout vin gnd gnd nmos1 TFIN=15n L=30n NFIN=10 ASEO=1.5e-14 ADEO=1.5e-14 NRS=1 NRD=1
+.ends
+
+
+* Information about the description of components, including subcircuits, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices, Table 2-34, pp. 174-175].
+* --- Inverter ---
+Xinverter1  vi cir_node_1 supply 0 inverter_cir
+Xinverter2  cir_node_1 cir_node_2 supply 0 inverter_cir
+Xinverter3  cir_node_2 cir_node_3 supply 0 inverter_cir
+Xinverter4  cir_node_3 cir_node_4 supply 0 inverter_cir
+Xinverter5  cir_node_4 vo supply 0 inverter_cir
+
+
+
+
+* Information about the ".tran" statement to determine "the time-domain response of a circuit for a specified duration" [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.38 .tran (Transient Analysis), pp. 159-160].
+* Format: .tran [initial step value] [final time value] [start time value] [step ceiling value]
+* Default value of [step ceiling value] = ([final time value] - [start time value])/10
+* --- Transient Analysis ---
+.tran 10n 5u
+
+
+
+* Information about the ".print" statement to store the circuit simulation results in a specified/default output file [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 .print (Print output), pp. 126-146].
+* Information about the ".print tran" statement to store the circuit simulation results for transient analysis in a specified/default output file [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 .print (Print output): \S2.1.31.5, pp. 138-139].
+* Important Notes:
+* + When the CSV FORMAT is specified, and the "-o" command line argument/option is indicated,
+*		it will still print to a ".prn" output file (in the print-to-file format)
+*		with the ".prn" file extension added to the filename/path specified by the
+*		"-o" command line argument/option.
+* + When the CSV FORMAT is specified, without specification of the
+*		"-o" command line argument/option, it will print to a
+*		".csv" output file (in the CSV format) in the
+*		location/directory of the netlist.
+* + To print the output file in the CSV format in the desired location,
+*		do not use the "-o" command line argument/option, and use the
+*		file argument of the ".print" statement to print the CSV output
+*		file in the specified location.
+.print tran FORMAT=CSV file=xyce-simulation-results/finfet_inverter_simple.spice.csv {v(vi)+1} {v(vo)+1}
+*.print tran FORMAT=CSV file=tran_analy_output_filename_csv {v(vi)+1} {v(vo)+1}
+*comp {v(vi)+1} reltol=1e-2 
+*comp {v(vo)+1} reltol=1e-2  abstol=1e-5 zerotol=1e-8
+
+
+
+* End of the Xyce netlist/deck [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.6 .end (End of Circuit), pp. 131].
+.end

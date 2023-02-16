@@ -178,8 +178,15 @@ Guidelines and recommendations:
 		* power
 		* analytic sensitivity
 		* stationary noise
-
-
+	- Supported multigate MOSFET transistors, or multigate devices, or multigate field-effect transistors (MuGFET)
+		* ***Determine how to implement the following***:
+			+ ***FinFETs***, non-planar transistors or 3-D transistors
+				- The inverter example shows how it works.
+				- Determine how to scale it to smaller dimensions, such as 10 nm FinFETs and 5 nm FinFETs.
+			+ ***gate-all-around field-effect transistor, GAAFET*** (preferred) or GAA FET, non-planar transistors or 3-D transistors
+			+ ***multiple-independent-gate field-effect transistor (MIGFET)***
+				- Can support advanced data structures for logic synthesis and verification based on XOR gates, multiplexers (mux), majority gates, 
+					* They are more efficient representations of boolean functions.
 
 
 
