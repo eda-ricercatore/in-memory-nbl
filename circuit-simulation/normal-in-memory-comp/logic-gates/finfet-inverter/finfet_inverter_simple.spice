@@ -153,6 +153,12 @@
 *			+ PW, pulse width
 *			+ PER, period
 *	- PWL <parameters> Piecewise linear waveform
+*		* Format: PWL  T0 V0 [Tn Vn] [optional multiple instances of this] [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.10 Independent Voltage Source: Piecewise Linear, Table 2-63, pp. 226-227]
+*			+ Tn, time at corner
+*			+ Vn, voltage at corner
+*			+ TD, time delay
+*			+ R, repeat time
+*		* Format: PWL  FILE "<name>" [TD=<timeDelay>] [R=<repeatTime>] [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.10 Independent Voltage Source: Piecewise Linear, Table 2-63, pp. 226-227]
 * + Information about independent voltage sources [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 175].
 * Format for DC voltage sources: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value]
 * Format for AC voltage sources, with transient specification as time-varying functions: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value] [time-varying function] [time-varying function parameters]
