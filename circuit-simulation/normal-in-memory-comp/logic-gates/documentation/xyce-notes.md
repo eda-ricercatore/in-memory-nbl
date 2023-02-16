@@ -12,8 +12,8 @@ A netlist is a representation of a circuit in textual form [Weste2011, Chapter 1
 + Comparison of post-synthesis/postsynthesis gate-level netlist and transistor-level netlist [Weste2011, Chapter 1 Introduction: \S1.11 Design Verification, pp. 53].
 + Discussion of extracted, transistor-level SPICE netlists [Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133].
 + Transistor-level SPICE netlists can be extracted from schematics or IC layout designs [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288].
-+ Simulation netlists [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.1 Sources and Passive Components, pp. 289] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.3 Inverter Transient Analysis, pp. 293-294].
-
++ Simulation netlists [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.1 Sources and Passive Components, pp. 289] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.3 Inverter Transient Analysis, pp. 293-294] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295-296] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.5 Optimization, pp. 297] [Weste2011, Chapter 8 Circuit Simulation: \S8.3 Device Models: \8.3.5 Design Corners, pp. 302] [Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.4 Parasitic Capacitance, pp. 309] [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.3 Logical Effort, pp. 316] [Weste2011, Chapter 8 Circuit Simulation: \S8.6 Interconnect Simulation, pp. 321].
++ Use tools for version control, revision control, or software configuration management to backup SPICE decks that have been chracterized for the semiconductor manufacturing process technology that the IC design team is using; the characterization is done by characterizing simple circuits, such as fanout-of-4 (FO4) inverters [Weste2011, Chapter 8 Circuit Simulation: \S8.7 Pitfalls and Fallacies, pp. 323].
 
 
 
@@ -153,7 +153,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 
 
 
-Guidelines and recommendations:
+***Guidelines and recommendations***:
 + The use of asterisk indicates multiple instances of something (e.g., a parameter or device) [Keiter2022a, from Chapter 5 Introduction: \S1.3 Typographical conventions, Table 1-1, pp. 20]
 + [Keiter2022a, from Chapter 5, Subsection \S5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
 	- Choose the value of ***RELTOL***, so that *RELTOL = 1.0E-(m+1)* and *m* is the desired number of siginificant digits of accuracy.
@@ -221,12 +221,17 @@ Guidelines and recommendations:
 			+ Indicated as a FinFET device on page 599 (BSIM CMG versions 107.0.0).
 			+ Indicated as a FinFET device on page 629 (BSIM CMG versions 108.0.0).
 + To use multiple instances of the same device, see [Keiter2022, from Chapter 4 Netlist Basics: \S4.4 Device Multiplier M, Table 4-3, pp. 47]
++ Use subcircuits to facilitate reading and maintenance of SPICE decks [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295]
++ Include (extracted) SPICE simulation netlists as (sub)circuits to be included in the main SPICE decks (use the .include statement) [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295]
 
 
 
 
 
-Suggested reading:
+
+
+
+***Suggested reading***:
 + [Logic Synthesis for Digital In-Memory Computing](http://www.cs.utsa.edu/~jha/papers/2022_Jha_ICCAD_LogicSynthesisInMemoryComputingHybrid.pdf)
 + [Logic Synthesis for Established and Emerging Computing](https://si2.epfl.ch/~demichel/publications/archive/2019/08478240.pdf)
 	- https://si2.epfl.ch/~demichel/research/logic.html
@@ -234,6 +239,11 @@ Suggested reading:
 	- BBDD, biconditional binary decision diagrams, biconditional BDDs
 	- SWD, spin-wave devices
 	- area-delay-power product, ADP product
+
+FO4 inverter, Fanout-of-4 inverters [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295]
+
+
+
 
 
 
