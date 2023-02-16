@@ -147,8 +147,30 @@ Guidelines and recommendations:
 		* .subckt [name] [node]*
 		* + [params: [param_name]=[param_value]]
 		* .ends
-
-
++ Global parameters can be defined using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
+	- "Reserved words that [cannot] be used as names for parameters":
+		* Time
+		* Freq
+		* Hertz
+		* Vt
+		* Temp
+		* Temper
+		* GMIN
+	- Global parameters cannot be redefined (p.. 44).
+	- Definitions of ".PARAM" at "the top level netlist is equivalent to" those of ".GLOBAL_PARAM" definitions (pp. 43).
+* Parameters can be defined using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
+	- While parameters can be redefined, the last parameter definition would be used. Warnings are not provided for this, unless specified with the "*-redefined_param* command line option".
+	- Interpolators can use data stored in a file for numerical interpolation (pp. 118).
+	- "Reserved words that [cannot] be used as names for parameters" (pp. 118-119):
+		* Time
+		* Freq
+		* Hertz
+		* Vt
+		* Temp
+		* Temper
+		* GMIN
+	- Definitions of ".PARAM" at "the top level netlist [or 'main circuit netlist'] is equivalent to" those of ".GLOBAL_PARAM" definitions, and can be accessed by the main circuit and all subcircuits (pp. 119).
+	- ".PARAM" definitions in subcircuits are limited to the scope of these subcircuits and nested/embedded subcircuits (pp. 119).
 
 
 

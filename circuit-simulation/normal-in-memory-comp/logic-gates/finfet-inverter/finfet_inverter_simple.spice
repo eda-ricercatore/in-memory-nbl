@@ -57,6 +57,16 @@
 *	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"	Che cosa significa?
 
 
+*********************************************************************
+
+* Information to set up global parameters using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
+* Format: .GLOBAL_PARAM [name] = [value]
+* Information to set up parameters using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
+* Format: .PARAM [name] = [value]
+.param tran_analy_output_filename_csv = xyce-simulation-results/finfet_inverter_simple.spice.csv
+
+*********************************************************************
+
 
 
 *Sample netlist for BSIM-MG 
@@ -165,7 +175,8 @@ Xinv5  4 vo supply 0 mg_inv
 *		do not use the "-o" command line argument/option, and use the
 *		file argument of the ".print" statement to print the CSV output
 *		file in the specified location.
-.print tran FORMAT=CSV file=xyce-simulation-results/finfet_inverter_simple.spice.csv {v(vi)+1} {v(vo)+1}
+*.print tran FORMAT=CSV file=xyce-simulation-results/finfet_inverter_simple.spice.csv {v(vi)+1} {v(vo)+1}
+.print tran FORMAT=CSV file=tran_analy_output_filename_csv {v(vi)+1} {v(vo)+1}
 *comp {v(vi)+1} reltol=1e-2 
 *comp {v(vo)+1} reltol=1e-2  abstol=1e-5 zerotol=1e-8
 
