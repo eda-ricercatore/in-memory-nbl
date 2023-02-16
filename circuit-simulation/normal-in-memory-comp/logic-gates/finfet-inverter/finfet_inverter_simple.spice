@@ -169,7 +169,7 @@ vdd   supply  0 dc 1.0
 *vpulse  vi  0 pulse (0.0 1.0 3n 0.1n 0.1n 0.7n 1n)
 *vpulse  vi 0 1V pulse(0.0 1.0 0.0n 0.1n 0.1n 0.7n 1n)
 * --
-vpulse  vi 0 pulse(0.0 1.0 0.0n 0.1n 0.1n 0.7n 1n)
+vpulse  vi 0 pulse(0.0 1.0 0.0n 0.09n 0.09n 0.3n 1n)
 *vpulse  vi 0 pulse(0.0 1.0)
 
 
