@@ -158,7 +158,7 @@ Guidelines and recommendations:
 		* GMIN
 	- Global parameters cannot be redefined (p.. 44).
 	- Definitions of ".PARAM" at "the top level netlist is equivalent to" those of ".GLOBAL_PARAM" definitions (pp. 43).
-* Parameters can be defined using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
++ Parameters can be defined using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
 	- While parameters can be redefined, the last parameter definition would be used. Warnings are not provided for this, unless specified with the "*-redefined_param* command line option".
 	- Interpolators can use data stored in a file for numerical interpolation (pp. 118).
 	- "Reserved words that [cannot] be used as names for parameters" (pp. 118-119):
@@ -172,8 +172,12 @@ Guidelines and recommendations:
 	- Definitions of ".PARAM" at "the top level netlist [or 'main circuit netlist'] is equivalent to" those of ".GLOBAL_PARAM" definitions, and can be accessed by the main circuit and all subcircuits (pp. 119).
 	- ".PARAM" definitions in subcircuits are limited to the scope of these subcircuits and nested/embedded subcircuits (pp. 119).
 	- From [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions, pp. 44-47], parameters and expressions can only specify numeric values [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions, pp. 44] [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions: \S4.3.1 Parameters, pp. 44]
-
-
++ Information about the description of components, including subcircuits and semiconductor devices, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices, Table 2-34, pp. 174-175].
+	- Information about the *Xyce* circuit simulation features that are supported by a list of *Xyce* device models, such as MOSFETs and memristors [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices, Table 2-35, pp. 176-179]:
+		* branch current
+		* power
+		* analytic sensitivity
+		* stationary noise
 
 
 
