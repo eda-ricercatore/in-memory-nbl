@@ -171,7 +171,7 @@ Guidelines and recommendations:
 		* GMIN
 	- Definitions of ".PARAM" at "the top level netlist [or 'main circuit netlist'] is equivalent to" those of ".GLOBAL_PARAM" definitions, and can be accessed by the main circuit and all subcircuits (pp. 119).
 	- ".PARAM" definitions in subcircuits are limited to the scope of these subcircuits and nested/embedded subcircuits (pp. 119).
-
+	- From [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions, pp. 44-47], parameters and expressions can only specify numeric values [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions, pp. 44] [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions: \S4.3.1 Parameters, pp. 44]
 
 
 

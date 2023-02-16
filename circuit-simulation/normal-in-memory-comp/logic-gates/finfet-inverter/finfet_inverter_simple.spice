@@ -63,7 +63,7 @@
 * Format: .GLOBAL_PARAM [name] = [value]
 * Information to set up parameters using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
 * Format: .PARAM [name] = [value]
-.param tran_analy_output_filename_csv = "xyce-simulation-results/finfet_inverter_simple.spice.csv"
+.PARAM tran_analy_output_filename_csv="xyce-simulation-results/finfet_inverter_simple.spice.csv"
 
 *********************************************************************
 
