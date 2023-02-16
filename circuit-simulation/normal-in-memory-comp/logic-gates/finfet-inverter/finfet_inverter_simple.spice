@@ -59,6 +59,7 @@
 
 *********************************************************************
 
+* Deprecated section.
 * Information to set up global parameters using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
 * Format: .GLOBAL_PARAM [name] = [value]
 * Information to set up parameters using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.26 .PARAM (Parameter), pp. 118-119].
@@ -66,6 +67,22 @@
 * The following does not work for string values. Only numerical values are allowed.
 *.PARAM tran_analy_output_filename_csv="xyce-simulation-results/finfet_inverter_simple.spice.csv"
 *.PARAM tran_analy_output_filename_csv=xyce-simulation-results/finfet_inverter_simple.spice.csv
+
+*********************************************************************
+
+* Optional preprocessing.
+
+* Information about the ".PREPROCESS REMOVEUNUSED" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.29 .PREPROCESS REMOVEUNUSED (Removal of Unused Components), pp. 124].
+* Remove unused components of the following types:
+* + R, resistors
+* + L, inductors
+* + C, capacitors
+* + M, MOSFET transistors/devices
+* + V, independent voltage sources
+.preprocess removeunused R, L, C, M, V
+
+
+
 
 *********************************************************************
 
