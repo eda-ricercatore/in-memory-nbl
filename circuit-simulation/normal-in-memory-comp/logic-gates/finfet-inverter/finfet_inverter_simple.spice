@@ -201,7 +201,7 @@ Ccap1 vo 0 0.1p
 * Format: .tran [initial step value] [final time value] [start time value] [step ceiling value]
 * Default value of [step ceiling value] = ([final time value] - [start time value])/10
 * --- Transient Analysis ---
-.tran 0.025n 10n
+.tran 0.025n 8n
 
 
 
