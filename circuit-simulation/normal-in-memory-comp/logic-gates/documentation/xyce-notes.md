@@ -251,8 +251,17 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 			+ Comparisons of FO4 inverter delay and $\tau$ [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.3 Logical Effort, Table 8.8, pp. 318]
 			+ Determine statistical delay distribution of FO4 inverter delay via Monte Carlo simulation or other parameter sweep approaches [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.6 Monte Carlo Simulation, pp. 319]
 				- Good semiconductor device models have parameters to account for inter-die semiconductor manufacturing process variations (or, die-to-die process variations) and/or intra-die semiconductor manufacturing process variations (or, within-die process variations) [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.6 Monte Carlo Simulation, pp. 319]
-
-
+		* The delay of unloaded inverters is about 0.2 (or 20%) of FO4 inverter delay; hence, delay estimation/analysis via SPICE simulation need to specify the estimated load of the final stage [Weste2011, Chapter 8 Circuit Simulation: \S8.7 Pitfalls and Fallacies: Applying inappropriate output loading, pp. 323]
+		* Used for characterizing sequential elements, such as flip-flops [Weste2011, Chapter 10 Sequential Circuit Design: \S10.4 Static Sequencing Element Methodology: \S10.4.2 Characterizing Sequencing Element Delays, pp. 405]
+		* For characterizing circuits in the data path:
+			+ static CMOS full adders, 2-3 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.1 Single-Bit Addition, pp. 434]
+			+ domino CMOS full adders, 1.5 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.1 Single-Bit Addition, pp. 434]
+			+ good 64-bit domino adder, 7-9 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.2 Carry-Propagate Addition: \S11.2.2.13 Summary, pp. 457]
+			+ static adders, 13 FO4 inverter delay, 1/3 to 10% of energy consumption by dynamic adders, trade-off between energy efficiency and delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.2 Carry-Propagate Addition: \S11.2.2.13 Summary, pp. 457]
+			+ 32-bit tree adders, pre-layout delays of 7 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.2 Carry-Propagate Addition: \S11.2.2.13 Summary, pp. 458]
+			+ 64-bit tree adders, pre-layout delays of 8.5 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.2 Carry-Propagate Addition: \S11.2.2.13 Summary, pp. 458]
+		* ***SPICE deck/netlist for simulating FO4 inverter***, and alternate schematic for FO4 inverter (pp. 295) [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, Figure 8.10, pp. 296] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 294-296]
+	- Reference: M. Hrishikesh et al., “The optimal logic depth per pipeline stage is 6 to 8 FO4 inverter delays,” Proc. Intl. Symp. Computer Architecture, 2002, pp. 14–24.
 
 
 
