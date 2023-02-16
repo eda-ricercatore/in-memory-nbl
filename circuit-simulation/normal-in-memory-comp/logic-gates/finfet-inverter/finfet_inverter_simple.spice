@@ -145,7 +145,7 @@
 * + Use the following predefined time-varying functions [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.10 Independent Voltage Source, pp. 223]:
 *	- PULSE <parameters> Pulse waveform
 *		* Format: PULSE(V1 V2 TD TR TF PW PER) [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.10 Independent Voltage Source: Pulse, Table 2-59, pp. 223-224]
-*			+ V1 (required), initial value
+*			+ V1 (required), initial value (bias from zero, at the start)
 *			+ V2, pulse value
 *			+ TD, delay time
 *			+ TR, rise time
@@ -166,7 +166,7 @@
 vdd   supply  0 dc 1.0
 *vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
 * Set the pulse height to be the same as VDD.
-vpulse  vi  0 pulse (1.0 1.0 3n 0.1n 0.1n 0.7n 1n)
+vpulse  vi  0 pulse (0.0 1.0 3n 0.1n 0.1n 0.7n 1n)
 
 
 * Information about the ".subckt" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.37 .subckt (subcircuit), pp. 157-158].
@@ -201,7 +201,7 @@ Ccap1 vo 0 0.1p
 * Format: .tran [initial step value] [final time value] [start time value] [step ceiling value]
 * Default value of [step ceiling value] = ([final time value] - [start time value])/10
 * --- Transient Analysis ---
-.tran 0.025n 5n
+.tran 0.025n 10n
 
 
 
