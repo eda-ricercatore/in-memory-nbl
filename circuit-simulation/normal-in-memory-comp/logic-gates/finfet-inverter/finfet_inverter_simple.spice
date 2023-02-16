@@ -79,7 +79,7 @@
 * + C, capacitors
 * + M, MOSFET transistors/devices
 * + V, independent voltage sources
-.preprocess removeunused R, L, C, M, V
+*.preprocess removeunused R, L, C, M, V
 
 
 
