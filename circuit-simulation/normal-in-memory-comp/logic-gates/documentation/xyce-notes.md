@@ -115,6 +115,17 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 	- The command line argument "-r" saves the output file in the raw file format [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 132], and its combined usage with the "-a" option stores Xyce circuit simulation results in ASCII characters.
 		* This can be used to specify an output file for each type/mode of analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): pp. 126-127], such as AC and HB [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 128].
 			+ The AC and harmonic balance analysis types/modes can produce multiple files for each analysis type/mode [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.4 Multi-File Output for AC and HB Analysis, pp. 161].
+	- When the CSV FORMAT is specified, and the "-o" command line argument/option is indicated, it will still print to a ".prn" output file (in the print-to-file format) with the ".prn" file extension added to the filename/path specified by the "-o" command line argument/option.
+	- When the CSV FORMAT is specified, without specification of the "-o" command line argument/option, it will print to a ".csv" output file (in the CSV format) in the location/directory of the netlist.
+	- ***To print the output file in the CSV format in the desired location, do not use the "-o" command line argument/option, and use the file argument of the ".print" statement to print the CSV output file in the specified location.***
+
+
+
+
+
+
+
+
 
 
 

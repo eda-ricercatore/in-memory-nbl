@@ -157,6 +157,14 @@ Xinv5  4 vo supply 0 mg_inv
 *		it will still print to a ".prn" output file (in the print-to-file format)
 *		with the ".prn" file extension added to the filename/path specified by the
 *		"-o" command line argument/option.
+* + When the CSV FORMAT is specified, without specification of the
+*		"-o" command line argument/option, it will print to a
+*		".csv" output file (in the CSV format) in the
+*		location/directory of the netlist.
+* + To print the output file in the CSV format in the desired location,
+*		do not use the "-o" command line argument/option, and use the
+*		file argument of the ".print" statement to print the CSV output
+*		file in the specified location.
 .print tran FORMAT=CSV file=xyce-simulation-results/finfet_inverter_simple.spice.csv {v(vi)+1} {v(vo)+1}
 *comp {v(vi)+1} reltol=1e-2 
 *comp {v(vo)+1} reltol=1e-2  abstol=1e-5 zerotol=1e-8
