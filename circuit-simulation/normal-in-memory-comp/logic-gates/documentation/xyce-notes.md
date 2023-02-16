@@ -240,8 +240,13 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 	- BBDD, biconditional binary decision diagrams, biconditional BDDs
 	- SWD, spin-wave devices
 	- area-delay-power product, ADP product
-
-FO4 inverter, Fanout-of-4 inverters [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295]
++ FO4 inverter, Fanout-of-4 inverters
+	- schematic design of FO4 inverters [Weste2011, Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.5 Elmore Delay, Example 4.6, pp. 151]
+	- circuit delay of FO4 inverters is $5\tau$ [Weste2011, Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.5 Elmore Delay, pp. 152]
+		* $\tau$ refers to the RC delay of a first-order RC circuit, and is used to estimate the propagation delay (Equation 4.9 on page 149) [Weste2011, Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.4 Transient Response, pp. 148-149]
+		* Inverter delay is estimated to be 0.2 FO4 inverter delay [Weste2011, Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, Example 4.10, pp. 158]
+			+ FO4 delay, or FO4 inverter delay, is cited for "typical process parameters and worst-case environments (low power supply voltage and high temperature)" [Weste2011, Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
+			+ FO4 delay, or FO4 inverter delay, is approximately 1/3 or 1/2 the drawn channel length [Weste2011, Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
 
 
 
