@@ -170,8 +170,9 @@ vdd   supply  0 dc 1.0
 * Set the pulse height to be the same as VDD.
 *vpulse  vi  0 pulse (0.0 1.0 3n 0.1n 0.1n 0.7n 1n)
 *vpulse  vi 0 1V pulse(0.0 1.0 0.0n 0.1n 0.1n 0.7n 1n)
-* --
-vpulse  vi 0 pulse(0.0 1.0 0.0n 0.05n 0.05n 0.4n 1n)
+* Aggressive clock frequency: 1 GHz
+*vpulse  vi 0 pulse(0.0 1.0 0.0n 0.05n 0.05n 0.4n 1n)
+vpulse  vi 0 pulse(0.0 1.0 0.0n 0.1n 0.1n 0.55n 1.5n)
 *vpulse  vi 0 pulse(0.0 1.0)
 
 
