@@ -220,8 +220,10 @@ fig, axs = plt.subplots(2,1, figsize=(10,10))
 # [TheMatplotlibDevelopmentTeam2023a, from API Reference: Modules: matplotlib.pyplot: matplotlib.pyplot.subplots_adjust]
 plt.subplots_adjust(hspace=0.4)
 #plt.subplots_adjust(wspace=1000.0)
-axs[0].plot(df["TIME"], df["{V(VI)+1}"], label="inverter $V_{in}$")
-axs[1].plot(df["TIME"], df["{V(VO)+1}"], label="inverter $V_{out}$")
+#axs[0].plot(df["TIME"], df["{V(VI)+1}"], label="inverter $V_{in}$")
+axs[0].plot(df["TIME"], df["V(VI)"], label="inverter $V_{in}$")
+#axs[1].plot(df["TIME"], df["{V(VO)+1}"], label="inverter $V_{out}$")
+axs[1].plot(df["TIME"], df["V(VO)"], label="inverter $V_{out}$")
 
 
 # Add the titles to the plots [Hunter2023].
