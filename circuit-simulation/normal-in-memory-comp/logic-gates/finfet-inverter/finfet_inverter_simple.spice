@@ -141,7 +141,11 @@
 
 * Information about the ".global" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.11 ".global" (Global Node), pp. 42].
 * Specify global nodes with the ".global" statement or the prefix "$G" (pp. 42)
-* Information about voltage nodes [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.1 Voltage Nodes, pp. 180] [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.10 Independent Voltage Source, pp. 223-228].
+* Information about voltage nodes [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.1 Voltage Nodes, pp. 180] [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.10 Independent Voltage Source, pp. 223-228]
+* + Use the following predefined time-varying functions:
+*	- PULSE <parameters> Pulse waveform
+*	- PWL <parameters> Piecewise linear waveform
+* + Information about independent voltage sources [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 175].
 * Format for DC voltage sources: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value]
 * Format for AC voltage sources, with transient specification as time-varying functions: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value] [time-varying function] [time-varying function parameters]
 * --- Voltage Sources ---
