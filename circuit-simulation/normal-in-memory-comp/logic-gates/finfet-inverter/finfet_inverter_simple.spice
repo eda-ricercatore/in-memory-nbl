@@ -195,7 +195,7 @@ Mnfinfet1 vout vin gnd gnd nmos1 TFIN=15n L=30n NFIN=10 ASEO=1.5e-14 ADEO=1.5e-1
 * Information about the description of components, including subcircuits, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 174-175].
 * --- Inverter with capacitive load---
 Xinverter1 vi vo supply 0 inverter_cir
-Ccap1 vo 0 0.1p
+Ccap1 vo 0 0.05p
 * --- Inverter chain ---
 *Xinverter1  vi cir_node_1 supply 0 inverter_cir
 *Xinverter2  cir_node_1 cir_node_2 supply 0 inverter_cir
