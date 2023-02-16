@@ -166,7 +166,7 @@
 vdd   supply  0 dc 1.0
 *vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
 * Set the pulse height to be the same as VDD.
-vpulse  vi  0 dc 0.5 pulse (1.0 1.0 3n 0.1n 0.1n 0.7n 1n)
+vpulse  vi  0 pulse (1.0 1.0 3n 0.1n 0.1n 0.7n 1n)
 
 
 * Information about the ".subckt" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.37 .subckt (subcircuit), pp. 157-158].
