@@ -209,8 +209,8 @@ Ccap1 vo 0 0.1p
 * --- Transient Analysis ---
 *.tran 0.025n 6n
 * --
-*.tran 0.005n 6n
-.tran 0.005n 6n 0n 0.002n
+.tran 1.0p 6n
+*.tran 0.005n 6n 0n 0.002n
 
 
 * Information about the ".print" statement to store the circuit simulation results in a specified/default output file [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 .print (Print output), pp. 126-146].
