@@ -128,6 +128,8 @@
 
 * Information about the ".options output" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.25 .options statement: \S2.1.25.8 .options output (Output Options), pp. 108].
 *	Regarding the "initial_interval" option, it specifies the time/timing interval for sampling voltage values of specified notes that are recorded during transient analysis/mode (pp. 108).
+* Ensure that: time/timing interval >= initial step value (of transient analysis)
+* Ensure that: time/timing interval << duration of transient analysis (circuit simulation time/period)
 .options output initial_interval=1e-11
 
 
