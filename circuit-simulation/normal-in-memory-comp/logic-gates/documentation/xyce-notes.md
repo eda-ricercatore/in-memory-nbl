@@ -185,12 +185,23 @@ Guidelines and recommendations:
 				- Determine how to scale it to smaller dimensions, such as 10 nm FinFETs and 5 nm FinFETs.
 			+ ***gate-all-around field-effect transistor, GAAFET*** (preferred) or GAA FET, non-planar transistors or 3-D transistors
 			+ ***multiple-independent-gate field-effect transistor (MIGFET)***
-				- Can support advanced data structures for logic synthesis and verification based on XOR gates, multiplexers (mux), majority gates, 
+				- Can support advanced data structures for logic synthesis and verification based on XOR gates and majority gates.
 					* They are more efficient representations of boolean functions.
+					* majority-inverter graphs, MIGs
+					* XOR-AND graphs, XAGs
+					* XOR-majority graphs, XMGs
+					* majority-inverter graphs, MIGs
 
 
 
-
+Suggested reading:
++ [Logic Synthesis for Digital In-Memory Computing](http://www.cs.utsa.edu/~jha/papers/2022_Jha_ICCAD_LogicSynthesisInMemoryComputingHybrid.pdf)
++ [Logic Synthesis for Established and Emerging Computing](https://si2.epfl.ch/~demichel/publications/archive/2019/08478240.pdf)
+	- https://si2.epfl.ch/~demichel/research/logic.html
++ [New Logic Synthesis as Nanotechnology Enabler](https://infoscience.epfl.ch/record/210272?ln=en)
+	- BBDD, biconditional binary decision diagrams, biconditional BDDs
+	- SWD, spin-wave devices
+	- area-delay-power product, ADP product
 
 
 
