@@ -88,33 +88,33 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 	- When doing experiments with *Xyce* circuit simulation, check that it (especially the filename) reflects the parameter configuration.
 	- Information on using the ".print" statement [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, pp. 154-158] to specify printing circuit simulation results to the output file.
 		* Table 9-2 (page 156) indicates how to use this parameter to print/save the circuit simulation results in output file(s). It also specifies the output file format that we can save the circuit simulation results [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-2, pp. 156].
-		* Output file formats (specified in Table 9-2, on page 156) are [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 127-128] [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-3, pp. 156]:
+		* Output file formats (specified in Table 9-2, on page 156) are [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): Comments, pp. 127-128] [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-3, pp. 156]:
 			+ Default file format: NOINDEX, ".prn"
 			+ CSV file format: ".csv"
 			+ RAW file format: ".raw"
 			+ TECPLOT file format: ".dat"
 			+ PROBE file format: ".csd"
 		* [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection, pp. 159-161]
-			+ When both "-o" and "-r" command line arguments/options are used, the "-r" command line argument/option would only use its value to store the Xyce circuit simulation in the raw/binary format [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
-			+ The "-r" command line argument/option cannot override the Xyce netlist [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
-			+ If the ".print sens" statement, ".print homotopy" statement, and the "-o" command line argument/option will have a greater priority over the "-r" command line argument/option, and would prevent usage of the "-r" command line argument/option [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.1 "-r" Output, pp. 160].
+			+ When both "-o" and "-r" command line arguments/options are used, the "-r" command line argument/option would only use its value to store the Xyce circuit simulation in the raw/binary format [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S9.1.3.1 "-r" Output, pp. 160].
+			+ The "-r" command line argument/option cannot override the Xyce netlist [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S9.1.3.1 "-r" Output, pp. 160].
+			+ If the ".print sens" statement, ".print homotopy" statement, and the "-o" command line argument/option will have a greater priority over the "-r" command line argument/option, and would prevent usage of the "-r" command line argument/option [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S9.1.3.1 "-r" Output, pp. 160].
 				- This is because the ".print sens" statement and the ".print homotopy" statement do not support raw file output in their analysis types.
-				- The ***set of analyses that can be done by the Xyce circuit simulator*** is provided in [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output), pp. 126-142].
-					* AC analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.1 Print AC Analysis, pp. 134-135].
-					* DC analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.2 Print DC Analysis, pp. 135].
-					* harmonic balance analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.3 Print Harmonic Balance Analysis, pp. 136-137].
-					* noise analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.4 Print Noise Analysis, pp. 138].
-					* transient analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.5 Print Transient Analysis, pp. 138].
-					* homotopy [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.6 Print Homotopy, pp. 139].
-					* sensitivity [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.7 Print Sensitivity, pp. 139-141].
-					* embedded sampling analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.8 Print Embedded Sampling Analysis, pp. 141].
-					* Intrusive PCE analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): \S 2.1.31.9 Print Intrusive PCE analysis, pp. 142].
+				- The ***set of analyses that can be done by the Xyce circuit simulator*** is provided in [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output), pp. 126-142].
+					* AC analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.1 Print AC Analysis, pp. 134-135].
+					* DC analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.2 Print DC Analysis, pp. 135].
+					* harmonic balance analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.3 Print Harmonic Balance Analysis, pp. 136-137].
+					* noise analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.4 Print Noise Analysis, pp. 138].
+					* transient analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.5 Print Transient Analysis, pp. 138].
+					* homotopy [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.6 Print Homotopy, pp. 139].
+					* sensitivity [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.7 Print Sensitivity, pp. 139-141].
+					* embedded sampling analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.8 Print Embedded Sampling Analysis, pp. 141].
+					* Intrusive PCE analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): \S2.1.31.9 Print Intrusive PCE analysis, pp. 142].
 					* This is also summarized in Table 9-1 of [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.1 .print Command, Table 9-1, pp. 155]
-	- Additional information on the command line argument "-o" is found at: [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.2 "-o" Output, pp. 160].
+	- Additional information on the command line argument "-o" is found at: [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S9.1.3.2 "-o" Output, pp. 160].
 		* Xyce does not allow this command line argument to override the Xyce netlist.
-	- The command line argument "-r" saves the output file in the raw file format [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 132], and its combined usage with the "-a" option stores Xyce circuit simulation results in ASCII characters.
-		* This can be used to specify an output file for each type/mode of analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): pp. 126-127], such as AC and HB [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.31 ".print" (Print output): Comments, pp. 128].
-			+ The AC and harmonic balance analysis types/modes can produce multiple files for each analysis type/mode [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S 9.1.3.4 Multi-File Output for AC and HB Analysis, pp. 161].
+	- The command line argument "-r" saves the output file in the raw file format [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): Comments, pp. 132], and its combined usage with the "-a" option stores Xyce circuit simulation results in ASCII characters.
+		* This can be used to specify an output file for each type/mode of analysis [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): pp. 126-127], such as AC and HB [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.31 ".print" (Print output): Comments, pp. 128].
+			+ The AC and harmonic balance analysis types/modes can produce multiple files for each analysis type/mode [Keiter2022, from Chapter 9 Results Output and Evaluation Options: \S9.1 Control of Results Output: \S9.1.3 Output File Redirection: \S9.1.3.4 Multi-File Output for AC and HB Analysis, pp. 161].
 	- When the CSV FORMAT is specified, and the "-o" command line argument/option is indicated, it will still print to a ".prn" output file (in the print-to-file format) with the ".prn" file extension added to the filename/path specified by the "-o" command line argument/option.
 	- When the CSV FORMAT is specified, without specification of the "-o" command line argument/option, it will print to a ".csv" output file (in the CSV format) in the location/directory of the netlist.
 	- ***To print the output file in the CSV format in the desired location, do not use the "-o" command line argument/option, and use the file argument of the ".print" statement to print the CSV output file in the specified location.***
@@ -131,12 +131,12 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 
 
 Guidelines and recommendations:
-+ The use of asterisk indicates multiple instances of something (e.g., a parameter or device) [Keiter2022a, from Chapter 5 Introduction: \S 1.3 Typographical conventions, Table 1-1, pp. 20]
-+ [Keiter2022a, from Chapter 5, Subsection \S 5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
++ The use of asterisk indicates multiple instances of something (e.g., a parameter or device) [Keiter2022a, from Chapter 5 Introduction: \S1.3 Typographical conventions, Table 1-1, pp. 20]
++ [Keiter2022a, from Chapter 5, Subsection \S5.1.1, pp. 765--766] suggests using the same values for ***RELTOL*** and ***ABSTOL*** in the TIMEINT and NONLIN-TRAN .OPTIONS statements.
 	- Choose the value of ***RELTOL***, so that *RELTOL = 1.0E-(m+1)* and *m* is the desired number of siginificant digits of accuracy.
 	- Set *ABSTOL* to be the smallest value for components in the integrated circuit (IC).
 	- Select ***ABSTOL < RELTOL***.
-+ [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.37 .subckt (subcircuit), pp. 157-158].
++ [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.37 .subckt (subcircuit), pp. 157-158].
 	- ".subckt" statements begin with ".subckt" and ends with ".ends".
 	- ".subckt" statements can be nested/embedded within other ".subckt" statements.
 	- ".subckt" statements should only include device instantiations, and possibly the following statements (limited to use within the subcircuits).
@@ -147,7 +147,7 @@ Guidelines and recommendations:
 		* .subckt [name] [node]*
 		* + [params: [param_name]=[param_value]]
 		* .ends
-+ Global parameters can be defined using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
++ Global parameters can be defined using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
 	- "Reserved words that [cannot] be used as names for parameters":
 		* Time
 		* Freq
@@ -158,7 +158,7 @@ Guidelines and recommendations:
 		* GMIN
 	- Global parameters cannot be redefined (p.. 44).
 	- Definitions of ".PARAM" at "the top level netlist is equivalent to" those of ".GLOBAL_PARAM" definitions (pp. 43).
-+ Parameters can be defined using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.1 Netlist Commands: \S 2.1.26 .PARAM (Parameter), pp. 118-119].
++ Parameters can be defined using the ".PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.26 .PARAM (Parameter), pp. 118-119].
 	- While parameters can be redefined, the last parameter definition would be used. Warnings are not provided for this, unless specified with the "*-redefined_param* command line option".
 	- Interpolators can use data stored in a file for numerical interpolation (pp. 118).
 	- "Reserved words that [cannot] be used as names for parameters" (pp. 118-119):
@@ -171,9 +171,9 @@ Guidelines and recommendations:
 		* GMIN
 	- Definitions of ".PARAM" at "the top level netlist [or 'main circuit netlist'] is equivalent to" those of ".GLOBAL_PARAM" definitions, and can be accessed by the main circuit and all subcircuits (pp. 119).
 	- ".PARAM" definitions in subcircuits are limited to the scope of these subcircuits and nested/embedded subcircuits (pp. 119).
-	- From [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions, pp. 44-47], parameters and expressions can only specify numeric values [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions, pp. 44] [Keiter2022, from Chapter 4 Netlist Basics: \S 4.3 Parameters and Expressions: \S4.3.1 Parameters, pp. 44]
-+ Information about the description of components, including subcircuits and semiconductor devices, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices, Table 2-34, pp. 174-175].
-	- Information about the *Xyce* circuit simulation features that are supported by a list of *Xyce* device models, such as MOSFETs and memristors [Keiter2022a, from Chapter 2 Netlist Reference: \S 2.3 Devices, Table 2-35, pp. 176-179]:
+	- From [Keiter2022, from Chapter 4 Netlist Basics: \S4.3 Parameters and Expressions, pp. 44-47], parameters and expressions can only specify numeric values [Keiter2022, from Chapter 4 Netlist Basics: \S4.3 Parameters and Expressions, pp. 44] [Keiter2022, from Chapter 4 Netlist Basics: \S4.3 Parameters and Expressions: \S4.3.1 Parameters, pp. 44]
++ Information about the description of components, including subcircuits and semiconductor devices, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 174-175].
+	- Information about the *Xyce* circuit simulation features that are supported by a list of *Xyce* device models, such as MOSFETs and memristors [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-35, pp. 176-179]:
 		* branch current
 		* power
 		* analytic sensitivity
@@ -182,7 +182,7 @@ Guidelines and recommendations:
 		* ***Determine how to implement the following***:
 			+ ***FinFETs***, non-planar transistors or 3-D transistors
 				- The inverter example shows how it works.
-				- Determine how to scale it to smaller dimensions, such as 10 nm FinFETs and 5 nm FinFETs.
+				- ***Determine how to scale it to smaller dimensions***, such as 10 nm FinFETs and 5 nm FinFETs.
 			+ ***gate-all-around field-effect transistor, GAAFET*** (preferred) or GAA FET, non-planar transistors or 3-D transistors
 			+ ***multiple-independent-gate field-effect transistor (MIGFET)***
 				- Can support advanced data structures for logic synthesis and verification based on XOR gates and majority gates.
@@ -191,7 +191,11 @@ Guidelines and recommendations:
 					* XOR-AND graphs, XAGs
 					* XOR-majority graphs, XMGs
 					* majority-inverter graphs, MIGs
-
+		* [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.20 MOS Field Effect Transistor (MOSFET): \S2.3.20.13 Level 110 MOSFET Tables (BSIM CMG version 110.0.0), pp. 562-598] is the preferred multi-gate MOSFET device.
+			+ Indicated as a FinFET device on page 562.
+		* [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.20 MOS Field Effect Transistor (MOSFET): \S2.3.20.14 Level 107 and 108 MOSFET Tables (BSIM CMG versions 107.0.0 and 108.0.0), pp. 598-662].
+			+ Indicated as a FinFET device on page 599 (BSIM CMG versions 107.0.0).
+			+ Indicated as a FinFET device on page 629 (BSIM CMG versions 108.0.0).
 
 
 Suggested reading:
