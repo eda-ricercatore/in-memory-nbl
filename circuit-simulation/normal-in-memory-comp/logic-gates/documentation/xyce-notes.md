@@ -12,10 +12,11 @@ A netlist is a representation of a circuit in textual form [Weste2011, Chapter 1
 + Comparison of post-synthesis/postsynthesis gate-level netlist and transistor-level netlist [Weste2011, Chapter 1 Introduction: \S1.11 Design Verification, pp. 53].
 + Discussion of extracted, transistor-level SPICE netlists [Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133].
 + Transistor-level SPICE netlists can be extracted from schematics or IC layout designs [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288].
+	- Transistor-level SPICE netlists [Weste2011, Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691].
 + Simulation netlists [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.1 Sources and Passive Components, pp. 289] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.3 Inverter Transient Analysis, pp. 293-294] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295-296] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.5 Optimization, pp. 297] [Weste2011, Chapter 8 Circuit Simulation: \S8.3 Device Models: \8.3.5 Design Corners, pp. 302] [Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.4 Parasitic Capacitance, pp. 309] [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.3 Logical Effort, pp. 316] [Weste2011, Chapter 8 Circuit Simulation: \S8.6 Interconnect Simulation, pp. 321].
 + Use tools for version control, revision control, or software configuration management to backup SPICE decks that have been chracterized for the semiconductor manufacturing process technology that the IC design team is using; the characterization is done by characterizing simple circuits, such as fanout-of-4 (FO4) inverters [Weste2011, Chapter 8 Circuit Simulation: \S8.7 Pitfalls and Fallacies, pp. 323].
-
-
++ structural gate-level netlists in HDL (e.g., Verilog or VHDL) [Weste2011, Chapter 14 Design Methodology and Tools: \S14.4 Design Flows: \S14.4.1 Behavioral Synthesis Design Flow (ASIC Design Flow), pp. 638].
+	- structural netlists in HDL [Weste2011, Chapter 14 Design Methodology and Tools: \S14.4 Design Flows: \S14.4.1 Behavioral Synthesis Design Flow (ASIC Design Flow): \S14.4.1.3 Functional or Formal Verification, pp. 639] [Weste2011, Chapter 14 Design Methodology and Tools: \S14.4 Design Flows: \S14.4.2 Automated Layout Generation, pp. 641].
 
 
 
