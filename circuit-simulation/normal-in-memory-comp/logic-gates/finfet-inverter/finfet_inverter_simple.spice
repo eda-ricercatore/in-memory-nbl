@@ -184,7 +184,15 @@ vpulse  vi 0 pulse(0.0 1.0 0.0n 0.1n 0.1n 0.55n 1.5n)
 *	.subckt [name] [node]*
 *	+ [params: [param_name]=[param_value]]
 *	.ends
-* Information about the description of components, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 174-175].
+* Information about the description of components, including their prefixes for their variable names [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 174-175] [Keiter2022, from Chapter 4 Netlist Basics: \S4.2 Devices Available for Simulation, Table 4-2, pp. 42-43].
+* + Format for MOSFET device instantiation [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 175] [Keiter2022, from Chapter 4 Netlist Basics: \S4.2 Devices Available for Simulation, Table 4-2, pp. 43].
+[Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-34, pp. 175]
+2.1.21.1. LEVEL Parameter
+
+
+
+
+
 * --- Inverter Subcircuit ---
 .subckt inverter_cir vin vout vdd gnd
 Mpfinfet1 vout vin vdd gnd pmos1 TFIN=15n L=30n NFIN=10 ASEO=1.5e-14 ADEO=1.5e-14 NRS=1 NRD=1

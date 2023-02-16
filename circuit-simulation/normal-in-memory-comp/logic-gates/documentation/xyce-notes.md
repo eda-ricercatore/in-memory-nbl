@@ -2,6 +2,29 @@
 
 
 
+
+## Xyce/SPICE Preliminaries
+
+Input files for SPICE-like circuit simulators are referred to as SPICE decks [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288].
+
+A netlist is a representation of a circuit in textual form [Weste2011, Chapter 1 Introduction: \S1.9 Circuit Design, pp. 42].
++ A SPICE netlist provides more details "for delay and power simulations" than Verilog netlists [or those in VHDL, SystemVerilog, or SystemC] [Weste2011, Chapter 1 Introduction: \S1.9 Circuit Design, pp. 42]
++ Comparison of post-synthesis/postsynthesis gate-level netlist and transistor-level netlist [Weste2011, Chapter 1 Introduction: \S1.11 Design Verification, pp. 53].
++ Discussion of extracted, transistor-level SPICE netlists [Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133].
++ Transistor-level SPICE netlists can be extracted from schematics or IC layout designs [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288].
++ Simulation netlists [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.1 Sources and Passive Components, pp. 289] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.3 Inverter Transient Analysis, pp. 293-294].
+
+
+
+
+
+
+
+
+
+
+
+
 ##	Installing Xyce Circuit Simulator
 
 port install gcc9 libgcc9
@@ -193,9 +216,14 @@ Guidelines and recommendations:
 					* majority-inverter graphs, MIGs
 		* [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.20 MOS Field Effect Transistor (MOSFET): \S2.3.20.13 Level 110 MOSFET Tables (BSIM CMG version 110.0.0), pp. 562-598] is the preferred multi-gate MOSFET device.
 			+ Indicated as a FinFET device on page 562.
+			+ Use MOSFET (Level 110) [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices, Table 2-35, pp. 178]
 		* [Keiter2022a, from Chapter 2 Netlist Reference: \S2.3 Devices: \S2.3.20 MOS Field Effect Transistor (MOSFET): \S2.3.20.14 Level 107 and 108 MOSFET Tables (BSIM CMG versions 107.0.0 and 108.0.0), pp. 598-662].
 			+ Indicated as a FinFET device on page 599 (BSIM CMG versions 107.0.0).
 			+ Indicated as a FinFET device on page 629 (BSIM CMG versions 108.0.0).
++ To use multiple instances of the same device, see [Keiter2022, from Chapter 4 Netlist Basics: \S4.4 Device Multiplier M, Table 4-3, pp. 47]
+
+
+
 
 
 Suggested reading:
