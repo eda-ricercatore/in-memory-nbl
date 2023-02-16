@@ -164,7 +164,9 @@
 * Format for AC voltage sources, with transient specification as time-varying functions: [voltage_source_name] [voltage_node_name_positive_terminal] [voltage_node_name_negative_terminal] [DC] [value] [time-varying function] [time-varying function parameters]
 * --- Voltage Sources ---
 vdd   supply  0 dc 1.0
-vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
+*vsig  vi  0 dc 0.5 sin (0.5 0.5 1MEG)
+* Set the pulse height to be the same as VDD.
+vpulse  vi  0 dc 0.5 pulse (1.0 1.0 3n 0.1n 0.1n 0.7n 1n)
 
 
 * Information about the ".subckt" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.37 .subckt (subcircuit), pp. 157-158].
@@ -199,7 +201,7 @@ Ccap1 vo 0 0.1p
 * Format: .tran [initial step value] [final time value] [start time value] [step ceiling value]
 * Default value of [step ceiling value] = ([final time value] - [start time value])/10
 * --- Transient Analysis ---
-.tran 10n 5u
+.tran 0.025n 5n
 
 
 
