@@ -247,8 +247,10 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 		* Inverter delay is estimated to be 0.2 FO4 inverter delay [Weste2011, Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, Example 4.10, pp. 158]
 			+ FO4 delay, or FO4 inverter delay, is cited for "typical process parameters and worst-case environments (low power supply voltage and high temperature)" [Weste2011, Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
 			+ FO4 delay, or FO4 inverter delay, is approximately 1/3 or 1/2 the drawn channel length [Weste2011, Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
-		* Comparisons of FO4 inverter delay across semiconductor manufacturing process technologies by different companies, from 2 um to 65 nm [Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.6 Comparison of Processes, Table 8.5, pp. 312]
-
+		* Comparisons of FO4 inverter delay across semiconductor manufacturing process technologies by different companies, from 2 um to 65 nm [Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.6 Comparison of Processes, Table 8.5, pp. 312] 
+			+ Comparisons of FO4 inverter delay and $\tau$ [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.3 Logical Effort, Table 8.8, pp. 318]
+			+ Determine statistical delay distribution of FO4 inverter delay via Monte Carlo simulation or other parameter sweep approaches [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.6 Monte Carlo Simulation, pp. 319]
+				- Good semiconductor device models have parameters to account for inter-die semiconductor manufacturing process variations (or, die-to-die process variations) and/or intra-die semiconductor manufacturing process variations (or, within-die process variations) [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.6 Monte Carlo Simulation, pp. 319]
 
 
 
