@@ -261,7 +261,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 			+ 32-bit tree adders, pre-layout delays of 7 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.2 Carry-Propagate Addition: \S11.2.2.13 Summary, pp. 458]
 			+ 64-bit tree adders, pre-layout delays of 8.5 FO4 inverter delay [Weste2011, Chapter 11 Datapath Subsystems: \S11.2 Addition/Subtraction: \S11.2.2 Carry-Propagate Addition: \S11.2.2.13 Summary, pp. 458]
 		* ***SPICE deck/netlist for simulating FO4 inverter***, and alternate schematic for FO4 inverter (pp. 295) [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, Figure 8.10, pp. 296] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 294-296]
-	- Reference: M. Hrishikesh et al., “The optimal logic depth per pipeline stage is 6 to 8 FO4 inverter delays,” Proc. Intl. Symp. Computer Architecture, 2002, pp. 14–24.
+	- Reference: [Hrishikesh2002] explains the optimal logic depth for each pipeline stage
 
 
 
@@ -478,6 +478,32 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 			+ .save type=ic 
 	- \cite[]{}
 		* To be completed.
+
+
+
+
+
+
+##	Sizing FinFET Devices: Comparing Parameters of FinFETs and MOSFETs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
