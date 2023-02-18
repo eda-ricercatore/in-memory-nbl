@@ -488,8 +488,13 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
+As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum feature size in semiconductor manufacturing technology, and fulfill Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
++ We can add more devices to this paragraph.
 
+These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) and system-technology co-optimization (STCO). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures, and 
 
+[Sutherland1999]
+[Weste2011]
 
 
 
@@ -574,13 +579,18 @@ Not-so-good references:
 	- peshola, Eric 'Karlsefni2012' Keiter, Tom 'tvrusso' Russo, rich1149, Heidi 'hkthorn' Thornquist, Paul 'kuberry' Kuberry, and Jason 'TBird2001' Verley, "The Xyce$^\texttrademark$ Regression Test Suite," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce_Regression; February 9, 2023 was the last accessed date.
 + [WikipediaContributors2017a]
 	- Wikipedia contributors, "Shebang (Unix)," Wikimedia Foundation, San Francisco, CA, April 24, 2017. Available online from Wikipedia, The Free Encyclopedia: Unix at: https://en.wikipedia.org/wiki/Shebang_(Unix); May 1, 2017 was the last accessed date.
-
-
-
-
-
-
-
++ [Sutherland1999]
+	- Ivan Sutherland, Bob Sproull, and David Harris, "Logical Effort: Designing Fast CMOS Circuits," Morgan Kaufmann, San Francisco, CA, 1999.
++ [Weste2011]
+	- Neil H. E. Weste and David Money Harris, "CMOS VLSI Design: A Circuits and Systems Perspective," Fourth edition, Pearson Education, Boston, MA, 2011.
++ [Moore1965]
+	- Gordon E. Moore, "Cramming More Components Onto Integrated Circuits," in Electronics, Volume 38, Number 8, pp. 114--117, McGraw-Hill, New York, NY, April 19, 1965. Available online from *Intel: Newsroom: Moore's Law -- Now and in the Future* at: https://newsroom.intel.com/wp-content/uploads/sites/11/2018/05/moores-law-electronics.pdf; February 17, 2023 was the last accessed date.
++ [Moore1998]
+	- Gordon E. Moore, "Cramming More Components Onto Integrated Circuits," in *Proceedings of the IEEE*, Volume 86, Number 1, pp. 82-85, IEEE Press, Piscataway, NJ, January, 1998. DOI: https://dx.doi.org/10.1109/JPROC.1998.658762.
++ [Chauhan2015]
+	- Yogesh Singh Chauhan, Darsen Duane Lu, Sriramkumar Venugopalan, Sourabh Khandelwal, Juan Pablo Duarte, Navid Paydavosi, Ali Niknejad, and Chenming Hu, "FinFET Modeling for IC Simulation and Design: Using the BSIM-CMG Standard," Academic Press, San Diego, CA, 2015.
++ [Gildenblat2010]
+	- Gennady Gildenblat, "Compact Modeling: Principles, Techniques and Applications," Springer Science+Business Media B.V., Dordrecht, The Netherlands, 2010. DOI: https://dx.doi.org/10.1007/978-90-481-8614-3.
 
 
 
