@@ -491,7 +491,7 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum feature size in semiconductor manufacturing technology, and fulfill Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 + We can add more devices to this paragraph.
 
-These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) and system-technology co-optimization (STCO). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures, and 
+These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures, and domain-specific architectures (or hardware accelerators).
 
 [Sutherland1999]
 [Weste2011]
@@ -591,8 +591,28 @@ Not-so-good references:
 	- Yogesh Singh Chauhan, Darsen Duane Lu, Sriramkumar Venugopalan, Sourabh Khandelwal, Juan Pablo Duarte, Navid Paydavosi, Ali Niknejad, and Chenming Hu, "FinFET Modeling for IC Simulation and Design: Using the BSIM-CMG Standard," Academic Press, San Diego, CA, 2015.
 + [Gildenblat2010]
 	- Gennady Gildenblat, "Compact Modeling: Principles, Techniques and Applications," Springer Science+Business Media B.V., Dordrecht, The Netherlands, 2010. DOI: https://dx.doi.org/10.1007/978-90-481-8614-3.
-
-
++ [gem5developers2014]
+	- gem5 developers,
+	Available online at: http://www.gem5.org/Main_Page; self-published; October 9, 2014 was the last accessed date},
+	Keywords = {processor simulation, processor simulators},
+	Month = {October 27},
+	Title = {The {gem5} Simulator System: A modular platform for computer system architecture research},
+	Url = {http://www.gem5.org/Main_Page},
+	Year = {2014}}
+@article{Binkert2011,
+	Address = {New York, {NY}},
+	Author = {Nathan Binkert and Bradford Beckmann and Gabriel Black and Steven K. Reinhardt and Ali Saidi and Arkaprava Basu and Joel Hestness and Derek R. Hower and Tushar Krishna and Somayeh Sardashti and Rathijit Sen and Korey Sewell and Muhammad Shoaib and Nilay Vaish and Mark D. Hill and David A. Wood},
+	Doi = {https://dx.doi.org/10.1145/2024716.2024718},
+	Journal = {{ACM SIGARCH} Computer Architecture News},
+	Keywords = {processor simulation, processor simulators},
+	Month = {May},
+	Number = {2},
+	Pages = {1--7},
+	Publisher = {{ACM} Press},
+	Title = {The {gem5} Simulator},
+	Url = {https://dx.doi.org/10.1145/2024716.2024718},
+	Volume = {39},
+	Year = {2011}}
 
 
 
