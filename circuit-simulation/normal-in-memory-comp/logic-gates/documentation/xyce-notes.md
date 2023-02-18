@@ -519,8 +519,9 @@ Explore operations with the following:
 	- 2.5-D IC design and manufacturing
 + chiplet-based computing
 + magnetoresistive random-access memory, MRAM
-+ phase-change memory, PRAM
-
++ phase-change memory, PRAM, PCM, PCME, PRAM, PCRAM
+	- or OUM, ovonic unified memory
+	- chalcogenide RAM, C-RAM, CRAM
 
 
 
