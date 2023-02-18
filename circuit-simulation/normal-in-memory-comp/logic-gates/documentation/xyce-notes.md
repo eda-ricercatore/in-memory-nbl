@@ -491,27 +491,38 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum feature size in semiconductor manufacturing technology, and fulfill Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 + We can add more devices to this paragraph.
 
-These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures, and domain-specific architectures (or hardware accelerators).
+These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures [Binkert2011] [gem5developers2014], and domain-specific architectures (or hardware accelerators).
 
+
+To map circuit designs based on planar, bulk MOSFET devices to 
 [Sutherland1999]
 [Weste2011]
 
 
 
 
+Similarly, extend this for the following semiconductor devices:
++ "gate-all-around (GAA) FET, abbreviated GAAFET" (from the Wikipedia entry for multigate device, multi-gate MOSFET, multi-gate field-effect transistor, or MuGFET)
+	- multiple-independent-gate field-effect transistor, MIGFET
++ ferroelectric field-effect transistor, Fe FET
+	- used in ferroelectric RAM, FeRAM, F-RAM, or FRAM
+
+
+Explore operations with the following:
++ high bandwidth memory, HBM
++ wafer-scale computing
++ 3-D IC design and manufacturing
+	- 2.5-D IC design and manufacturing
++ chiplet-based computing
 
 
 
-
-
-
-
-
-
-
-
-
-
+Wikipedia
++ Memory cell
+	- D. Tang, Denny; Lee, Yuan-Jen (2010). Magnetic memory: Fundamentals and technology. Cambridge University Press. p. 91. 
+	- Li, Hai; Chen, Yiran (19 April 2016). Nonvolatile memory design: Magnetic, resistive, and phase change. CRC press
+	- Jacob, Bruce; Ng, Spencer; Wang, David (28 July 2010). Memory systems: Cache, DRAM, disk. Morgan Kaufmann. p. 355
+	- Siddiqi, Muzaffer A. (19 December 2012). Dynamic RAM: Technology advancements. CRC Press
 
 
 
@@ -592,27 +603,11 @@ Not-so-good references:
 + [Gildenblat2010]
 	- Gennady Gildenblat, "Compact Modeling: Principles, Techniques and Applications," Springer Science+Business Media B.V., Dordrecht, The Netherlands, 2010. DOI: https://dx.doi.org/10.1007/978-90-481-8614-3.
 + [gem5developers2014]
-	- gem5 developers,
-	Available online at: http://www.gem5.org/Main_Page; self-published; October 9, 2014 was the last accessed date},
-	Keywords = {processor simulation, processor simulators},
-	Month = {October 27},
-	Title = {The {gem5} Simulator System: A modular platform for computer system architecture research},
-	Url = {http://www.gem5.org/Main_Page},
-	Year = {2014}}
-@article{Binkert2011,
-	Address = {New York, {NY}},
-	Author = {Nathan Binkert and Bradford Beckmann and Gabriel Black and Steven K. Reinhardt and Ali Saidi and Arkaprava Basu and Joel Hestness and Derek R. Hower and Tushar Krishna and Somayeh Sardashti and Rathijit Sen and Korey Sewell and Muhammad Shoaib and Nilay Vaish and Mark D. Hill and David A. Wood},
-	Doi = {https://dx.doi.org/10.1145/2024716.2024718},
-	Journal = {{ACM SIGARCH} Computer Architecture News},
-	Keywords = {processor simulation, processor simulators},
-	Month = {May},
-	Number = {2},
-	Pages = {1--7},
-	Publisher = {{ACM} Press},
-	Title = {The {gem5} Simulator},
-	Url = {https://dx.doi.org/10.1145/2024716.2024718},
-	Volume = {39},
-	Year = {2011}}
+	- gem5 developers, "The gem5 Simulator System: A modular platform for computer system architecture research," October 27, 2014. Available online at: http://www.gem5.org/Main_Page; self-published; October 9, 2014 was the last accessed date.
++ [Binkert2011]
+	- Nathan Binkert, Bradford Beckmann, Gabriel Black, Steven K. Reinhardt, Ali Saidi, Arkaprava Basu, Joel Hestness, Derek R. Hower, Tushar Krishna, Somayeh Sardashti, Rathijit Sen, Korey Sewell, Muhammad Shoaib, Nilay Vaish, Mark D. Hill, and David A. Wood, "The gem5 Simulator," ACM SIGARCH Computer Architecture News, Volume 39, Number 2, pp. 1-7, ACM Press, New York, NY, May, 2011. DOI: https://dx.doi.org/10.1145/2024716.2024718.
+
+
 
 
 
