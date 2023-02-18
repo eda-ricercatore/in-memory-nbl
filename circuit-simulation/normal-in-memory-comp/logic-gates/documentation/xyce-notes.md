@@ -508,12 +508,27 @@ Similarly, extend this for the following semiconductor devices:
 	- used in ferroelectric RAM, FeRAM, F-RAM, or FRAM
 
 
+
+
+
+
 Explore operations with the following:
 + high bandwidth memory, HBM
 + wafer-scale computing
 + 3-D IC design and manufacturing
 	- 2.5-D IC design and manufacturing
 + chiplet-based computing
++ magnetoresistive random-access memory, MRAM
++ phase-change memory, PRAM
+
+
+
+
+
+
+
+
+
 
 
 
