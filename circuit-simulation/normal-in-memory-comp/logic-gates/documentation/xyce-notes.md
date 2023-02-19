@@ -659,7 +659,7 @@ Not-so-good references:
 	- Nathan Binkert, Bradford Beckmann, Gabriel Black, Steven K. Reinhardt, Ali Saidi, Arkaprava Basu, Joel Hestness, Derek R. Hower, Tushar Krishna, Somayeh Sardashti, Rathijit Sen, Korey Sewell, Muhammad Shoaib, Nilay Vaish, Mark D. Hill, and David A. Wood, "The gem5 Simulator," ACM SIGARCH Computer Architecture News, Volume 39, Number 2, pp. 1-7, ACM Press, New York, NY, May, 2011. DOI: https://dx.doi.org/10.1145/2024716.2024718.
 + [Chen2007]
 	- Wai-Kai Chen (editor), "The VLSI Handbook," Second edition, in The Electrical Engineering Handbook Series, CRC Press, Boca Raton, FL, 2007.
-
++ []
 
 
 
