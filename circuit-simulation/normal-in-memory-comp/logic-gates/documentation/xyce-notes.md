@@ -494,9 +494,27 @@ As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum
 These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures [Binkert2011] [gem5developers2014], and domain-specific architectures (or hardware accelerators).
 
 
-To map circuit designs based on planar, bulk MOSFET devices to 
+To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices, while FinFET devices are defined by ...
+
+
+The 
 [Sutherland1999]
 [Weste2011]
+
+
+minimum feature size
+[Weste2011]
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -518,6 +536,8 @@ Explore operations with the following:
 + 3-D IC design and manufacturing
 	- 2.5-D IC design and manufacturing
 + chiplet-based computing
++ resistive random-access memory, ReRAM, or RRAM
++ non-volatile random-access memory, NVRAM
 + magnetoresistive random-access memory, MRAM
 + phase-change memory, PRAM, PCM, PCME, PRAM, PCRAM
 	- or OUM, ovonic unified memory
@@ -539,6 +559,21 @@ Wikipedia
 	- Li, Hai; Chen, Yiran (19 April 2016). Nonvolatile memory design: Magnetic, resistive, and phase change. CRC press
 	- Jacob, Bruce; Ng, Spencer; Wang, David (28 July 2010). Memory systems: Cache, DRAM, disk. Morgan Kaufmann. p. 355
 	- Siddiqi, Muzaffer A. (19 December 2012). Dynamic RAM: Technology advancements. CRC Press
++ DRAM
+	- Keeth, Brent; Baker, R. Jacob; Johnson, Brian; Lin, Feng (2007). DRAM Circuit Design: Fundamental and High-Speed Topics. Wiley.
+	- Wang, David Tawei (2005). Modern DRAM Memory Systems: Performance Analysis and a High Performance, Power-Constrained DRAM-Scheduling Algorithm (PDF) (PhD). University of Maryland, College Park. hdl:1903/2432. Retrieved 2007-03-10. A detailed description of current DRAM technology.
++ RAM
+	- Sze, Simon M. (2002). Semiconductor Devices: Physics and Technology (PDF) (2nd ed.). Wiley. p. 214. ISBN 0-471-33372-7.
+	- Rainer Waser (2012). Nanoelectronics and Information Technology. John Wiley & Sons.
+	- Pimbley, J. (2012). Advanced CMOS Process Technology. Elsevier.
+
+
+
+
+
+
+
+
 
 
 
