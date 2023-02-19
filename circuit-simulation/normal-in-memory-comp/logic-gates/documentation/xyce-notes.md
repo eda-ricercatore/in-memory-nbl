@@ -497,7 +497,7 @@ These new semiconductor devices can lead to new circuit designs (***Cite this!!!
 To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices, while FinFET devices are defined by ...
 
 
-The (CMOS) semiconductor manufacturing process is defined by its minimum feature size, which is the smallest dimension of a transistor feature (e.g., gate length) that can be manufactured with 
+The (CMOS) semiconductor manufacturing process is defined by its minimum feature size, which is the smallest dimension of a transistor feature (e.g., gate length) that can be manufactured with consistently
 [Sutherland1999]
 [Weste2011]
 
@@ -506,7 +506,7 @@ minimum feature size
 [Weste2011]
 
 
-
+[Chen2007]
 
 
 
@@ -657,6 +657,8 @@ Not-so-good references:
 	- gem5 developers, "The gem5 Simulator System: A modular platform for computer system architecture research," October 27, 2014. Available online at: http://www.gem5.org/Main_Page; self-published; October 9, 2014 was the last accessed date.
 + [Binkert2011]
 	- Nathan Binkert, Bradford Beckmann, Gabriel Black, Steven K. Reinhardt, Ali Saidi, Arkaprava Basu, Joel Hestness, Derek R. Hower, Tushar Krishna, Somayeh Sardashti, Rathijit Sen, Korey Sewell, Muhammad Shoaib, Nilay Vaish, Mark D. Hill, and David A. Wood, "The gem5 Simulator," ACM SIGARCH Computer Architecture News, Volume 39, Number 2, pp. 1-7, ACM Press, New York, NY, May, 2011. DOI: https://dx.doi.org/10.1145/2024716.2024718.
++ [Chen2007]
+	- Wai-Kai Chen (editor), "The VLSI Handbook," Second edition, in The Electrical Engineering Handbook Series, CRC Press, Boca Raton, FL, 2007.
 
 
 

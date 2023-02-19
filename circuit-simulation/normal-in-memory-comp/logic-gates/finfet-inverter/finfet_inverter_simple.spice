@@ -18,6 +18,21 @@
 
 
 
+* The goal of using a FinFET-based inverter and a FinFET-based
+*	fanout-of-four (FO4) inverter circuit to characterize a
+*	semiconductor manufacturing process is to establish the fastest
+*	possible operating frequency for the integrated circuit under
+*	design [Weste2011, Chapter 8 Circuit Simulation: \S8.7 Pitfalls and Fallacies, pp. 323]
+*	[Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.6 Comparison of Processes, Table 8.5, pp. 312]
+
+* Newer devices, such as FinFETs, allow designers to experiment with
+*	new circuits for different arithmetic, mathematical, or statistical
+*	operations, including  
+[Chen2007c]
+
+
+
+
 
 
 * References:
@@ -37,7 +52,10 @@
 *	- peshola, Eric `Karlsefni2012' Keiter, Tom `tvrusso' Russo, rich1149, Heidi `hkthorn' Thornquist, Paul `kuberry' Kuberry, and Jason `TBird2001' Verley, "The Xyce$^\texttrademark$ Regression Test Suite," GitHub, Inc., San Francisco, CA, January 31, 2023. Available online from GitHub: Xyce at: https://github.com/Xyce/Xyce_Regression; February 9, 2023 was the last accessed date.
 * + [WikipediaContributors2022e]
 *	- Wikipedia contributors, "Backward Euler method," Wikimedia Foundation, San Francisco, CA, April 15, 2022. Available online from Wikipedia, The Free Encyclopedia: Numerical differential equations at: https://en.wikipedia.org/wiki/Backward_Euler_method; February 15, 2023 was the last accessed date.
-
+* + [Chen2007c]
+*	- Zhe Chen, Simon Haykin, Jos J. Eggermont, and Suzanna Becker, "Correlative Learning: A Basis for Brain and Adaptive Systems," in Wiley Series in Adaptive and Learning Systems for Signal Processing, Communication, and Control, John Wiley & Sons, Hoboken, NJ, 2007.
+* + [Weste2011]
+*	- Neil H. E. Weste and David Money Harris, "CMOS VLSI Design: A Circuits and Systems Perspective," Fourth edition, Pearson Education, Boston, MA, 2011.
 
 
 
