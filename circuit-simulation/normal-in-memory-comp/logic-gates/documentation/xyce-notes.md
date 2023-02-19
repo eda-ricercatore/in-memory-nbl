@@ -488,7 +488,7 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
-As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum feature size in semiconductor manufacturing technology, and fulfill Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
+As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum feature size in semiconductor manufacturing technology, and self-fulfill the Moore's law [Moore1965] [Moore1998] prophecy [Weste2011], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 + We can add more devices to this paragraph.
 
 These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures [Binkert2011] [gem5developers2014], and domain-specific architectures (or hardware accelerators).
@@ -497,7 +497,7 @@ These new semiconductor devices can lead to new circuit designs (***Cite this!!!
 To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices, while FinFET devices are defined by ...
 
 
-The 
+The (CMOS) semiconductor manufacturing process is defined by its minimum feature size, which is the smallest dimension of a transistor feature (e.g., gate length) that can be manufactured with 
 [Sutherland1999]
 [Weste2011]
 
