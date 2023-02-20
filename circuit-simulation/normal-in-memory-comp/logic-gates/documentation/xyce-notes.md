@@ -497,7 +497,7 @@ These new semiconductor devices can lead to new circuit designs (***Cite this!!!
 To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices, while FinFET devices are defined by ...
 
 
-The (CMOS) semiconductor manufacturing process is defined by its minimum feature size, which is the smallest dimension of a transistor feature (e.g., gate length) that can be manufactured with consistently
+The (CMOS) semiconductor manufacturing process is defined by its minimum feature size, which is the smallest dimension of a transistor feature (e.g., gate length [Keshavarzi2007]) that can be manufactured with consistently with process reliability
 [Sutherland1999]
 [Weste2011]
 
@@ -659,9 +659,9 @@ Not-so-good references:
 	- Nathan Binkert, Bradford Beckmann, Gabriel Black, Steven K. Reinhardt, Ali Saidi, Arkaprava Basu, Joel Hestness, Derek R. Hower, Tushar Krishna, Somayeh Sardashti, Rathijit Sen, Korey Sewell, Muhammad Shoaib, Nilay Vaish, Mark D. Hill, and David A. Wood, "The gem5 Simulator," ACM SIGARCH Computer Architecture News, Volume 39, Number 2, pp. 1-7, ACM Press, New York, NY, May, 2011. DOI: https://dx.doi.org/10.1145/2024716.2024718.
 + [Chen2007]
 	- Wai-Kai Chen (editor), "The VLSI Handbook," Second edition, in The Electrical Engineering Handbook Series, CRC Press, Boca Raton, FL, 2007.
-+ []
-
-
++ [Keshavarzi2007]
+	- Ali Keshavarzi, "\S21.2.1 Device Performance and Energy Scaling," in The VLSI Handbook: Section 3 Low Power Electronics and Design: Chapter 21 Technology Scaling and Low-Power Circuit Design: \S21.2 Technology Scaling Challenges, Second edition, in The Electrical Engineering Handbook Series, pp. 21-1 -- 21-25, CRC Press, Boca Raton, FL, 2007.
+	- part of the book [Chen2007].
 
 
 
