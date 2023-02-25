@@ -1,6 +1,21 @@
 #	Computer Architecture
 
 
+
+
+"semiconductor manufacturing"
+"semiconductor device engineering"
+"semiconductor devices"
+"semiconductor device physics"
+"solid-state physics"
+"3-D semiconductor"
+"3-D integrated circuit"
+"3-D integration"
+"3-D VLSI"
+
+
+
+
 https://stacks.stanford.edu/file/druid:pw135js0060/final-thesis-augmented.pdf
 https://scholar.google.com/citations?user=MpfGUWwAAAAJ&hl=en&oi=sra
 

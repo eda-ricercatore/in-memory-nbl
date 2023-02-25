@@ -533,18 +533,35 @@ Similarly, extend this for the following semiconductor devices:
 Explore operations with the following:
 + high bandwidth memory, HBM
 + wafer-scale computing
+	- wafer-level packaging
+		* wafer-level chip-scale packaging, WLCSP
 + 3-D IC design and manufacturing
 	- 2.5-D IC design and manufacturing
 + chiplet-based computing
 + resistive random-access memory, ReRAM, or RRAM
 + non-volatile random-access memory, NVRAM
 + magnetoresistive random-access memory, MRAM
+	- MTJ families
+		* field-induced magnetic switching
+		* thermally-assisted switching
+		* spin-transfer-torque switching
 + phase-change memory, PRAM, PCM, PCME, PRAM, PCRAM
 	- or OUM, ovonic unified memory
 	- chalcogenide RAM, C-RAM, CRAM
-
-
-
++ spin-transfer torque RAM, STT-RAM
++ ferroelectric RAM, FeRAM, F-RAM, FRAM
+	- ferroelectric memory, which is different from FeRAM???
+		* FeFET
+		* FTJ, ferroelectric tunnel junction
++ metal oxide resistive memory, OxRAM
+	- filamentary-oxide-based resistive memory technology, OxRAM
+	- oxide-based (Ox) RAM, OxRAM
+	- oxide resistive memory, OxRAM
++ conductive bridging RAM, CBRAM
+	- conductive bridge RAM, CBRAM
++ macromolecular memory
++ Mott memory
++ massive storage devices
 
 
 

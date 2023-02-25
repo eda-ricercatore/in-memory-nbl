@@ -25,9 +25,11 @@
 *	design [Weste2011, Chapter 8 Circuit Simulation: \S8.7 Pitfalls and Fallacies, pp. 323]
 *	[Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.6 Comparison of Processes, Table 8.5, pp. 312]
 
-* Newer devices, such as FinFETs, allow designers to experiment with
-*	new circuits for different arithmetic, mathematical, or statistical
-*	operations, including  
+* Newer devices allow designers to experiment with new circuits for
+*	different arithmetic, mathematical, or statistical
+*	operations, including approximate techniques for addition,
+* 
+such as FinFETs  
 [Chen2007c]
 
 
