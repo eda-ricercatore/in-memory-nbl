@@ -510,6 +510,29 @@ minimum feature size
 
 
 
+gate sizing by width of transistor 
+length
+width
+size
+sizing
+[Sutherland1999]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
