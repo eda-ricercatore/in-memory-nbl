@@ -717,6 +717,9 @@ Not-so-good references:
 
 
 
+The main references for the Xyce circuit simulator are:
++ [Keiter2022]
++ [Keiter2022a]
 
 
 
