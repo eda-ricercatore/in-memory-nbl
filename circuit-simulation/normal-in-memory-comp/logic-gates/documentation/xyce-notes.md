@@ -502,6 +502,7 @@ The (CMOS) semiconductor manufacturing process is defined by its minimum feature
 [Weste2011]
 
 
+For any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum length [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5], so that we can have 
 minimum feature size
 [Weste2011]
 
@@ -519,7 +520,7 @@ sizing
 
 
 
-(correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (CITE THIS!!!). The faster the transistor can switch, the faster the logic gates can form a short circuit between the  charge  (CITE THIS!!!)
+(correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (CITE THIS!!!). The faster the transistor can switch, the faster the logic gates can form a short circuit between the output pin and the voltage source that would charge, or or ground that would discharge, the output pin (CITE THIS!!!)
 
 
 
