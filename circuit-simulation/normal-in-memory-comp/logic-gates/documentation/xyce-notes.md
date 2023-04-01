@@ -519,7 +519,7 @@ sizing
 
 
 
-(correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly. The faster the transistor can switch, the faster the logic gates can form a short circuit between the  charge 
+(correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (CITE THIS!!!). The faster the transistor can switch, the faster the logic gates can form a short circuit between the  charge  (CITE THIS!!!)
 
 
 
