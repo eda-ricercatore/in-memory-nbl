@@ -501,7 +501,9 @@ Since "the capacitance of the transistor gate is proportional to its [cross-sect
 
 
 
-An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have minimum transistor length [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. Here, the output capacitance of a logic gate $C_{out}$ refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate).
+An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have minimum transistor length [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. Here, the output capacitance of a logic gate `$C_{out}$` refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate). Similarly, the input capacitance of a logic gate `$C_{in}$` refers to "the capacitance presented by the logic gate at ... its input terminals", and depends on the transistor sizes/widths [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
+
+
 
 
 
