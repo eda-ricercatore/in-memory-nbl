@@ -510,12 +510,19 @@ Since "the capacitance of the transistor gate is proportional to its [cross-sect
 
 An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have "minimum transistor length" [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] (or "minimum drawn transistor channel length") [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 24]. Here, the output capacitance of a logic gate `$C_{out}$` refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate). Similarly, the input capacitance of a logic gate `$C_{in}$` refers to "the capacitance presented by the logic gate at ... its input terminals", and depends on the transistor sizes/widths [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
 + "minimum drawn transistor channel length" is defined and described in [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 24].
+	- it is the "minimum polysilicon width", or "minimum width of a polysilicon wire"
+	- consequently, the transistor length is the "minimum polysilicon width"
++ minimum "feature size refers to minimum transistor length" [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]
+
+
+
 
 
 
 
 The (CMOS) semiconductor manufacturing process is described by its "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] (***Add More References!!!***), which is the smallest dimension of a transistor feature/dimension (e.g., gate length [Keshavarzi2007] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]) that can be manufactured with consistently with "process reliability" (***Add Citations for "process reliability", especially for semiconductor manufacturing***!!!) [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4]
-It is also referred to as the "minimum drawn channel" length", denoted as `\lambda` [Sutherland1999, Chapter 5 Calibrating the Model, \S5.2 Designing test circuits, \S5.2.3 Parasitic capacitance, pp. 89]
+It is also referred to as the "minimum drawn channel" length", denoted as `2 \times \lambda` [Sutherland1999, Chapter 5 Calibrating the Model, \S5.2 Designing test circuits, \S5.2.3 Parasitic capacitance, pp. 89] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]
+- Alternatively, `\lambda` refers to "half [of] the [minimum] feature size" [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]
 [Weste2011]
 
 
