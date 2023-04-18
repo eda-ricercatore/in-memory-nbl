@@ -612,7 +612,14 @@ Other effects of minimum feature downsizing, and consequently transistor downsiz
 + End of Dennard scaling [Dennard1974] in the early or mid- 2000s [Weste2011, from Chapter 1 Introduction: \S1.1 A Brief History, pp. 4].
 	- impact on delay, voltage and power supply, and power consumption,  [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.1 Transistor Scaling, pp. 255-257]
 	- impact on interconnect scaling [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.2 Interconnect Scaling, pp. 257-258]
-+ minimum feature size becomes smaller than the wavelength of light [Weste2011, from Chapter 12 Array Subsystems: \S12.2 SRAM: \S12.2.1 SRAM Cells: \S12.2.1.4 Physical Design, pp. 504]
++ minimum feature size becomes smaller than the wavelength of light used for the photolithography [Weste2011, from Chapter 12 Array Subsystems: \S12.2 SRAM: \S12.2.1 SRAM Cells: \S12.2.1.4 Physical Design, pp. 504] [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout: \S1.5.2 Fabrication Process, pp. 23] [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.2 CMOS Technologies: \S3.2.2 Photolithography, pp. 101-103]
++ additional references for photolithography:
+	- [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout: \S1.5.2 Fabrication Process, pp. 20]
+	- "193 nm double-patterning lithography" [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.6 Manufacturing Issues: \S3.6.3 Resolution Enhancement Rules, pp. 36]
+	- [Weste2011, from Chapter 7 Robustness: \S7.2 Variability: \S3.6.3 Process Variation, pp. 243]
+		* "Channel length variations are caused by photolithography proximity effects"
+		* "Line width and spacing, like channel length, depend on photolithography and etching proximity effects"
+	- the size of the transistor is dependent  [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.4 Impacts on Design: \S7.4.4.6 Physical Limits, pp. 262]
 
 
 
