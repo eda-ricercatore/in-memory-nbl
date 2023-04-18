@@ -232,6 +232,10 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 
 
 
+
+
+
+
 ***Suggested reading***:
 + [Logic Synthesis for Digital In-Memory Computing](http://www.cs.utsa.edu/~jha/papers/2022_Jha_ICCAD_LogicSynthesisInMemoryComputingHybrid.pdf)
 + [Logic Synthesis for Established and Emerging Computing](https://si2.epfl.ch/~demichel/publications/archive/2019/08478240.pdf)
@@ -504,8 +508,8 @@ Since "the capacitance of the transistor gate is proportional to its [cross-sect
 
 
 
-An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have "minimum transistor length" [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15]. Here, the output capacitance of a logic gate `$C_{out}$` refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate). Similarly, the input capacitance of a logic gate `$C_{in}$` refers to "the capacitance presented by the logic gate at ... its input terminals", and depends on the transistor sizes/widths [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
-
+An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have "minimum transistor length" [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] (or "minimum drawn transistor channel length") [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 24]. Here, the output capacitance of a logic gate `$C_{out}$` refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate). Similarly, the input capacitance of a logic gate `$C_{in}$` refers to "the capacitance presented by the logic gate at ... its input terminals", and depends on the transistor sizes/widths [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
++ "minimum drawn transistor channel length" is defined and described in [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 24].
 
 
 
@@ -524,11 +528,19 @@ An aside: Other features of MOSFETs include widths, separations, and overlaps [W
 
 
 To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum "length [Sutherland1999", from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) [Weste2011, from Chapter 4 Delay: \S4.8 Historical Perspective, pp. 175] (***Add More References!!!***).
++ "transistors are typically chosen to have the minimum possible length because short-channel transistors are faster, smaller, and consume less power" [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 26]
+
 
 According to the method of logical effort [Sutherland1999, from Chapter 1 The Method of Logical Effort, pp. 1], the delay of a logic gate can be estimated as `$d = g \cdot h + p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.2 on pp. 2 and Equation 1.5 on pp. 3], and `$d$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 5 on pp. 3], where `$d$` is the unitless delay unit of a logic gate that is independent of the semiconductor manufacturing process, `$g$` is the logical effort representing the characteristics of a logic gate and `$h$` is the electrical effort that estimates the load characteristics [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.3, pp. 2], and `$p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equations 1.2 and 1.3 on pp. 2 and Equation 1.5 on pp. 3].
 
 Since the electrical effort is typically described as ratio of transistor widths rather than capacitances of a given transistor and the "minimum sized inverter", and the capacitance of a MOSFET transistor is porportional to its (planar) area, by assuming that the length of a MOSFET is sized to be the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4], we can estimate the capacitance of a MOSFET by its area, and consequently its width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15]. Hence, the size of a transistor can effectively be described by its width. Since the width of the transistor is proportional to the capacitance of the MOSFET [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 7], 
 
+
+
+
+
+An aside from the subsection on "Xyce/SPICE Preliminaries":
++ Transistor-level SPICE netlists [Weste2011, Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691] can be extracted from schematics or IC layout designs [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288], and can be described as "extracted, transistor-level SPICE netlists" [Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133]. These netlists can be used for SPICE-like circuit simulation, and are also referred to as SPICE simulation netlists [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.1 Sources and Passive Components, pp. 289] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.3 Inverter Transient Analysis, pp. 293-294] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.4 Subcircuits and Measurement, pp. 295-296] [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \8.2.5 Optimization, pp. 297] [Weste2011, Chapter 8 Circuit Simulation: \S8.3 Device Models: \8.3.5 Design Corners, pp. 302] [Weste2011, Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \8.4.4 Parasitic Capacitance, pp. 309] [Weste2011, Chapter 8 Circuit Simulation: \S8.5 Circuit Characterization: \8.5.3 Logical Effort, pp. 316] [Weste2011, Chapter 8 Circuit Simulation: \S8.6 Interconnect Simulation, pp. 321].
 
 
 
@@ -541,12 +553,37 @@ Since the electrical effort is typically described as ratio of transistor widths
 
 [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]
 "minimum feature size"
-[Weste2011]
++ [x] [Weste2011]
 
 
 [Chen2007]
-"minimum
-feature"
+"minimum feature"
+
+
+
+feature:
++ [x] [Weste2011]
+
+
+
+length
++ [ ] [Weste2011]
+
+
+
+width
++ [ ] [Weste2011]
+
+
+size
++ [ ] [Weste2011]
+
+
+
+sizing
++ [ ] [Weste2011]
+
+
 
 
 gate sizing by width of transistor 
