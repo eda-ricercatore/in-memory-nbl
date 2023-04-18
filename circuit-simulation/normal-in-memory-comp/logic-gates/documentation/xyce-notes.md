@@ -523,7 +523,7 @@ An aside: Other features of MOSFETs include widths, separations, and overlaps [W
 
 
 
-To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum "length [Sutherland1999", from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) (***CITE THIS!!!***).
+To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum "length [Sutherland1999", from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) [Weste2011, from Chapter 4 Delay: \S4.8 Historical Perspective, pp. 175] (***Add More References!!!***).
 
 According to the method of logical effort [Sutherland1999, from Chapter 1 The Method of Logical Effort, pp. 1], the delay of a logic gate can be estimated as `$d = g \cdot h + p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.2 on pp. 2 and Equation 1.5 on pp. 3], and `$d$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 5 on pp. 3], where `$d$` is the unitless delay unit of a logic gate that is independent of the semiconductor manufacturing process, `$g$` is the logical effort representing the characteristics of a logic gate and `$h$` is the electrical effort that estimates the load characteristics [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.3, pp. 2], and `$p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equations 1.2 and 1.3 on pp. 2 and Equation 1.5 on pp. 3].
 
@@ -564,8 +564,10 @@ process technology
 
 
 
-(correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (CITE THIS!!!). The faster the transistor can switch, the faster the logic gates can form a short circuit between the output pin and the voltage source that would charge, or or ground that would discharge, the output pin (CITE THIS!!!)
+(correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (***CITE THIS!!!***). The faster the transistor can switch, the faster the logic gates can form a short circuit between the output pin and the voltage source that would charge, or or ground that would discharge, the output pin (***CITE THIS!!!***)
 
+
+Other effects of transistor downscaling.
 
 
 
