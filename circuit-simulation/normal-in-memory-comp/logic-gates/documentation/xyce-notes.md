@@ -490,7 +490,7 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 As researchers continue to pursue the ongoing reduction/shrinking of the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] in semiconductor manufacturing technology, and self-fulfill the Moore's law [Moore1965] [Moore1998] prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 + We can add more devices to this paragraph.
-+ As researchers continue to pursue the ongoing reduction/shrinking of the "minimum feature size" in semiconductor manufacturing technology, and abide by the self-fulfilling prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] of Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures and devices, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
++ As researchers continue to pursue the ongoing reduction/shrinking of the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] in semiconductor manufacturing technology, and abide by the self-fulfilling prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] of Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures and devices, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 
 
 
@@ -510,7 +510,7 @@ An aside: Since logic gates are connected together in a logic circuit, where a l
 
 
 
-The (CMOS) semiconductor manufacturing process is defined by its "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] (***Add More References!!!***), which is the smallest dimension of a transistor feature (e.g., gate length [Keshavarzi2007]) that can be manufactured with consistently with "process reliability" (***Add Citations for "process reliability", especially for semiconductor manufacturing***!!!) [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4]
+The (CMOS) semiconductor manufacturing process is defined by its "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25] (***Add More References!!!***), which is the smallest dimension of a transistor feature/dimension (e.g., gate length [Keshavarzi2007] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]) that can be manufactured with consistently with "process reliability" (***Add Citations for "process reliability", especially for semiconductor manufacturing***!!!) [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4]
 It is also referred to as the "minimum drawn channel" length", denoted as `\lambda` [Sutherland1999, Chapter 5 Calibrating the Model, \S5.2 Designing test circuits, \S5.2.3 Parasitic capacitance, pp. 89]
 [Weste2011]
 
@@ -739,7 +739,7 @@ Not-so-good references:
 + [Keshavarzi2007]
 	- Ali Keshavarzi, "\S21.2.1 Device Performance and Energy Scaling," in The VLSI Handbook: Section 3 Low Power Electronics and Design: Chapter 21 Technology Scaling and Low-Power Circuit Design: \S21.2 Technology Scaling Challenges, Second edition, in The Electrical Engineering Handbook Series, pp. 21-1 -- 21-25, CRC Press, Boca Raton, FL, 2007.
 	- part of the book [Chen2007].
-
+	- 
 
 
 
