@@ -488,7 +488,7 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
-As researchers endeavor to pursue the ongoing reduction/shrinking of the minimum feature size in semiconductor manufacturing technology, and self-fulfill the Moore's law [Moore1965] [Moore1998] prophecy [Weste2011], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
+As researchers endeavor to pursue the ongoing reduction/shrinking of the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] in semiconductor manufacturing technology, and self-fulfill the Moore's law [Moore1965] [Moore1998] prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 + We can add more devices to this paragraph.
 
 These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures [Binkert2011] [gem5developers2014], and domain-specific architectures (or hardware accelerators).
@@ -497,26 +497,26 @@ These new semiconductor devices can lead to new circuit designs (***Cite this!!!
 To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5], while FinFET devices are defined by ... (***Complete This!!!***)
 
 
-Since "the capacitance of the transistor gate is proportional to its [cross-sectional] area," the gate capacitance is in turn dependent on the length and the width of the transistor [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. By setting the transistor length to the minimum feature size for the semiconductor manufacturing process technology chosen to implement the integrated circuit design, the gate capacitance effectively/essentially becomes proportional to the transistor width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
+Since "the capacitance of the transistor gate is proportional to its [cross-sectional] area," the gate capacitance is in turn dependent on the length and the width of the transistor [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. By setting the transistor length to the "minimum feature size" for the semiconductor manufacturing process technology chosen to implement the integrated circuit design, the gate capacitance effectively/essentially becomes proportional to the transistor width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15].
 
 
 
-An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have minimum transistor length [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. Here, the output capacitance of a logic gate `$C_{out}$` refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate). Similarly, the input capacitance of a logic gate `$C_{in}$` refers to "the capacitance presented by the logic gate at ... its input terminals", and depends on the transistor sizes/widths [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
+An aside: Since logic gates are connected together in a logic circuit, where a logic gates that are not (primary) output gates would drive at least one other logic gate, the logic gate input capacitance and logic gate output capacitance can be xpressed in terms of the transistor widths. This is because the transistor width is proportional to gate capacitance, assuming that all transistors are designed to have "minimum transistor length" [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15]. Here, the output capacitance of a logic gate `$C_{out}$` refers to the external load of the logic gate, and depends on the transistor sizes/widths connected to the input pins of logic gates connected to the output pin of the logic gate (or fan-out cone of the logic gate). Similarly, the input capacitance of a logic gate `$C_{in}$` refers to "the capacitance presented by the logic gate at ... its input terminals", and depends on the transistor sizes/widths [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5].
 
 
 
 
 
-The (CMOS) semiconductor manufacturing process is defined by its minimum feature size (***Cite This!!!***), which is the smallest dimension of a transistor feature (e.g., gate length [Keshavarzi2007]) that can be manufactured with consistently with process reliability
-It is also referred to as the "minimum drawn channel length", denoted as `\lambda` [Sutherland1999, Chapter 5 Calibrating the Model, \S5.2 Designing test circuits, \S5.2.3 Parasitic capacitance, pp. 89]
+The (CMOS) semiconductor manufacturing process is defined by its "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] (***Cite This!!!***), which is the smallest dimension of a transistor feature (e.g., gate length [Keshavarzi2007]) that can be manufactured with consistently with process reliability
+It is also referred to as the ""minimum drawn channel" length", denoted as `\lambda` [Sutherland1999, Chapter 5 Calibrating the Model, \S5.2 Designing test circuits, \S5.2.3 Parasitic capacitance, pp. 89]
 [Weste2011]
 
 
-To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum length [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) (***CITE THIS!!!***).
+To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum "length [Sutherland1999", from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) (***CITE THIS!!!***).
 
 According to the method of logical effort [Sutherland1999, from Chapter 1 The Method of Logical Effort, pp. 1], the delay of a logic gate can be estimated as `$d = g \cdot h + p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.2 on pp. 2 and Equation 1.5 on pp. 3], and `$d$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 5 on pp. 3], where `$d$` is the unitless delay unit of a logic gate that is independent of the semiconductor manufacturing process, `$g$` is the logical effort representing the characteristics of a logic gate and `$h$` is the electrical effort that estimates the load characteristics [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.3, pp. 2], and `$p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equations 1.2 and 1.3 on pp. 2 and Equation 1.5 on pp. 3].
 
-Since the electrical effort is typically described as ratio of transistor widths rather than capacitances of a given transistor and the minimum sized inverter, and the capacitance of a MOSFET transistor is porportional to its (planar) area, by assuming that the length of a MOSFET is sized to be the minimum feature size, we can estimate the capacitance of a MOSFET by its area, and consequently its width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15]. Hence, the size of a transistor can effectively be described by its width. Since the width of the transistor is proportional to the capacitance of the MOSFET [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 7], 
+Since the electrical effort is typically described as ratio of transistor widths rather than capacitances of a given transistor and the "minimum sized inverter", and the capacitance of a MOSFET transistor is porportional to its (planar) area, by assuming that the length of a MOSFET is sized to be the "minimum feature size", we can estimate the capacitance of a MOSFET by its area, and consequently its width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15]. Hence, the size of a transistor can effectively be described by its width. Since the width of the transistor is proportional to the capacitance of the MOSFET [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 7], 
 
 
 
@@ -529,13 +529,13 @@ Since the electrical effort is typically described as ratio of transistor widths
 
 
 [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]
-minimum feature size
+"minimum feature size"
 [Weste2011]
 
 
 [Chen2007]
-minimum
-feature
+"minimum
+feature"
 
 
 gate sizing by width of transistor 
