@@ -619,7 +619,7 @@ Other effects of minimum feature downsizing, and consequently transistor downsiz
 	- [Weste2011, from Chapter 7 Robustness: \S7.2 Variability: \S3.6.3 Process Variation, pp. 243]
 		* "Channel length variations are caused by photolithography proximity effects"
 		* "Line width and spacing, like channel length, depend on photolithography and etching proximity effects"
-	- the size of the transistor is dependent  [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.4 Impacts on Design: \S7.4.4.6 Physical Limits, pp. 262]
+	- the size of the transistor is dependent on multiple factors, including photolithography [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.4 Impacts on Design: \S7.4.4.6 Physical Limits, pp. 262]
 
 
 
