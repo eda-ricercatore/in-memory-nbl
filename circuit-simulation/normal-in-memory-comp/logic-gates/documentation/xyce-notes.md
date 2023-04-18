@@ -510,7 +510,7 @@ An aside: Since logic gates are connected together in a logic circuit, where a l
 
 
 
-The (CMOS) semiconductor manufacturing process is defined by its "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] (***Cite This!!!***), which is the smallest dimension of a transistor feature (e.g., gate length [Keshavarzi2007]) that can be manufactured with consistently with process reliability
+The (CMOS) semiconductor manufacturing process is defined by its "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] (***Add More References!!!***), which is the smallest dimension of a transistor feature (e.g., gate length [Keshavarzi2007]) that can be manufactured with consistently with process reliability
 It is also referred to as the ""minimum drawn channel" length", denoted as `\lambda` [Sutherland1999, Chapter 5 Calibrating the Model, \S5.2 Designing test circuits, \S5.2.3 Parasitic capacitance, pp. 89]
 [Weste2011]
 
