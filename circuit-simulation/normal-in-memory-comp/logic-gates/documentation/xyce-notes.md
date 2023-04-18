@@ -506,8 +506,7 @@ To map circuit designs based on planar, bulk MOSFET devices to those using non-p
 [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]:
 	- length
 	- width
-	- These characteristics are used to specify the dimensions of MOSFET devices in schematic entry [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] and transistor-level SPICE netlists [Weste2011, Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691], which can be extracted from schematics of transistor-level circuit designs or layout designs of integrated circuits
-[Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133]
+	- These characteristics are used to specify the dimensions of MOSFET devices in schematic entry [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] and transistor-level SPICE netlists [Weste2011, Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691], which can be extracted from schematics of transistor-level circuit designs or layout designs of integrated circuits [Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133]
 
 
 
