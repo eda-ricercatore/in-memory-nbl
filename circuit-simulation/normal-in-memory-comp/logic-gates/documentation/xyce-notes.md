@@ -624,7 +624,7 @@ Other effects of minimum feature downsizing, and consequently transistor downsiz
 	- causes for "systematic across- chip linewidth variation (ACLV)" [Weste2011, from Chapter 7 Robustness: \S7.5 Statistical Analysis of Variability: \S7.5.2 Variation Sources: \S7.5.2.1 Channel Length, pp. 267]:
 		* photolithography
 		* pattern-dependent etch rates
-	- photolithography is also known as "optical photolithography" (***Cite This!!!***)
+	- photolithography is also known as "optical lithography" (***Cite This!!!***)
 
 
 
