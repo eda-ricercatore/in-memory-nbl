@@ -501,7 +501,16 @@ As researchers continue to pursue the ongoing reduction/shrinking of the "minimu
 These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures [Binkert2011] [gem5developers2014], and domain-specific architectures (or hardware accelerators).
 
 
-To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5], while FinFET devices are defined by ... (***Complete This!!!***)
+To map circuit designs based on planar, bulk MOSFET devices to those using non-planar MOSFET devices, I would map the defining characteristics/properties/parameters of the former to the latter. Planar, bulk MOSFET devices are defined by the length and width of the MOSFET devices [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 26], while FinFET devices are defined by ... (***Complete This!!!***)
++ The defining quantifiable characteristics of MOSFET transistors are
+[Weste2011, Chapter 1 Introduction, \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]:
+	- length
+	- width
+	- These characteristics are used to specify the dimensions of MOSFET devices in schematic entry [Weste2011, Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] and transistor-level SPICE netlists [Weste2011, Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691], which can be extracted from schematics of transistor-level circuit designs or layout designs of integrated circuits
+[Weste2011, Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133]
+
+
+
 
 
 Since "the capacitance of the transistor gate is proportional to its [cross-sectional] area," the gate capacitance is in turn dependent on the length and the width of the transistor [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. By setting the transistor length to the "minimum feature size" for the semiconductor manufacturing process technology chosen to implement the integrated circuit design, the gate capacitance effectively/essentially becomes proportional to the transistor width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15].
