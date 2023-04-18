@@ -567,12 +567,20 @@ process technology
 (correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (***CITE THIS!!!***). The faster the transistor can switch, the faster the logic gates can form a short circuit between the output pin and the voltage source that would charge, or or ground that would discharge, the output pin (***CITE THIS!!!***)
 
 
-Other effects of transistor downscaling.
+Other effects of minimum feature downsizing, and consequently transistor downsizing.
++ increase in leakage current, and consequently leakage power [Weste2011, from Chapter 5 Power: \S5.7 Historical Perspective: Summary, pp. 209]
++ As the minimum feature size decreases, the transistor gate lengths decreases and consequently decreases the switching delay of the transistors [Weste2011, from Chapter 6 Interconnect: \S6.6 Pitfalls and Fallacies: Summary, pp. 238]
+	- "Switch faster, dissipate less power, and are cheaper to manufacture" [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling, pp. 254-255]
+	- On the other hand, as the minimum feature size decreases, the interconnect/wire delays do not decrease [Weste2011, from Chapter 6 Interconnect: \S6.6 Pitfalls and Fallacies: Summary, pp. 238]
++ End of Dennard scaling [Dennard1974] in the early or mid- 2000s [Weste2011, from Chapter 1 Introduction: \S1.1 A Brief History, pp. 4].
+	- impact on delay, voltage and power supply, and power consumption,  [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.1 Transistor Scaling, pp. 255-257]
+	- impact on interconnect scaling [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.2 Interconnect Scaling, pp. 257-258]
++ minimum feature size becomes smaller than the wavelength of light [Weste2011, from Chapter 12 Array Subsystems: \S12.2 SRAM: \S12.2.1 SRAM Cells: \S12.2.1.4 Physical Design, pp. 504]
 
 
 
-
-
+Definitions:
++ "technology generation", "technology node" [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling: \S7.4.3 International Technology Roadmap for Semiconductors, pp. 258]
 
 
 
