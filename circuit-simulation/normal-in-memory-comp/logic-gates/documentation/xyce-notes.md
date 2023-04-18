@@ -488,8 +488,11 @@ List of tables in https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2
 
 
 
-As researchers endeavor to pursue the ongoing reduction/shrinking of the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] in semiconductor manufacturing technology, and self-fulfill the Moore's law [Moore1965] [Moore1998] prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
+As researchers continue to pursue the ongoing reduction/shrinking of the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] in semiconductor manufacturing technology, and self-fulfill the Moore's law [Moore1965] [Moore1998] prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4], they are exploring different transistor architectures, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
 + We can add more devices to this paragraph.
++ As researchers continue to pursue the ongoing reduction/shrinking of the "minimum feature size" [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] in semiconductor manufacturing technology, and abide by the self-fulfilling prophecy [Weste2011, Chapter 1 Introduction, \S1.1 A Brief History, pp. 4] of Moore's law [Moore1965] [Moore1998], they are exploring different transistor architectures and devices, such as FinFETs [Chauhan2015] and gate-all-around transistors (***Cite this!!!***).
+
+
 
 These new semiconductor devices can lead to new circuit designs (***Cite this!!!***), architecture designs (***Cite this!!!***), and enable design-technology co-optimization (DTCO) (***Cite this!!!***) and system-technology co-optimization (STCO) (***Cite this!!!***). DTCO and STCO can be supported by incorporating semiconductor device models, or compact models [Gildenblat2010], for these new/emerging semiconductor devices in circuit simulation tools. Consequently, these circuit simulation with these compact models can characterize macromodels of VLSI system architectures, processor architectures [Binkert2011] [gem5developers2014], and domain-specific architectures (or hardware accelerators).
 
