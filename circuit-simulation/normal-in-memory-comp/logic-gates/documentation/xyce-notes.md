@@ -506,7 +506,7 @@ To map circuit designs based on planar, bulk MOSFET devices to those using non-p
 [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 26] [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 45]:
 	- length
 	- width
-	- These characteristics are used to specify the dimensions of MOSFET devices in schematics [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 43] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] and transistor-level SPICE netlists [Weste2011, from Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691], which can be extracted from schematics of transistor-level circuit designs [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] or layout designs of integrated circuits [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288]
+	- These characteristics are used to specify the dimensions of MOSFET devices in schematics [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 43] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] and transistor-level SPICE netlists [Weste2011, from Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691], which can be extracted from schematics of transistor-level circuit designs [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] or layout designs of integrated circuits [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \S8.2.4 Subcircuits and Measurement, pp. 295]
 		* "Circuits [are] represented as schematic[s] [or] netlist[s]" [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 42]
 		* schematic entry [Brodersen1992, from Chapter 4, pp. 35-44] [Jansen2003, from Chapter 3, pp. 52-83] (***Add more references for the term, "schematic entry" or "schematic capture", rather than just "schematics"!!!***)
 
@@ -612,8 +612,18 @@ sizing
 
 
 semiconductor manufacturing process
++ [ ] [Weste2011]
+
+
+
+
 semiconductor manufacturing process technology
++ [ ] [Weste2011]
+
+
+
 process technology
++ [ ] [Weste2011]
 
 
 
@@ -650,6 +660,8 @@ Definitions:
 
 
 
+When layout designs of circuits are not available, circuit designers should estimate wire lengths in order to study the impact of the interconnect delays, and parasitic resistance and capacitance, on circuit delay [Weste2011, from ]
+schematic, 319
 
 
 
