@@ -544,7 +544,7 @@ An aside: Other features of MOSFETs include widths, separations, and overlaps [W
 
 
 
-To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, the transistors are chosen to have the minimum "length [Sutherland1999", from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) [Weste2011, from Chapter 4 Delay: \S4.8 Historical Perspective, pp. 175] (***Add More References!!!***).
+To simplify our analysis of transistors and circuits, we assume that for any given integrated circuit, or dies cut from from a wafer, all the transistors are chosen to have the minimum "length [Sutherland1999", from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15], so that we can have faster switching transistor and faster circuits (or digital circuits with smaller delays and better performance) [Weste2011, from Chapter 4 Delay: \S4.8 Historical Perspective, pp. 175] (***Add More References!!!***).
 + "transistors are typically chosen to have the minimum possible length because short-channel transistors are faster, smaller, and consume less power" [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 26]
 
 
