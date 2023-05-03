@@ -642,6 +642,7 @@ scaling
 
 
 Other effects of minimum feature downsizing, and consequently transistor downsizing.
++ ***Use appropriate equations of MOSFET transistors to justify the following facts.***
 + increase in leakage current, and consequently leakage power [Weste2011, from Chapter 5 Power: \S5.7 Historical Perspective: Summary, pp. 209]
 + As the minimum feature size decreases, the transistor gate lengths decreases and consequently decreases the switching delay of the transistors [Weste2011, from Chapter 6 Interconnect: \S6.6 Pitfalls and Fallacies: Summary, pp. 238]
 	- "Switch faster, dissipate less power, and are cheaper to manufacture" [Weste2011, from Chapter 7 Robustness: \S7.4 Scaling, pp. 254-255]
@@ -671,7 +672,7 @@ Definitions:
 
 
 
-When layout designs of circuits are not available, circuit designers should estimate wire lengths in order to study the impact of the interconnect delays, and parasitic resistance and capacitance, on circuit delay [Weste2011, from ]
+When layout designs of circuits are not available, circuit designers should use floorplanning to estimate wire lengths and wiring congestions [Weste2011, from Chapter 1 Introduction: \S1.10 Physical Design: \S1.10.1 Floorplanning, pp. 45]. This can help IC designers estimate if the layout design of the "proposed [IC] design" can fit into allocated IC design area budget (or "the chip area budgeted") [Weste2011, from Chapter 1 Introduction: \S1.10 Physical Design: \S1.10.1 Floorplanning, pp. 45]. In addition, it can help IC designers estimate the impact of the interconnect delays, and parasitic resistance and capacitance using appropriate interconnect models, on circuit delay, energy consumption, and crosstalk noise due to capacitive coupling [Weste2011, from Chapter 6 Interconnect: 6.2 Interconnect Modeling, pp. 213-229]
 schematic, 319
 
 
