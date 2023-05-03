@@ -248,6 +248,13 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 	- schematic design of FO4 inverters [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.5 Elmore Delay, Example 4.6, pp. 151]
 	- circuit delay of FO4 inverters is $5\tau$ [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.5 Elmore Delay, pp. 152]
 		* $\tau$ refers to the RC delay of a first-order RC circuit, and is used to estimate the propagation delay (Equation 4.9 on page 149) [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.4 Transient Response, pp. 148-149]
+			+ Estimate time $\tau$ from the characteristics of the semiconductor manufacturing process based on the following characteristics [Sutherland1999, from Chapter 3 Deriving the Method of Logical Effort: \S3.2 Delay in a logic gate, pp. 45]:
+				- transistor length
+				- transistor width
+				- gate oxide thickness
+				- mobility
+				- "other [semiconductor manufacturing] process parameters"
+			[Sutherland1999, from Chapter 5 Calibrating the Model: \S5.1 Calibration technique, pp. 81-83]
 		* Inverter delay is estimated to be 0.2 FO4 inverter delay [Weste2011, from Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, Example 4.10, pp. 158]
 			+ FO4 delay, or FO4 inverter delay, is cited for "typical process parameters and worst-case environments (low power supply voltage and high temperature)" [Weste2011, from Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
 			+ FO4 delay, or FO4 inverter delay, is approximately 1/3 or 1/2 the drawn channel length [Weste2011, from Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
@@ -586,10 +593,7 @@ An aside from the subsection on "Xyce/SPICE Preliminaries":
 
 
 
-feature
-+ [x] [Sutherland1999]
-	- word is not found in the book
-	
+
 
 
 
@@ -614,11 +618,21 @@ minimum
 
 feature:
 + [x] [Weste2011]
++ [x] [Sutherland1999]
+	- word is not found in the book
+	
+
+
+
+
 
 
 
 length
 + [ ] [Weste2011]
+
+
+
 
 
 
