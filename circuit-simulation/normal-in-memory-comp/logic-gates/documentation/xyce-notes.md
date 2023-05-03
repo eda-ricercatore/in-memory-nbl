@@ -248,7 +248,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 	- schematic design of FO4 inverters [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.5 Elmore Delay, Example 4.6, pp. 151]
 	- circuit delay of FO4 inverters is $5\tau$ [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.5 Elmore Delay, pp. 152]
 		* $\tau$ refers to the RC delay of a first-order RC circuit, and is used to estimate the propagation delay (Equation 4.9 on page 149) [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \4.3.4 Transient Response, pp. 148-149]
-			+ Estimate time $\tau$ from the characteristics of the semiconductor manufacturing process based on the following characteristics [Sutherland1999, from Chapter 3 Deriving the Method of Logical Effort: \S3.2 Delay in a logic gate, pp. 45]:
+			+ Estimate "process parameter" (that estimates transistor delay) [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 3] or time $\tau$ from the characteristics of the semiconductor manufacturing process based on the following characteristics [Sutherland1999, from Chapter 3 Deriving the Method of Logical Effort: \S3.2 Delay in a logic gate, pp. 45]:
 				- transistor length
 				- transistor width
 				- gate oxide thickness
