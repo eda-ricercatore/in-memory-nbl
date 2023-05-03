@@ -549,6 +549,12 @@ To simplify our analysis of transistors and circuits, we assume that for any giv
 
 
 According to the method of logical effort [Sutherland1999, from Chapter 1 The Method of Logical Effort, pp. 1], the delay of a logic gate can be estimated as `$d = g \cdot h + p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.2 on pp. 2 and Equation 1.5 on pp. 3], and `$d$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 5 on pp. 3], where `$d$` is the unitless delay unit of a logic gate that is independent of the semiconductor manufacturing process, `$g$` is the logical effort representing the characteristics of a logic gate and `$h$` is the electrical effort that estimates the load characteristics [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.3, pp. 2], and `$p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equations 1.2 and 1.3 on pp. 2 and Equation 1.5 on pp. 3].
++ The method of logical effort does not adequate model interconnects, and can use the unified logical effort method in [Morgenshtein2010].
+
+
+
+
+
 
 Since the electrical effort is typically described as ratio of transistor widths rather than capacitances of a given transistor and the "minimum sized inverter", and the capacitance of a MOSFET transistor is porportional to its (planar) area, by assuming that the length of a MOSFET is sized to be the "minimum feature size" [Weste2011, from Chapter 1 Introduction: \S1.1 A Brief History, pp. 4], we can estimate the capacitance of a MOSFET by its area, and consequently its width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15]. Hence, the size of a transistor can effectively be described by its width. Since the width of the transistor is proportional to the capacitance of the MOSFET [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 7], 
 
@@ -627,6 +633,10 @@ process technology
 
 
 
+scaling
++ [ ] [Weste2011]
+
+
 
 (correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (***CITE THIS!!!***). The faster the transistor can switch, the faster the logic gates can form a short circuit between the output pin and the voltage source that would charge, or or ground that would discharge, the output pin (***CITE THIS!!!***)
 
@@ -660,8 +670,13 @@ Definitions:
 
 
 
+
 When layout designs of circuits are not available, circuit designers should estimate wire lengths in order to study the impact of the interconnect delays, and parasitic resistance and capacitance, on circuit delay [Weste2011, from ]
 schematic, 319
+
+
+
+
 
 
 
@@ -836,6 +851,19 @@ Not-so-good references:
 	- Ali Keshavarzi, "\S21.2.1 Device Performance and Energy Scaling," in The VLSI Handbook: Section 3 Low Power Electronics and Design: Chapter 21 Technology Scaling and Low-Power Circuit Design: \S21.2 Technology Scaling Challenges, Second edition, in The Electrical Engineering Handbook Series, pp. 21-1 -- 21-25, CRC Press, Boca Raton, FL, 2007.
 	- part of the book [Chen2007].
 	- 
+
+
++ [Morgenshtein2010]
+
+
+
+
+
+
+
+
+
+
 
 
 
