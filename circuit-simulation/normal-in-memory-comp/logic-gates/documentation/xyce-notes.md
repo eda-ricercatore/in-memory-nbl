@@ -533,25 +533,7 @@ An aside: Since logic gates are connected together in a logic circuit, where a l
 			+ standard-cell libraries
 
 
-Ha2009
-Lee2012
-Golshan2007
-Keating2007
-Yu2014a
-Gupta2007
-Salem2007
-Clein2000
-Sicard2007b
-Sicard2007a
-Yeap1998
-Sicard2007
-Mukherjee2007
-Jansen2003
-Hu2007
-Hu2009
-Chiang2007
-Lavagno2016a
-Scheffer2006a
+
 
 
 
@@ -891,7 +873,25 @@ Not-so-good references:
 concatenate these to put in the input CSV file to generate Markdown format citations, using my BibTeX-to-Markdown translations
 Morgenshtein2010
 Doman2012
-
+Ha2009
+Lee2012
+Golshan2007
+Keating2007
+Yu2014a
+Gupta2007
+Salem2007
+Clein2000
+Sicard2007b
+Sicard2007a
+Yeap1998
+Sicard2007
+Mukherjee2007
+Jansen2003
+Hu2007
+Hu2009
+Chiang2007
+Lavagno2016a
+Scheffer2006a
 
 
 
