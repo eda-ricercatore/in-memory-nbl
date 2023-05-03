@@ -254,6 +254,7 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 				- gate oxide thickness
 				- mobility
 				- "other [semiconductor manufacturing] process parameters"
+				- IC designers can use SPICE-like circuit simulation of a transistor-level IC implementation of an inverter to characterize the value of $\tau$ and the parasitic delay of an inverter $p_{inv}$ [Sutherland1999, from Chapter 5 Calibrating the Model: \S5.1 Calibration technique, pp. 81]. This process is also known as inverter characterization [Sutherland1999, from Chapter 5 Calibrating the Model: \S5.1 Calibration technique, pp. 82].
 			[Sutherland1999, from Chapter 5 Calibrating the Model: \S5.1 Calibration technique, pp. 81-83]
 		* Inverter delay is estimated to be 0.2 FO4 inverter delay [Weste2011, from Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, Example 4.10, pp. 158]
 			+ FO4 delay, or FO4 inverter delay, is cited for "typical process parameters and worst-case environments (low power supply voltage and high temperature)" [Weste2011, from Chapter 4 Delay: \S4.4 Linear Delay Model: \4.4.3 Delay in a Logic Gate, pp. 158]
@@ -516,7 +517,18 @@ To map circuit designs based on planar, bulk MOSFET devices to those using non-p
 	- These characteristics are used to specify the dimensions of MOSFET devices in schematics [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 43] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] and transistor-level SPICE netlists [Weste2011, from Chapter 15 Testing, Debugging, and Verification: \S15.9 Pitfalls and Fallacies, pp. 691], which can be extracted from schematics of transistor-level circuit designs [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] or layout designs of integrated circuits [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.5 Technology-Related CAD Issues: \S3.5.2 Circuit Extraction, pp. 133] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial, pp. 288] [Weste2011, from Chapter 8 Circuit Simulation: \S8.2 A SPICE Tutorial: \S8.2.4 Subcircuits and Measurement, pp. 295]
 		* "Circuits [are] represented as schematic[s] [or] netlist[s]" [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 42]
 		* schematic entry [Brodersen1992, from Chapter 4, pp. 35-44] [Jansen2003, from Chapter 3, pp. 52-83] (***Add more references for the term, "schematic entry" or "schematic capture", rather than just "schematics"!!!***)
+	- Additional characteristics/parameters of bulk MOSFET devices are:
+		* area and perimeter for the diffusion regions for the source and drain of the MOSFET devices [Sutherland1999, from Chapter 5 Calibrating the Model: \S5.2 Designing test circuits: \S5.2.3 Parasitic capacitance, pp. 87]
+			+ AS, area of the source diffusion region of the MOSFET device
+			+ AD, area of the drain diffusion region of the MOSFET device
+			+ PS, perimeter of the source diffusion region of the MOSFET device
+			+ PD, perimeter of the drain diffusion region of the MOSFET device
 
+
+
+Weste2011
+length
+pp. 45
 
 
 
