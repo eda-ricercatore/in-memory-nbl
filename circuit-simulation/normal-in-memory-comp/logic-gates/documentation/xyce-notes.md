@@ -563,8 +563,8 @@ To simplify our analysis of transistors and circuits, we assume that for any giv
 
 
 According to the method of logical effort [Sutherland1999, from Chapter 1 The Method of Logical Effort, pp. 1], the delay of a logic gate can be estimated as `$d = g \cdot h + p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.2 on pp. 2 and Equation 1.5 on pp. 3], and `$d$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 5 on pp. 3], where `$d$` is the unitless delay unit of a logic gate that is independent of the semiconductor manufacturing process, `$g$` is the logical effort representing the characteristics of a logic gate and `$h$` is the electrical effort that estimates the load characteristics [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equation 1.3, pp. 2], and `$p$` [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, Equations 1.2 and 1.3 on pp. 2 and Equation 1.5 on pp. 3].
-+ The method of logical effort does not adequate model interconnects, and can use the unified logical effort method in [Morgenshtein2010].
-
++ The method of logical effort does not adequate model interconnect delay, and can use the unified logical effort method in [Morgenshtein2010] to model interconnect delay.
++ While IC designers can use the method of logical effort to optimize/maximize the performance (or minimize the circuit delay) of a digital integrated circuit delay, the IC designers cannot use the method to minimize the energy area and consumption of the digital IC [Sutherland1999, from Chapter 12 Conclusions: 12.5 Shortcomings of logical effort, pp. 198].
 
 
 
@@ -586,12 +586,25 @@ An aside from the subsection on "Xyce/SPICE Preliminaries":
 
 
 
+feature
++ [x] [Sutherland1999]
+	- word is not found in the book
+	
+
+
+
+minimum
++ [x] [Sutherland1999]
+
+
 
 
 
 [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]
 "minimum feature size"
 + [x] [Weste2011]
+
+
 
 
 [Chen2007]
