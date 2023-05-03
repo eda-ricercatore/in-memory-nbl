@@ -524,7 +524,13 @@ An aside: Since logic gates are connected together in a logic circuit, where a l
 	- consequently, the transistor length is the "minimum polysilicon width"
 + minimum "feature size refers to minimum transistor length" [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]
 + The minimum feature size determines the minimum gate length of the MOSFET device, since it is the "minimum allowable size" [Sutherland1999, Chapter 12 Conclusions: \S12.3 A design procedure, pp. 195].
-	- Similarly, the standard cell library [Doman2012] [Ha2009] [Lee2012] [Golshan2007] [Keating2007] [Yu2014a] [Gupta2007] [Salem2007] [Clein2000] [Sicard2007a] [Sicard2007b] [Yeap1998] [Sicard2007] [Mukherjee2007] [Jansen2003] [Hu2007] [Hu2009] [Chiang2007] selected for the IC design process would specify the limited discrete transistor sizes that we can use in IC designs [Sutherland1999, Chapter 12 Conclusions: \S12.3 A design procedure, pp. 195]
+	- Similarly, the IC (standard) cell library [Doman2012] [Ha2009] [Lee2012] [Golshan2007] [Keating2007] [Yu2014a] [Gupta2007] [Salem2007] [Clein2000] [Sicard2007a] [Sicard2007b] [Yeap1998] [Sicard2007] [Mukherjee2007] [Jansen2003] [Hu2007] [Hu2009] [Chiang2007] [Lavagno2016a] [Scheffer2006a] selected for the IC design process would specify the limited discrete transistor sizes that we can use in IC designs [Sutherland1999, Chapter 12 Conclusions: \S12.3 A design procedure, pp. 195]
+		* keyphrases used interchangeably for cell library
+			+ VLSI design libraries
+			+ cell library
+			+ design libraries
+			+ standard cell library
+			+ standard-cell libraries
 
 
 Ha2009
@@ -544,8 +550,8 @@ Jansen2003
 Hu2007
 Hu2009
 Chiang2007
-
-
+Lavagno2016a
+Scheffer2006a
 
 
 
