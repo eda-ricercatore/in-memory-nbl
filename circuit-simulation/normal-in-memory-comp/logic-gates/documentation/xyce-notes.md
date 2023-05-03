@@ -514,8 +514,7 @@ To map circuit designs based on planar, bulk MOSFET devices to those using non-p
 
 
 
-Since "the capacitance of the transistor gate is proportional to its [cross-sectional] area," the gate capacitance is in turn dependent on the length and the width of the transistor [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. By setting the transistor length to the "minimum feature size" for the semiconductor manufacturing process technology chosen to implement the integrated circuit design, the gate capacitance effectively/essentially becomes proportional to the transistor width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15] [Sutherland1999, from Chapter 4
-Calculating the Logical Effort of Gates: \S4.3 Calculating logical effort, pp. 62].
+Since "the capacitance of the transistor gate is proportional to its [cross-sectional] area," the gate capacitance is in turn dependent on the length and the width of the transistor [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5]. By setting the transistor length to the "minimum feature size" for the semiconductor manufacturing process technology chosen to implement the integrated circuit design, the gate capacitance effectively/essentially becomes proportional to the transistor width [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.1 Delay in a logic gate, pp. 5] [Sutherland1999, from Chapter 1 The Method of Logical Effort: \S1.2 Multi-stage logic networks, Example 1.7, pp. 15] [Sutherland1999, from Chapter 4 Calculating the Logical Effort of Gates: \S4.3 Calculating logical effort, pp. 62].
 
 
 
