@@ -523,6 +523,20 @@ An aside: Since logic gates are connected together in a logic circuit, where a l
 	- it is the "minimum polysilicon width", or "minimum width of a polysilicon wire"
 	- consequently, the transistor length is the "minimum polysilicon width"
 + minimum "feature size refers to minimum transistor length" [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout, \S1.5.3 Layout Design Rules, pp. 25]
++ The minimum feature size determines the minimum gate length of the MOSFET device, since it is the "minimum allowable size" [Sutherland1999, Chapter 12 Conclusions: \S12.3 A design procedure, pp. 195].
+	- Similarly, the standard cell library [Doman2012] [Ha2009] [Lee2012] [Golshan2007] [Keating2007] selected for the IC design process would specify the limited discrete transistor sizes that we can use in IC designs [Sutherland1999, Chapter 12 Conclusions: \S12.3 A design procedure, pp. 195]
+
+
+Ha2009
+Lee2012
+Golshan2007
+Keating2007
+
+
+
+
+
+
 
 
 
@@ -855,8 +869,10 @@ Not-so-good references:
 	- 
 
 
-+ [Morgenshtein2010]
 
+concatenate these to put in the input CSV file to generate Markdown format citations, using my BibTeX-to-Markdown translations
+Morgenshtein2010
+Doman2012
 
 
 
