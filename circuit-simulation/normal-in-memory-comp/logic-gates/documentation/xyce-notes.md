@@ -711,6 +711,29 @@ scaling
 
 
 
+
+
+
+
+region, for (source/drain) region(s)
++ [x] [Weste2011]
+
+
+
+
+
+
+diffusion
++ [x] [Weste2011]
+
+
+
+
+
+
+
+
+
 (correlation and) causation between size of transistor and switching speed of the transistor, which affects the ability of the logic gates to be able to switch its output pin between logic high/"1"/true and low/"0"/false accordingly (***CITE THIS!!!***). The faster the transistor can switch, the faster the logic gates can form a short circuit between the output pin and the voltage source that would charge, or or ground that would discharge, the output pin (***CITE THIS!!!***)
 
 
