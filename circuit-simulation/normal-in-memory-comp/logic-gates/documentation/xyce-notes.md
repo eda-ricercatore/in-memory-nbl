@@ -526,6 +526,8 @@ To map circuit designs based on planar, bulk MOSFET devices to those using non-p
 			+ Additional notes:
 				- "Junction leakage is caused by current through the p-n junction between the source/drain diffusions and the body." [Weste2011, from Chapter 2 MOS Transistor Theory: \S2.4 Nonideal I-V Effects: \S2.4.4 Leakage, pp. 80]	
 				- "Junction leakage occurs when a source or drain diffusion region is at a different potential from the substrate." [Weste2011, from Chapter 5 Power: \S5.3 Static Power: \S5.3.1 Static Power Sources: \S5.3.1.3 Junction Leakage, pp. 196]
+				- During SPICE-like circuit simulation, "the junction leakage current" is determined from "the diffusion area and perimeter" [Weste2011, from Chapter 8 Circuit Simulation: \S8.3 Device Models: \S8.3.4 Diffusion Capacitance Models, pp. 302]
+				- To determine the gate capacitance with SPICE-like circuit simulation, "set[ the] diffusion area and perimeter to 0" [Weste2011, from Chapter 8 Circuit Simulation: \S8.4 Device Characterization: \S8.4.3 Gate Capacitance, pp. 302]
 		+ "gate, source, and drain regions" of MOSFET devices based on the silicon on insulator (SOI) semiconductor manufacturing process [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.4 CMOS Process Enhancements: \S3.4.1 Transistors: \S3.4.1.2 Silicon on Insulator, pp. 120]
 
 
