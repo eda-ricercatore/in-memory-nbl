@@ -518,17 +518,35 @@ To map circuit designs based on planar, bulk MOSFET devices to those using non-p
 		* "Circuits [are] represented as schematic[s] [or] netlist[s]" [Weste2011, from Chapter 1 Introduction: \S1.9 Circuit Design, pp. 42]
 		* schematic entry [Brodersen1992, from Chapter 4, pp. 35-44] [Jansen2003, from Chapter 3, pp. 52-83] (***Add more references for the term, "schematic entry" or "schematic capture", rather than just "schematics"!!!***)
 	- Additional characteristics/parameters of bulk MOSFET devices are:
-		* area and perimeter for the diffusion regions for the source and drain of the MOSFET devices [Sutherland1999, from Chapter 5 Calibrating the Model: \S5.2 Designing test circuits: \S5.2.3 Parasitic capacitance, pp. 87]
-			+ AS, area of the source diffusion region of the MOSFET device
+		* area and perimeter for the diffusion regions for the source and drain [Weste2011, from Chapter 1 Introduction: \S1.3 MOS Transistors, pp. 7-8] [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout: \S1.5.1 Inverter Cross-Section, pp. 19-20] [Weste2011, from Chapter 1 Introduction: \S1.5 CMOS Fabrication and Layout: \S1.5.2 Fabrication Process, pp. 21, 23] [Weste2011, from Chapter 2 MOS Transistor Theory: \S2.1 Introduction, pp. 62] [Weste2011, from Chapter 2 MOS Transistor Theory: \S2.3 C-V Characteristics: \S2.3.3 Detailed MOS Diffusion Capacitance Model, pp. 72] [Weste2011, from Chapter 4 Delay: \S4.3 RC Delay Model: \S4.3.2 Gate and Diffusion Capacitance, pp. 147] of the MOSFET devices [Sutherland1999, from Chapter 5 Calibrating the Model: \S5.2 Designing test circuits: \S5.2.3 Parasitic capacitance, pp. 87]
+			+ AS, area of the source diffusion region of the MOSFET device [Weste2011, from Chapter 2 MOS Transistor Theory: \S2.3 C-V Characteristics: \S2.3.3 Detailed MOS Diffusion Capacitance Model, pp. 72]
 			+ AD, area of the drain diffusion region of the MOSFET device
 			+ PS, perimeter of the source diffusion region of the MOSFET device
 			+ PD, perimeter of the drain diffusion region of the MOSFET device
+			+ Additional notes:
+				- "Junction leakage occurs when a source or drain diffusion region is at a different potential from the substrate." [Weste2011, from Chapter 5 Power: \S5.3 Static Power: \S5.3.1 Static Power Sources: \S5.3.1.3 Junction Leakage, pp. 196]
+		+ "gate, source, and drain regions" of MOSFET devices based on the silicon on insulator (SOI) semiconductor manufacturing process [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.4 CMOS Process Enhancements: \S3.4.1 Transistors: \S3.4.1.2 Silicon on Insulator, pp. 120]
 
 
 
 Weste2011
 length
 pp. 45
+
+
+Defining (quantifiable) characteristics/properties/parameters of FinFET devices are:
++ Additional information about FinFET devices:
+	- Fin-like source/drain regions on the silicon surface of FinFET devices [Weste2011, from Chapter 3 CMOS Processing Technology: \S3.4 CMOS Process Enhancements: \S3.4.4 Beyond Conventional CMOS, pp. 129]
+
+
+
+
+
+
+
+
+
+
 
 
 
