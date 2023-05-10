@@ -165,12 +165,14 @@ The command line arguments for *Xyce* are provided in [Keiter2022a, from Chapter
 	- ".subckt" statements can be nested/embedded within other ".subckt" statements.
 	- ".subckt" statements should only include device instantiations, and possibly the following statements (limited to use within the subcircuits).
 		* ".model" statements for model definition.
+			+ Use ".model" statements to include user-defined models of semiconductor devices [Keiter2022, \S4.2, pp. 42].
 		* ".param" statements for parameters.
 		* ".func" statements for functions.
 	- Format:
 		* .subckt [name] [node]*
 		* + [params: [param_name]=[param_value]]
 		* .ends
+	- Use ".subckt" statements for macromodels, such as circuit models of semiconductor devices, or actual subcircuits (or subsystems to be incorporated into electronic/electrical systems) [Keiter2022, \S4.2, pp. 42].
 + Global parameters can be defined using the ".GLOBAL_PARAM" statement [Keiter2022a, from Chapter 2 Netlist Reference: \S2.1 Netlist Commands: \S2.1.12 .GLOBAL_PARAM (Global parameter), pp. 43-44].
 	- "Reserved words that [cannot] be used as names for parameters":
 		* Time
